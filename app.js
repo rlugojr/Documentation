@@ -55,6 +55,18 @@ app.get('/', function (req, res) {
   res.render('index', {currentUrl:'/'});
 });
 
+// Handle 404
+app.use(function(req, res) {
+    res.status(400);
+    res.render('404.jade', {});
+});
+
+// Handle 500
+app.use(function(error, req, res, next) {
+    res.status(500);
+    res.render('500.jade', {});
+});
+
 
 module.exports = app;
 

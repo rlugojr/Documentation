@@ -1,6 +1,5 @@
-@import "var_index";
-
 .slideout-menu{
+  z-index:0;
   display:none;
   background-color: $grey;
 
@@ -9,91 +8,41 @@
     margin:0;
     padding:6px 0;
 
-    a{
-      padding: 0 10px;
-      color : black;
-    }
-
     &.active{
       background-color : $red;
+
       a{
         color : white;
       }
     }
+
+    &:hover{
+      @include transition(all .2s ease-in);
+      background-color: $red;
+
+      a{
+        color: white;
+      }
+    }
+
+    a{
+      padding: 0 10px;
+      color : black;
+    }
   }
 }
 
-.nav-main{
-  width       : 100%;
-  font-size   : 12px;
-  height      : 40px;
-
-  background-color : $grey;
-
-  /* Remove mobile menu by default*/
-  #mobilemenu {
-    display: none;
-    position : absolute;
-    z-index: 2;
-    color : white;
-    font-size:20pt;
-    top : 5px;
-    left : 5px;
+.bigimage {
+  width:80%;
+  max-width: 300px;
+  margin:10px auto;
+  & img {
+    width:100%;
   }
+}
 
-  ul {
-
-    list-style: none;
-    padding:0;
-    font-size: 0;
-
-    li {
-      display       : inline;
-      line-height   : 40px;
-      padding       : 13px;
-      text-transform: uppercase;
-      font-weight   : 400;
-      font-size     : 10pt;
-      margin:0 ;
-
-      &:hover:not(.do-not-hover) {
-        @include transition(all .2s ease-in);
-        background-color: $red;
-        color: white;
-      }
-
-      &.active{
-        background-color: $red;
-      }
-
-      &:first-child {
-        background-color  : $darkgrey;
-        font-weight   : 600;
-        & a {
-          color             : white;
-          text-transform    : none;
-        }
-      }
-      &.align-right {
-        float:right;
-        padding:0;
-        margin-right : 20px;
-      }
-      .search-input {
-        width : 200px;
-        appearance: none;
-        background-color: none;
-        padding: 10px 15px;
-        border-radius: 30px;
-        border:none;
-        height:20px;
-        /* Remove border when the inpu is focused*/
-        &:focus {
-          outline: none
-        }
-      }
-    }
-  }
+#wrapper{
+  background-color: white;
 }
 
 .presentation-header{

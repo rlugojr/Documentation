@@ -40,3 +40,40 @@ $phone: new-breakpoint(max-width 680px 6);
     padding : 0;
   }
 }
+
+// ----------------------
+// LEFT MENU FOR MOBILE
+// ----------------------
+.slideout-menu{
+  z-index:0;
+  display:none;
+  background-color: $grey;
+
+  h2{
+    background-color: $grey;
+    margin:0;
+    padding:6px 0;
+
+    &.active{
+      background-color : $red;
+
+      a{
+        color : white;
+      }
+    }
+
+    &:hover{
+      @include transition(all .2s ease-in);
+      background-color: $red;
+
+      a{
+        color: white;
+      }
+    }
+
+    a{
+      padding: 0 10px;
+      color : black;
+    }
+  }
+}

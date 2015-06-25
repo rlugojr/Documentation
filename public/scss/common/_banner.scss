@@ -1,0 +1,176 @@
+// Banner height
+$bh : 50px;
+// Font size
+$bfs : 12pt;
+
+.v-align {
+  position : relative;
+  top : 50%;
+  @include transform(translateY(-50%));
+}
+
+.nav-main{
+  width       : 100%;
+  height      : $bh;
+
+  background-color : $grey;
+
+  /* Remove mobile menu by default*/
+  #mobilemenu {
+    display: none;
+    position : absolute;
+    z-index: 2;
+    color : white;
+    font-size:20pt;
+    top : 5px;
+    left : 5px;
+  }
+
+  .banner {
+    @include display(flex);
+    width : 100%;
+    background-color: $grey;
+    height : $bh;
+
+    // The left menu (title + tabs)
+    .menu {
+      @include display(flex);
+      width : 60%;
+      height : $bh;
+      @include user-select(none);
+
+      // All items : title and tabs
+      & > div {
+        height : $bh;
+        line-height: $bh;
+        font-size: $bfs;
+        padding: 0 5px 0 5px;
+        text-align : center;
+
+        &:hover:not(.do-not-hover) {
+          @include transition(all .2s ease-in);
+          background-color: $red;
+          color:white;
+        }
+      }
+
+      // Title Babylon.js | DOCUMENTATION
+      & > div:first-child {
+        background-color: $darkgrey;
+        font-weight: bold;
+        color:white;
+      }
+
+      // Only tabs
+      .item {
+        width : 100px;
+        text-transform: uppercase;
+        font-size : 10pt;
+        margin-left : 10px;
+        cursor: pointer;
+      }
+    }
+
+    // Searchbar and forward
+    .more {
+      @include display(flex);
+      @include justify-content(flex-end);
+      @include align-items(center);
+      width : 40%;
+      height : $bh;
+
+      // Searchbar
+      .searchbar {
+        height : 30px;
+        background-color: white;
+        border-radius: 20px;
+        width : 250px;
+        @include display(flex);
+        @include align-items(center);
+        input {
+          margin-left: 10px;
+          height : 30px;
+          width : 200px;
+          border: none;
+          background-color: transparent;
+          &:focus {
+            border:none;
+            outline: 0;
+          }
+        }
+        // Search icon
+        i {
+          font-size: 16pt;
+          background-color: transparent;
+          cursor: pointer;
+        }
+      }
+
+      .forward {
+        cursor: pointer;
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(space-between);
+        padding: 0 15px 0 15px;
+        // Icon forward
+        i {
+          margin-left: 15px;
+          color:white;
+        }
+      }
+
+    }
+  }
+
+
+}
+
+//ul {
+//
+//  list-style: none;
+//  padding:0;
+//  font-size: 0;
+//
+//  li {
+//    display       : inline;
+//    line-height   : 40px;
+//    padding       : 13px;
+//    text-transform: uppercase;
+//    font-weight   : 400;
+//    font-size     : 10pt;
+//    margin:0 ;
+//
+//    a{
+//      font-weight:bold;
+//    }
+//
+//    &:hover:not(.do-not-hover) {
+//      @include transition(all .2s ease-in);
+//      background-color: $red;
+//      a{
+//        color: white;
+//      }
+//    }
+//
+//    &.active{
+//      background-color: $red;
+//      a{
+//        color:white;
+//      }
+//    }
+//
+//    &:first-child {
+//      background-color  : $darkgrey;
+//      font-weight   : 600;
+//      & a {
+//        color             : white;
+//        text-transform    : none;
+//      }
+//    }
+//    &.align-right {
+//      float:right;
+//      padding:0;
+//      margin-right : 100px;
+//    }
+//  }
+//

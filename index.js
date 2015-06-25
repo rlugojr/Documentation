@@ -7,6 +7,9 @@ app.use(express.static('public'));
 // for file manipulation
 var fs          = require('fs');
 
+// The listened port
+var port = process.env.PORT || 3000;
+
 // Set the template engine to jade
 app.set('view engine', 'jade');
 // Set the views folder to ./views
@@ -54,6 +57,6 @@ app.get('/', function (req, res) {
   res.render('index', {});
 });
 
-app.listen(3000, function(){
+app.listen(port, function(){
     console.log("Server running and listening on localhost:3000...")
 });

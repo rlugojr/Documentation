@@ -1,0 +1,35 @@
+nav.nav-main
+    i#mobilemenu.fa.fa-bars
+
+    ul
+        li.home.do-not-hover
+            a(href='/') Babylon.js - DOCUMENTATION
+        li(class={active: currentUrl === '/whats-new'})
+            a(href="/whats-new") What's new
+        li(class={active: currentUrl === '/tutorials'})
+            a(href="/tutorials") Tutorials
+        li(class={active: currentUrl === '/exporters'})
+            a(href="/exporters") Exporters
+        li(class={active: currentUrl === '/extensions'})
+            a(href="/extensions") Extensions
+        li(class={active: currentUrl === '/classes'})
+            a(href="/classes") Classes
+        li.align-right.do-not-hover
+            input.search-input(type='text', placeholder='Search...')
+            i.fa.fa-search.search-glass
+            a(href='http://babylonjs.com') babylon.js.com
+            i.fa.fa-external-link
+    // ----------------------
+    // LEFT MENU FOR MOBILE
+    // ----------------------
+    script.
+        var slideout = new Slideout({
+            'panel': document.getElementById('wrapper'),
+            'menu': document.getElementById('menu'),
+            'padding': 256,
+            'tolerance': 70
+        });
+        $("#mobilemenu").click(function() {
+            slideout.toggle();
+            console.log("click");
+        });

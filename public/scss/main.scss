@@ -1,0 +1,28 @@
+/** GLOBAL VARIABLES **/
+@import "define";
+
+/** LIBS **/
+@import "libs/bourbon/bourbon";
+@import "libs/neat/neat";
+@import "libs/font-awesome/font-awesome";
+
+body {
+  padding : 0;
+  margin  : 0;
+  width   : 100%;
+  font-family : $font-stack;
+}
+
+a{
+  text-decoration : none;
+  color : black;
+}
+//
+//a:visited{
+//  text-decoration : none;
+//  color : black;
+//}
+
+/** SCSS FILES **/
+@import "index/index";
+@import "whats-new/whats-new";

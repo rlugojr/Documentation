@@ -1,0 +1,42 @@
+$mobile: new-breakpoint(max-width 1150px 6);
+$phone: new-breakpoint(max-width 680px 6);
+
+
+
+/* MOBILE VERSION */
+@include media($mobile) {
+  .nav-main {
+
+    ul {
+     background-color: $darkgrey;
+    }
+    /* Remove everything but the home text*/
+    li:not(.home) {
+     display : none;
+    }
+    .home {
+     padding-left: 50px;
+    }
+
+    #mobilemenu {
+     display: block !important;
+    }
+  }
+  .bjs-components .bjs-component{
+    @include span-columns(6);
+    padding: 0;
+  }
+  .bjs-demo{
+    img {
+      width:100%;
+    }
+  }
+}
+
+/* SMALL SCREENS VERSION */
+@include media($phone) {
+  .bjs-components{
+    @include outer-container(100%);
+    padding : 0;
+  }
+}

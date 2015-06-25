@@ -1,0 +1,71 @@
+include includes/header.jade
+#wrapper
+    include includes/banner.jade
+    //----------------------
+    //-LOGO AND BASELINE
+    //----------------------
+    .presentation-header
+        .presentation-img
+        .bigimage
+            img(src='img/logos/bjs-logo-hd.png')
+        h1.bjs-moto An open source 3D engine based on webGL and Javascript
+    //----------------------
+    //-THREE COLUMNS
+    //----------------------
+    .bjs-components
+        .bjs-component
+          h1 Easy Setup
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis
+            | quam eu dictum fermentum. Etiam posuere pulvinar magna, at suscipit
+            | sem vehicula et. Sed vehicula lectus leo, ut convallis sapien gravida
+            | eu. Phasellus eu augue iaculis, sollicitudin mi sollicitudin, auctor
+            | est. Maecenas vitae ultrices erat.
+        .bjs-component
+            h1 WebGL
+            p
+                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis
+                | quam eu dictum fermentum. Etiam posuere pulvinar magna, at suscipit
+                | sem vehicula et. Sed vehicula lectus leo, ut convallis sapien gravida
+                | eu. Phasellus eu augue iaculis, sollicitudin mi sollicitudin, auctor
+                | est. Maecenas vitae ultrices erat.
+        .bjs-component
+            h1 Javascript
+            p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis
+            | quam eu dictum fermentum. Etiam posuere pulvinar magna, at suscipit
+            | sem vehicula et. Sed vehicula lectus leo, ut convallis sapien gravida
+            | eu. Phasellus eu augue iaculis, sollicitudin mi sollicitudin, auctor
+            | est. Maecenas vitae ultrices erat.
+    //----------------------
+    //-DEMO
+    //----------------------
+    .bjs-demo
+        h1 See a Babylon.js demo
+        .bigimage
+            img(src='img/filling-demo.jpg')
+
+    .horizontal-separator
+
+    //----------------------
+    //-GETTING STARTED
+    //----------------------
+    .getting-started
+        h1 Getting Started
+        p.
+            With the server running, open http://localhost:1337 in your browser to see the VorlonJS dashboard.
+        p.
+            The last step is to enable VorlonJS, by adding this script tap to your app:
+        pre
+            code.github.
+                &lsaquo;script src="http://localhost:1337/vorlon.js"&rsaquo;&lsaquo;/script&rsaquo;
+        p.
+            Now, when you open your app, you should see your client appear on the dashboard.
+        p.
+           You can also open the sample page, which already has this script tag in it, to test your dashboard.
+    // HIGHLIGHT JS
+    script(src='js/libs/highlight.pack.js')
+    script.
+        hljs.initHighlightingOnLoad();
+
+include includes/footer.jade

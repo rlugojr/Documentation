@@ -1,5 +1,28 @@
 @import "var_index";
 
+.slideout-menu{
+  display:none;
+  background-color: $grey;
+
+  h2{
+    background-color: $grey;
+    margin:0;
+    padding:6px 0;
+
+    a{
+      padding: 0 10px;
+      color : black;
+    }
+
+    &.active{
+      background-color : $red;
+      a{
+        color : white;
+      }
+    }
+  }
+}
+
 .nav-main{
   width       : 100%;
   font-size   : 12px;

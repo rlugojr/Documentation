@@ -1,15 +1,13 @@
 var express     = require('express');
 var app         = express();
-
-// Serve static files (css, js, images)
-app.use(express.static('public'));
-
 // for file manipulation
 var fs          = require('fs');
-
 // The listened port
 var port = process.env.PORT || 3000;
 
+
+// Serve static files (css, js, images)
+app.use(express.static('public'));
 // Set the template engine to jade
 app.set('view engine', 'jade');
 // Set the views folder to ./views
@@ -54,9 +52,12 @@ app.get('/whats-new', function(req, res){
 
 // DEFAULT PAGE
 app.get('/', function (req, res) {
-  res.render('index', {});
+  res.render('index', {currentUrl:'/'});
 });
 
-app.listen(port, function(){
-    console.log("Server running and listening on localhost:3000...")
-});
+
+module.exports = app;
+
+//app.listen(port, function(){
+//    console.log("Server running and listening on localhost:3000...")
+//});

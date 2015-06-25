@@ -1815,6 +1815,21 @@ a {
   .bigimage img {
     width: 100%; }
 
+.slideout-menu {
+  display: none;
+  background-color: lightgrey; }
+  .slideout-menu h2 {
+    background-color: lightgrey;
+    margin: 0;
+    padding: 6px 0; }
+    .slideout-menu h2 a {
+      padding: 0 10px;
+      color: black; }
+    .slideout-menu h2.active {
+      background-color: #fc4349; }
+      .slideout-menu h2.active a {
+        color: white; }
+
 .nav-main {
   width: 100%;
   font-size: 12px;

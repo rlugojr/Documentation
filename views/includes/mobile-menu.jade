@@ -1,6 +1,13 @@
 nav#menu
-    h2 Menu
-        h2 Menu
-        h2 Menu
-        h2 Menu
-        h2 Menu
+    h2(class={active: currentUrl === '/'})
+        a(href='/') Home
+    h2(class={active: currentUrl === '/whats-new'})
+        a(href="/whats-new") What's new
+    h2(class={active: currentUrl === '/tutorials'})
+        a(href="/tutorials") Tutorials
+    h2(class={active: currentUrl === '/exporters'})
+        a(href="/exporters") Exporters
+    h2(class={active: currentUrl === '/extensions'})
+        a(href="/extensions") Extensions
+    h2(class={active: currentUrl === '/classes'})
+        a(href="/classes") Classes

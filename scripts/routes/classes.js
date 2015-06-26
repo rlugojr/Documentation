@@ -1,5 +1,3 @@
-// ************************** CLASSES **************************
-
 /**
  * Show the Classes list. No version specified so get the last version and redirect to it
  */
@@ -31,37 +29,6 @@ exports.showClassesVersion = function(req, res) {
     };
 
     res.render('class/classes.jade', data);
-};
-
-
-// ************************** CLASS **************************
-
-/**
- * Show a Class. Nothing specified, so redirect to Classes list
- * @param req
- *          version - The version of babylon
- */
-exports.showClass = function(req, res) {
-    var version = req.params.version;
-
-    res.writeHead(301, {
-        Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/classes'
-    });
-    res.end();
-};
-
-/**
- * Show a Class. Only a version specified, so redirect to the Classes list, with the specified version
- * @param req
- *          version - The version of babylon
- */
-exports.showClassVersion = function(req, res) {
-    var version = req.params.version;
-
-    res.writeHead(301, {
-        Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/classes/' + version
-    });
-    res.end();
 };
 
 /**

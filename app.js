@@ -55,9 +55,7 @@ app.get('/whats-new', function(req, res){
 var routeClasses = require('./scripts/routes/classes.js');
 app.get('/classes', routeClasses.showClasses );
 app.get('/classes/:version', routeClasses.showClassesVersion );
-app.get('/class', routeClasses.showClass);
-app.get('/class/:version', routeClasses.showClassVersion);
-app.get('/class/:version/:name', routeClasses.showClassVersionName );
+app.get('/classes/:version/:name', routeClasses.showClassVersionName );
 
 
 // DEFAULT PAGE

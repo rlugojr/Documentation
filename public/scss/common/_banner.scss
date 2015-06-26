@@ -47,6 +47,11 @@ $bfs : 12pt;
         padding: 0 5px 0 5px;
         text-align : center;
 
+        &.active{
+          background-color : $red;
+          color : white;
+        }
+
         &:hover:not(.do-not-hover) {
           @include transition(all .2s ease-in);
           background-color: $red;
@@ -59,6 +64,7 @@ $bfs : 12pt;
         background-color: $darkgrey;
         font-weight: bold;
         color:white;
+        cursor : pointer;
       }
 
       // Only tabs
@@ -66,7 +72,6 @@ $bfs : 12pt;
         width : 100px;
         text-transform: uppercase;
         font-size : 10pt;
-        margin-left : 10px;
         cursor: pointer;
       }
     }
@@ -121,56 +126,4 @@ $bfs : 12pt;
 
     }
   }
-
-
 }
-
-//ul {
-//
-//  list-style: none;
-//  padding:0;
-//  font-size: 0;
-//
-//  li {
-//    display       : inline;
-//    line-height   : 40px;
-//    padding       : 13px;
-//    text-transform: uppercase;
-//    font-weight   : 400;
-//    font-size     : 10pt;
-//    margin:0 ;
-//
-//    a{
-//      font-weight:bold;
-//    }
-//
-//    &:hover:not(.do-not-hover) {
-//      @include transition(all .2s ease-in);
-//      background-color: $red;
-//      a{
-//        color: white;
-//      }
-//    }
-//
-//    &.active{
-//      background-color: $red;
-//      a{
-//        color:white;
-//      }
-//    }
-//
-//    &:first-child {
-//      background-color  : $darkgrey;
-//      font-weight   : 600;
-//      & a {
-//        color             : white;
-//        text-transform    : none;
-//      }
-//    }
-//    &.align-right {
-//      float:right;
-//      padding:0;
-//      margin-right : 100px;
-//    }
-//  }
-//

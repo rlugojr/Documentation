@@ -50,26 +50,35 @@ app.get('/whats-new', function(req, res){
     });
 });
 
+
+// CLASSES PAGE
+var routeClasses = require('./scripts/routes/classes.js');
+app.get('/classes', routeClasses.showClasses );
+app.get('/classes/:version', routeClasses.showClassesVersion );
+app.get('/class', routeClasses.showClass);
+app.get('/class/:version', routeClasses.showClassVersion);
+app.get('/class/:version/:name', routeClasses.showClassVersionName );
+
+
 // DEFAULT PAGE
 app.get('/', function (req, res) {
   res.render('index', {currentUrl:'/'});
 });
 
+
+// ERRORS
+
 // Handle 404
 app.use(function(req, res) {
     res.status(400);
-    res.render('404.jade', {});
+    res.render('errorpages/404.jade', {});
 });
 
 // Handle 500
 app.use(function(error, req, res, next) {
     res.status(500);
-    res.render('500.jade', {});
+    res.render('errorpages/500.jade', {});
 });
 
 
 module.exports = app;
-
-//app.listen(port, function(){
-//    console.log("Server running and listening on localhost:3000...")
-//});

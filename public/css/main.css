@@ -1862,6 +1862,9 @@ a {
         font-size: 12pt;
         padding: 0 5px 0 5px;
         text-align: center; }
+        .nav-main .banner .menu > div.active {
+          background-color: #fc4349;
+          color: white; }
         .nav-main .banner .menu > div:hover:not(.do-not-hover) {
           -webkit-transition: all 0.2s ease-in;
           -moz-transition: all 0.2s ease-in;
@@ -1871,12 +1874,12 @@ a {
       .nav-main .banner .menu > div:first-child {
         background-color: #9b9b9b;
         font-weight: bold;
-        color: white; }
+        color: white;
+        cursor: pointer; }
       .nav-main .banner .menu .item {
         width: 100px;
         text-transform: uppercase;
         font-size: 10pt;
-        margin-left: 10px;
         cursor: pointer; }
     .nav-main .banner .more {
       display: -webkit-box;
@@ -1994,6 +1997,9 @@ a {
     .slideout-menu h2 a {
       padding: 0 10px;
       color: black; }
+
+#menu {
+  display: none; }
 
 .bigimage {
   width: 80%;
@@ -2118,17 +2124,44 @@ a {
     float: left; }
 
 /* MOBILE VERSION */
-@media screen and (max-width: 1150px) {
-  .nav-main {
+@media screen and (max-width: 1360px) {
+  .nav-main #mobilemenu {
+    display: block !important;
+    padding: 6px 0 0 8px; }
+  .nav-main .banner .menu {
+    width: 100%;
     /* Remove everything but the home text*/ }
-    .nav-main ul {
-      background-color: #9b9b9b; }
-    .nav-main li:not(.home) {
+    .nav-main .banner .menu .item:not(.do-not-hover) {
       display: none; }
-    .nav-main .home {
+    .nav-main .banner .menu .do-not-hover {
       padding-left: 50px; }
-    .nav-main #mobilemenu {
-      display: block !important; }
+  .nav-main .banner .more .forward {
+    display: none; }
+
+  #menu .searchbar-mobile {
+    display: none; }
+
+  .bjs-components .bjs-component {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 30.11389%;
+    padding: 0; }
+    .bjs-components .bjs-component:last-child {
+      margin-right: 0; }
+
+  .bjs-demo img {
+    width: 100%; } }
+/* SMALL SCREENS VERSION */
+@media screen and (max-width: 680px) {
+  .nav-main .banner .menu .do-not-hover {
+    padding-left: 50px;
+    width: 100%;
+    text-align: center; }
+  .nav-main .banner .more {
+    display: none; }
+  .nav-main .banner .more-mobile {
+    display: block !important; }
 
   .bjs-components .bjs-component {
     float: left;
@@ -2140,9 +2173,8 @@ a {
       margin-right: 0; }
 
   .bjs-demo img {
-    width: 100%; } }
-/* SMALL SCREENS VERSION */
-@media screen and (max-width: 680px) {
+    width: 100%; }
+
   .bjs-components {
     max-width: 100%;
     margin-left: auto;
@@ -2151,7 +2183,44 @@ a {
     .bjs-components::after {
       clear: both;
       content: "";
-      display: table; } }
+      display: table; }
+
+  #menu .searchbar-mobile {
+    display: block;
+    margin: 10px;
+    height: 30px;
+    width: 230px;
+    background-color: white;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center; }
+    #menu .searchbar-mobile input {
+      height: 30px;
+      width: 200px;
+      border: none;
+      margin-left: 10px;
+      background-color: transparent; }
+      #menu .searchbar-mobile input:focus {
+        border: none;
+        outline: 0; }
+    #menu .searchbar-mobile i {
+      font-size: 16pt;
+      background-color: transparent;
+      cursor: pointer; } }
 .slideout-menu {
   z-index: 0;
   display: none;
@@ -2184,15 +2253,22 @@ a {
 
 #whats-new {
   width: 80%;
-  margin: auto; }
+  margin: auto;
+  line-height: 25px; }
   #whats-new #changeslist {
     color: #fc4349; }
+  #whats-new ul {
+    list-style-type: none; }
+    #whats-new ul li p {
+      font-weight: bold; }
+    #whats-new ul li ul li {
+      list-style-type: square; }
 
-ul {
-  list-style-type: none; }
-  ul li p {
-    font-weight: bold; }
-  ul li ul li {
-    list-style-type: square; }
+#wrapper.error {
+  background-image: url("/img/pattern_ban_1.png");
+  background-repeat: repeat;
+  text-align: center; }
+  #wrapper.error .error_message {
+    color: #fc4349; }
 
 /*# sourceMappingURL=main.css.map */

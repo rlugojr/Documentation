@@ -1,4 +1,7 @@
 nav#menu
+    .searchbar-mobile
+        input(type='text', placeholder='Search...')
+        i.fa.fa-search
     h2(class={active: currentUrl === '/'})
         a(href='/') Home
     h2(class={active: currentUrl === '/whats-new'})
@@ -11,3 +14,5 @@ nav#menu
         a(href="/extensions") Extensions
     h2(class={active: currentUrl === '/classes'})
         a(href="/classes") Classes
+    h2
+        a(href="http://babylonjs.com/") babylonjs.com

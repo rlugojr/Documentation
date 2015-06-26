@@ -1,0 +1,10 @@
+#wrapper.error{
+  background-image  : url("/img/pattern_ban_1.png");
+  background-repeat : repeat;
+
+  text-align  : center;
+
+  .error_message{
+    color: $red;
+  }
+}

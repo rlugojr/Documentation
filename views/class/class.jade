@@ -1,0 +1,12 @@
+include ../includes/header
+#wrapper
+    include ../includes/banner
+
+    .whats-new-banner
+        h1= 'Class ' + title + ' - v.' + version
+
+    .horizontal-separator
+
+    #classContent!= content
+
+include ../includes/footer

@@ -3,22 +3,22 @@ nav.nav-main
 
     .banner
         .menu
-            .do-not-hover
+            .do-not-hover#home
                 span.
-                    Babylon.js - DOCUMENTATION
-            .item(class={active: currentUrl === '/whats-new'})
+                    Babylon.js | DOCUMENTATION
+            #whatsnew.item(class={active: currentUrl === '/whats-new'})
                 span.
                     What's new
-            .item(class={active: currentUrl === '/tutorials'})
+            #tutorials.item(class={active: currentUrl === '/tutorials'})
                 span.
                     Tutorials
-            .item(class={active:currentUrl === '/exporters'})
+            #exporters.item(class={active:currentUrl === '/exporters'})
                 span.
                     Exporters
-            .item(class={active:currentUrl === '/extensions'})
+            #extensions.item(class={active:currentUrl === '/extensions'})
                 span.
                     Extensions
-            .item(class={active:currentUrl === '/classes'})
+            #classes.item(class={active:currentUrl === '/classes'})
                 span.
                     Classes
         .more
@@ -29,6 +29,31 @@ nav.nav-main
                 div.
                     babylonjs.com
                 i.fa.fa-play
+
+    //-----------------
+    //-- Action on banner
+    //-----------------
+    script.
+        $("#home").click(function() {
+            window.location = "/";
+        });
+        $("#whatsnew").click(function () {
+            window.location = "/whats-new";
+        });
+        $("#tutorials").click(function () {
+            window.location = "/tutorials";
+        });
+        $("#exporters").click(function () {
+            window.location = "/exporters";
+        });
+        $("#extensions").click(function () {
+            window.location = "/extensions";
+        });
+        $("#classes").click(function () {
+            window.location = "/classes";
+        });
+
+
     // ----------------------
     // LEFT MENU FOR MOBILE
     // ----------------------
@@ -41,5 +66,5 @@ nav.nav-main
         });
         $("#mobilemenu").click(function() {
             slideout.toggle();
-            console.log("click");
+            $('#menu').css("display", "block");
         });

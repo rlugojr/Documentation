@@ -1,44 +1,139 @@
-$mobile: new-breakpoint(max-width 1150px 6);
+$mobile: new-breakpoint(max-width 1360px 6);
 $phone: new-breakpoint(max-width 680px 6);
-
-
 
 /* MOBILE VERSION */
 @include media($mobile) {
   .nav-main {
 
-    ul {
-     background-color: $darkgrey;
-    }
-    /* Remove everything but the home text*/
-    li:not(.home) {
-     display : none;
-    }
-    .home {
-     padding-left: 50px;
+    #mobilemenu {
+      display: block !important;
+      padding : 6px 0 0 8px;
     }
 
-    #mobilemenu {
-     display: block !important;
+    .banner{
+
+      .menu{
+        width:100%;
+
+        /* Remove everything but the home text*/
+        .item:not(.do-not-hover) {
+          display : none;
+        }
+
+        .do-not-hover {
+          padding-left : 50px;
+        }
+      }
+
+      // searchbar & link to bjs.com
+      .more{
+        // link to bjs.com
+        .forward{
+          display : none;
+        }
+      }
     }
   }
-  .bjs-components .bjs-component{
-    @include span-columns(6);
-    padding: 0;
+
+  #menu{
+    .searchbar-mobile{
+      display : none;
+
+    }
   }
-  .bjs-demo{
+
+  .bjs-components .bjs-component{
+    @include span-columns(2);
+    padding : 0;
+  }
+  .bjs-demo {
     img {
-      width:100%;
+      width : 100%;
     }
   }
 }
 
 /* SMALL SCREENS VERSION */
 @include media($phone) {
+
+  .nav-main {
+
+    #mobilemenu {
+
+    }
+
+    .banner{
+
+      .menu{
+        .do-not-hover {
+          padding-left : 50px;
+          width:100%;
+          text-align:center;
+        }
+      }
+
+      // searchbar & link to bjs.com
+      .more {
+        display : none;
+      }
+
+      .more-mobile{
+        display : block !important;
+      }
+    }
+  }
+
+  .bjs-components .bjs-component{
+    @include span-columns(6);
+    padding: 0;
+  }
+  .bjs-demo {
+    img {
+      width: 100%;
+    }
+  }
   .bjs-components{
     @include outer-container(100%);
     padding : 0;
   }
+
+  #menu{
+    .searchbar-mobile{
+      display : block;
+
+      margin  : 10px;
+      height  : 30px;
+      width   : 230px;
+
+      background-color  : white;
+      border-radius     : 20px;
+
+      @include display(flex);
+      @include align-items(center);
+
+      input {
+
+        height  : 30px;
+        width   : 200px;
+        border  : none;
+
+        margin-left       : 10px;
+        background-color  : transparent;
+
+        &:focus {
+          border  : none;
+          outline : 0;
+        }
+      }
+      // Search icon
+      i {
+        font-size: 16pt;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+
 }
 
 // ----------------------

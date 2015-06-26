@@ -11,24 +11,25 @@
 #whats-new{
   width   : 80%;
   margin  : auto;
+  line-height: 25px;
 
 
   #changeslist{
     color : $red;
-    }
   }
 
-ul{
-  list-style-type : none;
+  ul{
+    list-style-type : none;
 
-  li{
-    p{
-      font-weight : bold;
-    }
+    li{
+      p{
+        font-weight : bold;
+      }
 
-    ul{
-      li{
-        list-style-type : square;
+      ul{
+        li{
+          list-style-type : square;
+        }
       }
     }
   }

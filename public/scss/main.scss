@@ -18,6 +18,8 @@ a{
   text-decoration : none;
   color : black;
 }
+$mobile: new-breakpoint(max-width 1360px 6);
+$phone: new-breakpoint(max-width 680px 6);
 
 /** SCSS FILES **/
 @import "common/banner";

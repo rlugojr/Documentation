@@ -33,4 +33,15 @@
       }
     }
   }
+
+  a{
+    color : $red;
+    font-weight : bold;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
 }
+
+@import "mobile_whats-new";

@@ -2073,7 +2073,7 @@ a {
 .horizontal-separator {
   width: 80%;
   height: 0;
-  border-top: 3px dashed #fc4349;
+  border-top: 2px solid #fc4349;
   font-size: 0;
   margin: 20px auto; }
 
@@ -2263,7 +2263,16 @@ a {
       font-weight: bold; }
     #whats-new ul li ul li {
       list-style-type: square; }
+  #whats-new a {
+    color: #fc4349;
+    font-weight: bold; }
+    #whats-new a:hover {
+      text-decoration: underline; }
 
+/* MOBILE VERSION - WHAT'S NEW */
+@media screen and (max-width: 1360px) {
+  #whats-new {
+    width: 100%; } }
 #wrapper.error {
   background-image: url("/img/pattern_ban_1.png");
   background-repeat: repeat;

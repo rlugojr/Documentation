@@ -6,14 +6,13 @@
     "express": "^4.13.0",
     "grunt": "latest",
     "grunt-cli": "latest",
-    "meta-marked": "^0.3.3",
-    "showdown": "^1.1.0",
-    "jade": "latest"
+    "jade": "latest",
+    "meta-marked": "^0.3.3"
   },
   "scripts": {
     "setup:bourbon": "gem install bourbon",
     "setup:neat": "gem install neat",
-    "setup": "npm run setup:bourbon && npm run setup:neat && cd scss/libs && bourbon install && neat install",
+    "setup": "chcp 1252 && npm run setup:bourbon && npm run setup:neat && cd scss/libs && bourbon install && neat install",
     "tags": "grunt tags"
   }
 }

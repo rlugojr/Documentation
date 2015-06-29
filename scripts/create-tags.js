@@ -12,7 +12,7 @@ var marked    = require('meta-marked');
 var fs        = require('fs');
 var path      = require('path');
 
-var CLASSES_FOLDER = '../md/classes/';
+var CLASSES_FOLDER = '../content/classes/';
 var TAG_FILENAME   = 'tags.json';
 
 

@@ -50,7 +50,7 @@ nav.nav-main
             window.location = "/extensions";
         });
         $("#classes").click(function () {
-            window.location = "/classes";
+            window.location = "/classes/2.1";
         });
 
 
@@ -66,5 +66,10 @@ nav.nav-main
         });
         $("#mobilemenu").click(function() {
             slideout.toggle();
-            $('#menu').css("display", "block");
+
+            if(!slideout.isOpen()){
+                $('#menu').css("display", "none");
+            } else {
+                $('#menu').css("display", "block");
+            }
         });

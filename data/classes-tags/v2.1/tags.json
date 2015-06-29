@@ -1,1 +1,6 @@
-{"Action":["Action.md","Geometry.md"],"Mesh":["Action.md","Geometry.md"],"Geometry":["Geometry.md"],"Specularité":["Geometry.md"]}
+{
+    "Action":["Action.md","ActionManager.md"],
+    "Mesh":["AbstractMesh.md","Mesh.md"],
+    "Geometry":["Geometry.md"],
+    "Specularité":["Spécularité.md"]
+}

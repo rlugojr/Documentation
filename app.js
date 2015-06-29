@@ -1,7 +1,8 @@
-var express     = require('express');
-var app         = express();
-// for file manipulation
-var fs          = require('fs');
+var express         = require('express');
+var app             = express();
+var marked_github   = require('meta-marked');
+var fs              = require('fs');
+
 // The listened port
 var port = process.env.PORT || 3000;
 
@@ -13,40 +14,24 @@ app.set('view engine', 'jade');
 // Set the views folder to ./views
 app.set('views', './views');
 
-// MARKDOWN RENDER ENGINE
-app.engine('md', function(filePath, options, callback){
 
-    // Markdown to HTML converter
-    var showdown    = require('showdown');
-    var converter   = new showdown.Converter();
-
-    var markdown_page = fs.readFile(filePath, options, function(err, data){
-        // throw error, if any
-        if(err) throw err;
-
-        // transform the whole file into HTML code - yup, that's that simple
-        var html_render = converter.makeHtml(data);
-
-        // callback(error, data)
-        return callback(null, html_render);
-    });
+marked_github.setOptions({
+    renderer: new marked_github.Renderer(),
+    gfm: true,
+    tables: true,
+    breaks: true,
+    sanitize: false
 });
 
 // WHAT'S NEW page
 app.get('/whats-new', function(req, res){
-
-    // Showdown to compile md to html
-    var showdown    = require('showdown');
-    var converter   = new showdown.Converter();
-
-    fs.readFile('./md/whats-new/whats-new.md', {"encoding" : "utf-8", "flag" : "r"}, function(err, data){
+    fs.readFile('./content/whats-new/whats-new.md', {"encoding" : "utf-8", "flag" : "r"}, function(err, data){
         if (err) throw err;
 
-        // transform markdown file into html
-        var whats_new_html = converter.makeHtml(data);
+        html = marked_github.noMeta(data);
 
         // render the page
-        res.render('whats-new', {content : whats_new_html, currentUrl: "/whats-new"});
+        res.render('whats-new', {content : html, currentUrl: "/whats-new"});
     });
 });
 

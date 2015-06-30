@@ -115,19 +115,21 @@ router.get('/:version/:name', function(req, res) {
                 return;
             }
 
-            fs.readFile('./content/classes/v' + version + '/' + className + '.md', {"encoding" : "utf-8", "flag" : "r"}, function(error, content){
-                if (error) res.render('errorpages/404_class_not_found.jade', {});
+            fs.readFile('./content/classes/' + version + '/' + className + '.md', {"encoding" : "utf-8", "flag" : "r"}, function(error, content){
+                if (error){
+                  res.render('errorpages/404_class_not_found.jade', {});
+                }  else {
+                  var data = {
+                    currentUrl: "/classes",
+                    currentVersion: version,
+                    className: className,
+                    categoryName: categoryName,
+                    content: marked_github(content).html,
+                    list: classesList
+                  };
 
-                var data = {
-                    currentUrl      : "/classes",
-                    currentVersion  : version,
-                    className       : className,
-                    categoryName    : categoryName,
-                    content         : marked_github(content).html,
-                    list            : classesList
-                };
-
-                res.render('class/class.jade', data);
+                  res.render('class/class.jade', data);
+                }
             });
         });
     });

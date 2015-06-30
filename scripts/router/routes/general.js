@@ -1,25 +1,19 @@
 /**
- * Created by Zacaria on 29/06/2015.
+ * Created by Zacaria on 30/06/2015.
  */
-
-//Require all routes and define general routes
-
 var express = require('express'),
     router = express.Router();
 
 var fs = require('fs');
 
 var marked_github   = require('meta-marked');
-    marked_github.setOptions({
-        renderer: new marked_github.Renderer(),
-        gfm: true,
-        tables: true,
-        breaks: true,
-        sanitize: false
-    });
-
-router.use('/classes', require('./routes/classes'));
-
+marked_github.setOptions({
+    renderer: new marked_github.Renderer(),
+    gfm: true,
+    tables: true,
+    breaks: true,
+    sanitize: false
+});
 
 router.get('/whats-new', function(req, res){
 
@@ -39,4 +33,3 @@ router.get('/', function (req, res) {
 });
 
 module.exports = router;
-

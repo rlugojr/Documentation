@@ -1,0 +1,748 @@
+---
+ID_PAGE: 5808
+PG_TITLE: Vector3
+PG_VERSION: 2.0
+---
+##new [Vector3](page.php?p=5808)(x, y, z)
+
+
+Creates a new [Vector3](page.php?p=5808)
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | x | number | The initial X coordinate
+ | y | number | The initial Y coordinate
+ | z | number | The initial Z coordinate
+---
+
+##Members
+
+###x : number
+
+
+
+The first coordinate
+
+
+###y : number
+
+
+
+The second coordinate
+
+
+###z : number
+
+
+
+The third coordinate
+
+
+
+
+
+
+
+##Methods
+
+###toString() &rarr; string
+Returns a string representation of the vector
+
+
+
+
+###asArray() &rarr; number[]
+Returns an array representation of the vector
+
+
+
+
+###toArray(array, index) &rarr; [Vector3](page.php?p=5808)
+Fills an array from a given index with the vector's coordinates
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | array | number[] | The array to fill
+optional | index | number | default : 0 The given index
+---
+
+###toQuaternion() &rarr; [Quaternion](page.php?p=5810)
+
+
+###addInPlace(otherVector) &rarr; [Vector3](page.php?p=5808)
+Adds in another vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | otherVector | [Vector3](page.php?p=5808) | Another vector
+---
+
+###add(otherVector) &rarr; [Vector3](page.php?p=5808)
+Adds an another vector and returns the result as a new vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | otherVector | [Vector3](page.php?p=5808) | Another vector
+---
+
+###addToRef(otherVector, result) &rarr; [Vector3](page.php?p=5808)
+Adds an another vector into a third target vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | otherVector | [Vector3](page.php?p=5808) | Another vector
+ | result | [Vector3](page.php?p=5808) | The target vector
+---
+
+###subtractInPlace(otherVector) &rarr; [Vector3](page.php?p=5808)
+Substracts another vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | otherVector | [Vector3](page.php?p=5808) | Another vector
+---
+
+###subtract(otherVector) &rarr; [Vector3](page.php?p=5808)
+Substracts another vector and returns the result in a new vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | otherVector | [Vector3](page.php?p=5808) | Another vector
+---
+
+###subtractToRef(otherVector, result) &rarr; [Vector3](page.php?p=5808)
+Substracts another vector into a third target vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | otherVector | [Vector3](page.php?p=5808) | Another vector
+ | result | [Vector3](page.php?p=5808) | The target vector
+---
+
+###subtractFromFloats(x, y, z) &rarr; [Vector3](page.php?p=5808)
+Substracts another vector in float form and returns the result in a new vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | x | number | The X coordinate of another vector
+ | y | number | The Y coordinate of another vector
+ | z | number | The Z coordinate of another vector
+---
+
+###subtractFromFloatsToRef(x, y, z, result) &rarr; [Vector3](page.php?p=5808)
+Substracts another vector in float form into a third target vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | x | number | The X coordinate of another vector
+ | y | number | The Y coordinate of another vector
+ | z | number | The Z coordinate of another vector
+ | result | [Vector3](page.php?p=5808) | The target vector
+---
+
+###negate() &rarr; [Vector3](page.php?p=5808)
+Returns the opposite vector, that is the vector with opposite coordinates
+
+
+
+
+###scaleInPlace(scale) &rarr; [Vector3](page.php?p=5808)
+Scales the vector with the given factor
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | scale | number | The scaling factor
+---
+
+###scale(scale) &rarr; [Vector3](page.php?p=5808)
+Scales the vector and returns the result as a new vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | scale | number | The scaling factor
+---
+
+###scaleToRef(scale, result) &rarr; void
+Scales the vector into a target vector with the given factor
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | scale | number | The scaling factor
+ | result | [Vector3](page.php?p=5808) | The target vector
+---
+
+###equals(otherVector) &rarr; boolean
+Tests if two vectors are equal
+Returns true if X,Y,Z coordinates are equal
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | otherVector | [Vector3](page.php?p=5808) | The vector to test against
+---
+
+###equalsWithEpsilon(otherVector) &rarr; boolean
+Tests if two vectors are equal with an approched value
+Returns true if X,Y,Z coordinates are equal within epsilon
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | otherVector | [Vector3](page.php?p=5808) | @param otherVector
+---
+
+###equalsToFloats(x, y, z) &rarr; boolean
+Test if a vector is equal to another in float form
+Returns true if X,Y,Z coordinates are equal to x,y,z
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | x | number | The X coordinate of another vector
+ | y | number | The Y coordinate of another vector
+ | z | number | The Z coordinate of another vector
+---
+
+###multiplyInPlace(otherVector) &rarr; [Vector3](page.php?p=5808)
+Multiply by another vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | otherVector | [Vector3](page.php?p=5808) | Another vector
+---
+
+###multiply(otherVector) &rarr; [Vector3](page.php?p=5808)
+Multiply by another vector and returns the result in a new vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | otherVector | [Vector3](page.php?p=5808) | Another vector
+---
+
+###multiplyToRef(otherVector, result) &rarr; [Vector3](page.php?p=5808)
+Multiply by another vector into a third target vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | otherVector | [Vector3](page.php?p=5808) | Another vector
+ | result | [Vector3](page.php?p=5808) | The target vector
+---
+
+###multiplyByFloats(x, y, z) &rarr; [Vector3](page.php?p=5808)
+Multiply by another vector in float form and returns the result in a new vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | x | number | The X coordinate of another vector
+ | y | number | The Y coordinate of another vector
+ | z | number | The Z coordinate of another vector
+---
+
+###divide(otherVector) &rarr; [Vector3](page.php?p=5808)
+Divides by another vector and returns the result nin a new vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | otherVector | [Vector3](page.php?p=5808) | Another vector
+---
+
+###divideToRef(otherVector, result) &rarr; [Vector3](page.php?p=5808)
+Divides by another vector into a third target vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | otherVector | [Vector3](page.php?p=5808) | Another vector
+ | result | [Vector3](page.php?p=5808) | The target vector
+---
+
+###MinimizeInPlace(other) &rarr; [Vector3](page.php?p=5808)
+Minimizes this vector with another vector. The result is stored in this vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | other | [Vector3](page.php?p=5808) | Another vector
+---
+
+###MaximizeInPlace(other) &rarr; [Vector3](page.php?p=5808)
+Maximizes by another vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | other | [Vector3](page.php?p=5808) | Another vector
+---
+
+###length() &rarr; number
+The length of the vector
+
+
+
+
+###lengthSquared() &rarr; number
+The squared length of the vector
+
+
+
+
+###normalize() &rarr; [Vector3](page.php?p=5808)
+Normalizes a vector
+
+
+
+
+###clone() &rarr; [Vector3](page.php?p=5808)
+Clones a vector
+
+
+
+
+###copyFrom(source) &rarr; [Vector3](page.php?p=5808)
+Copies another vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | source | [Vector3](page.php?p=5808) | The source vector
+---
+
+###copyFromFloats(x, y, z) &rarr; [Vector3](page.php?p=5808)
+Copies another vector in float form
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | x | number | The X coordinate of another vector
+ | y | number | The Y coordinate of another vector
+ | z | number | The Z coordinate of another vector
+---
+
+###static FromArray(array, offset) &rarr; [Vector3](page.php?p=5808)
+Creates a new vector from a given array
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | array | number[] | The given array
+optional | offset | number | The first index of the array to look at
+---
+
+###static FromArrayToRef(array, offset, result) &rarr; void
+Sets an existing vector from a given array
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | array | number[] | The given array
+ | offset | number | The first index of the array to look at
+ | result | [Vector3](page.php?p=5808) | The existing vector
+---
+
+###static FromFloatArrayToRef(array, offset, result) &rarr; void
+Sets an existing vector from an array of floats
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | array | Float32Array | The given array of floats
+ | offset | number | The first index of the array to look at
+ | result | [Vector3](page.php?p=5808) | The existing vector
+---
+
+###static FromFloatsToRef(x, y, z, result) &rarr; void
+Sets an existing vector from a set of floats
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | x | number | The new X coordinate
+ | y | number | The new Y coordinate
+ | z | number | The new Z coordinate
+ | result | [Vector3](page.php?p=5808) | The existing vector
+---
+
+###static Zero() &rarr; [Vector3](page.php?p=5808)
+Returns a new [Vector3](page.php?p=5808) with x, y, z to zero
+
+
+
+
+###static Up() &rarr; [Vector3](page.php?p=5808)
+Returns a new [Vector3](page.php?p=5808) with y equal 1 anx x, z equal 0
+
+
+
+
+###static TransformCoordinates(vector, transformation) &rarr; [Vector3](page.php?p=5808)
+Transforms a vector into a new vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | vector | [Vector3](page.php?p=5808) | The vector to transform
+ | transformation | [Matrix](page.php?p=5811) | The transformation matrix
+---
+
+###static TransformCoordinatesToRef(vector, transformation, result) &rarr; void
+Transforms a vector into an existing vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | vector | [Vector3](page.php?p=5808) | The vector to transform
+ | transformation | [Matrix](page.php?p=5811) | The transformation matrix
+ | result | [Vector3](page.php?p=5808) | The existing vector
+---
+
+###static TransformCoordinatesFromFloatsToRef(x, y, z, transformation, result) &rarr; void
+Transforms a set of coordinates into an existing vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | x | number | The X coordinate to transform
+ | y | number | The Y coordinate to transform
+ | z | number | The Z coordinate to transform
+ | transformation | [Matrix](page.php?p=5811) | The transformation matrix
+ | result | [Vector3](page.php?p=5808) | The existing vector
+---
+
+###static TransformNormal(vector, transformation) &rarr; [Vector3](page.php?p=5808)
+Performs a normal transformation using the given [Matrix](page.php?p=5811).
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | vector | [Vector3](page.php?p=5808) | The vector to transform
+ | transformation | [Matrix](page.php?p=5811) | The transformation matrix
+---
+
+###static TransformNormalToRef(vector, transformation, result) &rarr; void
+Performs a normal transformation using the given [Matrix](page.php?p=5811) into an existing vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | vector | [Vector3](page.php?p=5808) | The vector to transform
+ | transformation | [Matrix](page.php?p=5811) | The transformation matrix
+ | result | [Vector3](page.php?p=5808) | The existing vector
+---
+
+###static TransformNormalFromFloatsToRef(x, y, z, transformation, result) &rarr; void
+Performs a normal transformation of the set of float using the given [Matrix](page.php?p=5811) into an existing vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | x | number | The X coordinate to transform
+ | y | number | The Y coordinate to transform
+ | z | number | The Z coordinate to transform
+ | transformation | [Matrix](page.php?p=5811) | The transformation matrix
+ | result | [Vector3](page.php?p=5808) | The existing vector
+---
+
+###static CatmullRom(value1, value2, value3, value4, amount) &rarr; [Vector3](page.php?p=5808)
+Performs a Catmull-Rom interpolation using the specified positions.
+When the method completes, returns the result of the Catmull-Rom interpolation
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | value1 | [Vector3](page.php?p=5808) | The first position in the interpolation.
+ | value2 | [Vector3](page.php?p=5808) | The second position in the interpolation.
+ | value3 | [Vector3](page.php?p=5808) | The third position in the interpolation.
+ | value4 | [Vector3](page.php?p=5808) | The fourth position in the interpolation.
+ | amount | number | Weighting factor.
+---
+
+###static Clamp(value, min, max) &rarr; [Vector3](page.php?p=5808)
+Restricts a value to be within a specified range.
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | value | [Vector3](page.php?p=5808) | The value to clamp
+ | min | [Vector3](page.php?p=5808) | The minimum value
+ | max | [Vector3](page.php?p=5808) | The maximum value
+---
+
+###static Hermite(value1, tangent1, value2, tangent2, amount) &rarr; [Vector3](page.php?p=5808)
+Performs a Hermite spline interpolation.
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | value1 | [Vector3](page.php?p=5808) | First source position vector.
+ | tangent1 | [Vector3](page.php?p=5808) | First source tangent vector.
+ | value2 | [Vector3](page.php?p=5808) | Second source position vector.
+ | tangent2 | [Vector3](page.php?p=5808) | Second source tangent vector.
+ | amount | number | Weighting factor.
+---
+
+###static Lerp(start, end, amount) &rarr; [Vector3](page.php?p=5808)
+Performs a linear interpolation between two vectors.
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | start | [Vector3](page.php?p=5808) | interpolation start vector
+ | end | [Vector3](page.php?p=5808) | interpolation end vector
+ | amount | number | Weighting factor
+---
+
+###static Dot(left, right) &rarr; number
+Dot product between two vectors
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | left | [Vector3](page.php?p=5808) | first operand
+ | right | [Vector3](page.php?p=5808) | second operand
+---
+
+###static Cross(left, right) &rarr; [Vector3](page.php?p=5808)
+Calculates the cross product of two vectors.
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | left | [Vector3](page.php?p=5808) | first operand
+ | right | [Vector3](page.php?p=5808) | second operand
+---
+
+###static CrossToRef(left, right, result) &rarr; void
+Calculates the cross product of two vectors and put the result in the passed vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | left | [Vector3](page.php?p=5808) | first operand
+ | right | [Vector3](page.php?p=5808) | second operand
+ | result | [Vector3](page.php?p=5808) | The vector to put the result into
+---
+
+###static Normalize(vector) &rarr; [Vector3](page.php?p=5808)
+Returns the normalized version of the passed vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | vector | [Vector3](page.php?p=5808) | The vector to normalize
+---
+
+###static NormalizeToRef(vector, result) &rarr; void
+Put into the result vector the normalized version of the passed vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | vector | [Vector3](page.php?p=5808) | The vector to normalize
+ | result | [Vector3](page.php?p=5808) | The vector to put the result into
+---
+
+###static Project(vector, world, transform, viewport) &rarr; [Vector3](page.php?p=5808)
+Projects a 3D vector from object space into screen space.
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | vector | [Vector3](page.php?p=5808) | The vector to project
+ | world | [Matrix](page.php?p=5811) | The matrix representing the world matrix
+ | transform | [Matrix](page.php?p=5811) | The matrix representing the transform matrix
+ | viewport | [Viewport](page.php?p=5813) | The [Viewport](page.php?p=5813) structure representing the viewport
+---
+
+###static UnprojectFromTransform(source, viewportWidth, viewportHeight, world, transform) &rarr; [Vector3](page.php?p=5808)
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | source | [Vector3](page.php?p=5808) | 
+ | viewportWidth | number | 
+ | viewportHeight | number | 
+ | world | [Matrix](page.php?p=5811) | 
+ | transform | [Matrix](page.php?p=5811) | 
+---
+
+###static Unproject(source, viewportWidth, viewportHeight, world, view, projection) &rarr; [Vector3](page.php?p=5808)
+Converts a 3D vector from screen space into world space.
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | source | [Vector3](page.php?p=5808) | The vector to project
+ | viewportWidth | number | The viewport width
+ | viewportHeight | number | The viewport height
+ | world | [Matrix](page.php?p=5811) | The matrix representing the world matrix
+ | view | [Matrix](page.php?p=5811) | The matrix representing the view matrix
+ | projection | [Matrix](page.php?p=5811) | The projection matrix
+---
+
+###static Minimize(left, right) &rarr; [Vector3](page.php?p=5808)
+Minimizes the left vector with the right vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | left | [Vector3](page.php?p=5808) | The vector to minimize
+ | right | [Vector3](page.php?p=5808) | The vector used to minimize
+---
+
+###static Maximize(left, right) &rarr; [Vector3](page.php?p=5808)
+Maximizes the left vector with the right vector
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | left | [Vector3](page.php?p=5808) | The vector to maximize
+ | right | [Vector3](page.php?p=5808) | the vetor used to maximize
+---
+
+###static Distance(value1, value2) &rarr; number
+Returns the distance between two vectors
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | value1 | [Vector3](page.php?p=5808) | first vector
+ | value2 | [Vector3](page.php?p=5808) | second vector
+---
+
+###static DistanceSquared(value1, value2) &rarr; number
+Returns the squared distance between two vectors
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | value1 | [Vector3](page.php?p=5808) | first vector
+ | value2 | [Vector3](page.php?p=5808) | second vector
+---
+
+###static Center(value1, value2) &rarr; [Vector3](page.php?p=5808)
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | value1 | [Vector3](page.php?p=5808) | first vector
+ | value2 | [Vector3](page.php?p=5808) | second vector
+---

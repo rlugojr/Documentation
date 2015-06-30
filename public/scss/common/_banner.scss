@@ -12,7 +12,7 @@ $bfs : 12pt;
 .nav-main{
   width       : 100%;
   height      : $bh;
-
+  font-family: "opensans_regular";
   background-color : $grey;
 
   /* Remove mobile menu by default*/
@@ -62,7 +62,6 @@ $bfs : 12pt;
       // Title Babylon.js | DOCUMENTATION
       & > div:first-child {
         background-color: $darkgrey;
-        font-weight: bold;
         color:white;
         cursor : pointer;
       }

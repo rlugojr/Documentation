@@ -1,0 +1,130 @@
+#classesListSide {
+  display: inline-block;
+  vertical-align: top;
+  width: 19%;
+  margin: 0px;
+  padding: 10px;
+
+  #classesTitle {
+    text-align: center;
+    border-bottom: solid 1px $red;
+    padding-bottom: 2px;
+    margin-bottom: 4px;
+  }
+  .order {
+    display: inline-block;
+    background-color: #9B9B9B;
+    text-align: center;
+    margin: 4px 4px 15px 4px;
+    padding: 4px;
+    font-size: 12px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .selectedOrder {
+    background-color: $red;
+  }
+
+  .categoryTitle {
+
+    cursor: pointer;
+  }
+
+  .categoryList {
+    margin-left: 2px;
+
+    li {
+      font-size: 20px;
+      list-style-type: square;
+      color: #DCDCDC;
+      cursor: pointer;
+
+      a {
+        font-size: 0.75em;
+        color: #000000;
+      }
+      a:hover {
+        text-decoration: underline;
+        color: $red;
+      }
+    }
+  }
+  .categoryListTags {
+    display: none;
+  }
+}
+
+#classContent {
+  display: inline-block;
+  vertical-align: top;
+  width: 80%;
+
+  padding-left: 20px;
+//
+//  #classTitle {
+//    font-size: 30px;
+//    font-weight: bold;
+//    font-family: $font-title;
+//    letter-spacing: 1px;
+//    color: $red;
+//  }
+
+  #classMd {
+
+    hr {
+      visibility: hidden;
+    }
+
+    h2 {
+      margin-top: 25px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #DCDCDC;
+    }
+
+    h3 {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    h4 {
+      margin-left: 15px;
+      font-weight: 600;
+    }
+
+    table {
+      text-align: left;
+      margin-left: 20px;
+
+      thead {
+
+        tr {
+          background-color: #F1F1F1;
+
+          th {
+            padding: 6px 11px;
+            border: 2px solid #DCDCDC;
+          }
+        }
+      }
+
+      tbody {
+
+        tr {
+
+          td {
+            padding: 6px 11px;
+            border: 2px solid #DCDCDC;
+          }
+        }
+        tr:nth-child(2n) {
+          background-color: #F8F8F8;
+        }
+      }
+    }
+
+    p {
+      margin-left: 15px;
+    }
+  }
+}

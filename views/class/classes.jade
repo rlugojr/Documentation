@@ -3,14 +3,31 @@ include ../includes/header
     include ../includes/banner
 
     .whats-new-banner
-        h1= 'Classes v.' + version
+        h1= 'Classes'
 
     .horizontal-separator
 
-    #classes!= versions
-    each row, key in list
-        h3= key
-        each value in row
-            li= value
+    //List the versions
+    #versionsList
+        each version in versions
+            // If it's the current version, apply a different style
+            if currentVersion == version
+                a(href='./'+version)#version.selectedVersion= 'v'+version
+            else
+                a(href='./'+version)#version= 'v'+version
+
+    //List the classes categories
+    #classesList
+        each bclasses, categorie in list
+            div.category
+                div.categoryTitle
+                    h3= categorie
+                div.categoryList
+                    //List the classes of a category
+                    each bclass in bclasses
+                        li
+                            a(href='./'+currentVersion+'/'+bclass)= bclass
 
 include ../includes/footer
+
+script(src="/js/classes.js")

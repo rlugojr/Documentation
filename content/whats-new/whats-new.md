@@ -14,7 +14,7 @@ Changes list
     - New Loaders folder with a first additionnal plugin: [STL](http://doc.babylonjs.com/page.php?p=25109)  ([raananw](http://www.github.com/raananw), [deltakosh](http://www.github.com/deltakosh))
     - Gulp building process revamped, updated and simplified and now includes a config.json ([raananw](http://www.github.com/raananw)) 
  - **Updates**
- 	- Better beta angle support for ArcRotateCamera ([raananw](http://www.github.com/raananw))
+    - Better beta angle support for ArcRotateCamera ([raananw](http://www.github.com/raananw))
     - Better video textures support ([deltakosh](http://www.github.com/deltakosh))
     - Cameras hierarchy rework ([deltakosh](http://www.github.com/deltakosh))
     - New ```Camera.setCameraRigMode``` to control 3D rendering of any camera (Anaglyph, Stereo, VR) ([Palmer-JC](http://www.github.com/Palmer-JC), [vousk](https://github.com/vousk))

@@ -15,38 +15,7 @@ app.set('view engine', 'jade');
 app.set('views', './views');
 
 
-marked_github.setOptions({
-    renderer: new marked_github.Renderer(),
-    gfm: true,
-    tables: true,
-    breaks: true,
-    sanitize: false
-});
-
-// WHAT'S NEW page
-app.get('/whats-new', function(req, res){
-    fs.readFile('./content/whats-new/whats-new.md', {"encoding" : "utf-8", "flag" : "r"}, function(err, data){
-        if (err) throw err;
-
-        html = marked_github.noMeta(data);
-
-        // render the page
-        res.render('whats-new', {content : html, currentUrl: "/whats-new"});
-    });
-});
-
-
-// CLASSES PAGE
-var routeClasses = require('./scripts/routes/classes.js');
-app.get('/classes', routeClasses.showClasses );
-app.get('/classes/:version', routeClasses.showClassesVersion );
-app.get('/classes/:version/:name', routeClasses.showClassVersionName );
-
-
-// DEFAULT PAGE
-app.get('/', function (req, res) {
-  res.render('index', {currentUrl:'/'});
-});
+app.use('/', require('./scripts/routes'));
 
 
 // ERRORS

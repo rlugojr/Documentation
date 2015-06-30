@@ -7,4 +7,8 @@
   .error_message{
     color: $red;
   }
+
+  .error_link {
+    text-decoration: underline;
+  }
 }

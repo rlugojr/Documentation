@@ -1,44 +1,73 @@
 
+// ************************************************* REQUIRE *************************************************
+
+var express = require('express'),
+    router = express.Router();
+
+var fs = require('fs');
+
+var marked_github   = require('meta-marked');
+    marked_github.setOptions({
+        renderer: new marked_github.Renderer(),
+        gfm: true,
+        tables: true,
+        breaks: true,
+        sanitize: false
+    });
+
 // ************************************************* CLASSES *************************************************
+
 
 /**
  * Show the Classes list. No version specified so get the last version and redirect to it
  */
-exports.showClasses = function(req, res) {
+router.get('/', function(req, res) {
 
-    // TODO Find the last version in files
-    var versions = classesListVersions();
+    classesListVersions(function(versions) {
 
-    res.writeHead(301, {
-        Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/classes/2.1'
+        res.writeHead(301, {
+            Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/classes/' + versions[versions.length-1]
+        });
+        res.end();
     });
-    res.end();
-};
+});
 
 /**
  * Show the Classes list.
  * @param req
  *          version - The version of babylon
  */
-exports.showClassesVersion = function(req, res) {
+router.get('/:version', function(req, res) {
+    var exist = false;
 
-    // TODO Get the classes list, and display them
-    // TODO If the version doesn't exist, redirect to last /classes
     var version = req.params.version;
-    var versions = classesListVersions();
+    classesListVersions(function(versions) {
 
-    // TODO Verify if the param version exist
-    var content = classesClassesByVersion(version);
+        versions.forEach(function(number) {
+            if(number == version) exist = true;
+        });
 
-    var data = {
-        currentUrl  : "/classes",
-        version     : version,
-        versions    : versions,
-        list        : content
-    };
+        if(!exist) {
+            res.writeHead(301, {
+                Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/classes/' + versions[versions.length-1]
+            });
+            res.end();
+            return;
+        }
 
-    res.render('class/classes.jade', data);
-};
+        classesClassesByVersionOrderByTag(version, function(content) {
+
+            var data = {
+                currentUrl      : "/classes",
+                currentVersion  : version,
+                versions        : versions,
+                list            : content
+            };
+
+            res.render('class/classes.jade', data);
+        });
+    });
+});
 
 /**
  * Show the specified Class.
@@ -46,30 +75,66 @@ exports.showClassesVersion = function(req, res) {
  *          name - Name of the Class
  *          version - The version of babylon
  */
-exports.showClassVersionName = function(req, res) {
+router.get('/:version/:name', function(req, res) {
+    var exist = false;
 
-    // TODO Get the class markdown page and display it
-    // TODO Verify if the param version / name exist
-    var name = req.params.name;
+    // TODO Get the class markdown page and display it correctly
     var version = req.params.version;
+    classesListVersions(function(versions) {
 
-    var data = {
-        currentUrl  : "/classes",
-        exist       : false,
-        name        : name,
-        version     : version,
-        title       : 'Animation',
-        content     : 'An animation is a thing in Babylon.'
-    };
+        versions.forEach(function(number) {
+            if(number == version) {
+                exist = true;
+            }
+        });
 
-    if(data.exist) {
-        res.render('class/class.jade', data);
-    }
-    else {
-        res.render('errorpages/404_class_not_found.jade', {});
-    }
-};
+        if(!exist) {
+            res.writeHead(301, {
+                Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/classes/' + versions[versions.length-1]
+            });
+            res.end();
+            return;
+        }
+        exist = false;
 
+        var className = req.params.name;
+
+        classesClassesByVersionOrderByTag(version, function(classesList) {
+
+            for(var category in classesList) {
+                for(var bclass in classesList[category]) {
+                    if(classesList[category][bclass].toUpperCase() == className.toUpperCase()) {
+                        exist = true;
+                        var categoryName = category;
+                    }
+                }
+            }
+
+            if(!exist) {
+                res.render('errorpages/404_class_not_found.jade', {});
+                return;
+            }
+
+            fs.readFile('./content/classes/v' + version + '/' + className + '.md', {"encoding" : "utf-8", "flag" : "r"}, function(error, content){
+                if (error) res.render('errorpages/404_class_not_found.jade', {});
+
+                var data = {
+                    currentUrl      : "/classes",
+                    currentVersion  : version,
+                    className       : className,
+                    categoryName    : categoryName,
+                    content         : marked_github(content).html,
+                    list            : classesList
+                };
+
+                res.render('class/class.jade', data);
+            });
+        });
+    });
+});
+
+
+module.exports = router;
 
 
 // ************************************************* FUNCTIONS *************************************************
@@ -78,25 +143,27 @@ exports.showClassVersionName = function(req, res) {
  * Get all the versions
  * @returns {Array} - 'vX.X'
  */
-var classesListVersions = function() {
+var classesListVersions = function(callback) {
 
-    var fs = require('fs');
-    var results = [];
+    fs.readdir('./data/classes-tags', function(error, data) {
+        var results = [];
 
-    fs.readdirSync('./data/classes-tags').forEach(function(file) {
-        results.push(file.substr(1));
+        data.forEach(function(file) {
+            results.push(file.substr(1));
+        });
+
+        callback(results);
     });
-
-    return results;
 };
 
 /**
  * Get all the tags / class list from a version
  * @param version - Version of babylon
- * @returns {*} - Array of tags / class
+ * @returns {*} - Array of tags / class ordered by tags
  */
-var classesClassesByVersion = function(version) {
+var classesClassesByVersionOrderByTag = function(version, callback) {
 
-    var fs = require('fs');
-    return JSON.parse(fs.readFileSync('./data/classes-tags/v' + version + '/tags.json', 'utf8'));
+    fs.readFile('./data/classes-tags/v' + version + '/tags.json', 'utf8', function(error, data) {
+        callback(JSON.parse(data));
+    });
 };

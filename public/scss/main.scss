@@ -6,23 +6,13 @@
 @import "libs/neat/neat";
 @import "libs/font-awesome/font-awesome";
 
-body {
-  padding : 0;
-  margin  : 0;
-  width   : 100%;
-  height  : 100%;
-  font-family : $font-stack;
-}
-
-a{
-  text-decoration : none;
-  color : black;
-}
 $mobile: new-breakpoint(max-width 1360px 6);
 $phone: new-breakpoint(max-width 680px 6);
 
 /** SCSS FILES **/
 @import "common/banner";
+@import "classes/class";
+@import "classes/classes";
 @import "index/index";
 @import "whats-new/whats-new";
 @import "error/error";

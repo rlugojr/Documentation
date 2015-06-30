@@ -3,10 +3,31 @@ include ../includes/header
     include ../includes/banner
 
     .whats-new-banner
-        h1= 'Class ' + title + ' - v.' + version
+        h1= 'Classes v' + currentVersion
+            h3.h3Cat(id='cat_' + categoryName)= categoryName + ' > ' + className
 
     .horizontal-separator
 
-    #classContent!= content
+    //List the classes categories
+    #classesListSide
+        #classesTitle BABYLON.JS CLASSES
+        #orderByTags.order.selectedOrder Tags
+        #orderByAlpha.order A - Z
+
+        #classesListSideOrdered
+            each bclasses, categorie in list
+                div.categoryTitle(id='category_' + categorie)
+                    span= categorie
+                div.categoryList.categoryListTags
+                    //List the classes of a category
+                    each bclass in bclasses
+                        li
+                            a(href='./'+bclass).className= bclass
+
+    #classContent
+        h1#classTitle= className
+        #classMd!= content
 
 include ../includes/footer
+
+script(src="/js/class.js")

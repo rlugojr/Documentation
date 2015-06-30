@@ -23,7 +23,7 @@ module.exports = function() {
 };
 
 /**
- * Create a tags.json file for the version fiven in parameter
+ * Create a tags.json file for the version given in parameter
  * @param version
  */
 function createJson(version) {

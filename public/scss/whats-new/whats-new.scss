@@ -1,9 +1,6 @@
 .whats-new-banner{
   background-image  : url("/img/pattern_ban_1.png");
-
   background-repeat : repeat;
-
-  color       : $red;
   text-align  : center;
   padding     : 50px 0;
 }
@@ -13,33 +10,14 @@
   margin  : auto;
   line-height: 25px;
 
-
-  #changeslist{
-    color : $red;
-  }
-
   ul{
     list-style-type : none;
-
     li{
-      p{
-        font-weight : bold;
-      }
-
       ul{
         li{
           list-style-type : square;
         }
       }
-    }
-  }
-
-  a{
-    color : $red;
-    font-weight : bold;
-
-    &:hover{
-      text-decoration: underline;
     }
   }
 }

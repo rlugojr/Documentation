@@ -12,7 +12,7 @@ $bfs : 12pt;
 .nav-main{
   width       : 100%;
   height      : $bh;
-  font-family: "opensans_regular";
+  font-family: $font-title;
   background-color : $grey;
 
   /* Remove mobile menu by default*/

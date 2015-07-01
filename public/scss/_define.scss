@@ -19,11 +19,11 @@ Usable fonts :
 $fa-font-path: "../fonts/font-awesome";
 
 // Default font for regular text
-$font-regular: "roboto_light";
+$font-regular: "Roboto";
 // Default font for titles
-$font-title:"opensans_regular";
+$font-title: "Open Sans";
 // Defautl font for source code
-$font-code:"inconsolata";
+$font-code:"Inconsolata";
 
 h1 {
   font-weight: normal;
@@ -35,8 +35,8 @@ h2 {
   font-family: $font-title;
 }
 h3 {
-  font-weight: normal;
-  font-family: "opensans_light";
+  font-weight: 300;
+  font-family: $font-title;
 }
 a {
   text-decoration : none;
@@ -51,6 +51,7 @@ body {
   margin  : 0;
   width   : 100%;
   height  : 100%;
+  font-weight: 300;
   font-family : $font-regular;
 }
 
@@ -63,5 +64,5 @@ body {
   margin      : 0 auto 20px auto;
 }
 code {
-  font-family: "inconsolata";
+  font-family: $font-code;
 }

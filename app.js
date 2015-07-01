@@ -1,9 +1,12 @@
-var express = require('express');
-var app     = express();
+var express  = require('express');
+var app      = express();
+var compress = require('compression');
 
 
 // The listened port
 var port = process.env.PORT || 3000;
+
+app.use(compress());
 
 // Serve static files (css, js, images)
 app.use(express.static('public'));

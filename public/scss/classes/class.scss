@@ -6,6 +6,14 @@
   margin: 0px;
   padding: 10px;
 
+  #classesListByAlpha.toggledOff, #classesListByTag.toggledOff{
+    display: none;
+  }
+
+  #classesListByAlpha.toggledOn, #classesListByTag.toggledOn{
+    display: block;
+  }
+
   // BABYLON.JS CLASSES
   #classesTitle {
     text-align: center;
@@ -13,21 +21,26 @@
     padding-bottom: 2px;
     margin-bottom: 4px;
   }
-  // Tags or A-Z
-  .order {
-    display: inline-block;
-    background-color: #9B9B9B;
+
+  .classesListOrder{
     text-align: center;
-    margin: 4px 4px 15px 4px;
-    padding: 4px;
-    font-size: 12px;
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  // The sort selected
-  .selectedOrder {
-    background-color: $red;
+
+    .order {
+      display: inline-block;
+      background-color: #9B9B9B;
+      text-align: center;
+      margin: 4px 4px 15px 4px;
+      padding: 4px;
+      font-size: 12px;
+      color: white;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+
+    .selectedOrder {
+      background-color: $red;
+    }
   }
 
   .categoryTitle {

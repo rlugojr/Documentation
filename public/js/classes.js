@@ -9,8 +9,6 @@ var classesByTagList = document.getElementById('classesListByTag');
 var classesByAlphaList = document.getElementById('classesListByAlpha');
 
 
-
-
 /**
  * Display the list of classes, ordered by tags
  */

@@ -11,18 +11,25 @@ include ../includes/header
     //List the classes categories
     #classesListSide
         #classesTitle BABYLON.JS CLASSES
-        #orderByTags.order.selectedOrder Tags
-        #orderByAlpha.order A - Z
 
-        #classesListSideOrdered
-            each bclasses, categorie in list
-                div.categoryTitle(id='category_' + categorie)
-                    span= categorie
-                div.categoryList.categoryListTags
-                    //List the classes of a category
-                    each bclass in bclasses
-                        li
-                            a(href='./'+bclass).className= bclass
+        .classesListOrder
+            span#orderByTags.order.selectedOrder Tags
+            span#orderByAlpha.order A - Z
+
+        #classesListByTag.toggledOn
+            #test
+                each bclasses, categorie in classListByTag
+                    div.categoryTitle(id='category_' + categorie)
+                        span= categorie
+                    div.categoryList.categoryListTags
+                        //List the classes of a category
+                        each bclass in bclasses
+                            li
+                                a(href='./'+bclass).className= bclass
+        #classesListByAlpha.toggledOff
+            each className in classListByAlpha
+                div.class
+                    a(href='./'+className)= className
 
     #classContent
         h1#classTitle= className
@@ -30,4 +37,4 @@ include ../includes/header
 
 include ../includes/footer
 
-script(src="/js/class.js")
+script(src="/js/classes.js")

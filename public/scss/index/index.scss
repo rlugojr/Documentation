@@ -49,12 +49,21 @@
     text-align  : center;
   }
 
-  img{
-    width:100%;
-    max-width: 350px;
+  #demo-item{
+    cursor: pointer;
+
     position:relative;
+    width:400px;
+    height:250px;
+
+    margin-bottom:10px;
+
     left:50%;
     @include transform(translateX(-50%));
+
+    .demo-img{
+      max-width:400px;
+    }
   }
 }
 
@@ -66,36 +75,10 @@
   }
 }
 
-.footer{
-  position  : relative;
-  bottom    : 0;
-  width     : 100%;
-  height    : 40px;
-  padding   : 0;
-  margin    : 20px 0 0 0;
-
-  background-color  : $grey;
-  font-size   : 14px;
-
-  .footer-item{
-    @include span-columns(6 of 12);
-    @include omega();
-
-    a{
-      color : white;
-      padding : 12px;
-    }
-    a:visited{ color : white; }
-  }
-
-  .bjs-forum:hover, .bjs-github:hover{
-    @include transition(all .2s ease-in);
-    background-color : $red;
-    color:white;
-  }
-
-  .bjs-forum{ float : right; }
-  .bjs-github{ float : left; }
+// text selection ! Fancy :)
+@include selection {
+  background-color: $red;
+  color:$grey;
 }
 
 @import "mobile_index";

@@ -2,8 +2,20 @@ include ../includes/header
 #wrapper.error
     include ../includes/banner
 
-    h1.error_message The requested class does not exist.
+    h1.error_message.
+        404
+    .errorBaseline.
+        Class #{classname} not found
+    div.leftie
+        a(href="javascript:history.back()")
+            i.fa.fa-arrow-circle-left
+            | You can go back to the previous page...
+    div.rightie
+        a(href="/classes")
+            | ... or you can browse all classes
+            i.fa.fa-arrow-circle-right
 
-    a(href='/classes').error_link You can click here to see all the classes
+
 
 include ../includes/footer
+script(src='/js/error.js')

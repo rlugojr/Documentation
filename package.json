@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Website for the Babylon.js documentation",
   "dependencies": {
+    "compression": "^1.5.0",
     "express": "^4.13.0",
     "grunt": "latest",
     "grunt-cli": "latest",
@@ -18,5 +19,6 @@
     "setup": "chcp 1252 && npm run setup:bourbon && npm run setup:neat && cd public/scss/libs && bourbon install && neat install",
     "tags": "grunt tags",
     "import-md": "node ./scripts/import-md-from-azure.js"
-  }
+  },
+  "devDependencies": {}
 }

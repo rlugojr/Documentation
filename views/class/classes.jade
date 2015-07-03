@@ -16,9 +16,13 @@ include ../includes/header
             else
                 a(href='./'+version)#version= 'v'+version
 
+    .classesListOrder
+        span#orderByTags.order.selectedOrder Tags
+        span#orderByAlpha.order A - Z
+
     //List the classes categories
-    #classesList
-        each bclasses, categorie in list
+    #classesListByTag.toggledOn
+        each bclasses, categorie in classListByTag
             div.category
                 div.categoryTitle
                     h3= categorie
@@ -27,6 +31,13 @@ include ../includes/header
                     each bclass in bclasses
                         li
                             a(href='./'+currentVersion+'/'+bclass)= bclass
+
+    #classesListByAlpha.toggledOff
+        each className in classListByAlpha
+            div.class
+                a(href='./'+currentVersion+'/'+className)= className
+
+
 
 include ../includes/footer
 

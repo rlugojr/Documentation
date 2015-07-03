@@ -26,50 +26,6 @@ nav.nav-main
                 input(type='text', placeholder='Search...')
                 i.fa.fa-search
             .forward
-                div.
-                    babylonjs.com
-                i.fa.fa-play
-
-    //-----------------
-    //-- Action on banner
-    //-----------------
-    script.
-        $("#home").click(function() {
-            window.location = "/";
-        });
-        $("#whatsnew").click(function () {
-            window.location = "/whats-new";
-        });
-        $("#tutorials").click(function () {
-            window.location = "/tutorials";
-        });
-        $("#exporters").click(function () {
-            window.location = "/exporters";
-        });
-        $("#extensions").click(function () {
-            window.location = "/extensions";
-        });
-        $("#classes").click(function () {
-            window.location = "/classes";
-        });
-
-
-    // ----------------------
-    // LEFT MENU FOR MOBILE
-    // ----------------------
-    script.
-        var slideout = new Slideout({
-            'panel': document.getElementById('wrapper'),
-            'menu': document.getElementById('menu'),
-            'padding': 256,
-            'tolerance': 70
-        });
-        $("#mobilemenu").click(function() {
-            slideout.toggle();
-
-            if(!slideout.isOpen()){
-                $('#menu').css("display", "none");
-            } else {
-                $('#menu').css("display", "block");
-            }
-        });
+                div
+                    a(href="http://www.babylonjs.com", target="_blank") babylonjs.com
+                        i.fa.fa-play

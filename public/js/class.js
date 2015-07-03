@@ -10,11 +10,11 @@ var toggleCategories = function() {
     // Unwrap the category which contains the actual class
     var catName = $('.h3Cat').attr('id').substring(4);
     if(!$('#category_' + catName).next().is(':visible')) {
-        $('#category_' + catName).next().toggle();
+        $('#category_' + catName).next().toggle(150);
     }
 
     $('.categoryTitle').click(function() {
-        $(this).next().toggle();
+        $(this).next().toggle(150);
     });
 };
 

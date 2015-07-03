@@ -7,7 +7,7 @@ include includes/header.jade
     .presentation-header
         .presentation-img
         .bigimage
-            img(src='img/logos/bjs-logo-hd.png')
+            img(src='img/logos/bjs-logo.png')
         h1.bjs-moto An open source 3D engine based on webGL and Javascript
     //----------------------
     //-THREE COLUMNS
@@ -42,8 +42,9 @@ include includes/header.jade
     //----------------------
     .bjs-demo
         h1 See a Babylon.js demo
-        .bigimage
-            img(src='img/filling-demo.jpg')
+        div#demo-item
+            a(href="http://flightarcade.com/", target="_blank")
+                img(src='img/flight_arcade.jpg').demo-img
 
     .horizontal-separator
 
@@ -63,6 +64,9 @@ include includes/header.jade
             Now, when you open your app, you should see your client appear on the dashboard.
         p.
            You can also open the sample page, which already has this script tag in it, to test your dashboard.
+
+
+
     // HIGHLIGHT JS
     script(src='js/libs/highlight.pack.js')
     script.

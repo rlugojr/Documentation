@@ -5,6 +5,7 @@ var express = require('express'),
     router = express.Router();
 
 var fs = require('fs');
+var path = require('path');
 
 var marked_github   = require('meta-marked');
     marked_github.setOptions({
@@ -14,6 +15,8 @@ var marked_github   = require('meta-marked');
         breaks: true,
         sanitize: false
     });
+
+var logger = require('../../../config/logger');
 
 // ************************************************* CLASSES *************************************************
 
@@ -55,16 +58,20 @@ router.get('/:version', function(req, res) {
             return;
         }
 
-        classesClassesByVersionOrderByTag(version, function(content) {
+        classesClassesByVersionOrderByAlpha(version, function(classListByAlpha){
+            classesClassesByVersionOrderByTag(version, function(classListByTag){
 
-            var data = {
-                currentUrl      : "/classes",
-                currentVersion  : version,
-                versions        : versions,
-                list            : content
-            };
+                var data = {
+                    currentUrl      : "/classes",
+                    currentVersion  : version,
+                    versions        : versions,
+                    classListByAlpha: classListByAlpha,
+                    classListByTag  : classListByTag
+                };
 
-            res.render('class/classes.jade', data);
+                res.render('class/classes.jade', data);
+
+            });
         });
     });
 });
@@ -111,15 +118,18 @@ router.get('/:version/:name', function(req, res) {
             }
 
             if(!exist) {
-                res.render('errorpages/404_class_not_found.jade', {});
+                logger.error('404 error - Class not found: '  + className);
+                res.render('errorpages/404_class_not_found.jade', {classname:className});
                 return;
             }
 
-            fs.readFile('./content/classes/' + version + '/' + className + '.md', {"encoding" : "utf-8", "flag" : "r"}, function(error, content){
+            fs.readFile(path.join('./content/classes', version, className) + '.md', {"encoding" : "utf-8", "flag" : "r"}, function(error, content){
                 if (error){
-                  res.render('errorpages/404_class_not_found.jade', {});
+                    logger.error('404 error - File not found: '  + path.join('./content/classes', version, className) + '.md');
+                    logger.error(error);
+                    res.render('errorpages/404_class_not_found.jade', {classname:className});
                 }  else {
-                  var data = {
+                    var data = {
                     currentUrl: "/classes",
                     currentVersion: version,
                     className: className,
@@ -167,5 +177,18 @@ var classesClassesByVersionOrderByTag = function(version, callback) {
 
     fs.readFile('./data/classes-tags/v' + version + '/tags.json', 'utf8', function(error, data) {
         callback(JSON.parse(data));
+    });
+};
+
+var classesClassesByVersionOrderByAlpha = function(version, callback){
+    var classList = [];
+
+    fs.readdir(path.join('./content/classes/', version), function(err, data){
+        data.forEach(function(className){
+            className = className.replace('.md', '');
+            classList.push(className);
+        });
+
+        callback(classList);
     });
 };

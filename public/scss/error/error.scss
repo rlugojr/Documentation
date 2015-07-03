@@ -1,14 +1,53 @@
 #wrapper.error{
-  background-image  : url("/img/pattern_ban_1.png");
-  background-repeat : repeat;
 
+  background-color: white;
   text-align  : center;
+  height:100%;
 
+  // 404
   .error_message{
     color: $red;
+    font-size: 220pt;
+    margin: 5px 0 10px 0;
+    font-family: $font-title;
+  }
+
+  // Class not found message
+  .errorBaseline {
+    margin-bottom: 50px;
+    font-size: 22pt;
+    font-family: $font-title;
   }
 
   .error_link {
     text-decoration: underline;
+  }
+
+  // Go back or browse all classes
+  .leftie, .rightie {
+    @include span-columns(6);
+    cursor: pointer;
+
+    a {
+      padding : 15px;
+      color : black;
+      &:hover {
+        background-color: $red;
+        color:white;
+      }
+      i {
+        margin : 0 15px 0 15px;
+      }
+    }
+  }
+
+  // Go back to previous page
+  .leftie {
+    text-align: right;
+  }
+
+  // Browse all classes
+  .rightie {
+    text-align: left;
   }
 }

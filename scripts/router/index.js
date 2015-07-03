@@ -8,6 +8,9 @@ var util = require('util');
  */
 module.exports = function (app) {
     app.use('/classes', require('./routes/classes'));
+    app.use('/tutorials', require('./routes/tutorials'));
+    app.use('/extensions', require('./routes/extensions'));
+    app.use('/exporters', require('./routes/exporters'));
 
     app.use(require('./routes/general'));
 

@@ -12,6 +12,7 @@ marked_github.setOptions({
     sanitize: false
 });
 
+// PAGE WHATS NEW
 router.get('/whats-new', function(req, res){
 
     fs.readFile('./content/whats-new/whats-new.md', {"encoding" : "utf-8", "flag" : "r"}, function(err, data){
@@ -22,6 +23,18 @@ router.get('/whats-new', function(req, res){
         // render the page
         res.render('whats-new', {content : html, currentUrl: "/whats-new"});
     });
+});
+
+// PAGE EXTENSIONS
+router.get('/extensions', function(req, res){
+    // render the page
+    res.render('extensions/extensions');
+});
+
+// PAGE EXTENSIONS
+router.get('/exporters', function(req, res){
+  // render the page
+  res.render('exporters/exporters');
 });
 
 // DEFAULT PAGE

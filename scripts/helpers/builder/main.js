@@ -5,69 +5,45 @@
  */
 
 var fs = require('fs'),
-    TypeScript = require('typescript-services'),
-    mdBuilder = require('./mdBuilder');
+    path = require('path'),
+    async = require('async'),
+    //TypeScript = require('typescript-services'),
+    mdWriter = require('./mdWriter'),
+    dtsParser = require('./dtsParser');
 
-var classesLocation = '/content/classes/',
+var classesLocation = 'content/classes/',
     fileLocation = './scripts/helpers/builder/',
-    version = '0.0',
-    fileName = 'babylon.' + version + '.d.ts';
+    version = '2.0',
+    fileName = 'babylon.' + version + '.d.ts',
+    newDirPath = path.join(classesLocation, version);
 
-var readDefiniton = function (cb) {
-    fs.readFile(fileLocation + fileName, function (err, data) {
-        if (err) throw err;
-
-        var output = JSON.stringify(tree(data.toString()).sourceUnit());
-        console.log(output);
-        cb(output);
-    });
+//Pack everything to use it more easily in the waterfall
+var file = {
+    classesLocation: classesLocation,
+    location: fileLocation,
+    version: version,
+    name: fileName,
+    newDirPath: newDirPath
 };
 
-var tree = function (text) {
-    return TypeScript.Parser.parse(fileName,
-        TypeScript.SimpleText.fromString(text),
-        true /* is .d.ts? */,
-        new TypeScript.ParseOptions(TypeScript.LanguageVersion.EcmaScript5, true /* allow ASI? */));
-};
+//Nobody modifies this object !
+Object.freeze(file);
 
-var write = function (err, fd, input) {
-    if (err) return console.log(err);
+//
+async.waterfall([
+    async.constant(file),
+    mdWriter.dirExists,
+    //mdWriter.deleteDir,
+    mdWriter.createDir,
+    dtsParser.readFile,
+    dtsParser.buildTree,
+    dtsParser.visitTree
+], outputConsole);
 
-    fs.write(fd, input);
-};
+//Function executed once the waterfall has finished
+function outputConsole (err, data){
+    if(err) console.log ('Error : ', err);
+    else console.log(data);
 
-
-var writeMd = function (input) {
-
-    var formattedData = [];
-
-    //input.map(function (page, index, newPage) {
-    //    this.push({
-    //        id     : page['ID_PAGE'],
-    //        title  : page['PG_TITLE'],
-    //        version: page['PG_VERSION'],
-    //        content: page['PG_CONTENT']
-    //    });
-    //}, formattedData);
-
-    //fs.open('output.json', 'a', write);
-    //fs.write(fd, formattedData, function(err, written){
-    //    console.log(written);
-    //});
-
-    console.log(formattedData);
-    //mdBuilder.buildMDDir(formattedData);
-};
-
-readDefiniton(writeMd);
-
-//console.log(tree);
-//var output = JSON.stringify(readDefiniton().sourceUnit());
-//var output = JSON.stringify(tree.sourceUnit().moduleElements);
-
-//var file = fs.open('output.json', 'a', write);
-
-
-console.log('outputed');
-
-
+    console.log('End Of Main');
+}

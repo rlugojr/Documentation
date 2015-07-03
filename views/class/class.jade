@@ -32,7 +32,10 @@ include ../includes/header
                     a(href='./'+className)= className
 
     #classContent
-        h1#classTitle= className
+        div#classTitle= className
+        if(classTags)
+            each tag in classTags
+                span.classTag= tag
         #classMd!= content
 
 include ../includes/footer

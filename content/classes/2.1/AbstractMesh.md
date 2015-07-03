@@ -2,6 +2,10 @@
 ID_PAGE: 6657
 PG_TITLE: AbstractMesh
 PG_VERSION: 2.1
+TAGS:
+    - testTag1
+    - testTag2
+    - testTag3
 ---
 
 The [AbstractMesh](page.php?p=6657) Class extends [Node](page.php?p=6630)
@@ -23,7 +27,8 @@ The [AbstractMesh](page.php?p=6657) constructor
  | scene | [Scene](page.php?p=6662) | The scene where the mesh is.
 ---
 
-##Extends [Node](page.php?p=6630)
+##Extends
+ [Node](page.php?p=6630)
 ##Members
 
 ###static BILLBOARDMODE_NONE : number

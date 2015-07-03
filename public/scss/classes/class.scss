@@ -6,6 +6,8 @@
   margin: 0px;
   padding: 10px;
 
+  overflow: auto;
+
   #classesListByAlpha.toggledOff, #classesListByTag.toggledOff{
     display: none;
   }
@@ -22,6 +24,9 @@
     margin-bottom: 4px;
   }
 
+  /**
+   * REDUNDANT WITH CLASSES.SCSS
+   */
   .classesListOrder{
     text-align: center;
 
@@ -36,12 +41,13 @@
       border-radius: 3px;
       cursor: pointer;
     }
-
-
     .selectedOrder {
       background-color: $red;
     }
   }
+  /**
+   * END REDUNDANT WITH CLASSES.SCSS
+   */
 
   .categoryTitle {
     cursor: pointer;
@@ -80,6 +86,23 @@
   width: 80%;
 
   padding-left: 20px;
+
+  #classTitle{
+    font-size:2.0em;
+    color: $red;
+    font-weight: 400;
+    margin-bottom:10px;
+
+  }
+
+  span.classTag{
+    font-size: 0.8em;
+    color: white;
+    background-color: $red;
+    margin: 0px 5px;
+    padding:5px;
+    border-radius: 3px;
+  }
 
   #classMd {
 

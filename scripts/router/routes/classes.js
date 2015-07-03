@@ -83,10 +83,10 @@ router.get('/:version', function(req, res) {
  *      version - The version of babylon
  */
 router.get('/:version/:name', function(req, res) {
-    var exist           = false;
     var version         = req.params.version;
     var className       = req.params.name;
     var categoryName    = null;
+    var classTags       = null;
 
     fileExists(version, className, function(exists){
         if (exists){
@@ -111,6 +111,12 @@ router.get('/:version/:name', function(req, res) {
                             logger.error(error);
                             res.render('errorpages/404_class_not_found.jade', {classname:className});
                         } else {
+                            var metaData = marked_github(content).meta;
+                            classTags = metaData['TAGS'];
+
+                            if(!classTags){
+                                logger.warn('No tag is connected with this class: v' + version + '/' + className);
+                            }
 
                             var data = {
                                 currentVersion: version,
@@ -118,7 +124,8 @@ router.get('/:version/:name', function(req, res) {
                                 className: className,
                                 classListByTag: classListByTag,
                                 classListByAlpha: classListByAlpha,
-                                content: marked_github(content).html
+                                content: marked_github(content).html,
+                                classTags: classTags
                             };
 
                             res.render('class/class.jade', data);
@@ -132,28 +139,6 @@ router.get('/:version/:name', function(req, res) {
             res.render('errorpages/404_class_not_found.jade', {classname:className});
         }
     });
-
-    //classesListVersions(function(versions) {
-    //
-    //    versions.forEach(function(number) {
-    //        if(number == version) {
-    //            exist = true;
-    //        }
-    //    });
-    //
-    //    if(!exist) {
-    //        res.writeHead(301, {
-    //            Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/classes/' + versions[versions.length-1]
-    //        });
-    //        res.end();
-    //        return;
-    //    }
-    //    exist = false;
-    //
-    //    var className = req.params.name;
-    //
-    //
-    //});
 });
 
 
@@ -168,12 +153,12 @@ module.exports = router;
  */
 var classesListVersions = function(callback) {
 
-    fs.readdir('./data/classes-tags', function(error, data) {
+    fs.readdir('./content/classes', function(error, data) {
         var versionsList = [];
 
         data.forEach(function(version) {
             // don't send the 'v' in 'vX.X'
-            versionsList.push(version.substr(1));
+            versionsList.push(version);
         });
 
         callback(versionsList);
@@ -213,10 +198,3 @@ var classesClassesByVersionOrderByAlpha = function(version, callback){
 var fileExists = function(version, className, callback){
     fs.exists(path.join('./content/classes/', version, className) + '.md', callback);
 };
-
-/**
- * This function returns two lists of classes
- */
-var getClassesLists = function(){
-
-}

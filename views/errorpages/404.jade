@@ -2,6 +2,17 @@ include ../includes/header
 #wrapper.error
     include ../includes/banner
 
-    h1.error_message Oupsies! Someone seems to be lost...
+    h1.error_message.
+        404
+    .errorBaseline.
+        Page not found? Weird... It's working on my machine.
+    div.leftie
+        a(href="javascript:history.back()")
+            i.fa.fa-arrow-circle-left
+            | You can go back to the previous page...
+    div.rightie
+        a(href="/")
+            | ... or you can go back to our homepage.
+            i.fa.fa-arrow-circle-right
 
 include ../includes/footer

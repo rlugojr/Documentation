@@ -19,7 +19,7 @@
     "setup:neat": "gem install neat",
     "setup": "chcp 1252 && npm run setup:bourbon && npm run setup:neat && cd public/scss/libs && bourbon install && neat install",
     "tags": "grunt tags",
-    "import-md": "node ./scripts/import-md-from-azure.js"
-  },
-  "devDependencies": {}
+    "import-md": "node ./scripts/import-md-from-azure.js",
+    "create-forward": "node ./scripts/create-forward.js"
+  }
 }

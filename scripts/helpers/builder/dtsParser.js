@@ -56,6 +56,8 @@ var visitTree = function (file, treeInput, elements, cb) {
         var me = treeInput.childAt(i);
         console.log(TypeScript.SyntaxKind[me.kind()] + " : " + me.kind());
 
+        //var filePath = path.join(file.classesLocation, file.version, me.identifier.text()) + '.md';
+
         //console.log(util.inspect(me, false, null));
         if (me.kind() == TypeScript.SyntaxKind.ModuleDeclaration) {
             var md = me;
@@ -66,8 +68,8 @@ var visitTree = function (file, treeInput, elements, cb) {
             var cd = me;
             console.log('Begin with class ', cd.identifier.text());
 
-            if(cd.modifiers.indexOf(TypeScript.PullElementFlags.Private) > -1) continue;
-            if(cd.identifier.text().charAt(0) == '_') continue;
+            if (cd.modifiers.indexOf(TypeScript.PullElementFlags.Private) > -1) continue;
+            if (cd.identifier.text().charAt(0) == '_') continue;
 
             var filePath = path.join(file.classesLocation, file.version, cd.identifier.text()) + '.md';
 
@@ -79,9 +81,9 @@ var visitTree = function (file, treeInput, elements, cb) {
                 async.constant(filePath, cd),
                 writeClassContent,
                 mdWriter.createMd
-            ], function (err, classContent) {
-                if(err) console.log ('Error : ', err);
-                else console.log('Done with class ', cd.identifier.text());
+            ], function (err, clasS) {
+                if (err) console.log('Error : ', err);
+                else console.log('Done with class ', clasS.identifier.text());
             });
             console.log('break');
 
@@ -94,71 +96,22 @@ var visitTree = function (file, treeInput, elements, cb) {
             var ed = me;
             console.log('enum ' + ed.identifier.text());
 
+            var filePath = path.join(file.classesLocation, file.version, ed.identifier.text()) + '.md';
+
+            async.waterfall([
+                async.constant(filePath, ed),
+                writeEnumContent,
+                mdWriter.createMd
+            ], function (err, enuM) {
+                if (err) console.log('Error : ', err);
+                else console.log('Done with enum ', enuM.identifier.text());
+            });
+
         }
 
         console.log('looped : ', TypeScript.SyntaxKind[me.kind()] + " : " + me.kind());
 
-        //switch (me.kind()) {
-        //    case TypeScript.SyntaxKind.ModuleDeclaration:
-        //        var md = me;
-        //        console.log('module ' + md.name);
-        //        visitTree(file, md.moduleElements, elements, cb);
-        //        break;
-        //    case TypeScript.SyntaxKind.ClassDeclaration:
-        //        var cd = me;
-        //        console.log('Begin with class ', cd.identifier.text());
-        //
-        //        var filePath = path.join(file.classesLocation, file.version, cd.identifier.text()) + '.md';
-        //
-        //
-        //        /**
-        //         * When you reach a class, create it and fill it up
-        //         */
-        //        async.waterfall([
-        //            async.constant(filePath, cd),
-        //            mdWriter.addClassDescription,
-        //            writeClassContent,
-        //            mdWriter.createMd
-        //            //function(next){
-        //            //    elements.push(cd);
-        //            //    //visitTree(file, cd.classElements, elements, cb);
-        //            //    next(cd.classElements);
-        //            //}
-        //        ], function (err, data) {
-        //            //if(err) console.log ('Error : ', err);
-        //            //else console.log(data);
-        //            console.log('End with class ' + cd.identifier.text());
-        //        });
-        //        console.log('break');
-        //        break;
-        //
-        //
-        //    case TypeScript.SyntaxKind.InterfaceDeclaration:
-        //        var id = me;
-        //        console.log('interface ' + id.identifier.text());
-        //        //console.log('heritage ' + util.inspect(id.heritageClauses, false, null));
-        //        break;
-        //    case TypeScript.SyntaxKind.EnumDeclaration:
-        //        var ed = me;
-        //        console.log('enum ' + ed.identifier.text());
-        //        break;
-        //    //case TypeScript.SyntaxKind.MemberVariableDeclaration:
-        //    //    var vd = me;
-        //    //    console.log('variable ' + vd.variableDeclarator.propertyName);
-        //    //    elements.push({
-        //    //        properties: vd
-        //    //    });
-        //    //    break;
-        //    //case TypeScript.SyntaxKind.MemberFunctionDeclaration:
-        //    //    var fd = me;
-        //    //    console.log('method ' + fd.propertyName.text());
-        //    //    elements.push({
-        //    //        functions: fd
-        //    //    });
-        //    //    break;
-        //    default:
-        //        break;
-        //}
+
     }
     cb(null, elements);
 };
@@ -166,11 +119,12 @@ var visitTree = function (file, treeInput, elements, cb) {
 function writeClassContent(filePath, cd, cb) {
     console.log('whoo so class !', cd.identifier.text());
 
-    var classContent = '';
-    var classDescription = '##Description\n\n';
-    var constructorDescription = '##Constructor\n\n';
-    var variablesDescription = '##Members\n\n';
-    var functionsDescription = '##Functions\n\n';
+    var classContent = '',
+        classHeader = '',
+        classDescription = '##Description\n\n',
+        constructorDescription = '##Constructor\n\n',
+        variablesDescription = '##Members\n\n',
+        functionsDescription = '##Functions\n\n';
 
     classDescription += mdWriter.addClassDescription(cd);
 
@@ -182,21 +136,26 @@ function writeClassContent(filePath, cd, cb) {
         //if(me.modifiers.indexOf(TypeScript.PullElementFlags.Private) > -1) continue;
 
         switch (me.kind()) {
+            case TypeScript.SyntaxKind.ConstructorDeclaration:
+                var consd = me;
+                constructorDescription += mdWriter.addFunctionDescription(consd);
+
+                break;
             case TypeScript.SyntaxKind.MemberVariableDeclaration:
                 var vd = me;
 
                 //Ignore if child is private
                 //Members beginning by underscore are also considered as private
-                if(vd.modifiers.indexOf(TypeScript.PullElementFlags.Private) > -1) continue;
-                if(vd.variableDeclarator.propertyName.text().charAt(0) == '_') continue;
+                if (vd.modifiers.indexOf(TypeScript.PullElementFlags.Private) > -1) continue;
+                if (vd.variableDeclarator.propertyName.text().charAt(0) == '_') continue;
 
                 variablesDescription += mdWriter.addVariableDescription(vd);
                 break;
             case TypeScript.SyntaxKind.MemberFunctionDeclaration:
                 var fd = me;
 
-                if(fd.modifiers.indexOf(TypeScript.PullElementFlags.Private) > -1) continue;
-                if(fd.propertyName.text().charAt(0) == '_') continue;
+                if (fd.modifiers.indexOf(TypeScript.PullElementFlags.Private) > -1) continue;
+                if (fd.propertyName.text().charAt(0) == '_') continue;
 
                 //console.log('function', util.inspect(fd, null, false));
 
@@ -209,9 +168,31 @@ function writeClassContent(filePath, cd, cb) {
 
     }
 
-    classContent = classDescription + constructorDescription + variablesDescription + functionsDescription;
+    classContent = classHeader + classDescription + constructorDescription + variablesDescription + functionsDescription;
 
     cb(null, filePath, cd, classContent);
+}
+
+function writeEnumContent(filePath, ed, cb) {
+    var enumName = ed.identifier.text(),
+        enumElements = ed.enumElements.members;
+
+    var enumContent = '',
+        enumHeader = '##' + enumName + ' enumeration\n\n',
+        enumDescription = mdWriter.getComments(ed),
+        enumTable = 'Key | Value\n' +
+            '---|---\n';
+
+    for(var index in enumElements){
+        var element = enumElements[index];
+
+        enumTable += element.propertyName.text() + ' | ' + element.equalsValueClause.value._text + '\n';
+    }
+
+
+    enumContent += enumHeader + enumDescription + enumTable;
+
+    cb(null, filePath, ed, enumContent);
 }
 
 module.exports.readFile = readFile;

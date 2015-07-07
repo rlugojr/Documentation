@@ -10,15 +10,24 @@ declare module BABYLON {
         Y = 1,
         Z = 2
     }
-    class Scene {
-        /**
-         * @param evt commentaire
-         */
-        public createOrUpdateSelectionOctree(maxCapacity?: number, maxDepth?: number): Octree<AbstractMesh>;
-        constructor(id: string, scene: Scene, vertexData?: VertexData, updatable?: boolean, mesh?: Mesh);
-        public id: string;
-        public delayLoadState: number;
-        public delayLoadingFile: string;
+    /**
+     * random commentaire
+     */
+    enum Space {
+        LOCAL = 0,
+        WORLD = 1,
+    }
+    enum Xbox360Button {
+        A = 0,
+        B = 1,
+        X = 2,
+        Y = 3,
+        Start = 4,
+        Back = 5,
+        LB = 6,
+        RB = 7,
+        LeftStick = 8,
+        RightStick = 9,
     }
 }
 

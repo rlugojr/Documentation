@@ -13,7 +13,7 @@ var fs = require('fs'),
 
 var classesLocation = 'content/classes/',
     fileLocation = './scripts/helpers/builder/',
-    version = '2.0',
+    version = '0.0',
     fileName = 'babylon.' + version + '.d.ts',
     newDirPath = path.join(classesLocation, version);
 

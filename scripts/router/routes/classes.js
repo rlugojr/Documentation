@@ -88,57 +88,73 @@ router.get('/:version/:name', function(req, res) {
     var categoryName    = null;
     var classTags       = null;
 
-    fileExists(version, className, function(exists){
-        if (exists){
-            // render md page
-            classesClassesByVersionOrderByAlpha(version, function(classListByAlpha){
-                classesClassesByVersionOrderByTag(version, function(classListByTag){
-                    for(var category in classListByTag) {
-                        for(var bClass in classListByTag[category]) {
-                            if(classListByTag[category][bClass].toUpperCase() == className.toUpperCase()) {
-                                categoryName = category;
+    // for internal forwarding (click on a link)
+    if(className == 'page.php'){
+
+        var pageID = req.query.p;
+
+        res.writeHead(301, {
+            Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/forward/page.php?p=' + pageID
+        });
+
+        res.end();
+
+
+    } else {
+        fileExists(version, className, function(exists){
+            if (exists){
+                // render md page
+                classesClassesByVersionOrderByAlpha(version, function(classListByAlpha){
+                    classesClassesByVersionOrderByTag(version, function(classListByTag){
+                        for(var category in classListByTag) {
+                            for(var bClass in classListByTag[category]) {
+                                if(classListByTag[category][bClass].toUpperCase() == className.toUpperCase()) {
+                                    categoryName = category;
+                                }
                             }
                         }
-                    }
 
-                    if(!categoryName) {
-                        logger.warn('No category defined for class ' + version + '/' + className + ' in the tags file.');
-                    }
-
-                    fs.readFile(path.join('./content/classes', version, className) + '.md', {"encoding" : "utf-8", "flag" : "r"}, function(error, content) {
-                        if (error) {
-                            logger.error('404 error - File not found: ' + path.join('./content/classes', version, className) + '.md');
-                            logger.error(error);
-                            res.render('errorpages/404_class_not_found.jade', {classname:className});
-                        } else {
-                            var metaData = marked_github(content).meta;
-                            classTags = metaData['TAGS'];
-
-                            if(!classTags){
-                                logger.warn('No tag is connected with this class: v' + version + '/' + className);
-                            }
-
-                            var data = {
-                                currentVersion: version,
-                                categoryName: categoryName,
-                                className: className,
-                                classListByTag: classListByTag,
-                                classListByAlpha: classListByAlpha,
-                                content: marked_github(content).html,
-                                classTags: classTags
-                            };
-
-                            res.render('class/class.jade', data);
+                        if(!categoryName) {
+                            logger.warn('No category defined for class ' + version + '/' + className + ' in the tags file.');
                         }
+
+                        fs.readFile(path.join('./content/classes', version, className) + '.md', {"encoding" : "utf-8", "flag" : "r"}, function(error, content) {
+                            if (error) {
+                                logger.error('404 error - File not found: ' + path.join('./content/classes', version, className) + '.md');
+                                logger.error(error);
+                                res.render('errorpages/404_class_not_found.jade', {classname:className});
+                            } else {
+                                var metaData = marked_github(content).meta;
+                                classTags = metaData['TAGS'];
+
+                                if(!classTags){
+                                    logger.warn('No tag is connected with this class: v' + version + '/' + className);
+                                }
+
+                                var data = {
+                                    currentVersion: version,
+                                    categoryName: categoryName,
+                                    className: className,
+                                    classListByTag: classListByTag,
+                                    classListByAlpha: classListByAlpha,
+                                    content: marked_github(content).html,
+                                    classTags: classTags
+                                };
+
+                                res.render('class/class.jade', data);
+                            }
+                        });
                     });
                 });
-            });
-        } else {
-            // render 404 - Class not found
-            logger.error('404 error - File not found: '  + path.join('./content/classes', version, className) + '.md');
-            res.render('errorpages/404_class_not_found.jade', {classname:className});
-        }
-    });
+            } else {
+                // render 404 - Class not found
+                logger.error('404 error - File not found: '  + path.join('./content/classes', version, className) + '.md');
+                res.render('errorpages/404_class_not_found.jade', {classname:className});
+            }
+        });
+    }
+
+
 });
 
 

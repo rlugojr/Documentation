@@ -1,10 +1,10 @@
-/** GLOBAL VARIABLES **/
-@import "define";
-
 /** LIBS **/
 @import "libs/bourbon/bourbon";
 @import "libs/neat/neat";
 @import "libs/font-awesome/font-awesome";
+
+/** GLOBAL VARIABLES **/
+@import "define";
 
 $mobile: new-breakpoint(max-width 1360px 6);
 $phone: new-breakpoint(max-width 680px 6);

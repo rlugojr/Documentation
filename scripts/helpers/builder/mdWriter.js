@@ -15,23 +15,151 @@ var checkKeys = function (obj, model) {
 /**
  * returns comments of the given element
  * @param astElement AST TypeScript object
+ * @param sortParameter boolean tells if th given object is commented with parameters or not
  * @return string
  */
-var getComments = function (astElement) {
-    var result = '';
-    var comments = astElement.preComments();
-    for (var i in comments) result += comments[i].fullText() + '\n\n';
-    return result;
+var getComments = function (astElement, sortParameter) {
+    var textRegexp = /(?=\*\s)(?!\*\n).*$/gm,
+        serializedComments = '',
+    //Returns Comment[]
+        rawComments = astElement.preComments(),
+        comments = '';
+
+    //Serialize the array of comments
+    for (var i in rawComments) serializedComments += rawComments[i].fullText() + '\n';
+
+    if (!sortParameter) {
+        /*
+         line will look like :
+         * Description text
+         */
+        var line = textRegexp.exec(serializedComments);
+
+        /*
+         Iterate over multilines comment
+         */
+        while (line != null) {
+            /*
+             take out the first asterisk and space, now looks like
+             Description text
+             */
+            comments += line[0].slice(2) + '\n\n';
+
+            line = textRegexp.exec(serializedComments);
+        }
+
+    } else {
+        var notParamRegexp = /(?:^\s*\*\s)(?!\@param)(.*)/gm;
+
+        var line = notParamRegexp.exec(serializedComments);
+
+        while (line != null) {
+
+            comments += line[1] + '\n\n';
+
+            line = notParamRegexp.exec(serializedComments);
+        }
+
+        var parametersHeader = '####Parameters\n' +
+            ' | Name | Type | Description\n' +
+            '---|---|---|---\n';
+
+        var parametersDescription = '';
+
+        /*
+         Outputs an array with three elements : the whole selected line beginning by
+         * @param
+         then, the parameter name
+         then, the parameter description
+         */
+        var paramRegexp = /(?:\*\s\@param\s+)(\w*)(.*)/gm;
+
+        //var param
+
+        var funParameters = astElement.callSignature.parameterList.parameters.members;
+        //var funSignature = '(';
+
+        for (var index in funParameters) {
+            var parameter = funParameters[index],
+                parameterName = parameter.identifier.text(),
+                parameterType = parameter.typeAnnotation.type;
+            //optional parameter
+            parameter.questionToken ? parametersDescription += 'optional | ' : parametersDescription += ' | ';
+
+            //name of the parameter
+            parametersDescription += parameterName + ' | ';
+
+            //type of the parameter
+            switch (parameterType.kind()) {
+                case TypeScript.SyntaxKind.AnyKeyword:
+                case TypeScript.SyntaxKind.NumberKeyword:
+                case TypeScript.SyntaxKind.BooleanKeyword:
+                case TypeScript.SyntaxKind.StringKeyword:
+                case TypeScript.SyntaxKind.IdentifierName:
+                    parametersDescription += parameter.typeAnnotation.type.text();
+                    break;
+                case TypeScript.SyntaxKind.FunctionType:
+                    var parameters = parameterType.parameterList.parameters.members;
+                    var returnType = parameterType.parameterList.parameters.parent.parent.type._text;
+
+                    parametersDescription += '(';
+                    for (var jndex in parameters) {
+                        parametersDescription += parameters[jndex].typeAnnotation.parent.identifier._text;
+                        parametersDescription += ': ';
+                        parametersDescription += parameters[jndex].typeAnnotation.type._text;
+                        if (jndex < parameters.length - 1) {
+                            parametersDescription += ', ';
+                        }
+                    }
+                    parametersDescription += ') => ';
+                    parametersDescription += returnType;
+
+                    break;
+                case TypeScript.SyntaxKind.ArrayType:
+                    parametersDescription += parameter.typeAnnotation.type.type.text();
+                    parametersDescription += '[]';
+                    break;
+                case TypeScript.SyntaxKind.ObjectType:
+                    //TODO
+                    break;
+                default:
+                    break;
+            }
+
+            parametersDescription += ' | ';
+
+            //description of the parameter
+            var paramLine = paramRegexp.exec(serializedComments);
+            //We need to find the line that comments our parameter
+            while (paramLine != null) {
+                if (paramLine[1] == parameterName) {
+                    parametersDescription += paramLine[2];
+                }
+                paramLine = paramRegexp.exec(serializedComments);
+            }
+
+            //break line to go to the next parameter
+            parametersDescription += '\n';
+
+            //add a second line break if it is the last element of the table
+            if (index == funParameters.length - 1) parametersDescription += '\n';
+
+        }
+
+        parametersDescription != '' ? comments += '\n\n' + parametersHeader + parametersDescription : null;
+    }
+
+
+    return comments;
 };
 
 module.exports.dirExists = function (file, cb) {
     fs.exists(file.newDirPath, function (exists) {
         if (exists) throw new Error('ERROR : dir for this version already exists');
 
-        cb(null, file)
+        cb(null, file);
     });
 };
-
 
 module.exports.createDir = function (file, cb) {
 
@@ -49,18 +177,42 @@ module.exports.deleteDir = function (path, cb) {
     });
 };
 
-module.exports.createMd = function (filePath, cd, classContent, cb) {
+module.exports.createMd = function (filePath, element, dataToWrite, cb) {
 
-    fs.writeFile(filePath, classContent, function (err) {
+    fs.writeFile(filePath, dataToWrite, function (err) {
         if (!err) console.log('Md file created');
 
-        cb(err, classContent);
+        cb(err, element);
     })
 };
 
 
 module.exports.addClassDescription = function (clasS) {
-    return getComments(clasS);
+    var description = '',
+        name = clasS.identifier.text(),
+        heritageClauses = clasS.heritageClauses.members,
+        classExtends = '',
+        classImplements = '';
+
+    for (var index in heritageClauses) {
+        var clause = heritageClauses[index];
+
+        if (clause.kind() === TypeScript.SyntaxKind.ExtendsHeritageClause) {
+            classExtends = clause.typeNames.members[0].text();
+        } else if (clause.kind() === TypeScript.SyntaxKind.ImplementsHeritageClause) {
+            classImplements = clause.typeNames.members[0].text();
+        }
+    }
+
+    var comments = getComments(clasS);
+
+    description += 'class ' + name +
+        (classExtends ? ' extends ' + classExtends : '') +
+            //TODO we don't want to see implements, just useful for after
+        (classImplements ? ' implements ' + classImplements : '') +
+        '\n\n' + comments;
+
+    return description;
 };
 
 module.exports.addConstructorDescription = function () {
@@ -71,71 +223,52 @@ module.exports.addConstructorDescription = function () {
  * @param functioN : an array of objects with the properties : name, returnType, params, comment
  */
 module.exports.addFunctionDescription = function (functioN) {
+    var description = '##',
+        funName = '',
+        funReturnType = '';
+
+    //If this is a constructor, then there is no name to write
+    if (functioN.kind() == TypeScript.SyntaxKind.ConstructorDeclaration) {
+        funName += 'new ' + functioN.parent.parent.identifier.text();
+
+    } else {
+        //add static keyword if needed
+        if (functioN.modifiers.indexOf(TypeScript.PullElementFlags.Static) > -1) {
+            description += 'static ';
+        }
+        funName += functioN.propertyName.text();
+        funReturnType += ': ' + functioN.callSignature.typeAnnotation.type._text + '\n';
+    }
 
 
-    var funName = functioN.propertyName.text();
+    /*
+     Looks like
+     /**
+     * lorem ipsum sit dolor
+     * amet consectetuir
+     * @param var description
+     * @param var2 description
+     */
+    var funComments = getComments(functioN, true),
+        funParameters = functioN.callSignature.parameterList.parameters.members,
+        funSignature = '(';
 
-    var funParameters = functioN.callSignature.parameterList.parameters.members;
-    var funSignature = '(';
-
-    for(var index in funParameters){
+    for (var index in funParameters) {
         var parameter = funParameters[index];
 
         var parameterType = parameter.typeAnnotation.type;
-        var parameterKind = parameterType.kind();
-
-        //console.log(parameter);
-        //console.log(parameterKind);
 
         funSignature += parameter.identifier.text();
-        parameter.questionToken ? funSignature += '?' : funSignature +='';
-        funSignature += ': ';
-
-        switch(parameterType.kind()){
-            case TypeScript.SyntaxKind.AnyKeyword:
-            case TypeScript.SyntaxKind.NumberKeyword:
-            case TypeScript.SyntaxKind.BooleanKeyword:
-            case TypeScript.SyntaxKind.StringKeyword:
-                funSignature += parameter.typeAnnotation.type.text();
-                break;
-            case TypeScript.SyntaxKind.FunctionType:
-                var parameters = parameterType.parameterList.parameters.members;
-                var returnType = parameterType.parameterList.parameters.parent.parent.type._text;
-
-                funSignature += '(';
-                for (var jndex in parameters) {
-                    funSignature += parameters[jndex].typeAnnotation.parent.identifier._text;
-                    funSignature += ': ';
-                    funSignature += parameters[jndex].typeAnnotation.type._text;
-                    if (jndex < parameters.length - 1) {
-                        funSignature += ', ';
-                    }
-                }
-                funSignature += ') => ';
-                funSignature += returnType;
-
-                break;
-            case TypeScript.SyntaxKind.ArrayType:
-                funSignature += parameter.typeAnnotation.type.type.text();
-                funSignature += '[]';
-                break;
-            case TypeScript.SyntaxKind.ObjectType:
-                //TODO
-                break;
-            default:
-                break;
-        }
-
         if (index < funParameters.length - 1) {
             funSignature += ', ';
         }
     }
 
-    funSignature += '): ';
+    funSignature += ')';
 
-    funSignature += functioN.callSignature.typeAnnotation.type._text;
+    funSignature += funReturnType + '\n\n';
 
-    var description = '##' + funName + funSignature + '\n\n';
+    description += funName + funSignature + funComments;
 
     return description;
 };
@@ -153,43 +286,24 @@ var addParams = function (params) {
  * Returns markdown string formatted for class' members
  * @param members : an array of objects with the properties : name, type, comment
  */
-module.exports.addMembers = function (members) {
-    var memberKeys = {
-        name   : '',
-        type   : '',
-        comment: ''
-    };
-
-    var string = '';
-
-    string += '##Members\n\n';
-
-    for (var member in members) {
-
-        //Maybe too heavy to check on EVERY iteration
-        //if (!checkKeys(member, memberKeys)) {
-        //    console.log('error : wrong member format');
-        //    console.log(member);
-        //    continue;
-        //}
-        string += '###' + member.name + ' : ' + member.type + '\n\n';
-
-        string += member.comment;
-    }
-
-    return string;
-};
-
 module.exports.addVariableDescription = function (variable) {
-    var varModifiers = variable.modifiers;
+    var description = '##';
 
-    //Ignore if private
+    //add static keyword if needed
+    if (variable.modifiers.indexOf(TypeScript.PullElementFlags.Static) > -1) {
+        description += 'static ';
+    }
 
     var varName = variable.variableDeclarator.propertyName.text();
 
+    //Extract the variable type
     var varType = variable.variableDeclarator.typeAnnotation.type;
 
     switch (varType.kind()) {
+        case TypeScript.SyntaxKind.AnyKeyword:
+        case TypeScript.SyntaxKind.NumberKeyword:
+        case TypeScript.SyntaxKind.BooleanKeyword:
+        case TypeScript.SyntaxKind.StringKeyword:
         case TypeScript.SyntaxKind.IdentifierName:
             varType = varType._text;
             break;
@@ -207,15 +321,20 @@ module.exports.addVariableDescription = function (variable) {
                 }
             }
             varType += ') => ';
-            varType += returnType + '\n\n';
+            varType += returnType;
             break;
         case TypeScript.SyntaxKind.ObjectType:
             //TODO
             break;
+        case TypeScript.SyntaxKind.ArrayType:
+            varType = varType.type.text();
+            varType += '[]';
+            break;
         default:
             break;
     }
-    var description = '##' + varName + ' : ' + varType + '\n\n';
+    description += varName + ' : ' + varType + '\n\n';
+
     description += getComments(variable);
 
     return description;
@@ -228,3 +347,4 @@ module.exports.addInterfaceImplementation = function () {
 module.exports.appendToMd = function () {
 };
 
+module.exports.getComments = getComments;

@@ -64,6 +64,7 @@ code {
   font-family: $font-code;
 }
 
+
 // Horizontal separator
 .horizontal-separator{
   width       : 80%;
@@ -71,4 +72,15 @@ code {
   border-top  : 1px solid $red;
   font-size   :0;
   margin      : 0 auto 20px auto;
+}
+
+// text selection ! Fancy :)
+@include selection {
+  background-color: $red;
+  color:$grey;
+}
+
+// Remove text selection
+.no-text-selection {
+  @include user-select(none);
 }

@@ -1,43 +1,39 @@
 include ../includes/header
+
+.classBar
+    .classesTitle CLASSES
+    .sorts
+        span#orderByTags.order Tags
+        span#orderByAlpha.order.selectedOrder A - Z
+    //#classesListByTag(style="display:none")
+    //    each bclasses, categorie in classListByTag
+    //        div.categoryTitle(id='category_' + categorie)
+    //            span= categorie
+    //        div.categoryList.categoryListTags
+    //            //List the classes of a category
+    //        each bclass in bclasses
+    //            li
+    //                a(href='./'+bclass).className= bclass
+    #classesListByAlpha
+        each className in classListByAlpha
+            a.class(href='./'+className)= className
+
+// Elemetn to resize the sidebar
+.classBarResize#resizeBar(draggable=true)
+
+// Content of the selected class
+.classContent
+    h1#classTitle= className
+    if(classTags)
+        each tag in classTags
+            span.classTag= tag
+    #classMd!= content
+
+// The content wrapper
 #wrapper
     include ../includes/banner
 
-    .whats-new-banner
-        h1= 'Classes v' + currentVersion
-            h3.h3Cat(id='cat_' + categoryName)= categoryName + ' > ' + className
-
-    .horizontal-separator
-
-    //List the classes categories
-    #classesListSide
-        #classesTitle BABYLON.JS CLASSES
-
-        .classesListOrder
-            span#orderByTags.order.selectedOrder Tags
-            span#orderByAlpha.order A - Z
-
-        #classesListByTag.toggledOn
-            #test
-                each bclasses, categorie in classListByTag
-                    div.categoryTitle(id='category_' + categorie)
-                        span= categorie
-                    div.categoryList.categoryListTags
-                        //List the classes of a category
-                        each bclass in bclasses
-                            li
-                                a(href='./'+bclass).className= bclass
-        #classesListByAlpha.toggledOff
-            each className in classListByAlpha
-                div.class
-                    a(href='./'+className)= className
-
-    #classContent
-        div#classTitle= className
-        if(classTags)
-            each tag in classTags
-                span.classTag= tag
-        #classMd!= content
-
 include ../includes/footer
 
-script(src="/js/classes.js")
+script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/js/min/perfect-scrollbar.jquery.min.js')
+script(src="/js/class.js")

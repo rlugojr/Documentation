@@ -75,10 +75,4 @@
   }
 }
 
-// text selection ! Fancy :)
-@include selection {
-  background-color: $red;
-  color:$grey;
-}
-
 @import "mobile_index";

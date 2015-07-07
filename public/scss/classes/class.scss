@@ -1,35 +1,36 @@
-// The left menu (sort by tag and alphabetically)
-#classesListSide {
-  display: inline-block;
-  vertical-align: top;
-  width: 19%;
-  margin: 0px;
-  padding: 10px;
+$sidebar_width : 300px;
 
-  overflow: auto;
+// Resizer
+.classBarResize {
+  position:absolute;
+  left : $sidebar_width;
+  top : 50px;
+  bottom: 40px;
+  cursor: col-resize;
+  width : 3px;
+  z-index: 3;
+  border-left: 1px solid $darkgrey;
+}
 
-  #classesListByAlpha.toggledOff, #classesListByTag.toggledOff{
-    display: none;
-  }
+.classBar {
+  position:absolute;
+  top : 50px;
+  bottom: 40px;
+  left : 0;
+  background-color: #f9f9f9;
+  width : $sidebar_width;
+  margin:0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index : 2;
+  color:#333;
 
-  #classesListByAlpha.toggledOn, #classesListByTag.toggledOn{
-    display: block;
-  }
-
-  // BABYLON.JS CLASSES
-  #classesTitle {
+  // Sort by tag or A-Z
+  .sorts {
+    width:100%;
     text-align: center;
-    border-bottom: solid 1px $red;
-    padding-bottom: 2px;
-    margin-bottom: 4px;
-  }
 
-  /**
-   * REDUNDANT WITH CLASSES.SCSS
-   */
-  .classesListOrder{
-    text-align: center;
-
+    // Tag or A-Z
     .order {
       display: inline-block;
       background-color: #9B9B9B;
@@ -41,71 +42,57 @@
       border-radius: 3px;
       cursor: pointer;
     }
+
+    // Selected sort
     .selectedOrder {
       background-color: $red;
     }
   }
-  /**
-   * END REDUNDANT WITH CLASSES.SCSS
-   */
 
-  .categoryTitle {
-    cursor: pointer;
+
+  // CLASSES
+  .classesTitle {
+    text-align: center;
+    width:100%;
+    color : #eee;
+    background-color: #333;
+    padding:10px;
+    margin-bottom: 10px;
   }
 
-  // Contains all classes for a SELECTED tag
-  .categoryList {
-    margin-left: 2px;
-
-    li {
-      font-size: 20px;
-      list-style-type: square;
-      color: #DCDCDC;
-      cursor: pointer;
-
-      a {
-        font-size: 0.75em;
-        color: #000000;
-      }
-      a:hover {
-        text-decoration: underline;
-        color: $red;
-      }
+  // Each class text in the sidebar
+  .class {
+    font-size: 11pt;
+    padding: 5px 0 5px 10px;
+    color:#333;
+    display : block;
+    &:hover {
+      background-color: $darkgrey;
+      color: white;
     }
-  }
-  // Contains all classes for all tag not selected
-  .categoryListTags {
-    display: none;
   }
 }
 
-// The documentation of the selected class
-#classContent {
-  display: inline-block;
-  vertical-align: top;
-  width: 80%;
+// MD content of a class
+.classContent {
+  padding:20px;
+  margin: 0 0 0 $sidebar_width;
+  position:absolute;
+  top : 50px;
+  bottom: 40px;
+  height:auto;
+  width: calc(100% - #{$sidebar_width});
+  overflow-x: auto;
+  overflow-y: auto;
 
-  padding-left: 20px;
-
-  #classTitle{
-    font-size:2.0em;
-    color: $red;
-    font-weight: 400;
-    margin-bottom:10px;
-
-  }
-
-  span.classTag{
-    font-size: 0.8em;
-    color: white;
-    background-color: $red;
-    margin: 0px 5px;
-    padding:5px;
-    border-radius: 3px;
+  #classTitle {
+    border-bottom: solid 1px $red;
+    padding-bottom: 2px;
+    margin-bottom: 4px;
+    font-size: 20pt;
   }
 
   #classMd {
-
     // Remove useless lines in the markdown
     hr {
       visibility: hidden;

@@ -2,6 +2,8 @@
 $bh : 50px;
 // Font size
 $bfs : 12pt;
+// The width of title
+$title_width : 300px;
 
 .v-align {
   position : relative;
@@ -64,6 +66,8 @@ $bfs : 12pt;
         background-color: $darkgrey;
         color:white;
         cursor : pointer;
+        max-width : $title_width;
+        width:$title_width;
       }
 
       // Only tabs

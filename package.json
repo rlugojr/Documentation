@@ -18,6 +18,8 @@
   "scripts": {
     "tags": "grunt tags",
     "classes": "grunt classes",
+    "index": "grunt index",
+    "whats-new": "grunt whats-new",
     "import-md": "node ./scripts/import-md-from-azure.js",
     "create-forward": "node ./scripts/create-forward.js"
   }

@@ -18,6 +18,16 @@ module.exports = function (grunt) {
         )
     });
 
+    /** Compile the static HTML page index **/
+    grunt.registerTask('index', 'Compile the static HTML page index', function(){
+        require('./scripts/create-html-index.js')();
+    });
+
+    /** Compile the static HTML page whats-new **/
+    grunt.registerTask('whats-new', 'Compile the static HTML page whats-new', function(){
+        require('./scripts/create-html-whats-new.js')();
+    });
+
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json')
     });

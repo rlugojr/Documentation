@@ -157,6 +157,7 @@ var buildHTMLPages = function(jsonContent, callback){
             var optionsClass = {
                 pretty:false,
                 currentUrl: '/classes',
+                currentVersion: version,
                 classListByAlpha: classesByAlpha,
                 classListByTag: classesByTags,
                 className: bjsClass,

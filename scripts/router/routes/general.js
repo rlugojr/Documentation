@@ -1,9 +1,12 @@
+/*************************************************************************
+ *                             REQUIREMENTS                              *
+ ************************************************************************/
 var express = require('express'),
-    router = express.Router();
+    router  = express.Router(),
+    fs      = require('fs'),
+    path    = require('path'),
+    marked_github = require('meta-marked');
 
-var fs = require('fs');
-
-var marked_github   = require('meta-marked');
 marked_github.setOptions({
     renderer: new marked_github.Renderer(),
     gfm: true,
@@ -12,16 +15,33 @@ marked_github.setOptions({
     sanitize: false
 });
 
-// PAGE WHATS NEW
+/*************************************************************************
+ *                               VARIABLES                               *
+ ************************************************************************/
+
+var __publicRootPath = '../../../public';
+
+/************************************************************************
+ *                                ROUTES                                *
+ ************************************************************************/
+
+/**************
+ * WHAT'S NEW *
+ **************/
 router.get('/whats-new', function(req, res){
-
-    fs.readFile('./content/whats-new/whats-new.md', {"encoding" : "utf-8", "flag" : "r"}, function(err, data){
-        if (err) throw err;
-
-        html = marked_github(data).html;
-
-        // render the page
-        res.render('whats-new', {content : html, currentUrl: "/whats-new"});
+    fs.exists('public/html/whats-new.html', function(exists){
+        if(exists){
+            var options = {
+                root: path.join(__dirname, __publicRootPath)
+            };
+            res.status(200);
+            res.set({'Content-type':'text/html'});
+            res.sendFile('./html/whats-new.html', options);
+        } else {
+            // render 404 - Page not found
+            logger.error('404 error - Page not found: public/html/whats-new.html');
+            res.render('errorpages/404.jade', {});
+        }
     });
 });
 
@@ -37,9 +57,24 @@ router.get('/exporters', function(req, res){
   res.render('exporters/exporters');
 });
 
-// DEFAULT PAGE
+/**************
+ * INDEX PAGE *
+ **************/
 router.get('/', function (req, res) {
-    res.render('index', {currentUrl:'/'});
+    fs.exists('public/html/index.html', function(exists){
+        if(exists){
+            var options = {
+                root: path.join(__dirname, __publicRootPath)
+            };
+            res.status(200);
+            res.set({'Content-type':'text/html'});
+            res.sendFile('./html/index.html', options);
+        } else {
+            // render 404 - Page not found
+            logger.error('404 error - Page not found: public/html/index.html');
+            res.render('errorpages/404.jade', {});
+        }
+    });
 });
 
 module.exports = router;

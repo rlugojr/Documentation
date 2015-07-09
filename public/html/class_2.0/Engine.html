@@ -1,0 +1,2007 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"></head><body><nav id="menu" style="display:none"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><h2><a href="/">Home</a></h2><h2><a href="/whats-new">What's new</a></h2><h2><a href="/tutorials">Tutorials</a></h2><h2><a href="/exporters">Exporters</a></h2><h2><a href="/extensions">Extensions</a></h2><h2 class="active"><a href="/classes">Classes</a></h2><h2><a href="http://babylonjs.com/">babylonjs.com</a></h2></nav></body></html><div class="classBar"><div class="classesTitle">CLASSES</div><div class="sorts"><span id="orderByTags" class="order">Tags</span><span id="orderByAlpha" class="order selectedOrder">A - Z</span></div><div id="classes_classesListByTag" class="hidden sidemenu"></div><div id="classes_classesListByAlpha"><a href="./AbstractMesh" class="class">AbstractMesh</a><a href="./Action" class="class">Action</a><a href="./ActionEvent" class="class">ActionEvent</a><a href="./ActionManager" class="class">ActionManager</a><a href="./AnaglyphArcRotateCamera" class="class">AnaglyphArcRotateCamera</a><a href="./AnaglyphFreeCamera" class="class">AnaglyphFreeCamera</a><a href="./AnaglyphPostProcess" class="class">AnaglyphPostProcess</a><a href="./Analyser" class="class">Analyser</a><a href="./AndOrNotEvaluator" class="class">AndOrNotEvaluator</a><a href="./Angle" class="class">Angle</a><a href="./Animatable" class="class">Animatable</a><a href="./Animation" class="class">Animation</a><a href="./Arc2" class="class">Arc2</a><a href="./ArcRotateCamera" class="class">ArcRotateCamera</a><a href="./AssetsManager" class="class">AssetsManager</a><a href="./AsyncLoop" class="class">AsyncLoop</a><a href="./AudioEngine" class="class">AudioEngine</a><a href="./Axis" class="class">Axis</a><a href="./BackEase" class="class">BackEase</a><a href="./BaseTexture" class="class">BaseTexture</a><a href="./BezierCurve" class="class">BezierCurve</a><a href="./BezierCurveEase" class="class">BezierCurveEase</a><a href="./BinaryFileAssetTask" class="class">BinaryFileAssetTask</a><a href="./BlackAndWhitePostProcess" class="class">BlackAndWhitePostProcess</a><a href="./BlurPostProcess" class="class">BlurPostProcess</a><a href="./Bone" class="class">Bone</a><a href="./BounceEase" class="class">BounceEase</a><a href="./BoundingBox" class="class">BoundingBox</a><a href="./BoundingBoxRenderer" class="class">BoundingBoxRenderer</a><a href="./BoundingInfo" class="class">BoundingInfo</a><a href="./BoundingSphere" class="class">BoundingSphere</a><a href="./Box" class="class">Box</a><a href="./BrickProceduralTexture" class="class">BrickProceduralTexture</a><a href="./Camera" class="class">Camera</a><a href="./CannonJSPlugin" class="class">CannonJSPlugin</a><a href="./CircleEase" class="class">CircleEase</a><a href="./CloudProceduralTexture" class="class">CloudProceduralTexture</a><a href="./Collection_T_" class="class">Collection&lt;T&gt;</a><a href="./Collider" class="class">Collider</a><a href="./Color3" class="class">Color3</a><a href="./Color4" class="class">Color4</a><a href="./CombineAction" class="class">CombineAction</a><a href="./Condition" class="class">Condition</a><a href="./ConvolutionPostProcess" class="class">ConvolutionPostProcess</a><a href="./CSG" class="class">CSG</a><a href="./CubeTexture" class="class">CubeTexture</a><a href="./CubicEase" class="class">CubicEase</a><a href="./CustomProceduralTexture" class="class">CustomProceduralTexture</a><a href="./Cylinder" class="class">Cylinder</a><a href="./Database" class="class">Database</a><a href="./DDSTools" class="class">DDSTools</a><a href="./DebugLayer" class="class">DebugLayer</a><a href="./DecimationTriangle" class="class">DecimationTriangle</a><a href="./DecimationVertex" class="class">DecimationVertex</a><a href="./DepthRenderer" class="class">DepthRenderer</a><a href="./DeviceOrientationCamera" class="class">DeviceOrientationCamera</a><a href="./DirectionalLight" class="class">DirectionalLight</a><a href="./DisplayPassPostProcess" class="class">DisplayPassPostProcess</a><a href="./DoNothingAction" class="class">DoNothingAction</a><a href="./DynamicTexture" class="class">DynamicTexture</a><a href="./EasingFunction" class="class">EasingFunction</a><a href="./Effect" class="class">Effect</a><a href="./EffectFallbacks" class="class">EffectFallbacks</a><a href="./ElasticEase" class="class">ElasticEase</a><a href="./Engine" class="class">Engine</a><a href="./EngineCapabilities" class="class">EngineCapabilities</a><a href="./ExecuteCodeAction" class="class">ExecuteCodeAction</a><a href="./ExponentialEase" class="class">ExponentialEase</a><a href="./FilesInput" class="class">FilesInput</a><a href="./FilterPostProcess" class="class">FilterPostProcess</a><a href="./FireProceduralTexture" class="class">FireProceduralTexture</a><a href="./FollowCamera" class="class">FollowCamera</a><a href="./FreeCamera" class="class">FreeCamera</a><a href="./FresnelParameters" class="class">FresnelParameters</a><a href="./Frustum" class="class">Frustum</a><a href="./FxaaPostProcess" class="class">FxaaPostProcess</a><a href="./Gamepad" class="class">Gamepad</a><a href="./GamepadCamera" class="class">GamepadCamera</a><a href="./Gamepads" class="class">Gamepads</a><a href="./GenericPad" class="class">GenericPad</a><a href="./Geometry" class="class">Geometry</a><a href="./GrassProceduralTexture" class="class">GrassProceduralTexture</a><a href="./Ground" class="class">Ground</a><a href="./GroundMesh" class="class">GroundMesh</a><a href="./HardwareScalingOptimization" class="class">HardwareScalingOptimization</a><a href="./HemisphericLight" class="class">HemisphericLight</a><a href="./ImageAssetTask" class="class">ImageAssetTask</a><a href="./IncrementValueAction" class="class">IncrementValueAction</a><a href="./InstancedMesh" class="class">InstancedMesh</a><a href="./InterpolateValueAction" class="class">InterpolateValueAction</a><a href="./IntersectionInfo" class="class">IntersectionInfo</a><a href="./JoystickAxis" class="class">JoystickAxis</a><a href="./Layer" class="class">Layer</a><a href="./LensFlare" class="class">LensFlare</a><a href="./LensFlaresOptimization" class="class">LensFlaresOptimization</a><a href="./LensFlareSystem" class="class">LensFlareSystem</a><a href="./Light" class="class">Light</a><a href="./LinesMesh" class="class">LinesMesh</a><a href="./MarbleProceduralTexture" class="class">MarbleProceduralTexture</a><a href="./Material" class="class">Material</a><a href="./Matrix" class="class">Matrix</a><a href="./MergeMeshesOptimization" class="class">MergeMeshesOptimization</a><a href="./Mesh" class="class">Mesh</a><a href="./MeshAssetTask" class="class">MeshAssetTask</a><a href="./MeshLODLevel" class="class">MeshLODLevel</a><a href="./MirrorTexture" class="class">MirrorTexture</a><a href="./MultiMaterial" class="class">MultiMaterial</a><a href="./Node" class="class">Node</a><a href="./OctreeBlock_T_" class="class">OctreeBlock&lt;T&gt;</a><a href="./Octree_T_" class="class">Octree&lt;T&gt;</a><a href="./OculusCamera" class="class">OculusCamera</a><a href="./OculusDistortionCorrectionPostProcess" class="class">OculusDistortionCorrectionPostProcess</a><a href="./OculusGamepadCamera" class="class">OculusGamepadCamera</a><a href="./OimoJSPlugin" class="class">OimoJSPlugin</a><a href="./Orientation" class="class">Orientation</a><a href="./OutlineRenderer" class="class">OutlineRenderer</a><a href="./Particle" class="class">Particle</a><a href="./ParticlesOptimization" class="class">ParticlesOptimization</a><a href="./ParticleSystem" class="class">ParticleSystem</a><a href="./PassPostProcess" class="class">PassPostProcess</a><a href="./Path2" class="class">Path2</a><a href="./PathCursor" class="class">PathCursor</a><a href="./PhysicsEngine" class="class">PhysicsEngine</a><a href="./PickingInfo" class="class">PickingInfo</a><a href="./Plane" class="class">Plane</a><a href="./PlayAnimationAction" class="class">PlayAnimationAction</a><a href="./PlaySoundAction" class="class">PlaySoundAction</a><a href="./PointLight" class="class">PointLight</a><a href="./Polygon" class="class">Polygon</a><a href="./PolygonMeshBuilder" class="class">PolygonMeshBuilder</a><a href="./PostProcess" class="class">PostProcess</a><a href="./PostProcessesOptimization" class="class">PostProcessesOptimization</a><a href="./PostProcessManager" class="class">PostProcessManager</a><a href="./PostProcessRenderEffect" class="class">PostProcessRenderEffect</a><a href="./PostProcessRenderPass" class="class">PostProcessRenderPass</a><a href="./PostProcessRenderPipeline" class="class">PostProcessRenderPipeline</a><a href="./PostProcessRenderPipelineManager" class="class">PostProcessRenderPipelineManager</a><a href="./PowerEase" class="class">PowerEase</a><a href="./PredicateCondition" class="class">PredicateCondition</a><a href="./ProceduralTexture" class="class">ProceduralTexture</a><a href="./QuadraticEase" class="class">QuadraticEase</a><a href="./QuadraticErrorSimplification" class="class">QuadraticErrorSimplification</a><a href="./QuadraticMatrix" class="class">QuadraticMatrix</a><a href="./QuarticEase" class="class">QuarticEase</a><a href="./Quaternion" class="class">Quaternion</a><a href="./QuinticEase" class="class">QuinticEase</a><a href="./RawTexture" class="class">RawTexture</a><a href="./Ray" class="class">Ray</a><a href="./Reference" class="class">Reference</a><a href="./RefractionPostProcess" class="class">RefractionPostProcess</a><a href="./RenderingGroup" class="class">RenderingGroup</a><a href="./RenderingManager" class="class">RenderingManager</a><a href="./RenderTargetsOptimization" class="class">RenderTargetsOptimization</a><a href="./RenderTargetTexture" class="class">RenderTargetTexture</a><a href="./RoadProceduralTexture" class="class">RoadProceduralTexture</a><a href="./Scene" class="class">Scene</a><a href="./SceneLoader" class="class">SceneLoader</a><a href="./SceneOptimization" class="class">SceneOptimization</a><a href="./SceneOptimizer" class="class">SceneOptimizer</a><a href="./SceneOptimizerOptions" class="class">SceneOptimizerOptions</a><a href="./SceneSerializer" class="class">SceneSerializer</a><a href="./SetParentAction" class="class">SetParentAction</a><a href="./SetStateAction" class="class">SetStateAction</a><a href="./SetValueAction" class="class">SetValueAction</a><a href="./ShaderMaterial" class="class">ShaderMaterial</a><a href="./ShadowGenerator" class="class">ShadowGenerator</a><a href="./ShadowsOptimization" class="class">ShadowsOptimization</a><a href="./SimplificationSettings" class="class">SimplificationSettings</a><a href="./SimplificationType" class="class">SimplificationType</a><a href="./SineEase" class="class">SineEase</a><a href="./Skeleton" class="class">Skeleton</a><a href="./SmartArray_T_" class="class">SmartArray&lt;T&gt;</a><a href="./Sound" class="class">Sound</a><a href="./SoundTrack" class="class">SoundTrack</a><a href="./Space" class="class">Space</a><a href="./Sphere" class="class">Sphere</a><a href="./SpotLight" class="class">SpotLight</a><a href="./Sprite" class="class">Sprite</a><a href="./SpriteManager" class="class">SpriteManager</a><a href="./SSAORenderingPipeline" class="class">SSAORenderingPipeline</a><a href="./StandardMaterial" class="class">StandardMaterial</a><a href="./StateCondition" class="class">StateCondition</a><a href="./StickValues" class="class">StickValues</a><a href="./StopAnimationAction" class="class">StopAnimationAction</a><a href="./StopSoundAction" class="class">StopSoundAction</a><a href="./SubMesh" class="class">SubMesh</a><a href="./SwitchBooleanAction" class="class">SwitchBooleanAction</a><a href="./Tags" class="class">Tags</a><a href="./TargetCamera" class="class">TargetCamera</a><a href="./TextFileAssetTask" class="class">TextFileAssetTask</a><a href="./Texture" class="class">Texture</a><a href="./TextureAssetTask" class="class">TextureAssetTask</a><a href="./TextureOptimization" class="class">TextureOptimization</a><a href="./TGATools" class="class">TGATools</a><a href="./TiledGround" class="class">TiledGround</a><a href="./Tools" class="class">Tools</a><a href="./Torus" class="class">Torus</a><a href="./TorusKnot" class="class">TorusKnot</a><a href="./TouchCamera" class="class">TouchCamera</a><a href="./ValueCondition" class="class">ValueCondition</a><a href="./Vector2" class="class">Vector2</a><a href="./Vector3" class="class">Vector3</a><a href="./Vector4" class="class">Vector4</a><a href="./VertexBuffer" class="class">VertexBuffer</a><a href="./VertexData" class="class">VertexData</a><a href="./VideoTexture" class="class">VideoTexture</a><a href="./Viewport" class="class">Viewport</a><a href="./VirtualJoystick" class="class">VirtualJoystick</a><a href="./VirtualJoysticksCamera" class="class">VirtualJoysticksCamera</a><a href="./VolumetricLightScatteringPostProcess" class="class">VolumetricLightScatteringPostProcess</a><a href="./WoodProceduralTexture" class="class">WoodProceduralTexture</a><a href="./Xbox360Button" class="class">Xbox360Button</a><a href="./Xbox360Dpad" class="class">Xbox360Dpad</a><a href="./Xbox360Pad" class="class">Xbox360Pad</a></div></div><!-- Element to resize the sidebar--><div id="resizeBar" draggable class="classBarResize"></div><!-- Content of the selected class--><div class="classContent"><h1 id="classTitle">Engine</h1><div id="classMd"><p>The engine class is responsible for interfacing with all lower-level APIs such as WebGL and Audio.</p>
+<h2 id="new-engine-page-php-p-5700-canvas-antialias-options-">new <a href="page.php?p=5700">Engine</a>(canvas, antialias, options)</h2>
+<p>@constructor</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>canvas</td>
+<td>HTMLCanvasElement</td>
+<td>name of the canvas which holds the engine</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>antialias</td>
+<td>boolean</td>
+<td>True if this engine should support antialiasing, false otherwise.</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>options</td>
+<td>any</td>
+<td>- further options to be sent to the getContext function</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="members">Members</h2>
+<h3 id="static-alpha_disable-number">static ALPHA_DISABLE : number</h3>
+<p>Alpha disable</p>
+<h3 id="static-alpha_add-number">static ALPHA_ADD : number</h3>
+<p>Add Alpha</p>
+<h3 id="static-alpha_combine-number">static ALPHA_COMBINE : number</h3>
+<p>Combine Alpha</p>
+<h3 id="static-delayloadstate_none-number">static DELAYLOADSTATE_NONE : number</h3>
+<p>The delay when you don&#39;t load</p>
+<h3 id="static-delayloadstate_loaded-number">static DELAYLOADSTATE_LOADED : number</h3>
+<p>The delay for loaded</p>
+<h3 id="static-delayloadstate_loading-number">static DELAYLOADSTATE_LOADING : number</h3>
+<p>The delay of loading</p>
+<h3 id="static-delayloadstate_notloaded-number">static DELAYLOADSTATE_NOTLOADED : number</h3>
+<p>The delay</p>
+<h3 id="static-textureformat_alpha-number">static TEXTUREFORMAT_ALPHA : number</h3>
+<h3 id="static-textureformat_luminance-number">static TEXTUREFORMAT_LUMINANCE : number</h3>
+<h3 id="static-textureformat_luminance_alpha-number">static TEXTUREFORMAT_LUMINANCE_ALPHA : number</h3>
+<h3 id="static-textureformat_rgb-number">static TEXTUREFORMAT_RGB : number</h3>
+<h3 id="static-textureformat_rgba-number">static TEXTUREFORMAT_RGBA : number</h3>
+<h3 id="static-texturetype_unsigned_int-number">static TEXTURETYPE_UNSIGNED_INT : number</h3>
+<h3 id="static-texturetype_float-number">static TEXTURETYPE_FLOAT : number</h3>
+<h3 id="static-version-string">static Version : string</h3>
+<h3 id="static-epsilon-number">static Epsilon : number</h3>
+<p>This member is static : use <a href="page.php?p=5696">BABYLON</a>.Engine.Epsilon</p>
+<p>Default value : 0.001</p>
+<h3 id="static-collisionsepsilon-number">static CollisionsEpsilon : number</h3>
+<p>This member is static : use <a href="page.php?p=5696">BABYLON</a>.Engine.CollisionsEpsilon</p>
+<p>Default value : 0.001</p>
+<h3 id="static-shadersrepository-string">static ShadersRepository : string</h3>
+<p>This member is static : use <a href="page.php?p=5696">BABYLON</a>.Engine.ShadersRepository</p>
+<p>Default value : &quot;Babylon/Shaders/&quot;</p>
+<h3 id="isfullscreen-boolean">isFullscreen : boolean</h3>
+<p>True if fullscreen, false otherwise</p>
+<h3 id="ispointerlock-boolean">isPointerLock : boolean</h3>
+<p>True if the pointer is lock, false otherwise</p>
+<h3 id="cullbackfaces-boolean">cullBackFaces : boolean</h3>
+<h3 id="rendereveninbackground-boolean">renderEvenInBackground : boolean</h3>
+<p>If true, the engine will compute all frames even if the app is in background</p>
+<h3 id="scenes-scene-page-php-p-5725-">scenes : <a href="page.php?p=5725">Scene</a>[]</h3>
+<p>An array of <a href="page.php?p=5696">BABYLON</a>.Scene</p>
+<h3 id="static-audioengine-audioengine-page-php-p-5762-">static audioEngine : <a href="page.php?p=5762">AudioEngine</a></h3>
+<h3 id="drawcalls-number">drawCalls : number</h3>
+<h3 id="loadinguitext-string">loadingUIText : string</h3>
+<p>Load the user interface text</p>
+<h3 id="loadinguibackgroundcolor-string">loadingUIBackgroundColor : string</h3>
+<p>Load the user interface background color</p>
+<h2 id="methods">Methods</h2>
+<h3 id="getglinfo-rarr-vendor-string-renderer-string-version-string-">getGlInfo() &rarr; {vendor: string; renderer: string; version: string; };</h3>
+<h3 id="getaspectratio-camera-rarr-number">getAspectRatio(camera) &rarr; number</h3>
+<p>Returns the screen aspect ratio</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>camera</td>
+<td><a href="page.php?p=5702">Camera</a></td>
+<td>@param camera</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="getrenderwidth-rarr-number">getRenderWidth() &rarr; number</h3>
+<p>If a current render target is set, returns its width.</p>
+<h3 id="getrenderheight-rarr-number">getRenderHeight() &rarr; number</h3>
+<p>If a current render target is set, returns its height.
+Otherwise, returns the rendering canvas height</p>
+<h3 id="getrenderingcanvas-rarr-htmlcanvaselement">getRenderingCanvas() &rarr; HTMLCanvasElement</h3>
+<p>Returns the rendering canvas</p>
+<h3 id="getrenderingcanvasclientrect-rarr-clientrect">getRenderingCanvasClientRect() &rarr; ClientRect</h3>
+<h3 id="sethardwarescalinglevel-level-rarr-void">setHardwareScalingLevel(level) &rarr; void</h3>
+<p>Set the hardware scaling level. The engine is then resized with these new parameters (width/level, height/level).</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>level</td>
+<td>number</td>
+<td>@param level</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="gethardwarescalinglevel-rarr-number">getHardwareScalingLevel() &rarr; number</h3>
+<p>Returns the hardware scaling level</p>
+<h3 id="getloadedtexturescache-rarr-webgltexture-">getLoadedTexturesCache() &rarr; WebGLTexture[]</h3>
+<p>Returns all loaded textures from the caches</p>
+<h3 id="getcaps-rarr-enginecapabilities-page-php-p-5699-">getCaps() &rarr; <a href="page.php?p=5699">EngineCapabilities</a></h3>
+<p>Returns the engine capabilities</p>
+<h3 id="resetdrawcalls-rarr-void">resetDrawCalls() &rarr; void</h3>
+<h3 id="setdepthfunctiontogreater-rarr-void">setDepthFunctionToGreater() &rarr; void</h3>
+<p>Set the Depth function to greater</p>
+<h3 id="setdepthfunctiontogreaterorequal-rarr-void">setDepthFunctionToGreaterOrEqual() &rarr; void</h3>
+<p>Set the Depth function to greater or equal</p>
+<h3 id="setdepthfunctiontoless-rarr-void">setDepthFunctionToLess() &rarr; void</h3>
+<p>Set the Depth function to less</p>
+<h3 id="setdepthfunctiontolessorequal-rarr-void">setDepthFunctionToLessOrEqual() &rarr; void</h3>
+<p>Set the Depth function to less or equal</p>
+<h3 id="stoprenderloop-renderfunction-rarr-void">stopRenderLoop(renderFunction) &rarr; void</h3>
+<p>stop executing a render loop function and remove it from the execution array</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>optional</td>
+<td>renderFunction</td>
+<td>() =&gt; void</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="runrenderloop-renderfunction-rarr-void">runRenderLoop(renderFunction) &rarr; void</h3>
+<p>Register and execute a render loop. The engine can have more than one render function.
+@example
+engine.runRenderLoop(function () {
+     scene.render()
+})</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>renderFunction</td>
+<td>() =&gt; void</td>
+<td>@param renderFunction</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="switchfullscreen-requestpointerlock-rarr-void">switchFullscreen(requestPointerLock) &rarr; void</h3>
+<p>Toggle full screen mode.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>requestPointerLock</td>
+<td>boolean</td>
+<td>If true, the user requests a pointer lock</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="clear-color-backbuffer-depthstencil-rarr-void">clear(color, backBuffer, depthStencil) &rarr; void</h3>
+<p>Clear the canvas with the given parameters.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>color</td>
+<td>any</td>
+<td>The clear color used</td>
+</tr>
+<tr>
+<td></td>
+<td>backBuffer</td>
+<td>boolean</td>
+<td>True if this method should clear the color buffer</td>
+</tr>
+<tr>
+<td></td>
+<td>depthStencil</td>
+<td>boolean</td>
+<td>True if this method should clear the depth buffer</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setviewport-viewport-requiredwidth-requiredheight-rarr-void">setViewport(viewport, requiredWidth, requiredHeight) &rarr; void</h3>
+<p>Set the WebGL&#39;s viewport</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>viewport</td>
+<td><a href="page.php?p=5813">Viewport</a></td>
+<td>@param viewport</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>requiredWidth</td>
+<td>number</td>
+<td>The required width of the viewport. By defaults, equals to the rendering canvas width</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>requiredHeight</td>
+<td>number</td>
+<td>The required height of the viewport. By defaults, equals to the rendering canvas height</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setdirectviewport-x-y-width-height-rarr-void">setDirectViewport(x, y, width, height) &rarr; void</h3>
+<p>Set the viewport of this engine. The cached viewport is cleared and the viewport takes exactly the size given in parameter.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>x</td>
+<td>number</td>
+<td>The x origin coordinate</td>
+</tr>
+<tr>
+<td></td>
+<td>y</td>
+<td>number</td>
+<td>The y origin coordinate</td>
+</tr>
+<tr>
+<td></td>
+<td>width</td>
+<td>number</td>
+<td>The width of the viewport</td>
+</tr>
+<tr>
+<td></td>
+<td>height</td>
+<td>number</td>
+<td>The height of the viewport</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="beginframe-rarr-void">beginFrame() &rarr; void</h3>
+<p>Method used at the beginning of the frame rendering. Currently, measure the number of frames per seconds (FPS).</p>
+<h3 id="endframe-rarr-void">endFrame() &rarr; void</h3>
+<p>Method used at the end of a frame rendering. Flushes the frame buffer of the canvas.</p>
+<h3 id="resize-rarr-void">resize() &rarr; void</h3>
+<p>resize the view according to the canvas&#39; size.
+@example
+  window.addEventListener(&quot;resize&quot;, function () {
+     engine.resize();
+  });</p>
+<h3 id="setsize-width-height-rarr-void">setSize(width, height) &rarr; void</h3>
+<p>force a specific size of the canvas</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>width</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>height</td>
+<td>number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="bindframebuffer-texture-rarr-void">bindFramebuffer(texture) &rarr; void</h3>
+<p>Bind Frame buffer</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>texture</td>
+<td>WebGLTexture</td>
+<td>@param texture</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="unbindframebuffer-texture-rarr-void">unBindFramebuffer(texture) &rarr; void</h3>
+<p>Unbind frame buffer</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>texture</td>
+<td>WebGLTexture</td>
+<td>@param texture</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="flushframebuffer-rarr-void">flushFramebuffer() &rarr; void</h3>
+<p>Flushes the frame buffer</p>
+<h3 id="restoredefaultframebuffer-rarr-void">restoreDefaultFramebuffer() &rarr; void</h3>
+<p>Restore the default frame buffer</p>
+<h3 id="createvertexbuffer-vertices-rarr-webglbuffer">createVertexBuffer(vertices) &rarr; WebGLBuffer</h3>
+<p>Create a new vertex Buffer object</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>vertices</td>
+<td>number[]</td>
+<td>The array of vertices</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="createdynamicvertexbuffer-capacity-rarr-webglbuffer">createDynamicVertexBuffer(capacity) &rarr; WebGLBuffer</h3>
+<p>Create a dynamic vertex buffer object</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>capacity</td>
+<td>number</td>
+<td>The capacity of the vertex buffer object</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="updatedynamicvertexbuffer-vertexbuffer-vertices-offset-rarr-void">updateDynamicVertexBuffer(vertexBuffer, vertices, offset) &rarr; void</h3>
+<p>Updates the given dynamic vertex buffer object</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>vertexBuffer</td>
+<td>WebGLBuffer</td>
+<td>The buffer to upadte</td>
+</tr>
+<tr>
+<td></td>
+<td>vertices</td>
+<td>any</td>
+<td>The array of vertices</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>offset</td>
+<td>number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="createindexbuffer-indices-rarr-webglbuffer">createIndexBuffer(indices) &rarr; WebGLBuffer</h3>
+<p>Create a new index buffer</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>indices</td>
+<td>number[]</td>
+<td>@param indices</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="bindbuffers-vertexbuffer-indexbuffer-vertexdeclaration-vertexstridesize-effect-rarr-void">bindBuffers(vertexBuffer, indexBuffer, vertexDeclaration, vertexStrideSize, effect) &rarr; void</h3>
+<p>Bind buffer with the given vertexBuffer, indexBuffer, vertexDeclaration vertexStrideSize and effect</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>vertexBuffer</td>
+<td>WebGLBuffer</td>
+<td>The given vertex buffer</td>
+</tr>
+<tr>
+<td></td>
+<td>indexBuffer</td>
+<td>WebGLBuffer</td>
+<td>The given index buffer</td>
+</tr>
+<tr>
+<td></td>
+<td>vertexDeclaration</td>
+<td>number[]</td>
+<td>The given vertex declaration</td>
+</tr>
+<tr>
+<td></td>
+<td>vertexStrideSize</td>
+<td>number</td>
+<td>The given vertex</td>
+</tr>
+<tr>
+<td></td>
+<td>effect</td>
+<td><a href="page.php?p=5782">Effect</a></td>
+<td>@param effect</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="bindmultibuffers-vertexbuffers-indexbuffer-effect-rarr-void">bindMultiBuffers(vertexBuffers, indexBuffer, effect) &rarr; void</h3>
+<p>Bind some buffers with the given vertexBuffer, indexBuffer and effect</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>vertexBuffers</td>
+<td><a href="page.php?p=5835">VertexBuffer</a>[]</td>
+<td>The given vextex buffer</td>
+</tr>
+<tr>
+<td></td>
+<td>indexBuffer</td>
+<td>WebGLBuffer</td>
+<td>The given index buffer</td>
+</tr>
+<tr>
+<td></td>
+<td>effect</td>
+<td><a href="page.php?p=5782">Effect</a></td>
+<td>@param effect</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="createinstancesbuffer-capacity-rarr-webglbuffer">createInstancesBuffer(capacity) &rarr; WebGLBuffer</h3>
+<p>Create a dynamic instance buffer</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>capacity</td>
+<td>number</td>
+<td>The size of this dynamic buffer</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="deleteinstancesbuffer-buffer-rarr-void">deleteInstancesBuffer(buffer) &rarr; void</h3>
+<p>Delete an existing instance buffer</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>buffer</td>
+<td>WebGLBuffer</td>
+<td>The buffer which will be deleted</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="updateandbindinstancesbuffer-instancesbuffer-data-offsetlocations-rarr-void">updateAndBindInstancesBuffer(instancesBuffer, data, offsetLocations) &rarr; void</h3>
+<p>Update and bind the given instance buffer</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>instancesBuffer</td>
+<td>WebGLBuffer</td>
+<td>@param instancesBuffer</td>
+</tr>
+<tr>
+<td></td>
+<td>data</td>
+<td>Float32Array</td>
+<td>@param data</td>
+</tr>
+<tr>
+<td></td>
+<td>offsetLocations</td>
+<td>number[]</td>
+<td>@param offsetLocations</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="unbindinstancesbuffer-instancesbuffer-offsetlocations-rarr-void">unBindInstancesBuffer(instancesBuffer, offsetLocations) &rarr; void</h3>
+<p>Unbind the given instance buffer</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>instancesBuffer</td>
+<td>WebGLBuffer</td>
+<td>The instances buffer</td>
+</tr>
+<tr>
+<td></td>
+<td>offsetLocations</td>
+<td>number[]</td>
+<td>@param offsetLocations</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="applystates-rarr-void">applyStates() &rarr; void</h3>
+<h3 id="draw-usetriangles-indexstart-indexcount-instancescount-rarr-void">draw(useTriangles, indexStart, indexCount, instancesCount) &rarr; void</h3>
+<p>Draw</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>useTriangles</td>
+<td>boolean</td>
+<td>@param useTriangles</td>
+</tr>
+<tr>
+<td></td>
+<td>indexStart</td>
+<td>number</td>
+<td>@param indexStart</td>
+</tr>
+<tr>
+<td></td>
+<td>indexCount</td>
+<td>number</td>
+<td>@param indexCount</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>instancesCount</td>
+<td>number</td>
+<td>If true, uses the engine capabilities.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="drawpointclouds-verticesstart-verticescount-instancescount-rarr-void">drawPointClouds(verticesStart, verticesCount, instancesCount) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>verticesStart</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>verticesCount</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>instancesCount</td>
+<td>number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="createeffect-basename-attributesnames-uniformsnames-samplers-defines-fallbacks-oncompiled-onerror-rarr-effect-page-php-p-5782-">createEffect(baseName, attributesNames, uniformsNames, samplers, defines, fallbacks, onCompiled, onError) &rarr; <a href="page.php?p=5782">Effect</a></h3>
+<p>Compiled/linked your shaders into a simple object.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>baseName</td>
+<td>any</td>
+<td>The base name of the effect (The name of file without .fragment.fx or .vertex.fx)</td>
+</tr>
+<tr>
+<td></td>
+<td>attributesNames</td>
+<td>string[]</td>
+<td>An array of attributes describing the topology of your vertices</td>
+</tr>
+<tr>
+<td></td>
+<td>uniformsNames</td>
+<td>string[]</td>
+<td>An array of uniforms (the external variables) defined by the shaders</td>
+</tr>
+<tr>
+<td></td>
+<td>samplers</td>
+<td>string[]</td>
+<td>An array of samplers (the objects used to read textures)</td>
+</tr>
+<tr>
+<td></td>
+<td>defines</td>
+<td>string</td>
+<td>A define string</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>fallbacks</td>
+<td><a href="page.php?p=5781">EffectFallbacks</a></td>
+<td>@param fallbacks</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>onCompiled</td>
+<td>(effect: <a href="page.php?p=5782">Effect</a>) =&gt; void</td>
+<td>Function launched when the effect is compiled</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>onError</td>
+<td>(effect: <a href="page.php?p=5782">Effect</a>, errors: string) =&gt; void</td>
+<td>Function launched when an error occurs</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="createeffectforparticles-fragmentname-uniformsnames-samplers-defines-fallbacks-oncompiled-onerror-rarr-effect-page-php-p-5782-">createEffectForParticles(fragmentName, uniformsNames, samplers, defines, fallbacks, onCompiled, onError) &rarr; <a href="page.php?p=5782">Effect</a></h3>
+<p>Compiled/linked your shaders into a simple object.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>fragmentName</td>
+<td>string</td>
+<td>The name of the Particules</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>uniformsNames</td>
+<td>string[]</td>
+<td>An array of uniforms (the external variables) defined by the shaders</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>samplers</td>
+<td>string[]</td>
+<td>An array of samplers (the objects used to read textures)</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>defines</td>
+<td>string</td>
+<td>A define string</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>fallbacks</td>
+<td><a href="page.php?p=5781">EffectFallbacks</a></td>
+<td>@param fallbacks</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>onCompiled</td>
+<td>(effect: <a href="page.php?p=5782">Effect</a>) =&gt; void</td>
+<td>Function launched when the effect is compiled</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>onError</td>
+<td>(effect: <a href="page.php?p=5782">Effect</a>, errors: string) =&gt; void</td>
+<td>Function launched when an error occurs</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="createshaderprogram-vertexcode-fragmentcode-defines-rarr-webglprogram">createShaderProgram(vertexCode, fragmentCode, defines) &rarr; WebGLProgram</h3>
+<p>Creates a shader program</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>vertexCode</td>
+<td>string</td>
+<td>The vertex shader code</td>
+</tr>
+<tr>
+<td></td>
+<td>fragmentCode</td>
+<td>string</td>
+<td>The fragment shader code</td>
+</tr>
+<tr>
+<td></td>
+<td>defines</td>
+<td>string</td>
+<td>The shader defines string</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="getuniforms-shaderprogram-uniformsnames-rarr-webgluniformlocation-">getUniforms(shaderProgram, uniformsNames) &rarr; WebGLUniformLocation[]</h3>
+<p>Return the uniforms location for the given shader program</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>shaderProgram</td>
+<td>WebGLProgram</td>
+<td>The given shader program</td>
+</tr>
+<tr>
+<td></td>
+<td>uniformsNames</td>
+<td>string[]</td>
+<td>The uniforms names</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="getattributes-shaderprogram-attributesnames-rarr-number-">getAttributes(shaderProgram, attributesNames) &rarr; number[]</h3>
+<p>Return the attributes for the given shader program</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>shaderProgram</td>
+<td>WebGLProgram</td>
+<td>The given shader program</td>
+</tr>
+<tr>
+<td></td>
+<td>attributesNames</td>
+<td>string[]</td>
+<td>The name of the attributes</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="enableeffect-effect-rarr-void">enableEffect(effect) &rarr; void</h3>
+<p>Enable effect</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>effect</td>
+<td><a href="page.php?p=5782">Effect</a></td>
+<td>@param effect</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setarray-uniform-array-rarr-void">setArray(uniform, array) &rarr; void</h3>
+<p>Set array of given shader</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniform</td>
+<td>WebGLUniformLocation</td>
+<td>The uniform of this shader</td>
+</tr>
+<tr>
+<td></td>
+<td>array</td>
+<td>number[]</td>
+<td>The array</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setarray2-uniform-array-rarr-void">setArray2(uniform, array) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniform</td>
+<td>WebGLUniformLocation</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>array</td>
+<td>number[]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setarray3-uniform-array-rarr-void">setArray3(uniform, array) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniform</td>
+<td>WebGLUniformLocation</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>array</td>
+<td>number[]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setarray4-uniform-array-rarr-void">setArray4(uniform, array) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniform</td>
+<td>WebGLUniformLocation</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>array</td>
+<td>number[]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setmatrices-uniform-matrices-rarr-void">setMatrices(uniform, matrices) &rarr; void</h3>
+<p>Set matrices for a given shader</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniform</td>
+<td>WebGLUniformLocation</td>
+<td>the uniform of this shader</td>
+</tr>
+<tr>
+<td></td>
+<td>matrices</td>
+<td>Float32Array</td>
+<td>@param matrices</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setmatrix-uniform-matrix-rarr-void">setMatrix(uniform, matrix) &rarr; void</h3>
+<p>Set matrix for a given shader</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniform</td>
+<td>WebGLUniformLocation</td>
+<td>The uniforms of the shader</td>
+</tr>
+<tr>
+<td></td>
+<td>matrix</td>
+<td><a href="page.php?p=5811">Matrix</a></td>
+<td>@param matrix</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setfloat-uniform-value-rarr-void">setFloat(uniform, value) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniform</td>
+<td>WebGLUniformLocation</td>
+<td>The uniforms of the shader</td>
+</tr>
+<tr>
+<td></td>
+<td>value</td>
+<td>number</td>
+<td>@param value</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setfloat2-uniform-x-y-rarr-void">setFloat2(uniform, x, y) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniform</td>
+<td>WebGLUniformLocation</td>
+<td>The uniforms of the shader</td>
+</tr>
+<tr>
+<td></td>
+<td>x</td>
+<td>number</td>
+<td>The x axis</td>
+</tr>
+<tr>
+<td></td>
+<td>y</td>
+<td>number</td>
+<td>The y axis</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setfloat3-uniform-x-y-z-rarr-void">setFloat3(uniform, x, y, z) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniform</td>
+<td>WebGLUniformLocation</td>
+<td>The uniforms of the shader</td>
+</tr>
+<tr>
+<td></td>
+<td>x</td>
+<td>number</td>
+<td>The x axis</td>
+</tr>
+<tr>
+<td></td>
+<td>y</td>
+<td>number</td>
+<td>The y axis</td>
+</tr>
+<tr>
+<td></td>
+<td>z</td>
+<td>number</td>
+<td>The z axis</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setbool-uniform-bool-rarr-void">setBool(uniform, bool) &rarr; void</h3>
+<p>Set bool for this given shader</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniform</td>
+<td>WebGLUniformLocation</td>
+<td>The uniforms of the shader</td>
+</tr>
+<tr>
+<td></td>
+<td>bool</td>
+<td>number</td>
+<td>@param bool</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setfloat4-uniform-x-y-z-w-rarr-void">setFloat4(uniform, x, y, z, w) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniform</td>
+<td>WebGLUniformLocation</td>
+<td>The uniforms of the shader</td>
+</tr>
+<tr>
+<td></td>
+<td>x</td>
+<td>number</td>
+<td>The x axis</td>
+</tr>
+<tr>
+<td></td>
+<td>y</td>
+<td>number</td>
+<td>The y axis</td>
+</tr>
+<tr>
+<td></td>
+<td>z</td>
+<td>number</td>
+<td>The z axis</td>
+</tr>
+<tr>
+<td></td>
+<td>w</td>
+<td>number</td>
+<td>The rotation of the shader</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setcolor3-uniform-color3-rarr-void">setColor3(uniform, color3) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniform</td>
+<td>WebGLUniformLocation</td>
+<td>The uniforms of the shader</td>
+</tr>
+<tr>
+<td></td>
+<td>color3</td>
+<td><a href="page.php?p=5805">Color3</a></td>
+<td>The color of the shader</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setcolor4-uniform-color3-alpha-rarr-void">setColor4(uniform, color3, alpha) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniform</td>
+<td>WebGLUniformLocation</td>
+<td>The uniforms of the shader</td>
+</tr>
+<tr>
+<td></td>
+<td>color3</td>
+<td><a href="page.php?p=5805">Color3</a></td>
+<td>The color of the shader</td>
+</tr>
+<tr>
+<td></td>
+<td>alpha</td>
+<td>number</td>
+<td>The alpha of the shader</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setstate-culling-force-rarr-void">setState(culling, force) &rarr; void</h3>
+<p>Set the culling state (true : front faces are visible. If cullBackFaces is set to true, back and front faces are visible).</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>culling</td>
+<td>boolean</td>
+<td>@param culling</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>force</td>
+<td>boolean</td>
+<td>@param force</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setdepthbuffer-enable-rarr-void">setDepthBuffer(enable) &rarr; void</h3>
+<p>Enable or disable the depth buffer</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>enable</td>
+<td>boolean</td>
+<td>@param enable</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="getdepthwrite-rarr-boolean">getDepthWrite() &rarr; boolean</h3>
+<p>Get the depth mask</p>
+<h3 id="setdepthwrite-enable-rarr-void">setDepthWrite(enable) &rarr; void</h3>
+<p>Enables or disables the depth mask</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>enable</td>
+<td>boolean</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setcolorwrite-enable-rarr-void">setColorWrite(enable) &rarr; void</h3>
+<p>Enables or disables the writing or red, blue, green and alpha</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>enable</td>
+<td>boolean</td>
+<td>@param enable</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="setalphamode-mode-rarr-void">setAlphaMode(mode) &rarr; void</h3>
+<p>Set the engine alpha mode</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>mode</td>
+<td>number</td>
+<td>@param mode</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="getalphamode-rarr-number">getAlphaMode() &rarr; number</h3>
+<h3 id="setalphatesting-enable-rarr-void">setAlphaTesting(enable) &rarr; void</h3>
+<p>Enables or disables the alpha testing</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>enable</td>
+<td>boolean</td>
+<td>Set true if the alpha testing is enabled, false otherwise.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="getalphatesting-rarr-boolean">getAlphaTesting() &rarr; boolean</h3>
+<p>Returns true if the alpha testing is enabled, false otherwise.</p>
+<h3 id="wipecaches-rarr-void">wipeCaches() &rarr; void</h3>
+<p>Reset the cache</p>
+<h3 id="setsamplingmode-texture-samplingmode-rarr-void">setSamplingMode(texture, samplingMode) &rarr; void</h3>
+<p>Set the default texture sampling mode</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>texture</td>
+<td>WebGLTexture</td>
+<td>@param texture</td>
+</tr>
+<tr>
+<td></td>
+<td>samplingMode</td>
+<td>number</td>
+<td>The sampling mode</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="createtexture-url-nomipmap-inverty-scene-samplingmode-onload-onerror-buffer-rarr-webgltexture">createTexture(url, noMipmap, invertY, scene, samplingMode, onLoad, onError, buffer) &rarr; WebGLTexture</h3>
+<p>Create a new texture</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>url</td>
+<td>string</td>
+<td>The texture url</td>
+</tr>
+<tr>
+<td></td>
+<td>noMipmap</td>
+<td>boolean</td>
+<td>True if you want to activate the Mipmap, false otherwise.</td>
+</tr>
+<tr>
+<td></td>
+<td>invertY</td>
+<td>boolean</td>
+<td>@param invertY</td>
+</tr>
+<tr>
+<td></td>
+<td>scene</td>
+<td><a href="page.php?p=5725">Scene</a></td>
+<td>The scene where the shader is.</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>samplingMode</td>
+<td>number</td>
+<td>The sampling mode</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>onLoad</td>
+<td>() =&gt; void</td>
+<td>Function when load.</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>onError</td>
+<td>() =&gt; void</td>
+<td>Function when error occurs.</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>buffer</td>
+<td>any</td>
+<td>The buffer</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="createrawtexture-data-width-height-format-generatemipmaps-inverty-samplingmode-rarr-webgltexture">createRawTexture(data, width, height, format, generateMipMaps, invertY, samplingMode) &rarr; WebGLTexture</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>data</td>
+<td>ArrayBufferView</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>width</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>height</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>format</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>generateMipMaps</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>invertY</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>samplingMode</td>
+<td>number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="createdynamictexture-width-height-generatemipmaps-samplingmode-rarr-webgltexture">createDynamicTexture(width, height, generateMipMaps, samplingMode) &rarr; WebGLTexture</h3>
+<p>Create a new dynamic texture</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>width</td>
+<td>number</td>
+<td>The width of the texture</td>
+</tr>
+<tr>
+<td></td>
+<td>height</td>
+<td>number</td>
+<td>the height of the texture</td>
+</tr>
+<tr>
+<td></td>
+<td>generateMipMaps</td>
+<td>boolean</td>
+<td>True if you want to generate Mipmap, false otherwise.</td>
+</tr>
+<tr>
+<td></td>
+<td>samplingMode</td>
+<td>number</td>
+<td>The sampling mode</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="updatedynamictexture-texture-canvas-inverty-rarr-void">updateDynamicTexture(texture, canvas, invertY) &rarr; void</h3>
+<p>Update the given dynamic texture</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>texture</td>
+<td>WebGLTexture</td>
+<td>The new texture</td>
+</tr>
+<tr>
+<td></td>
+<td>canvas</td>
+<td>HTMLCanvasElement</td>
+<td>The canvas</td>
+</tr>
+<tr>
+<td></td>
+<td>invertY</td>
+<td>boolean</td>
+<td>@param invertY</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="updatevideotexture-texture-video-inverty-rarr-void">updateVideoTexture(texture, video, invertY) &rarr; void</h3>
+<p>Update the given dynamic texture with the video given in parameter</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>texture</td>
+<td>WebGLTexture</td>
+<td>The new texture</td>
+</tr>
+<tr>
+<td></td>
+<td>video</td>
+<td>HTMLVideoElement</td>
+<td>The video</td>
+</tr>
+<tr>
+<td></td>
+<td>invertY</td>
+<td>boolean</td>
+<td>@param invertY</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="createrendertargettexture-size-options-rarr-webgltexture">createRenderTargetTexture(size, options) &rarr; WebGLTexture</h3>
+<p>Create a new render target texture
+old version had a &quot;generateMipMaps&quot; arg instead of options.
+if options.generateMipMaps is undefined, consider that options itself if the generateMipmaps value
+in the same way, generateDepthBuffer is defaulted to true</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>size</td>
+<td>any</td>
+<td>Can be an object with the two parameters width and height.</td>
+</tr>
+<tr>
+<td></td>
+<td>options</td>
+<td>any</td>
+<td>Can contains these parameters : generateDepthBuffer, generateMipMaps, samplingMode</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="createcubetexture-rooturl-scene-extensions-nomipmap-rarr-webgltexture">createCubeTexture(rootUrl, scene, extensions, noMipmap) &rarr; WebGLTexture</h3>
+<p>Create a new cube texture</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>rootUrl</td>
+<td>string</td>
+<td>@param rootUrl</td>
+</tr>
+<tr>
+<td></td>
+<td>scene</td>
+<td><a href="page.php?p=5725">Scene</a></td>
+<td>The scene where the cube texture</td>
+</tr>
+<tr>
+<td></td>
+<td>extensions</td>
+<td>string[]</td>
+<td>Contains the image extensions in string format</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>noMipmap</td>
+<td>boolean</td>
+<td>Set true if you want to activate Mipmap, false otherwise.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="bindsamplers-effect-rarr-void">bindSamplers(effect) &rarr; void</h3>
+<p>Bind the given effect to samplers</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>effect</td>
+<td><a href="page.php?p=5782">Effect</a></td>
+<td>@param effect</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="settexturefrompostprocess-channel-postprocess-rarr-void">setTextureFromPostProcess(channel, postProcess) &rarr; void</h3>
+<p>Set texture from post process</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>channel</td>
+<td>number</td>
+<td>The index in the array _activeTexturesCache</td>
+</tr>
+<tr>
+<td></td>
+<td>postProcess</td>
+<td><a href="page.php?p=5841">PostProcess</a></td>
+<td>@param postProcess</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="settexture-channel-texture-rarr-void">setTexture(channel, texture) &rarr; void</h3>
+<p>The index in the array _activeTexturesCache</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>channel</td>
+<td>number</td>
+<td>The index in the array _activeTexturesCache</td>
+</tr>
+<tr>
+<td></td>
+<td>texture</td>
+<td><a href="page.php?p=5788">BaseTexture</a></td>
+<td>@param texture</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="readpixels-x-y-width-height-rarr-uint8array">readPixels(x, y, width, height) &rarr; Uint8Array</h3>
+<p>Read pixels in the given rectangle</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>x</td>
+<td>number</td>
+<td>@param x</td>
+</tr>
+<tr>
+<td></td>
+<td>y</td>
+<td>number</td>
+<td>@param y</td>
+</tr>
+<tr>
+<td></td>
+<td>width</td>
+<td>number</td>
+<td>The width of the rectangle</td>
+</tr>
+<tr>
+<td></td>
+<td>height</td>
+<td>number</td>
+<td>The height of the rectangle</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="dispose-rarr-void">dispose() &rarr; void</h3>
+<p>Delete this engine. Calls dispose on each of the registered scene and deletes all shaders</p>
+<h3 id="displayloadingui-rarr-void">displayLoadingUI() &rarr; void</h3>
+<p>Display loading User Interface</p>
+<h3 id="hideloadingui-rarr-void">hideLoadingUI() &rarr; void</h3>
+<p>Hide the loading state to the User Interface</p>
+<h3 id="getfps-rarr-number">getFps() &rarr; number</h3>
+<h3 id="getdeltatime-rarr-number">getDeltaTime() &rarr; number</h3>
+<h3 id="static-issupported-rarr-boolean">static isSupported() &rarr; boolean</h3>
+</div></div><!-- The content wrapper--><div id="wrapper"><nav class="nav-main"><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item active"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/js/min/perfect-scrollbar.jquery.min.js"></script><script src="/js/classes.js"></script><script src="/js/class.js"></script>

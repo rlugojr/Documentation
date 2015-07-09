@@ -64,6 +64,10 @@ code {
   font-family: $font-code;
 }
 
+// Hide an element
+.hidden {
+  display : none;
+}
 
 // Horizontal separator
 .horizontal-separator{
@@ -83,4 +87,10 @@ code {
 // Remove text selection
 .no-text-selection {
   @include user-select(none);
+}
+
+// Content wrapper
+#wrapper{
+  background-color: white;
+  margin-bottom: 50px;
 }

@@ -7,22 +7,24 @@ include ../includes/header
 
     .horizontal-separator
 
-    //List the versions
     #versionsList
-        each version in versions
-            // If it's the current version, apply a different style
-            if currentVersion == version
+        - for version in versions
+            if version == currentVersion
                 a(href='./'+version)#version.selectedVersion= 'v'+version
             else
                 a(href='./'+version)#version= 'v'+version
 
-    .classesListOrder
-        span#orderByTags.order.selectedOrder Tags
-        span#orderByAlpha.order A - Z
+    .sorts
+        span#orderByTags.order Tags
+        span#orderByAlpha.order.selectedOrder A - Z
+
+    #classes_classesListByAlpha
+        - for className in classesByAlpha
+            a(href!='./'+currentVersion+'/'+className)= className.replace('_T_','<T>')
 
     //List the classes categories
-    #classesListByTag.toggledOn
-        each bclasses, categorie in classListByTag
+    #classes_classesListByTag.hidden
+        each bclasses, categorie in classesByTags
             div.category
                 div.categoryTitle
                     h3= categorie
@@ -31,13 +33,6 @@ include ../includes/header
                     each bclass in bclasses
                         li
                             a(href='./'+currentVersion+'/'+bclass)= bclass
-
-    #classesListByAlpha.toggledOff
-        each className in classListByAlpha
-            div.class
-                a(href='./'+currentVersion+'/'+className)= className
-
-
 
 include ../includes/footer
 

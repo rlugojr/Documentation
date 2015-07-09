@@ -9,17 +9,22 @@
  *                             REQUIREMENTS                              *
  ************************************************************************/
 
-var fs      = require('fs');
-var path    = require('path');
-var marked  = require('meta-marked');
-var async   = require('async');
+var fs      = require('fs'),
+    path    = require('path'),
+    marked  = require('meta-marked'),
+    async   = require('async'),
+    r       = require('request');
 
 /*************************************************************************
  *                               VARIABLES                               *
  ************************************************************************/
 
-var __DIRNAME__     = 'content/classes';
-var __FILENAME__    = 'data/forward.json';
+var __DIRNAME__         = 'content/classes';
+var __FILENAME__        = 'data/forward.json';
+
+// API of the previous documentation server
+var __URL_LOAD_PAGES__  = 'http://babylondoc-val.azurewebsites.net/private/api/load_pages.php';
+var __URL_LOAD_PAGE__   = 'http://babylondoc.azurewebsites.net/private/api/load_page.php';
 
 /*************************************************************************
  *                                 SCRIPT                                *
@@ -157,3 +162,10 @@ async.waterfall(
         console.log('DONE. \nYou can check the JSON file here: ' + __FILENAME__);
     }
 );
+
+// 0 -> EXPORTERS
+// 1 -> GETTING STARTED -> TUTORIALS ?
+// 4 -> EXTENSIONS
+//r(__URL_LOAD_PAGES__ + '?index=0', function(error, response, body){
+//
+//});

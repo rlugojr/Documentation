@@ -5,25 +5,26 @@ include ../includes/header
     .sorts
         span#orderByTags.order Tags
         span#orderByAlpha.order.selectedOrder A - Z
-    //#classesListByTag(style="display:none")
-    //    each bclasses, categorie in classListByTag
-    //        div.categoryTitle(id='category_' + categorie)
-    //            span= categorie
-    //        div.categoryList.categoryListTags
-    //            //List the classes of a category
-    //        each bclass in bclasses
-    //            li
-    //                a(href='./'+bclass).className= bclass
-    #classesListByAlpha
-        each className in classListByAlpha
-            a.class(href='./'+className)= className
+    #classes_classesListByTag.hidden.sidemenu
+        each bclasses, category in classListByTag
+            div.category
+                div.categoryTitle(id='category_' + category)
+                    h3= category
+                div.categoryList
+                    //List the classes of a category
+                    each bclass in bclasses
+                        li
+                            a(href='./'+bclass).className= bclass
+    #classes_classesListByAlpha
+        - for className in classListByAlpha
+            a.class(href='./'+className)= className.replace('_T_','<T>')
 
-// Elemetn to resize the sidebar
+// Element to resize the sidebar
 .classBarResize#resizeBar(draggable=true)
 
 // Content of the selected class
 .classContent
-    h1#classTitle= className
+    h1#classTitle= className.replace('_T_','<T>')
     if(classTags)
         each tag in classTags
             span.classTag= tag
@@ -36,4 +37,5 @@ include ../includes/header
 include ../includes/footer
 
 script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/js/min/perfect-scrollbar.jquery.min.js')
+script(src='/js/classes.js')
 script(src="/js/class.js")

@@ -1,5 +1,0 @@
-{
-    "Action":["Action","ActionManager"],
-    "Mesh":["AbstractMesh","Mesh"],
-    "Specularity":["Specularity"]
-}

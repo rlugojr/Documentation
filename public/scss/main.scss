@@ -1,7 +1,6 @@
 /** LIBS **/
 @import "libs/bourbon/bourbon";
 @import "libs/neat/neat";
-@import "libs/font-awesome/font-awesome";
 
 /** GLOBAL VARIABLES **/
 @import "define";
@@ -12,8 +11,8 @@ $phone: new-breakpoint(max-width 680px 6);
 /** SCSS FILES **/
 @import "common/banner";
 @import "common/footer";
-@import "classes/class";
 @import "classes/classes";
+@import "classes/class";
 @import "index/index";
 @import "whats-new/whats-new";
 @import "error/error";

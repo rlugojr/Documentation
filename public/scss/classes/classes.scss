@@ -18,106 +18,77 @@
   }
 }
 
-.classesListOrder{
-  text-align: center;
+//All classes sort by tag
+#classes_classesListByTag {
 
-  .order {
-    display: inline-block;
-    background-color: #9B9B9B;
-    text-align: center;
-    margin: 4px 4px 15px 4px;
-    padding: 4px;
-    font-size: 12px;
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
-  }
+  width: 80%;
+  margin: auto;
 
-  .selectedOrder {
-    background-color: $red;
+  // The red banner with the tag name
+  .category {
+    width: 100%;
+    margin: 5px 0px;
+    padding: 0px;
+    @include user-select(none);
+
+    // The tag text
+    .categoryTitle {
+      padding: 3px;
+      height: auto;
+      cursor: pointer;
+      border: white solid 1px;
+
+      &:hover {
+        border: #C1C1C1 solid 1px;
+      }
+
+      h3 {
+        background-color: $red;
+        color: #ffffff;
+        padding: 5px;
+        margin: 0px;
+      }
+    }
+
+    // List of classes for a tag
+    .categoryList {
+      width: 100%;
+      padding: 8px 40px;
+      display: none;
+
+      li {
+        font-size: 20px;
+        list-style-type: square;
+        color: #DCDCDC;
+
+        a {
+          font-size: 0.75em;
+          color: #000000;
+        }
+        a:hover {
+          text-decoration: underline;
+          color: $red;
+        }
+      }
+    }
   }
 }
 
-// All classes sort by tag
-//#classesListByTag {
-//
-//  width: 80%;
-//  margin: auto;
-//
-//  // The red banner with the tag name
-//  .category {
-//    width: 100%;
-//    margin: 5px 0px;
-//    padding: 0px;
-//    @include user-select(none);
-//
-//    // The tag text
-//    .categoryTitle {
-//      padding: 3px;
-//      height: auto;
-//      cursor: pointer;
-//      border: white solid 1px;
-//
-//      &:hover {
-//        border: #C1C1C1 solid 1px;
-//      }
-//
-//      h3 {
-//        background-color: $red;
-//        color: #ffffff;
-//        padding: 5px;
-//        margin: 0px;
-//      }
-//    }
-//
-//    // List of classes for a tag
-//    .categoryList {
-//      width: 100%;
-//      padding: 8px 40px;
-//      display: none;
-//
-//      li {
-//        font-size: 20px;
-//        list-style-type: square;
-//        color: #DCDCDC;
-//
-//        a {
-//          font-size: 0.75em;
-//          color: #000000;
-//        }
-//        a:hover {
-//          text-decoration: underline;
-//          color: $red;
-//        }
-//      }
-//    }
-//  }
-//}
-//
-//// All classes sort alphabetically
-//#classesListByAlpha{
-//  width: 80%;
-//  margin: auto;
-//
-//  .class{
-//    margin: 5px 0;
-//
-//    a{
-//      color: #000000;
-//      text-decoration:none;
-//
-//      &:hover{
-//        color: $red;
-//        text-decoration: underline;
-//      }
-//    }
-//  }
-//}
-//
-//#classesListByAlpha.toggledOff, #classesListByTag.toggledOff{
-//  display: none;
-//}
-//
-//#classesListByAlpha.toggledOn, #classesListByTag.toggledOn{
-//  display: block;
-//}
+// All classes sort alphabetically
+#classes_classesListByAlpha{
+  width: 80%;
+  margin: auto;
+
+  a{
+    color: #333;
+    text-decoration:none;
+    display : block;
+    padding:3px;
+
+    &:hover{
+      color: white;
+      text-decoration: underline;
+      background-color: $red;
+    }
+  }
+}

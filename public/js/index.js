@@ -1,16 +1,4 @@
-(function ($) {
-    document.addEventListener('DOMContentLoaded', function () {
-
-        if ($(document.body).height() < $(window).height()) {
-            $('.footer').css('position', 'absolute');
-        }
-
-        if ($('#wrapper').attr('class') === "error slideout-panel") {
-            $(document.body).css("background-image", 'url("/img/pattern_ban_1.png")');
-            $(document.body).css("background-repeat", "repeat");
-        }
-    });
-
+(function () {
 
     //-----------------
     //-- Action on banner
@@ -39,19 +27,16 @@
     // LEFT MENU FOR MOBILE
     // ----------------------
 
-    var slideout = new Slideout({
-        'panel'    : document.getElementById('wrapper'),
-        'menu'     : document.getElementById('menu'),
-        'padding'  : 256,
-        'tolerance': 70
+    window.addEventListener("DOMContentLoaded", function() {
+        document.getElementById('menu').style.display = 'block';
+        var slideout = new Slideout({
+            'panel'    : document.getElementById('wrapper'),
+            'menu'     : document.getElementById('menu'),
+            'padding'  : 256,
+            'tolerance': 70
+        });
+        $("#mobilemenu").click(function () {
+            slideout.toggle();
+        });
     });
-    $("#mobilemenu").click(function () {
-        slideout.toggle();
-
-        if (!slideout.isOpen()) {
-            $('#menu').css("display", "none");
-        } else {
-            $('#menu').css("display", "block");
-        }
-    });
-})(jQuery);
+})();

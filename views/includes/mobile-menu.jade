@@ -2,17 +2,31 @@ nav#menu(style="display:none")
     .searchbar-mobile
         input(type='text', placeholder='Search...')
         i.fa.fa-search
-    h2(class={active: currentUrl === '/'})
-        a(href='/') Home
-    h2(class={active: currentUrl === '/whats-new'})
-        a(href="/whats-new") What's new
-    h2(class={active: currentUrl === '/tutorials'})
-        a(href="/tutorials") Tutorials
-    h2(class={active: currentUrl === '/exporters'})
-        a(href="/exporters") Exporters
-    h2(class={active: currentUrl === '/extensions'})
-        a(href="/extensions") Extensions
-    h2(class={active: currentUrl === '/classes'})
-        a(href="/classes") Classes
-    h2
-        a(href="http://babylonjs.com/") babylonjs.com
+    a(href='/', class={active: currentUrl === '/'})
+        i.fa.fa-home
+        | Home
+    a(href='/whats-new', class={active: currentUrl === '/whats-new'})
+        i.fa.fa-file-text-o
+        | What's new
+    a(href='/tutorials', class={active: currentUrl === '/tutorials'})
+        i.fa.fa-cogs
+        | Tutorials
+    a(href='/exporters', class={active: currentUrl === '/exporters'})
+        i.fa.fa-rocket
+        | Exporters
+    a(href='/extensions', class={active: currentUrl === '/extensions'})
+        i.fa.fa-wrench
+        | Extensions
+    a(href='/classes', class={active: currentUrl === '/classes'})
+        i.fa.fa-files-o
+        | Classes
+    .links
+        a(href='http://www.babylonjs.com', target='_blank')
+            i.fa.fa-play
+            | babylonjs.com
+        a(href='https://github.com/BabylonJS/Babylon.js', target='_blank')
+            i.fa.fa-github
+            | Github
+        a(href='http://www.html5gamedevs.com/forum/16-babylonjs', target='_blank')
+            i.fa.fa-html5
+            | Forum

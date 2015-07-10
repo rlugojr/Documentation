@@ -64,5 +64,59 @@
         $(document).mouseup(function(evt) {
             isDragging = false;
         });
+
+        $.each($("#classMd h3"), function(i, title){
+            addPermalink(title);
+        });
+        $.each($("#classMd h2"), function(i, title){
+            addPermalink(title);
+        });
+
+        // check if an anchor is specified in the page url
+        if(window.location.toString().lastIndexOf('#') != -1){
+            // gets the anchor name
+            var anchorName = window.location.toString().split('#');
+            anchorName = anchorName[1];
+
+             // if anchor exists, jumps to it
+            if($('#'+anchorName)){
+                var $title = $("#"+anchorName);
+                var title = document.getElementById(anchorName);
+                $title.addClass('highlighted');
+                title.scrollIntoView(true);
+            }
+        }
     });
 })();
+
+/**
+ * Prepends every <h2> and <h3> with a little icon which highlights the selected line
+ * and changes the current page url when clicked (give the possibility to the user to
+ * copy-paste links directly to a method or attribute of a class, for example).
+ * @param title
+ */
+var addPermalink = function(title){
+    var titleHref = $(title).attr('id');
+    $(title).prepend('<a href="#' + titleHref + '" class="invisible permalink"><i class="fa fa-link"></i></a>');
+
+    // show the anchors only when you pass the mouse over the name of the linked method/attribute
+    $(title).on('mouseover', function(evt){
+        if($(title).children("a:first").hasClass('permalink')){
+            $(title).children("a:first").removeClass('invisible');
+        }
+    }).on('mouseout', function(evt){
+        if($(title).children("a:first").hasClass('permalink')){
+            $(title).children("a:first").addClass('invisible');
+        }
+    });
+
+    $(title).children("a:first").on('click', function(evt){
+        evt.preventDefault();
+        $('.highlighted').removeClass('highlighted');
+        $(title).addClass('highlighted');
+
+        var id = $(title).attr('id');
+        var currentPage = window.location.toString().split('#', [0]);
+        window.history.pushState({id: id}, '', currentPage + '#' + id);
+    });
+};

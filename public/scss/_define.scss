@@ -1,9 +1,13 @@
 //------------
 // COLORS
 //------------
+$lightgrey : #f6f6f6;
 $grey : #dcdcdc;
 $darkgrey: #9b9b9b;
 $red :#fc4349;
+$black : #333;
+$darker_black : #2D2D2D;
+$yellow: #f8eec7;
 
 //--------------
 // FONTS
@@ -92,5 +96,5 @@ code {
 // Content wrapper
 #wrapper{
   background-color: white;
-  margin-bottom: 50px;
+  margin-bottom: 40px; // footer height
 }

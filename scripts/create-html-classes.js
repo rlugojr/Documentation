@@ -55,7 +55,8 @@ module.exports = function(done) {
             done(false);
             throw error;
         }
-        console.log('DONE. You can find the HTML files here: ' + __CLASSES_DESTDIR__);
+
+        console.log("> All classes compiled.");
     });
 };
 

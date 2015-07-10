@@ -28,4 +28,5 @@ module.exports = function(done) {
 
     var htmlRender = jade.renderFile('views/whats-new.jade', options);
     fs.writeFileSync('public/html/whats-new.html', htmlRender);
+    console.log("> Whats-new.html compiled.")
 };

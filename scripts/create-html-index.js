@@ -16,4 +16,5 @@ var jade    = require('jade'),
 module.exports = function(done) {
     var htmlRender = jade.renderFile('views/index.jade', { pretty: false });
     fs.writeFileSync('public/html/index.html', htmlRender);
+    console.log("> Index.html compiled.")
 };

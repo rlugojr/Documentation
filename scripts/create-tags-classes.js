@@ -43,6 +43,7 @@ module.exports = function() {
     var myTagFile       = path.join(__dirname, TAG_FILENAME);
     // Creat dir if not existing
     fs.writeFileSync(myTagFile, JSON.stringify(TAGS));
+    console.log("> data/classes-tags.json compiled.")
 };
 
 /**

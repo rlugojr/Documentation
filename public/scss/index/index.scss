@@ -51,6 +51,8 @@
     position:relative;
     width:400px;
     height:250px;
+    text-align: center;
+    max-width: 100%;
 
     margin-bottom:10px;
 
@@ -58,7 +60,7 @@
     @include transform(translateX(-50%));
 
     .demo-img{
-      max-width:400px;
+      max-width:100%;
     }
   }
 }
@@ -70,5 +72,3 @@
     text-align  : center;
   }
 }
-
-@import "mobile_index";

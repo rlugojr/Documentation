@@ -32,6 +32,6 @@ module.exports = function (grunt) {
 		pkg: grunt.file.readJSON('package.json')
     });
 	
-    //grunt.registerTask('default', ['tags']);
+    grunt.registerTask('html', ['index', 'whats-new', 'tags', 'classes']);
 };
 

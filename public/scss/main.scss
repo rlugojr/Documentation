@@ -5,8 +5,8 @@
 /** GLOBAL VARIABLES **/
 @import "define";
 
-$mobile: new-breakpoint(max-width 1360px 6);
-$phone: new-breakpoint(max-width 680px 6);
+$medium-screen: new-breakpoint(max-width 1280px 6);
+$small-screen: new-breakpoint(max-width 960px 6);
 
 /** SCSS FILES **/
 @import "common/banner";
@@ -16,3 +16,6 @@ $phone: new-breakpoint(max-width 680px 6);
 @import "index/index";
 @import "whats-new/whats-new";
 @import "error/error";
+
+@import "common/slideout-menu";
+@import "index/mobile_index";

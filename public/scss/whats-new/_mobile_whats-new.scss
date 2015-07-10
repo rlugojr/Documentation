@@ -1,5 +1,5 @@
 /* MOBILE VERSION - WHAT'S NEW */
-@include media($mobile) {
+@include media($small-screen) {
   #whats-new{
     width: 100%;
   }

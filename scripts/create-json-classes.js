@@ -44,7 +44,7 @@ module.exports = function(done) {
             done(false);
             throw error;
         }
-        console.log("DONE. You can find the JSON file here: " + __FILENAME__);
+        console.log("> "+__FILENAME__+" compiled.");
         done();
     });
 };

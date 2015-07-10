@@ -12,7 +12,7 @@ $sidebar_width : 300px;
     text-align: center;
     margin: 4px 4px 15px 4px;
     padding: 4px;
-    font-size: 12px;
+    font-size: 0.8em;
     color: white;
     border-radius: 3px;
     cursor: pointer;
@@ -48,14 +48,19 @@ $sidebar_width : 300px;
   overflow-x: hidden;
   overflow-y: auto;
   z-index : 2;
-  color:#333;
+  color:$black;
+
+  #classes_classesListByAlpha{
+    width: 100%;
+    margin-left: 30px;
+  }
 
   // CLASSES
   .classesTitle {
     text-align: center;
     width:100%;
     color : #eee;
-    background-color: #333;
+    background-color: $black;
     padding:10px;
     margin-bottom: 10px;
   }
@@ -64,7 +69,7 @@ $sidebar_width : 300px;
   .class {
     font-size: 11pt;
     padding: 5px 0 5px 10px;
-    color:#333;
+    color:$black;
     display : block;
     &:hover {
       background-color: $darkgrey;
@@ -93,10 +98,11 @@ $sidebar_width : 300px;
   }
 
   .classTag{
+    font-size: 0.8em;
     color: white;
     margin:5px;
     background-color: $red;
-    border-radius: 10px;
+    border-radius: 3px;
     padding:5px;
   }
 
@@ -109,13 +115,23 @@ $sidebar_width : 300px;
     // Titles (condtructor, members, method
     h2 {
       margin-top: 25px;
-      padding-bottom: 10px;
+      padding-bottom: 2px;
       border-bottom: 1px solid #DCDCDC;
     }
 
     // Members and methods names
     h3 {
       font-weight: 600;
+    }
+
+    h2, h3 {
+      a{
+        margin: 0px 5px;
+      }
+
+      a.invisible{
+        visibility: hidden;
+      }
     }
 
     //"Parameters"
@@ -165,4 +181,8 @@ $sidebar_width : 300px;
 
 #classes_classesListByTag.sidemenu{
   width: 100%;
+}
+
+.highlighted{
+  background-color: $yellow;
 }

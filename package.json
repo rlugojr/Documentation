@@ -16,10 +16,7 @@
     "winston": "^1.0.1"
   },
   "scripts": {
-    "tags": "grunt tags",
-    "classes": "grunt classes",
-    "index": "grunt index",
-    "whats-new": "grunt whats-new",
+    "compile-html" : "grunt html",
     "import-md": "node ./scripts/import-md-from-azure.js",
     "create-forward": "node ./scripts/create-forward.js"
   }

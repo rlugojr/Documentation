@@ -6,15 +6,15 @@ include ../includes/header
         span#orderByTags.order Tags
         span#orderByAlpha.order.selectedOrder A - Z
     #classes_classesListByTag.hidden.sidemenu
-        each bclasses, category in classListByTag
-            div.category
-                div.categoryTitle(id='category_' + category)
+        each bClasses, category in classListByTag
+            div(id=category).category
+                div.categoryTitle
                     h3= category
                 div.categoryList
                     //List the classes of a category
-                    each bclass in bclasses
+                    each bClass in bClasses
                         li
-                            a(href='./'+bclass).className= bclass
+                            a(href='/classes/'+currentVersion).className= bClass
     #classes_classesListByAlpha
         - for className in classListByAlpha
             a.class(href='./'+className)= className.replace('_T_','<T>')
@@ -27,7 +27,7 @@ include ../includes/header
     h1#classTitle= className.replace('_T_','<T>')
     if(classTags)
         each tag in classTags
-            span.classTag= tag
+            a(href='/classes/'+currentVersion, id=tag).classTag= tag
     #classMd!= content
 
 // The content wrapper

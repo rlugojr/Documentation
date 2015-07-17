@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"></head><body><nav id="menu" style="display:none"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><div id="wrapper"><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><h1>Adding Your Own Physics Engine Plugin to Babylon.js.md</h1><div id="tutorialContent"><p>Basically Babylon.js comes with a plugin already defined for cannon.js</p>
+<h1 id="define-your-plugin">Define your plugin</h1>
+<p>You can create your own plugin by creating a class that provides the following interface:</p>
+<ul>
+<li><p><code>function initialize()</code>: Must initialize your engine</p>
+</li>
+<li><p><code>function setGravity(gravity)</code>: Used by Babylon.js to set the current gravity</p>
+</li>
+<li><p><code>function runOneStep(delta)</code>: babylon.js will call this function for each frame, giving you the delta time between current and previous frame. This is the responsibility of the plugin to update meshes&#39; position and rotation accordingly to the physics simulation.</p>
+</li>
+<li><p><code>function registerMesh(mesh, impostor, options)</code>: babylon.js will call this function when the user wants to create a physics impostor for a mesh. <code>options</code> parameter contains 3 values: <code>mass</code>, <code>friction</code> and <code>restitution</code>. Possible values for <code>impostor</code> are the following:
+&nbsp; <em> NoImpostor = 0;
+&nbsp; </em> SphereImpostor = 1;
+&nbsp; <em> BoxImpostor = 2;
+&nbsp; </em> PlaneImpostor = 3;
+&nbsp; <em> CompoundImpostor = 4;
+&nbsp; </em> MeshImpostor = 4;</p>
+</li>
+<li><p><code>function registerMeshesAsCompound(parts, options)</code>: Babylon.js will call this function for compound objects. <code>parts</code> parameter contains an array of <code>{mesh, impostor}</code>. <code>options</code> parameter is the same as above.</p>
+</li>
+<li><p><code>function unregisterMesh(mesh)</code>: Called to remove a mesh from the simulation</p>
+</li>
+<li><p><code>function applyImpulse(mesh, force, contactPoint)</code>: Apply a specific force to a specific contact point for a given mesh</p>
+</li>
+<li><p><code>function createLink(mesh1, mesh2, pivot1, pivot2)</code>: Create a joint between two meshes</p>
+</li>
+<li><p><code>function dispose()</code>: Free all allocated resources</p>
+</li>
+<li><p><code>function isSupported()</code>: This function will be called by Babylon.js before everything else to ensure that your plugin can be instanciated (You have to check if required .js files are included for instance)</p>
+</li>
+</ul>
+<p>For implementation details, you can refer to cannon.js plugin: <a href="https://github.com/BabylonJS/Babylon.js/blob/master/Babylon/Physics/Plugins/babylon.cannonJSPlugin.js">https://github.com/BabylonJS/Babylon.js/blob/master/Babylon/Physics/Plugins/babylon.cannonJSPlugin.js</a></p>
+<h1 id="using-your-plugin">Using your plugin</h1>
+<p>When you launch the physics simulation, you can add a new parameter to <code>enablePhysics</code> function to indicate which plugin to use:</p>
+<pre><code class="lang-javascript">scene.enablePhysics(null, new BABYLON.CannonJSPlugin()),
+</code></pre>
+<p>The first parameter can be used to define gravity (which is (0, -9.82, 0) by default).</p>
+</div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

@@ -1,0 +1,69 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"></head><body><nav id="menu" style="display:none"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><div id="wrapper"><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><h1>How to use FresnelParameters.md</h1><div id="tutorialContent"><p>Babylon.js 1.14 introduced new parameters for the StandardMaterial: <em>FresnelParameters</em>.</p>
+<p><img src="http://www.babylonjs.com/Screenshots/fresnel.jpg" alt=""></p>
+<p>There are 4 of them:</p>
+<ul>
+<li><code>StandardMaterial.diffuseFresnelParameters</code></li>
+<li><code>StandardMaterial.opacityFresnelParameters</code></li>
+<li><code>StandardMaterial.reflectionFresnelParameters</code></li>
+<li><code>StandardMaterial.emissiveFresnelParameters</code></li>
+</ul>
+<h2 id="how-fresnel-is-working">How fresnel is working</h2>
+<p>A fresnel term is computed by the StandardMaterial in order to change the way a color is applied by using viewing angle.</p>
+<p>For instance, you can simulate great glass or reflection effects by just using a simple fresnel. The fresnel will let you have more reflection on edges and not all on the center.</p>
+<p>To do so, just use this code:</p>
+<pre><code class="lang-javascript">material.reflectionFresnelParameters = new BABYLON.FresnelParameters();
+</code></pre>
+<p>You can then control if the reflection is applied on the edges or on the center. For instance, if you want the reflection on the edges (by default), you can control it using the color properties:</p>
+<pre><code class="lang-javascript">material.reflectionFresnelParameters.leftColor = BABYLON.Color3.White();
+material.reflectionFresnelParameters.rightColor = BABYLON.Color3.Black();
+</code></pre>
+<p><img src="http://www.babylonjs.com/forumpics/fresnel01.jpg" alt=""></p>
+<p>Conversely, if you only want reflection in the center:</p>
+<pre><code class="lang-javascript">material.reflectionFresnelParameters.leftColor = BABYLON.Color3.Black();
+material.reflectionFresnelParameters.rightColor = BABYLON.Color3.White();
+</code></pre>
+<p><img src="http://www.babylonjs.com/forumpics/fresnel02.jpg" alt=""></p>
+<p>By using <code>bias</code> and <code>power</code> properties, you can control how the fresnel is computed along the surface of the object according to this formula:</p>
+<p><em>finalFresnelTerm = pow(<strong>bias</strong> + fresnelTerm, <strong>power</strong>)</em></p>
+<p>By default, bias == 0 and power == 1</p>
+<p>For instance, the following code:</p>
+<pre><code class="lang-javascript">material.reflectionFresnelParameters = new BABYLON.FresnelParameters();
+material.reflectionFresnelParameters.leftColor = BABYLON.Color3.Black();
+material.reflectionFresnelParameters.rightColor = BABYLON.Color3.White();
+material.reflectionFresnelParameters.power = 4;
+</code></pre>
+<p>...generates the following rendering:</p>
+<p><img src="http://www.babylonjs.com/forumpics/fresnel03.jpg" alt=""></p>
+<h2 id="how-to-use-it">How to use it</h2>
+<p>A <em>FresnelParameter</em> is defined by the following properties:</p>
+<ul>
+<li><code>isEnabled</code> to activate or deactivate fresnel effect</li>
+<li>leftColor to define color used on edges</li>
+<li>rightColor to define color used on center</li>
+<li>bias to define bias applied to computed fresnel term</li>
+<li>power to compute exponent applied to fresnel term</li>
+</ul>
+<p>Here is a simple example:</p>
+<pre><code class="lang-javascript">material.reflectionTexture = new BABYLON.CubeTexture(&quot;Scenes/Customs/skybox/TropicalSunnyDay&quot;, scene);
+material.diffuseColor = new BABYLON.Color3(0, 0, 0);
+material.emissiveColor = new BABYLON.Color3(0.5, 0.5, 0.5);
+material.alpha = 0.2;
+material.specularPower = 16;
+
+// Fresnel
+material.reflectionFresnelParameters = new BABYLON.FresnelParameters();
+material.reflectionFresnelParameters.bias = 0.1;
+
+material.emissiveFresnelParameters = new BABYLON.FresnelParameters();
+material.emissiveFresnelParameters.bias = 0.6;
+material.emissiveFresnelParameters.power = 4;
+material.emissiveFresnelParameters.leftColor = BABYLON.Color3.White();
+material.emissiveFresnelParameters.rightColor = BABYLON.Color3.Black();
+
+material.opacityFresnelParameters = new BABYLON.FresnelParameters();
+material.opacityFresnelParameters.leftColor = BABYLON.Color3.White();
+material.opacityFresnelParameters.rightColor = BABYLON.Color3.Black();
+</code></pre>
+<p>A complete demo can be found here: <a href="http://www.babylonjs.com/?FRESNEL">http://www.babylonjs.com/?FRESNEL</a></p>
+<p>If you want to experiment FresnelParameters, just go here: <a href="http://www.babylonjs.com/playground/?19">http://www.babylonjs.com/playground/?19</a></p>
+</div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

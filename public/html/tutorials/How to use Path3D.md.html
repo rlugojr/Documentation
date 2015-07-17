@@ -1,0 +1,35 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"></head><body><nav id="menu" style="display:none"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><div id="wrapper"><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><h1>How to use Path3D.md</h1><div id="tutorialContent"><p><strong>Path3D</strong> is a math object.<br>Given an array of successive <em>Vector3</em>, it allows you to construct a path in space by computing on each point a triplet of vectors, the tangent, the normal and the binormal to keep direction and consistency (reduction of rotations).<br>Here is the model inspired from  : <a href="http://www.cs.cmu.edu/afs/andrew/scs/cs/15-462/web/old/asst2camera.html">http://www.cs.cmu.edu/afs/andrew/scs/cs/15-462/web/old/asst2camera.html</a>  </p>
+<p>Each triplet can then be used as a local system coordinate. You could set for example a camera on each normal sliding along a curve.</p>
+<p>Here is a simple example of the visualisation of the triplets on a sinus curve : <a href="http://www.babylonjs-playground.com/#2DLXYB">http://www.babylonjs-playground.com/#2DLXYB</a><br>Please zoom in and rotate : tangents in red, normals in blue, binormal in green.  </p>
+<p>Another example to show how the triplets slightly rotate when the curve goes more into depth  : <a href="http://www.babylonjs-playground.com/#2DLXYB#1">http://www.babylonjs-playground.com/#2DLXYB#1</a>  </p>
+<p>Path3D creation :</p>
+<pre><code class="lang-javascript">var points = [v1, v2, ..., vn];          // array of Vector3
+var path3d = new BABYLON.Path3D(points);
+</code></pre>
+<p>You can then get the triplets. Each following methods return an array of <em>Vector3</em> which are respectively on each curve point the tangent, normal and binormal vectors :</p>
+<pre><code class="lang-javascript">var tangents = path3D.getTangents();
+var normals = path3D.getNormals();
+var binormals = path3D.getBinormals();
+</code></pre>
+<p>There are also two other methods : one returning the <em>curve</em> which is actually a copy of the initial <em>Vector3</em> array given to create the path3D object and the other one returning the distance of each points from the first curve point (distance = zero) as a simple array of numeric values (the distances).</p>
+<pre><code class="lang-javascript">var curve = path3d.getCurve();
+var distances = path3d.getDistances();
+</code></pre>
+<p>In order to avoid memory re-allocation (in the render loop for instance) since the given <em>points</em> array is internally copied, you can update an existing <em>Path3D</em> object with its <em>update()</em> method :</p>
+<pre><code class="lang-javascript">var points1 = [v1, v2, ..., vn];          // array of Vector3
+var path3d = new BABYLON.Path3D(points1);
+var points2 = [u1, u2, ..., un];          // another array of Vector3
+path3D.update(points2);
+</code></pre>
+<p>Tangents, normals and bi-normals are thus recomputed for this new path.</p>
+<p>If you need to give a fixed orientation to the normal on the first path point, you can pass an extra Vector3 as parameter on creation or update :</p>
+<pre><code class="lang-javascript">var initialVector = new BABYLON.Vector3(0, 1, 0);
+var otherVector = new BABYLON.Vector3(0, 0, 1);
+var points = [v1, v2, ..., vn];          // array of Vector3
+var path3d = new BABYLON.Path3D(points, initialVector);
+// do stuff ...
+path3d.update(points, otherVector);
+</code></pre>
+<p>The first normal will then be the projection of your parameter vector onto the plane orthogonal to the first tangent at the first point position. 
+In a simplest way, this is a mean to have a &quot;vertical&quot; (or quite vertical, depending on the path) first normal for instance.</p>
+</div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

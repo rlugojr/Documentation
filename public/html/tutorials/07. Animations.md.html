@@ -1,0 +1,259 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"></head><body><nav id="menu" style="display:none"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><div id="wrapper"><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><h1>07. Animations.md</h1><div id="tutorialContent"><h2 id="animation">Animation</h2>
+<p>Your scene is beginning to look great, but it is very static. To put dynamics in it, we are going to learn how to tell your computer to move your meshes in any way you choose.</p>
+<p><img src="http://www.babylonjs.com/tutorials/07%20-%20Animation/07.png" alt="Elements"></p>
+<p><em>Final result</em></p>
+<h2 id="how-can-i-do-this-">How can I do this ?</h2>
+<p>There are two primary ways of doing animations in your scene. The first is to define a collection of keys and defining your object&#39;s situation at each key. The second way is for more complex animations, when you change animation code at run time.</p>
+<p><strong>1 - Basic animation</strong></p>
+<p>The animation is based on objects called Animation (!!). An Animation is defined by various properties and a collection of keys. Every key represents the value of the Animation at that key&#39;s given time.</p>
+<p>To achieve today’s animated scene, we begin by creating our environment:</p>
+<pre><code class="lang-javascript">function createScene() {
+&amp;nbsp;&amp;nbsp; &amp;nbsp;//Here... your basic scene as before: [scene, light, camera]
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;//Create a box
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var box1 = BABYLON.Mesh.CreateBox(&quot;Box1&quot;, 10.0, scene);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;box1.position.x = -20;
+</code></pre>
+<p>Our goal: move this “box1”. First, create our Animation object:</p>
+<pre><code class="lang-javascript">var animationBox = new BABYLON.Animation(&quot;myAnimation&quot;, &quot;scaling.x&quot;, 30, BABYLON.Animation.ANIMATIONTYPE_FLOAT, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+</code></pre>
+<p>Much information is in the parameters:</p>
+<p>Parameter 1 - Name of this animation, nothing more.</p>
+<p>Parameter 2 - The property concerned. This can be any mesh property, depending upon what you want to change. Here we want to scale an object on the X axis, so it will be “scaling.x”.</p>
+<p>Parameter 3 - Frames per second requested: highest FPS possible in this animation.</p>
+<p>Parameter 4 - Type of change. Here you decide and enter what kind of value will be modified: is it a float (e.g. a translation), a vector (e.g. a direction), or a quaternion. Exact values are:</p>
+<p>&nbsp; - <code>BABYLON.Animation.ANIMATIONTYPE_FLOAT</code>
+&nbsp; - <code>BABYLON.Animation.ANIMATIONTYPE_VECTOR2</code>
+&nbsp; - <code>BABYLON.Animation.ANIMATIONTYPE_VECTOR3</code>
+&nbsp; - <code>BABYLON.Animation.ANIMATIONTYPE_QUATERNION</code>
+&nbsp; - <code>BABYLON.Animation.ANIMATIONTYPE_MATRIX</code>
+&nbsp; - <code>BABYLON.Animation.ANIMATIONTYPE_COLOR3</code></p>
+<p>Parameter 5. Finally, you have to decide and enter the type of behavior this animation will take at its upper limit (e.g. will it continue on, will it begin again, will it stop at the last key value, etc.):</p>
+<ul>
+<li>Use previous values and increment it: <code>BABYLON.Animation.ANIMATIONLOOPMODE_RELATIVE</code></li>
+<li>Restart from initial value: <code>BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE</code></li>
+<li>Keep their final value: <code>BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT</code></li>
+</ul>
+<p>Now that we have our Animation object, it is time to say how those values will be modified. In our case, we want to scale our box, but not in a linear way: it must be faster when it became larger, and slower when it became thinner. So:</p>
+<pre><code class="lang-javascript">// An array with all animation keys
+var keys = []; 
+
+&amp;nbsp;&amp;nbsp; //At the animation key 0, the value of scaling is &quot;1&quot;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;keys.push({
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; frame: 0,
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; value: 1
+&amp;nbsp;&amp;nbsp; &amp;nbsp;});
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;//At the animation key 20, the value of scaling is &quot;0.2&quot;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;keys.push({
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; frame: 20,
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; value: 0.2
+&amp;nbsp;&amp;nbsp; &amp;nbsp;});
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;//At the animation key 100, the value of scaling is &quot;1&quot;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;keys.push({
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; frame: 100,
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; value: 1
+&amp;nbsp;&amp;nbsp; &amp;nbsp;});
+</code></pre>
+<p>Next, two important steps:</p>
+<ul>
+<li>Adding the animation array to the animation object:</li>
+</ul>
+<pre><code class="lang-javascript">animationBox.setKeys(keys);
+</code></pre>
+<ul>
+<li>Link this animation to our box:</li>
+</ul>
+<pre><code class="lang-javascript">box1.animations.push(animationBox);
+</code></pre>
+<p>Finally, you can launch your animation in one line of code, at any time in your application:</p>
+<pre><code class="lang-javascript">scene.beginAnimation(box1, 0, 100, true);
+</code></pre>
+<h4 id="parameters-for-scene-beginanimation">Parameters for scene.beginAnimation</h4>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td>target</td>
+<td>any</td>
+<td>The target</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>from</td>
+<td>number</td>
+<td>The fps starting frame</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>to</td>
+<td>number</td>
+<td>The fps ending frame</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>loop</td>
+<td>boolean</td>
+<td>If true, the animation will loop (dependent upon BABYLON.Animation.ANIMATIONLOOPMODE)</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>speedRatio</td>
+<td>number</td>
+<td>default : 1. The speed ratio of this animation</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>onAnimationEnd</td>
+<td>() =&gt; void</td>
+<td>The function triggered on the end of the animation (also dependent upon ANIMATIONLOOPMODE)</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>animatable</td>
+<td><a href="page.php?p=25171">Animatable</a></td>
+<td>An optional specific animation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>This function returns a <code>BABYLON.Animatable</code> object that you can use to get access to individual animations (for instance using <code>getAnimationByTargetProperty</code> function).</p>
+<p>The <code>BABYLON.Animatable</code> object also supports the following functions:</p>
+<ul>
+<li><code>pause()</code></li>
+<li><code>restart()</code></li>
+<li><code>stop()</code></li>
+<li><code>reset()</code></li>
+</ul>
+<p>These commands will apply to every animation object contained in the Animatable&#39;s ._animations array. You can also get access to current running <code>BABYLON.Animatable</code> objects by using <code>scene.getAnimatableByTarget()</code> providing the target object.</p>
+<p>And you are done! Don&#39;t hesitate to combine many animations for one mesh object... by creating more Animations and pushing them into the mesh&#39;s <em>animation</em> property. ;) We have now completed an Animation for box1.scaling.x. Maybe now you want to build an Animation for box1.scaling.y, and really get box1 moving playfully.</p>
+<p><strong>2 - Controlling animations</strong></p>
+<p>Each Animation has a property called <code>currentFrame</code> that indicates the current animation key.</p>
+<p>For advanced keyframe animation, you can also define the functions used to interpolate (transition) between keys. By default these functions are the following:</p>
+<pre><code class="lang-javascript">BABYLON.Animation.prototype.floatInterpolateFunction = function (startValue, endValue, gradient) {
+&amp;nbsp;&amp;nbsp; &amp;nbsp;return startValue + (endValue - startValue) * gradient;
+};
+
+BABYLON.Animation.prototype.quaternionInterpolateFunction = function (startValue, endValue, gradient) {
+&amp;nbsp;&amp;nbsp; &amp;nbsp;return BABYLON.Quaternion.Slerp(startValue, endValue, gradient);
+};
+
+BABYLON.Animation.prototype.vector3InterpolateFunction = function (startValue, endValue, gradient) {
+&amp;nbsp;&amp;nbsp; &amp;nbsp;return BABYLON.Vector3.Lerp(startValue, endValue, gradient);
+};
+</code></pre>
+<p><strong>3 - Helper function</strong></p>
+<p>You can use an extended function to create a quick animation:</p>
+<pre><code class="lang-Javascript">Animation.CreateAndStartAnimation = function(name, mesh, tartgetProperty, framePerSecond, totalFrame, from, to, loopMode);
+</code></pre>
+<p>To be able to use this function, you need to know that :</p>
+<ul>
+<li>Your animation will have predefined key frames (Only 2 keyframes are generated : <strong>Start</strong> and <strong>End</strong>)</li>
+<li>The animation works only on <strong>AbstractMesh</strong> objects.</li>
+<li>The animation is starting right after the method call.</li>
+</ul>
+<p>Here is a straightforward sample using the <strong>CreateAndStartAnimation()</strong> function :</p>
+<pre><code class="lang-Javascript">BABYLON.Animation.CreateAndStartAnimation(&#39;boxscale&#39;, box1, &#39;scaling.x&#39;, 30, 120, 1.0, 1.5);
+</code></pre>
+<p>Pretty straightforward ? :)</p>
+<p><strong>4 - Easing functions</strong></p>
+<p>You can add some behaviors to your animations, using easing functions. 
+If you want more informations about easing functions, here are some useful links : </p>
+<ul>
+<li><a href="http://msdn.microsoft.com/en-us/library/ee308751.aspx">MSDN Easing functions documentation</a></li>
+<li><a href="http://easings.net/fr">Easing functions cheat sheet</a></li>
+</ul>
+<p>All those easing functions are implemented in BABYLON allowing you to apply custom mathematical formulas to your animations.</p>
+<p>Here are the predefined easing functions you can use : </p>
+<ul>
+<li><code>BABYLON.CircleEase()</code></li>
+<li><code>BABYLON.BackEase(amplitude)</code></li>
+<li><code>BABYLON.BounceEase(bounces, bounciness)</code></li>
+<li><code>BABYLON.CubicEase()</code></li>
+<li><code>BABYLON.ElasticEase(oscillations, springiness)</code></li>
+<li><code>BABYLON.ExponentialEase(exponent)</code></li>
+<li><code>BABYLON.PowerEase(power)</code></li>
+<li><code>BABYLON.QuadraticEase()</code></li>
+<li><code>BABYLON.QuarticEase()</code></li>
+<li><code>BABYLON.QuinticEase()</code></li>
+<li><code>BABYLON.SineEase()</code></li>
+</ul>
+<p>You can use the <strong>EasingMode</strong> property to alter how the easing function behaves, that is, change how the animation interpolates. 
+There are three possible values you can give for EasingMode: </p>
+<ul>
+<li><code>BABYLON.EasingFunction.EASINGMODE_EASEIN</code> : Interpolation follows the mathematical formula associated with the easing function.</li>
+<li><code>BABYLON.EasingFunction.EASINGMODE_EASEOUT</code> : Interpolation follows 100% interpolation minus the output of the formula associated with the easing function.</li>
+<li><code>BABYLON.EasingFunction.EASINGMODE_EASEINOUT</code> : Interpolation uses EaseIn for the first half of the animation and EaseOut for the second half.</li>
+</ul>
+<p>Here is a straightforward sample to animate a torus within a <code>CirleEase</code> easing function :</p>
+<pre><code class="lang-Javascript">//Create a Vector3 animation at 30 FPS
+var animationTorus = new BABYLON.Animation(&quot;torusEasingAnimation&quot;, &quot;position&quot;, 30, BABYLON.Animation.ANIMATIONTYPE_VECTOR3, BABYLON.Animation.ANIMATIONLOOPMODE_CYCLE);
+
+// the torus destination position
+var nextPos = torus.position.add(new BABYLON.Vector3(-80, 0, 0));
+
+// Animation keys
+var keysTorus = [];
+keysTorus.push({ frame: 0, value: torus.position });
+keysTorus.push({ frame: 120, value: nextPos });
+animationTorus.setKeys(keysTorus);
+
+// Creating an easing function
+var easingFunction = new BABYLON.CircleEase();
+
+// For each easing function, you can choose beetween EASEIN (default), EASEOUT, EASEINOUT
+easingFunction.setEasingMode(BABYLON.EasingFunction.EASINGMODE_EASEINOUT);
+
+// Adding the easing function to the animation
+animationTorus.setEasingFunction(easingFunction);
+
+// Adding animation to my torus animations collection
+torus.animations.push(animationTorus);
+
+//Finally, launch animations on torus, from key 0 to key 120 with loop activated
+scene.beginAnimation(torus, 0, 120, true);
+</code></pre>
+<p>You can play with bezier curve algorithm too, using the <strong>BezierCurveEase(x1, y1, x2, y2)</strong> function. 
+For purpose, here is a good reference to create your curve algorithm : <a href="http://cubic-bezier.com">http://cubic-bezier.com</a></p>
+<p>Here is a pretty cool implementation using the bezier curve algorithm :</p>
+<p><img src="http://www.dotmim.com/sitefiles/babylon/bezier.jpg" alt=""></p>
+<pre><code class="lang-Javascript">var bezierEase = new BABYLON.BezierCurveEase(0.32, -0.73, 0.69, 1.59);
+</code></pre>
+<p>Finally, you can extend the <strong>EasingFunction</strong> base function to create your own easing function, like this :</p>
+<pre><code class="lang-Javascript">var FunnyEase = (function (_super) {
+&amp;nbsp;&amp;nbsp; &amp;nbsp;__extends(FunnyEase, _super);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;function FunnyEase() {
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; _super.apply(this, arguments);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}
+&amp;nbsp;&amp;nbsp; &amp;nbsp;FunnyEase.prototype.easeInCore = function (gradient) {
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; // Here is the core method you should change to make your own Easing Function
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; // Gradient is the percent of value change
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; return Math.pow(Math.pow(gradient, 4), gradient);
+
+&amp;nbsp;&amp;nbsp; &amp;nbsp;};
+&amp;nbsp;&amp;nbsp; &amp;nbsp;return FunnyEase;
+})(BABYLON.EasingFunction);
+</code></pre>
+<p>You will find a complete demonstration of the easing functions behaviors, in the playground : <a href="http://babylonjs-playground.azurewebsites.net/?20"><strong>Easing function playground</strong></a></p>
+<p><strong>5 - Complex animation</strong></p>
+<p>The complex animation lets you choose everything at each frame of the animation (each tick). The code computed at run time must be located in this function:</p>
+<pre><code class="lang-javascript">scene.registerBeforeRender(function () {
+&amp;nbsp;//Your code here
+});
+</code></pre>
+<p>This function can be very useful for complex animation like games, where characters have to move depending on many parameters.</p>
+<p>Don’t hesitate to combine all those types of animations. If well done, it’s very powerful.</p>
+<p>Don&#39;t forget to <a href="http://babylondoc.azurewebsites.net/page.php?p=29">visit our API documentation</a> in order to learn more about the <a href="http://babylondoc.azurewebsites.net/page.php?p=24916"><strong>Babylon.js Animation</strong></a> class.</p>
+<p>You can view, edit, and get a zip of the code used in this tutorial... <a href="http://babylonjs-playground.azurewebsites.net/?7"><strong>right here</strong></a> ...at the Babylon.js Playground.&nbsp; The demo for the easing section is listed a few lines earlier.</p>
+<h2 id="next-step">Next step</h2>
+<p>Your scene is now becoming dynamic, and all your meshes can move in all directions! Feel free to try different animations on different objects, then come back and learn all about <a href="http://babylondoc.azurewebsites.net/page.php?p=22082"><strong>Sprites</strong></a>.</p>
+</div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

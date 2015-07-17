@@ -2,19 +2,33 @@
 // ************************************************* REQUIRE *************************************************
 
 var express = require('express'),
-  router = express.Router();
+    router = express.Router(),
+    path = require('path'),
+    appRoot = require('app-root-path').path,
+    logger = require(path.join(appRoot, 'config/logger'));
 
-var logger = require('../../../config/logger');
 
 // ************************************************* CLASSES *************************************************
 
 
 /**
- * Show the Classes list. No version specified so get the last version and redirect to it
+ * Show the extensions list
  */
 router.get('/', function(req, res) {
-  // render the page
-  res.render('extensions/extensions');
+    var options = {
+        root: path.join(appRoot, 'public/html')
+    };
+
+    res.status(200);
+    res.set({
+        'Content-type':'text/html',
+        'Cache-Control': 'no-cache'
+    });
+    res.sendFile('./extensions.html', options);
+});
+
+router.get('/:extension', function(req, res){
+
 });
 
 module.exports = router;

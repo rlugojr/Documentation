@@ -1,5 +1,14 @@
 include ../includes/header
 #wrapper
     include ../includes/banner
-    | Tutorials
+    #tutorialsTagsList
+        for tag in tags
+            div.tutorialTag
+                img(src=tag['img']).tagImage
+                h3.tagTitle=tag['name']
+                span.tagDescription=tag['desc']
+    #tutorialsAlphaList
+        - for tutorial in tutorials
+            h3(class=tutorial['tags']).tutorialTitle
+                a(href='./tutorials/'+tutorial['name'])= tutorial['name']
 include ../includes/footer

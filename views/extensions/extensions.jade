@@ -1,5 +1,5 @@
-include ../includes/header
+include includes/header.jade
 #wrapper
-    include ../includes/banner
-    | Extensions
-include ../includes/footer
+    include includes/banner.jade
+    #extension!= content
+include includes/footer.jade

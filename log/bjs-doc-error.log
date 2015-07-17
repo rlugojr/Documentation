@@ -371,3 +371,6 @@
 {"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\AbstractMesh.md.html","timestamp":"2015-07-08T13:11:50.896Z"}
 {"level":"error","message":"404 Error -  /classes/2.1/2.1/AbstractMesh","timestamp":"2015-07-09T07:50:06.728Z"}
 {"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\2.0.html","timestamp":"2015-07-09T07:50:13.670Z"}
+{"level":"error","message":"404 error - Class not found: 2.2","timestamp":"2015-07-15T14:44:06.517Z"}
+{"level":"error","message":"500 Error at D:\\00_SOKRATE-DOCS\\02-PROJECTS\\000-BabylonDoc\\v3\\git\\public\\html\\html\\classes_2.1.html - { [Error: ENOENT, stat 'D:\\00_SOKRATE-DOCS\\02-PROJECTS\\000-BabylonDoc\\v3\\git\\public\\html\\html\\classes_2.1.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'D:\\\\00_SOKRATE-DOCS\\\\02-PROJECTS\\\\000-BabylonDoc\\\\v3\\\\git\\\\public\\\\html\\\\html\\\\classes_2.1.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-17T14:24:47.117Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-17T14:28:32.796Z"}

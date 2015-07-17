@@ -28,7 +28,6 @@
     // ----------------------
 
     window.addEventListener("DOMContentLoaded", function() {
-        document.getElementById('menu').style.display = 'block';
         var slideout = new Slideout({
             'panel'    : document.getElementById('wrapper'),
             'menu'     : document.getElementById('menu'),
@@ -36,7 +35,13 @@
             'tolerance': 70
         });
         $("#mobilemenu").click(function () {
-            slideout.toggle();
+            if($('#menu').is(':visible')){
+                $('#menu').hide();
+                slideout.toggle();
+            } else {
+                slideout.toggle();
+                $('#menu').show();
+            }
         });
     });
 })();

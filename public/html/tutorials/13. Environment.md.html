@@ -1,0 +1,83 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"></head><body><nav id="menu" style="display:none"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><div id="wrapper"><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><h1>13. Environment.md</h1><div id="tutorialContent"><h3 id="you-have-come-a-long-way-have-learned-about-shapes-lights-sprites-particles-materials-nbsp-but-there-is-something-missing-in-your-scenes-a-proper-environment-nbsp-this-is-the-first-of-three-consecutive-tutorials-that-talk-about-scene-environment-factors-and-effects-nbsp-we-will-start-off-with-simple-scene-clearcolor-background-color-then-talk-briefly-about-scene-ambientcolor-then-on-to-6-texture-skyboxes-and-then-fog-to-give-an-illusion-of-depth-to-your-scenes-">You have come a long way, have learned about shapes, lights, sprites, particles, materials.&nbsp; But there is something missing in your scenes: a proper environment.&nbsp; This is the first of three consecutive tutorials that talk about scene environment factors and effects.&nbsp; We will start off with simple scene <code>clearColor</code> (background color), then talk briefly about scene <code>ambientColor</code>, then on to 6-texture skyboxes, and then fog to give an illusion of depth to your scenes.</h3>
+<p><img src="http://www.babylonjs.com/tutorials/13%20-%20Environment/13.png" alt="Environment"></p>
+<p><em>A picture showing Babylon.js fog in action</em></p>
+<h2 id="how-can-i-do-this-">How can I do this?</h2>
+<p>We will talk about that nice fog effect, shortly.&nbsp; First, I want to introduce you to two interesting properties on the <a href="http://babylondoc.azurewebsites.net/page.php?p=24894">scene class object</a>:</p>
+<ul>
+<li><code>scene.clearColor</code> - changes the &#39;background&#39; color.</li>
+<li><code>scene.ambientColor</code> - changes the color used in several effects, including ambient lighting.</li>
+</ul>
+<p>Both of them are very useful, and powerful in their own right.</p>
+<h3 id="changing-the-background-color-scene-clearcolor-">Changing the Background color (<code>scene.clearColor</code>)</h3>
+<p>The &#39;clearColor&#39; property on the scene object is the most rudimentary of environment properties/adjustments. Simply stated, this is how you change the background color of the scene.&nbsp; Here is how it is done:</p>
+<pre><code class="lang-javascript">scene.clearColor = new BABYLON.Color3(0.5, 0.8, 0.5);
+</code></pre>
+<p>Or maybe you want to use one of our preset colors and avoid using the <code>new</code> keyword:</p>
+<pre><code class="lang-javascript">scene.clearColor = BABYLON.Color3.Blue();
+</code></pre>
+<p>This color and property is not used in any calculations for the final colors of mesh, materials, textures, or anything else. It is simply the background color of the scene.&nbsp; Easy.</p>
+<h3 id="changing-the-ambient-color-scene-ambientcolor-">Changing the Ambient color (<code>scene.ambientColor</code>)</h3>
+<p>Conversely, the <code>ambientColor</code> property on the scene object is a very powerful and influential environment property/adjustment.&nbsp; First, let&#39;s have a look at its syntax:</p>
+<pre><code class="lang-javascript">scene.ambientColor = new BABYLON.Color3(0.3, 0.3, 0.3);
+</code></pre>
+<p>As you can see, it is set using the same format as <code>clearColor</code>, but <code>ambientColor</code> is used in quite a few calculations toward determining the final colors of scene items.&nbsp; Mainly, it is used in conjunction with a mesh&#39;s <code>StandardMaterial.ambientColor</code> to determine a FINAL <code>ambientColor</code> for the mesh material. </p>
+<p>You will find that when there is no <code>scene.ambientColor</code>, then <code>StandardMaterial.ambientColor</code> and <code>StandardMaterial.ambientTexture</code> will appear to do nothing.&nbsp; Set a <code>scene.ambientColor</code> of some value, like the example above, and <code>StandardMaterial.ambientColor</code>/<code>StandardMaterial.ambientTexture</code> will become active on meshes where you have applied such.</p>
+<p>By default, <code>scene.ambientColor</code> is set to <code>Color3(0, 0, 0)</code>, which means there is no <code>scene.ambientColor</code>.</p>
+<p>(Please see the section on ambientColors in our <a href="http://blogs.msdn.com/b/eternalcoding/archive/2013/07/01/babylon-js-unleash-the-standardmaterial-for-your-babylon-js-game.aspx">Unleash the Standard Material</a> tutorial, for more information.)</p>
+<h3 id="skybox">Skybox</h3>
+<p>To give a perfect illusion of a beautiful sunny sky, we are going to create a simple box, but with a special texture.</p>
+<p><img src="http://www.babylonjs.com/tutorials/13%20-%20Environment/13-1.png" alt="Skybox"></p>
+<p>First, our box, nothing new, just take notice of the disabled <a href="http://en.wikipedia.org/wiki/Back-face_culling">backface culling</a>:</p>
+<pre><code class="lang-javascript">var skybox = BABYLON.Mesh.CreateBox(&quot;skyBox&quot;, 100.0, scene);
+var skyboxMaterial = new BABYLON.StandardMaterial(&quot;skyBox&quot;, scene);
+skyboxMaterial.backFaceCulling = false;
+skybox.material = skyboxMaterial;
+</code></pre>
+<p>Next, we set the <code>infiniteDistance</code> property. This makes the skybox follow our camera&#39;s position.</p>
+<pre><code class="lang-javascript">skybox.infiniteDistance = true;
+</code></pre>
+<p>Now we must remove all light reflections on our box (the sun doesn&#39;t reflect on the sky!):</p>
+<pre><code class="lang-javascript">skyboxMaterial.diffuseColor = new BABYLON.Color3(0, 0, 0);
+skyboxMaterial.specularColor = new BABYLON.Color3(0, 0, 0);
+</code></pre>
+<p>Next, we apply our special sky texture to it. This texture must have been prepared to be a skybox, in a dedicated directory, named “skybox” in our example:</p>
+<pre><code class="lang-javascript">skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture(&quot;textures/skybox&quot;, scene);
+skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
+</code></pre>
+<p>(More about reflectionTextures can be found in our <a href="http://blogs.msdn.com/b/eternalcoding/archive/2013/07/01/babylon-js-unleash-the-standardmaterial-for-your-babylon-js-game.aspx">Unleash the Standard Material</a> tutorial.)</p>
+<p>In that <code>/skybox</code> directory, we must find 6 sky textures, one for each face of our box. Each image must be named per the corresponding face: “skybox_nx.png”, “skybox_ny.png”, “skybox_nz.png”, “skybox_px.png”, “skybox_py.png”, “skybox_pz.png”.</p>
+<p><img src="http://www.babylonjs.com/tutorials/13%20-%20Environment/13-2.png" alt="Skybox"></p>
+<p>If you want some free skybox texture samples, point your browser to: <a href="http://3delyvisions.co/skf1.htm">http://3delyvisions.co/skf1.htm</a> (look at licenses before use, please.)&nbsp; As you can see by those examples, skybox textures need not be textures of sky alone.&nbsp; Buildings, hills, mountains, trees, lakes, planets, stars, you name it (all can be used nicely) as part of skybox textures.</p>
+<p>Final note, if you want your skybox to render behind everything else, set the skybox&#39;s <code>renderingGroupId</code> to <code>0</code>, and every other renderable object&#39;s <code>renderingGroupId</code> greater than zero, for example:</p>
+<pre><code class="lang-javascript">skybox.renderingGroupId = 0;
+
+// Some other mesh
+myMesh.renderingGroupId = 1;
+</code></pre>
+<p>More info about rendering groups and rendering order can be found <a href="page.php?p=25100">here</a>.</p>
+<h3 id="fog">Fog</h3>
+<p>Fog is quite an advanced effect, but fog in Babylon.js has been simplified to the maximum.&nbsp; It’s now very easy to add fog to your scenes.&nbsp; First, we define the fog mode like this:</p>
+<pre><code class="lang-javascript">scene.fogMode = BABYLON.Scene.FOGMODE_EXP;
+</code></pre>
+<p>Here are the available modes :</p>
+<ul>
+<li><code>BABYLON.Scene.FOGMODE_NONE</code> - default one, fog is deactivated.</li>
+<li><code>BABYLON.Scene.FOGMODE_EXP</code> - the fog density is following an exponential function.</li>
+<li><code>BABYLON.Scene.FOGMODE_EXP2</code> - same that above but faster.</li>
+<li><code>BABYLON.Scene.FOGMODE_LINEAR</code> - the fog density is following a linear function.</li>
+</ul>
+<p>-&gt; If you choose the <code>EXP</code>, or <code>EXP2</code> mode, then you can define the density option (default is <code>0.1</code>):</p>
+<pre><code class="lang-javascript">scene.fogDensity = 0.01;
+</code></pre>
+<p>-&gt; Otherwise, if you choose <code>LINEAR</code> mode, then you can define where fog starts and where fog ends:</p>
+<pre><code class="lang-javascript">scene.fogStart = 20.0;
+scene.fogEnd = 60.0;
+</code></pre>
+<p>Finally, whatever the mode, you can specify the color of the fog (default is <code>BABYLON.Color3(0.2, 0.2, 0.3)</code>):</p>
+<pre><code class="lang-javascript">scene.fogColor = new BABYLON.Color3(0.9, 0.9, 0.85);
+</code></pre>
+<p>See, we told you it was easy.</p>
+<p>If you want to see and play with the playground scene for this tutorial, you can <a href="http://babylonjs-playground.azurewebsites.net/?13"><strong>click right here</strong></a>.</p>
+<h2 id="next-step">Next step</h2>
+<p>You should have a beautiful scene now, but except from your 3D models, your world is pretty flat, and that’s a shame for your scene. So, in our next environment tutorial, we are going to transform your flat ground into beautiful mountains. To learn this, go <a href="http://babylondoc.azurewebsites.net/page.php?p=22141">here!</a>.</p>
+</div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

@@ -3,85 +3,132 @@
  ************************************************************************/
 
 var express = require('express'),
-    router = express.Router();
+    router  = express.Router(),
+    fs      = require('fs'),
+    path    = require('path'),
+    appRoot = require('app-root-path').path,
+    logger  = require(path.join(appRoot, 'config/logger')),
+    marked_github = require('meta-marked');
 
-var fs = require('fs');
-var path = require('path');
-
-var marked_github   = require('meta-marked');
-    marked_github.setOptions({
-        renderer: new marked_github.Renderer(),
-        gfm: true,
-        tables: true,
-        breaks: true,
-        sanitize: false
-    });
-
-var logger = require('../../../config/logger');
-
-var __publicRootPath = '../../../public';
+marked_github.setOptions({
+    renderer: new marked_github.Renderer(),
+    gfm: true,
+    tables: true,
+    breaks: true,
+    sanitize: false
+});
 
 /************************************************************************
  *                                ROUTES                                *
  ************************************************************************/
 
-/**
+/*****************
+ * DEFAULT ROUTE
  * Show the Classes list. No version specified so get the last version and redirect to it
- */
+ ****************/
 router.get('/', function(req, res) {
-    classesListVersions(function(versions) {
-        res.writeHead(301, {
-            Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/classes/' + versions[versions.length-1]
+    logger.info('/');
+    getLastBJSVersion(function(lastVersion) {
+        res.writeHead(303, {
+            'Cache-Control': 0,
+            Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/classes/' + lastVersion
         });
         res.end();
     });
 });
 
-/**
- * Show the Classes list.
+/*****************
+ * CLASSES ROUTE *
+ *****************
+ * Show the Classes list. Also, if the user types a valid class name into the url,
+ * this route will try to resolve this name and send the most recent version of it
+ * (meaning: the class page corresponding to the last BJS version of the class).
+ *
  * @param req
  *      version - The version of babylon
  */
 router.get('/:version', function(req, res) {
+    logger.info('/:version');
+
     var version = req.params.version;
 
     fs.exists('public/html/classes_' + version + '.html', function(exists){
         if(exists){
+            //console.log(exists);
+            //console.log(version);
             var options = {
-                root: path.join(__dirname, __publicRootPath)
+                root: path.join(appRoot, 'public/')
             };
 
             res.status(200);
-            res.set({'Content-type':'text/html'});
+            res.set({
+                'Content-type':'text/html',
+                'Cache-Control': 'no-cache'
+            });
             res.sendFile('./html/classes_' + version + '.html', options);
         } else {
-            // render 404 - Page not found
-            logger.error('404 error - Page not found: public/html/classes_' + version + '.html');
-            res.render('errorpages/404.jade', {});
+            /**
+             * Maybe the user written a class without specifying a BJS version; in
+             * that case, redirect the user to the last BJS version of the class.
+             * Otherwise, classic 404 error - class not found
+             */
+            fs.readFile('data/classes.json', function(err, data){
+                if (err) throw err;
+
+                // for clarification purpose
+                var className = version;
+
+                var lastVersion,
+                    jsonData = JSON.parse(data);
+
+                for(var versionName in jsonData) {
+                    if (jsonData[versionName].lastIndexOf(className) != -1) {
+                        lastVersion = versionName;
+                    }
+                }
+
+                if(lastVersion){
+                    // redirect
+                    res.writeHead(303, {
+                        'Cache-Control': 'no-cache',
+                        Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/classes/' + lastVersion + '/' + className
+                    });
+                    res.end();
+                } else {
+                    // render 404 - Page not found
+                    logger.error('404 error - Class not found: ' + className);
+                    res.render('errorpages/404_class_not_found.jade', {classname:className});
+                }
+            });
         }
     });
 });
 
-/**
+/***************
+ * CLASS ROUTE *
+ ***************
  * Show the specified Class.
  * @param req
  *      name - Name of the Class
- *      version - The version of babylon
+ *      version - The version of BabylonJS
  */
-router.get('/:version/:name', function(req, res) {
+router.get('/:version/:className', function(req, res) {
     var version         = req.params.version;
-    var className       = req.params.name;
+    var className       = req.params.className;
     className = className
         .replace('<', '_').replace('>', '_')
         .replace('%3CT%3E', '_T_')
         .replace('&lt;T$gt;', '_T_');
+
+    logger.info('/:version/:className');
 
     // for internal forwarding (click on a link)
     if(className == 'page.php'){
 
         var pageID = req.query.p;
 
-        res.writeHead(301, {
+        res.writeHead(303, {
+            'Cache-Control': 'no-cache',
             Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/forward/page.php?p=' + pageID
         });
 
@@ -100,11 +147,14 @@ router.get('/:version/:name', function(req, res) {
                 fileName = path.join('./html/class_' + version, className) + '.html';
 
                 var options = {
-                    root: path.join(__dirname, __publicRootPath)
+                    root: path.join(appRoot, 'public/')
                 };
 
                 res.status(200);
-                res.set({'Content-type':'text/html'});
+                res.set({
+                    'Content-type':'text/html',
+                    'Cache-Control': 'no-cache'
+                });
                 res.sendFile(fileName, options);
             }
         });
@@ -123,15 +173,8 @@ module.exports = router;
  * Get all the versions
  * @returns {Array} - 'X.X'
  */
-var classesListVersions = function(callback) {
+var getLastBJSVersion = function(callback) {
     fs.readdir('./content/classes', function(error, data) {
-        var versionsList = [];
-
-        data.forEach(function(version) {
-            // don't send the 'v' in 'vX.X'
-            versionsList.push(version);
-        });
-
-        callback(versionsList);
+        callback(data[data.length - 1]);
     });
 };

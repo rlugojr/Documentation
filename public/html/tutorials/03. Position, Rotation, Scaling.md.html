@@ -1,0 +1,67 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"></head><body><nav id="menu" style="display:none"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><div id="wrapper"><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><h1>03. Position, Rotation, Scaling.md</h1><div id="tutorialContent"><h3 id="in-this-tutorial-we-are-going-to-learn-how-to-position-scale-and-rotate-any-kind-of-objects-that-you-created-in-our-last-tutorial-we-will-also-set-a-parent-and-start-to-understand-how-parenting-affects-position-rotation-and-scaling-">In this tutorial, we are going to learn how to position, scale and rotate any kind of objects that you created in our last tutorial. We will also set a parent and start to understand how parenting affects position, rotation and scaling.</h3>
+<p><img src="http://www.babylonjs.com/tutorials/03%20-%20Rotation%20and%20scaling/03.png" alt="Elements"></p>
+<p><a href="http://babylonjs-playground.azurewebsites.net/?3"><strong>Playground Demo Scene 3 - Positioned, Scaled, and Rotated Boxes</strong></a></p>
+<h2 id="how-can-i-do-this-">How can I do this ?</h2>
+<p>As usual, we are beginning a createScene function by including the basic elements of a scene:</p>
+<pre><code class="lang-javascript">function createScene() {
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var scene = new BABYLON.Scene(engine);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var light = new BABYLON.PointLight(&quot;Omni&quot;, new BABYLON.Vector3(0, 100, 100), scene);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var camera = new BABYLON.ArcRotateCamera(&quot;Camera&quot;, 0, 0.8, 100, new BABYLON.Vector3.Zero(), scene);
+</code></pre>
+<p>Then create as many boxes as you want:</p>
+<pre><code class="lang-javascript">//Creation of 3 boxes
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var box1 = BABYLON.Mesh.CreateBox(&quot;Box1&quot;, 6.0, scene);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var box2 = BABYLON.Mesh.CreateBox(&quot;Box2&quot;, 6.0, scene);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var box3 = BABYLON.Mesh.CreateBox(&quot;Box3&quot;, 6.0, scene);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;[…]
+</code></pre>
+<ul>
+<li><strong>Position</strong></li>
+</ul>
+<p>You can easily position any boxes in the scene, anywhere you like. For example:</p>
+<pre><code class="lang-javascript">//Positioning the boxes
+box1.position = new BABYLON.Vector3(-20,0,0);
+box2.position.x = -10; // or box2.position = new BABYLON.Vector3(-10,0,0);
+box3.position.x = 0;
+</code></pre>
+<p>And now, with the same ease of coding, you can rotate boxes around any axes.&nbsp; For example:</p>
+<ul>
+<li><strong>Rotation</strong> (angles are in radians)
+```javascript
+&nbsp;&nbsp; &nbsp;//Rotate the box around the x axis
+&nbsp;&nbsp; &nbsp;box1.rotation.x = Math.PI/4; // or box1.rotation = new BABYLON.Vector3(Math.PI/4,0,0);</li>
+</ul>
+<p>&nbsp;&nbsp; &nbsp;//Rotate the box around the y axis
+&nbsp;&nbsp; &nbsp;box2.rotation.y = Math.PI/6;</p>
+<pre><code>
+* **Scaling**
+
+And yes, it is just as easy to scale the boxes along any axes.&amp;nbsp; For example:
+```javascript
+//Scaling of 2x on the x axis
+&amp;nbsp;&amp;nbsp; &amp;nbsp;box3.scaling.x = 2; // or box3.scaling = new BABYLON.Vector3(2,1,1);
+</code></pre><ul>
+<li><strong>Parenting</strong></li>
+</ul>
+<p>Another Babylon feature is attaching an object, relatively to another, by creating a parent-child link between two meshes. This link implies that all parent transformations (position/rotation/scaling) will also be applied to the child’s transformations.</p>
+<pre><code class="lang-javascript">//Positioning box3 relative to box1
+&amp;nbsp;&amp;nbsp; &amp;nbsp;box3.parent = box1;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;box3.position.z = -10;
+</code></pre>
+<h2 id="notes">Notes</h2>
+<p>Parent-child hierarchies are evaluated on every frame. So any position, rotation and scaling transformations made to the parent... prior to assigning it to children... will also be applied to the children when the parent is assigned.
+&nbsp;
+All transformations made after assigning a parent to a child... will be maintained with the child in relation to the parent.
+&nbsp;
+Basically in simple terms, don&#39;t rotate or move a child until after you&#39;ve assigned it to the parent, and keep in mind that additional rotations will be in relation to the parent after the parent rotations are applied to the child.</p>
+<h3 id="some-links">Some Links</h3>
+<p>This tutorial&#39;s createScene() can be viewed and experimented-with... by visiting <a href="http://www.babylonjs.com/playground/?3">Babylon.js Playground scene 03</a>. We also have some animated demonstrations that are part of the Babylon.js Primer, viewable in the Miscellaneous section.&nbsp; Here are links to those demos.</p>
+<ul>
+<li><a href="http://www.babylonjs.com/playground/#35CPC"><strong>Position demo</strong></a></li>
+<li><a href="http://www.babylonjs.com/playground/#YIT1S"><strong>Rotation demo</strong></a></li>
+<li><a href="http://www.babylonjs.com/playground/#1VMQNH"><strong>Scaling demo</strong></a></li>
+</ul>
+<h2 id="next-step">Next step</h2>
+<hr>
+<p>Now you know how to create and move objects in a scene, but all your meshes have the same &#39;skin&#39;. Not for long, if you read our next tutorial about materials. <a href="http://babylondoc.azurewebsites.net/page.php?p=22051"><strong>Go to the Materials Tutorial</strong></a></p>
+</div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

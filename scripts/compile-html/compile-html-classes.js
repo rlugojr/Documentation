@@ -18,40 +18,47 @@
  *                             REQUIREMENTS                              *
  ************************************************************************/
 
-var jade    = require('jade'),
-    fs      = require('fs'),
-    path    = require('path'),
-    async   = require('async'),
-    marked  = require('meta-marked');
+var jade = require('jade'),
+    fs = require('fs'),
+    path = require('path'),
+    async = require('async'),
+    marked = require('meta-marked');
+
+marked.setOptions({
+    gfm: true,
+    breaks: false,
+    tables: true,
+    sanitize: false
+});
 
 /*************************************************************************
  *                               VARIABLES                               *
  ************************************************************************/
 
-    // the JSON files we need to do the work
-var __JSON_CLASSES__        = [
+// the JSON files we need to do the work
+var __JSON_CLASSES__ = [
         'data/classes.json',
         'data/classes-tags.json'
     ],
-    // the folder where we'll store the produced HTML files
-    __CLASSES_DESTDIR__     = 'public/html',
-    // the folder where we'll find the Jade file to compile
-    __JADE_FILES_ROOTDIR__  =  'views',
-    // the folder where we'll find the MD files (contain the HTML content
-    // we have to write)
+// the folder where we'll store the produced HTML files
+    __CLASSES_DESTDIR__ = 'public/html',
+// the folder where we'll find the Jade file to compile
+    __JADE_FILES_ROOTDIR__ = 'views',
+// the folder where we'll find the MD files (contain the HTML content
+// we have to write)
     __MD_FILES_ROOTDIR__ = 'content/classes';
 
 /*************************************************************************
  *                                 SCRIPT                                *
  ************************************************************************/
 
-module.exports = function(done) {
+module.exports = function (done) {
     async.waterfall([
         async.constant(__JSON_CLASSES__),
         readJSONFiles,
         buildHTMLPages
     ], function (error) {
-        if (error){
+        if (error) {
             done(false);
             throw error;
         }
@@ -69,11 +76,11 @@ module.exports = function(done) {
  * @param filePath
  * @param callback(error, JSON object)
  */
-var readJSONFiles = function(filePaths, callback){
+var readJSONFiles = function (filePaths, callback) {
     var options = {encoding: 'utf-8', flag: 'r'};
 
     var jsonContent = {
-        'json_classes_by_alpha' : JSON.parse(fs.readFileSync(filePaths[0], options)),
+        'json_classes_by_alpha': JSON.parse(fs.readFileSync(filePaths[0], options)),
         'json_classes_by_tags' : JSON.parse(fs.readFileSync(filePaths[1], options))
     };
 
@@ -85,13 +92,13 @@ var readJSONFiles = function(filePaths, callback){
  * @param jsonContent (json object)
  * @param callback
  */
-var buildHTMLPages = function(jsonContent, callback){
+var buildHTMLPages = function (jsonContent, callback) {
     var json_classes_by_alpha = jsonContent['json_classes_by_alpha'],
-        json_classes_by_tags  = jsonContent['json_classes_by_tags'];
+        json_classes_by_tags = jsonContent['json_classes_by_tags'];
 
     var versions = [];
 
-    for(var version in json_classes_by_alpha){
+    for (var version in json_classes_by_alpha) {
         versions.push(version);
 
         // delete all "class" HTML file
@@ -101,7 +108,7 @@ var buildHTMLPages = function(jsonContent, callback){
     /***********************************
      * CREATION OF THE "CLASSES" PAGES *
      ***********************************/
-    for(var version in json_classes_by_alpha) {
+    for (var version in json_classes_by_alpha) {
         var classes_classesByAlpha = json_classes_by_alpha[version];
 
         var classesByTags = json_classes_by_tags[version];
@@ -111,43 +118,45 @@ var buildHTMLPages = function(jsonContent, callback){
 
         // options for the Jade compiler
         var optionsClasses = {
-            pretty:false,
-            currentUrl: '/classes',
+            pretty        : false,
+            currentUrl    : '/classes',
             currentVersion: version,
-            versions: versions,
+            versions      : versions,
             classesByAlpha: classes_classesByAlpha,
-            classesByTags: classesByTags
+            classesByTags : classesByTags
         };
 
-        var html = jade.renderFile(path.join(__JADE_FILES_ROOTDIR__,'class/classes') + '.jade', optionsClasses);
+        var html = jade.renderFile(path.join(__JADE_FILES_ROOTDIR__, 'class/classes') + '.jade', optionsClasses);
         fs.writeFileSync(htmlClassesFilePath, html);
+        process.stdout.write('.');
     }
 
     /***********************************
      *  CREATION OF THE "CLASS" PAGES  *
      ***********************************/
-    for(var version in json_classes_by_alpha) {
+    for (var version in json_classes_by_alpha) {
         var classesByAlpha = json_classes_by_alpha[version];
         var classesByTags = json_classes_by_tags[version];
 
         // bjsClass = name of a class
-        classesByAlpha.forEach(function(bjsClass){
+        classesByAlpha.forEach(function (bjsClass) {
             // path to the MD file of the class
             var mdFilePath = path.join(__MD_FILES_ROOTDIR__, version, bjsClass) + '.md';
 
             // retrieve HTML content from the MD file
             var options = {encoding: 'utf-8', flag: 'r'};
-            var content = marked(fs.readFileSync(mdFilePath, options)).html;
+            var markedContent = marked(fs.readFileSync(mdFilePath, options));
+            var content = markedContent.html;
 
             // retrieve tags linked to the class
-            var metadata = marked(fs.readFileSync(mdFilePath, options)).meta;
+            var metadata = markedContent.meta;
             var classTags = metadata['TAGS'];
 
             // folder we're going to store the class HTML file in
             var class_html_folder = path.join(__CLASSES_DESTDIR__, 'class_' + version);
 
             // check if the folder exists, create it otherwise
-            if(!fs.existsSync(class_html_folder)){
+            if (!fs.existsSync(class_html_folder)) {
                 fs.mkdirSync(class_html_folder);
             }
 
@@ -156,18 +165,19 @@ var buildHTMLPages = function(jsonContent, callback){
 
             // options for the Jade compiler
             var optionsClass = {
-                pretty:false,
-                currentUrl: '/classes',
-                currentVersion: version,
+                pretty          : false,
+                currentUrl      : '/classes',
+                currentVersion  : version,
                 classListByAlpha: classesByAlpha,
-                classListByTag: classesByTags,
-                className: bjsClass,
-                classTags: classTags,
-                content: content
+                classListByTag  : classesByTags,
+                className       : bjsClass,
+                classTags       : classTags,
+                content         : content
             };
 
             var html = jade.renderFile(path.join(__JADE_FILES_ROOTDIR__, 'class/class') + '.jade', optionsClass);
             fs.writeFileSync(htmlClassFilePath, html);
+            process.stdout.write('.');
         });
     }
 
@@ -178,10 +188,10 @@ var buildHTMLPages = function(jsonContent, callback){
  * Helper method that delete every files from a directory.
  * @param path
  */
-var flushDirectory = function(directoryPath){
-    if(fs.existsSync(directoryPath)){
+var flushDirectory = function (directoryPath) {
+    if (fs.existsSync(directoryPath)) {
         var files = fs.readdirSync(directoryPath);
-        files.map(function(file){
+        files.map(function (file) {
             file = path.join(directoryPath, file);
             fs.unlinkSync(file);
         });

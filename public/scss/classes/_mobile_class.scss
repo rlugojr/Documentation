@@ -1,0 +1,16 @@
+/* MOBILE VERSION - CLASS */
+@include media($small-screen) {
+  .classBar {
+    display : none;
+  }
+  #resizeBar{
+    display : none;
+  }
+  .classContent {
+    margin : 0;
+    width : 100%;
+    position:inherit;
+    top : 0;
+    bottom: 0;
+  }
+}

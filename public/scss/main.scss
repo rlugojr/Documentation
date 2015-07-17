@@ -18,4 +18,9 @@ $small-screen: new-breakpoint(max-width 960px 6);
 @import "error/error";
 
 @import "common/slideout-menu";
+
+/** MOBILE **/
 @import "index/mobile_index";
+@import "whats-new/mobile_whats-new";
+@import "classes/mobile_class";
+@import "classes/mobile_classes";

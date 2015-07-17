@@ -421,6 +421,8 @@ code {
     background-color: #fc4349;
     border-radius: 3px;
     padding: 5px; }
+    .classContent .classTag:hover {
+      text-decoration: none; }
   .classContent #classMd hr {
     visibility: hidden; }
   .classContent #classMd h2 {
@@ -553,7 +555,11 @@ code {
 /* MOBILE VERSION - WHAT'S NEW */
 @media screen and (max-width: 960px) {
   #whats-new {
-    width: 100%; } }
+    width: 100%;
+    word-wrap: break-word; }
+    #whats-new ul {
+      padding: 0 10px 0 10px;
+      margin: 0; } }
 #wrapper.error {
   background-color: white;
   text-align: center;
@@ -657,6 +663,7 @@ code {
     .slideout-menu .links i {
       color: #f6f6f6; }
 
+/** MOBILE **/
 /* MEDIUM SCREEN*/
 @media screen and (max-width: 1280px) {
   .nav-main .banner .menu {
@@ -715,5 +722,32 @@ code {
       clear: both;
       content: "";
       display: table; } }
+/* MOBILE VERSION - WHAT'S NEW */
+@media screen and (max-width: 960px) {
+  #whats-new {
+    width: 100%;
+    word-wrap: break-word; }
+    #whats-new ul {
+      padding: 0 10px 0 10px;
+      margin: 0; } }
+/* MOBILE VERSION - CLASS */
+@media screen and (max-width: 960px) {
+  .classBar {
+    display: none; }
+
+  #resizeBar {
+    display: none; }
+
+  .classContent {
+    margin: 0;
+    width: 100%;
+    position: inherit;
+    top: 0;
+    bottom: 0; } }
+/* MEDIUM SCREEN*/
+/* SMALL SCREENS VERSION */
+@media screen and (max-width: 960px) {
+  #classes_classesListByTag {
+    width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */

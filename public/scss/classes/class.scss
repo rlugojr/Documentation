@@ -104,6 +104,10 @@ $sidebar_width : 300px;
     background-color: $red;
     border-radius: 3px;
     padding:5px;
+
+    &:hover{
+      text-decoration: none;
+    }
   }
 
   #classMd {

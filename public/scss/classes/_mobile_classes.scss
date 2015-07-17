@@ -1,0 +1,11 @@
+/* MEDIUM SCREEN*/
+@include media($medium-screen) {
+
+}
+
+/* SMALL SCREENS VERSION */
+@include media($small-screen) {
+  #classes_classesListByTag{
+    width:100%;
+  }
+}

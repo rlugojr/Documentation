@@ -1,0 +1,97 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"></head><body><nav id="menu" style="display:none"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><div id="wrapper"><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><h1>How to use Curve3.md</h1><div id="tutorialContent"><p>BabylonJS provides an object to manage some math curves for you : <strong>Curve3</strong>.</p>
+<p>This object allow you to generate 3D curves according to some complex math function. You can then get an array of successive points (<em>Vector3</em>) representing the curve.</p>
+<h2 id="quadratic-bezier-curve">Quadratic Bezier curve</h2>
+<p><a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve#Quadratic_curves">http://en.wikipedia.org/wiki/B%C3%A9zier_curve#Quadratic_curves</a></p>
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/3/3d/B%C3%A9zier_2_big.gif" alt="Wikipedia Quadratic Bezier Curve"></p>
+<pre><code class="lang-javascript">var bezier2 = BABYLON.Curve3.CreateQuadraticBezier(origin, control, destination, nb_of_points);
+</code></pre>
+<ul>
+<li><strong>origin</strong> : <em>Vector3</em> the origin point,</li>
+<li><strong>control</strong> : <em>Vector3</em> the control point,</li>
+<li><strong>destination</strong> : <em>Vector3</em> the destination point,</li>
+<li><strong>nb_of_points</strong> : <em>number</em> the wanted final curve number of points in the array.</li>
+</ul>
+<p>This static method returns an instance of <em>Curve3</em>.<br>Just use the Curve3 <em>getPoints()</em> method to fill your array : <em>getPoints()</em> returns an array of successive <em>Vector3</em>.<br>You can then use it for ribbons, tubes, extrusion paths, etc.<br>The <em>length()</em> method returns the curve length.   </p>
+<pre><code class="lang-javascript">var path = bezier2.getPoints();
+var l = bezier2.length();
+</code></pre>
+<h2 id="cubic-bezier-curve">Cubic Bezier curve</h2>
+<p><a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve#Higher-order_curves">http://en.wikipedia.org/wiki/B%C3%A9zier_curve#Higher-order_curves</a></p>
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/d/db/B%C3%A9zier_3_big.gif" alt="Wikipedia Cubic Bezier Curve"></p>
+<pre><code class="lang-javascript">var bezier3 = BABYLON.Curve3.CreateCubicBezier(origin, control1, control2, destination, nb_of_points)
+</code></pre>
+<ul>
+<li><strong>origin</strong> : <em>Vector3</em> the origin point,</li>
+<li><strong>control1</strong> : <em>Vector3</em> the first control point,</li>
+<li><strong>control2</strong> : <em>Vector3</em> the second control point,</li>
+<li><strong>destination</strong> : <em>Vector3</em> the destination point,</li>
+<li><strong>nb_of_points</strong> : <em>number</em> the wanted final curve number of points in the array.</li>
+</ul>
+<p>This static method returns an instance of <em>Curve3</em>.<br>Just use the Curve3 <em>getPoints()</em> method to fill your array : <em>getPoints()</em> returns an array of successive <em>Vector3</em>.<br>You can then use it for ribbons, tubes, extrusion paths, etc.<br>The <em>length()</em> method returns the curve length.    </p>
+<pre><code class="lang-javascript">var path = bezier3.getPoints();
+var l = bezier3.length();
+</code></pre>
+<p>Playground example : <a href="http://www.babylonjs-playground.com/#1PSZDF#2">http://www.babylonjs-playground.com/#1PSZDF#2</a>
+Read from line 50</p>
+<h2 id="hermite-spline">Hermite spline</h2>
+<p><a href="http://en.wikipedia.org/wiki/Cubic_Hermite_spline">http://en.wikipedia.org/wiki/Cubic_Hermite_spline</a></p>
+<p><img src="http://escience.anu.edu.au/lecture/cg/Spline/Image/HermiteSpec.gif" alt="EScience Hermite"></p>
+<pre><code class="lang-javascript">var hermite = BABYLON.Curve3.CreateHermiteSpline(p1, t1, p2, t2, nbPoints);
+</code></pre>
+<ul>
+<li><strong>p1</strong> : <em>Vector3</em> the origin point,</li>
+<li><strong>t1</strong> : <em>Vector3</em> the origin tangent vector,</li>
+<li><strong>p2</strong> : <em>Vector3</em> the destination point,</li>
+<li><strong>t2</strong> : <em>Vector3</em> the destination tangent vector,</li>
+<li><strong>nbPoints</strong> : <em>number</em> the wanted final curve number of points in the array.</li>
+</ul>
+<p>This static method returns an instance of <em>Curve3</em>.<br>Just use the Curve3 <em>getPoints()</em> method to fill your array : <em>getPoints()</em> returns an array of successive <em>Vector3</em>.<br>You can then use it for ribbons, tubes, extrusion paths, etc.<br>The <em>length()</em> method returns the curve length.   </p>
+<pre><code class="lang-javascript">var path = hermite.getPoints();
+var l = hermite.length();
+</code></pre>
+<h2 id="curve3-object">Curve3 object</h2>
+<p>You can also instantiate your own Curve3 object from a simple array of successive Vector3.<br>Why would you do this ?<br>Because you can then use the <em>continue()</em> method to stick together many curves whatever their initial origin.   </p>
+<p>Let&#39;s imagine you&#39;ve got an array of your own filled Vector3 along a simple sinus curve.  </p>
+<pre><code class="lang-javascript">var mySinus = [];
+for (var i = 0; i &lt; 30; i++) {
+ mySinus.push( new BABYLON.Vector3(i, Math.sin(i / 10), 0) );
+}
+</code></pre>
+<p>You don&#39;t really know where your last Vector3 is set in space but you would like to continue your <em>mySinus</em> curve with the former <em>bezier3</em> curve (although it starts from the system origin) and then the former <em>bezier2</em> to design some extrusion path for instance.<br>So you can create your own <em>Curve3</em> object and then stick it the <em>bezier3</em> and <em>bezier2</em>.  </p>
+<pre><code class="lang-javascript">var mySinusCurve3 = new BABYLON.Curve3(mySinus);
+var myFullCurve = mySinusCurve3.continue(bezier3).continue(bezier2);
+</code></pre>
+<p>The <em><strong>continue()</strong></em> method returns a new <em>Curve3</em> object and lets <em>mySinusCurve3</em>, <em>bezier3</em> and <em>bezier2</em> unchanged.   </p>
+<p>If you then need to draw the curve or use it for ... whatever you want (extrusion path, ribbon path, shape path, path3D, etc), you just get the array of points with the <em><strong>getPoints()</strong></em> method. This method simply returns an array of successive <em>Vector3</em>.</p>
+<pre><code class="lang-javascript">var path = myFullCurve.getPoints();
+var extruded = BABYLON.Mesh.ExtrudeShape(&quot;extrudedShape&quot;, shape, path, 1, 0, scene);
+</code></pre>
+<p>If you need then to know the curve length, just use the <em><strong>length()</strong></em> method.    </p>
+<pre><code class="lang-javascript">var l = myFullCurve.length();
+</code></pre>
+<p>Here is an example where a Hermite Spline is used to close smoothly a concatenation of two Bezier curves :   </p>
+<ul>
+<li>The first and last points of the concatenation are used as last and first point of the Hermite spline.  </li>
+<li>The first and last segments of the concatenation are used as last and first tangent vectors of the Hermite. Since these segment are quite small, they are scaled according to the concatenation <em>length</em> so the longer the concatenation, the more curved the spline.   </li>
+</ul>
+<pre><code class="lang-javascript">// two concatened cubic Bezier
+var cubicA = BABYLON.Curve3.CreateCubicBezier(vA0, vA1, vA2, vA3, 50);
+var cubicB = BABYLON.Curve3.CreateCubicBezier(vB0, vB1, vB2, vB3, 50);
+var continued = cubicA.continue(cubicB);
+
+// initial Hermite values from continued first and last segments
+var t = continued.length() / 2;                             // tangent scale factor
+var points = continued.getPoints();
+var p1 = points[points.length - 1];                         // last continued point = first hermite point
+var t1 = (p1.subtract(points[points.length - 2])).scale(t); // last segment scaled = hermite tangent t1
+var p2 = points[0];                                         // first continued point = last hermite point
+var t2 = (points[1].subtract(p2)).scale(t);                 // first segment scaled = hermite tangent t2
+
+var hermite = BABYLON.Curve3.CreateHermiteSpline(p1, t1, p2, t2, 50);
+continued = continued.continue(hermite);
+
+// finally drawing a smooth closed curve
+var closedCurve = BABYLON.Mesh.CreateLines(&quot;closed&quot;, continued.getPoints(), scene);
+</code></pre>
+<p>example : <a href="http://www.babylonjs-playground.com/#2GCEVH">http://www.babylonjs-playground.com/#2GCEVH</a><br>The orange and yellow curves are Bezier curves.<br>In light blue, these two curves are continued each other and a hermite curve is also added in continuation to close the path.   </p>
+</div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

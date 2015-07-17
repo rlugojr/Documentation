@@ -49,10 +49,7 @@ var cleanMDDir = function (data, callback) {
     // read directories content
     directories.forEach(function (directory) {
         cleanDirectory(path.join(__DIRNAME__, directory));
-    });
 
-    directories.forEach(function (directory) {
-        console.log(directory);
         fs.rmdir(path.join(__DIRNAME__, directory), function (err) {
             if (err) console.log(err);
             console.log("Directory " + path.join(__DIRNAME__, directory) + " removed.");
@@ -74,9 +71,7 @@ var cleanDirectory = function (directory_path) {
 
     // remove every files found in the directory
     files.forEach(function (file) {
-        fs.unlink(path.join(directory_path, file), function () {
-            console.log("deleted: " + path.join(directory_path, file));
-        });
+        fs.unlinkSync(path.join(directory_path, file));
     });
 
     //callback(directory_path);

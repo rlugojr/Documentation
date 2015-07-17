@@ -58,8 +58,9 @@ var buildMDpage = function (page) {
         '---\n' +
         page.content;
 
-    var replaceChar = "_";
-    var regEx = new RegExp('[,/\:*?""<>|]', 'g');
+    var replaceChar = "";
+    var regEx = /\<\w*\>/g;
+    //var regEx = new RegExp('[,/\:*?""<>|]', 'g');
 
     var filename = path.join(__DIRNAME__, page.version, page.title.replace(regEx, replaceChar)) + '.md';
 
@@ -68,6 +69,6 @@ var buildMDpage = function (page) {
 
 module.exports.buildMDDir = buildMDDir;
 
-module.exports.dirExists = dirExists;
+module.exports.exists = dirExists;
 
 module.exports.buildMDpage = buildMDpage;

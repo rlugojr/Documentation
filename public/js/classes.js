@@ -36,6 +36,17 @@
 
                 localStorage.orderClassesby = 'tags';
             }
+
+            // if a tag has been seleted, open the correct list
+            if(window.localStorage.selectedTag){
+                $.each($('.categoryTitle'), function(i, categoryTitle){
+                    if($(categoryTitle).parent('.category').attr('id') == window.localStorage.selectedTag){
+                        if($(categoryTitle).next().is(':hidden')){
+                            $(categoryTitle).next().toggle(150);
+                        }
+                    }
+                });
+            }
         }
 
         orderByAlphaButton.click(showClassesByAlpha);
@@ -52,7 +63,5 @@
                 showClassesByAlpha();
             }
         }
-
     });
-
 })();

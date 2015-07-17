@@ -13,159 +13,67 @@ var fs      = require('fs'),
     path    = require('path'),
     marked  = require('meta-marked'),
     async   = require('async'),
-    r       = require('request');
+    helper  = require('./helpers/forwarder'),
+    readdirp = require('readdirp');
 
 /*************************************************************************
  *                               VARIABLES                               *
  ************************************************************************/
 
-var __DIRNAME__         = 'content/classes';
-var __FILENAME__        = 'data/forward.json';
-
-// API of the previous documentation server
-var __URL_LOAD_PAGES__  = 'http://babylondoc-val.azurewebsites.net/private/api/load_pages.php';
-var __URL_LOAD_PAGE__   = 'http://babylondoc.azurewebsites.net/private/api/load_page.php';
+// FIXME
+var config      = {
+        links      : [
+            {type: 'classes', link: 'load_pages.php?index=3'},
+            {type: 'tutorials', link: 'load_pages.php?index=1'},
+            {type: 'exporters', link: 'load_pages.php?index=0'},
+            {type: 'extensions', link: 'load_pages.php?index=4'}
+        ]
+    },
+    __DIRNAME__ = './content/';
 
 /*************************************************************************
  *                                 SCRIPT                                *
  ************************************************************************/
 
-async.waterfall(
-    [
-        // i. Write the file/flush its content if already exists
-        function(callback){
-            fs.writeFile(__FILENAME__, '', function(err){
-                if (err) throw err;
-                callback(null);
+var metaList = {};
+
+async.each(config.links, function(link, cb){
+
+    console.log('beginning ' + link.type);
+
+    var pathToFolder = path.join(__DIRNAME__, link.type);
+    var options = {root: pathToFolder, fileFilter: '*.md'};
+
+    readdirp(options, function(err, data){
+        if(err) throw err;
+
+        async.each(data.files, function(file, callback){
+            var pathToFile = path.join(pathToFolder, file.path);
+
+            helper.extractMeta(pathToFile, function(meta){
+                if(link.type == "classes"){
+                    // type: class
+                    metaList[meta.ID_PAGE.toString()] = { "type": link.type, "name": meta.PG_TITLE, "version": meta.PG_VERSION + ''};
+                    // need to suffix version number with ".0" if it is a round number
+                    if(metaList[meta.ID_PAGE.toString()].version.lastIndexOf('.') == -1){
+                        metaList[meta.ID_PAGE.toString()].version += '.0';
+                    }
+                } else {
+                    // type: exporters || extensions || tutorials
+                    metaList[meta.ID_PAGE.toString()] = { "type": link.type, "name": meta.PG_TITLE };
+                }
+
+                callback();
             });
-        },
-
-        // ii. Get the list of versions folders' path
-        function(callback) {
-            fs.readdir(__DIRNAME__, function (err, versions) {
-                if (err) throw err;
-
-                var versionsList = [];
-
-                versions.map(function(version){
-                    this.push(path.join(__DIRNAME__, version));
-                }, versionsList);
-
-
-                /**
-                 * versionsList = [
-                 *      content/classes/v1.14,
-                 *      content/classes/v2.0,
-                 *      content/classes/v2.1
-                 * ]
-                 */
-                callback(null, versionsList);
-            });
-        },
-
-        // iii. Get the list of md files
-        function(versionsList, callback) {
-            async.map(versionsList, fs.readdir, function(err, fileNameLists){
-                /**
-                 * results =
-                 * [
-                 *      [v1.14 .md files list],
-                 *      [v2.0 .md files list],
-                 *      [v2.1 .md files list]
-                 * ]
-                 */
-
-                callback(null, versionsList, fileNameLists);
-            });
-        },
-
-        // iv. Retrieve the complete paths to the files
-        function(versionsList, fileNameLists, callback){
-
-            var completedPathFileNameList = [];
-
-            for(var i = 0; i < fileNameLists.length; i++){
-                fileNameLists[i].map(function(fileName){
-                    this.push(path.join(versionsList[i], fileName));
-                }, completedPathFileNameList);
-            }
-
-            /**
-             * completedPathFileNameList = [
-             *      content/classes/1.14/AbstractionMesh.md,
-             *      ...
-             *      content/classes/2.0/AbstractionMesh.md,
-             *      ...
-             *      content/classes/2.1/AbstractionMesh.md,
-             *      ...
-             * ]
-             */
-
-            callback(null, completedPathFileNameList);
-        },
-
-        // v. Retrieve metadata from each file
-        function(completedPathFileNameList, callback){
-
-            var metadata = [];
-
-            completedPathFileNameList.map(function(filename){
-                var fileContent = fs.readFileSync(filename, {encoding : 'utf-8', flag : 'r'});
-                this.push(marked(fileContent).meta);
-            }, metadata);
-
-            callback(null, metadata);
-        }
-    ],
-
-    // vi. Final callback. Process the metadata, write the content of the file
-    function(error, metadata){
-
-        // beginning of the file
-        fs.appendFileSync(__FILENAME__, '{\n');
-
-        metadata.forEach(function(data, index){
-
-            // We have to check if the BJS version number is a round one;
-            // if so, we have to add ".0" at the end of it.
-            // First, convert the integer into a string
-            data.PG_VERSION = data.PG_VERSION.toString();
-
-            // then, check & concatenate, if necessary
-            if(data.PG_VERSION.lastIndexOf('.') == -1){
-                data.PG_VERSION = data.PG_VERSION.concat('.0');
-            }
-
-            // replace unwanted character in the name of the class ("<" & ">")
-            data.PG_TITLE = data.PG_TITLE.replace("<", '_').replace(">", '_');
-
-            fs.appendFileSync(__FILENAME__,
-                '\"' + data.ID_PAGE + '\":{' +
-                    '\"type\":\"class\",' +
-                    '\"name\":' + JSON.stringify(data.PG_TITLE) + ',' +
-                    '\"version\":' + JSON.stringify(data.PG_VERSION) +
-                '}'
-            );
-
-            // check if end of file; if so, don't write a comma at the end of the last line
-            if(index < (metadata.length - 1)){
-                fs.appendFileSync(__FILENAME__, ', \n');
-            } else {
-                fs.appendFileSync(__FILENAME__, '\n');
-            }
+        }, function(){
+            cb();
+            console.log('ending ' + link.type);
         });
+    });
 
-        // end of the file
-        fs.appendFileSync(__FILENAME__, '}');
 
-        // finished!
-        console.log('DONE. \nYou can check the JSON file here: ' + __FILENAME__);
-    }
-);
 
-// 0 -> EXPORTERS
-// 1 -> GETTING STARTED -> TUTORIALS ?
-// 4 -> EXTENSIONS
-//r(__URL_LOAD_PAGES__ + '?index=0', function(error, response, body){
-//
-//});
+}, function(err){
+    if(err) throw err;
+    helper.createForward(err, metaList);
+});

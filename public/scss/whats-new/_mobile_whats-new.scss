@@ -2,5 +2,11 @@
 @include media($small-screen) {
   #whats-new{
     width: 100%;
+    word-wrap : break-word;
+
+    ul {
+      padding : 0 10px 0 10px;
+      margin:0;
+    }
   }
 }

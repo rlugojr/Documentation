@@ -1,0 +1,80 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/main.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"></head><body><nav id="menu" style="display:none"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><div id="wrapper"><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><h1>How Rotations and Translations Work.md</h1><div id="tutorialContent"><p>Babylon.js provides many ways to locate and rotate your meshes.</p>
+<p>The basic way to define the position of a mesh is the following:</p>
+<pre><code class="lang-javascript">mesh.position = new BABYLON.Vector3(x, y, z);
+</code></pre>
+<p>The translation is applied <strong>AFTER</strong> the rotation which can be set with euler angles or quaternions:</p>
+<pre><code class="lang-javascript">mesh.rotation = new BABYLON.Vector3(x, y, z); // Euler
+mesh.rotationQuaternion = new BABYLON.Quaternion(x, y, z, w); // Quaternion
+</code></pre>
+<p>The rotation is computed in the object local space. <code>rotation</code> will be used if <code>rotationQuaternion</code> property is null (This is the default behavior). <code>rotationQuaternion</code> is used if both are set.</p>
+<p><strong>You MUST use rotationQuaternion when creating physics objects.</strong></p>
+<p>If you want to apply a translation of the local space you have to use the following code:</p>
+<pre><code class="lang-javascript">mesh.setPositionWithLocalVector(new BABYLON.Vector3(x, y, z));
+</code></pre>
+<p>You can also get the current position of the object but in local space and not in parent space with the following code:</p>
+<pre><code class="lang-javascript">var localPosition = mesh.getPositionExpressedInLocalSpace();
+</code></pre>
+<p>If you want to add an extra translation expressed in local space you have to use the following code:</p>
+<pre><code class="lang-javascript">mesh.locallyTranslate(new BABYLON.Vector3(x, y, z));
+</code></pre>
+<p>Each time you call it with the same vector, it will move your mesh whereas <code>setPositionWithLocalVector</code> will move it only the first time. <a href="http://jsfiddle.net/gwenaelhagenmuller/35uFf/12/">http://jsfiddle.net/gwenaelhagenmuller/35uFf/12/</a></p>
+<p>For your convenience, we also added <code>mesh.rotate</code> and <code>mesh.translate</code> to add a rotation or a translation to a mesh (both in local and world space):</p>
+<pre><code class="lang-javascript">mesh.rotate(BABYLON.Axis.X, 1.0, BABYLON.Space.LOCAL);
+mesh.translate(BABYLON.Axis.X, 1.0, BABYLON.Space.WORLD);
+</code></pre>
+<p>Please note that <code>mesh.rotate</code> generates a quaternion and then uses <code>mesh.rotationQuaternion</code>.</p>
+<h1 id="generating-a-rotation-from-a-target-system">Generating a rotation from a target system</h1>
+<p>Sometimes you may know the final orientation you want to give to a mesh in terms of alignment with distant axis, but you don&#39;t what rotation to apply to it to achieve this wanted orientation. 
+There is a way to compute an Euler rotation from a set of axis : </p>
+<pre><code class="lang-javascript">var rot = BABYLON.Vector.RotationFromAxis(axis1, axis2, axis3);
+mesh.rotation = rot;
+</code></pre>
+<p>where <em>axis1</em>, <em>axis2</em> and <em>axis3</em> are three left-handed oriented orthogonal vectors. 
+With this code, the mesh will be aligned thus : </p>
+<ul>
+<li><em>axis1</em> will become x axis in its local system</li>
+<li><em>axis2</em> will become y axis in its local system</li>
+<li><em>axis3</em> will become z axis in its local system</li>
+</ul>
+<p>example : <a href="http://www.babylonjs-playground.com/#VYM1E#5">http://www.babylonjs-playground.com/#VYM1E#5</a> 
+The textured plane mesh is currently aligned with the axis between spheres (axis1) and &quot;faces&quot; the camera : axis2 = camera.position </p>
+<h1 id="baking-transform">Baking Transform</h1>
+<p>In certain situations you might be interested in applying a transform (position, rotation, scale) directly to the mesh vertices, instead of saving it as a property of the mesh. This is called baking, and can be useful in the following situations:</p>
+<ul>
+<li>building a set of static geometry</li>
+<li>randomizing a series of mesh copies</li>
+<li>mirroring a mesh along an axis</li>
+<li>etc.</li>
+</ul>
+<p>Two methods can be used for this process:</p>
+<p><code>bakeTransformIntoVertices(transform: Matrix)</code>: this will bake the provided matrix directly into the mesh vertices. For example:</p>
+<pre><code>// this will permanently mirror the mesh along the Y axis, while leaving the transform properties untouched
+var matrix = BABYLON.Matrix.Scaling(1, -1, 1);
+mesh.bakeTransformIntoVertices(matrix);
+</code></pre><p><code>bakeCurrentTransformIntoVertices()</code>: this will bake the current transform properties of the mesh into the vertices, and clear those properties. This includes <em>rotation</em>, <em>translation</em> and <em>scaling</em>.</p>
+<p>Note: scaling a mesh will often give unrealistic results for lighting, since the normals will simply be scaled along and not properly recomputed. This is illustrated in the following picture: </p>
+<p><img src="http://i.imgur.com/18wDAH7.png" alt="Normals illustration"> </p>
+<p><em>In the above picture, you can see an untransformed mesh on the left, the same mesh scaled along the X axis in the middle and on the right, the mesh with its normals correctly recomputed.</em></p>
+<p>You can do a recomputation of your normals like so:</p>
+<pre><code>var indices = mesh.getIndices();
+var normals = mesh.getVerticesData(VertexBuffer.NormalKind);
+BABYLON.VertexData.ComputeNormals(positions, indices, normals);
+mesh.updateVerticesData(VertexBuffer.NormalKind, normals, false, false);
+</code></pre><p>Please note that recomputing the normals of your mesh may not be an ideal solution, as the results may be wrong in some parts of the mesh (e.g. seams on a sphere).</p>
+<h1 id="changing-the-frame-of-reference">Changing the Frame of Reference</h1>
+<p>Every mathematical vector and transformation is expressed in a certain <em>frame of reference</em>. This is for example handled by the <code>BABYLON.Space.LOCAL</code> and <code>BABYLON.Space.WORLD</code> constants used in the <code>rotate()</code> and <code>translate()</code> functions cited above, or <code>locallyTranslate()</code> and other similar functions.</p>
+<p>A <em>frame of reference</em> is in fact a regular transformation matrix, i.e. an association of rotation, translation and scaling operations.</p>
+<p>You may need to express a certain vector in a precise frame of reference, be it the one of a mesh or an arbitrary one. In this case, the function <code>BABYLON.Vector3.TransformCoordinates()</code> will come in handy. </p>
+<p>Here is how you would compute the <em>up</em> vector (Y+) inside the frame of reference of a mesh:</p>
+<pre><code>mesh.computeWorldMatrix();
+var matrix = mesh.getWorldMatrix();
+var up_local = new BABYLON.Vector3(0,1,0);
+var up_global = BABYLON.Vector3.TransformCoordinates(up_local, matrix);
+</code></pre><p>Potential uses of <code>BABYLON.Vector3.TransformCoordinates()</code> may be:</p>
+<ul>
+<li>computing direction and axis vectors for <code>applyImpulse()</code> and other physics-related functions</li>
+<li>setting the position and speed of a mesh relative to another, without the use of parenting
+(e.g. a spaceship shooting missiles)</li>
+<li>applying a projection matrix to a world position vector to end up with a screen-space position vector</li>
+</ul>
+</div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

@@ -2,19 +2,32 @@
 // ************************************************* REQUIRE *************************************************
 
 var express = require('express'),
-  router = express.Router();
-
-var logger = require('../../../config/logger');
+    router = express.Router(),
+    path = require('path'),
+    appRoot = require('app-root-path').path,
+    logger = require(path.join(appRoot, 'config/logger'));
 
 // ************************************************* CLASSES *************************************************
 
 
 /**
- * Show the Classes list. No version specified so get the last version and redirect to it
+ * Show the exporters list
  */
 router.get('/', function(req, res) {
-  // render the page
-  res.render('exporters/exporters');
+    var options = {
+        root: path.join(appRoot, 'public/html')
+    };
+
+    res.status(200);
+    res.set({
+        'Content-type':'text/html',
+        'Cache-Control': 'no-cache'
+    });
+    res.sendFile('./exporters.html', options);
+});
+
+router.get('/:exporter', function(req, res){
+
 });
 
 module.exports = router;

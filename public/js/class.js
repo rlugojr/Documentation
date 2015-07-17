@@ -1,28 +1,38 @@
 (function() {
+
+    // For mobile style
+    var onResize = function() {
+        var windowWidth = $(window).width();
+        if (windowWidth <= 960) {
+            $(".classContent").appendTo($("#wrapper"));
+        } else {
+            $(".classContent").appendTo($("body"));
+        }
+    };
+    $(window).resize(onResize);
+
+    // The side bar min size
     var MIN = 300;
-    var MIN_PX = MIN+"px";
 
+    // The side bar max size
     var MAX = 900;
-    var MAX_PX = MAX+"px";
 
+    // Stop the event propagation
     var pauseEvent = function(e){
         if(e.stopPropagation) e.stopPropagation();
         if(e.preventDefault) e.preventDefault();
-        //e.cancelBubble=true;
-        //e.returnValue=false;
         return false;
     };
 
     $(document).ready(function() {
+        // For mobile style
+        onResize();
+
         // Create scrollbars
         $('.classBar').perfectScrollbar();
         $('.classContent').perfectScrollbar();
 
         // get DOM
-        //var rs = $("#resizeBar");
-        //var cb = $(".classBar");
-        //var cc = $(".classContent");
-
         var rs = $("#resizeBar").get(0);
         var cb = $(".classBar").get(0);
         var cc = $(".classContent").get(0);
@@ -65,6 +75,7 @@
             isDragging = false;
         });
 
+        // handles the permalinks
         $.each($("#classMd h3"), function(i, title){
             addPermalink(title);
         });
@@ -72,7 +83,8 @@
             addPermalink(title);
         });
 
-        // check if an anchor is specified in the page url
+        // check if an anchor is specified in the page url, goes to
+        // specified anchor if true
         if(window.location.toString().lastIndexOf('#') != -1){
             // gets the anchor name
             var anchorName = window.location.toString().split('#');
@@ -86,37 +98,58 @@
                 title.scrollIntoView(true);
             }
         }
-    });
+
+        /* when user clicks on a class name in the class list by tag, redirect
+         * to the "classes" page, with the correct class list by tag open */
+        $.each($('.categoryList'), function(i, classList){
+            $(classList).children().on('click', function(evt){
+                // to do this, save the selected tag in window.localStorage
+                window.localStorage.selectedTag = $(classList).parent('div.category').attr('id');
+            });
+        });
+
+        /* when user clicks on the name of a tag, redirect to the "classes" page
+         * with the correct class list by tag open */
+        $.each($('.classTag'), function(i, tag){
+            $(tag).on('click', function(evt){
+                window.localStorage.selectedTag = $(tag).attr('id');
+            });
+        });
+
+     });
+
+    /**
+     * Prepends every <h2> and <h3> with a little icon which highlights the selected line
+     * and changes the current page url when clicked (give the possibility to the user to
+     * copy-paste links directly to a method or attribute of a class, for example).
+     * @param title
+     */
+    var addPermalink = function(title){
+        var titleHref = $(title).attr('id');
+        $(title).prepend('<a href="#' + titleHref + '" class="invisible permalink"><i class="fa fa-link"></i></a>');
+
+        // show the anchors only when you pass the mouse over the name of the linked method/attribute
+        $(title).on('mouseover', function(evt){
+            if($(title).children("a:first").hasClass('permalink')){
+                $(title).children("a:first").removeClass('invisible');
+            }
+        }).on('mouseout', function(evt){
+            if($(title).children("a:first").hasClass('permalink')){
+                $(title).children("a:first").addClass('invisible');
+            }
+        });
+
+        $(title).children("a:first").on('click', function(evt){
+            evt.preventDefault();
+            $('.highlighted').removeClass('highlighted');
+            $(title).addClass('highlighted');
+
+            var id = $(title).attr('id');
+            var currentPage = window.location.toString().split('#', [0]);
+            window.history.pushState({id: id}, '', currentPage + '#' + id);
+        });
+    };
+
+
 })();
 
-/**
- * Prepends every <h2> and <h3> with a little icon which highlights the selected line
- * and changes the current page url when clicked (give the possibility to the user to
- * copy-paste links directly to a method or attribute of a class, for example).
- * @param title
- */
-var addPermalink = function(title){
-    var titleHref = $(title).attr('id');
-    $(title).prepend('<a href="#' + titleHref + '" class="invisible permalink"><i class="fa fa-link"></i></a>');
-
-    // show the anchors only when you pass the mouse over the name of the linked method/attribute
-    $(title).on('mouseover', function(evt){
-        if($(title).children("a:first").hasClass('permalink')){
-            $(title).children("a:first").removeClass('invisible');
-        }
-    }).on('mouseout', function(evt){
-        if($(title).children("a:first").hasClass('permalink')){
-            $(title).children("a:first").addClass('invisible');
-        }
-    });
-
-    $(title).children("a:first").on('click', function(evt){
-        evt.preventDefault();
-        $('.highlighted').removeClass('highlighted');
-        $(title).addClass('highlighted');
-
-        var id = $(title).attr('id');
-        var currentPage = window.location.toString().split('#', [0]);
-        window.history.pushState({id: id}, '', currentPage + '#' + id);
-    });
-};

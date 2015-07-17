@@ -25,27 +25,34 @@ router.get('/:pageID', function(req, res){
 
     fs.readFile(__FORWARD_FILE__, function(err, data){
         if (err) throw err;
-        data = JSON.parse(data);
+        parsedData = JSON.parse(data);
 
         // JSON object
-        forwardData = data[pageID];
-
-        console.log(forwardData.version);
+        forwardData = parsedData[pageID];
 
         switch(forwardData.type){
             case 'tutorials':
-
+                res.writeHead(301, {
+                    Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/tutorials/' + forwardData.name
+                });
+                res.end();
                 break;
 
             case 'exporters':
-
+                res.writeHead(301, {
+                    Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/exporters/' + forwardData.name
+                });
+                res.end();
                 break;
 
             case 'extensions':
-
+                res.writeHead(301, {
+                    Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/extensions/' + forwardData.name
+                });
+                res.end();
                 break;
 
-            case 'class':
+            case 'classes':
                 res.writeHead(301, {
                     Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/classes/' + forwardData.version + '/' + forwardData.name
                 });

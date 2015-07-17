@@ -24,15 +24,15 @@ include ../includes/header
 
     //List the classes categories
     #classes_classesListByTag.hidden
-        each bclasses, categorie in classesByTags
-            div.category
+        each bClasses, category in classesByTags
+            div(id=category).category
                 div.categoryTitle
-                    h3= categorie
+                    h3= category
                 div.categoryList
                     //List the classes of a category
-                    each bclass in bclasses
+                    each bClass in bClasses
                         li
-                            a(href='./'+currentVersion+'/'+bclass)= bclass
+                            a(href='./'+currentVersion+'/'+bClass)= bClass
 
 include ../includes/footer
 

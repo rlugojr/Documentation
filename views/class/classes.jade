@@ -1,27 +1,21 @@
 include ../includes/header
+include ../includes/banner
 #wrapper
-    include ../includes/banner
-
     .whats-new-banner
         h1= 'Classes'
-
     .horizontal-separator
-
     #versionsList
         - for version in versions
             if version == currentVersion
                 a(href='./'+version)#version.selectedVersion= 'v'+version
             else
                 a(href='./'+version)#version= 'v'+version
-
     .sorts
         span#orderByTags.order Tags
         span#orderByAlpha.order.selectedOrder A - Z
-
     #classes_classesListByAlpha
         - for className in classesByAlpha
             a(href!='./'+currentVersion+'/'+className)= className.replace('_T_','<T>')
-
     //List the classes categories
     #classes_classesListByTag.hidden
         each bClasses, category in classesByTags
@@ -33,7 +27,6 @@ include ../includes/header
                     each bClass in bClasses
                         li
                             a(href='./'+currentVersion+'/'+bClass)= bClass
-
 include ../includes/footer
 
 script(src="/js/classes.js")

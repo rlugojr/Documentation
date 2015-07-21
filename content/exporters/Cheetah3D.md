@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 24441
 PG_TITLE: Cheetah3D
+TAGS:
+    - Cheetah3D
 ---
 ## Cheetah2Babylon
 

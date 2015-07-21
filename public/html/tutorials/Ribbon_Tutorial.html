@@ -1,0 +1,200 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>Ribbon Tutorial</h1><br><div id="staticContent"><p>Here you&#39;ll find almost everything to understand how the Ribbon object works and how to play with it. </p>
+<h2 id="under-the-hood">Under the hood</h2>
+<p><em>series of paths</em>
+<em>paths with different lengths</em></p>
+<p>It&#39;s not mandatory that all paths have the same length.<br>In this example, <em>path2</em> and <em>path3</em> are longer than <em>path1</em> and <em>path4</em> : <a href="http://www.babylonjs-playground.com/#88AZQ">http://www.babylonjs-playground.com/#88AZQ</a><br>As you can see, the final ribbon adjust to different lengths. The rule is they all start from first path points and each intermediate ribbon then stops at first of its both constituting paths end.<br>There is also no incidence on light reflection for ribbon with different length paths : <a href="http://www.babylonjs-playground.com/#88AZQ#1">http://www.babylonjs-playground.com/#88AZQ#1</a><br>Therefore you <strong>can&#39;t add a texture</strong> for now to a ribbon constructed with different length paths.<br>This is due to the fact that the nested ribbon texturing algorithm only knows how to deal with a unique length for all paths. Indeed, as a ribbon is a parametric shape, so unpredictable, it&#39;s assumed that we could unwrap a volumic ribbon (so each one of its paths) onto a full rectangular image and this assumption keeps consistency only with the same length for all paths.  </p>
+<p>So it&#39;s not mandatory that all the ribbon paths have the same length, but it is hardly recommended.<br>The best way to emulate different lengths for some parts of your mesh is then to simply use many ribbons.  </p>
+<h2 id="closed-shapes-normals-or-textures-">Closed shapes : normals or textures ?</h2>
+<p>The ribbon mesh provides two ways to automatically close an unclosed shape.</p>
+<ul>
+<li><em>closeArray</em> parameter : this will add an extra unit ribbon between the last path and the first path of your <em>pathArray</em>.  </li>
+<li><em>closePath</em> parameter : this will join the last and first points of each <em>path</em> in your <em>pathArray</em>.  </li>
+</ul>
+<p>Here&#39;s an unclosed ribbon : <a href="http://www.babylonjs-playground.com/#3XMWZ#1">http://www.babylonjs-playground.com/#3XMWZ#1</a></p>
+<pre><code class="lang-javascript"><span class="hljs-variable"><span class="hljs-keyword">var</span> ribbon</span> = BABYLON.Mesh.CreateRibbon(<span class="hljs-string">"ribbon"</span>, paths, <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">0</span>, scene, <span class="hljs-literal">false</span>, BABYLON.Mesh.BACKSIDE);
+</code></pre>
+<p>Don&#39;t mind about how it is mathematically built. This is not the topic.  </p>
+<p>The same closed ribbon with <em>closeArray</em> set to <em>true</em> : <a href="http://www.babylonjs-playground.com/#3XMWZ#2">http://www.babylonjs-playground.com/#3XMWZ#2</a></p>
+<pre><code class="lang-javascript"><span class="hljs-variable"><span class="hljs-keyword">var</span> ribbon</span> = BABYLON.Mesh.CreateRibbon(<span class="hljs-string">"ribbon"</span>, paths, <span class="hljs-literal">true</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">0</span>, scene, <span class="hljs-literal">false</span>, BABYLON.Mesh.BACKSIDE);
+</code></pre>
+<p>As you can see, when rotating the camera, there is no edge on the ribbon surface. The light reflects continuously.  </p>
+<p>If we now apply a texture to this automatically closed ribbon : <a href="http://www.babylonjs-playground.com/#3XMWZ#3">http://www.babylonjs-playground.com/#3XMWZ#3</a><br>You can notice that the texture isn&#39;t stretched on the surface added by the automatic closing.  </p>
+<p>The reason of this behavior is that, with ribbon <em>closeXXX</em> parameters, priority is given on normals (the tools that compute light reflection) over textures.  </p>
+<p>If you don&#39;t care about continuous light reflection but you do want your texture to be stretched along the whole surface, you just have to forget automatic closing (<em>closeArray</em> then set to <em>false</em>) and close the ribbon by yourself.<br>A simple way is just to re-push the first <em>path</em> at the end of the <em>pathArray</em></p>
+<pre><code class="lang-javascript">paths.push(paths[<span class="hljs-number">0</span>]);
+<span class="hljs-variable"><span class="hljs-keyword">var</span> ribbon</span> = BABYLON.Mesh.CreateRibbon(<span class="hljs-string">"ribbon"</span>, paths, <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">0</span>, scene, <span class="hljs-literal">false</span>, BABYLON.Mesh.BACKSIDE);
+</code></pre>
+<p>Example : <a href="http://www.babylonjs-playground.com/#3XMWZ#4">http://www.babylonjs-playground.com/#3XMWZ#4</a>  </p>
+<p>Obviously, the same rules and workarounds apply to the <em>closePath</em> parameter.<br>automatically <em>path</em> closed : <a href="http://www.babylonjs-playground.com/#3XMWZ#5">http://www.babylonjs-playground.com/#3XMWZ#5</a><br>then textured : <a href="http://www.babylonjs-playground.com/#3XMWZ#6">http://www.babylonjs-playground.com/#3XMWZ#6</a>  </p>
+<h2 id="maths-computed-paths">Maths computed paths</h2>
+<p>The Ribbon is very adapted to elaborated maths computed meshes.<br>You can easily start from an equation to get a full volumic complex shape.<br>There are many ways to do it.  </p>
+<p>If you don&#39;t feel at ease with maths, here is a way to start :   </p>
+<h3 id="first-let-s-have-a-small-recall-">First, let&#39;s have a small recall.</h3>
+<p>We just set points in space. These points have got each a set of three coordinates : x, y and z.<br>We call here these points <em>Vector3</em>.  </p>
+<p>When we want to design a curve or a path in space, we need to get a collection of successive <em>Vector3</em>.<br>We can&#39;t have an infinity of points.<br>So we define a path with a certain number of <em>Vector3</em>. The more <em>Vector3</em>, the more smooth the curve and the more computations too.   </p>
+<p>So when you want your path to follow a mathematical curve, you need to compute each path <em>Vector3</em> coordinates.<br>You could choose a known math curve in wikipedia or dedicated sites (<a href="http://en.wikipedia.org/wiki/List_of_curves">http://en.wikipedia.org/wiki/List_of_curves</a> , <a href="http://www.mathcurve.com/courbes2d/courbes2d.shtml">http://www.mathcurve.com/courbes2d/courbes2d.shtml</a> , <a href="http://www.uiowa.edu/~examserv/mathmatters/tutorial_quiz/geometry/commoncurves.html">http://www.uiowa.edu/~examserv/mathmatters/tutorial_quiz/geometry/commoncurves.html</a>, etc) or, when you feel more comfortable, create you own.  </p>
+<p>As you can see, curve equations are often like this : <em>f(x, y) = 0</em> or like this : <em>y = f(x)</em>.<br>This means <em>y</em> is expressed in function of <em>x</em>.<br>This kind of equation is called a <em>cartesian equation</em>. It is probably the most used among mathematicians, but it won&#39;t help us a lot because we need to compute <em>x</em> and <em>y</em> (and <em>z</em>) simultaneously to set each <em>Vector3</em>.<br>So we will prefer the <em>parametric equations</em>.<br>In a <em>parametric equation</em> each different coordinate is defined in function of a parameter <em>k</em> :<br>  <em>x = fct1(k)</em><br>  <em>y = fct2(k)</em><br>  <em>z = fct3(k)</em>   </p>
+<p>So if you are given a <em>cartesian equation</em>, it is quite almost possible to translate it in a <em>parametric equation</em>.<br>example with a parabola : y =  x²<br><em>the cartesian equation y = x * x</em> will give the <em>parametric equation :</em><br>  <em>x = k</em><br>  <em>y = k * k</em><br>You then give <em>k</em> values from -20 to 20 for example and you  get your 40 successive <em>Vector3</em> on the parabola. Easy, isn&#39;t it ?<br>You now know the way to fill a path with successive <em>Vector3</em> along a math curve.  </p>
+<h3 id="back-to-the-ribbon">Back to the Ribbon</h3>
+<p>Well, we just learnt how to fill a path but a Ribbon needs many paths (okay, we can still construct a ribbon with a single path too, but it&#39;s more complex), so how do we add different paths as there is no real interest to add many times the same path ?<br>It&#39;s quite easy once you&#39;ve got your parametric equation.  </p>
+<p>Let&#39;s get into javascript now.<br>Your former parametric equation could be this way :   </p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> path = [];
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> k = -<span class="hljs-number">20</span>; k &lt;= <span class="hljs-number">20</span>; k++) {
+  <span class="hljs-keyword">var</span> x = k;
+  <span class="hljs-keyword">var</span> y = k * k;
+  <span class="hljs-keyword">var</span> z = <span class="hljs-number">0</span>;
+  path.push(<span class="hljs-keyword">new</span> BABYLON.Vector3(x, y, z));
+}
+</code></pre>
+<p>Right ?<br><a href="http://www.babylonjs-playground.com/#1HSC2O">http://www.babylonjs-playground.com/#1HSC2O</a>   </p>
+<p>Let&#39;s now imagine, you create the same path array 10 times on the z-axis with <em>z = t</em> :   </p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> paths = [];
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> t = <span class="hljs-number">0</span>; t &lt; <span class="hljs-number">10</span>; t++) {
+  <span class="hljs-keyword">var</span> path = [];
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> k = -<span class="hljs-number">20</span>; k &lt;= <span class="hljs-number">20</span>; k++) {
+    <span class="hljs-keyword">var</span> x = k;
+    <span class="hljs-keyword">var</span> y = k * k;
+    <span class="hljs-keyword">var</span> z = t;
+    path.push(<span class="hljs-keyword">new</span> BABYLON.Vector3(x, y, z));
+  }
+  paths.push(path);
+}
+</code></pre>
+<p>What do we get now ?<br><a href="http://www.babylonjs-playground.com/#1HSC2O#1">http://www.babylonjs-playground.com/#1HSC2O#1</a><br>An array <em>paths</em> filled with 10 similar <em>paths</em>.<br>Just what is needed to create a ribbon : <a href="http://www.babylonjs-playground.com/#1HSC2O#2">http://www.babylonjs-playground.com/#1HSC2O#2</a><br>If you now change slightly each path equation so they aren&#39;t all similar, say, by dividing <em>y</em> by <em>t</em> :  </p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> paths = [];
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> t = <span class="hljs-number">1</span>; t &lt; <span class="hljs-number">10</span>; t++) {
+  <span class="hljs-keyword">var</span> path = [];
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> k = -<span class="hljs-number">20</span>; k &lt;= <span class="hljs-number">20</span>; k++) {
+    <span class="hljs-keyword">var</span> x = k;
+    <span class="hljs-keyword">var</span> y = k * k / t;
+    <span class="hljs-keyword">var</span> z = t;
+    path.push(<span class="hljs-keyword">new</span> BABYLON.Vector3(x, y, z));
+  }
+  paths.push(path);
+}
+</code></pre>
+<p>You immediatly get a set of different paths along the z-axis : <a href="http://www.babylonjs-playground.com/#1HSC2O#8">http://www.babylonjs-playground.com/#1HSC2O#8</a><br>So a more complex ribbon : <a href="http://www.babylonjs-playground.com/#1HSC2O#9">http://www.babylonjs-playground.com/#1HSC2O#9</a>     </p>
+<p>At last, if we change a bit <em>x</em> and <em>z</em> variation to scale the curve, we can get a nice parabolic shape :   </p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> paths = [];
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> t = <span class="hljs-number">1</span>; t &lt; <span class="hljs-number">10</span>; t++) {
+  <span class="hljs-keyword">var</span> path = [];
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> k = -<span class="hljs-number">20</span>; k &lt;= <span class="hljs-number">20</span>; k++) {
+    <span class="hljs-keyword">var</span> x = k * <span class="hljs-number">8</span>;
+    <span class="hljs-keyword">var</span> y = k * k / t;
+    <span class="hljs-keyword">var</span> z = t * <span class="hljs-number">50</span>;
+    path.push(<span class="hljs-keyword">new</span> BABYLON.Vector3(x, y, z));
+  }
+  paths.push(path);
+}
+</code></pre>
+<p><a href="http://www.babylonjs-playground.com/#1HSC2O#10">http://www.babylonjs-playground.com/#1HSC2O#10</a><br>Quick fun ?<br>multiply <em>y</em> by <em>Math.sin(t)</em> to make it wave : <a href="http://www.babylonjs-playground.com/#1HSC2O#11">http://www.babylonjs-playground.com/#1HSC2O#11</a><br>or funnier : <a href="http://www.babylonjs-playground.com/#1HSC2O#12">http://www.babylonjs-playground.com/#1HSC2O#12</a><br>I couldn&#39;t stop playing ...  </p>
+<h3 id="summary">Summary</h3>
+<p>An easy way to create math computed shapes is so :  </p>
+<ul>
+<li>to choose a 2D math curve,</li>
+<li>to get its parametric equation,</li>
+<li>to fill an array with <em>Vector3</em> computed with a simple <em>for</em> loop iterating on the number of points wanted (set them in a 2D plane to start, with z = 0 for instance),</li>
+<li>to check your curve with <em>BABYLON.Mesh.CreateLines(&quot;name&quot;, yourArray, scene)</em>,</li>
+<li>to derivate your first curve by varying <em>x</em> or <em>y</em> and iterating on <em>z</em> since adding each derivated path into a <em>paths</em> array,</li>
+<li>to check again with <em>BABYLON.Mesh.CreateLines(&quot;name&quot;, yourArray, scene)</em> on each <em>z</em> iteration,</li>
+<li>to finally build your ribbon with the <em>paths</em> array. </li>
+</ul>
+<h2 id="from-basic-shapes-to-complex-ones">From Basic Shapes to Complex Ones</h2>
+<p>The Ribbon is very versatile. So you can redo every BabylonJS basic shapes.<br>Why would you want to do this ?<br>Well, you probably don&#39;t. There is no need to re-invent the wheel. But you could need to model your own shape which derivates from one of the basic shapes.<br>The main rule should be :  </p>
+<ul>
+<li>if you need a basic shape as it stands, then use the provided BJS basic shapes.</li>
+<li>if you need a shape made up of many basic shapes, then use Constructive Solid Geometry or merge provided BJS basic shapes.</li>
+<li>if you need a computed shape having a symetry axis, then use the Tube mesh or the extrusion, which don&#39;t require many maths.</li>
+<li>if you need something else, then use the Ribbon itself... and your maths skills.</li>
+</ul>
+<h3 id="sphere">Sphere</h3>
+<p>Let&#39;s try here to redo a sphere and then to modify it into something different.<br>As you&#39;ve seen in the former part, you need to create many paths to build a ribbon. For a sphere, you can imagine that you stack many circles, each circle being a path.<br>To create a circle, you just set points at <em>x = sin(angle)</em> and <em>z = cos(angle)</em> and give <em>angle</em> some values between 0 and 2 x PI.   </p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> pi2 = <span class="hljs-built_in">Math</span>.PI * <span class="hljs-number">2</span>;
+<span class="hljs-keyword">var</span> step = pi2 / <span class="hljs-number">60</span>;       <span class="hljs-comment">// we want 60 points</span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; pi2; i += step ) {
+  <span class="hljs-keyword">var</span> x = radius * <span class="hljs-built_in">Math</span>.sin(i);
+  <span class="hljs-keyword">var</span> z = radius * <span class="hljs-built_in">Math</span>.cos(i);
+  <span class="hljs-keyword">var</span> y = <span class="hljs-number">0</span>;
+  path.push( <span class="hljs-keyword">new</span> BABYLON.Vector3(x, y, z) );
+  }
+path.push(path[<span class="hljs-number">0</span>]);       <span class="hljs-comment">// to close the circle</span>
+</code></pre>
+<p>demo : <a href="http://www.babylonjs-playground.com/#E6IX1#1">http://www.babylonjs-playground.com/#E6IX1#1</a>   </p>
+<p>Now, you add circles along the y-axis, making the radius evolving with another angle <em>p</em> varying from the sphere south pole -PI / 2 to its north pole +PI /2. These circles (path) are stored in an array called <em>paths</em> :     </p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> radius = <span class="hljs-number">10</span>;
+<span class="hljs-keyword">var</span> tes = <span class="hljs-number">60</span>;
+<span class="hljs-keyword">var</span> pi2 = <span class="hljs-built_in">Math</span>.PI * <span class="hljs-number">2</span>;
+<span class="hljs-keyword">var</span> step = pi2 / tes;
+<span class="hljs-keyword">var</span> paths = [];
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> p = -<span class="hljs-built_in">Math</span>.PI / <span class="hljs-number">2</span>; p &lt; <span class="hljs-built_in">Math</span>.PI / <span class="hljs-number">2</span>; p += step / <span class="hljs-number">2</span>) {
+  <span class="hljs-keyword">var</span> path = [];
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; pi2; i += step ) {
+    <span class="hljs-keyword">var</span> x = radius * <span class="hljs-built_in">Math</span>.sin(i) * <span class="hljs-built_in">Math</span>.cos(p);
+    <span class="hljs-keyword">var</span> z = radius * <span class="hljs-built_in">Math</span>.cos(i) * <span class="hljs-built_in">Math</span>.cos(p);
+    <span class="hljs-keyword">var</span> y = radius * <span class="hljs-built_in">Math</span>.sin(p);
+    path.push( <span class="hljs-keyword">new</span> BABYLON.Vector3(x, y, z) );
+    }
+    path.push(path[<span class="hljs-number">0</span>]);
+    paths.push(path);
+}
+</code></pre>
+<p>demo : <a href="http://www.babylonjs-playground.com/#E6IX1">http://www.babylonjs-playground.com/#E6IX1</a>  </p>
+<p>Let&#39;s apply a ribbon to these paths : <a href="http://www.babylonjs-playground.com/#E6IX1#2">http://www.babylonjs-playground.com/#E6IX1#2</a><br>You get (almost) a sphere.<br>To get a nice full sphere, you need to complete the missing point at north pole and set the ribbon <em>closePath</em> parameter to true instead of manually close each circle after the former iteration :   </p>
+<pre><code class="lang-javascript">var lastPath = [];
+<span class="hljs-keyword">for</span> <span class="hljs-params">(var j = <span class="hljs-number">0</span>; j &lt; pi2; j += step )</span> {
+  lastPath.push<span class="hljs-params">( new BABYLON.Vector3<span class="hljs-params">(<span class="hljs-number">0</span>, radius, <span class="hljs-number">0</span>)</span> )</span>;
+}
+paths.push<span class="hljs-params">(lastPath)</span>;
+
+var <span class="hljs-built_in">sphere</span> = BABYLON.Mesh.CreateRibbon<span class="hljs-params">(<span class="hljs-string">"sph"</span>, paths, <span class="hljs-literal">false</span>, <span class="hljs-literal">true</span> ,  <span class="hljs-number">0</span>, scene)</span>;
+</code></pre>
+<p>demo : <a href="http://www.babylonjs-playground.com/#E6IX1#3">http://www.babylonjs-playground.com/#E6IX1#3</a><br>Pretty much maths and iterations o far to get a simple sphere, isn&#39;t it ?<br>This is why you should really use the BJS provided sphere if you only want a sphere !  </p>
+<p>But don&#39;t worry, all those efforts so far aren&#39;t vain. From now, let&#39;s the magic happens with only little changes ...<br>Remember : the <em>for</em> loop iterating on <em>p</em> is for the south to north pole angle. What if you don&#39;t increment <em>p</em> until PI / 2 but stop before, say at PI /2 - 1.5 :   </p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> p = -<span class="hljs-built_in">Math</span>.PI / <span class="hljs-number">2</span>; p &lt; <span class="hljs-built_in">Math</span>.PI / <span class="hljs-number">2</span> - <span class="hljs-number">1.5</span>; p += step / <span class="hljs-number">2</span>) {
+</code></pre>
+<p>demo : <a href="http://www.babylonjs-playground.com/#E6IX1#4">http://www.babylonjs-playground.com/#E6IX1#4</a><br>Quite easy. You just derivated the initial sphere into another shape you wouldn&#39;t have got another way.   </p>
+<p>Now, you can keep the original pole angle limit PI / 2 but add a new behavior : if a certain angle limit is reached, then inverse the y radius around this limit.  </p>
+<pre><code class="lang-javascript">var yRadius;
+var limit = Math.<span class="hljs-literal">PI</span> / <span class="hljs-number">2</span> - <span class="hljs-number">1</span>;
+<span class="hljs-keyword">for</span> <span class="hljs-params">(var p = -Math.<span class="hljs-literal">PI</span> / <span class="hljs-number">2</span>; p &lt; Math.<span class="hljs-literal">PI</span> / <span class="hljs-number">2</span>; p += step / <span class="hljs-number">2</span>)</span> {
+  var path = [];
+  yRadius = p &lt; limit ? Math.<span class="hljs-built_in">sin</span><span class="hljs-params">(p)</span> : <span class="hljs-number">2</span> <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">sin</span><span class="hljs-params">(limit)</span> - Math.<span class="hljs-built_in">sin</span><span class="hljs-params">(p)</span> ;
+  <span class="hljs-keyword">for</span> <span class="hljs-params">(var i = <span class="hljs-number">0</span>; i &lt; pi2; i += step )</span> {
+    var x = radius <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">sin</span><span class="hljs-params">(i)</span> <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">cos</span><span class="hljs-params">(p)</span>;
+    var z = radius <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">cos</span><span class="hljs-params">(i)</span> <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">cos</span><span class="hljs-params">(p)</span>;
+    var y = radius <span class="hljs-built_in">*</span> yRadius;
+    path.push<span class="hljs-params">( new BABYLON.Vector3<span class="hljs-params">(x, y, z)</span> )</span>;
+  }
+  paths.push<span class="hljs-params">(path)</span>;
+}
+</code></pre>
+<p>demo :  <a href="http://www.babylonjs-playground.com/#E6IX1#5">http://www.babylonjs-playground.com/#E6IX1#5</a>   </p>
+<p>Let&#39;s change the initial <em>for</em> loop limits now :  </p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> p = -<span class="hljs-built_in">Math</span>.PI / <span class="hljs-number">2</span> + <span class="hljs-number">0.5</span>; p &lt; <span class="hljs-built_in">Math</span>.PI / <span class="hljs-number">2</span>  - <span class="hljs-number">0.5</span>; p += step / <span class="hljs-number">2</span>) {
+</code></pre>
+<p>demo : <a href="http://www.babylonjs-playground.com/#E6IX1#6">http://www.babylonjs-playground.com/#E6IX1#6</a><br>Well, is this still a sphere ?<br>Let&#39;s close the ribbon :</p>
+<pre><code class="lang-javascript"><span class="hljs-variable"><span class="hljs-keyword">var</span> sphere</span> = BABYLON.Mesh.CreateRibbon(<span class="hljs-string">"sph"</span>, paths, <span class="hljs-literal">true</span>, <span class="hljs-literal">true</span> ,  <span class="hljs-number">0</span>, scene);
+</code></pre>
+<p>demo : <a href="http://www.babylonjs-playground.com/#E6IX1#7">http://www.babylonjs-playground.com/#E6IX1#7</a><br>Well, it&#39;s no longer a sphere, but a symetric shape you could probably have got in a simpler way with a Tube mesh or with CSG ... or not.<br>Since you wrote the initial sphere maths code, you&#39;ve added until now very few changes to get this derivated shape.
+Too symetric, not enough, ok ? let&#39;s morph it once more so you get out the CSG or Tube way :  let&#39;s moderate <em>x</em> with an extra <em>cosinus</em> function</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> <span class="hljs-params">(var i = <span class="hljs-number">0</span>; i &lt; pi2; i += step )</span> {
+  var x = radius <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">sin</span><span class="hljs-params">(i)</span> <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">cos</span><span class="hljs-params">(p)</span> <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">cos</span><span class="hljs-params">(i / <span class="hljs-number">6</span>)</span>;
+  var z = radius <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">cos</span><span class="hljs-params">(i)</span> <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">cos</span><span class="hljs-params">(p)</span>;
+  var y = radius <span class="hljs-built_in">*</span> yRadius;
+  path.push<span class="hljs-params">( new BABYLON.Vector3<span class="hljs-params">(x, y, z)</span> )</span>;
+}
+</code></pre>
+<p>demo : <a href="http://www.babylonjs-playground.com/#E6IX1#8">http://www.babylonjs-playground.com/#E6IX1#8</a><br>You are now in the real Ribbon world !
+Want more ? let&#39;s moderate <em>y</em> with another <em>cosinus</em> function and multiply <em>z</em> by 2 (why ? why not !).</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> <span class="hljs-params">(var i = <span class="hljs-number">0</span>; i &lt; pi2; i += step )</span> {
+  var x = radius <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">sin</span><span class="hljs-params">(i)</span> <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">cos</span><span class="hljs-params">(p)</span> <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">cos</span><span class="hljs-params">(i / <span class="hljs-number">6</span>)</span>;
+  var z = radius <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">cos</span><span class="hljs-params">(i)</span> <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">cos</span><span class="hljs-params">(p)</span> <span class="hljs-built_in">*</span> <span class="hljs-number">2</span>;
+  var y = radius <span class="hljs-built_in">*</span> yRadius <span class="hljs-built_in">*</span> Math.<span class="hljs-built_in">cos</span><span class="hljs-params">(i * <span class="hljs-number">2</span>)</span>;
+  path.push<span class="hljs-params">( new BABYLON.Vector3<span class="hljs-params">(x, y, z)</span> )</span>;
+}
+</code></pre>
+<p>demo : <a href="http://www.babylonjs-playground.com/#E6IX1#9">http://www.babylonjs-playground.com/#E6IX1#9</a>  </p>
+<h2 id="various-paths-concatenation">Various paths concatenation</h2>
+<p><em>make many different computed or manual pathArrays, then concatenate them</em>  </p>
+<p><em>edition in progress</em></p>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

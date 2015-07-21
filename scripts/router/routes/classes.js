@@ -27,7 +27,6 @@ marked_github.setOptions({
  * Show the Classes list. No version specified so get the last version and redirect to it
  ****************/
 router.get('/', function(req, res) {
-    logger.info('/');
     getLastBJSVersion(function(lastVersion) {
         res.writeHead(303, {
             'Cache-Control': 0,
@@ -48,14 +47,10 @@ router.get('/', function(req, res) {
  *      version - The version of babylon
  */
 router.get('/:version', function(req, res) {
-    logger.info('/:version');
-
     var version = req.params.version;
 
     fs.exists('public/html/classes_' + version + '.html', function(exists){
         if(exists){
-            //console.log(exists);
-            //console.log(version);
             var options = {
                 root: path.join(appRoot, 'public/')
             };
@@ -119,8 +114,6 @@ router.get('/:version/:className', function(req, res) {
         .replace('<', '_').replace('>', '_')
         .replace('%3CT%3E', '_T_')
         .replace('&lt;T$gt;', '_T_');
-
-    logger.info('/:version/:className');
 
     // for internal forwarding (click on a link)
     if(className == 'page.php'){

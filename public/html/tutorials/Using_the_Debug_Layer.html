@@ -1,0 +1,67 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>Using the Debug Layer</h1><br><div id="staticContent"><p>The main goal of the debug layer is to provide a fully functional UI to help you debug a scene and find potential culprits.</p>
+<h2 id="using-the-ui">Using the UI</h2>
+<p>You can display the debug layer by calling:</p>
+<pre><code class="lang-javascript"><span class="hljs-tag">scene</span><span class="hljs-class">.debugLayer</span><span class="hljs-class">.show</span>();
+</code></pre>
+<p>You can also display the debug layer by choosing a camera if you use multiple cameras:</p>
+<pre><code class="lang-javascript"><span class="hljs-tag">scene</span><span class="hljs-class">.debugLayer</span><span class="hljs-class">.show</span>(<span class="hljs-tag">true</span>, <span class="hljs-tag">camera</span>);
+</code></pre>
+<p><img src="http://www.babylonjs.com/forumpics/debuglayer.jpg" alt="Debug layer"></p>
+<h3 id="options">Options</h3>
+<p>This panel is designed to control display of all options.</p>
+<ul>
+<li>Statistics, Logs, Meshes tree check-boxes allow you to enable/disable others panels</li>
+<li>Bounding boxes check-box can be used to force the display of all bounding boxes</li>
+<li>Clickable labels check-box can display a label for every node (Meshes, cameras and lights). These labels can be clicked to:<ul>
+<li>Display an overlay on meshes</li>
+<li>Enable/disable lights</li>
+<li>Switch to camera</li>
+</ul>
+</li>
+<li>Generate user marks (F12) check-box can be used with F12 tools to emit performance counters to UI Responsiveness profiler</li>
+<li>Rendering mode can be used to switch between solid/wireframe/point modes</li>
+<li>Texture channels can be used to turn specific textures off</li>
+<li>Options can be used to turn specific engine options off</li>
+</ul>
+<h3 id="meshes-tree">Meshes tree</h3>
+<p>The meshes tree allows you to enable/disable meshes by name and could be used to determine how many vertices are contained in a specific mesh.</p>
+<h3 id="statistics">Statistics</h3>
+<p>The statistics panel gives you a global view of how specific engine parts are performing alongside WebGL info and capabilities.</p>
+<p><strong>Note about active vertices</strong>: Active vertices are the number of vertices processed by the GPU. For instance if you have a quad with 4 vertices and 2 faces, the total vertices will be 6 because 2 faces of 3 vertices each are sent to the GPU even if two vertices are shared.</p>
+<h3 id="logs">Logs</h3>
+<p>You can use the Logs panel to get log/warn/error message from the engine.</p>
+<h2 id="controlling-the-debug-layer-by-code">Controlling the debug layer by code</h2>
+<p>The debug layer can be used without the UI as well. To do so, you just have to call it like this:</p>
+<pre><code class="lang-javascript"><span class="hljs-tag">scene</span><span class="hljs-class">.debugLayer</span><span class="hljs-class">.show</span>(<span class="hljs-tag">false</span>);
+</code></pre>
+<p>And for multiple cameras:</p>
+<pre><code class="lang-javascript"><span class="hljs-tag">scene</span><span class="hljs-class">.debugLayer</span><span class="hljs-class">.show</span>(<span class="hljs-tag">false</span>, <span class="hljs-tag">camera</span>);
+</code></pre>
+<p>You can hide the interface with:</p>
+<pre><code class="lang-javascript"><span class="hljs-tag">scene</span><span class="hljs-class">.debugLayer</span><span class="hljs-class">.hide</span>();
+</code></pre>
+<p>You can then control when labels and axis should be displayed with the following code:</p>
+<pre><code class="lang-javascript">scene.debugLayer.shouldDisplayLabel = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(node)</span> </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+}
+
+scene.debugLayer.shouldDisplayAxis = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(mesh)</span> </span>{
+    <span class="hljs-keyword">return</span> mesh.name === <span class="hljs-string">"sphere1"</span>;
+}
+</code></pre>
+<p>You can even control the ratio used to determine axis size:</p>
+<pre><code class="lang-javascript">scene.debugLayer.axisRatio = <span class="hljs-number">0.04</span>; <span class="hljs-comment">// 4% of canvas width</span>
+</code></pre>
+<p>You can also control the UI by using CSS and target following IDs:</p>
+<ul>
+<li>DebugLayerStats</li>
+<li>DebugLayerTree</li>
+<li>DebugLayerLogs</li>
+<li>DebugLayerOptions</li>
+</ul>
+<p>For instance:</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"DebugLayerStats"</span>).style.background = <span class="hljs-string">"#484848"</span>;
+<span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"DebugLayerStats"</span>).style.zindex = <span class="hljs-string">"999999"</span>;
+</code></pre>
+<p>Feel free to test it on the <a href="http://www.babylonjs-playground.com/#1IG874">playground</a></p>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

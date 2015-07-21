@@ -1,0 +1,59 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>08. Sprites</h1><br><div id="staticContent"><p>In this tutorial, we are going to learn how to manipulate Sprites. Sprites are 2D image/animation, and we will use them to display an image with alpha channel. Sprites always face the camera.</p>
+<p>Nowadays, sprites are often used to display animated characters, and for particles, and to simulate 3D complex objects like trees. </p>
+<p><img src="http://www.babylonjs.com/tutorials/08%20-%20Sprites/08.png" alt="Elements"></p>
+<p><em>Final result</em></p>
+<h2 id="how-can-i-do-this-">How can I do this ?</h2>
+<p>1- <strong>Sprite manager</strong></p>
+<p>If you want to use sprites, you need to create a “sprite manager” to optimize GPU resources by grouping in one place multiple instances of a sprite.
+This manager is mandatory, even if you want to create one sprite. You just have to write:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Create a sprite manager</span>
+<span class="hljs-keyword">var</span> spriteManagerTrees = <span class="hljs-keyword">new</span> BABYLON.SpriteManager(<span class="hljs-string">"treesManagr"</span>, <span class="hljs-string">"Assets/Palm-arecaceae.png"</span>, <span class="hljs-number">2000</span>, <span class="hljs-number">800</span>, scene);
+</code></pre>
+<p>When creating a sprite manager, you have to decide a few parameters:</p>
+<ul>
+<li>Name: a name for this manager.</li>
+<li>The 2D image URL (most of the time, you will want use an image format which contain alpha channel, like .PNG).</li>
+<li>The capacity of this manager : the maximum number of instances in this manager (in our example, we could create 2000 instances of trees).</li>
+<li>The cell size, corresponding to the size of your image, like we’ll see below.</li>
+<li>The actual scene, to which we will add this manager.</li>
+</ul>
+<p>To give another example, look at this snippet:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> spriteManagerPlayer = <span class="hljs-keyword">new</span> BABYLON.SpriteManager(<span class="hljs-string">"playerManagr"</span>,<span class="hljs-string">"Assets/Player.png"</span>, <span class="hljs-number">2</span>, <span class="hljs-number">64</span>, scene);
+</code></pre>
+<p>This time, we only want 2 instances, and we said that our sprite’s size is 64. Here is what our image looks like:</p>
+<p><img src="http://www.babylonjs.com/tutorials/08%20-%20Sprites/08-1.png" alt="Elements"></p>
+<p>Each image of a sprite must be contained in a 64 pixel square, no more no less.</p>
+<p>2- <strong>Create an instance</strong></p>
+<p>Now that we have our manager, we can create instances of our sprite linked to this manager. Creating an instance is as simple as:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> player = <span class="hljs-keyword">new</span> BABYLON.Sprite(<span class="hljs-string">"player"</span>, spriteManagerPlayer);
+</code></pre>
+<p>Voilà, you have got your sprite displayed!</p>
+<p>If you want to add parameters to this instance, you can manipulate it like any other meshes:</p>
+<pre><code class="lang-javascript">player.position.y = -0.3<span class="hljs-comment">;</span>
+</code></pre>
+<p>But because it’s a sprite, you may use specific parameters: you can change their size, or their orientation:</p>
+<pre><code class="lang-javascript">player.size = 0.3<span class="hljs-comment">;</span>
+player.angle = Math.PI/4<span class="hljs-comment">;</span>
+player.invertU = -1<span class="hljs-comment">;</span>
+</code></pre>
+<p>Starting with Babylon.js v2.1, you can define sprite&#39;s width and height:</p>
+<pre><code>player.width = 0.3<span class="hljs-comment">;</span>
+player.height = 0.4<span class="hljs-comment">;</span>
+</code></pre><p>You can keep using <code>player.size</code> and in this case width and height will just be the same.</p>
+<p>3- <strong>Sprite animation</strong></p>
+<p>One of the advantages of sprites is animations. You only have to load one large image file which will contain all animation images, one next to another. Just be careful to respect the square pixel size that you have specified in your manager (e.g. 64 pixel).</p>
+<p>Here is what a complete sprite image looks like:</p>
+<p><img src="http://www.babylonjs.com/tutorials/08%20-%20Sprites/08-2.png" alt="Elements"></p>
+<p>This will animate our players in more than 40 positions, depending upon the situation (walking, jumping,…). Babylon&#39;s engine is automatically reading sprites on more than one line, so the engine does the work for you :)</p>
+<p>If you want to begin the animation, simply call this function:</p>
+<pre><code class="lang-javascript">player.playAnimation<span class="hljs-params">(<span class="hljs-number">0</span>, <span class="hljs-number">43</span>, <span class="hljs-literal">true</span>, <span class="hljs-number">100</span>)</span>;
+</code></pre>
+<p>By calling « playAnimation » with those parameters, our player will be animated from frame 0 to frame 43. The third parameter is indicating if this animation will loop or not. And the last parameter is the delay between the frames (the smaller it is, the faster the animation).</p>
+<p>Finally, if you want to go to a specific image (e.g. the last one, when the character is not moving), just call:</p>
+<pre><code class="lang-javascript">player.cellIndex = 44<span class="hljs-comment">;</span>
+</code></pre>
+<p>You can play with the scene and code used in this tutorial... by visiting the Babylon.js <a href="http://babylonjs-playground.azurewebsites.net/?8"><strong>Playground sprites demo</strong></a>.</p>
+<h2 id="next-step">Next step</h2>
+<p>Don’t hesitate to use sprites in your scene: they are not resource intensive, and they really can help keep high frame rates in your application.</p>
+<p>Now you know how to create a complete simple dynamic scene and it is going to be important to talk about <a href="http://babylondoc.azurewebsites.net/page.php?p=22101">collisions</a>.</p>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

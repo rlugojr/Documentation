@@ -89,6 +89,7 @@ $sidebar_width : 300px;
   width: calc(100% - #{$sidebar_width});
   overflow-x: auto;
   overflow-y: auto;
+  z-index:10;
 
   #classTitle {
     border-bottom: solid 1px $red;
@@ -185,6 +186,12 @@ $sidebar_width : 300px;
 
 #classes_classesListByTag.sidemenu{
   width: 100%;
+}
+
+#classes_classesListByAlpha.sideClassesListByAlpha{
+  a {
+    margin-right: 65px;
+  }
 }
 
 .highlighted{

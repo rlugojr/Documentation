@@ -27,7 +27,18 @@ router.get('/', function(req, res) {
 });
 
 router.get('/:exporter', function(req, res){
+    var options = {
+        root: path.join(appRoot, 'public/html')
+    };
 
+    var exporter = req.params.exporter;
+
+    res.status(200);
+    res.set({
+        'Content-type':'text/html',
+        'Cache-Control': 'no-cache'
+    });
+    res.sendFile('./exporters/'+ exporter +'.html', options);
 });
 
 module.exports = router;

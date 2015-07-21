@@ -28,7 +28,10 @@ marked.setOptions({
     gfm: true,
     breaks: false,
     tables: true,
-    sanitize: false
+    sanitize: false,
+    highlight: function(code){
+        return require('highlight.js').highlightAuto(code).value;
+    }
 });
 
 /*************************************************************************

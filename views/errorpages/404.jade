@@ -1,18 +1,25 @@
 include ../includes/header
+include ../includes/banner
 #wrapper.error
-    include ../includes/banner
-
     h1.error_message.
         404
     .errorBaseline.
         Page not found? Weird... It's working on my machine.
-    div.leftie
+    div.leftie.error_choice
         a(href="javascript:history.back()")
             i.fa.fa-arrow-circle-left
             | You can go back to the previous page...
-    div.rightie
+    div.rightie.error_choice
         a(href="/")
             | ... or you can go back to our homepage.
             i.fa.fa-arrow-circle-right
 
+    div.leftie.error_choice_mobile
+        a(href="javascript:history.back()")
+            i.fa.fa-arrow-circle-left
+            |<br/>You can go back to the previous page...
+    div.rightie.error_choice_mobile
+        a(href="/")
+            i.fa.fa-arrow-circle-right
+            |<br/>... or you can go back to our homepage.
 include ../includes/footer

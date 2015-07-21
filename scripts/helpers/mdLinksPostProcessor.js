@@ -63,7 +63,7 @@ function applyRegexp(msg, cb) {
         classeNames,
         function (className, endIteration) {
             var surroundbyLink = new RegExp('\\b' + path.basename(className, '.md') + '\\b', 'gm');
-            newData = newData.replace(surroundbyLink, '[$&](classes/' + msg.file.version + '/$&)');
+            newData = newData.replace(surroundbyLink, '[$&](/classes/' + msg.file.version + '/$&)');
             endIteration();
         }, function (err) {
             msg.newData = oldMetas + newData;

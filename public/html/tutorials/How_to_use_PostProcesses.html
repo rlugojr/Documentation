@@ -1,0 +1,175 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to use PostProcesses</h1><br><div id="staticContent"><p>Postprocesses allow you to create 2D effects on top of your scene.
+A postprocess is linked to a camera and can be part of a chain of postprocesses where each postprocess uses the result of the previous one as input for its own processing.</p>
+<h1 id="base-postprocess">Base postprocess</h1>
+<p>Every postprocess is based upon <code>BABYLON.PostProcess</code> which uses this constructor:</p>
+<pre><code class="lang-javascript">BABYLON.PostProcess = <span class="hljs-function"><span class="hljs-keyword">function</span></span> (<span class="hljs-keyword">name</span>, fragmentUrl, parameters, samplers, ratio, camera, samplingMode, engine, reusable)
+</code></pre>
+<p>We will get back to <em>fragmentUrl</em>, <em>parameters</em> and <em>samplers</em> parameters.</p>
+<p>The <em>ratio</em> is used to define the size of the postprocess (0.5 means that your postprocess will have a width = canvas.width <em> 0.5 and a height = canvas.height </em> 0.5).</p>
+<p>The <em>camera</em> parameter is self-explanatory.</p>
+<p>The <em>samplingMode</em> can be one of the following:</p>
+<ul>
+<li>BABYLON.Texture.NEAREST_SAMPLINGMODE</li>
+<li>BABYLON.Texture.BILINEAR_SAMPLINGMODE (<strong>default</strong>)</li>
+<li>BABYLON.Texture.TRILINEAR_SAMPLINGMODE</li>
+</ul>
+<p>The <em>engine</em> parameter is the engine where you want to attach your postprocess.</p>
+<p>The <em>reusable</em> paameter indicates if your postprocess can be reused multiple times on the same camera (default is false).</p>
+<h1 id="attach-postprocess">Attach postprocess</h1>
+<p>Depending on how you have defined a postprocess, it can be attached one or more times to the same camera. 
+The same instance can also be attached to multiple cameras.</p>
+<p>A camera has two methods:</p>
+<h4 id="-attachpostprocess-"><strong>attachPostProcess</strong></h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">NUMBER</span> <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(PostProcess postProcess [,NUMBER atIndice])</span></span>
+</code></pre>
+<h4 id="-detachpostprocess-"><strong>detachPostProcess</strong></h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">NUMBER</span> <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(PostProcess postProcess [,NUMBER[] atIndices])</span></span>
+</code></pre>
+<h1 id="builtin-postprocesses">Builtin postprocesses</h1>
+<p>Babylon.js comes with a set of ready to use postprocesses.</p>
+<ul>
+<li>Pass: Do nothing. Used to copy the framebuffer into a postprocess for further use</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> postProcess = <span class="hljs-keyword">new</span> BABYLON.PassPostProcess(<span class="hljs-string">"Scene copy"</span>, <span class="hljs-number">1.0</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, engine, <span class="hljs-literal">true</span>);
+</code></pre>
+<ul>
+<li>Black and white: apply a black and white effect:</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> postProcess = <span class="hljs-keyword">new</span> BABYLON.BlackAndWhitePostProcess(<span class="hljs-string">"bandw"</span>, <span class="hljs-number">1.0</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, engine, <span class="hljs-literal">true</span>);
+</code></pre>
+<ul>
+<li>Blur: apply a directional blur:</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> postProcess = <span class="hljs-keyword">new</span> BABYLON.BlurPostProcess(<span class="hljs-string">"Horizontal blur"</span>, <span class="hljs-keyword">new</span> BABYLON.Vector2(<span class="hljs-number">1.0</span>, <span class="hljs-number">0</span>), blurWidth, <span class="hljs-number">0.25</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, engine, <span class="hljs-literal">true</span>);
+</code></pre>
+<ul>
+<li>Convolution: apply a kernel matrix to every pixel:</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-variable"><span class="hljs-keyword">var</span> sepiaKernelMatrix</span> = BABYLON.Matrix.FromValues(
+                    <span class="hljs-number">0.393</span>, <span class="hljs-number">0.349</span>, <span class="hljs-number">0.272</span>, <span class="hljs-number">0</span>,
+                    <span class="hljs-number">0.769</span>, <span class="hljs-number">0.686</span>, <span class="hljs-number">0.534</span>, <span class="hljs-number">0</span>,
+                    <span class="hljs-number">0.189</span>, <span class="hljs-number">0.168</span>, <span class="hljs-number">0.131</span>, <span class="hljs-number">0</span>,
+                    <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>
+                );
+<span class="hljs-variable"><span class="hljs-keyword">var</span> postProcess</span> = new BABYLON.ConvolutionPostProcess(<span class="hljs-string">"Sepia"</span>, sepiaKernelMatrix, <span class="hljs-number">1.0</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, engine, <span class="hljs-literal">true</span>);
+</code></pre>
+<ul>
+<li>FXAA: apply a full screen antialiasing filter:</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> postProcess = <span class="hljs-keyword">new</span> BABYLON.FxaaPostProcess(<span class="hljs-string">"fxaa"</span>, <span class="hljs-number">1.0</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, engine, <span class="hljs-literal">true</span>);
+</code></pre>
+<ul>
+<li>Refraction: apply a refraction texture:</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> postProcess = <span class="hljs-keyword">new</span> BABYLON.RefractionPostProcess(<span class="hljs-string">"Refraction"</span>, <span class="hljs-string">"refMap.jpg"</span>, <span class="hljs-keyword">new</span> BABYLON.Color3(<span class="hljs-number">1.0</span>, <span class="hljs-number">1.0</span>, <span class="hljs-number">1.0</span>), <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">1.0</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, engine, <span class="hljs-literal">true</span>);
+</code></pre>
+<p>The constructor of this postprocess is the following:</p>
+<pre><code class="lang-javascript">BABYLON.RefractionPostProcess = <span class="hljs-function"><span class="hljs-keyword">function</span></span> (<span class="hljs-keyword">name</span>, refractionTextureUrl, color, depth, colorLevel, ratio, null, samplingMode, engine, reusable)
+</code></pre>
+<p><em>refractionTextureUrl</em> is the URL of the refraction map. The luminance of every pixel is used to define the refraction level (white = min, black = max)
+<em>color</em> is the base color of the refraction (used to taint the rendering)
+<em>depth</em> is the simulated refraction depth
+<em>colorLevel</em> is the coefficient of the base color (0 to remove base color tainting)</p>
+<ul>
+<li>Color Correction: apply a color filter:</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> postProcess = <span class="hljs-keyword">new</span> BABYLON.ColorCorrectionPostProcess(<span class="hljs-string">"color_correction"</span>, <span class="hljs-string">"./table.png"</span>, <span class="hljs-number">1.0</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, engine, <span class="hljs-literal">true</span>);
+</code></pre>
+<p>The second parameter of the constructor is the URL of the color look-up table (also known as <em>LUT</em>) that contains the filter to apply. This must be a texture 16 pixels high and 256 pixels wide containing a modified set of RGB colors (x=red value, y=green value, z=blue value). The post-processing will then map the RGB values of the rendered pixels to the new values contained in the look-up table.</p>
+<p>Here is what the default (without filter) look-up table looks like:</p>
+<p><img src="http://udn.epicgames.com/Three/rsrc/Three/ColorGrading/RGBTable16x1.png" alt="LUT"></p>
+<p>Examples of filtered LUT to use for various filters:</p>
+<p><img src="http://i.imgur.com/gC9vQCz.png" alt="LUT">
+ Inverted colors</p>
+<p><img src="http://i.imgur.com/rupMyVN.png" alt="LUT">
+ High contrast</p>
+<p><img src="http://i.imgur.com/IX93hGO.png" alt="LUT">
+ Posterize</p>
+<p>You can easily create new filters by using a image editing software to alter the look-up table to fit your needs. Copy/paste the default look-up table on a screenshot or picture before altering it to see in real time what the filtered image will look like.</p>
+<h1 id="custom-postprocesses">Custom postprocesses</h1>
+<p>You can also develop your own postprocess using <code>BABYLON.PostProcess</code> object.</p>
+<p>To do so, you need to create a .fragment.fx file, a shader-storing DOM node, or a ShaderStore entry where you will store the GLSL shader code used for every pixel of the screen:</p>
+<pre><code class="lang-javascript">GLSL
+<span class="hljs-preprocessor">#ifdef GL_ES</span>
+<span class="hljs-keyword">precision</span> <span class="hljs-keyword">highp</span> <span class="hljs-keyword">float</span>;
+<span class="hljs-preprocessor">#endif</span>
+
+<span class="hljs-comment">// Samplers</span>
+<span class="hljs-keyword">varying</span> <span class="hljs-keyword">vec2</span> vUV;
+<span class="hljs-keyword">uniform</span> <span class="hljs-keyword">sampler2D</span> textureSampler;
+
+<span class="hljs-comment">// Parameters</span>
+<span class="hljs-keyword">uniform</span> <span class="hljs-keyword">vec2</span> screenSize;
+<span class="hljs-keyword">uniform</span> <span class="hljs-keyword">float</span> highlightThreshold;
+
+<span class="hljs-keyword">float</span> highlights(<span class="hljs-keyword">vec3</span> color)
+{
+ <span class="hljs-keyword">return</span> <span class="hljs-built_in">smoothstep</span>(highlightThreshold, <span class="hljs-number">1.0</span>, <span class="hljs-built_in">dot</span>(color, <span class="hljs-keyword">vec3</span>(<span class="hljs-number">0.3</span>, <span class="hljs-number">0.59</span>, <span class="hljs-number">0.11</span>)));
+}
+
+<span class="hljs-keyword">void</span> main(<span class="hljs-keyword">void</span>) 
+{
+ <span class="hljs-keyword">vec2</span> texelSize = <span class="hljs-keyword">vec2</span>(<span class="hljs-number">1.0</span> / screenSize.x, <span class="hljs-number">1.0</span> / screenSize.y);
+ <span class="hljs-keyword">vec4</span> baseColor = <span class="hljs-built_in">texture2D</span>(textureSampler, vUV + <span class="hljs-keyword">vec2</span>(-<span class="hljs-number">1.0</span>, -<span class="hljs-number">1.0</span>) * texelSize) * <span class="hljs-number">0.25</span>;
+ baseColor += <span class="hljs-built_in">texture2D</span>(textureSampler, vUV + <span class="hljs-keyword">vec2</span>(<span class="hljs-number">1.0</span>, -<span class="hljs-number">1.0</span>) * texelSize) * <span class="hljs-number">0.25</span>;
+ baseColor += <span class="hljs-built_in">texture2D</span>(textureSampler, vUV + <span class="hljs-keyword">vec2</span>(<span class="hljs-number">1.0</span>, <span class="hljs-number">1.0</span>) * texelSize) * <span class="hljs-number">0.25</span>;
+ baseColor += <span class="hljs-built_in">texture2D</span>(textureSampler, vUV + <span class="hljs-keyword">vec2</span>(-<span class="hljs-number">1.0</span>, <span class="hljs-number">1.0</span>) * texelSize) * <span class="hljs-number">0.25</span>;
+
+ baseColor.a = highlights(baseColor.rgb);
+
+ <span class="hljs-built_in">gl_FragColor</span> = baseColor;
+}
+</code></pre>
+<p>Your shader must define the following values:</p>
+<ul>
+<li>Precision must be set to highp</li>
+<li>A varying vUV must be used to read texture coordinates</li>
+<li>The first sampler must be named textureSampler</li>
+</ul>
+<p>Once you created your sampler, you can create a postprocess:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> postProcess = <span class="hljs-keyword">new</span> BABYLON.PostProcess(<span class="hljs-string">"Down sample"</span>, <span class="hljs-string">"./Scenes/Customs/postprocesses/downsample"</span>, [<span class="hljs-string">"screenSize"</span>, <span class="hljs-string">"highlightThreshold"</span>], <span class="hljs-literal">null</span>, <span class="hljs-number">0.25</span>, <span class="hljs-literal">null</span>, BABYLON.Texture.BILINEAR_SAMPLINGMODE, engine, <span class="hljs-literal">true</span>);
+</code></pre>
+<p>You have to specify:</p>
+<ul>
+<li>A name</li>
+<li>The URL of the shader coder*</li>
+<li>A list of your uniforms parameters</li>
+<li>A list of additional samplers</li>
+<li>The ratio</li>
+<li>The parent camera (deprecated)</li>
+<li>The sampling mode</li>
+<li>The engine</li>
+<li>Can be reusable</li>
+</ul>
+<p>(*Please see the link at the bottom of this document to learn more ways to store shader code.)</p>
+<p>You can set up things before the postprocess is applied by specifying a onApply function:</p>
+<pre><code class="lang-javascript">postProcess.onApply = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(effect)</span> {</span>
+    effect.setFloat2<span class="hljs-params">(<span class="hljs-string">"screenSize"</span>, postProcess1.width, postProcess1.height)</span>;
+    effect.setFloat<span class="hljs-params">(<span class="hljs-string">"highlightThreshold"</span>, <span class="hljs-number">0.90</span>)</span>;
+};
+</code></pre>
+<p>Please note that you can also use the output of a previous postprocess as the source for your own sampler:</p>
+<pre><code class="lang-javascript">effect.setTextureFromPostProcess<span class="hljs-params">(<span class="hljs-string">"sceneSampler"</span>, postProcess0)</span>;
+</code></pre>
+<h1 id="chaining-postprocesses">Chaining postprocesses</h1>
+<p>You can chain postprocesses on a specific camera. They are processed using the creation order. For instance here is the code used to simulate a bloom effect:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> blurWidth = <span class="hljs-number">1.0</span>;
+
+<span class="hljs-keyword">var</span> postProcess0 = <span class="hljs-keyword">new</span> BABYLON.PassPostProcess(<span class="hljs-string">"Scene copy"</span>, <span class="hljs-number">1.0</span>, camera);
+<span class="hljs-keyword">var</span> postProcess1 = <span class="hljs-keyword">new</span> BABYLON.PostProcess(<span class="hljs-string">"Down sample"</span>, <span class="hljs-string">"./Scenes/Customs/postprocesses/downsample"</span>, [<span class="hljs-string">"screenSize"</span>, <span class="hljs-string">"highlightThreshold"</span>], <span class="hljs-literal">null</span>, <span class="hljs-number">0.25</span>, camera, BABYLON.Texture.BILINEAR_SAMPLINGMODE);
+postProcess1.onApply = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(effect)</span> </span>{
+    effect.setFloat2(<span class="hljs-string">"screenSize"</span>, postProcess1.width, postProcess1.height);
+    effect.setFloat(<span class="hljs-string">"highlightThreshold"</span>, <span class="hljs-number">0.90</span>);
+};
+<span class="hljs-keyword">var</span> postProcess2 = <span class="hljs-keyword">new</span> BABYLON.BlurPostProcess(<span class="hljs-string">"Horizontal blur"</span>, <span class="hljs-keyword">new</span> BABYLON.Vector2(<span class="hljs-number">1.0</span>, <span class="hljs-number">0</span>), blurWidth, <span class="hljs-number">0.25</span>, camera);
+<span class="hljs-keyword">var</span> postProcess3 = <span class="hljs-keyword">new</span> BABYLON.BlurPostProcess(<span class="hljs-string">"Vertical blur"</span>, <span class="hljs-keyword">new</span> BABYLON.Vector2(<span class="hljs-number">0</span>, <span class="hljs-number">1.0</span>), blurWidth, <span class="hljs-number">0.25</span>, camera);
+<span class="hljs-keyword">var</span> postProcess4 = <span class="hljs-keyword">new</span> BABYLON.PostProcess(<span class="hljs-string">"Final compose"</span>, <span class="hljs-string">"./Scenes/Customs/postprocesses/compose"</span>, [<span class="hljs-string">"sceneIntensity"</span>, <span class="hljs-string">"glowIntensity"</span>, <span class="hljs-string">"highlightIntensity"</span>], [<span class="hljs-string">"sceneSampler"</span>], <span class="hljs-number">1</span>, camera);
+postProcess4.onApply = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(effect)</span> </span>{
+    effect.setTextureFromPostProcess(<span class="hljs-string">"sceneSampler"</span>, postProcess0);
+    effect.setFloat(<span class="hljs-string">"sceneIntensity"</span>, <span class="hljs-number">0.5</span>);
+    effect.setFloat(<span class="hljs-string">"glowIntensity"</span>, <span class="hljs-number">0.4</span>);
+    effect.setFloat(<span class="hljs-string">"highlightIntensity"</span>, <span class="hljs-number">1.0</span>);
+};
+</code></pre>
+<p>You might want to read more about shaders and try our CYOS shader editor <a href="http://blogs.msdn.com/b/eternalcoding/archive/2014/04/17/learning-shaders-create-your-own-shaders-with-babylon-js.aspx"><strong>RIGHT HERE</strong></a>.</p>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

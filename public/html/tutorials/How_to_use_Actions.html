@@ -1,0 +1,159 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to use Actions</h1><br><div id="staticContent"><p>Actions are a simple way to add interactions in your scenes. An action is launched when its trigger is fired.</p>
+<p>For instance, you can specify that when the user clicks (or touches) a mesh, an action is executed.</p>
+<h1 id="how-to-use-it">How to use it</h1>
+<p>To use actions, you have to attach an <code>BABYLON.ActionManager</code> to a mesh or to your scene:
+<code>mesh.actionManager = new BABYLON.ActionManager(scene);</code></p>
+<p>Once the ActionManager is created, you can start registering actions:</p>
+<pre><code class="lang-javascript"><span class="hljs-tag">mesh</span><span class="hljs-class">.actionManager</span><span class="hljs-class">.registerAction</span>(<span class="hljs-tag">new</span> <span class="hljs-tag">BABYLON</span><span class="hljs-class">.InterpolateValueAction</span>(<span class="hljs-tag">BABYLON</span><span class="hljs-class">.ActionManager</span><span class="hljs-class">.OnPickTrigger</span>, <span class="hljs-tag">light</span>, "<span class="hljs-tag">diffuse</span>", <span class="hljs-tag">BABYLON</span><span class="hljs-class">.Color3</span><span class="hljs-class">.Black</span>(), 1000));
+</code></pre>
+<p>For instance this action will animate the <code>light.diffuse</code> property to black in 1000ms when the user picks the mesh.</p>
+<p>You can also chain actions:</p>
+<pre><code class="lang-javascript"><span class="hljs-tag">mesh</span><span class="hljs-class">.actionManager</span><span class="hljs-class">.registerAction</span>(<span class="hljs-tag">new</span> <span class="hljs-tag">BABYLON</span><span class="hljs-class">.InterpolateValueAction</span>(<span class="hljs-tag">BABYLON</span><span class="hljs-class">.ActionManager</span><span class="hljs-class">.OnPickTrigger</span>, <span class="hljs-tag">light</span>, "<span class="hljs-tag">diffuse</span>", <span class="hljs-tag">BABYLON</span><span class="hljs-class">.Color3</span><span class="hljs-class">.Black</span>(), 1000))
+        <span class="hljs-class">.then</span>(<span class="hljs-tag">new</span> <span class="hljs-tag">BABYLON</span><span class="hljs-class">.SetValueAction</span>(<span class="hljs-tag">BABYLON</span><span class="hljs-class">.ActionManager</span><span class="hljs-class">.NothingTrigger</span>, <span class="hljs-tag">mesh</span><span class="hljs-class">.material</span>, "<span class="hljs-tag">wireframe</span>", <span class="hljs-tag">false</span>));
+</code></pre>
+<p>In this case, the first click will animate the <code>light.diffuse</code> property, the second click will set <code>mesh.material</code> to false. The third one will start again and will animate the <code>light.diffuse</code> property and so on...</p>
+<p>Finally, you can add a condition to your actions. In this case, actions are launched when the trigger is fired if the condition is true:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> condition1 = <span class="hljs-keyword">new</span> BABYLON.PredicateCondition(sphere.actionManager, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> light1.diffuse.equals(BABYLON.Color3.Red());
+});
+sphere.actionManager.registerAction(<span class="hljs-keyword">new</span> BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, camera, <span class="hljs-string">"alpha"</span>, <span class="hljs-number">0</span>, <span class="hljs-number">500</span>, condition1));
+</code></pre>
+<p>In this example, the <code>camera.alpha</code> property will be animated to 0 in 500ms when the user clicks the sphere only if the <code>light1.diffuse</code> property is equal to red.</p>
+<h1 id="triggers">Triggers</h1>
+<p>Currently, 10 different triggers are supported:</p>
+<p>The following list defines triggers associated with meshes:</p>
+<ul>
+<li><code>BABYLON.ActionManager.NothingTrigger</code>: Never raised. Used for sub-actions with <code>action.then</code> function</li>
+<li><code>BABYLON.ActionManager.OnPickTrigger</code>: Raised when the user touches/clicks on a mesh</li>
+<li><code>BABYLON.ActionManager.OnLeftPickTrigger</code>: Raised when the user touches/clicks on a mesh with left button</li>
+<li><code>BABYLON.ActionManager.OnRightPickTrigger</code>: Raised when the user touches/clicks on a mesh with right button</li>
+<li><code>BABYLON.ActionManager.OnCenterPickTrigger</code>: Raised when the user touches/clicks on a mesh with center button</li>
+<li><code>BABYLON.ActionManager.OnPointerOverTrigger</code>: Raised when the pointer is over a mesh. Raised just once</li>
+<li><code>BABYLON.ActionManager.OnPointerOutTrigger</code>: Raised when the pointer is no more over a mesh. Raised just once</li>
+<li><code>BABYLON.ActionManager.OnIntersectionEnterTrigger</code>: Raised when the mesh is in intersection with another mesh. Raised just once</li>
+<li><code>BABYLON.ActionManager.OnIntersectionExitTrigger</code>: Raised when the mesh is no more in intersection with another mesh. Raised just once</li>
+</ul>
+<p>For intersection triggers, you have to specify the &quot;other&quot; mesh with the following code:</p>
+<pre><code class="lang-javascript"><span class="hljs-tag">mesh</span><span class="hljs-class">.actionManager</span><span class="hljs-class">.registerAction</span>(
+
+<span class="hljs-tag">new</span> <span class="hljs-tag">BABYLON</span><span class="hljs-class">.SetValueAction</span>(<span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">trigger</span>:<span class="hljs-value"> BABYLON.ActionManager.OnIntersectionEnterTrigger, parameter: otherMesh }, 
+
+mesh, <span class="hljs-string">"scaling"</span>, new BABYLON.<span class="hljs-function">Vector3</span>(<span class="hljs-number">1.2</span>, <span class="hljs-number">1.2</span>, <span class="hljs-number">1.2</span>)))</span></span>;</span>
+</code></pre>
+<p>You can as well define if you want to use precise intersections:</p>
+<pre><code class="lang-javascript">
+<span class="hljs-tag">mesh</span><span class="hljs-class">.actionManager</span><span class="hljs-class">.registerAction</span>(
+
+<span class="hljs-tag">new</span> <span class="hljs-tag">BABYLON</span><span class="hljs-class">.SetValueAction</span>(<span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">trigger</span>:<span class="hljs-value"> BABYLON.ActionManager.OnIntersectionEnterTrigger, parameter: { mesh:otherMesh, usePreciseIntersection: true} }, 
+
+mesh, <span class="hljs-string">"scaling"</span>, new BABYLON.<span class="hljs-function">Vector3</span>(<span class="hljs-number">1.2</span>, <span class="hljs-number">1.2</span>, <span class="hljs-number">1.2</span>)))</span></span>;</span>
+</code></pre>
+<p>The following list defines triggers associated with scene:</p>
+<ul>
+<li><code>BABYLON.ActionManager.OnEveryFrameTrigger</code>: Raised once per frame.</li>
+<li><code>BABYLON.ActionManager.OnKeyDownTrigger</code>: Raised when a key is pressed.</li>
+<li><code>BABYLON.ActionManager.OnKeyUpTrigger</code>: Raised when a key is released.</li>
+</ul>
+<p>For OnKeyUpTrigger and OnKeyDownTrigger triggers, you can filter events based on a key, either in your code or with a parameter:</p>
+<pre><code class="lang-javascript">scene.actionManager.registerAction(<span class="hljs-keyword">new</span> BABYLON.ExecuteCodeAction(BABYLON.ActionManager.OnKeyUpTrigger, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(evt)</span> </span>{
+   <span class="hljs-keyword">if</span> (evt.sourceEvent.key == <span class="hljs-string">"r"</span>) {
+       ...
+   }
+}));
+
+scene.actionManager.registerAction(<span class="hljs-keyword">new</span> BABYLON.ExecuteCodeAction({ trigger: BABYLON.ActionManager.OnKeyUpTrigger, parameter: <span class="hljs-string">"r"</span> },
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+            ...
+  }));
+</code></pre>
+<h1 id="actions">Actions</h1>
+<p>Most of the action have a <code>propertyPath</code> property. This string defines the path to the property to affect with the action. You can use direct values like <code>position</code> or <code>diffuse</code>. But you can also provide complex paths like <code>position.x</code></p>
+<ul>
+<li><code>BABYLON.SwitchBooleanAction</code>: Used to switch the current value of a boolean property:</li>
+</ul>
+<p><code>SwitchBooleanAction(trigger, target, propertyPath, condition)</code></p>
+<ul>
+<li><code>BABYLON.SetValueAction</code>: Used to specify a direct value for a property:</li>
+</ul>
+<p><code>SetValueAction(trigger, target, propertyPath, value, condition)</code></p>
+<ul>
+<li><code>BABYLON.IncrementValueAction</code>: Add a specified value to a number property:</li>
+</ul>
+<p><code>IncrementValueAction(trigger, target, propertyPath, value, condition)</code></p>
+<ul>
+<li><code>BABYLON.PlayAnimationAction</code>: Launch an animation on a specified target:</li>
+</ul>
+<p><code>PlayAnimationAction(trigger, target, from, to, loop, condition)</code></p>
+<ul>
+<li><code>BABYLON.StopAnimationAction</code>: Stop an animation on a specified target:</li>
+</ul>
+<p><code>StopAnimationAction(trigger, target, condition)</code></p>
+<ul>
+<li><code>BABYLON.DoNothingAction</code>: Do nothing :)</li>
+</ul>
+<p><code>DoNothingAction(trigger, condition)</code></p>
+<ul>
+<li><code>BABYLON.CombineAction</code>: This action is a container. You can use it to execute many actions simultaneously on the same trigger. The children property must be an array of actions:</li>
+</ul>
+<p><code>CombineAction(trigger, children, condition)</code></p>
+<ul>
+<li><code>BABYLON.ExecuteCodeAction</code>: Execute your own code when the trigger is raised and the condition is true:</li>
+</ul>
+<p><code>ExecuteCodeAction(trigger, func, condition)</code></p>
+<ul>
+<li><code>BABYLON.SetParentAction</code>: Used to define the parent of a node (camera, light, mesh):</li>
+</ul>
+<p><code>SetParentAction(trigger, target, parent, condition)</code></p>
+<ul>
+<li><code>BABYLON.InterpolateValueAction</code>: This action creates an animation to interpolate the current value of a property to a given target. The following types are supported:<ul>
+<li><code>number</code></li>
+<li><code>BABYLON.Color3</code></li>
+<li><code>BABYLON.Vector3</code></li>
+<li><code>BABYLON.Quaternion</code></li>
+</ul>
+</li>
+</ul>
+<p><code>InterpolateValueAction(trigger, target, propertyPath, value, duration, condition, stopOtherAnimations)</code></p>
+<ul>
+<li><code>BABYLON.PlaySoundAction</code> and <code>BABYLON.StopSoundAction</code>: The &quot;sound&quot; parameter is the reference of the sound you created using <code>var sound = new BABYLON.Sound(...)</code></li>
+</ul>
+<p><code>PlaySoundAction(trigger, sound, condition)</code></p>
+<p><code>StopSoundAction(trigger, sound, condition)</code></p>
+<h1 id="conditions">Conditions</h1>
+<p>There are three kinds of conditions:</p>
+<ul>
+<li><code>BABYLON.ValueCondition</code>: This condition is true when a given property is equal / greater / lesser / different from a specific value. The following operands are thus supported:<ul>
+<li><code>BABYLON.ValueCondition.IsEqual</code></li>
+<li><code>BABYLON.ValueCondition.IsDifferent</code></li>
+<li><code>BABYLON.ValueCondition.IsGreater</code></li>
+<li><code>BABYLON.ValueCondition.IsLesser</code></li>
+</ul>
+</li>
+</ul>
+<p><code>ValueCondition(actionManager, target, propertyPath, value, operator)</code></p>
+<ul>
+<li><code>BABYLON.PredicateCondition</code>: This condition uses a predicate to determine its state:</li>
+</ul>
+<p><code>PredicateCondition(actionManager, predicate)</code></p>
+<ul>
+<li><code>BABYLON.StateCondition</code>: This condition checks the <code>state</code> property of an object and compares it to given value:</li>
+</ul>
+<p><code>StateCondition(actionManager, target, value)</code></p>
+<h1 id="experimenting-actions">Experimenting actions</h1>
+<p>So basically, let&#39;s imagine you want to almost hide a mesh when the user touches it.
+First of all you have to add a <code>BABYLON.ActionManager</code> on it:</p>
+<p><code>mesh.actionManager = new BABYLON.ActionManager(scene);</code></p>
+<p>Then you can create an action that will be associated with the <code>BABYLON.ActionManager.OnPickTrigger</code> trigger. This action will interpolate the <code>mesh.visibility</code> property to 0.2:</p>
+<p><code>var action = new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, mesh, &quot;visibility&quot;, 0.2, 1000);</code></p>
+<p>Then add this action to the mesh:</p>
+<p><code>mesh.actionManager.registerAction(action);</code></p>
+<p>And you&#39;re done! Easy, right?</p>
+<p>You can also chain another action to restore the <code>mesh.visibility</code> property to default value:</p>
+<p><code>var action = new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, mesh, &quot;visibility&quot;, 0.2, 1000);</code></p>
+<p><code>var action2 = new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, mesh, &quot;visibility&quot;, 1.0, 1000);</code></p>
+<p><code>mesh.actionManager.registerAction(action).then(action2);</code></p>
+<p>In this case, the first click will hide the button, the following click will restore it, and so on...</p>
+<h1 id="playground">Playground</h1>
+<p>If you want to play with actions, you can try them at our playground:
+<a href="http://www.babylonjs.com/playground/?17">http://www.babylonjs.com/playground/?17</a></p>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

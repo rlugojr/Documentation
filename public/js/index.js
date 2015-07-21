@@ -27,21 +27,16 @@
     // LEFT MENU FOR MOBILE
     // ----------------------
 
-    window.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("DOMContentLoaded", function () {
         var slideout = new Slideout({
             'panel'    : document.getElementById('wrapper'),
             'menu'     : document.getElementById('menu'),
             'padding'  : 256,
-            'tolerance': 70
+            'tolerance': 70,
+            'touch'    : false
         });
         $("#mobilemenu").click(function () {
-            if($('#menu').is(':visible')){
-                $('#menu').hide();
-                slideout.toggle();
-            } else {
-                slideout.toggle();
-                $('#menu').show();
-            }
+            slideout.toggle();
         });
     });
 })();

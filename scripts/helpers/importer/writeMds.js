@@ -12,7 +12,7 @@ module.exports = function (msgIn, cb) {
 
             var msgOut = {
                 flash: {
-                    filePath   : path.join('content/', msgIn.link.type, sanitize(page.text + '.md')),
+                    filePath   : path.join('content/', msgIn.link.type, sanitize(page.text).trim().replace(/\s/g, '_') + '.md'),
                     dataToWrite: page.content
                 }
             };

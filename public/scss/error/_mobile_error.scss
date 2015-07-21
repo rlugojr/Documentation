@@ -1,0 +1,34 @@
+/* MEDIUM SCREEN*/
+@include media($medium-screen) {
+
+}
+
+/* SMALL SCREENS VERSION */
+@include media($small-screen) {
+  #wrapper.error{
+    .error_message{
+      padding-top: $bh;
+      font-size: 64pt;
+      margin:0;
+    }
+
+    .leftie, .rightie {
+      display:none;
+
+      &.error_choice_mobile{
+        display: block;
+        text-align: center;
+        padding:0;
+
+        i{
+          font-size: 40pt;
+        }
+      }
+
+      a:hover {
+        background-color: white;
+        color:$red;
+      }
+    }
+  }
+}

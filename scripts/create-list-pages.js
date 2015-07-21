@@ -9,7 +9,6 @@ var fs = require('fs'),
 
 module.exports = function (dirs, done) {
 
-    //var tags = {};
     var msg = {};
     async.eachSeries(dirs,
         function loadFiles(dir, endIteration) {
@@ -17,7 +16,6 @@ module.exports = function (dirs, done) {
                 path: dir.path
             };
             msg[dir.name] = [];
-            //tags[dir.name] = [];
             async.waterfall([
                 async.constant(msg),
                 fsHandler.readdir,
@@ -28,11 +26,11 @@ module.exports = function (dirs, done) {
                         function readMetas(file, endIteration2) {
                             fsHandler.readFile({flash: {path: path.join(msg.flash.path, file)}},
                                 function (err, result) {
-                                    var fileData = {
-                                        name: file
-                                    };
                                     var fileMetas = marked(result.flash.readData).meta;
                                     if (fileMetas) {
+                                        var fileData = {
+                                            name: path.basename(fileMetas.PG_TITLE, '.md')
+                                        };
                                         var fileTags = fileMetas.TAGS;
                                         if (fileTags) {
                                             fileData.tags = [];
@@ -48,7 +46,6 @@ module.exports = function (dirs, done) {
                             cb(err, msg);
                         });
                 }
-                //writefile
             ], function (err, msg) {
                 /**
                  * Clean the msg objects

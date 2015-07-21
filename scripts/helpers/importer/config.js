@@ -11,7 +11,7 @@ var config = {
         {type: 'extensions', link: 'load_pages.php?index=4'}
     ],
     //list of the ids of the pages to exclude for this script
-    excluded   : [22, 21],
+    excluded   : [22, 21, 25108],
     init       : function () {
         this.loadPageUrl = this.baseUrl + this.loadPageUrl;
 

@@ -1,0 +1,108 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>extensions</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>POV</h1><br><div id="staticContent"><h1 id="point-of-view-movement-and-rotation">Point of View Movement and Rotation</h1>
+<h2 id="movement-">Movement:</h2>
+<p><img src="https://raw.githubusercontent.com/BabylonJS/Extensions/master/POV/doc-assist/POV-Movement.png" alt=""></p>
+<p><code>AbstractMesh</code> has a pair of functions which allow you to move it relative to the mesh&#39;s current position, but without regard to its current rotation. Amounts are expressed in terms so as to provide the point of view of: behind the front of the mesh.</p>
+<p>Here are their function definitions:</p>
+<pre><code class="lang-typescript">/**
+ * Perform relative position change <span class="hljs-keyword">from</span> <span class="hljs-keyword">the</span> point <span class="hljs-keyword">of</span> view <span class="hljs-keyword">of</span> <span class="hljs-keyword">behind</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">front</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> mesh.
+ * This <span class="hljs-keyword">is</span> performed taking <span class="hljs-keyword">into</span> account <span class="hljs-keyword">the</span> meshes current rotation, so you do <span class="hljs-keyword">not</span> have <span class="hljs-keyword">to</span> care.
+ * Supports definition <span class="hljs-keyword">of</span> mesh facing forward <span class="hljs-keyword">or</span> backward.
+ * @param {<span class="hljs-type">number</span>} amountRight
+ * @param {<span class="hljs-type">number</span>} amountUp
+ * @param {<span class="hljs-type">number</span>} amountForward
+ */
+movePOV(amountRight: <span class="hljs-type">number</span>, amountUp: <span class="hljs-type">number</span>, amountForward: <span class="hljs-type">number</span>): void;
+</code></pre>
+<pre><code class="lang-typescript">/**
+ * Calculate relative position change <span class="hljs-keyword">from</span> <span class="hljs-keyword">the</span> point <span class="hljs-keyword">of</span> view <span class="hljs-keyword">of</span> <span class="hljs-keyword">behind</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">front</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> mesh.
+ * This <span class="hljs-keyword">is</span> performed taking <span class="hljs-keyword">into</span> account <span class="hljs-keyword">the</span> meshes current rotation, so you do <span class="hljs-keyword">not</span> have <span class="hljs-keyword">to</span> care.
+ * Supports definition <span class="hljs-keyword">of</span> mesh facing forward <span class="hljs-keyword">or</span> backward.
+ * @param {<span class="hljs-type">number</span>} amountRight
+ * @param {<span class="hljs-type">number</span>} amountUp
+ * @param {<span class="hljs-type">number</span>} amountForward
+ */
+calcMovePOV(amountRight: <span class="hljs-type">number</span>, amountUp: <span class="hljs-type">number</span>, amountForward: <span class="hljs-type">number</span>): BABYLON.Vector3;
+</code></pre>
+<p>Moving a mesh without having to take into account current rotation, frees application code from doing so at the time, and facilitates more reusable application code.</p>
+<p>Also consider that most things in the real world move in the &quot;Forward&quot; direction the vast majority of the time. This is true even of the airplane you just shot down in your FPS shooter. Maybe it was even spiraling as well, but all you coded was &quot;Forward&quot;.</p>
+<p>It is believed that most meshes are defined with their &quot;front side&quot; facing the viewer, much the same way they are defined with their &quot;bottom&quot; below their &quot;top&quot;. However, there is a switch in <code>AbstractMesh</code>, <code>definedFacingForward</code>, which can be set to false. Doing so implies it is defined facing backwards instead. </p>
+<h2 id="rotation-">Rotation:</h2>
+<p><em>to do: make an image for rotation</em></p>
+<p>There are also similar functions for rotation. Rotation does not have as strong a relationship with Point-of-View as positioning, but they do take into account <code>definedFacingForward</code>. Their argument terminology is also less &quot;alien&quot; than that of either pilot (yaw-pitch-roll) or mathematics (alpha-beta-gamma). This is even more helpful if rotating in multiple axis&#39;s.</p>
+<pre><code class="lang-typescript">/**
+ * Perform relative rotation change <span class="hljs-keyword">from</span> <span class="hljs-keyword">the</span> point <span class="hljs-keyword">of</span> view <span class="hljs-keyword">of</span> <span class="hljs-keyword">behind</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">front</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> mesh.
+ * Supports definition <span class="hljs-keyword">of</span> mesh facing forward <span class="hljs-keyword">or</span> backward.
+ * @param {<span class="hljs-type">number</span>} flipBack
+ * @param {<span class="hljs-type">number</span>} twirlClockwise
+ * @param {<span class="hljs-type">number</span>} tiltRight
+ */
+rotatePOV(flipBack: <span class="hljs-type">number</span>, twirlClockwise: <span class="hljs-type">number</span>, tiltRight: <span class="hljs-type">number</span>): void;
+</code></pre>
+<pre><code class="lang-typescript">/**
+ * Calculate relative rotation change <span class="hljs-keyword">from</span> <span class="hljs-keyword">the</span> point <span class="hljs-keyword">of</span> view <span class="hljs-keyword">of</span> <span class="hljs-keyword">behind</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">front</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> mesh.
+ * Supports definition <span class="hljs-keyword">of</span> mesh facing forward <span class="hljs-keyword">or</span> backward.
+ * @param {<span class="hljs-type">number</span>} flipBack
+ * @param {<span class="hljs-type">number</span>} twirlClockwise
+ * @param {<span class="hljs-type">number</span>} tiltRight
+ */
+calcRotatePOV(flipBack: <span class="hljs-type">number</span>, twirlClockwise: <span class="hljs-type">number</span>, tiltRight: <span class="hljs-type">number</span>): BABYLON.Vector3;
+</code></pre>
+<h1 id="pov-before-render-extension">POV Before Render Extension</h1>
+<p><img src="https://raw.githubusercontent.com/BabylonJS/Extensions/master/POV/doc-assist/POV-System.png" alt=""></p>
+<h2 id="introduction">Introduction</h2>
+<p>The functions inside of <code>AbstractMesh</code> are just raw material, so that they could be called under any circumstance. A queue based, POV before render animation system uses these methods to achieve coordinated, stepwise, movement &amp; rotation. It can be found in the <a href="https://github.com/BabylonJS/Extensions/tree/master/POV">Extensions</a> repository.</p>
+<p>This enables meshes to move more like they do in the real world. Most people and vehicles turn (twirl) at the same time as moving forward, not behave as if they are marching. Babylon&#39;s animation system can perform concurrent animations, but since animations are independent, it would just move in a single direction while twirling.</p>
+<p>It is also crucial that &quot;Forward&quot; be redefined every frame, or stepwise. Even if a POV move was made for Babylon&#39;s animation system, without a rewrite, &quot;Forward&quot; and the final position based on it would be defined only once at the beginning. </p>
+<p>POV was developed for MORPH. Conveniently, MORPH already was using a before renderer, so adding on inside the render fit like a glove. This made the overall system quite large though, and harder to document. Meshes which perform no morphing also could not use it. It has now been made standalone, and MORPH now subclasses it.</p>
+<h2 id="motion-event">Motion Event</h2>
+<p>A <code>MotionEvent</code> is the base unit of the system. It holds the directions to perform an animation. They can be made in advance and reused, but it is not a good idea to share them across meshes. This is because they manage state when they are the event currently being performed.</p>
+<pre><code class="lang-typescript">/**
+ * Take <span class="hljs-keyword">in</span> all the motion event info. Movement &amp; rotation are both optional, but both being <span class="hljs-literal">null</span> <span class="hljs-keyword">is</span> usually <span class="hljs-keyword">for</span> <span class="hljs-keyword">sub</span>-classing.
+ * 
+ * @param {number} _milliDuration - The number of milli seconds the event <span class="hljs-keyword">is</span> <span class="hljs-keyword">to</span> be completed <span class="hljs-keyword">in</span>
+ * @param {number} _millisBefore - Fixed wait period, once a syncPartner (<span class="hljs-keyword">if</span> any) <span class="hljs-keyword">is</span> also ready (<span class="hljs-keyword">default</span> <span class="hljs-number">0</span>)
+ * When negative, no delay <span class="hljs-keyword">if</span> being repeated <span class="hljs-keyword">in</span> an EventSeries
+ * @param {Vector3} movePOV - Mesh movement relative <span class="hljs-keyword">to</span> its current position/rotation <span class="hljs-keyword">to</span> be performed <span class="hljs-keyword">or</span> <span class="hljs-literal">null</span>
+ * <span class="hljs-built_in">right</span>-up-forward
+ * @param {Vector3} rotatePOV - Incremental Mesh rotation <span class="hljs-keyword">to</span> be performed <span class="hljs-keyword">or</span> <span class="hljs-literal">null</span>
+ * flipBack-twirlClockwise-tiltRight
+ * @param {Pace} _pace - Any Object <span class="hljs-keyword">with</span> the <span class="hljs-keyword">function</span>: getCompletionMilestone(currentDurationRatio) (<span class="hljs-keyword">default</span> Pace.LINEAR)
+ */
+constructor(
+    <span class="hljs-keyword">private</span> _milliDuration : number, 
+    <span class="hljs-keyword">private</span> _millisBefore : number, 
+    <span class="hljs-keyword">public</span> movePOV : BABYLON.Vector3, 
+    <span class="hljs-keyword">public</span> rotatePOV : BABYLON.Vector3, 
+    <span class="hljs-keyword">private</span> _pace : Pace = Pace.LINEAR)
+</code></pre>
+<h2 id="event-series">Event Series</h2>
+<p>An <code>EventSeries</code>, consisting of an array of &#39;MotionEvent&#39;s, is the unit placed in the render queue.</p>
+<pre><code class="lang-typescript">/**
+ * Validate each <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> events passed.
+ * @param {Array} _eventSeries - Elements must either be a MotionEvent, Action, <span class="hljs-keyword">or</span> function.
+ * @param {<span class="hljs-type">number</span>} _nRepeats - Number <span class="hljs-keyword">of</span> <span class="hljs-keyword">times</span> <span class="hljs-keyword">to</span> <span class="hljs-command">run</span> <span class="hljs-keyword">through</span> series elements. There <span class="hljs-keyword">is</span> sync across runs. (Default <span class="hljs-number">1</span>)
+ * @param {<span class="hljs-type">number</span>} _initialWallclockProrating - The factor <span class="hljs-keyword">to</span> multiply <span class="hljs-keyword">the</span> duration <span class="hljs-keyword">of</span> a MotionEvent <span class="hljs-keyword">before</span> <span class="hljs-keyword">returning</span>.
+ * Amount <span class="hljs-keyword">is</span> decreased <span class="hljs-keyword">or</span> increased across repeats, so <span class="hljs-keyword">that</span> <span class="hljs-keyword">it</span> <span class="hljs-keyword">is</span> <span class="hljs-number">1</span> <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> final <span class="hljs-keyword">repeat</span>. Facilitates
+ * acceleration when &gt; <span class="hljs-number">1</span>, &amp; deceleration when &lt; <span class="hljs-number">1.</span> (Default <span class="hljs-number">1</span>)
+ */
+constructor(public _eventSeries : Array&lt;any&gt;, public _nRepeats = <span class="hljs-number">1</span>, public _initialWallclockProrating = <span class="hljs-number">1.0</span>)
+</code></pre>
+<h2 id="series-queue">Series Queue</h2>
+<h2 id="attaching-to-mesh">Attaching to Mesh</h2>
+<h2 id="playground-example">Playground Example</h2>
+<h2 id="advanced-features">Advanced Features</h2>
+<h3 id="action-system-integration">Action System Integration</h3>
+<h3 id="synchronized-movement-between-meshes">Synchronized movement between meshes</h3>
+<p>Different meshes can move in coordination with each other. A <code>MotionEvent</code> of each is said to be a sync partner of the other. Using this can cause hangs unless the <code>EventSeries</code> of each is queued on each mesh at the same time.</p>
+<p>The sync partner of a <code>MotionEvent</code> cannot be part of the constructor, since how would the partner of the first to be instanced be passed? After construction, the <code>setSyncPartner</code> function of each is then called:</p>
+<pre><code class="lang-typescript">/<span class="hljs-keyword">*</span><span class="hljs-keyword">*</span>
+ <span class="hljs-keyword">*</span> <span class="hljs-comment">@param {MotionEvent} syncPartner - MotionEvent which should start at the same time as this one.</span>
+ <span class="hljs-keyword">*</span>/
+public setSyncPartner(syncPartner : MotionEvent) : void{
+</code></pre>
+<h3 id="non-linear-pacing">Non-Linear Pacing</h3>
+<h3 id="series-level-acceleration-deceleration">Series Level Acceleration-Deceleration</h3>
+<h2 id="up-coming-features-for-version-1-1">Up Coming Features for Version 1.1</h2>
+<p>The first new feature is a method to clear what the mesh is currently doing and or clear what is queued to do next. </p>
+<p>The second is to integrate optional sound to start playing at the beginning of a <code>MotionEvent</code>. Timing of audio to motion is very often important to make things believable. The Sound object is passed in the <code>MotionEvent</code> constructor. When the <code>MotionEvent</code> is activated by the before-renderer, the sound will be checked if it is ready to play. If not, the event will enter a wait state until the frame that the sound indicates ready. Should a sound be part of an event that is stopped, the playing will also be stopped.</p>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

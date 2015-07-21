@@ -1,0 +1,85 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>14. Height Map</h1><br><div id="staticContent"><h3 id="in-this-tutorial-our-goal-is-to-understand-height-maps-and-to-learn-how-to-generate-realistic-grounds-">In this tutorial, our goal is to understand height maps, and to learn how to generate realistic grounds.</h3>
+<p><img src="http://www.babylonjs.com/tutorials/14%20-%20Height%20map/14.png" alt="HeightMap"></p>
+<p><em>Final result</em></p>
+<h2 id="how-can-i-do-this-">How can I do this ?</h2>
+<ul>
+<li><strong>Introduction</strong></li>
+</ul>
+<p>Those mountains are very easy to generate with Babylon.js, and with only a single function. But before we do that, we have to create a new material, like we have done many times before:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> groundMaterial = <span class="hljs-keyword">new</span> BABYLON.StandardMaterial(<span class="hljs-string">"ground"</span>, scene);
+groundMaterial.diffuseTexture = <span class="hljs-keyword">new</span> BABYLON.Texture(<span class="hljs-string">"Earth__land.jpg"</span>, scene);
+
+<span class="hljs-keyword">var</span> groundPlane = BABYLON.Mesh.CreatePlane(<span class="hljs-string">"groundPlane"</span>, <span class="hljs-number">200.0</span>, scene);
+groundPlane.material = groundMaterial;
+</code></pre>
+<p><img src="http://www.babylonjs.com/tutorials/14%20-%20Height%20map/14-1.png" alt="HeightMap2"></p>
+<p><em>Our material, a texture, applied to the plane</em></p>
+<ul>
+<li><strong>Explanations of a height map</strong></li>
+</ul>
+<p>Understanding height maps is the main objective of this tutorial. A height map is simply a greyscale image like the one we are going to use:</p>
+<p><img src="http://www.babylonjs.com/tutorials/14%20-%20Height%20map/worldHeightMap.jpg" alt="HeightMap3"></p>
+<p>This image will now be used to generate our ground, using the different variants of gray of our picture. This image is the elevation data for your ground. Each pixel’s color is interpreted as a distance of displacement or “height” from the “floor” of your mesh. So, the whiter the pixel is, the taller your mountain will be.</p>
+<p>To help you generate those gray-scale height maps, you can use software such as “Terragen”, or ”Picogen”. </p>
+<ul>
+<li><strong>Javascript code</strong></li>
+</ul>
+<p>Now let’s see this powerful function named “CreateGroundFromHeightMap”:</p>
+<pre><code class="lang-javascript"><span class="hljs-variable"><span class="hljs-keyword">var</span> ground</span> = BABYLON.Mesh.CreateGroundFromHeightMap(<span class="hljs-string">"ground"</span>, <span class="hljs-string">"worldHeightMap.jpg"</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">250</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>, scene, <span class="hljs-literal">false</span>, successCallback);
+</code></pre>
+<p>Many parameters here:</p>
+<ul>
+<li><em>Name</em></li>
+<li><em>Height map picture url</em></li>
+<li>Size of this mesh: </li>
+<li><blockquote>
+<p><em>Width</em></p>
+</blockquote>
+</li>
+<li><blockquote>
+<p><em>Height</em></p>
+</blockquote>
+</li>
+<li><em>Number of subdivisions</em>: increase the complexity of this mesh in order to improve the visual quality of it:</li>
+</ul>
+<p><img src="http://www.babylonjs.com/tutorials/14%20-%20Height%20map/14-2.png" alt="HeightMap4"></p>
+<ul>
+<li><em>Minimum height</em> : The lowest level of the mesh</li>
+<li><em>Maximum height</em> : the highest level of the mesh</li>
+<li><em>Scene</em>: the actual scene</li>
+<li><em>Updatable</em>: indicates if this mesh can be updated dynamically in the future (Boolean)</li>
+<li>successCallback : will be called after the height map was created and the vertex data is created. It is a function with the mesh as its first variable.</li>
+</ul>
+<p>Finally, when our new mesh is ready, we simply apply our material:</p>
+<pre><code class="lang-javascript">ground.material = groundMaterial<span class="hljs-comment">;</span>
+</code></pre>
+<p>And now we have a beautiful 3D view of the earth!</p>
+<p><img src="http://www.babylonjs.com/tutorials/14%20-%20Height%20map/14-3.png" alt="HeightMap4"></p>
+<p>In my example, I have added a skybox (like we have learned before <a href="https://github.com/BabylonJS/Babylon.js/wiki/13-Environment">here</a>), and a spotlight to simulate sun activity.</p>
+<p>Here is another example showing what you can achieve with BabylonJS height maps:</p>
+<p><img src="http://www.babylonjs.com/tutorials/14%20-%20Height%20map/14-4.png" alt="HeightMap5"></p>
+<ul>
+<li><strong>Tips</strong></li>
+</ul>
+<p>When the user is manipulating the camera, it can be awkward if he can see under the ground, or if he zooms-out outside the skybox. So, to avoid that kind of situation, we can constrain the camera movement:</p>
+<pre><code class="lang-javascript">var camerasBorderFunction = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+        <span class="hljs-comment">//Angle</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-params">(camera.beta &lt; <span class="hljs-number">0.1</span>)</span>
+            camera.beta = <span class="hljs-number">0.1</span>;
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> <span class="hljs-params">(camera.beta &gt; <span class="hljs-params">(Math.<span class="hljs-literal">PI</span> / <span class="hljs-number">2</span>)</span> * <span class="hljs-number">0.9</span>)</span>
+            camera.beta = <span class="hljs-params">(Math.<span class="hljs-literal">PI</span> / <span class="hljs-number">2</span>)</span> <span class="hljs-built_in">*</span> <span class="hljs-number">0.9</span>;
+
+  <span class="hljs-comment">//Zoom</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-params">(camera.radius &gt; <span class="hljs-number">150</span>)</span>
+            camera.radius = <span class="hljs-number">150</span>;
+
+        <span class="hljs-keyword">if</span> <span class="hljs-params">(camera.radius &lt; <span class="hljs-number">30</span>)</span>
+            camera.radius = <span class="hljs-number">30</span>;
+    };
+
+    scene.registerBeforeRender<span class="hljs-params">(camerasBorderFunction)</span>;
+</code></pre>
+<p>You may be interested in visiting <a href="http://babylonjs-playground.azurewebsites.net/?14"><strong>the playground demo</strong></a> that goes with this tutorial.</p>
+<h2 id="next-step">Next step</h2>
+<p>Well done! Your scene looks good now, and you can imagine a lot of new landscapes! One more important thing you need to know is <a href="http://babylondoc.azurewebsites.net/page.php?p=22151">how to create shadows</a>. Shadows will give your scene a beautiful rendering effect, don&#39;t forget it!</p>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

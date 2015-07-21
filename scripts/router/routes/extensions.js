@@ -28,7 +28,18 @@ router.get('/', function(req, res) {
 });
 
 router.get('/:extension', function(req, res){
+    var options = {
+        root: path.join(appRoot, 'public/html')
+    };
 
+    var extension = req.params.extension;
+
+    res.status(200);
+    res.set({
+        'Content-type':'text/html',
+        'Cache-Control': 'no-cache'
+    });
+    res.sendFile('./extensions/'+ extension +'.html', options);
 });
 
 module.exports = router;

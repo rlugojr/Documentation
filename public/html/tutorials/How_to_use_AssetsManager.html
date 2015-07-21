@@ -1,0 +1,64 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to use AssetsManager</h1><br><div id="staticContent"><p>In order to help developers load multiple assets, Babylon.js (starting with version 1.14) introduced the AssetsManager class.</p>
+<p>This class can be used to import meshes into a scene or load text and binary files.</p>
+<h2 id="using-assetsmanager">Using AssetsManager</h2>
+<p>To use it, you just have to instantiate it with a current scene:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> assetsManager = <span class="hljs-keyword">new</span> BABYLON.AssetsManager(scene);
+</code></pre>
+<p>Then you can add tasks to the manager:</p>
+<pre><code class="lang-javascript"><span class="hljs-variable"><span class="hljs-keyword">var</span> meshTask</span> = assetsManager.addMeshTask(<span class="hljs-string">"skull task"</span>, <span class="hljs-string">""</span>, <span class="hljs-string">"./"</span>, <span class="hljs-string">"skull.babylon"</span>);
+</code></pre>
+<p>Each task provides an <code>onSuccess</code> and an <code>onError</code> callback:</p>
+<pre><code class="lang-javascript">meshTask.onSuccess = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(task)</span> </span>{
+    task.loadedMeshes[<span class="hljs-number">0</span>].position = <span class="hljs-keyword">new</span> BABYLON.Vector3(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+}
+</code></pre>
+<p>You can do the same thing but with text and binary files:</p>
+<pre><code class="lang-javascript">var textTask = assetsManager.addTextFileTask<span class="hljs-params">(<span class="hljs-string">"text task"</span>, <span class="hljs-string">"msg.txt"</span>)</span>;
+textTask.onSuccess = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(task)</span> {</span>
+    console.<span class="hljs-built_in">log</span><span class="hljs-params">(task.text)</span>;
+}
+
+var binaryTask = assetsManager.addBinaryFileTask<span class="hljs-params">(<span class="hljs-string">"binary task"</span>, <span class="hljs-string">"grass.jpg"</span>)</span>;
+binaryTask.onSuccess = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(task)</span> {</span>
+    <span class="hljs-comment">// Do something with task.data</span>
+}
+</code></pre>
+<p>Images are also supported through imageTask:</p>
+<pre><code class="lang-javascript">var imageTask = assetsManager.addImageTask<span class="hljs-params">(<span class="hljs-string">"image task"</span>, <span class="hljs-string">"img.jpg"</span>)</span>;
+imageTask.onSuccess = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(task)</span> {</span>
+    console.<span class="hljs-built_in">log</span><span class="hljs-params">(task.image.width)</span>;
+}
+</code></pre>
+<p>Textures can also be loaded, through textureTask:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> textureTask = assetsManager.addTextureTask(<span class="hljs-string">"image task"</span>, <span class="hljs-string">"img.jpg"</span>);
+textureTask.onSuccess = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(task)</span> </span>{
+    material.diffuseTexture = task.texture;
+}
+</code></pre>
+<p>The manager itself provides three callbacks:</p>
+<ul>
+<li>onFinish</li>
+<li>onTaskSuccess</li>
+<li>onTaskError</li>
+</ul>
+<pre><code class="lang-javascript">assetsManager.onFinish = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(tasks)</span> </span>{
+    engine.runRenderLoop(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+        scene.render();
+    }),
+};
+</code></pre>
+<p>Finally, to launch all the tasks, you have to call <code>assetsManager.load();</code></p>
+<p>You can see a live demo <a href="http://www.babylonjs.com/scenes/assets">here</a></p>
+<h2 id="using-loading-screen">Using loading screen</h2>
+<p>By default, the AssetsManager will display a loading screen while loading assets:</p>
+<p><img src="http://www.babylonjs.com/Screenshots/assets.jpg" alt=""></p>
+<p>If you want to disable the loading screen, you have to set <code>assetsManager.useDefaultLoadingScreen</code> to false.</p>
+<p>The loading screen will also be displayed while loading a scene using SceneLoader if <code>BABYLON.SceneLoader.ShowLoadingScreen</code> is set to true (by default).</p>
+<p>In the same way, you can also display or hide the loading screen manually using these functions:</p>
+<ul>
+<li><code>engine.displayLoadingUI()</code></li>
+<li><code>engine.hideLoadingUI()</code></li>
+</ul>
+<p>Loading text is controlled using <code>engine.loadingUIText = &quot;text&quot;</code></p>
+<p>Background color is controlled using <code>engine.loadingUIBackgroundColor = &quot;red&quot;</code> for instance.</p>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

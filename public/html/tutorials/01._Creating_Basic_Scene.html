@@ -1,0 +1,209 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>01. Creating Basic Scene</h1><br><div id="staticContent"><h3 id="in-this-tutorial-we-are-going-to-create-a-basic-3d-scene-with-babylon-js-">In this tutorial, we are going to create a basic 3D scene with Babylon.js.</h3>
+<p><img src="http://urbanproductions.com/wingy/babylon/misc/tut01pic01.jpg" alt="Babylon JS 01"></p>
+<p><em>Two Basic Shapes in a Basic Scene</em></p>
+<p>Before you start, be sure you have a WebGL compatible browser (e.g.  Internet Explorer 11+, Firefox 4+, Google Chrome 9+, Opera 15+, etc.).</p>
+<h3 id="the-html-part">The HTML Part</h3>
+<p>First, create a basic HTML5 web page:</p>
+<pre><code class="lang-html"><span class="hljs-doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">"http://www.w3.org/1999/xhtml"</span>&gt;</span>
+
+   <span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">http-equiv</span>=<span class="hljs-value">"Content-Type"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"text/html; charset=utf-8"</span>/&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Babylon - Basic scene<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+
+   <span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+<h3 id="the-css-style-part">The CSS Style Part</h3>
+<p>Inside the <code>&lt;head&gt;</code> part, please add this CSS to view the canvas in maximum size:</p>
+<pre><code class="lang-css"><span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+  <span class="hljs-tag">html</span>, <span class="hljs-tag">body</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">overflow</span>:<span class="hljs-value"> hidden</span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+  }</span>
+
+  <span class="hljs-id">#renderCanvas</span> <span class="hljs-rules">{
+    <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+    <span class="hljs-rule"><span class="hljs-attribute">touch-action</span>:<span class="hljs-value"> none</span></span>;
+  }</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+</code></pre>
+<h3 id="the-javascript-external-includes-part-the-framework-">The Javascript External Includes Part (the framework)</h3>
+<p>Now we load our framework files.  After the CSS, (but still inside the <code>&lt;head&gt;</code> part), please add:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"babylon.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"hand.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"cannon.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>  <span class="hljs-comment">&lt;!-- optional physics engine --&gt;</span>
+<span class="hljs-comment">&lt;!-- &lt;script src="Oimo.js"&gt;&lt;/script&gt;  New physics engine --&gt;</span>
+</code></pre>
+<p>(if you don&#39;t already have those files, you can find them here: <a href="https://github.com/BabylonJS/Babylon.js">https://github.com/BabylonJS/Babylon.js</a>, and here: <a href="http://handjs.codeplex.com/">http://handjs.codeplex.com/</a>)</p>
+<p>Next, we go inside the <code>&lt;body&gt;</code> part of the web page... and add a HTML5 canvas element, which will be used to draw our scene.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">canvas</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"renderCanvas"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">canvas</span>&gt;</span>
+</code></pre>
+<p>Now, we make the jump from HTML5 into Javascript.  Still inside the <code>&lt;body&gt;</code> part of the web page,  please add:</p>
+<pre><code class="lang-javascript"><span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="http">
+
+<span class="dart">  <span class="hljs-comment">// Get the canvas element from our HTML above</span>
+  <span class="hljs-keyword">var</span> canvas = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"renderCanvas"</span>);
+
+  <span class="hljs-comment">// Load the BABYLON 3D engine</span>
+  <span class="hljs-keyword">var</span> engine = <span class="hljs-keyword">new</span> BABYLON.Engine(canvas, <span class="hljs-keyword">true</span>);</span></span>
+</code></pre>
+<p>After this, you will add your scene creation code.  To keep your code compatible with the Babylon.js Playground, we recommend that you insert a &#39;createScene&#39; function at this point.  Besides generating a Babylon Scene object, createScene() is where you will add your basic scene requirements:  One camera, one light, and one or more shapes/meshes.</p>
+<p>So now, add this entire createScene function to your web page:</p>
+<pre><code class="lang-javascript">  <span class="hljs-comment">// This begins the creation of a function that we will 'call' just after it's built</span>
+  <span class="hljs-keyword">var</span> createScene = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+
+    <span class="hljs-comment">// Now create a basic Babylon Scene object </span>
+    <span class="hljs-keyword">var</span> scene = <span class="hljs-keyword">new</span> BABYLON.Scene(engine);
+
+    <span class="hljs-comment">// Change the scene background color to green.</span>
+    scene.clearColor = <span class="hljs-keyword">new</span> BABYLON.Color3(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>);
+
+    <span class="hljs-comment">// This creates and positions a free camera</span>
+    <span class="hljs-keyword">var</span> camera = <span class="hljs-keyword">new</span> BABYLON.FreeCamera(<span class="hljs-string">"camera1"</span>, <span class="hljs-keyword">new</span> BABYLON.Vector3(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>, -<span class="hljs-number">10</span>), scene);
+
+    <span class="hljs-comment">// This targets the camera to scene origin</span>
+    camera.setTarget(BABYLON.Vector3.Zero());
+
+    <span class="hljs-comment">// This attaches the camera to the canvas</span>
+    camera.attachControl(canvas, <span class="hljs-literal">false</span>);
+
+    <span class="hljs-comment">// This creates a light, aiming 0,1,0 - to the sky.</span>
+    <span class="hljs-keyword">var</span> light = <span class="hljs-keyword">new</span> BABYLON.HemisphericLight(<span class="hljs-string">"light1"</span>, <span class="hljs-keyword">new</span> BABYLON.Vector3(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>), scene);
+
+    <span class="hljs-comment">// Dim the light a small amount</span>
+    light.intensity = .<span class="hljs-number">5</span>;
+
+    <span class="hljs-comment">// Let's try our built-in 'sphere' shape. Params: name, subdivisions, size, scene</span>
+    <span class="hljs-keyword">var</span> sphere = BABYLON.Mesh.CreateSphere(<span class="hljs-string">"sphere1"</span>, <span class="hljs-number">16</span>, <span class="hljs-number">2</span>, scene);
+
+    <span class="hljs-comment">// Move the sphere upward 1/2 its height</span>
+    sphere.position.y = <span class="hljs-number">1</span>;
+
+    <span class="hljs-comment">// Let's try our built-in 'ground' shape.  Params: name, width, depth, subdivisions, scene</span>
+    <span class="hljs-keyword">var</span> ground = BABYLON.Mesh.CreateGround(<span class="hljs-string">"ground1"</span>, <span class="hljs-number">6</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, scene);
+
+    <span class="hljs-comment">// Leave this function</span>
+    <span class="hljs-keyword">return</span> scene;
+
+  };  <span class="hljs-comment">// End of createScene function</span>
+</code></pre>
+<p>Yes, that is quite a function, but do not let it scare you.  You will learn more about the parameters and properties for lights, cameras, and built-in shapes... in the tutorials to come.  The main thing to know is that our createScene function has all requirements complete.  It contains:  </p>
+<ul>
+<li>a Babylon Scene object</li>
+<li>a camera that has been attached</li>
+<li>a light that has been aimed</li>
+<li>a sphere that has been placed at position 0,1,0 (we moved it upward +y)</li>
+<li>a ground plane that has been placed at position 0,0,0 (default position)</li>
+</ul>
+<p>There are three more things to add to your web page.  First, a &#39;call&#39; to the createScene function that we just completed.  Add this:</p>
+<pre><code class="lang-javascript">  <span class="hljs-comment">// Now, call the createScene function that you just finished creating</span>
+  <span class="hljs-variable"><span class="hljs-keyword">var</span> scene</span> = createScene();
+</code></pre>
+<p>Then, the all-important rendering loop.  Add this:</p>
+<pre><code class="lang-javascript">  <span class="hljs-comment">// Register a render loop to repeatedly render the scene</span>
+  engine.runRenderLoop(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+    scene.render();
+  });
+</code></pre>
+<p>And last, an optional but handy canvas/window resize event handler.  Add this:</p>
+<pre><code class="lang-javascript">  <span class="hljs-comment">// Watch for browser/canvas resize events</span>
+  <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"resize"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    engine.resize();
+  });
+</code></pre>
+<p>There.  All the Javascript inserting is done.  Make sure you close the script, body, and html elements. The last three lines of your HTML5 web page... should be:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;/script&gt;</span>
+<span class="hljs-tag">&lt;/body&gt;</span>
+<span class="hljs-tag">&lt;/html&gt;</span>
+</code></pre>
+<p>You are done! Save your file (in the same folder as babylon.js, hand.js, and cannon.js) and browse it with your WebGL-ready browser.  You should see your new scene displayed in 3D on its canvas.</p>
+<p>A near-exact duplicate of the createScene function used in this tutorial... can be seen <a href="http://www.babylonjs.com/playground/#1GM4YQ"><strong>RIGHT HERE</strong></a> at the Babylon.js Playground.  You will also see the scene render LIVE, ONLINE!  Use the playground&#39;s &#39;Get .zip&#39; choice if you want to download the entire index.html file used in this tutorial.</p>
+<h2 id="got-troubles-">Got Troubles?</h2>
+<p>Here is what the entire web page should look like:</p>
+<pre><code class="lang-html"><span class="hljs-doctype">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"utf-8"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Babylon - Basic scene<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css">
+      <span class="hljs-tag">html</span>, <span class="hljs-tag">body</span> <span class="hljs-rules">{
+         <span class="hljs-rule"><span class="hljs-attribute">overflow</span>:<span class="hljs-value"> hidden</span></span>;
+         <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+         <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+         <span class="hljs-rule"><span class="hljs-attribute">margin</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+         <span class="hljs-rule"><span class="hljs-attribute">padding</span>:<span class="hljs-value"> <span class="hljs-number">0</span></span></span>;
+      }</span>
+      <span class="hljs-id">#renderCanvas</span> <span class="hljs-rules">{
+         <span class="hljs-rule"><span class="hljs-attribute">width</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+         <span class="hljs-rule"><span class="hljs-attribute">height</span>:<span class="hljs-value"> <span class="hljs-number">100%</span></span></span>;
+         <span class="hljs-rule"><span class="hljs-attribute">touch-action</span>:<span class="hljs-value"> none</span></span>;
+      }</span>
+   </span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"babylon.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"hand.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"cannon.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span> <span class="hljs-comment">&lt;!-- optional physics engine --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">canvas</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"renderCanvas"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">canvas</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text/javascript"</span>&gt;</span><span class="javascript">
+      <span class="hljs-comment">// Get the canvas element from our HTML below</span>
+      <span class="hljs-keyword">var</span> canvas = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">"#renderCanvas"</span>);
+      <span class="hljs-comment">// Load the BABYLON 3D engine</span>
+      <span class="hljs-keyword">var</span> engine = <span class="hljs-keyword">new</span> BABYLON.Engine(canvas, <span class="hljs-literal">true</span>);
+      <span class="hljs-comment">// -------------------------------------------------------------</span>
+      <span class="hljs-comment">// Here begins a function that we will 'call' just after it's built</span>
+      <span class="hljs-keyword">var</span> createScene = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+         <span class="hljs-comment">// Now create a basic Babylon Scene object</span>
+         <span class="hljs-keyword">var</span> scene = <span class="hljs-keyword">new</span> BABYLON.Scene(engine);
+         <span class="hljs-comment">// Change the scene background color to green.</span>
+         scene.clearColor = <span class="hljs-keyword">new</span> BABYLON.Color3(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>);
+         <span class="hljs-comment">// This creates and positions a free camera</span>
+         <span class="hljs-keyword">var</span> camera = <span class="hljs-keyword">new</span> BABYLON.FreeCamera(<span class="hljs-string">"camera1"</span>, <span class="hljs-keyword">new</span> BABYLON.Vector3(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>, -<span class="hljs-number">10</span>), scene);
+         <span class="hljs-comment">// This targets the camera to scene origin</span>
+         camera.setTarget(BABYLON.Vector3.Zero());
+         <span class="hljs-comment">// This attaches the camera to the canvas</span>
+         camera.attachControl(canvas, <span class="hljs-literal">false</span>);
+         <span class="hljs-comment">// This creates a light, aiming 0,1,0 - to the sky.</span>
+         <span class="hljs-keyword">var</span> light = <span class="hljs-keyword">new</span> BABYLON.HemisphericLight(<span class="hljs-string">"light1"</span>, <span class="hljs-keyword">new</span> BABYLON.Vector3(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>), scene);
+         <span class="hljs-comment">// Dim the light a small amount</span>
+         light.intensity = .<span class="hljs-number">5</span>;
+         <span class="hljs-comment">// Let's try our built-in 'sphere' shape. Params: name, subdivisions, size, scene</span>
+         <span class="hljs-keyword">var</span> sphere = BABYLON.Mesh.CreateSphere(<span class="hljs-string">"sphere1"</span>, <span class="hljs-number">16</span>, <span class="hljs-number">2</span>, scene);
+         <span class="hljs-comment">// Move the sphere upward 1/2 its height</span>
+         sphere.position.y = <span class="hljs-number">1</span>;
+         <span class="hljs-comment">// Let's try our built-in 'ground' shape. Params: name, width, depth, subdivisions, scene</span>
+         <span class="hljs-keyword">var</span> ground = BABYLON.Mesh.CreateGround(<span class="hljs-string">"ground1"</span>, <span class="hljs-number">6</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, scene);
+         <span class="hljs-comment">// Leave this function</span>
+         <span class="hljs-keyword">return</span> scene;
+      }; <span class="hljs-comment">// End of createScene function</span>
+      <span class="hljs-comment">// -------------------------------------------------------------</span>
+      <span class="hljs-comment">// Now, call the createScene function that you just finished creating</span>
+      <span class="hljs-keyword">var</span> scene = createScene();
+      <span class="hljs-comment">// Register a render loop to repeatedly render the scene</span>
+      engine.runRenderLoop(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+         scene.render();
+      });
+      <span class="hljs-comment">// Watch for browser/canvas resize events</span>
+      <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"resize"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+         engine.resize();
+      });
+   </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</code></pre>
+<h2 id="moving-on">Moving On</h2>
+<p>From this point forward in the Basic Series tutorials, I will mostly talk about things that are contained in the createScene function (the part between the dashed lines). I will assume that you already know how to insert a createScene function into a Babylon.js HTML5 scene document (like the one above).</p>
+<p>Try to memorize this web page layout, and see how the createScene function is at the heart of it. After you have spent some time using the Babylon.js Playground, you will see how createScene() is portable, and can be easily copied and pasted TO and FROM the playground editor window. This will allow others to help you with problems, and will also allow you to help others with their problems.</p>
+<h2 id="next-step">Next step</h2>
+<hr>
+<p>Now you are ready to go further and learn how to create more elements like spheres, cylinders, boxes, etc.</p>
+<p>Next in the Playpen Series - <a href="http://babylondoc.azurewebsites.net/page.php?p=22011"><strong>02-Basic elements</strong></a></p>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

@@ -8,7 +8,7 @@
   .error_message{
     color: $red;
     font-size: 220pt;
-    margin: 5px 0 10px 0;
+    margin: 0;
     font-family: $font-title;
   }
 
@@ -23,10 +23,10 @@
     text-decoration: underline;
   }
 
-  // Go back or browse all classes
   .leftie, .rightie {
     @include span-columns(6);
     cursor: pointer;
+//    margin:0 auto;
 
     a {
       padding : 15px;
@@ -38,6 +38,10 @@
       i {
         margin : 0 15px 0 15px;
       }
+    }
+
+    &.error_choice_mobile{
+      display: none;
     }
   }
 

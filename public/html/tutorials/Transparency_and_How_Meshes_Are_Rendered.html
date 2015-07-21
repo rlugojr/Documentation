@@ -1,0 +1,94 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>Transparency and How Meshes Are Rendered</h1><br><div id="staticContent"><p>This article has been written to help you understand how things are drawn on screen, and how transparency is handled in BabylonJS. Feel free to contribute in whatever way seems fit to you!</p>
+<h1 id="general-considerations">General Considerations</h1>
+<p>A general rule of thumb in real-time 3D rendering is that drawing several overlapping opaque objects is always easier than non-opaque ones. This is due to the fact that opaque objects are compatible with the use of a depth buffer, and thus no specific order is required when rendering them.</p>
+<p>A depth buffer is a surface using the same dimensions as the screen, and holding for every pixel the following information: how far from the camera was the last pixel drawn here. With this information, we can draw as many objects as we want and always be sure that we will never draw something that was supposed to be hidden by another object. BabylonJS offers access to this information with a special DepthRenderer object, as described <a href="http://doc.babylonjs.com/page.php?p=24825">here</a>. </p>
+<p>Rendering objects without a depth buffer would require resorting to an old-school technique called <a href="http://en.wikipedia.org/wiki/Painter&#39;s_algorithm"><em>Painter&#39;s Algorithm</em></a>, which is extremely simple: draw further objects first. Sky, then backdrop, etc. all the way to foreground objects. This is basically ordering objects by distance from camera (a.k.a. depth), and clearly not enough for most cases.</p>
+<p>Testing against a depth buffer during render is a very common technique, simple to implement and perfomrance-inexpensive. However, things get more complicated for non-opaque objects, as a depth buffer can&#39;t be used anymore (since these objects don&#39;t completely hide what&#39;s behind them).</p>
+<p>This is what a depth buffer looks like for a scene which contains only opaque meshes:
+<img src="http://i.imgur.com/2iWCAwT.png" alt="Opaque only meshes"></p>
+<h1 id="rendering-order">Rendering Order</h1>
+<h2 id="general-order">General Order</h2>
+<p>Before actually drawing meshes on the screen, BabylonJS puts them in the following categories, which are presented in the order in which they are drawn:</p>
+<ol>
+<li><p><strong>Opaque meshes</strong></p>
+</li>
+<li><p><strong>Alpha tested meshes</strong></p>
+</li>
+<li><p><strong>Alpha blended meshes</strong>, sorted by depth (= distance to camera)</p>
+</li>
+<li><p><strong>Sprites</strong> (handled by SpriteManager)</p>
+</li>
+<li><p><strong>Particles</strong> (handled by ParticleSystem)</p>
+</li>
+</ol>
+<p>Categories 4 and 5 are self-explanatory. Note that they are always drawn after all the other meshes, and that they do not use any depth buffer that may have been previously created. These simply cannot be hidden by regular meshes.</p>
+<h2 id="rendering-groups">Rendering Groups</h2>
+<p>Renderable objects can be organized into rendering groups, which act as layers. In each of these rendering groups, the order above will be used.</p>
+<p>To use rendering groups, you simply need to set the property <code>.renderingGroupId</code> on the objects you want to put in other layers than the default one (which has the ID of 0).</p>
+<p>This property exists on meshes, particle systems and sprite managers.</p>
+<p>Rendering groups are rendered by ascending ID, starting with the default one. There can be no more than 4 rendering groups in total, meaning that the only valid IDs are 0, 1, 2 and 3.</p>
+<h2 id="alpha-index">Alpha Index</h2>
+<p>Meshes have another property that has an influence on the rendering order: <code>.alphaIndex</code></p>
+<p>By default, this property is set to <code>Number.MAX_VALUE</code>, which is the highest value that a numerical variable can hold (around 1.79E+308).</p>
+<p>Unlike opaque and alpha-tested meshes, the BabylonJS rendering engine sorts alpha-blended meshes by depth before drawing them on screen (see below). The <code>.alphaIndex</code> property allows you to override this sorting, as one mesh which has a lower alpha index than another will <em>always</em> be rendered before it, regardless of their respective depth.</p>
+<p>To phrase it more simply: <strong>alpha-blended are sorted <em>first</em> by alpha index, and <em>then</em> by depth (distance to camera).</strong></p>
+<p>Keep in mind that this property works only for alpha-blended mesh, and has absolutely no effect for opaque and alpha-tested ones.</p>
+<p><em>Note: this property can be manually set on meshes in 3DS Max with the BabylonJS exporter plugin.</em></p>
+<h1 id="opaque-or-transparent-">Opaque or Transparent?</h1>
+<p>How your meshes are categorized may be very important for the final aspect of your scene. Let&#39;s take a closer look at the way categories 1 to 3 are defined.</p>
+<h3 id="opaque-meshes">Opaque Meshes</h3>
+<p>These will be the easiest to render: their polygons are fully drawn on screen with their colors &amp; textures. A depth buffer will be used to make sure nothing is drawn over something that is closer to the camera.</p>
+<h3 id="alpha-tested-meshes">Alpha Tested Meshes</h3>
+<p>Same as opaque meshes, except that some parts of these meshes can be defined as completely transparent. Alpha test means that each pixel of the mesh can be either opaque (and then drawn on screen and in the depth buffer) or transparent, which means the pixel is completely discarded. Although very efficient, this type of render usually gives off aliased borders &amp; does not allow for smooth transparency effects.</p>
+<p>A pixel is considered transparent if its alpha value is &lt; 0.4, and opaque if not. This value is currently hardcoded.</p>
+<h3 id="alpha-blended-meshes">Alpha Blended Meshes</h3>
+<p>These meshes have translucent parts that may have an alpha value of 0.0 (completely transparent) to 1.0 (completely opaque). Their color is blended with what&#39;s behind them to reflect that. These meshes are sorted by depth, based on the center of their bounding sphere. This does not prevent some problems when several alpha-blended meshes overlap.</p>
+<p>Also, note that backface culling is pretty much obligatory for alpha blended meshes, otherwise polygons from the front and the back of the objects will be garbled.</p>
+<p>This is what a depth buffer looks like for a scene that contains each of those type of meshes:
+<img src="http://i.imgur.com/l0XIlKv.png" alt="All kinds of meshes"></p>
+<p><em>In this scene, the sphere is alpha tested, the base blocks are opaque and the pillars are alpha blended.</em></p>
+<p>The following list will help you understand in which categories your meshes will be put. For more information on each of the properties mentioned here, take a look at the <a href="page.php?p=22051">Materials Tutorial</a>.</p>
+<p><strong>Alpha blended meshes:</strong></p>
+<ul>
+<li>Any mesh that either has :<ul>
+<li>the property <code>hasVertexAlpha</code> set to true (automatically set for exported meshes if vertices have individual alpha (transparency) values)</li>
+<li>a <code>.visibility</code> value &lt; 1</li>
+</ul>
+</li>
+<li>In case of a mesh using StandardMaterial, if it either has:<ul>
+<li>an opacity texture defined</li>
+<li>the opacity Fresnel effect active</li>
+</ul>
+</li>
+<li>In case of another type of material, if the material&#39;s <code>.needAlphaBlending()</code> function returns <code>true</code></li>
+</ul>
+<p><strong>Alpha tested meshes:</strong></p>
+<ul>
+<li>In case of a mesh using StandardMaterial, if it has:<ul>
+<li>a diffuse texture with the property <code>.hasAlpha</code> set to <code>true</code></li>
+</ul>
+</li>
+<li>In case of another type of material, if the material&#39;s <code>.needAlphaTesting()</code> function returns <code>true</code></li>
+</ul>
+<p><strong>Opaque meshes:</strong></p>
+<ul>
+<li>Any mesh that does not fit into one of the above categories</li>
+</ul>
+<p>Occasionally, you may have some of your meshes falling into the wrong category, e.g. an alpha tested mesh unnecessarily marked as alpha-blended, or a mesh staying opaque when it shouldn&#39;t. This will give you weird glitches, which can sometimes be very annoying. You should refer to this article to check how your meshes and materials properties are set.</p>
+<p>You&#39;re welcome to use this <a href="http://babylonjs-playground.azurewebsites.net/#1PHYB0#6">playground example</a> to experiment on the different things explained here. Pressing F9 will switch between normal render and depth buffer render.</p>
+<h2 id="things-to-do-and-not-to-do">Things To Do And Not To Do</h2>
+<ul>
+<li>Make sure your alpha blended meshes do not intersect, as this will inevitably lead to render glitches.</li>
+<li>Avoid having heavily stretched alpha blended meshes (i.e. large planes); since the center of its bounding sphere is used for depth sorting, doing this may result in a mesh being sorted as far away from the camera but actually closer to many other meshes.</li>
+<li>Use alpha test as much as possible; this may look perfect for a pixel art style, or if the transparent parts boundaries are straight horizontal or vertical lines.</li>
+<li>To get rid of jagged edges on your alpha tested meshes, use anti-aliasing for your scene (<a href="page.php?p=22431">FxaaPostProcess</a>); when using anti-aliasing, you can even disable the built-in smoothing of WebGL when creating the engine object:</li>
+</ul>
+<p><code>engine = new BABYLON.Engine(canvas, false); // built-in smoothing will be disabled</code></p>
+<p>This may help you with visible seams between meshes &amp; other similar issues.</p>
+<ul>
+<li>Do not forget to enable backface culling with alpha blended meshes!</li>
+<li>Use rendering groups to have better control over the order in which your meshes are displayed. These are especially useful if you know that some meshes will be above others 100% of the time (for example, an overlayed UI drawn on top of the scene).</li>
+<li>A mesh&#39;s alphaIndex property can be very useful as well, since they allow you to override the depth sorting of alpha-blended meshes. Also this property does not suffer from the same limitation as Rendering Groups (4 layers at most), and only has an effect on alpha-blended meshes.</li>
+</ul>
+<p><em>(to be expanded)</em></p>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

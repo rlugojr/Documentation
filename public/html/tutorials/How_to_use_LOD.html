@@ -1,0 +1,50 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to use LOD</h1><br><div id="staticContent"><p>Babylon.js comes with an integrated support for level of detail.</p>
+<p>This feature allows you to specify different meshes based on distance to viewer.
+For instance, here is how to define 4 levels of details for a given mesh:</p>
+<pre><code class="lang-javascript"><span class="hljs-variable"><span class="hljs-keyword">var</span> knot00</span> = BABYLON.Mesh.CreateTorusKnot(<span class="hljs-string">"knot0"</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">128</span>, <span class="hljs-number">64</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, scene);
+<span class="hljs-variable"><span class="hljs-keyword">var</span> knot01</span> = BABYLON.Mesh.CreateTorusKnot(<span class="hljs-string">"knot1"</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">32</span>, <span class="hljs-number">16</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, scene);
+<span class="hljs-variable"><span class="hljs-keyword">var</span> knot02</span> = BABYLON.Mesh.CreateTorusKnot(<span class="hljs-string">"knot2"</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">24</span>, <span class="hljs-number">12</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, scene);
+<span class="hljs-variable"><span class="hljs-keyword">var</span> knot03</span> = BABYLON.Mesh.CreateTorusKnot(<span class="hljs-string">"knot3"</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">16</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, scene);
+
+knot00.addLODLevel(<span class="hljs-number">15</span>, knot01);
+knot00.addLODLevel(<span class="hljs-number">30</span>, knot02);
+knot00.addLODLevel(<span class="hljs-number">45</span>, knot03);
+knot00.addLODLevel(<span class="hljs-number">55</span>, <span class="hljs-literal">null</span>);
+</code></pre>
+<p>The first parameter used with <code>addLODLevel</code> defines the distance to the camera. Beyond this distance, the specified level is used.</p>
+<p>Each level is independent and can have its own material.
+By defining a level of detail to null, you disable rendering of the current mesh, when it is viewed beyond the indicated distance to camera.</p>
+<p>When a mesh is used as a level of detail for another mesh, it is linked to it and cannot be rendered directly.</p>
+<p>You can remove a LOD level by using <code>removeLODLevel</code>:</p>
+<pre><code class="lang-javascript">k<span class="hljs-label">not00</span>.removeLODLevel<span class="hljs-comment">(knot02)</span>;
+k<span class="hljs-label">not00</span>.removeLODLevel<span class="hljs-comment">(null)</span>;
+</code></pre>
+<h3 id="try-lod-playground-http-www-babylonjs-playground-com-qe7km-">Try: <a href="http://www.babylonjs-playground.com/#QE7KM">LOD playground</a></h3>
+<h2 id="using-lod-and-instances">Using LOD and instances</h2>
+<p>By default, instances will use LOD defined on root mesh. You do not have to specify anything on instances:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> <span class="hljs-built_in">count</span> = <span class="hljs-number">3</span>;
+<span class="hljs-keyword">var</span> scale = <span class="hljs-number">4</span>;
+
+<span class="hljs-keyword">var</span> knot00 = <span class="hljs-type">BABYLON</span>.<span class="hljs-type">Mesh</span>.<span class="hljs-type">CreateTorusKnot</span>(<span class="hljs-string">"knot0"</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">128</span>, <span class="hljs-number">64</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, scene);
+<span class="hljs-keyword">var</span> knot01 = <span class="hljs-type">BABYLON</span>.<span class="hljs-type">Mesh</span>.<span class="hljs-type">CreateTorusKnot</span>(<span class="hljs-string">"knot1"</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">32</span>, <span class="hljs-number">16</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, scene);
+<span class="hljs-keyword">var</span> knot02 = <span class="hljs-type">BABYLON</span>.<span class="hljs-type">Mesh</span>.<span class="hljs-type">CreateTorusKnot</span>(<span class="hljs-string">"knot2"</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">24</span>, <span class="hljs-number">12</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, scene);
+<span class="hljs-keyword">var</span> knot03 = <span class="hljs-type">BABYLON</span>.<span class="hljs-type">Mesh</span>.<span class="hljs-type">CreateTorusKnot</span>(<span class="hljs-string">"knot3"</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.2</span>, <span class="hljs-number">16</span>, <span class="hljs-number">8</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, scene);
+
+knot00.setEnabled(<span class="hljs-literal">false</span>);
+
+knot00.addLODLevel(<span class="hljs-number">15</span>, knot01);
+knot00.addLODLevel(<span class="hljs-number">30</span>, knot02);
+knot00.addLODLevel(<span class="hljs-number">45</span>, knot03);
+knot00.addLODLevel(<span class="hljs-number">55</span>, null);
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> x = -<span class="hljs-built_in">count</span>; x &lt;= <span class="hljs-built_in">count</span>; x++) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> y = -<span class="hljs-built_in">count</span>; y &lt;= <span class="hljs-built_in">count</span>; y++) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> z = <span class="hljs-number">5</span>; z &lt; <span class="hljs-number">10</span>; z++) {
+            <span class="hljs-keyword">var</span> knot = knot00.createInstance(<span class="hljs-string">"knotI"</span>),
+            knot.position = <span class="hljs-keyword">new</span> <span class="hljs-type">BABYLON</span>.<span class="hljs-type">Vector3</span>(x * scale, y * scale, z * scale);
+        }
+    }
+}
+</code></pre>
+<h3 id="try-lod-and-instances-playground-http-www-babylonjs-playground-com-14eswc-">Try: <a href="http://www.babylonjs-playground.com/#14ESWC">LOD and instances playground</a></h3>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

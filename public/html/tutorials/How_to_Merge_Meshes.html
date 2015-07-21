@@ -1,0 +1,96 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to Merge Meshes</h1><br><div id="staticContent"><p>If you want to merge meshes into a new one, you can use the following code:</p>
+<p>Note: Careful, when you merge cloned mesh, you need to update the world matrix of the mesh with computeWorldMatrix before calling the function.</p>
+<p><strong>Note: This article covers the internal merging process. You can also use <code>BABYLON.VertexData</code> object and its <code>merge()</code> function for a simpler solution.</strong></p>
+<pre><code class="lang-Javascript">var mergeMeshes = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(meshName, arrayObj, scene)</span> {</span>
+    var arrayPos = [];
+    var arrayNormal = [];
+    var arrayUv = [];
+    var arrayUv2 = [];
+    var arrayColor = [];
+    var arrayMatricesIndices = [];
+    var arrayMatricesWeights = [];
+    var arrayIndice = [];
+    var savedPosition = [];
+    var savedNormal = [];
+    var newMesh = new BABYLON.Mesh<span class="hljs-params">(meshName, scene)</span>;
+    var UVKind = <span class="hljs-literal">true</span>;
+    var UV2Kind = <span class="hljs-literal">true</span>;
+    var ColorKind = <span class="hljs-literal">true</span>;
+    var MatricesIndicesKind = <span class="hljs-literal">true</span>;
+    var MatricesWeightsKind = <span class="hljs-literal">true</span>;
+
+    <span class="hljs-keyword">for</span> <span class="hljs-params">(var i = <span class="hljs-number">0</span>; i != arrayObj.length ; i++)</span> {
+        <span class="hljs-keyword">if</span> <span class="hljs-params">(!arrayObj[i].isVerticesDataPresent<span class="hljs-params">([BABYLON.VertexBuffer.UVKind])</span>)</span>
+            UVKind = <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">if</span> <span class="hljs-params">(!arrayObj[i].isVerticesDataPresent<span class="hljs-params">([BABYLON.VertexBuffer.UV2Kind])</span>)</span>
+            UV2Kind = <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">if</span> <span class="hljs-params">(!arrayObj[i].isVerticesDataPresent<span class="hljs-params">([BABYLON.VertexBuffer.ColorKind])</span>)</span>
+            ColorKind = <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">if</span> <span class="hljs-params">(!arrayObj[i].isVerticesDataPresent<span class="hljs-params">([BABYLON.VertexBuffer.MatricesIndicesKind])</span>)</span>
+            MatricesIndicesKind = <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">if</span> <span class="hljs-params">(!arrayObj[i].isVerticesDataPresent<span class="hljs-params">([BABYLON.VertexBuffer.MatricesWeightsKind])</span>)</span>
+            MatricesWeightsKind = <span class="hljs-literal">false</span>;
+    }
+
+    <span class="hljs-keyword">for</span> <span class="hljs-params">(i = <span class="hljs-number">0</span>; i != arrayObj.length ; i++)</span> {
+        var ite = <span class="hljs-number">0</span>;
+        var iter = <span class="hljs-number">0</span>;
+        arrayPos[i] = arrayObj[i].getVerticesData<span class="hljs-params">(BABYLON.VertexBuffer.PositionKind)</span>;
+        arrayNormal[i] = arrayObj[i].getVerticesData<span class="hljs-params">(BABYLON.VertexBuffer.NormalKind)</span>;
+        <span class="hljs-keyword">if</span> <span class="hljs-params">(UVKind)</span>
+            arrayUv = arrayUv.<span class="hljs-built_in">concat</span><span class="hljs-params">(arrayObj[i].getVerticesData<span class="hljs-params">(BABYLON.VertexBuffer.UVKind)</span>)</span>;
+        <span class="hljs-keyword">if</span> <span class="hljs-params">(UV2Kind)</span>
+            arrayUv2 = arrayUv2.<span class="hljs-built_in">concat</span><span class="hljs-params">(arrayObj[i].getVerticesData<span class="hljs-params">(BABYLON.VertexBuffer.UV2Kind)</span>)</span>;
+        <span class="hljs-keyword">if</span> <span class="hljs-params">(ColorKind)</span>
+            arrayColor = arrayColor.<span class="hljs-built_in">concat</span><span class="hljs-params">(arrayObj[i].getVerticesData<span class="hljs-params">(BABYLON.VertexBuffer.ColorKind)</span>)</span>;
+        <span class="hljs-keyword">if</span> <span class="hljs-params">(MatricesIndicesKind)</span>
+            arrayMatricesIndices = arrayMatricesIndices.<span class="hljs-built_in">concat</span><span class="hljs-params">(arrayObj[i].getVerticesData<span class="hljs-params">(BABYLON.VertexBuffer.MatricesIndicesKind)</span>)</span>;
+        <span class="hljs-keyword">if</span> <span class="hljs-params">(MatricesWeightsKind)</span>
+            arrayMatricesWeights = arrayMatricesWeights.<span class="hljs-built_in">concat</span><span class="hljs-params">(arrayObj[i].getVerticesData<span class="hljs-params">(BABYLON.VertexBuffer.MatricesWeightsKind)</span>)</span>;
+
+        var maxValue = savedPosition.length / <span class="hljs-number">3</span>;
+
+        arrayObj[i].computeWorldMatrix<span class="hljs-params">(<span class="hljs-literal">true</span>)</span>;
+        var worldMatrix = arrayObj[i].getWorldMatrix<span class="hljs-params">()</span>;
+
+        <span class="hljs-keyword">for</span> <span class="hljs-params">(var ite = <span class="hljs-number">0</span> ; ite != arrayPos[i].length; ite += <span class="hljs-number">3</span>)</span> {
+            var vertex = new BABYLON.Vector3.TransformCoordinates<span class="hljs-params">(new BABYLON.Vector3<span class="hljs-params">(arrayPos[i][ite], arrayPos[i][ite + <span class="hljs-number">1</span>], arrayPos[i][ite + <span class="hljs-number">2</span>])</span>, worldMatrix)</span>;
+            savedPosition.push<span class="hljs-params">(vertex.x)</span>;
+            savedPosition.push<span class="hljs-params">(vertex.y)</span>;
+            savedPosition.push<span class="hljs-params">(vertex.z)</span>;
+        }
+
+        <span class="hljs-keyword">for</span> <span class="hljs-params">(var iter = <span class="hljs-number">0</span> ; iter != arrayNormal[i].length; iter += <span class="hljs-number">3</span>)</span> {
+            var vertex = new BABYLON.Vector3.TransformNormal<span class="hljs-params">(new BABYLON.Vector3<span class="hljs-params">(arrayNormal[i][iter], arrayNormal[i][iter + <span class="hljs-number">1</span>], arrayNormal[i][iter + <span class="hljs-number">2</span>])</span>, worldMatrix)</span>;
+            savedNormal.push<span class="hljs-params">(vertex.x)</span>;
+            savedNormal.push<span class="hljs-params">(vertex.y)</span>;
+            savedNormal.push<span class="hljs-params">(vertex.z)</span>;
+        }
+
+        var tmp = arrayObj[i].getIndices<span class="hljs-params">()</span>;
+        <span class="hljs-keyword">for</span> <span class="hljs-params">(it = <span class="hljs-number">0</span> ; it != tmp.length; it++)</span> {
+            arrayIndice.push<span class="hljs-params">(tmp[it] + maxValue)</span>;
+        }
+        arrayIndice = arrayIndice.<span class="hljs-built_in">concat</span><span class="hljs-params">(tmp)</span>;
+
+        arrayObj[i].dispose<span class="hljs-params">(<span class="hljs-literal">false</span>)</span>;
+    }
+
+    newMesh.setVerticesData<span class="hljs-params">(BABYLON.VertexBuffer.PositionKind, savedPosition, <span class="hljs-literal">false</span>)</span>;
+    newMesh.setVerticesData<span class="hljs-params">(BABYLON.VertexBuffer.NormalKind, savedNormal, <span class="hljs-literal">false</span>)</span>;
+    <span class="hljs-keyword">if</span> <span class="hljs-params">(arrayUv.length &gt; <span class="hljs-number">0</span>)</span>
+        newMesh.setVerticesData<span class="hljs-params">(BABYLON.VertexBuffer.UVKind, arrayUv, <span class="hljs-literal">false</span>)</span>;
+    <span class="hljs-keyword">if</span> <span class="hljs-params">(arrayUv2.length &gt; <span class="hljs-number">0</span>)</span>
+        newMesh.setVerticesData<span class="hljs-params">(BABYLON.VertexBuffer.UV2Kind, arrayUv, <span class="hljs-literal">false</span>)</span>;
+    <span class="hljs-keyword">if</span> <span class="hljs-params">(arrayColor.length &gt; <span class="hljs-number">0</span>)</span>
+        newMesh.setVerticesData<span class="hljs-params">(BABYLON.VertexBuffer.ColorKind, arrayUv, <span class="hljs-literal">false</span>)</span>;
+    <span class="hljs-keyword">if</span> <span class="hljs-params">(arrayMatricesIndices.length &gt; <span class="hljs-number">0</span>)</span>
+        newMesh.setVerticesData<span class="hljs-params">(BABYLON.VertexBuffer.MatricesIndicesKind, arrayUv, <span class="hljs-literal">false</span>)</span>;
+    <span class="hljs-keyword">if</span> <span class="hljs-params">(arrayMatricesWeights.length &gt; <span class="hljs-number">0</span>)</span>
+        newMesh.setVerticesData<span class="hljs-params">(BABYLON.VertexBuffer.MatricesWeightsKind, arrayUv, <span class="hljs-literal">false</span>)</span>;
+
+    newMesh.setIndices<span class="hljs-params">(arrayIndice)</span>;
+    return newMesh;
+};
+</code></pre>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

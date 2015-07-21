@@ -1,5 +1,5 @@
 include ../includes/header
-
+include ../includes/banner
 .classBar
     .classesTitle CLASSES
     .sorts
@@ -14,8 +14,8 @@ include ../includes/header
                     //List the classes of a category
                     each bClass in bClasses
                         li
-                            a(href='/classes/'+currentVersion).className= bClass
-    #classes_classesListByAlpha
+                            a(href='/classes/'+currentVersion+'/'+bClass).className= bClass
+    #classes_classesListByAlpha.sideClassesListByAlpha
         - for className in classListByAlpha
             a.class(href='./'+className)= className.replace('_T_','<T>')
 
@@ -32,7 +32,7 @@ include ../includes/header
 
 // The content wrapper
 #wrapper
-    include ../includes/banner
+
 
 include ../includes/footer
 

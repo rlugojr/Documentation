@@ -1,0 +1,306 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>16. Playing sounds and music</h1><br><div id="staticContent"><p>Babylon.js sound engine is based on the <a href="http://webaudio.github.io/web-audio-api/"><strong>Web Audio specification</strong></a>. We decided not to offer a fallback on the audio tag or other mechanism. So, to use our sound engine, you need to use a Web Audio compatible browser. Still, if you’re using it on not compatible browser, it won’t break the rest of our engine, it will simply play no sound.
+The sound engine offers <strong>ambient</strong> sound, <strong>spatialized</strong> sound and <strong>directional</strong> sound. It can be created by code or by loading a .babylon file. It follows the simple &amp; powerful philosophy of the rest of the engine as you’re going to see. 
+The sound format supported is the one from the browser. It’s usually at least <strong>.mp3</strong> and <strong>.wav</strong>.</p>
+<p><strong>Note:</strong> all music samples demonstrated in the playground has been composed by <a href="https://soundcloud.com/david-rousset/"><strong>David Rousset</strong></a> </p>
+<h2 id="creating-an-ambient-sound-or-music">Creating an ambient sound or music</h2>
+<p>Here is the code to create a sound or music playing as ambient (not spatialized):</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Load the sound and play it automatically once ready</span>
+var music = <span class="hljs-keyword">new</span> BABYLON.Sound(<span class="hljs-string">"Music"</span>, <span class="hljs-string">"music.wav"</span>, scene, <span class="hljs-literal">null</span>, { <span class="hljs-string">loop:</span> <span class="hljs-literal">true</span>, <span class="hljs-string">autoplay:</span> <span class="hljs-literal">true</span> });
+</code></pre>
+<ul>
+<li>1st parameter: the <strong>name</strong> of your sound. </li>
+<li>2nd parameter: <strong>URL</strong> of the sound to load. </li>
+<li>3rd parameter: <strong>scene</strong> to attach the sound to. </li>
+<li>4th parameter: <strong>function</strong> being called-back once the sound is ready to be played, we’ll see that later. </li>
+<li>5th parameter: a <strong>JSON object</strong> providing various options we’ll see in details. But you can already understand the goal of the 2 options provided.</li>
+</ul>
+<p>You can test this first sample into our playground: </p>
+<h3 id="http-www-babylonjs-playground-com-pcy1j"><a href="http://www.babylonjs-playground.com/#PCY1J">http://www.babylonjs-playground.com/#PCY1J</a></h3>
+<h2 id="handling-the-ready-to-play-callback-function">Handling the &#39;ready to play&#39; callback function</h2>
+<p>Calling the <em>BABYLON.Sound()</em> constructor with an URL generates 2 phases:</p>
+<ol>
+<li>the .wav or .mp3 file is loaded from your webserver using an async XHR</li>
+<li>once loaded, the sound is being async decoded by web audio. If it succeeds, it raises the callback function you’ve provided.</li>
+</ol>
+<p>Here is a sample code:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> music = <span class="hljs-keyword">new</span> BABYLON.Sound(<span class="hljs-string">"Music"</span>, <span class="hljs-string">"music.wav"</span>, scene,
+ <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+  <span class="hljs-comment">// Sound has been downloaded &amp; decoded</span>
+  music.play();
+ }
+);
+</code></pre>
+<p>This code loads the “<em>music.wav</em>” file from the web server, decode it and play it in the callback function only once using the <em>play()</em> function. The play function plays the sound immediately if no parameter is passed. You can provide a parameter of type number to play the sound after x seconds. </p>
+<p>Test it on our playground: </p>
+<h3 id="http-www-babylonjs-playground-com-pcy1j-1"><a href="http://www.babylonjs-playground.com/#PCY1J#1">http://www.babylonjs-playground.com/#PCY1J#1</a></h3>
+<h2 id="playing-a-sound-on-mouse-click-or-keydown">Playing a sound on mouse click or keydown</h2>
+<p>This sample code play a gunshot sound if you’re left-clicking or pressing the spacebar:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> gunshot = <span class="hljs-keyword">new</span> BABYLON.Sound(<span class="hljs-string">"gunshot"</span>, <span class="hljs-string">"sounds/gunshot.wav"</span>, scene);
+
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"mousedown"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">evt</span>) </span>{
+    <span class="hljs-comment">// left click to fire</span>
+    <span class="hljs-keyword">if</span> (evt.button === <span class="hljs-number">0</span>) {
+        gunshot.play();
+    }
+});
+
+<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"keydown"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">evt</span>) </span>{
+    <span class="hljs-comment">// Press space key to fire</span>
+    <span class="hljs-keyword">if</span> (evt.keyCode === <span class="hljs-number">32</span>) {
+        gunshot.play();
+    }
+});
+</code></pre>
+<p>Test it on our playground: </p>
+<h3 id="http-www-babylonjs-playground-com-pcy1j-4"><a href="http://www.babylonjs-playground.com/#PCY1J#4">http://www.babylonjs-playground.com/#PCY1J#4</a></h3>
+<h2 id="some-basic-properties">Some basic properties</h2>
+<p>You can set the volume of a sound via the options object or via the <em>setVolume()</em> function. You can set the play rate in the same manner.</p>
+<p>You can also be notified when the sound has finished playing by registering yourself into the onended event.</p>
+<p>Here is a simple sample code mixing all that:</p>
+<pre><code class="lang-javascript">var <span class="hljs-shader"><span class="hljs-keyword">volume</span> = 0.1;
+var playbackRate = 0.5;
+var gunshot = new BABYLON.Sound(</span><span class="hljs-string">"Gunshot"</span>, <span class="hljs-string">"./gunshot-1.wav"</span>, scene, null, { playbackRate: playbackRate, <span class="hljs-shader"><span class="hljs-keyword">volume</span>: <span class="hljs-keyword">volume</span> });
+
+gunshot.onended = function (</span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-shader"><span class="hljs-keyword">volume</span> &lt; 1) {
+        <span class="hljs-keyword">volume</span> += 0.1;
+        gunshot.setVolume(</span><span class="hljs-shader"><span class="hljs-keyword">volume</span>);
+    }
+    playbackRate += 0.1;
+    gunshot.playbackRate = playbackRate;
+};</span>
+</code></pre>
+<p>The sound is first created with a <em>playbackRate</em> of 0.5 and a volume of 0.1. Everytime you will play the sound, at its end, the <em>onended</em> function will be called and the volume &amp; playbackRate will increase. </p>
+<p>Rather than setting the volume on a specific sound, you can also set the global volume of all sounds played by Babylon.js using the <em>setGlobalVolume()</em> function of the audio engine. </p>
+<pre><code class="lang-javascript"><span class="hljs-tag">BABYLON</span><span class="hljs-class">.Engine</span><span class="hljs-class">.audioEngine</span><span class="hljs-class">.setGlobalVolume</span>(0<span class="hljs-class">.5</span>);
+</code></pre>
+<h2 id="playing-several-sounds-simultaneously-and-synchronized">Playing several sounds simultaneously and synchronized</h2>
+<p>For that, you need to call the play method on all sounds only once you’re sure they are all ready to be played. You then need to work with the ready to play callback.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> music1 = <span class="hljs-keyword">new</span> BABYLON.Sound(<span class="hljs-string">"Violons11"</span>, <span class="hljs-string">"sounds/violons11.wav"</span>, scene,
+    soundReady, { loop: <span class="hljs-literal">true</span> });
+<span class="hljs-keyword">var</span> music2 = <span class="hljs-keyword">new</span> BABYLON.Sound(<span class="hljs-string">"Violons18"</span>, <span class="hljs-string">"sounds/violons18.wav"</span>, scene,
+    soundReady, { loop: <span class="hljs-literal">true</span> });
+<span class="hljs-keyword">var</span> music3 = <span class="hljs-keyword">new</span> BABYLON.Sound(<span class="hljs-string">"Cellolong"</span>, <span class="hljs-string">"sounds/cellolong.wav"</span>, scene,
+    soundReady, { loop: <span class="hljs-literal">true</span> });
+
+<span class="hljs-keyword">var</span> soundsReady = <span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">soundReady</span><span class="hljs-params">()</span> </span>{
+    soundsReady++;
+    <span class="hljs-keyword">if</span> (soundsReady === <span class="hljs-number">3</span>) {
+        music1.play();
+        music2.play();
+        music3.play();
+    }
+}
+</code></pre>
+<p>Test it on our playground: </p>
+<h3 id="http-www-babylonjs-playground-com-pcy1j-6"><a href="http://www.babylonjs-playground.com/#PCY1J#6">http://www.babylonjs-playground.com/#PCY1J#6</a></h3>
+<h2 id="loading-a-sound-from-an-arraybuffer">Loading a sound from an ArrayBuffer</h2>
+<p>You can bypass the first phase (the embedded XHR request) if you’re calling the constructor with your own provided <em>ArrayBuffer</em>.</p>
+<p>Here is a sample code demonstrating it:</p>
+<pre><code class="lang-javascript">var gunshotFromAB;
+loadArrayBufferFromURL<span class="hljs-params">(<span class="hljs-string">"sounds/gunshot.wav"</span>)</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadArrayBufferFromURL</span><span class="hljs-params">(urlToSound)</span> {</span>
+    var request = new XMLHttpRequest<span class="hljs-params">()</span>;
+    request.open<span class="hljs-params">('GET', urlToSound, <span class="hljs-literal">true</span>)</span>;
+    request.responseType = <span class="hljs-string">"arraybuffer"</span>;
+    request.onreadystatechange = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> {</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-params">(request.readyState == <span class="hljs-number">4</span>)</span> {
+            <span class="hljs-keyword">if</span> <span class="hljs-params">(request.status == <span class="hljs-number">200</span>)</span> {
+                gunshotFromAB = new BABYLON.Sound<span class="hljs-params">(<span class="hljs-string">"FromArrayBuffer"</span>, request.response, scene, soundReadyToBePlayed)</span>;
+            }
+        }
+    };
+    request.send<span class="hljs-params">(null)</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">soundReadyToBePlayed</span><span class="hljs-params">()</span> {</span>
+    gunshotFromAB.play<span class="hljs-params">()</span>;
+}
+</code></pre>
+<p>Test it on our playground: </p>
+<h3 id="http-www-babylonjs-playground-com-pcy1j-2"><a href="http://www.babylonjs-playground.com/#PCY1J#2">http://www.babylonjs-playground.com/#PCY1J#2</a></h3>
+<h2 id="loading-a-sound-using-the-assets-manager">Loading a sound using the Assets Manager</h2>
+<p>The assets manager is pretty useful as it handles for you some great features such as a loading screen. </p>
+<pre><code class="lang-javascript">var music1, music2, music3;
+
+<span class="hljs-comment">// Assets manager</span>
+var assetsManager = new BABYLON.AssetsManager<span class="hljs-params">(scene)</span>;
+
+var binaryTask = assetsManager.addBinaryFileTask<span class="hljs-params">(<span class="hljs-string">"Violons18 task"</span>, <span class="hljs-string">"sounds/violons18.wav"</span>)</span>;
+binaryTask.onSuccess = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(task)</span> {</span>
+    music1 = new BABYLON.Sound<span class="hljs-params">(<span class="hljs-string">"Violons18"</span>, task.data, scene, soundReady, { loop: <span class="hljs-literal">true</span> })</span>;
+}
+
+var binaryTask2 = assetsManager.addBinaryFileTask<span class="hljs-params">(<span class="hljs-string">"Violons11 task"</span>, <span class="hljs-string">"sounds/violons11.wav"</span>)</span>;
+binaryTask2.onSuccess = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(task)</span> {</span>
+    music2 = new BABYLON.Sound<span class="hljs-params">(<span class="hljs-string">"Violons11"</span>, task.data, scene, soundReady, { loop: <span class="hljs-literal">true</span> })</span>;
+}
+
+var binaryTask3 = assetsManager.addBinaryFileTask<span class="hljs-params">(<span class="hljs-string">"Cello task"</span>, <span class="hljs-string">"sounds/cellolong.wav"</span>)</span>;
+binaryTask3.onSuccess = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(task)</span> {</span>
+    music3 = new BABYLON.Sound<span class="hljs-params">(<span class="hljs-string">"Cello"</span>, task.data, scene, soundReady, { loop: <span class="hljs-literal">true</span> })</span>;
+}
+
+var soundsReady = <span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">soundReady</span><span class="hljs-params">()</span> {</span>
+    soundsReady++;
+    <span class="hljs-keyword">if</span> <span class="hljs-params">(soundsReady === <span class="hljs-number">3</span>)</span> {
+        music1.play<span class="hljs-params">()</span>;
+        music2.play<span class="hljs-params">()</span>;
+        music3.play<span class="hljs-params">()</span>;
+    }
+}
+
+assetsManager.load<span class="hljs-params">()</span>;
+</code></pre>
+<p>Test it on our playground: </p>
+<h3 id="http-www-babylonjs-playground-com-pcy1j-8"><a href="http://www.babylonjs-playground.com/#PCY1J#8">http://www.babylonjs-playground.com/#PCY1J#8</a></h3>
+<h2 id="creating-a-spatial-3d-sound">Creating a spatial 3D sound</h2>
+<p>To transform a sound into a spatial sound, you need to specify that via the options:</p>
+<pre><code class="lang-javascript">var music = <span class="hljs-keyword">new</span> BABYLON.Sound(<span class="hljs-string">"music"</span>, <span class="hljs-string">"music.wav"</span>,
+    scene, <span class="hljs-literal">null</span>, { <span class="hljs-string">loop:</span> <span class="hljs-literal">true</span>, <span class="hljs-string">autoplay:</span> <span class="hljs-literal">true</span>, <span class="hljs-string">spatialSound:</span> <span class="hljs-literal">true</span> });
+</code></pre>
+<p>Default properties of a spatial sound are:</p>
+<ul>
+<li><strong>distanceModel</strong> (the attenuation) is using a “<strong>linear</strong>” equation by default. Other options are “<em>inverse</em>” or “<em>exponential</em>”. </li>
+<li><strong>maxDistance</strong> is set to <strong>100</strong>. This means that once the listener is farther than 100 units from the sound, the volume will be 0. You can’t hear the sound anymore</li>
+<li><strong>panningModel</strong> is set to “<strong>HRTF</strong>”. The specification says it’s: “<em>a higher quality spatialization algorithm using a convolution with measured impulse responses from human subjects. This panning method renders stereo output</em>”. This is the best algorithm when using a headphone. The other available option is “<em>equalpower</em>”.</li>
+</ul>
+<p><strong>maxDistance</strong> is only used when using the “<em>linear</em>” attenuation. Otherwise, you can tune the attenuation of the other models using the <strong>rolloffFactor</strong> and <strong>refDistance</strong> options. Both are set to 1 by default but you can change it of course.</p>
+<p>For instance:</p>
+<pre><code class="lang-javascript">var music = <span class="hljs-keyword">new</span> BABYLON.Sound(<span class="hljs-string">"music"</span>, <span class="hljs-string">"music.wav"</span>,
+    scene, <span class="hljs-literal">null</span>, {
+<span class="hljs-label">        loop:</span> <span class="hljs-literal">true</span>, <span class="hljs-string">autoplay:</span> <span class="hljs-literal">true</span>, <span class="hljs-string">spatialSound:</span> <span class="hljs-literal">true</span>,
+<span class="hljs-label">        distanceModel:</span> <span class="hljs-string">"exponential"</span>, <span class="hljs-string">rolloffFactor:</span> <span class="hljs-number">2</span>
+    });
+</code></pre>
+<p>Default position of sound in the 3D world is <em>(0,0,0)</em>. To change that, use the <em>setPosition()</em> function:</p>
+<pre><code class="lang-javascript"><span class="hljs-tag">music</span><span class="hljs-class">.setPosition</span>(<span class="hljs-tag">new</span> <span class="hljs-tag">BABYLON</span><span class="hljs-class">.Vector3</span>(100, 0, 0));
+</code></pre>
+<p>To have a better understanding, please have a look to this sample into our playground: </p>
+<h3 id="http-www-babylonjs-playground-com-2ah4yh"><a href="http://www.babylonjs-playground.com/#2AH4YH">http://www.babylonjs-playground.com/#2AH4YH</a></h3>
+<p>Move into the scene using keyboard &amp; mouse. Each sound is represented by a purple sphere. When you’re entering a sphere, you’ll start hearing one the music. The sound is louder at the center of the sphere and fall down to 0 when leaving the sphere.</p>
+<h2 id="attaching-a-sound-to-a-mesh">Attaching a sound to a mesh</h2>
+<p>This is probably the simplest way to handle 3D sounds in your scene. Simply create a <em>BABYLON.Sound</em>, attach it to an existing mesh and you’re done! If the mesh is moving, the sound will move with it. You have nothing to do. </p>
+<p>Here’s the code to use:</p>
+<pre><code class="lang-javascript">var music = <span class="hljs-keyword">new</span> BABYLON.Sound(<span class="hljs-string">"Violons"</span>, <span class="hljs-string">"sounds/violons11.wav"</span>, scene, <span class="hljs-literal">null</span>, { <span class="hljs-string">loop:</span> <span class="hljs-literal">true</span>, <span class="hljs-string">autoplay:</span> <span class="hljs-literal">true</span> });
+
+<span class="hljs-comment">// Sound will now follow the box mesh position</span>
+music.attachToMesh(box);
+</code></pre>
+<p>Calling the <em>attachToMesh()</em> function on a sound will transform it automatically into a spatial 3D sound. Using the above code, you’ll fall into default Babylon.js values: a <em>linear</em> attenuation with a <em>maxDistance</em> of 100 and a panning model of type “<em>HRTF</em>”.</p>
+<p>Put your headphone and launch this sample into our playground:</p>
+<h3 id="http-www-babylonjs-playground-com-index-html-23"><a href="http://www.babylonjs-playground.com/index.html?23">http://www.babylonjs-playground.com/index.html?23</a></h3>
+<h2 id="creating-a-spatial-directional-3d-sound">Creating a spatial directional 3D sound</h2>
+<p>By default, spatial sounds are omnidirectional. But you can have directional sounds if you’d like to.</p>
+<p><strong>Note:</strong> directional sounds only work for spatial sounds attached to a mesh. </p>
+<p>Here is the code to use:</p>
+<pre><code class="lang-javascript">var music = <span class="hljs-keyword">new</span> BABYLON.Sound(<span class="hljs-string">"Violons"</span>, <span class="hljs-string">"violons11.wav"</span>, scene, <span class="hljs-literal">null</span>, { <span class="hljs-string">loop:</span> <span class="hljs-literal">true</span>, <span class="hljs-string">autoplay:</span> <span class="hljs-literal">true</span> });
+music.setDirectionalCone(<span class="hljs-number">90</span>, <span class="hljs-number">180</span>, <span class="hljs-number">0</span>);
+music.setLocalDirectionToMesh(<span class="hljs-keyword">new</span> BABYLON.Vector3(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>));
+music.attachToMesh(box);
+</code></pre>
+<p>setDirectionalCone takes 3 parameters:</p>
+<ul>
+<li><strong>coneInnerAngle</strong>: size of the inner cone in degree</li>
+<li><strong>coneOuterAngle</strong>: size of the outer cone in degree</li>
+<li><strong>coneOuterGain</strong>: volume of the sound when you’re outside the outer cone (between 0.0 and 1.0)</li>
+</ul>
+<p>Outer angle of the cone must be superior or equal to the inner angle, otherwise an error will be logged and the directional sound won’t work. </p>
+<p><em>setLocalDirectionToMesh()</em> is simply the orientation of the cone related to the mesh you’re attached to. By default, it’s <em>(1,0,0)</em>.</p>
+<p>You can play with this sample from our playground to better understand the output: </p>
+<h3 id="http-www-babylonjs-playground-com-1bo0ys"><a href="http://www.babylonjs-playground.com/#1BO0YS">http://www.babylonjs-playground.com/#1BO0YS</a></h3>
+<p>Move into the 3D scene. If you’re inside the space defined by the grey cone, you should hear the music, if not you’ll not hear it as the <strong>coneOuterGain</strong> is set to 0. </p>
+<h2 id="creating-your-own-custom-attenuation-function">Creating your own custom attenuation function</h2>
+<p>If you want to manage the attenuation (or distance model in Web Audio) using a specific algorithm, you can by-pass the native Web Audio attenuation using Babylon.js custom attenuation function.</p>
+<p><strong>Note:</strong> Web Audio is “<em>hardware accelerated</em>”. It means it’s mainly handled by a dedicated audio chip on your device via native code (the browser). This then almost costs nothing on the performance side for 3D real-time rendering. Switching to custom attenuation will use Babylon.js distance computation based on JavaScript and will be slower. </p>
+<p>Moreover, the custom attenuation will only works on spatial sounds (obviously) but also on sound connected to a Babylon.js mesh. That said, let’s now view the code to do that. First, you must specify it in the options:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Create and load the sound async</span>
+var music = <span class="hljs-keyword">new</span> BABYLON.Sound(<span class="hljs-string">"Music"</span>, <span class="hljs-string">"music.wav"</span>, scene, <span class="hljs-literal">null</span>, { <span class="hljs-string">loop:</span> <span class="hljs-literal">true</span>, <span class="hljs-string">autoplay:</span> <span class="hljs-literal">true</span>, <span class="hljs-string">useCustomAttenuation:</span> <span class="hljs-literal">true</span> });
+</code></pre>
+<p>You’ll switch to internal Babylon.js math computations. The default custom attenuation function is a linear one. </p>
+<p>To create your own logic you need such code:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Creating custom attenuation function. Near the object, volume is almost 0.</span>
+<span class="hljs-comment">// The farest, the louder</span>
+music.setAttenuationFunction(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(currentVolume, currentDistance, maxDistance, refDistance, rolloffFactor)</span> </span>{
+    <span class="hljs-keyword">return</span> currentVolume * currentDistance / maxDistance;
+});
+</code></pre>
+<p>You can play with these 5 parameters and do whatever you’d like with it. Simply return a number that will be the volume applied to the sound.</p>
+<p>In this example, the logic is a bit weird as the volume is louder the farther you are from the mesh. ;-)</p>
+<p>Play with it in our Playground: </p>
+<h3 id="http-www-babylonjs-playground-com-1yixeo"><a href="http://www.babylonjs-playground.com/#1YIXEO">http://www.babylonjs-playground.com/#1YIXEO</a></h3>
+<p>Moreover, Firefox has currently a bug in their Web Audio implementation in handling properly linear attenuation. This can be fixed by using the Babylon.js default linear custom attenuation.</p>
+<p>Here’s a previous sample code that now works properly in Firefox: </p>
+<h3 id="http-www-babylonjs-playground-com-2ah4yh-2"><a href="http://www.babylonjs-playground.com/#2AH4YH#2">http://www.babylonjs-playground.com/#2AH4YH#2</a></h3>
+<h2 id="manipulating-sound-loaded-from-a-babylon-file">Manipulating sound loaded from a .babylon file</h2>
+<p>Our <em>.babylon</em> file format can describe the sounds to load. It’s documented here: <a href="http://doc.babylonjs.com/page.php?p=22661">http://doc.babylonjs.com/page.php?p=22661</a> </p>
+<p>Currently only our 3DS Max exporter can export sounds directly to <em>.babylon</em>. </p>
+<p>To access to a sound loaded by the Babylon.js <em>.babylon</em> fileloader, you need to use the <em>getSoundByName()</em> function on the scene object. </p>
+<p>Here is a simple sample loading a <em>.babylon</em> scene file embedding some sounds:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> canvas = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"renderCanvas"</span>);
+<span class="hljs-keyword">var</span> engine = <span class="hljs-keyword">new</span> BABYLON.Engine(canvas, <span class="hljs-literal">true</span>);
+BABYLON.SceneLoader.Load(<span class="hljs-string">"TestScene/"</span>, <span class="hljs-string">"testsound.babylon"</span>, engine, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">newScene</span>) </span>{
+    newScene.executeWhenReady(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        newScene.activeCamera.attachControl(canvas);
+
+        <span class="hljs-keyword">var</span> gunshotSound = newScene.getSoundByName(<span class="hljs-string">"gunshot-1.wav"</span>);
+        <span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">"keydown"</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">evt</span>) </span>{
+            <span class="hljs-keyword">if</span> (evt.keyCode === <span class="hljs-number">32</span> &amp;&amp; gunshotSound) {
+                    gunshotSound.play();
+            }
+        });
+
+        engine.runRenderLoop(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+            newScene.render();
+        });
+    });
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">progress</span>) </span>{
+    <span class="hljs-comment">// To do: give progress feedback to user</span>
+});
+</code></pre>
+<p>Pressing the spacebar will play the gunshot sound. </p>
+<h2 id="using-sound-tracks">Using Sound Tracks</h2>
+<p>It could be useful to isolate your music &amp; sounds on several tracks to better manage volume on a grouped instance of sounds. It will be also used in a future release to apply effects on a specific track.</p>
+<p>By default, Babylon.js is creating a <strong>BABYLON.SoundTrack</strong> object to act as its main track. Every time you’re creating a new <em>BABYLON.Sound</em>, it’s added for you into this main track.</p>
+<pre><code class="lang-javascript">var soundTrack = new BABYLON.SoundTrack(scene)<span class="hljs-comment">;</span>
+soundTrack.AddSound(cellolong)<span class="hljs-comment">;</span>
+soundTrack.AddSound(violons11)<span class="hljs-comment">;</span>
+</code></pre>
+<p>Using this code, the “<em>cellolong</em>” and “<em>violons11</em>” sounds will be moved from the main Babylon.js track to this specific sound track. This now means that you change the volume of this track, and thus of these 2 sounds, independently from the main track. </p>
+<p>The <em>AddSound()</em> function will move the sound from its original container (the main track or a specific track) to the new sound track specified. For instance, with this code:</p>
+<pre><code class="lang-javascript">var soundTrack1 = new BABYLON.SoundTrack(scene)<span class="hljs-comment">;</span>
+soundTrack1.AddSound(cellolong)<span class="hljs-comment">;</span>
+soundTrack1.AddSound(violons11)<span class="hljs-comment">;</span>
+
+var soundTrack2 = new BABYLON.SoundTrack(scene)<span class="hljs-comment">;</span>
+soundTrack2.AddSound(violons11)<span class="hljs-comment">;</span>
+</code></pre>
+<p>The “<em>violons11</em>” sound will finally live only in “<em>soundTrack2</em>”.</p>
+<h2 id="using-the-analyser">Using the Analyser</h2>
+<p>You can easily analyze in real-time the audio frequencies. </p>
+<p>The easiest code to understand how it works is this one:</p>
+<pre><code class="lang-javascript">var myAnalyser = new BABYLON.Analyser(scene)<span class="hljs-comment">;</span>
+BABYLON.Engine.audioEngine.connectToAnalyser(myAnalyser)<span class="hljs-comment">;</span>
+myAnalyser.drawDebugCanvas()<span class="hljs-comment">;</span>
+</code></pre>
+<p>This will connect to the global volume of the audio engine and will draw the frequencies of all sounds played together into a 2D canvas display on top of the screen. </p>
+<p><img src="http://az612410.vo.msecnd.net/wwwbabylonjs/doc/simpleanalyserdebug.png" alt="Image Analyser Debug Canvas"></p>
+<p>You can change the position and size of the debug canvas and use an analyser on a sound track instead of the global audio engine:</p>
+<pre><code class="lang-javascript">var myAnalyser = new BABYLON.Analyser(scene)<span class="hljs-comment">;</span>
+soundTrack1.connectToAnalyser(myAnalyser)<span class="hljs-comment">;</span>
+myAnalyser.DEBUGCANVASSIZE.width = 160<span class="hljs-comment">;</span>
+myAnalyser.DEBUGCANVASSIZE.height = 100<span class="hljs-comment">;</span>
+myAnalyser.DEBUGCANVASPOS.x = 40<span class="hljs-comment">;</span>
+myAnalyser.DEBUGCANVASPOS.y = 30<span class="hljs-comment">;</span>
+myAnalyser.drawDebugCanvas()<span class="hljs-comment">;</span>
+</code></pre>
+<p>You can also call yourself the analyser functions to create your own usage of it. </p>
+<p>Here is a full sample: </p>
+<h3 id="http-www-babylonjs-playground-com-ptv7w-1"><a href="http://www.babylonjs-playground.com/#PTV7W#1">http://www.babylonjs-playground.com/#PTV7W#1</a></h3>
+<p><img src="http://az612410.vo.msecnd.net/wwwbabylonjs/doc/3Danalyser.png" alt="Image Analyser Debug Canvas"></p>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

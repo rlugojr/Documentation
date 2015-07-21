@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 20
 PG_TITLE: 3DSMax
+TAGS:
+    - 3DSMax
 ---
 ## 3DS Max to Babylon.js exporter
 

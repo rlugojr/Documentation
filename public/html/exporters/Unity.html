@@ -1,0 +1,81 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>exporters</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>Unity</h1><br><div id="staticContent"><h1 id="unity-5-to-babylon-js-exporter">Unity 5 to Babylon.js exporter</h1>
+<h2 id="installation">Installation</h2>
+<p>You just need to copy/paste the plugin folder inside the <strong>assets</strong> folder of your project folder. Unity 5 will then detect the plugin, compile it and add a &quot;BabylonJS&quot; menu.
+Using this menu you will be able to export the current scene to a .babylon file format.</p>
+<h2 id="usage">Usage</h2>
+<p>Just click on the &quot;BabylonJS/Export to .babylon&quot; menu to display the exportation window.</p>
+<p>The exportation window allows you to specify:</p>
+<ul>
+<li>Default reflection level applied to reflection textures</li>
+<li>Collisions properties (on/off, ellipsoid used for the camera and scene&#39;s gravity)</li>
+</ul>
+<p>You can launch the exportation process by clicking on the &quot;Export&quot; button</p>
+<h2 id="exported-features">Exported features</h2>
+<p>The current version can export the following features:</p>
+<ul>
+<li><strong>Cameras</strong><ul>
+<li>Name</li>
+<li>Position</li>
+<li>Target</li>
+<li>Fov</li>
+<li>Clip start</li>
+<li>Clip end</li>
+<li>Check collisions</li>
+<li>Gravity</li>
+<li>Ellipsoid</li>
+<li>Animations (position)</li>
+</ul>
+</li>
+<li><strong>Lights</strong><ul>
+<li>Type (Point, directional, Spot)</li>
+<li>Name</li>
+<li>Position</li>
+<li>Direction</li>
+<li>Spot angle</li>
+<li>Intensity</li>
+<li>Diffuse color</li>
+<li>Animations (position)</li>
+<li>Shadow maps</li>
+</ul>
+</li>
+<li><strong>Materials</strong><ul>
+<li>Name</li>
+<li>Diffuse color</li>
+<li>Specular color</li>
+<li>Specular power</li>
+<li>Emissive color</li>
+<li>Alpha</li>
+<li>Backface culling</li>
+<li>Diffuse texture</li>
+<li>Reflection texture</li>
+<li>Emissive texture</li>
+<li>Bump texture</li>
+</ul>
+</li>
+<li><strong>Multi-materials</strong><ul>
+<li>Name</li>
+<li>Child materials</li>
+</ul>
+</li>
+<li><strong>Textures</strong><ul>
+<li>Name</li>
+<li>Associated file</li>
+<li>Use alpha</li>
+<li>uOffset / voffset</li>
+<li>uScale / uScale</li>
+</ul>
+</li>
+<li><strong>Meshes</strong><ul>
+<li>Name</li>
+<li>Geometry (Positions &amp; normals)</li>
+<li>Position</li>
+<li>Rotation</li>
+<li>Scaling</li>
+<li>Texture coordinates (2 channels)</li>
+<li>Check collisions</li>
+<li>Receive and cast shadows</li>
+<li>Animations (position, rotation, scaling)</li>
+</ul>
+</li>
+</ul>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

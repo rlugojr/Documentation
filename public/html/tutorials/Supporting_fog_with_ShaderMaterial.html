@@ -1,0 +1,53 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>Supporting fog with ShaderMaterial</h1><br><div id="staticContent"><p>In order to support fog in your custom shaders, you will have to add some lines of code in your vertex and pixel shaders.</p>
+<h2 id="vertex-shader">Vertex shader</h2>
+<p>First you need to declare a varying variable:</p>
+<pre><code><span class="hljs-keyword">varying</span> <span class="hljs-keyword">float</span> fFogDistance;
+</code></pre><p>Then you have compute this value inside the shader:</p>
+<pre><code>fFogDistance = <span class="hljs-params">(view * worldPosition)</span>.z; <span class="hljs-comment">// This is the distance of the vertex from the point of view of the camera (Camera space)</span>
+</code></pre><h2 id="pixel-shader">Pixel shader</h2>
+<p>First you need to add the following code to be able to compute the fog accordingly to parameters sent by the scene:</p>
+<pre><code><span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> FOGMODE_NONE 0.</span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> FOGMODE_EXP 1.</span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> FOGMODE_EXP2 2.</span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> FOGMODE_LINEAR 3.</span>
+<span class="hljs-preprocessor">#<span class="hljs-keyword">define</span> E 2.71828</span>
+
+uniform vec4 vFogInfos;
+uniform vec3 vFogColor;
+varying <span class="hljs-keyword">float</span> fFogDistance;
+
+<span class="hljs-function"><span class="hljs-keyword">float</span> <span class="hljs-title">CalcFogFactor</span><span class="hljs-params">()</span>
+</span>{
+ <span class="hljs-keyword">float</span> fogCoeff = <span class="hljs-number">1.0</span>;
+ <span class="hljs-keyword">float</span> fogStart = vFogInfos.y;
+ <span class="hljs-keyword">float</span> fogEnd = vFogInfos.z;
+ <span class="hljs-keyword">float</span> fogDensity = vFogInfos.w;
+
+ <span class="hljs-keyword">if</span> (FOGMODE_LINEAR == vFogInfos.x)
+ {
+  fogCoeff = (fogEnd - fFogDistance) / (fogEnd - fogStart);
+ }
+ <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (FOGMODE_EXP == vFogInfos.x)
+ {
+  fogCoeff = <span class="hljs-number">1.0</span> / <span class="hljs-built_in">pow</span>(E, fFogDistance * fogDensity);
+ }
+ <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (FOGMODE_EXP2 == vFogInfos.x)
+ {
+  fogCoeff = <span class="hljs-number">1.0</span> / <span class="hljs-built_in">pow</span>(E, fFogDistance * fFogDistance * fogDensity * fogDensity);
+ }
+
+ <span class="hljs-keyword">return</span> clamp(fogCoeff, <span class="hljs-number">0.0</span>, <span class="hljs-number">1.0</span>);
+}
+</code></pre><p>Then inside the shader you have to use this function to get the fog color:</p>
+<pre><code>float fog = CalcFogFactor<span class="hljs-params">()</span>;
+<span class="hljs-built_in">color</span>.rgb = fog <span class="hljs-built_in">*</span> <span class="hljs-built_in">color</span>.rgb + <span class="hljs-params">(<span class="hljs-number">1.0</span> - fog)</span> <span class="hljs-built_in">*</span> vFogColor;
+</code></pre><h2 id="javascript">Javascript</h2>
+<p>You then have to add the following code for the onBind callback of your ShaderMaterial:</p>
+<pre><code>shaderMaterial.onBind = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(mat, mesh)</span> {</span>
+    var effect = mat.getEffect<span class="hljs-params">()</span>;
+    effect.setMatrix<span class="hljs-params">(<span class="hljs-string">"view"</span>, scene.getViewMatrix<span class="hljs-params">()</span>)</span>;
+    effect.setFloat4<span class="hljs-params">(<span class="hljs-string">"vFogInfos"</span>, scene.fogMode, scene.fogStart, scene.fogEnd, scene.fogDensity)</span>; 
+    effect.setColor3<span class="hljs-params">(<span class="hljs-string">"vFogColor"</span>, scene.fogColor)</span>;
+}
+</code></pre><p>And, you are done :)</p>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>

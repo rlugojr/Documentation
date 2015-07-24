@@ -1,10 +1,10 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to use Bones and Skeletons</h1><br><div id="staticContent"><p>Babylon.js supports bones animations for your meshes.</p>
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item active"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to use Bones and Skeletons</h1><br><div id="staticContent"><p>Babylon.js supports bones animations for your meshes.</p>
 <p><img src="http://www.babylonjs.com/Screenshots/bones.jpg" alt="Bones"></p>
 <h3 id="basics">Basics</h3>
 <p>Basically a skeleton (<code>BABYLON.Skeleton</code>) contains a hierarchy of bones (<code>BABYLON.Bone</code>). A bone is defined by a name, a parent (can be null) and a transformation matrix.</p>
 <p>Here are the constructors:</p>
-<pre><code>BABYLON.Skeleton = <span class="hljs-function"><span class="hljs-keyword">function</span></span> (<span class="hljs-keyword">name</span>, id, scene)
-BABYLON.Bone = <span class="hljs-function"><span class="hljs-keyword">function</span></span> (<span class="hljs-keyword">name</span>, skeleton, parentBone, matrix)
+<pre><code>BABYLON.Skeleton = function (name, id, scene)
+BABYLON.Bone = function (name, skeleton, parentBone, matrix)
 </code></pre><p>Inside a skeleton, bones can be found inside the <code>skeleton.bones</code> array.</p>
 <p>A bone can contain <a href="http://babylondoc.azurewebsites.net/page.php?p=22081">animations</a> to animate its <code>matrix</code> property.</p>
 <h3 id="preparing-mesh">Preparing mesh</h3>
@@ -16,64 +16,64 @@ BABYLON.Bone = <span class="hljs-function"><span class="hljs-keyword">function</
 <li><em>Matrices indices</em>: 4 floats to index bones matrices (<code>mesh.setVerticesData(floatIndices, BABYLON.VertexBuffer.MatricesIndicesKind, false)</code>)</li>
 </ul>
 <p>The final matrix applied to each vertex is computed as follows:</p>
-<pre><code>finalMatrix = worldMatrix <span class="hljs-keyword">*</span> (bonesMatrices[index0] <span class="hljs-keyword">*</span> weight0 + bonesMatrices[index1] <span class="hljs-keyword">*</span> weight1 + bonesMatrices[index2] <span class="hljs-keyword">*</span> weight2 + bonesMatrices[index3] <span class="hljs-keyword">*</span> weight3)
+<pre><code>finalMatrix = worldMatrix * (bonesMatrices[index0] * weight0 + bonesMatrices[index1] * weight1 + bonesMatrices[index2] * weight2 + bonesMatrices[index3] * weight3)
 </code></pre><p>On low-end hardware, the maximum bones influences per vertex is reduced to 3.</p>
 <h3 id="loading-bones">Loading bones</h3>
 <p>Skeletons and bones can be loaded from .babylon files (FBX and Blender exporter support bones generation).</p>
 <p>Here is a sample of how to load a boned mesh and how to launch skeleton animation:</p>
-<pre><code class="lang-Javascript">BABYLON.SceneLoader.ImportMesh(<span class="hljs-string">"him"</span>, <span class="hljs-string">"Scenes/Dude/"</span>, <span class="hljs-string">"Dude.babylon"</span>, scene, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">newMeshes, particleSystems, skeletons</span>) </span>{
-    <span class="hljs-keyword">var</span> dude = newMeshes[<span class="hljs-number">0</span>];
+<pre><code class="lang-Javascript">BABYLON.SceneLoader.ImportMesh(&quot;him&quot;, &quot;Scenes/Dude/&quot;, &quot;Dude.babylon&quot;, scene, function (newMeshes, particleSystems, skeletons) {
+    var dude = newMeshes[0];
 
-    dude.rotation.y = <span class="hljs-built_in">Math</span>.PI;
-    dude.position = <span class="hljs-keyword">new</span> BABYLON.Vector3(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">80</span>);
+    dude.rotation.y = Math.PI;
+    dude.position = new BABYLON.Vector3(0, 0, -80);
 
-    scene.beginAnimation(skeletons[<span class="hljs-number">0</span>], <span class="hljs-number">0</span>, <span class="hljs-number">100</span>, <span class="hljs-literal">true</span>, <span class="hljs-number">1.0</span>);
+    scene.beginAnimation(skeletons[0], 0, 100, true, 1.0);
 }),
 </code></pre>
 <p>A complete running example can be found <a href="http://www.babylonjs.com/index.html?BONES">here</a></p>
 <h3 id="cloning-bones">Cloning bones</h3>
 <p>Bones and skeletons can be cloned (This is the case with the rabbits in the previous link).</p>
 <p>Here is a sample of how to load and clone a mesh and its skeleton:</p>
-<pre><code class="lang-Javascript">BABYLON.SceneLoader.ImportMesh<span class="hljs-params">(<span class="hljs-string">"Rabbit"</span>, <span class="hljs-string">"Scenes/Rabbit/"</span>, <span class="hljs-string">"Rabbit.babylon"</span>, scene, function <span class="hljs-params">(newMeshes, particleSystems, skeletons)</span> {
-        var rabbit = newMeshes[<span class="hljs-number">1</span>];
+<pre><code class="lang-Javascript">BABYLON.SceneLoader.ImportMesh(&quot;Rabbit&quot;, &quot;Scenes/Rabbit/&quot;, &quot;Rabbit.babylon&quot;, scene, function (newMeshes, particleSystems, skeletons) {
+        var rabbit = newMeshes[1];
 
-        rabbit.scaling = new BABYLON.Vector3<span class="hljs-params">(<span class="hljs-number">0.4</span>, <span class="hljs-number">0.4</span>, <span class="hljs-number">0.4</span>)</span>;
-        shadowGenerator.getShadowMap<span class="hljs-params">()</span>.renderList.push<span class="hljs-params">(rabbit)</span>;
+        rabbit.scaling = new BABYLON.Vector3(0.4, 0.4, 0.4);
+        shadowGenerator.getShadowMap().renderList.push(rabbit);
 
-        var rabbit2 = rabbit.clone<span class="hljs-params">(<span class="hljs-string">"rabbit2"</span>)</span>;
-        var rabbit3 = rabbit.clone<span class="hljs-params">(<span class="hljs-string">"rabbit2"</span>)</span>;
+        var rabbit2 = rabbit.clone(&quot;rabbit2&quot;);
+        var rabbit3 = rabbit.clone(&quot;rabbit2&quot;);
 
-        rabbit2.position = new BABYLON.Vector3<span class="hljs-params">(-<span class="hljs-number">50</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">20</span>)</span>;
-        rabbit2.skeleton = rabbit.skeleton.clone<span class="hljs-params">(<span class="hljs-string">"clonedSkeleton"</span>)</span>;
+        rabbit2.position = new BABYLON.Vector3(-50, 0, -20);
+        rabbit2.skeleton = rabbit.skeleton.clone(&quot;clonedSkeleton&quot;);
 
-        rabbit3.position = new BABYLON.Vector3<span class="hljs-params">(<span class="hljs-number">50</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">20</span>)</span>;
-        rabbit3.skeleton = rabbit.skeleton.clone<span class="hljs-params">(<span class="hljs-string">"clonedSkeleton2"</span>)</span>;
+        rabbit3.position = new BABYLON.Vector3(50, 0, -20);
+        rabbit3.skeleton = rabbit.skeleton.clone(&quot;clonedSkeleton2&quot;);
 
-        scene.beginAnimation<span class="hljs-params">(skeletons[<span class="hljs-number">0</span>], <span class="hljs-number">0</span>, <span class="hljs-number">100</span>, <span class="hljs-literal">true</span>, <span class="hljs-number">0.8</span>)</span>;
-        scene.beginAnimation<span class="hljs-params">(rabbit2.skeleton, <span class="hljs-number">73</span>, <span class="hljs-number">100</span>, <span class="hljs-literal">true</span>, <span class="hljs-number">0.8</span>)</span>;
-        scene.beginAnimation<span class="hljs-params">(rabbit3.skeleton, <span class="hljs-number">0</span>, <span class="hljs-number">72</span>, <span class="hljs-literal">true</span>, <span class="hljs-number">0.8</span>)</span>;
-    })</span>,
+        scene.beginAnimation(skeletons[0], 0, 100, true, 0.8);
+        scene.beginAnimation(rabbit2.skeleton, 73, 100, true, 0.8);
+        scene.beginAnimation(rabbit3.skeleton, 0, 72, true, 0.8);
+    }),
 </code></pre>
 <h3 id="cloning-complex-models">Cloning Complex Models</h3>
 <p>More complex models, such as the Dude, contain submeshes. When cloning you must iterate and clone the submeshes as well. Here is an example of how to clone a more complex model:</p>
-<pre><code class="lang-Javascript">BABYLON.SceneLoader.ImportMesh(<span class="hljs-string">"him"</span>, <span class="hljs-string">"Dude/"</span>, <span class="hljs-string">"dude.babylon"</span>, scene, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">newMeshes, particleSystems, skeletons</span>) </span>{
+<pre><code class="lang-Javascript">BABYLON.SceneLoader.ImportMesh(&quot;him&quot;, &quot;Dude/&quot;, &quot;dude.babylon&quot;, scene, function (newMeshes, particleSystems, skeletons) {
 
-    newMeshes[<span class="hljs-number">0</span>].position = <span class="hljs-keyword">new</span> BABYLON.Vector3(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">5</span>);  <span class="hljs-comment">// The original dude</span>
-    scene.beginAnimation(skeletons[<span class="hljs-number">0</span>], <span class="hljs-number">0</span>, <span class="hljs-number">120</span>, <span class="hljs-number">1.0</span>, <span class="hljs-literal">true</span>);
+    newMeshes[0].position = new BABYLON.Vector3(0, 0, 5);  // The original dude
+    scene.beginAnimation(skeletons[0], 0, 120, 1.0, true);
 
     dudes = [];
 
-    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) { <span class="hljs-comment">// 10 clones</span>
-        <span class="hljs-keyword">var</span> xrand = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">501</span>) - <span class="hljs-number">250</span>;
-        <span class="hljs-keyword">var</span> zrand = <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">501</span>) - <span class="hljs-number">250</span>;
+    for (i = 0; i &lt; 10; i++) { // 10 clones
+        var xrand = Math.floor(Math.random() * 501) - 250;
+        var zrand = Math.floor(Math.random() * 501) - 250;
 
-        <span class="hljs-keyword">var</span> c = [];
+        var c = [];
 
-        <span class="hljs-keyword">for</span> (j = <span class="hljs-number">1</span>; j &lt; newMeshes.length; j++) {
-            c[j] = newMeshes[j].clone(<span class="hljs-string">"c"</span> + j);
-            c[j].position = <span class="hljs-keyword">new</span> BABYLON.Vector3(xrand, <span class="hljs-number">0</span>, zrand);
+        for (j = 1; j &lt; newMeshes.length; j++) {
+            c[j] = newMeshes[j].clone(&quot;c&quot; + j);
+            c[j].position = new BABYLON.Vector3(xrand, 0, zrand);
             c[j].skeleton = newMeshes[j].skeleton.clone();
-            scene.beginAnimation(c[j].skeleton, <span class="hljs-number">0</span>, <span class="hljs-number">120</span>, <span class="hljs-number">1.0</span>, <span class="hljs-literal">true</span>);
+            scene.beginAnimation(c[j].skeleton, 0, 120, 1.0, true);
         }
         dudes[i] = c;
     }
@@ -81,7 +81,10 @@ BABYLON.Bone = <span class="hljs-function"><span class="hljs-keyword">function</
 </code></pre>
 <h3 id="attaching-a-mesh-to-a-specific-bone">Attaching a mesh to a specific bone</h3>
 <p>Starting with babylon.js v2.2, you can now attach a mesh to a bone (like a sword in the hand of your character for instance). To do so, just specify on which bone with the following code:</p>
-<pre><code><span class="hljs-tag">sword</span><span class="hljs-class">.attachToBone</span>(<span class="hljs-tag">skeleton</span><span class="hljs-class">.bones</span><span class="hljs-attr_selector">[34]</span>, <span class="hljs-tag">character</span>);
+<pre><code>sword.attachToBone(skeleton.bones[34], character);
 </code></pre><p>Please note that you also need to specify on which mesh the bone is currently applied.
 You can find a sample <a href="http://www.babylonjs-playground.com/#11BH6Z#18">here</a></p>
-</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
+    $(this).text($(this).text().replace(/&nbsp;/gi, ''));
+});
+hljs.initHighlightingOnLoad();</script>

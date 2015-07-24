@@ -24,10 +24,14 @@ include ../includes/banner
 
 // Content of the selected class
 .classContent
-    h1#classTitle= className.replace('_T_','<T>')
+    #classTitle
+        h1= className.replace('_T_','<T>')
+        #selectList
+            select#methodsList
     if(classTags)
-        each tag in classTags
-            a(href='/classes/'+currentVersion, id=tag).classTag= tag
+        #classTags
+            each tag in classTags
+                a(href='/classes/'+currentVersion, id=tag).classTag= tag
     #classMd!= content
 
 // The content wrapper

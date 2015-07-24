@@ -1,3 +1,8 @@
+/**
+ * Sets strategy in order to handle ast object depending of the type of the given object
+ * @type {TypeScript|exports|module.exports}
+ */
+
 var TypeScript = require('typescript-services');
 
 var plainTypes = require('./typeStrategies/plainTypes');

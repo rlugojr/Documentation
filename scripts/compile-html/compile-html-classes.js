@@ -1,12 +1,12 @@
 /**
  * The following script creates all the HTML pages we serve when the user
- * ask for /classes/a_bjs_version.
+ * ask for /classes/<bjsVersion>
  * There are currently 3 HTML pages in public/html :
  * - classes_1.14.html
  * - classes_2.0.html
  * - classes_2.1.html
  * Also, this script creates all the HTML pages we serve when the user
- * ask for /classes/a_bjs_version/a_class_name.
+ * ask for /classes/<bjsVersion>/<bjsClass>.
  * The created files are stored in public/html, and each file in a folder
  * corresponding to the BJS version it belongs to.
  * The HTML files are built with the json files created respectively
@@ -18,187 +18,254 @@
  *                             REQUIREMENTS                              *
  ************************************************************************/
 
-var jade = require('jade'),
-    fs = require('fs'),
-    path = require('path'),
-    async = require('async'),
-    marked = require('meta-marked');
+var fs      = require('fs'),
+    path    = require('path'),
+    async   = require('async'),
+    jade    = require('jade'),
+    appRoot = require('app-root-path').path,
+    logger  = require(path.join(appRoot, 'config/logger')),
+    marked  = require('meta-marked'),
+    rimraf  = require('rimraf'),
+    util    = require('util');
+
 
 marked.setOptions({
     gfm: true,
     breaks: false,
     tables: true,
-    sanitize: false,
-    highlight: function(code){
-        return require('highlight.js').highlightAuto(code).value;
-    }
+    sanitize: false
 });
+
 
 /*************************************************************************
  *                               VARIABLES                               *
  ************************************************************************/
 
-// the JSON files we need to do the work
-var __JSON_CLASSES__ = [
-        'data/classes.json',
-        'data/classes-tags.json'
-    ],
-// the folder where we'll store the produced HTML files
-    __CLASSES_DESTDIR__ = 'public/html',
-// the folder where we'll find the Jade file to compile
-    __JADE_FILES_ROOTDIR__ = 'views',
-// the folder where we'll find the MD files (contain the HTML content
-// we have to write)
-    __MD_FILES_ROOTDIR__ = 'content/classes';
+var __CLASSES_LIST__ = path.join(appRoot, 'data/classes.json'),
+    __CLASSES_TAGS__ = path.join(appRoot, 'data/classes-tags.json'),
+    __HTML_FILES_DESTDIR__  = path.join(appRoot, 'public/html'),
+    __JADE_FILES_ROOTDIR__  = path.join(appRoot, 'views/class'),
+    __MD_FILES_ROOTDIR__    = path.join(appRoot, 'content/classes');
+
 
 /*************************************************************************
  *                                 SCRIPT                                *
  ************************************************************************/
 
 module.exports = function (done) {
-    async.waterfall([
-        async.constant(__JSON_CLASSES__),
-        readJSONFiles,
-        buildHTMLPages
-    ], function (error) {
-        if (error) {
-            done(false);
-            throw error;
+
+    // fetch the information we need: the lists of classes sorted by version,
+    // and lists of tags sorted by classes then by version
+    async.parallel({
+        classesLists: getClassesLists,
+        tagsLists: getTagsLists
+    }, function(err, lists){
+        if(err) {
+            logger.error(util.inspect(err, {showHidden: false, colors: true}));
         }
 
-        console.log("> All classes compiled.");
+        // lists = {
+        //      classesLists,
+        //      tagsLists
+        // }
+
+        var versions = [];
+
+        async.forEachOf(lists.classesLists, function(classes, version, cbVersions){
+
+            // FLUSH DIRECTORY /public/html/class_<version>/
+            var dirPath = path.join(__HTML_FILES_DESTDIR__, 'class_' + version);
+            console.log(dirPath);
+
+            logger.info('Directory html/class_' + version + ' is about to be cleaned...');
+
+            rimraf(dirPath, function(rimrafErr){
+                if(rimrafErr) throw rimrafErr;
+
+                logger.info('Directory html/class_' + version + ' is now empty.');
+
+                // as rimraf flush the directory THEN delete it, we need to recreate it
+                fs.mkdir(dirPath, function(mkdirErr){
+                    if(mkdirErr){
+                        console.log('mkdirError!', mkdirErr);
+                        throw mkdirErr;
+                    }
+
+                    // add the version to the versions list
+                    versions.push(version);
+
+                    // continue process to the next step (compilation)
+                    cbVersions();
+                });
+            });
+
+        },function(){
+            logger.info('About to launch parallel compilation...');
+            async.each(versions, function(version, cbCompile){
+
+                // parallel compilation :-)
+                async.parallel([
+                    // versions = list of versions of BJS
+                    // lists.classesLists[version] = complete list of classes for the specified version of BJS
+                    // lists.tagsLists[version] = list of tags sorted by class, for the specified version of BJS
+                    async.apply(compileClassesPages, versions, version, lists.classesLists[version], lists.tagsLists[version]),
+                    async.apply(compileClassPages, versions, version, lists.classesLists[version], lists.tagsLists[version])
+                ], function(err){
+                    if (err) {
+                        logger.error(util.inspect(err, {showHidden: false, colors: true}));
+                        throw err;
+                    } else {
+                        cbCompile();
+                    }
+                });
+                // end parallel compilation :-(
+
+            }, function(){
+                // final callback
+                logger.info('> ALL CLASSES PAGES COMPILED.');
+                done(true);
+            });
+        });
     });
 };
+
 
 /*************************************************************************
  *                               FUNCTIONS                               *
  ************************************************************************/
 
 /**
- * Read JSON file given in parameter
- * @param filePath
- * @param callback(error, JSON object)
+ * Gets the list of classes sorted by BJS version.
+ * @param callback(JSON OBJECT)
+ * The JSON Object in the callback possess the following structure:
+ * {
+ *      <firstBJSVersion>: [ <class1>, <class2>, ..., <classN> ],
+ *      <secondBJSVersion>: [ <class1>, <class2>, ..., <classN> ],
+ *      ...,
+ *      <nthBJSVersion>: [ <class1>, <class2>, ..., <classN> ]
+ * }
  */
-var readJSONFiles = function (filePaths, callback) {
-    var options = {encoding: 'utf-8', flag: 'r'};
-
-    var jsonContent = {
-        'json_classes_by_alpha': JSON.parse(fs.readFileSync(filePaths[0], options)),
-        'json_classes_by_tags' : JSON.parse(fs.readFileSync(filePaths[1], options))
-    };
-
-    callback(null, jsonContent);
+var getClassesLists = function(callback){
+    fs.readFile(__CLASSES_LIST__, {encoding: 'utf-8', flag: 'r'}, function(err, data){
+        if (err){
+            logger.error('Error while reading ' + __CLASSES_LIST__ + ': ' + err);
+            throw err;
+        } else {
+            callback(null, JSON.parse(data));
+        }
+    });
 };
 
 /**
- * Builds an HTML page for each version found in the JSON file.
- * @param jsonContent (json object)
+ * Gets the list of tags attached to BJS classes, sorted by BJS version.
+ * @param callback(JSON OBJECT)
+ * The JSON Object in the callback possess the following structure:
+ * {
+ *      <firstBJSVersion>: {
+ *          <firstTag>: [ <class1>, , <class2>, ..., <classN> ],
+ *          <secondTag>: [ <class1>, , <class2>, ..., <classN> ],
+ *          ...,
+ *          <nthTag>: [ <class1>, , <class2>, ..., <classN> ]
+*       },
+ *      ...,
+ *      <nthBJSVersion>: {
+ *          <firstTag>: [ <class1>, , <class2>, ..., <classN> ],
+ *          <secondTag>: [ <class1>, , <class2>, ..., <classN> ],
+ *          ...,
+ *          <nthTag>: [ <class1>, , <class2>, ..., <classN> ]
+ *      }
+ * }
+ */
+var getTagsLists = function(callback){
+    fs.readFile(__CLASSES_TAGS__, {encoding: 'utf-8', flag: 'r'}, function(err, data){
+        if (err){
+            logger.error('Error while reading ' + __CLASSES_TAGS__ + ': ' + err);
+            throw err;
+        } else {
+            callback(null, JSON.parse(data));
+        }
+    });
+};
+
+/**
+ * Compiles all the "public/html/classes_<bjsVersion>.html" pages.
+ * @param version
+ * @param classesList
+ * @param tagsList
  * @param callback
  */
-var buildHTMLPages = function (jsonContent, callback) {
-    var json_classes_by_alpha = jsonContent['json_classes_by_alpha'],
-        json_classes_by_tags = jsonContent['json_classes_by_tags'];
+var compileClassesPages = function(versions, version, classesList, tagsList, callback){
+    // path of the future rendered 'classes_<bjsVersion>.html' page
+    var htmlClassesFilePath = path.join(__HTML_FILES_DESTDIR__, 'classes_' + version + '.html'),
+        jadeViewForClasses = path.join(__JADE_FILES_ROOTDIR__, 'classes.jade');
 
-    var versions = [];
+    // options for the Jade compiler
+    var optionsClasses = {
+        pretty        : false,
+        currentUrl    : '/classes',
+        currentVersion: version,
+        versions      : versions,
+        classesByAlpha: classesList,
+        classesByTags : tagsList
+    };
 
-    for (var version in json_classes_by_alpha) {
-        versions.push(version);
-
-        // delete all "class" HTML file
-        flushDirectory(path.join(__CLASSES_DESTDIR__, 'class_' + version));
-    }
-
-    /***********************************
-     * CREATION OF THE "CLASSES" PAGES *
-     ***********************************/
-    for (var version in json_classes_by_alpha) {
-        var classes_classesByAlpha = json_classes_by_alpha[version];
-
-        var classesByTags = json_classes_by_tags[version];
-
-        // path we'll write the HTML classes page to
-        var htmlClassesFilePath = path.join(__CLASSES_DESTDIR__, 'classes_') + version + '.html';
-
-        // options for the Jade compiler
-        var optionsClasses = {
-            pretty        : false,
-            currentUrl    : '/classes',
-            currentVersion: version,
-            versions      : versions,
-            classesByAlpha: classes_classesByAlpha,
-            classesByTags : classesByTags
-        };
-
-        var html = jade.renderFile(path.join(__JADE_FILES_ROOTDIR__, 'class/classes') + '.jade', optionsClasses);
-        fs.writeFileSync(htmlClassesFilePath, html);
-        process.stdout.write('.');
-    }
-
-    /***********************************
-     *  CREATION OF THE "CLASS" PAGES  *
-     ***********************************/
-    for (var version in json_classes_by_alpha) {
-        var classesByAlpha = json_classes_by_alpha[version];
-        var classesByTags = json_classes_by_tags[version];
-
-        // bjsClass = name of a class
-        classesByAlpha.forEach(function (bjsClass) {
-            // path to the MD file of the class
-            var mdFilePath = path.join(__MD_FILES_ROOTDIR__, version, bjsClass) + '.md';
-
-            // retrieve HTML content from the MD file
-            var options = {encoding: 'utf-8', flag: 'r'};
-            var markedContent = marked(fs.readFileSync(mdFilePath, options));
-            var content = markedContent.html;
-
-            // retrieve tags linked to the class
-            var metadata = markedContent.meta;
-            var classTags = metadata['TAGS'];
-
-            // folder we're going to store the class HTML file in
-            var class_html_folder = path.join(__CLASSES_DESTDIR__, 'class_' + version);
-
-            // check if the folder exists, create it otherwise
-            if (!fs.existsSync(class_html_folder)) {
-                fs.mkdirSync(class_html_folder);
-            }
-
-            // path we'll write the HTML class page to
-            var htmlClassFilePath = path.join(class_html_folder, bjsClass) + '.html';
-
-            // options for the Jade compiler
-            var optionsClass = {
-                pretty          : false,
-                currentUrl      : '/classes',
-                currentVersion  : version,
-                classListByAlpha: classesByAlpha,
-                classListByTag  : classesByTags,
-                className       : bjsClass,
-                classTags       : classTags,
-                content         : content
-            };
-
-            var html = jade.renderFile(path.join(__JADE_FILES_ROOTDIR__, 'class/class') + '.jade', optionsClass);
-            fs.writeFileSync(htmlClassFilePath, html);
-            process.stdout.write('.');
-        });
-    }
-
-    callback(null);
+    fs.writeFile(htmlClassesFilePath, jade.renderFile(jadeViewForClasses, optionsClasses), function(err){
+        if (err) {
+            throw err;
+        } else {
+            logger.info("> HTML page for classes_" + version + " compiled." )
+            callback(null);
+        }
+    });
 };
 
+
 /**
- * Helper method that delete every files from a directory.
- * @param path
+ * Compiles all the "public/html/class_<bjsVersion>/<className>.html" pages.
+ * @param version
+ * @param classesList
+ * @param tagsList
+ * @param callback
  */
-var flushDirectory = function (directoryPath) {
-    if (fs.existsSync(directoryPath)) {
-        var files = fs.readdirSync(directoryPath);
-        files.map(function (file) {
-            file = path.join(directoryPath, file);
-            fs.unlinkSync(file);
+var compileClassPages = function(versions, version, classesList, tagsList, callback){
+    async.each(classesList, function(className, cbEachClassName){
+        var mdFilePath          = path.join(__MD_FILES_ROOTDIR__, version, className + '.md'),
+            htmlClassFilePath   = path.join(__HTML_FILES_DESTDIR__, 'class_' + version, className + '.html'),
+            jadeViewForClass    = path.join(__JADE_FILES_ROOTDIR__, 'class.jade');
+
+        fs.readFile(mdFilePath, {encoding: 'utf-8', flag: 'r'}, function(readMDErr, data){
+            if(readMDErr){
+                logger.error(readMDErr);
+                throw readMDErr;
+            } else {
+                var markedContent = marked(data);
+
+                var optionsClass = {
+                    pretty          : false,
+                    currentUrl      : '/classes/class',
+                    currentVersion  : version,
+                    classListByAlpha: classesList,
+                    classListByTag  : tagsList,
+                    className       : className,
+                    classTags       : markedContent.meta['TAGS'],
+                    content         : markedContent.html
+                };
+
+                logger.info('public/html/class_' + version + '/' + className + '.html is about to be compiled...');
+                fs.writeFile(htmlClassFilePath, jade.renderFile(jadeViewForClass, optionsClass), function(err){
+                    if (err) {
+                        throw err;
+                    } else {
+
+                        cbEachClassName();
+                    }
+                });
+            }
         });
 
-        console.log("Directory " + directoryPath + " has been flushed and is ready to receive new files.");
-    }
+    }, function(){
+        // final callback
+        logger.info('> All "class" for BJSv' + version + ' pages compiled.');
+        callback(null);
+    });
 };

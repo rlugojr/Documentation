@@ -17,7 +17,7 @@ var fs      = require('fs'),
     appRoot = require('app-root-path').path;
 
 var fulltextsearchlight = require('full-text-search-light');
-//var search = new fulltextsearchlight();
+var search = new fulltextsearchlight();
 
 /*************************************************************************
  *                               VARIABLES                               *
@@ -26,28 +26,28 @@ var fulltextsearchlight = require('full-text-search-light');
 
 var CLASSES_FOLDER = path.join(appRoot, 'content/classes/2.1/');
 
-var search = fulltextsearchlight.loadSync('index.json');
-//var files = fs.readdirSync(CLASSES_FOLDER);
-//
-//async.each(files, function(f, cb) {
-//
-//    var lr = new LineByLineReader(path.join(CLASSES_FOLDER, f));
-//    lr.on('line', function (line) {
-//        if (line) {
-//            search.add({src: f, text: line});
-//        }
-//    });
-//    lr.on('end', function () {
-//        cb();
-//    });
-//}, function() {
-//    console.log("debut de la recherche");
-//    search.saveSync('index.json');
-//    //ss('mesh');
-    ss('intersectsMesh');
-//    //ss('shader');
-//    //ss('scene');
-//});
+//var search = fulltextsearchlight.loadSync('index.json');
+var files = fs.readdirSync(CLASSES_FOLDER);
+
+async.each(files, function(f, cb) {
+
+    var lr = new LineByLineReader(path.join(CLASSES_FOLDER, f));
+    lr.on('line', function (line) {
+        if (line) {
+            search.add({src: f, text: line});
+        }
+    });
+    lr.on('end', function () {
+        cb();
+    });
+}, function() {
+    search.saveSync('data/search/index.json');
+    console.log("debut de la recherche");
+    //ss('mesh');
+    ss('constructor');
+    //ss('shader');
+    //ss('scene');
+});
 
 
 function ss(term) {

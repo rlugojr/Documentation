@@ -1,0 +1,13 @@
+include includes/header.jade
+include includes/banner.jade
+#wrapper
+   .whats-new-banner
+      h1 Search
+   .horizontal-separator
+
+   div
+      each result in results
+         p
+            h2= result.src
+            p= result.text
+include includes/footer.jade

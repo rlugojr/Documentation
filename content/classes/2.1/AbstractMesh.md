@@ -3,9 +3,8 @@ ID_PAGE: 6657
 PG_TITLE: AbstractMesh
 PG_VERSION: 2.1
 TAGS:
-    - testTag1
-    - testTag2
-    - testTag3
+    - Mesh
+    - Abstract
 ---
 
 The [AbstractMesh](page.php?p=6657) Class extends [Node](page.php?p=6630)

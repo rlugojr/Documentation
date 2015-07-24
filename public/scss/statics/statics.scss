@@ -9,7 +9,7 @@
   }
 }
 
-.static-content {
+.statics-content {
   @include outer-container(80%);
 
   .tagList {
@@ -50,8 +50,10 @@
           height: 80px;
           word-break: normal;
           overflow: hidden;
+
           .tagTitle {
             font: $font-title;
+            margin: 0;
           }
 
           .tagDescription {
@@ -66,24 +68,36 @@
   }
 
   .fileList {
+    @include outer-container(50%);
+    border: 1px solid whitesmoke;
+
+    //box-shadow: 12px 15px 22px -10px #EEE;
+
     // The tag text
     .fileTitle {
 
       padding: 3px;
       width: 100%;
       cursor: pointer;
+
       a {
         color: $black;
         text-decoration: none;
         display: block;
-        padding: 3px;
+        padding: 5px;
 
         &:hover {
           color: white;
           text-decoration: underline;
           background-color: $red;
+
         }
       }
+
+      &:nth-child(even) {
+        background-color: whitesmoke;
+      }
+
       h3:hover {
         background-color: $red;
         color: $grey;

@@ -1,3 +1,8 @@
+/**
+ * add markdown links into data pointing to classes
+ * @type {exports|module.exports}
+ */
+
 var fsHandler = require('./fsHandler');
 var async = require('async');
 var path = require('path');

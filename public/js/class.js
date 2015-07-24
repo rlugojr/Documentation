@@ -116,6 +116,40 @@
             });
         });
 
+        // select#methodsList -> need to populate the select list
+        $.each($('.classContent h2, .classContent h3'), function(i, title){
+            if($(title)[0].tagName === 'H2'){
+                if($(title).text() === 'Methods' || $(title).text() === 'Members'){
+                    $('#methodsList').append($('<option>', {
+                        class: 'cat',
+                        value: $(title).attr('id'),
+                        html: $(title).text()
+                    }));
+                }
+            } else {
+                $('#methodsList').append($('<option>', {
+                    value: $(title).attr('id'),
+                    html: $(title).text()
+                }));
+            }
+        });
+
+        // select#methodsList -> action on change of selected value
+        $('#methodsList').on('change', function(){
+            var id = $(this).val(),
+                selectedElement = $('#' + id);
+
+
+            $('.highlighted').removeClass('highlighted');
+            selectedElement.addClass('highlighted');
+
+            var currentPage = window.location.toString().split('#', [0]);
+            window.history.pushState({id: id}, '', currentPage + '#' + id);
+
+            window.scrollTo(0, selectedElement.offset().top - 50);
+            $('.classContent').scrollTop(selectedElement.offset().top - 50);
+        });
+
      });
 
     /**

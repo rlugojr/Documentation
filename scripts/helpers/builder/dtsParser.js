@@ -1,3 +1,8 @@
+/**
+ * Holds the typescript definition parser
+ * @type {TypeScript|exports|module.exports}
+ */
+
 var TypeScript = require('typescript-services'),
     async = require('async');
 

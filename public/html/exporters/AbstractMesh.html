@@ -1,0 +1,853 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item active"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>exporters</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>AbstractMesh</h1><br><div id="staticContent"><h2 id="description">Description</h2>
+<p>class <a href="/classes/2.2/AbstractMesh">AbstractMesh</a> extends <a href="/classes/2.2/Node">Node</a></p>
+<h2 id="constructor">Constructor</h2>
+<h2 id="new-abstractmesh-classes-2-2-abstractmesh-name-scene-">new <a href="/classes/2.2/AbstractMesh">AbstractMesh</a>(name, scene)</h2>
+<p>The <a href="/classes/2.2/AbstractMesh">AbstractMesh</a> constructor</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>name</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>scene</td>
+<td><a href="/classes/2.2/Scene">Scene</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="members">Members</h2>
+<h3 id="static-billboardmode_none-number">static BILLBOARDMODE_NONE : number</h3>
+<p>The billboard Mode None, the object is normal by default</p>
+<p>@default BABYLON.<a href="/classes/2.2/AbstractMesh">AbstractMesh</a>.BILLBOARDMODE_NONE</p>
+<h3 id="static-billboardmode_x-number">static BILLBOARDMODE_X : number</h3>
+<p>The billboard Mode X</p>
+<p>@default BABYLON.<a href="/classes/2.2/AbstractMesh">AbstractMesh</a>.BILLBOARDMODE_X</p>
+<h3 id="static-billboardmode_y-number">static BILLBOARDMODE_Y : number</h3>
+<p>The billboard Mode Y</p>
+<p>@default BABYLON.<a href="/classes/2.2/AbstractMesh">AbstractMesh</a>.BILLBOARDMODE_Y</p>
+<h3 id="static-billboardmode_z-number">static BILLBOARDMODE_Z : number</h3>
+<p>The billboard Mode Z</p>
+<p>@default BABYLON.<a href="/classes/2.2/AbstractMesh">AbstractMesh</a>.BILLBOARDMODE_Z</p>
+<h3 id="static-billboardmode_all-number">static BILLBOARDMODE_ALL : number</h3>
+<p>The billboard Mode</p>
+<p>@default BABYLON.<a href="/classes/2.2/AbstractMesh">AbstractMesh</a>.BILLBOARDMODE_ALL</p>
+<h3 id="position-vector3-classes-2-2-vector3-">position : <a href="/classes/2.2/Vector3">Vector3</a></h3>
+<p>The mesh position</p>
+<p>@default BABYLON.<a href="/classes/2.2/Vector3">Vector3</a>(0, 0, 0)</p>
+<h3 id="rotation-vector3-classes-2-2-vector3-">rotation : <a href="/classes/2.2/Vector3">Vector3</a></h3>
+<p>The mesh rotation</p>
+<p>@default BABYLON.<a href="/classes/2.2/Vector3">Vector3</a>(0, 0, 0)</p>
+<h3 id="rotationquaternion-quaternion-classes-2-2-quaternion-">rotationQuaternion : <a href="/classes/2.2/Quaternion">Quaternion</a></h3>
+<p>The mesh rotation <a href="/classes/2.2/Quaternion">Quaternion</a></p>
+<p>@default BABYLON.<a href="/classes/2.2/Quaternion">Quaternion</a>(x, y, z, w)</p>
+<h3 id="scaling-vector3-classes-2-2-vector3-">scaling : <a href="/classes/2.2/Vector3">Vector3</a></h3>
+<p>The mesh scaling</p>
+<p>@default BABYLON.<a href="/classes/2.2/Vector3">Vector3</a>(1,1,1)</p>
+<h3 id="billboardmode-number">billboardMode : number</h3>
+<p>The mesh billboardMode</p>
+<p>@default BABYLON.<a href="/classes/2.2/AbstractMesh">AbstractMesh</a>.BILLBOARDMODE_NONE</p>
+<h3 id="visibility-number">visibility : number</h3>
+<p>The mesh visibility</p>
+<p>@default 1.0</p>
+<h3 id="alphaindex-number">alphaIndex : number</h3>
+<h3 id="infinitedistance-boolean">infiniteDistance : boolean</h3>
+<p>Is infinite distance</p>
+<p>@default false</p>
+<h3 id="isvisible-boolean">isVisible : boolean</h3>
+<p>Is visible</p>
+<p>@default true</p>
+<h3 id="ispickable-boolean">isPickable : boolean</h3>
+<p>Is pickable</p>
+<p>@default true</p>
+<h3 id="showboundingbox-boolean">showBoundingBox : boolean</h3>
+<p>Show bounding box</p>
+<p>@default false</p>
+<h3 id="showsubmeshesboundingbox-boolean">showSubMeshesBoundingBox : boolean</h3>
+<p>Show submeshes Bounding box</p>
+<p>@default false</p>
+<h3 id="ondispose-any">onDispose : any</h3>
+<p>On dispose</p>
+<p>@default null</p>
+<h3 id="checkcollisions-boolean">checkCollisions : boolean</h3>
+<p>Is check collisions</p>
+<p>@default false</p>
+<h3 id="isblocker-boolean">isBlocker : boolean</h3>
+<p>Is blocker</p>
+<p>@default false</p>
+<h3 id="skeleton-skeleton-classes-2-2-skeleton-">skeleton : <a href="/classes/2.2/Skeleton">Skeleton</a></h3>
+<p>The skeleton</p>
+<h3 id="renderinggroupid-number">renderingGroupId : number</h3>
+<p>The rendering group ID</p>
+<p>@default 0</p>
+<h3 id="material-material-classes-2-2-material-">material : <a href="/classes/2.2/Material">Material</a></h3>
+<p>The material</p>
+<h3 id="receiveshadows-boolean">receiveShadows : boolean</h3>
+<p>Receive shadows</p>
+<p>@default false</p>
+<h3 id="actionmanager-actionmanager-classes-2-2-actionmanager-">actionManager : <a href="/classes/2.2/ActionManager">ActionManager</a></h3>
+<p>The action manager</p>
+<h3 id="renderoutline-boolean">renderOutline : boolean</h3>
+<p>Render Outline</p>
+<h3 id="outlinecolor-color3-classes-2-2-color3-">outlineColor : <a href="/classes/2.2/Color3">Color3</a></h3>
+<p>outline color</p>
+<h3 id="outlinewidth-number">outlineWidth : number</h3>
+<p>outline Width</p>
+<h3 id="renderoverlay-boolean">renderOverlay : boolean</h3>
+<h3 id="overlaycolor-color3-classes-2-2-color3-">overlayColor : <a href="/classes/2.2/Color3">Color3</a></h3>
+<h3 id="overlayalpha-number">overlayAlpha : number</h3>
+<h3 id="hasvertexalpha-boolean">hasVertexAlpha : boolean</h3>
+<h3 id="usevertexcolors-boolean">useVertexColors : boolean</h3>
+<h3 id="applyfog-boolean">applyFog : boolean</h3>
+<h3 id="useoctreeforrenderingselection-boolean">useOctreeForRenderingSelection : boolean</h3>
+<p>Is use octree for rendering selection</p>
+<p>@default true</p>
+<h3 id="useoctreeforpicking-boolean">useOctreeForPicking : boolean</h3>
+<p>Is use octree for picking</p>
+<p>@default true</p>
+<h3 id="useoctreeforcollisions-boolean">useOctreeForCollisions : boolean</h3>
+<p>Is use octree for collisions</p>
+<p>@default true</p>
+<h3 id="layermask-number">layerMask : number</h3>
+<p>The layer mask</p>
+<p>@default 0xFFFFFFFF</p>
+<h3 id="ellipsoid-vector3-classes-2-2-vector3-">ellipsoid : <a href="/classes/2.2/Vector3">Vector3</a></h3>
+<p>Ellipsoid</p>
+<h3 id="ellipsoidoffset-vector3-classes-2-2-vector3-">ellipsoidOffset : <a href="/classes/2.2/Vector3">Vector3</a></h3>
+<p>Ellipsoid offset</p>
+<h3 id="submeshes-submesh-classes-2-2-submesh-">subMeshes : <a href="/classes/2.2/SubMesh">SubMesh</a>[]</h3>
+<p>subMeshes</p>
+<h3 id="isblocked-boolean">isBlocked : boolean</h3>
+<h3 id="worldmatrixfromcache-matrix-classes-2-2-matrix-">worldMatrixFromCache : <a href="/classes/2.2/Matrix">Matrix</a></h3>
+<p>World <a href="/classes/2.2/Matrix">Matrix</a> from cache</p>
+<h3 id="absoluteposition-vector3-classes-2-2-vector3-">absolutePosition : <a href="/classes/2.2/Vector3">Vector3</a></h3>
+<p>Absolute Position</p>
+<h2 id="functions">Functions</h2>
+<h3 id="getlod-camera-rarr-abstractmesh-classes-2-2-abstractmesh-">getLOD(camera) &rarr; <a href="/classes/2.2/AbstractMesh">AbstractMesh</a></h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>camera</td>
+<td><a href="/classes/2.2/Camera">Camera</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="gettotalvertices-rarr-number">getTotalVertices() &rarr; number</h3>
+<p>Get the total vertices</p>
+<h3 id="getindices-rarr-number-">getIndices() &rarr; number[]</h3>
+<p>To access the mesh vertices data</p>
+<h3 id="getverticesdata-kind-rarr-number-">getVerticesData(kind) &rarr; number[]</h3>
+<p>To access the mesh vertices data</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>kind</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="isverticesdatapresent-kind-rarr-boolean">isVerticesDataPresent(kind) &rarr; boolean</h3>
+<p>Is vertices data present</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>kind</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getboundinginfo-rarr-boundinginfo-classes-2-2-boundinginfo-">getBoundingInfo() &rarr; <a href="/classes/2.2/BoundingInfo">BoundingInfo</a></h3>
+<p>Get the bounding info</p>
+<h3 id="getworldmatrix-rarr-matrix-classes-2-2-matrix-">getWorldMatrix() &rarr; <a href="/classes/2.2/Matrix">Matrix</a></h3>
+<p>Get the world matrix</p>
+<h3 id="rotate-axis-amount-space-rarr-void">rotate(axis, amount, space) &rarr; void</h3>
+<p>Rotate this mesh with the given axis and the given angle in the mesh&#39;s space</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>axis</td>
+<td><a href="/classes/2.2/Vector3">Vector3</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>amount</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>space</td>
+<td><a href="/classes/2.2/Space">Space</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="translate-axis-distance-space-rarr-void">translate(axis, distance, space) &rarr; void</h3>
+<p>Translate the mesh with the given axis, with the given distance</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>axis</td>
+<td><a href="/classes/2.2/Vector3">Vector3</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>distance</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>space</td>
+<td><a href="/classes/2.2/Space">Space</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getabsoluteposition-rarr-vector3-classes-2-2-vector3-">getAbsolutePosition() &rarr; <a href="/classes/2.2/Vector3">Vector3</a></h3>
+<p>Returns the absolute position</p>
+<h3 id="setabsoluteposition-absoluteposition-rarr-void">setAbsolutePosition(absolutePosition) &rarr; void</h3>
+<p>Set the absolute position</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>absolutePosition</td>
+<td><a href="/classes/2.2/Vector3">Vector3</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="setpivotmatrix-matrix-rarr-void">setPivotMatrix(matrix) &rarr; void</h3>
+<p>Set the pivot matrix</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>matrix</td>
+<td><a href="/classes/2.2/Matrix">Matrix</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getpivotmatrix-rarr-matrix-classes-2-2-matrix-">getPivotMatrix() &rarr; <a href="/classes/2.2/Matrix">Matrix</a></h3>
+<p>Get the pivot matrix</p>
+<h3 id="markasdirty-property-rarr-void">markAsDirty(property) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>property</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="computeworldmatrix-force-rarr-matrix-classes-2-2-matrix-">computeWorldMatrix(force) &rarr; <a href="/classes/2.2/Matrix">Matrix</a></h3>
+<p>Compute the world matrix, recalculate the world matrix
+@default false</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>optional</td>
+<td>force</td>
+<td>boolean</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="registerafterworldmatrixupdate-func-rarr-void">registerAfterWorldMatrixUpdate(func) &rarr; void</h3>
+<p>If you&#39;d like to be callbacked after the mesh position, rotation or scaling has been updated</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>func</td>
+<td>(mesh: <a href="/classes/2.2/AbstractMesh">AbstractMesh</a>) =&gt; void</td>
+<td>: callback function to add</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unregisterafterworldmatrixupdate-func-rarr-void">unregisterAfterWorldMatrixUpdate(func) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>func</td>
+<td>(mesh: <a href="/classes/2.2/AbstractMesh">AbstractMesh</a>) =&gt; void</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="setpositionwithlocalvector-vector3-rarr-void">setPositionWithLocalVector(vector3) &rarr; void</h3>
+<p>Set the position with a local vector</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>vector3</td>
+<td><a href="/classes/2.2/Vector3">Vector3</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getpositionexpressedinlocalspace-rarr-vector3-classes-2-2-vector3-">getPositionExpressedInLocalSpace() &rarr; <a href="/classes/2.2/Vector3">Vector3</a></h3>
+<p>Get the position in local space</p>
+<h3 id="locallytranslate-vector3-rarr-void">locallyTranslate(vector3) &rarr; void</h3>
+<p>Translate mesh in local space</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>vector3</td>
+<td><a href="/classes/2.2/Vector3">Vector3</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="lookat-targetpoint-yawcor-pitchcor-rollcor-rarr-void">lookAt(targetPoint, yawCor, pitchCor, rollCor) &rarr; void</h3>
+<p>Orients a mesh towards a target point. <a href="/classes/2.2/Mesh">Mesh</a> must be drawn facing user.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>targetPoint</td>
+<td><a href="/classes/2.2/Vector3">Vector3</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>yawCor</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>pitchCor</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>rollCor</td>
+<td>number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="isinfrustum-frustumplanes-rarr-boolean">isInFrustum(frustumPlanes) &rarr; boolean</h3>
+<p>Is in frustum</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>frustumPlanes</td>
+<td><a href="/classes/2.2/Plane">Plane</a>[]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="iscompletelyinfrustum-camera-rarr-boolean">isCompletelyInFrustum(camera) &rarr; boolean</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>optional</td>
+<td>camera</td>
+<td><a href="/classes/2.2/Camera">Camera</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="intersectsmesh-mesh-precise-rarr-boolean">intersectsMesh(mesh, precise) &rarr; boolean</h3>
+<p>Intersects <a href="/classes/2.2/Mesh">Mesh</a>
+For precise : default value is false</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>mesh</td>
+<td><a href="/classes/2.2/AbstractMesh">AbstractMesh</a></td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>precise</td>
+<td>boolean</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="intersectspoint-point-rarr-boolean">intersectsPoint(point) &rarr; boolean</h3>
+<p>Intersects Point</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>point</td>
+<td><a href="/classes/2.2/Vector3">Vector3</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="setphysicsstate-impostor-options-rarr-void">setPhysicsState(impostor, options) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>optional</td>
+<td>impostor</td>
+<td>any</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>options</td>
+<td>PhysicsBodyCreationOptions</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getphysicsimpostor-rarr-number">getPhysicsImpostor() &rarr; number</h3>
+<p>Get a physics impostor</p>
+<h3 id="getphysicsmass-rarr-number">getPhysicsMass() &rarr; number</h3>
+<p>Get the physics mass</p>
+<h3 id="getphysicsfriction-rarr-number">getPhysicsFriction() &rarr; number</h3>
+<p>Get the physics friction</p>
+<h3 id="getphysicsrestitution-rarr-number">getPhysicsRestitution() &rarr; number</h3>
+<p>Get the physics restitution</p>
+<h3 id="getpositionincameraspace-camera-rarr-vector3-classes-2-2-vector3-">getPositionInCameraSpace(camera) &rarr; <a href="/classes/2.2/Vector3">Vector3</a></h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>optional</td>
+<td>camera</td>
+<td><a href="/classes/2.2/Camera">Camera</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getdistancetocamera-camera-rarr-number">getDistanceToCamera(camera) &rarr; number</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>optional</td>
+<td>camera</td>
+<td><a href="/classes/2.2/Camera">Camera</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="applyimpulse-force-contactpoint-rarr-void">applyImpulse(force, contactPoint) &rarr; void</h3>
+<p>Apply a force</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>force</td>
+<td><a href="/classes/2.2/Vector3">Vector3</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>contactPoint</td>
+<td><a href="/classes/2.2/Vector3">Vector3</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="setphysicslinkwith-othermesh-pivot1-pivot2-options-rarr-void">setPhysicsLinkWith(otherMesh, pivot1, pivot2, options) &rarr; void</h3>
+<p>Link the impostor in order to keep meshes linked</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>otherMesh</td>
+<td><a href="/classes/2.2/Mesh">Mesh</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>pivot1</td>
+<td><a href="/classes/2.2/Vector3">Vector3</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>pivot2</td>
+<td><a href="/classes/2.2/Vector3">Vector3</a></td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>options</td>
+<td>any</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="updatephysicsbodyposition-rarr-void">updatePhysicsBodyPosition() &rarr; void</h3>
+<p>Update physics body position</p>
+<h3 id="movewithcollisions-velocity-rarr-void">moveWithCollisions(velocity) &rarr; void</h3>
+<p>Move a mesh</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>velocity</td>
+<td><a href="/classes/2.2/Vector3">Vector3</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="createorupdatesubmeshesoctree-maxcapacity-maxdepth-rarr-octree-classes-2-2-octree-lt-submesh-classes-2-2-submesh-gt-">createOrUpdateSubmeshesOctree(maxCapacity, maxDepth) &rarr; <a href="/classes/2.2/Octree">Octree</a>&lt;<a href="/classes/2.2/SubMesh">SubMesh</a>&gt;</h3>
+<p>This function will create an octree to help select the right submeshes for rendering, picking and collisions</p>
+<p>Please note that you must have a decent number of submeshes to get performance improvements when using octree</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>optional</td>
+<td>maxCapacity</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>maxDepth</td>
+<td>number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="intersects-ray-fastcheck-rarr-pickinginfo-classes-2-2-pickinginfo-">intersects(ray, fastCheck) &rarr; <a href="/classes/2.2/PickingInfo">PickingInfo</a></h3>
+<p>Intersects
+if false, infinite ray !</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>ray</td>
+<td><a href="/classes/2.2/Ray">Ray</a></td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>fastCheck</td>
+<td>boolean</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="clone-name-newparent-donotclonechildren-rarr-abstractmesh-classes-2-2-abstractmesh-">clone(name, newParent, doNotCloneChildren) &rarr; <a href="/classes/2.2/AbstractMesh">AbstractMesh</a></h3>
+<p>Clone this abstract mesh</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>name</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>newParent</td>
+<td><a href="/classes/2.2/Node">Node</a></td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>doNotCloneChildren</td>
+<td>boolean</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="releasesubmeshes-rarr-void">releaseSubMeshes() &rarr; void</h3>
+<p>Release submeshes</p>
+<h3 id="dispose-donotrecurse-rarr-void">dispose(doNotRecurse) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>optional</td>
+<td>doNotRecurse</td>
+<td>boolean</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
+    $(this).text($(this).text().replace(/&nbsp;/gi, ''));
+});
+hljs.initHighlightingOnLoad();</script>

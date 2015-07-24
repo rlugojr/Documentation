@@ -1,3 +1,8 @@
+/**
+ * formats json
+ * @type {*}
+ */
+
 var path = require('path');
 var async = require('async');
 var _ = require('lodash');

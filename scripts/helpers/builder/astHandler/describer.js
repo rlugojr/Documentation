@@ -1,3 +1,8 @@
+/**
+ * Extracts description from object, imports old description and formats everything
+ * @type {TypeScript|exports|module.exports}
+ */
+
 var TypeScript = require('typescript-services');
 var TypeManager = require('./typeManager');
 

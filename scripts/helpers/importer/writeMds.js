@@ -1,3 +1,8 @@
+/**
+ *adds default metad before md and writes it down
+ * @type {async|exports|module.exports}
+ */
+
 var async = require('async');
 var path = require('path');
 var sanitize = require('sanitize-filename');

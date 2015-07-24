@@ -1,6 +1,10 @@
 nav.nav-main
     // Hamburger menu : displayed only in small screens
     i#mobilemenu.fa.fa-bars
+    // this button only shows on mobile version of a "class" page
+    if currentUrl === '/classes/class'
+        a(href='/classes/' + currentVersion)
+            i#goBackToClassList.fa.fa-arrow-left
 
     .banner
         .menu
@@ -19,7 +23,7 @@ nav.nav-main
             #extensions.item(class={active:currentUrl === '/extensions'})
                 span.
                     Extensions
-            #classes.item(class={active:currentUrl === '/classes'})
+            #classes.item(class={active:currentUrl === '/classes' || '/classes/class'})
                 span.
                     Classes
         .more

@@ -15,11 +15,7 @@ var fs      = require('fs'),
 marked.setOptions({
     gfm: true,
     breaks: false,
-    tables: true,
-    sanitize: false,
-    highlight: function(code){
-        return require('highlight.js').highlightAuto(code).value;
-    }
+    tables: true
 });
 
 var __FILES_LIST__      = path.join(appRoot, 'data/static-list.json'),
@@ -42,13 +38,13 @@ module.exports = function(done){
         "files": {}
     };
 
-    fs.readFile(__TAGS_LIST__, function(errtag, tags_data){
-        if(errtag) throw errtag;
+    fs.readFile(__TAGS_LIST__, function(errTag, tags_data){
+        if(errTag) throw errTag;
 
         globalObj.tags = JSON.parse(tags_data);
 
-        fs.readFile(__FILES_LIST__, function(errfiles, list_data){
-            if (errfiles) throw errfiles;
+        fs.readFile(__FILES_LIST__, function(errFiles, list_data){
+            if (errFiles) throw errFiles;
             globalObj.files = JSON.parse(list_data);
 
             // for jade rendering purpose, add a "url" property, that is the name
@@ -97,15 +93,15 @@ module.exports = function(done){
                         if(error){
                             throw error;
                         } else {
-                            logger.info(category + ' pages compiled.');
+                            logger.info('> All pages for ' + category + ' have been compiled.');
                             finalCallback();
                         }
                     });
                 }, function(){
-                    logger.info('All pages compiled.');
+                    // final callback
+                    logger.info('> ALL EXPORTERS/EXTENSIONS/TUTORIALS PAGES COMPILED.');
                     done(true);
                 })
-
             });
         });
     });
@@ -164,6 +160,7 @@ var createStaticPages = function(staticsContents, category, cb){
                 staticContent['category'] = category;
                 var staticPage = jade.renderFile(path.join(__JADE_STATIC__), staticContent);
 
+                logger.info('Page ' + category + '/' + staticContent.staticFileName + '.html about to be compiled.');
                 fs.writeFile(filename, staticPage, function(writeErr){
                     if (writeErr) throw writeErr;
                     callback();

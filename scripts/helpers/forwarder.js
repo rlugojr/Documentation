@@ -1,4 +1,7 @@
 var fs = require('fs'),
+    path    = require('path'),
+    appRoot = require('app-root-path').path,
+    logger  = require(path.join(appRoot, 'config/logger')),
     marked = require('meta-marked'),
     __FILENAME__= 'data/forward.json';
 
@@ -10,10 +13,11 @@ module.exports.extractMeta = function(filePath, cb){
     });
 };
 
-module.exports.createForward = function(err, metaList){
+module.exports.createForward = function(err, metaList, cb){
     if (err) throw err;
     fs.writeFile(__FILENAME__, JSON.stringify(metaList), function(error){
         if (error) throw error;
-        console.log('DONE');
+        logger.info('> data/forward.json has been successfully compiled.');
+        cb(true);
     });
 };

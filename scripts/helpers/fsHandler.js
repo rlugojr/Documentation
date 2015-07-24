@@ -1,3 +1,8 @@
+/**
+ * File system helper
+ * @type {*}
+ */
+
 var fs = require('fs'),
     path = require('path');
 

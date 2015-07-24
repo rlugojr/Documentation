@@ -1,3 +1,7 @@
+/**
+ * Config file for the builder
+ */
+
 var file = {
     classesLocation: 'content/classes/',
     location       : './scripts/helpers/builder/sources/',

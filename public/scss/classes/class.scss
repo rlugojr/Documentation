@@ -1,8 +1,8 @@
-$sidebar_width : 300px;
+$sidebar_width: 300px;
 
 // Sort by tag or A-Z
 .sorts {
-  width:100%;
+  width: 100%;
   text-align: center;
 
   // Tag or A-Z
@@ -24,33 +24,32 @@ $sidebar_width : 300px;
   }
 }
 
-
 // Resizer
 .classBarResize {
-  position:absolute;
-  left : $sidebar_width;
-  top : 50px;
+  position: absolute;
+  left: $sidebar_width;
+  top: 50px;
   bottom: 40px;
   cursor: col-resize;
-  width : 3px;
+  width: 3px;
   z-index: 3;
   border-left: 1px solid $darkgrey;
 }
 
 .classBar {
-  position:absolute;
-  top : 50px;
+  position: absolute;
+  top: 50px;
   bottom: 40px;
-  left : 0;
+  left: 0;
   background-color: #f9f9f9;
-  width : $sidebar_width;
-  margin:0;
+  width: $sidebar_width;
+  margin: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  z-index : 2;
-  color:$black;
+  z-index: 2;
+  color: $black;
 
-  #classes_classesListByAlpha{
+  #classes_classesListByAlpha {
     width: 100%;
     margin-left: 30px;
   }
@@ -58,10 +57,10 @@ $sidebar_width : 300px;
   // CLASSES
   .classesTitle {
     text-align: center;
-    width:100%;
-    color : #eee;
+    width: 100%;
+    color: #eee;
     background-color: $black;
-    padding:10px;
+    padding: 10px;
     margin-bottom: 10px;
   }
 
@@ -69,8 +68,8 @@ $sidebar_width : 300px;
   .class {
     font-size: 11pt;
     padding: 5px 0 5px 10px;
-    color:$black;
-    display : block;
+    color: $black;
+    display: block;
     &:hover {
       background-color: $darkgrey;
       color: white;
@@ -80,34 +79,72 @@ $sidebar_width : 300px;
 
 // MD content of a class
 .classContent {
-  padding:20px;
+  padding: 20px;
   margin: 0 0 0 $sidebar_width;
-  position:absolute;
-  top : 50px;
+  position: absolute;
+  top: 50px;
   bottom: 40px;
-  height:auto;
+  height: auto;
   width: calc(100% - #{$sidebar_width});
   overflow-x: auto;
   overflow-y: auto;
-  z-index:10;
+  z-index: 10;
 
   #classTitle {
+    @include outer-container(100%);
     border-bottom: solid 1px $red;
-    padding-bottom: 2px;
-    margin-bottom: 15px;
-    font-size: 20pt;
+
+    h1 {
+      @include span-columns(6);
+      padding-bottom: 2px;
+      margin-bottom: 15px;
+      font-size: 20pt;
+      margin-top: 5px;
+    }
+
+    #selectList {
+      @include span-columns(6);
+      text-align: right;
+      margin-top: 5px;
+      height: 34px;
+      //      border: 1px solid #111;
+      //      border-radius: 3px;
+      overflow: hidden;
+      //      background:  96% / 20% no-repeat #ddd;
+
+      #methodsList {
+        width: 100%;
+        font-size: 16px;
+        height: 34px;
+
+        option {
+          padding: 8px;
+        }
+        .cat{
+           padding: 8px 5px;
+           background-color: $darker_black;
+           color: #f5f5f5;
+           font-weight: 300;
+         }
+      }
+    }
+
   }
 
-  .classTag{
-    font-size: 0.8em;
-    color: white;
-    margin:5px;
-    background-color: $red;
-    border-radius: 3px;
-    padding:5px;
+  #classTags {
+    margin-top: 10px;
 
-    &:hover{
-      text-decoration: none;
+    .classTag {
+      font-size: 0.8em;
+      color: white;
+      margin: 5px;
+      background-color: $red;
+      border-radius: 3px;
+      padding: 5px;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 
@@ -130,11 +167,11 @@ $sidebar_width : 300px;
     }
 
     h2, h3 {
-      a{
+      a {
         margin: 0px 5px;
       }
 
-      a.invisible{
+      a.invisible {
         visibility: hidden;
       }
     }
@@ -184,16 +221,16 @@ $sidebar_width : 300px;
   }
 }
 
-#classes_classesListByTag.sidemenu{
+#classes_classesListByTag.sidemenu {
   width: 100%;
 }
 
-#classes_classesListByAlpha.sideClassesListByAlpha{
+#classes_classesListByAlpha.sideClassesListByAlpha {
   a {
     margin-right: 65px;
   }
 }
 
-.highlighted{
+.highlighted {
   background-color: $yellow;
 }

@@ -3,9 +3,8 @@ include ../includes/banner
 #wrapper
     .statics-banner
         h1=category
-
     .horizontal-separator
-    .static-content
+    .statics-content
         .tagList
             for tag in tags
                 .tagWrapper
@@ -20,5 +19,4 @@ include ../includes/banner
                 .fileTitle(class=file['tags'] class='All')
                     a(href='./' + file['category'] + '/'+file['url'])= file['name']
 include ../includes/footer
-
 script(src="/js/statics.js")

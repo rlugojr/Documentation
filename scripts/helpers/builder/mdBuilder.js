@@ -1,5 +1,5 @@
 /**
- * Created by Zacaria on 30/06/2015.
+ * Holds functions parsing imported classes
  */
 var fs = require('fs');
 var path = require('path');

@@ -1,3 +1,8 @@
+/**
+ * Imports tutorials exporters and extension files from old site
+ * @type {async|exports|module.exports}
+ */
+
 var async = require('async');
 var path = require('path');
 var rimraf = require('rimraf');

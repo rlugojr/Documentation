@@ -1,3 +1,8 @@
+/**
+ * Imports older version of classes and writes the final data
+ * @type {async|exports|module.exports}
+ */
+
 var async = require('async'),
     path = require('path'),
     fsHandler = require('../../fsHandler');

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to dynamically morph a mesh</h1><br><div id="staticContent"><h3 id="what-is-morphing-">What is morphing ?</h3>
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item active"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to dynamically morph a mesh</h1><br><div id="staticContent"><h3 id="what-is-morphing-">What is morphing ?</h3>
 <p>This part is about the way to morph some kind of meshes.<br>For now, it concerns only ribbons, tubes, extruded shapes and lines.   </p>
 <p>When talking about morphing, we mean here changing the vertices positions of an existing mesh. Indices remain unchanged. This means the mesh keeps the same number of vertices, the same faces between vertices and it remains the same object in your code.
 Only its vertices change their coordinates.   </p>
@@ -9,29 +9,29 @@ Only its vertices change their coordinates.   </p>
 <p><em>(reminder : only points positions can change in the path array, not the number of points. Please see the summary at the bottom of this page for more details)</em> </p>
 <p>Let&#39;s create a ribbon.<br>As explained in the Ribbon tutorial part, a good way to create a ribbon is to fill many arrays with <em>Vector3</em> with two <em>for</em> loops : one for each path, another one for the array of paths : the <em>pathArray</em>.   </p>
 <p>Here we create a simple plane ribbon in the xOz plane   </p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// path function</span>
-<span class="hljs-keyword">var</span> pathFunction = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(k)</span> </span>{
-  <span class="hljs-keyword">var</span> path = [];
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">60</span>; i++) {
-    <span class="hljs-keyword">var</span> x = i - <span class="hljs-number">30</span>;
-    <span class="hljs-keyword">var</span> y = <span class="hljs-number">0</span>;
-    <span class="hljs-keyword">var</span> z = k;
-    path.push(<span class="hljs-keyword">new</span> BABYLON.Vector3(x, y, z));
+<pre><code class="lang-javascript">// path function
+var pathFunction = function(k) {
+  var path = [];
+  for (var i = 0; i &lt; 60; i++) {
+    var x = i - 30;
+    var y = 0;
+    var z = k;
+    path.push(new BABYLON.Vector3(x, y, z));
   }
-  <span class="hljs-keyword">return</span> path;
+  return path;
 };
-<span class="hljs-comment">// ribbon creation</span>
-<span class="hljs-keyword">var</span> sideO = BABYLON.Mesh.BACKSIDE;
-<span class="hljs-keyword">var</span> pathArray = [];
-<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i = -<span class="hljs-number">20</span>; i &lt; <span class="hljs-number">20</span>; i++) {
-  pathArray.push(pathFunction(i * <span class="hljs-number">2</span>));
+// ribbon creation
+var sideO = BABYLON.Mesh.BACKSIDE;
+var pathArray = [];
+for(var i = -20; i &lt; 20; i++) {
+  pathArray.push(pathFunction(i * 2));
 }
-<span class="hljs-keyword">var</span> mesh = BABYLON.Mesh.CreateRibbon(<span class="hljs-string">"ribbon"</span>, pathArray, <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">0</span>, scene, <span class="hljs-literal">true</span>, sideO);
+var mesh = BABYLON.Mesh.CreateRibbon(&quot;ribbon&quot;, pathArray, false, false, 0, scene, true, sideO);
 </code></pre>
 <p>example : <a href="http://www.babylonjs-playground.com/#1MSEBT">http://www.babylonjs-playground.com/#1MSEBT</a> </p>
 <p>The important key to notice is that we set the <strong><em>updatable</em></strong> parameter to <strong><em>true</em></strong> in the <em>CreateRibbon()</em> method : the one just between the <em>scene</em> and the <em>sideO</em> parameters.   </p>
 <p>We can now imagine we want to change this existing ribbon <em>y</em> coordinates according to a sinus function. So for each path in the existing <em>pathArray</em> array we just change <em>Vector3</em> coordinates.<br>Note we don&#39;t create new paths or a new <em>pathArray</em> array. We just access with indexes to every element and just change values.   </p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> updatePath = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(path)</span> <span class="hljs-comment">{
+<pre><code class="lang-javascript">var updatePath = function(path) {
   for (var i = 0; i &lt; path.length; i++) {
     var x = path[i].x;
     var z = path[i].z;
@@ -39,45 +39,45 @@ Only its vertices change their coordinates.   </p>
     path[i].x = x;
     path[i].y = y;
     path[i].z = z;
-  }</span>
-};</span>
+  }
+};
 
-<span class="hljs-comment">// update pathArray</span>
-<span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> p = <span class="hljs-number">0</span>; p &lt; pathArray.length; p++) <span class="hljs-comment">{
+// update pathArray
+for(var p = 0; p &lt; pathArray.length; p++) {
   updatePath(pathArray[p]);
-}</span>
+}
 </code></pre>
 <p>The way to update then our existing mesh is quite simple : let&#39;s just re-use the <em>CreateRibbon()</em> method and give it this mesh as last parameter with our modified <em>pathArray</em>.   </p>
-<pre><code class="lang-javascript"><span class="hljs-variable">mesh =</span> BABYLON.Mesh.CreateRibbon(<span class="hljs-constant">null</span>, pathArray, <span class="hljs-constant">null</span>, <span class="hljs-constant">null</span>, <span class="hljs-constant">null</span>, <span class="hljs-constant">null</span>, <span class="hljs-constant">null</span>, <span class="hljs-constant">null</span>, mesh);
+<pre><code class="lang-javascript">mesh = BABYLON.Mesh.CreateRibbon(null, pathArray, null, null, null, null, null, null, mesh);
 </code></pre>
 <p>The other parameters than <em>pathArray</em> and <em>mesh</em> are just ignored when updating, so they can be set to <em>null</em> for better understanding.<br>The <em>CreateRibbon()</em> method thus updates the given ribbon and returns it.   </p>
 <p>example : <a href="http://www.babylonjs-playground.com/#1MSEBT#1">http://www.babylonjs-playground.com/#1MSEBT#1</a>   </p>
 <p>Well, we just updated our ribbon&#39;s shape once for now.   </p>
 <p>If we now want its shape to evolve dynamically, we just have to set the <em>pathArray</em> computation (fixed to change with an extra <em>k</em> parameter) and the <em>CreateRibbon()</em> call inside the render loop.   </p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> updatePath = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">path, k</span>) </span>{
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; path.length; i++) {
-    <span class="hljs-keyword">var</span> x = path[i].x;
-    <span class="hljs-keyword">var</span> z = path[i].z;
-    <span class="hljs-keyword">var</span> y = <span class="hljs-number">20</span> * <span class="hljs-built_in">Math</span>.sin(i/ <span class="hljs-number">10</span>) * <span class="hljs-built_in">Math</span>.sin(k + z / <span class="hljs-number">40</span>);
+<pre><code class="lang-javascript">var updatePath = function(path, k) {
+  for (var i = 0; i &lt; path.length; i++) {
+    var x = path[i].x;
+    var z = path[i].z;
+    var y = 20 * Math.sin(i/ 10) * Math.sin(k + z / 40);
     path[i].x = x;
     path[i].y = y;
     path[i].z = z;
   }
 };
 
-<span class="hljs-comment">// path array population ...</span>
-<span class="hljs-keyword">var</span> mesh = BABYLON.Mesh.CreateRibbon(<span class="hljs-string">"ribbon"</span>, pathArray, <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, <span class="hljs-number">0</span>, scene, <span class="hljs-literal">true</span>);
+// path array population ...
+var mesh = BABYLON.Mesh.CreateRibbon(&quot;ribbon&quot;, pathArray, false, false, 0, scene, true);
 
-<span class="hljs-comment">// morphing</span>
-<span class="hljs-keyword">var</span> k = <span class="hljs-number">0</span>;
-scene.registerBeforeRender(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-comment">// path array update</span>
-  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> p = <span class="hljs-number">0</span>; p &lt; pathArray.length; p++) {
+// morphing
+var k = 0;
+scene.registerBeforeRender(function() {
+  // path array update
+  for(var p = 0; p &lt; pathArray.length; p++) {
     updatePath(pathArray[p], k);
   }
-  <span class="hljs-comment">// ribbon update</span>
-  mesh = BABYLON.Mesh.CreateRibbon(<span class="hljs-literal">null</span>, pathArray, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, mesh);
-  k += <span class="hljs-number">0.05</span>;
+  // ribbon update
+  mesh = BABYLON.Mesh.CreateRibbon(null, pathArray, null, null, null, null, null, null, mesh);
+  k += 0.05;
 });
 </code></pre>
 <p>example : <a href="http://www.babylonjs-playground.com/#1MSEBT#3">http://www.babylonjs-playground.com/#1MSEBT#3</a>   </p>
@@ -85,13 +85,13 @@ scene.registerBeforeRender(<span class="hljs-function"><span class="hljs-keyword
 <h5 id="_lines-and-dashed-lines-updatable-parameter-points_"><em>lines and dashed lines updatable parameter : points</em></h5>
 <p><em>(reminder : only points positions can change, not the number of points. Please see the summary at the bottom of this page for more details)</em></p>
 <p>Once we got the understanding for ribbons, we can apply it to Lines or DashedLines.<br>It&#39;s even easier as Lines just require a path of points as parameter.   </p>
-<pre><code class="lang-javascript"><span class="hljs-variable"><span class="hljs-keyword">var</span> points1</span> = [v1, v2, ..., vN]; <span class="hljs-comment">// vector3 array</span>
-<span class="hljs-variable"><span class="hljs-keyword">var</span> lines</span> = BABYLON.Mesh.CreateLines(<span class="hljs-string">"lines"</span>, points1, scene, <span class="hljs-literal">true</span>);
-<span class="hljs-variable"><span class="hljs-keyword">var</span> dashedlines</span> = BABYLON.Mesh.CreateDashedLines(<span class="hljs-string">"lines"</span>, points1, dashSize, gapSize, nb, scene, <span class="hljs-literal">true</span>);
+<pre><code class="lang-javascript">var points1 = [v1, v2, ..., vN]; // vector3 array
+var lines = BABYLON.Mesh.CreateLines(&quot;lines&quot;, points1, scene, true);
+var dashedlines = BABYLON.Mesh.CreateDashedLines(&quot;lines&quot;, points1, dashSize, gapSize, nb, scene, true);
 
-<span class="hljs-variable"><span class="hljs-keyword">var</span> points2</span> = [u1, u2, ..., uN]; <span class="hljs-comment">// another vector3 array</span>
-lines = BABYLON.Mesh.CreateLines(<span class="hljs-literal">null</span>, points2, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, lines);
-dashedlines = BABYLON.Mesh.CreateDashedLines(<span class="hljs-literal">null</span>, points2, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, dashedlines);
+var points2 = [u1, u2, ..., uN]; // another vector3 array
+lines = BABYLON.Mesh.CreateLines(null, points2, null, null, lines);
+dashedlines = BABYLON.Mesh.CreateDashedLines(null, points2, null, null, null, null, null, dashedlines);
 </code></pre>
 <p>We can, of course, set the update method within the render loop.   </p>
 <p>example lines : <a href="http://www.babylonjs-playground.com/#24PQRQ">http://www.babylonjs-playground.com/#24PQRQ</a><br>dashed lines : <a href="http://www.babylonjs-playground.com/#XKYAE#3">http://www.babylonjs-playground.com/#XKYAE#3</a>    </p>
@@ -99,18 +99,18 @@ dashedlines = BABYLON.Mesh.CreateDashedLines(<span class="hljs-literal">null</sp
 <h5 id="_tube-updatable-parameters-path-radius-radiusfunction_"><em>tube updatable parameters : path, radius, radiusFunction</em></h5>
 <p><em>(reminder : only points positions can change in the path, not the number of points. Please see the summary at the bottom of this page for more details)</em>   </p>
 <p>Nothing differs for tubes. Let&#39;s create a tube and then update it according to new <em>path</em>, <em>radius</em> or <em>radiusFunction</em> values : </p>
-<pre><code class="lang-javascript"><span class="hljs-variable"><span class="hljs-keyword">var</span> path1</span> = [v1, ..., vN]; <span class="hljs-comment">//vector3 array : tube axis1</span>
-<span class="hljs-variable"><span class="hljs-keyword">var</span> radius1</span> = <span class="hljs-number">5</span>;
-<span class="hljs-variable"><span class="hljs-keyword">var</span> path2</span> = [u1, ..., uN]; <span class="hljs-comment">// another vector3 array : tube axis2</span>
-<span class="hljs-variable"><span class="hljs-keyword">var</span> radius2</span> = <span class="hljs-number">8</span>;
-<span class="hljs-variable"><span class="hljs-keyword">var</span> tube</span> = BABYLON.Mesh.CreateTube(<span class="hljs-string">"tube"</span>, path1, radius1, <span class="hljs-number">12</span>, <span class="hljs-literal">null</span>, cap, scene, <span class="hljs-literal">true</span>);
-tube = BABYLON.Mesh.CreateTube(<span class="hljs-literal">null</span>, path2, radius2, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, tube);
+<pre><code class="lang-javascript">var path1 = [v1, ..., vN]; //vector3 array : tube axis1
+var radius1 = 5;
+var path2 = [u1, ..., uN]; // another vector3 array : tube axis2
+var radius2 = 8;
+var tube = BABYLON.Mesh.CreateTube(&quot;tube&quot;, path1, radius1, 12, null, cap, scene, true);
+tube = BABYLON.Mesh.CreateTube(null, path2, radius2, null, null, null, null, null, tube);
 </code></pre>
 <p>Of course, it also works with the <em>radiusFunction</em> parameter :   </p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> radiusFunction1 = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(i, distance)</span> </span>{ ... };
-<span class="hljs-keyword">var</span> radiusFunction2 = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(i, distance)</span> </span>{ ... };
-<span class="hljs-keyword">var</span> tube = BABYLON.Mesh.CreateTube(<span class="hljs-string">"tube"</span>, path1, <span class="hljs-literal">null</span>, <span class="hljs-number">12</span>, radiusFunction1, cap, scene, <span class="hljs-literal">true</span>);
-tube = BABYLON.Mesh.CreateTube(<span class="hljs-literal">null</span>, path2, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, radiusFunction2, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, tube);
+<pre><code class="lang-javascript">var radiusFunction1 = function(i, distance) { ... };
+var radiusFunction2 = function(i, distance) { ... };
+var tube = BABYLON.Mesh.CreateTube(&quot;tube&quot;, path1, null, 12, radiusFunction1, cap, scene, true);
+tube = BABYLON.Mesh.CreateTube(null, path2, null, null, radiusFunction2, null, null, null, tube);
 </code></pre>
 <p>example : <a href="http://www.babylonjs-playground.com/#ACKC2#1">http://www.babylonjs-playground.com/#ACKC2#1</a>       </p>
 <p>PG here with radiusFunction animation + closure explanation </p>
@@ -119,35 +119,35 @@ tube = BABYLON.Mesh.CreateTube(<span class="hljs-literal">null</span>, path2, <s
 <h5 id="_extrusion-updatable-parameters-for-extrudeshapecustom-shape-path-scalefunction-rotatefunction_"><em>extrusion updatable parameters for ExtrudeShapeCustom(): shape, path, scaleFunction, rotateFunction</em></h5>
 <p><em>(reminder : only points positions can change in the path, not the number of points. Please see the summary at the bottom of this page for more details)</em>   </p>
 <p>We can see extrusion as some tube generalization : a tube would be a circle <em>shape</em> extruded along a path.<br>So we have here the same update capabilities than for a tube (<em>path</em> or shape <em>scale</em> which would be the equivalent to tube <em>radius</em>) and some extra parameters : the <em>rotation</em> step can be updated and the <em>shape</em> itself also !<br>It is mandatory that the new <em>shape</em> array has the same number of Vector3 than the <em>shape</em> used to build the original instance. A good way to assure this is simply to keep the original <em>shape</em> instance and to modify it instead of creating a new one (or to modify a copy of it).   </p>
-<pre><code class="lang-javascript">var shape1 = <span class="hljs-keyword">[</span>s1, s2, ...sN]; // Vector3<span class="hljs-instruction"> array
-</span>var shape2 = <span class="hljs-keyword">[</span>t1, t2, ...tN]; // another Vector3<span class="hljs-instruction"> array
-</span>var path1 = <span class="hljs-keyword">[</span><span class="hljs-variable">p1</span>, <span class="hljs-variable">p2</span>, ...pN]; // Vector3<span class="hljs-instruction"> array
-</span>var path2 = <span class="hljs-keyword">[</span>q1, q2, ...qN]; // another Vector3<span class="hljs-instruction"> array
-</span>var scale1 = 1;
+<pre><code class="lang-javascript">var shape1 = [s1, s2, ...sN]; // Vector3 array
+var shape2 = [t1, t2, ...tN]; // another Vector3 array
+var path1 = [p1, p2, ...pN]; // Vector3 array
+var path2 = [q1, q2, ...qN]; // another Vector3 array
+var scale1 = 1;
 var scale2 = 3;
 var rotation1 = 0;
 var rotation2 = 0.2;
 // extrusion
-var extruded =<span class="hljs-function"> BABYLON.Mesh.ExtrudeShape(</span><span class="hljs-string">"ext"</span>, shape1, path1, scale1, rotation1, cap, scene, true<span class="hljs-function">)</span>;
+var extruded = BABYLON.Mesh.ExtrudeShape(&quot;ext&quot;, shape1, path1, scale1, rotation1, cap, scene, true);
 // mesh update
-extruded =<span class="hljs-function"> BABYLON.Mesh.ExtrudeShape(</span>null, shape2, path2, scale2, rotation2, null, null, null, null, extruded<span class="hljs-function">)</span>;
+extruded = BABYLON.Mesh.ExtrudeShape(null, shape2, path2, scale2, rotation2, null, null, null, null, extruded);
 </code></pre>
 <p>Idem for <em>ExtrudeShapeCustom()</em> accepting <em>scaleFunction</em> and <em>rotateFunction</em> parameters :   </p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// path and shape var declared before ...</span>
-<span class="hljs-keyword">var</span> myScale1 = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(i, distance)</span> </span>{ ... };
-<span class="hljs-keyword">var</span> myScale2 = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(i, distance)</span> </span>{ ... };
-<span class="hljs-keyword">var</span> myRotation1 = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(i, distance)</span> </span>{ ... };
-<span class="hljs-keyword">var</span> myRotation2 = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(i, distance)</span> </span>{ ... };
-<span class="hljs-comment">// extrusion</span>
-<span class="hljs-keyword">var</span> ext = BABYLON.Mesh.ExtrudeShapeCustom(<span class="hljs-string">"ext"</span>, shape1, path1, myScale1, myRotation1, <span class="hljs-literal">false</span>, <span class="hljs-literal">false</span>, cap, scene, <span class="hljs-literal">true</span>);
-<span class="hljs-comment">// mesh update</span>
-ext = BABYLON.Mesh.ExtrudeShapeCustom(<span class="hljs-literal">null</span>, shape2, path2, myScale2, myRotation2, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, ext);
+<pre><code class="lang-javascript">// path and shape var declared before ...
+var myScale1 = function(i, distance) { ... };
+var myScale2 = function(i, distance) { ... };
+var myRotation1 = function(i, distance) { ... };
+var myRotation2 = function(i, distance) { ... };
+// extrusion
+var ext = BABYLON.Mesh.ExtrudeShapeCustom(&quot;ext&quot;, shape1, path1, myScale1, myRotation1, false, false, cap, scene, true);
+// mesh update
+ext = BABYLON.Mesh.ExtrudeShapeCustom(null, shape2, path2, myScale2, myRotation2, null, null, null, null, null, null, ext);
 </code></pre>
 <p>Both new functions can be used in the render loop.      </p>
 <p>The funny part is, as <em>ExtrudeShape()</em> and <em>ExtrudedShapeCustom()</em> build the same mesh (only parameters change), you can create a simple extruded shape with <em>ExtrudeShape()</em> and then morph it with <em>ExtrudeShapeCustom()</em> if you need more complexity.   </p>
-<pre><code class="lang-javascript"><span class="hljs-variable"><span class="hljs-keyword">var</span> ext</span> = BABYLON.Mesh.ExtrudeShape(<span class="hljs-string">"ext"</span>, shape1, path1, scale1, rotation1, cap, scene, <span class="hljs-literal">true</span>);
-<span class="hljs-comment">// mesh update</span>
-ext = BABYLON.Mesh.ExtrudeShapeCustom(<span class="hljs-literal">null</span>, shape2, path2, myScale2, myRotation2, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, ext);
+<pre><code class="lang-javascript">var ext = BABYLON.Mesh.ExtrudeShape(&quot;ext&quot;, shape1, path1, scale1, rotation1, cap, scene, true);
+// mesh update
+ext = BABYLON.Mesh.ExtrudeShapeCustom(null, shape2, path2, myScale2, myRotation2, null, null, null, null, null, null, ext);
 </code></pre>
 <p>PG examples here ...   </p>
 <h3 id="other-shapes-updatemeshpositions">Other shapes : updateMeshPositions</h3>
@@ -161,22 +161,22 @@ So usually, the right way to change these basic shapes is to play with their <co
 <li>a <em>positionFunction</em> which is js function which will modify the mesh <em>positions</em> array,</li>
 <li>a <em>computeNormals</em> boolean (default = true) to skip/unskip the normals re-computation after the mesh update .</li>
 </ul>
-<pre><code class="lang-javascript">var box =<span class="hljs-function"> BABYLON.Mesh.CreateBox(</span><span class="hljs-string">"box"</span>, 5.0, scene, true<span class="hljs-function">)</span>;
-var positionFunction =<span class="hljs-function"> function(</span>positions<span class="hljs-function">)</span> {
- // modify positions<span class="hljs-instruction"> array </span>values here
+<pre><code class="lang-javascript">var box = BABYLON.Mesh.CreateBox(&quot;box&quot;, 5.0, scene, true);
+var positionFunction = function(positions) {
+ // modify positions array values here
 };
-box.updateMeshPositions(positionFunction, true<span class="hljs-function">)</span>;
+box.updateMeshPositions(positionFunction, true);
 </code></pre>
 <p>PG examples here ...</p>
 <h3 id="more-speed-freezenormals-">More speed : freezeNormals !</h3>
 <p>The former <em>CreateXXX()</em> update functions try to be as much optimized as possible to run fast in the render loop.<br>However, you may need some more speed for any reason (huge mesh with dozens of thousands of vertices for instance).<br>So, if your mesh doesn&#39;t need to reflect the light (emissive color only for instance), you can skip the normals re-computation which is a CPU consuming process.<br>Use then the <em>freezeNormals()</em> method just after your mesh is created :   </p>
-<pre><code class="lang-javascript"><span class="hljs-variable"><span class="hljs-keyword">var</span> tube</span> = BABYLON.Mesh.CreateTube(<span class="hljs-string">"tube"</span>, path, <span class="hljs-number">3</span>, <span class="hljs-number">12</span>, <span class="hljs-literal">null</span>, BABYLON.Mesh.NO_CAP, scene, <span class="hljs-literal">true</span>);
+<pre><code class="lang-javascript">var tube = BABYLON.Mesh.CreateTube(&quot;tube&quot;, path, 3, 12, null, BABYLON.Mesh.NO_CAP, scene, true);
 tube.freezeNormals();
-<span class="hljs-comment">// path update here ...</span>
-tube = BABYLON.Mesh.CreateTube(<span class="hljs-literal">null</span>, path, <span class="hljs-number">3</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, <span class="hljs-literal">null</span>, tube);
+// path update here ...
+tube = BABYLON.Mesh.CreateTube(null, path, 3, null, null, null, null, null, null, tube);
 </code></pre>
 <p>If you need to reset the normals computation process on, use then once the <em>unfreezeNormals()</em> method.</p>
-<pre><code class="lang-javascript"><span class="hljs-tag">tube</span><span class="hljs-class">.unfreezeNormals</span>();
+<pre><code class="lang-javascript">tube.unfreezeNormals();
 </code></pre>
 <p>The normals will then be recomputed and re-applied on the next <em>CreateXXX()</em> update call.   </p>
 <h3 id="summary">Summary</h3>
@@ -188,26 +188,29 @@ tube = BABYLON.Mesh.CreateTube(<span class="hljs-literal">null</span>, path, <sp
 </ul>
 <p>example : if we need to update a Lines mesh in the render loop, it is to say to update the <em>points</em> array each frame, it is better to change each array element values (<em>points[i].x = newXValue; points[i].y = newYValue; points[i].z = newZValue;</em>) in a <em>for</em> loop instead of instantiating a new <em>points</em> array.   </p>
 <p>Use case with a <em>path</em> parameter as all parametric shapes have one :    </p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> path = [v1, v2, ..., vN]; <span class="hljs-comment">// your own array, created once</span>
-<span class="hljs-keyword">var</span> mesh = CreateXXX(<span class="hljs-string">"mesh"</span>, path, etc, ..., scene, <span class="hljs-literal">true</span>); <span class="hljs-comment">// updatable = true : creates your initial mesh</span>
-<span class="hljs-keyword">var</span> computeValue = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(val1, val2)</span> </span>{ ... }; <span class="hljs-comment">// your update logic : returns a value in function of val1 and val2</span>
-<span class="hljs-keyword">var</span> getParam = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{ ... }; <span class="hljs-comment">// returns a param value evolving in the render loop</span>
-<span class="hljs-keyword">var</span> updatePath = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(path, k)</span> </span>{ <span class="hljs-comment">// updates the existing path array elements</span>
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; path.length; i++) {
-    <span class="hljs-keyword">var</span> x = computeValue(path[i].x, k);
-    <span class="hljs-keyword">var</span> y = computeValue(path[i].y, k);
-    <span class="hljs-keyword">var</span> z = computeValue(path[i].z, k);
+<pre><code class="lang-javascript">var path = [v1, v2, ..., vN]; // your own array, created once
+var mesh = CreateXXX(&quot;mesh&quot;, path, etc, ..., scene, true); // updatable = true : creates your initial mesh
+var computeValue = function(val1, val2) { ... }; // your update logic : returns a value in function of val1 and val2
+var getParam = function() { ... }; // returns a param value evolving in the render loop
+var updatePath = function(path, k) { // updates the existing path array elements
+  for (var i = 0; i &lt; path.length; i++) {
+    var x = computeValue(path[i].x, k);
+    var y = computeValue(path[i].y, k);
+    var z = computeValue(path[i].z, k);
     path[i].x = x;
     path[i].y = y;
     path[i].z = z;
   }
 };
 
-scene.registerBeforeRender(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
-  <span class="hljs-keyword">var</span> k = getParam();
+scene.registerBeforeRender(function() {
+  var k = getParam();
   updatePath(path, k);
-  mesh = CreateXXX(<span class="hljs-literal">null</span>, path, <span class="hljs-literal">null</span>, ..., <span class="hljs-literal">null</span>, mesh);
+  mesh = CreateXXX(null, path, null, ..., null, mesh);
 });
 </code></pre>
 <p><em>(edition in progress)</em></p>
-</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
+    $(this).text($(this).text().replace(/&nbsp;/gi, ''));
+});
+hljs.initHighlightingOnLoad();</script>

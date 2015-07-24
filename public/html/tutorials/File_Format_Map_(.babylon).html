@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>File Format Map (.babylon)</h1><br><div id="staticContent"><p><strong>Babylon.js</strong> uses a JSON file format for describing scenes.</p>
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item active"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>File Format Map (.babylon)</h1><br><div id="staticContent"><p><strong>Babylon.js</strong> uses a JSON file format for describing scenes.</p>
 <p>You can find the complete loader code here:
 <a href="https://github.com/BabylonJS/Babylon.js/blob/master/Babylon/Loading/Plugins/babylon.babylonFileLoader.js">https://github.com/BabylonJS/Babylon.js/blob/master/Babylon/Loading/Plugins/babylon.babylonFileLoader.js</a></p>
 <h2 id="basic-types">Basic types</h2>
@@ -13,733 +13,736 @@
 <h2 id="global-structure">Global structure</h2>
 <p>The global structure of a .babylon file is the following:</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-string">"autoClear"</span>: boolean,
-    <span class="hljs-string">"clearColor"</span>: color3,
-    <span class="hljs-string">"ambientColor"</span>: color3,
-    <span class="hljs-string">"gravity"</span>: vector3<span class="hljs-function"> (</span>usually <span class="hljs-keyword">[</span>0,-9,0]<span class="hljs-function">)</span>,
-    <span class="hljs-string">"cameras"</span>:<span class="hljs-instruction"> array </span>of Cameras<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"activeCamera_"</span>: string,
-    <span class="hljs-string">"lights"</span>:<span class="hljs-instruction"> array </span>of Lights<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"materials"</span>:<span class="hljs-instruction"> array </span>of Materials<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"geometries"</span>: {...}<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"meshes"</span>:<span class="hljs-instruction"> array </span>of Meshes<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"multiMaterials"</span>:<span class="hljs-instruction"> array </span>of MultiMaterials<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"shadowGenerators"</span>:<span class="hljs-instruction"> array </span>of ShadowGenerators<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"skeletons"</span>:<span class="hljs-instruction"> array </span>of Skeletons<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"particleSystems"</span>:<span class="hljs-instruction"> array </span>of ParticleSystems<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"lensFlareSystems"</span>:<span class="hljs-instruction"> array </span>of LensFlareSystems<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"actions"</span>:<span class="hljs-instruction"> array </span>of actions<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"sounds"</span>:<span class="hljs-instruction"> array </span>of Sounds<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>
+    &quot;autoClear&quot;: boolean,
+    &quot;clearColor&quot;: color3,
+    &quot;ambientColor&quot;: color3,
+    &quot;gravity&quot;: vector3 (usually [0,-9,0]),
+    &quot;cameras&quot;: array of Cameras (see below),
+    &quot;activeCamera_&quot;: string,
+    &quot;lights&quot;: array of Lights (see below),
+    &quot;materials&quot;: array of Materials (see below),
+    &quot;geometries&quot;: {...} (see below),
+    &quot;meshes&quot;: array of Meshes (see below),
+    &quot;multiMaterials&quot;: array of MultiMaterials (see below),
+    &quot;shadowGenerators&quot;: array of ShadowGenerators (see below),
+    &quot;skeletons&quot;: array of Skeletons (see below),
+    &quot;particleSystems&quot;: array of ParticleSystems (see below),
+    &quot;lensFlareSystems&quot;: array of LensFlareSystems (see below),
+    &quot;actions&quot;: array of actions (see below),
+    &quot;sounds&quot;: array of Sounds (see below)
 }
 </code></pre>
 <h2 id="cameras">Cameras</h2>
 <p>A camera is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-string">"name"</span>: <span class="hljs-type">string</span>,
-    <span class="hljs-string">"id"</span>: <span class="hljs-type">string</span>,
-    <span class="hljs-string">"type"</span>: <span class="hljs-type">string</span>,
-    <span class="hljs-string">"tags"</span>: <span class="hljs-type">string</span>,
-    <span class="hljs-string">"parentId"</span>: <span class="hljs-type">string</span>,
-    <span class="hljs-string">"lockedTargetId"</span>: <span class="hljs-type">string</span>,
-    <span class="hljs-string">"position"</span>: vector3,
-    <span class="hljs-string">"target"</span>: vector3,
-    <span class="hljs-string">"alpha"</span>: <span class="hljs-type">float</span>, // only <span class="hljs-keyword">for</span> <span class="hljs-type">ArcRotateCamera</span> <span class="hljs-keyword">and</span> <span class="hljs-type">AnaglyphArcRotateCamera</span>
-    <span class="hljs-string">"beta"</span>: <span class="hljs-type">float</span>, // only <span class="hljs-keyword">for</span> <span class="hljs-type">ArcRotateCamera</span> <span class="hljs-keyword">and</span> <span class="hljs-type">AnaglyphArcRotateCamera</span>
-    <span class="hljs-string">"radius"</span>: <span class="hljs-type">float</span>, // only <span class="hljs-keyword">for</span> <span class="hljs-type">ArcRotateCamera</span>, <span class="hljs-type">FollowCamera</span> <span class="hljs-keyword">and</span> <span class="hljs-type">AnaglyphArcRotateCamera</span>
-    <span class="hljs-string">"eye_space"</span>: <span class="hljs-type">float</span>, // only <span class="hljs-keyword">for</span> <span class="hljs-type">AnaglyphFreeCamera</span> <span class="hljs-keyword">and</span> <span class="hljs-type">AnaglyphArcRotateCamera</span>
-    <span class="hljs-string">"heightOffset"</span>: <span class="hljs-type">float</span>, // only <span class="hljs-keyword">for</span> <span class="hljs-type">FollowCamera</span>
-    <span class="hljs-string">"rotationOffset"</span>: <span class="hljs-type">float</span>, // only <span class="hljs-keyword">for</span> <span class="hljs-type">FollowCamera</span>
-    <span class="hljs-string">"cameraRigMode"</span>: <span class="hljs-type">int</span> (can be omitted),
-    <span class="hljs-string">"fov"</span>: <span class="hljs-type">float</span> (<span class="hljs-keyword">in</span> radians),
-    <span class="hljs-string">"minZ"</span>: <span class="hljs-type">float</span>,
-    <span class="hljs-string">"maxZ"</span>: <span class="hljs-type">float</span>,
-    <span class="hljs-string">"speed"</span>: <span class="hljs-type">float</span>,
-    <span class="hljs-string">"inertia"</span>: <span class="hljs-type">float</span> (between <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> <span class="hljs-number">1</span>),
-    <span class="hljs-string">"checkCollisions"</span>: boolean,
-    <span class="hljs-string">"applyGravity"</span>: boolean,
-    <span class="hljs-string">"ellipsoid"</span>: vector3,
-    <span class="hljs-string">"animations"</span>: <span class="hljs-type">array</span> <span class="hljs-keyword">of</span> <span class="hljs-type">Animations</span> (see below, can be omitted),
-    <span class="hljs-string">"autoAnimate"</span>: boolean,
-    <span class="hljs-string">"autoAnimateFrom"</span>: <span class="hljs-type">int</span>,
-    <span class="hljs-string">"autoAnimateTo"</span>: <span class="hljs-type">int</span>,
-    <span class="hljs-string">"autoAnimateLoop"</span>: boolean (can be omitted)
+    &quot;name&quot;: string,
+    &quot;id&quot;: string,
+    &quot;type&quot;: string,
+    &quot;tags&quot;: string,
+    &quot;parentId&quot;: string,
+    &quot;lockedTargetId&quot;: string,
+    &quot;position&quot;: vector3,
+    &quot;target&quot;: vector3,
+    &quot;alpha&quot;: float, // only for ArcRotateCamera and AnaglyphArcRotateCamera
+    &quot;beta&quot;: float, // only for ArcRotateCamera and AnaglyphArcRotateCamera
+    &quot;radius&quot;: float, // only for ArcRotateCamera, FollowCamera and AnaglyphArcRotateCamera
+    &quot;eye_space&quot;: float, // only for AnaglyphFreeCamera and AnaglyphArcRotateCamera
+    &quot;heightOffset&quot;: float, // only for FollowCamera
+    &quot;rotationOffset&quot;: float, // only for FollowCamera
+    &quot;cameraRigMode&quot;: int (can be omitted),
+    &quot;fov&quot;: float (in radians),
+    &quot;minZ&quot;: float,
+    &quot;maxZ&quot;: float,
+    &quot;speed&quot;: float,
+    &quot;inertia&quot;: float (between 0 and 1),
+    &quot;checkCollisions&quot;: boolean,
+    &quot;applyGravity&quot;: boolean,
+    &quot;ellipsoid&quot;: vector3,
+    &quot;animations&quot;: array of Animations (see below, can be omitted),
+    &quot;autoAnimate&quot;: boolean,
+    &quot;autoAnimateFrom&quot;: int,
+    &quot;autoAnimateTo&quot;: int,
+    &quot;autoAnimateLoop&quot;: boolean (can be omitted)
 }
 </code></pre>
 <h2 id="lights">Lights</h2>
 <p>A light is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-string">"name"</span>: <span class="hljs-type">string</span>,
-    <span class="hljs-string">"id"</span>: <span class="hljs-type">string</span>,
-    <span class="hljs-string">"tags"</span>: <span class="hljs-type">string</span>,
-    <span class="hljs-string">"type"</span>: <span class="hljs-type">int</span> (<span class="hljs-number">0</span> <span class="hljs-keyword">for</span> point light, <span class="hljs-number">1</span> <span class="hljs-keyword">for</span> directional, <span class="hljs-number">2</span> <span class="hljs-keyword">for</span> spot <span class="hljs-keyword">and</span> <span class="hljs-number">3</span> <span class="hljs-keyword">for</span> hemispheric),
-    <span class="hljs-string">"position"</span>: vector3,
-    <span class="hljs-string">"direction"</span>: vector3,
-    <span class="hljs-string">"angle"</span>: <span class="hljs-type">float</span> (<span class="hljs-keyword">for</span> spot lights),
-    <span class="hljs-string">"exponent"</span>: <span class="hljs-type">float</span> (<span class="hljs-keyword">for</span> spot lights),
-    <span class="hljs-string">"groundColor"</span>: color3 (<span class="hljs-keyword">for</span> hemispheric lights),
-    <span class="hljs-string">"intensity"</span>: <span class="hljs-type">float</span>,
-    <span class="hljs-string">"range"</span>: <span class="hljs-type">float</span>,
-    <span class="hljs-string">"diffuse"</span>: color3,
-    <span class="hljs-string">"specular"</span>: color3,
-    <span class="hljs-string">"excludedMeshesIds"</span>: <span class="hljs-type">array</span> <span class="hljs-keyword">of</span> <span class="hljs-type">string</span>,
-    <span class="hljs-string">"includedOnlyMeshesIds"</span>: <span class="hljs-type">array</span> <span class="hljs-keyword">of</span> <span class="hljs-type">string</span>
+    &quot;name&quot;: string,
+    &quot;id&quot;: string,
+    &quot;tags&quot;: string,
+    &quot;type&quot;: int (0 for point light, 1 for directional, 2 for spot and 3 for hemispheric),
+    &quot;position&quot;: vector3,
+    &quot;direction&quot;: vector3,
+    &quot;angle&quot;: float (for spot lights),
+    &quot;exponent&quot;: float (for spot lights),
+    &quot;groundColor&quot;: color3 (for hemispheric lights),
+    &quot;intensity&quot;: float,
+    &quot;range&quot;: float,
+    &quot;diffuse&quot;: color3,
+    &quot;specular&quot;: color3,
+    &quot;excludedMeshesIds&quot;: array of string,
+    &quot;includedOnlyMeshesIds&quot;: array of string
 }
 </code></pre>
 <h2 id="materials">Materials</h2>
 <p>A material is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value">string</span>,
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value">string</span>,
-    "<span class="hljs-attribute">tags</span>": <span class="hljs-value">string</span>,
-    "<span class="hljs-attribute">ambient</span>": <span class="hljs-value">color3</span>,
-    "<span class="hljs-attribute">diffuse</span>": <span class="hljs-value">color3</span>,
-    "<span class="hljs-attribute">specular</span>": <span class="hljs-value">color3</span>,
-    "<span class="hljs-attribute">specularPower</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">emissive</span>": <span class="hljs-value">color3</span>,
-    "<span class="hljs-attribute">alpha</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">backFaceCulling</span>": <span class="hljs-value">boolean</span>,
-    "<span class="hljs-attribute">wireframe</span>": <span class="hljs-value">boolean</span>,
-    "<span class="hljs-attribute">diffuseTexture</span>": <span class="hljs-value">Texture (see below)</span>,
-    "<span class="hljs-attribute">ambientTexture</span>": <span class="hljs-value">Texture (see below)</span>,
-    "<span class="hljs-attribute">opacityTexture</span>": <span class="hljs-value">Texture (see below)</span>,
-    "<span class="hljs-attribute">reflectionTexture</span>": <span class="hljs-value">Texture (see below)</span>,
-    "<span class="hljs-attribute">emissiveTexture</span>": <span class="hljs-value">Texture (see below)</span>,
-    "<span class="hljs-attribute">specularTexture</span>": <span class="hljs-value">Texture (see below)</span>,
-    "<span class="hljs-attribute">bumpTexture</span>": <span class="hljs-value">Texture (see below)</span>,
-    "<span class="hljs-attribute">checkReadyOnlyOnce</span>": <span class="hljs-value">boolean
-</span>}
+    &quot;name&quot;: string,
+    &quot;id&quot;: string,
+    &quot;tags&quot;: string,
+    &quot;ambient&quot;: color3,
+    &quot;diffuse&quot;: color3,
+    &quot;specular&quot;: color3,
+    &quot;specularPower&quot;: float,
+    &quot;emissive&quot;: color3,
+    &quot;alpha&quot;: float,
+    &quot;backFaceCulling&quot;: boolean,
+    &quot;wireframe&quot;: boolean,
+    &quot;diffuseTexture&quot;: Texture (see below),
+    &quot;ambientTexture&quot;: Texture (see below),
+    &quot;opacityTexture&quot;: Texture (see below),
+    &quot;reflectionTexture&quot;: Texture (see below),
+    &quot;emissiveTexture&quot;: Texture (see below),
+    &quot;specularTexture&quot;: Texture (see below),
+    &quot;bumpTexture&quot;: Texture (see below),
+    &quot;checkReadyOnlyOnce&quot;: boolean
+}
 </code></pre>
 <h2 id="textures">Textures</h2>
 <p>A texture is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-string">"name"</span>: string (filename),
-    <span class="hljs-string">"level"</span>: <span class="hljs-keyword">float</span> (between 0 and 1),
-    <span class="hljs-string">"hasAlpha"</span>: <span class="hljs-keyword">boolean</span>,
-    <span class="hljs-string">"getAlphaFromRGB"</span>: <span class="hljs-keyword">boolean</span>,
-    <span class="hljs-string">"coordinatesMode"</span>: <span class="hljs-keyword">int</span> (0 = explicit, 1 spherical, 2 = planar, 3 = cubic, 4 = projection, 5 = skybox),
-    <span class="hljs-string">"uOffset"</span>: <span class="hljs-keyword">float</span>,
-    <span class="hljs-string">"vOffset"</span>: <span class="hljs-keyword">float</span>,
-    <span class="hljs-string">"uScale"</span>: <span class="hljs-keyword">float</span>,
-    <span class="hljs-string">"vScale"</span>: <span class="hljs-keyword">float</span>,
-    <span class="hljs-string">"uAng"</span>: <span class="hljs-keyword">float</span>,
-    <span class="hljs-string">"vAng"</span>: <span class="hljs-keyword">float</span>,
-    <span class="hljs-string">"wAng"</span>: <span class="hljs-keyword">float</span>,
-    <span class="hljs-string">"wrapU"</span>: <span class="hljs-keyword">boolean</span>,
-    <span class="hljs-string">"wrapV"</span>: <span class="hljs-keyword">boolean</span>,
-    <span class="hljs-string">"coordinatesIndex"</span>: <span class="hljs-keyword">int</span>,
-    <span class="hljs-string">"animations"</span>: array of Animations (see below, can be omitted),
-    <span class="hljs-string">"base64String"</span>: string (can be omitted)
+    &quot;name&quot;: string (filename),
+    &quot;level&quot;: float (between 0 and 1),
+    &quot;hasAlpha&quot;: boolean,
+    &quot;getAlphaFromRGB&quot;: boolean,
+    &quot;coordinatesMode&quot;: int (0 = explicit, 1 spherical, 2 = planar, 3 = cubic, 4 = projection, 5 = skybox),
+    &quot;uOffset&quot;: float,
+    &quot;vOffset&quot;: float,
+    &quot;uScale&quot;: float,
+    &quot;vScale&quot;: float,
+    &quot;uAng&quot;: float,
+    &quot;vAng&quot;: float,
+    &quot;wAng&quot;: float,
+    &quot;wrapU&quot;: boolean,
+    &quot;wrapV&quot;: boolean,
+    &quot;coordinatesIndex&quot;: int,
+    &quot;animations&quot;: array of Animations (see below, can be omitted),
+    &quot;base64String&quot;: string (can be omitted)
 }
 </code></pre>
 <h2 id="multimaterials">MultiMaterials</h2>
 <p>A multiMaterial is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-string">"name"</span>: <span class="hljs-keyword">string</span>,
-    <span class="hljs-string">"id"</span>: <span class="hljs-keyword">string</span>,
-    <span class="hljs-string">"tags"</span>: <span class="hljs-keyword">string</span>,
-    <span class="hljs-string">"materials"</span>: array <span class="hljs-operator">of</span> <span class="hljs-keyword">string</span> (which are <span class="hljs-operator">the</span> ids <span class="hljs-operator">of</span> sub-materials)
+    &quot;name&quot;: string,
+    &quot;id&quot;: string,
+    &quot;tags&quot;: string,
+    &quot;materials&quot;: array of string (which are the ids of sub-materials)
 }
 </code></pre>
 <h2 id="geometries">Geometries</h2>
 <p>The structure of &quot;geometries&quot; is the following:</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-string">"boxes"</span>:<span class="hljs-instruction"> array </span>of Boxes<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"spheres"</span>:<span class="hljs-instruction"> array </span>of Spheres<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"cylinders"</span>:<span class="hljs-instruction"> array </span>of Cylinders<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"toruses"</span>:<span class="hljs-instruction"> array </span>of Toruses<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"grounds"</span>:<span class="hljs-instruction"> array </span>of Grounds<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"planes"</span>:<span class="hljs-instruction"> array </span>of Planes<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"torusKnots"</span>:<span class="hljs-instruction"> array </span>of TorusKnots<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"vertexData"</span>:<span class="hljs-instruction"> array </span>of VertexData<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>
+    &quot;boxes&quot;: array of Boxes (see below),
+    &quot;spheres&quot;: array of Spheres (see below),
+    &quot;cylinders&quot;: array of Cylinders (see below),
+    &quot;toruses&quot;: array of Toruses (see below),
+    &quot;grounds&quot;: array of Grounds (see below),
+    &quot;planes&quot;: array of Planes (see below),
+    &quot;torusKnots&quot;: array of TorusKnots (see below),
+    &quot;vertexData&quot;: array of VertexData (see below)
 }
 </code></pre>
 <h2 id="boxes">Boxes</h2>
 <p>A box is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value">string</span>,
-    "<span class="hljs-attribute">size</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">canBeRegenerated</span>": <span class="hljs-value">bool</span>,
-    "<span class="hljs-attribute">tags</span>": <span class="hljs-value">string
-</span>}
+    &quot;id&quot;: string,
+    &quot;size&quot;: float,
+    &quot;canBeRegenerated&quot;: bool,
+    &quot;tags&quot;: string
+}
 </code></pre>
 <h2 id="spheres">Spheres</h2>
 <p>A sphere is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value">string</span>,
-    "<span class="hljs-attribute">segments</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">diameter</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">canBeRegenerated</span>": <span class="hljs-value">bool</span>,
-    "<span class="hljs-attribute">tags</span>": <span class="hljs-value">string
-</span>}
+    &quot;id&quot;: string,
+    &quot;segments&quot;: float,
+    &quot;diameter&quot;: float,
+    &quot;canBeRegenerated&quot;: bool,
+    &quot;tags&quot;: string
+}
 </code></pre>
 <h2 id="cylinders">Cylinders</h2>
 <p>A cylinder is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value">string</span>,
-    "<span class="hljs-attribute">height</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">diameterTop</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">diameterBottom</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">tessellation</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">subdivisions</span>": <span class="hljs-value">integer</span>,
-    "<span class="hljs-attribute">canBeRegenerated</span>": <span class="hljs-value">bool</span>,
-    "<span class="hljs-attribute">tags</span>": <span class="hljs-value">string
-</span>}
+    &quot;id&quot;: string,
+    &quot;height&quot;: float,
+    &quot;diameterTop&quot;: float,
+    &quot;diameterBottom&quot;: float,
+    &quot;tessellation&quot;: float,
+    &quot;subdivisions&quot;: integer,
+    &quot;canBeRegenerated&quot;: bool,
+    &quot;tags&quot;: string
+}
 </code></pre>
 <h2 id="toruses">Toruses</h2>
 <p>A torus is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value">string</span>,
-    "<span class="hljs-attribute">diameter</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">thickness</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">tessellation</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">canBeRegenerated</span>": <span class="hljs-value">bool</span>,
-    "<span class="hljs-attribute">tags</span>": <span class="hljs-value">string
-</span>}
+    &quot;id&quot;: string,
+    &quot;diameter&quot;: float,
+    &quot;thickness&quot;: float,
+    &quot;tessellation&quot;: float,
+    &quot;canBeRegenerated&quot;: bool,
+    &quot;tags&quot;: string
+}
 </code></pre>
 <h2 id="grounds">Grounds</h2>
 <p>A ground is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value">string</span>,
-    "<span class="hljs-attribute">width</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">height</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">subdivisions</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">canBeRegenerated</span>": <span class="hljs-value">bool</span>,
-    "<span class="hljs-attribute">tags</span>": <span class="hljs-value">string
-</span>}
+    &quot;id&quot;: string,
+    &quot;width&quot;: float,
+    &quot;height&quot;: float,
+    &quot;subdivisions&quot;: float,
+    &quot;canBeRegenerated&quot;: bool,
+    &quot;tags&quot;: string
+}
 </code></pre>
 <h2 id="planes">Planes</h2>
 <p>A plane is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value">string</span>,
-    "<span class="hljs-attribute">size</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">canBeRegenerated</span>": <span class="hljs-value">bool</span>,
-    "<span class="hljs-attribute">tags</span>": <span class="hljs-value">string
-</span>}
+    &quot;id&quot;: string,
+    &quot;size&quot;: float,
+    &quot;canBeRegenerated&quot;: bool,
+    &quot;tags&quot;: string
+}
 </code></pre>
 <h2 id="torusknots">TorusKnots</h2>
 <p>A torusKnot is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    "<span class="hljs-attribute">id</span>": <span class="hljs-value">string</span>,
-    "<span class="hljs-attribute">radius</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">tube</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">radialSegments</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">tubularSegments</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">p</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">q</span>": <span class="hljs-value">float</span>,
-    "<span class="hljs-attribute">canBeRegenerated</span>": <span class="hljs-value">bool</span>,
-    "<span class="hljs-attribute">tags</span>": <span class="hljs-value">string
-</span>}
+    &quot;id&quot;: string,
+    &quot;radius&quot;: float,
+    &quot;tube&quot;: float,
+    &quot;radialSegments&quot;: float,
+    &quot;tubularSegments&quot;: float,
+    &quot;p&quot;: float,
+    &quot;q&quot;: float,
+    &quot;canBeRegenerated&quot;: bool,
+    &quot;tags&quot;: string
+}
 </code></pre>
 <h2 id="vertexdata">VertexData</h2>
 <p>A vertexData is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-string">"id"</span>: string,
-    <span class="hljs-string">"updatable"</span>: bool,
-    <span class="hljs-string">"positions"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>3 per vertex<span class="hljs-function">)</span>,
-    <span class="hljs-string">"normals"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>3 per vertex<span class="hljs-function">)</span>,
-    <span class="hljs-string">"uvs"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>2 per vertex<span class="hljs-function">)</span>,
-    <span class="hljs-string">"uv2s"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>2 per vertex<span class="hljs-function">)</span> which is the 2nd texture coordinates<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"uv3s"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>2 per vertex<span class="hljs-function">)</span> which is the 3nd texture coordinates<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"uv4s"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>2 per vertex<span class="hljs-function">)</span> which is the 4nd texture coordinates<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"uv5s"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>2 per vertex<span class="hljs-function">)</span> which is the 5nd texture coordinates<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"uv6s"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>2 per vertex<span class="hljs-function">)</span> which is the 6nd texture coordinates<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"colors"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>3 per vertex<span class="hljs-function">)</span> which is the per vertex color<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"matricesIndices"</span>:<span class="hljs-instruction"> array </span>of ints<span class="hljs-function"> (</span>4 per vertex<span class="hljs-function">)</span> which is the matrices indices for bones<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"matricesWeights"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>4 per vertex<span class="hljs-function">)</span> which is the matrices weights for bones<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"indices"</span>:<span class="hljs-instruction"> array </span>of ints<span class="hljs-function"> (</span>3 per face<span class="hljs-function">)</span>,
-    <span class="hljs-string">"tags"</span>: string
+    &quot;id&quot;: string,
+    &quot;updatable&quot;: bool,
+    &quot;positions&quot;: array of floats (3 per vertex),
+    &quot;normals&quot;: array of floats (3 per vertex),
+    &quot;uvs&quot;: array of floats (2 per vertex),
+    &quot;uv2s&quot;: array of floats (2 per vertex) which is the 2nd texture coordinates (can be omitted),
+    &quot;uv3s&quot;: array of floats (2 per vertex) which is the 3nd texture coordinates (can be omitted),
+    &quot;uv4s&quot;: array of floats (2 per vertex) which is the 4nd texture coordinates (can be omitted),
+    &quot;uv5s&quot;: array of floats (2 per vertex) which is the 5nd texture coordinates (can be omitted),
+    &quot;uv6s&quot;: array of floats (2 per vertex) which is the 6nd texture coordinates (can be omitted),
+    &quot;colors&quot;: array of floats (3 per vertex) which is the per vertex color (can be omitted),
+    &quot;matricesIndices&quot;: array of ints (4 per vertex) which is the matrices indices for bones (can be omitted),
+    &quot;matricesWeights&quot;: array of floats (4 per vertex) which is the matrices weights for bones (can be omitted),
+    &quot;indices&quot;: array of ints (3 per face),
+    &quot;tags&quot;: string
 }
 </code></pre>
 <h2 id="instances">Instances</h2>
 <p>A instance is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    "<span class="hljs-attribute">name</span>": <span class="hljs-value">string</span>,
-    "<span class="hljs-attribute">tags</span>": <span class="hljs-value">string</span>,
-    "<span class="hljs-attribute">position</span>": <span class="hljs-value">vector3</span>,
-    "<span class="hljs-attribute">rotation</span>": <span class="hljs-value">vector3 (can be omitted)</span>,
-    "<span class="hljs-attribute">rotationQuaternion</span>": <span class="hljs-value">vector4 (can be omitted)</span>,
-    "<span class="hljs-attribute">scaling</span>": <span class="hljs-value">vector3
-</span>}
+    &quot;name&quot;: string,
+    &quot;tags&quot;: string,
+    &quot;position&quot;: vector3,
+    &quot;rotation&quot;: vector3 (can be omitted),
+    &quot;rotationQuaternion&quot;: vector4 (can be omitted),
+    &quot;scaling&quot;: vector3
+}
 </code></pre>
 <h2 id="meshes">Meshes</h2>
 <p>A mesh is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-string">"name"</span>: string,
-    <span class="hljs-string">"id"</span>: string,
-    <span class="hljs-string">"tags"</span>: string,
-    <span class="hljs-string">"parentId"</span>: string,
-    <span class="hljs-string">"materialId"</span>: string,
-    <span class="hljs-string">"geometryId"</span>: string<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"position"</span>: vector3,
-    <span class="hljs-string">"rotation"</span>: vector3<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"rotationQuaternion"</span>: vector4<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"scaling"</span>: vector3,
-    <span class="hljs-string">"pivotMatrix"</span>: matrix,
-    <span class="hljs-string">"freezeWorldMatrix"</span>: boolean<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"infiniteDistance"</span>: boolean,
-    <span class="hljs-string">"showBoundingBox"</span>: boolean,
-    <span class="hljs-string">"showSubMeshesBoundingBox"</span>: boolean,
-    <span class="hljs-string">"isVisible"</span>: boolean,
-    <span class="hljs-string">"isEnabled"</span>: boolean,
-    <span class="hljs-string">"pickable"</span>: boolean,
-    <span class="hljs-string">"applyFog"</span>: boolean,
-    <span class="hljs-string">"alphaIndex"</span>: int,
-    <span class="hljs-string">"checkCollisions"</span>: boolean,
-    <span class="hljs-string">"billboardMode"</span>:<span class="hljs-instruction"> int </span>(0 = None, 1 = X, 2 = Y, 4 = Z, 7 = All<span class="hljs-function">)</span>,
-    <span class="hljs-string">"receiveShadows"</span>: boolean,
-    <span class="hljs-string">"physicsImpostor"</span>:<span class="hljs-instruction"> int </span>(0 = None, 1 = Box, 2 = Sphere<span class="hljs-function">)</span>,
-    <span class="hljs-string">"physicsMass"</span>: float,
-    <span class="hljs-string">"physicsFriction"</span>: float,
-    <span class="hljs-string">"physicsRestitution"</span>: float,
-    <span class="hljs-string">"positions"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>3 per vertex<span class="hljs-function">)</span>,
-    <span class="hljs-string">"normals"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>3 per vertex<span class="hljs-function">)</span>,
-    <span class="hljs-string">"uvs"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>2 per vertex<span class="hljs-function">)</span>,
-    <span class="hljs-string">"uvs2"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>2 per vertex<span class="hljs-function">)</span> which is the 2nd texture coordinates<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"uv3s"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>2 per vertex<span class="hljs-function">)</span> which is the 3nd texture coordinates<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"uv4s"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>2 per vertex<span class="hljs-function">)</span> which is the 4nd texture coordinates<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"uv5s"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>2 per vertex<span class="hljs-function">)</span> which is the 5nd texture coordinates<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"uv6s"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>2 per vertex<span class="hljs-function">)</span> which is the 6nd texture coordinates<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"colors"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>4 per vertex<span class="hljs-function">)</span> which is the per vertex color<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"hasVertexAlpha"</span>: boolean to indicate<span class="hljs-instruction"> if </span>colors field contains useful alpha value<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"matricesIndices"</span>:<span class="hljs-instruction"> array </span>of ints<span class="hljs-function"> (</span>4 per vertex<span class="hljs-function">)</span> which is the matrices indices for bones<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"matricesWeights"</span>:<span class="hljs-instruction"> array </span>of floats<span class="hljs-function"> (</span>4 per vertex<span class="hljs-function">)</span> which is the matrices weights for bones<span class="hljs-function"> (</span>can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"indices"</span>:<span class="hljs-instruction"> array </span>of ints<span class="hljs-function"> (</span>3 per face<span class="hljs-function">)</span>,
-    <span class="hljs-string">"subMeshes"</span>:<span class="hljs-instruction"> array </span>of SubMeshes<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>,
-    <span class="hljs-string">"animations"</span>:<span class="hljs-instruction"> array </span>of Animations<span class="hljs-function"> (</span>see below, can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"autoAnimate"</span>: boolean,
-    <span class="hljs-string">"autoAnimateFrom"</span>: int,
-    <span class="hljs-string">"autoAnimateTo"</span>: int,
-    <span class="hljs-string">"autoAnimateLoop"</span>: boolean,
-    <span class="hljs-string">"instances"</span>:<span class="hljs-instruction"> array </span>of Instances<span class="hljs-function"> (</span>see below, can be omitted<span class="hljs-function">)</span>,
-    <span class="hljs-string">"actions"</span>:<span class="hljs-instruction"> array </span>of actions<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>
+    &quot;name&quot;: string,
+    &quot;id&quot;: string,
+    &quot;tags&quot;: string,
+    &quot;parentId&quot;: string,
+    &quot;materialId&quot;: string,
+    &quot;geometryId&quot;: string (can be omitted),
+    &quot;position&quot;: vector3,
+    &quot;rotation&quot;: vector3 (can be omitted),
+    &quot;rotationQuaternion&quot;: vector4 (can be omitted),
+    &quot;scaling&quot;: vector3,
+    &quot;pivotMatrix&quot;: matrix,
+    &quot;freezeWorldMatrix&quot;: boolean (can be omitted),
+    &quot;infiniteDistance&quot;: boolean,
+    &quot;showBoundingBox&quot;: boolean,
+    &quot;showSubMeshesBoundingBox&quot;: boolean,
+    &quot;isVisible&quot;: boolean,
+    &quot;isEnabled&quot;: boolean,
+    &quot;pickable&quot;: boolean,
+    &quot;applyFog&quot;: boolean,
+    &quot;alphaIndex&quot;: int,
+    &quot;checkCollisions&quot;: boolean,
+    &quot;billboardMode&quot;: int (0 = None, 1 = X, 2 = Y, 4 = Z, 7 = All),
+    &quot;receiveShadows&quot;: boolean,
+    &quot;physicsImpostor&quot;: int (0 = None, 1 = Box, 2 = Sphere),
+    &quot;physicsMass&quot;: float,
+    &quot;physicsFriction&quot;: float,
+    &quot;physicsRestitution&quot;: float,
+    &quot;positions&quot;: array of floats (3 per vertex),
+    &quot;normals&quot;: array of floats (3 per vertex),
+    &quot;uvs&quot;: array of floats (2 per vertex),
+    &quot;uvs2&quot;: array of floats (2 per vertex) which is the 2nd texture coordinates (can be omitted),
+    &quot;uv3s&quot;: array of floats (2 per vertex) which is the 3nd texture coordinates (can be omitted),
+    &quot;uv4s&quot;: array of floats (2 per vertex) which is the 4nd texture coordinates (can be omitted),
+    &quot;uv5s&quot;: array of floats (2 per vertex) which is the 5nd texture coordinates (can be omitted),
+    &quot;uv6s&quot;: array of floats (2 per vertex) which is the 6nd texture coordinates (can be omitted),
+    &quot;colors&quot;: array of floats (4 per vertex) which is the per vertex color (can be omitted),
+    &quot;hasVertexAlpha&quot;: boolean to indicate if colors field contains useful alpha value (can be omitted),
+    &quot;matricesIndices&quot;: array of ints (4 per vertex) which is the matrices indices for bones (can be omitted),
+    &quot;matricesWeights&quot;: array of floats (4 per vertex) which is the matrices weights for bones (can be omitted),
+    &quot;indices&quot;: array of ints (3 per face),
+    &quot;subMeshes&quot;: array of SubMeshes (see below),
+    &quot;animations&quot;: array of Animations (see below, can be omitted),
+    &quot;autoAnimate&quot;: boolean,
+    &quot;autoAnimateFrom&quot;: int,
+    &quot;autoAnimateTo&quot;: int,
+    &quot;autoAnimateLoop&quot;: boolean,
+    &quot;instances&quot;: array of Instances (see below, can be omitted),
+    &quot;actions&quot;: array of actions (see below)
 }
 </code></pre>
 <p>Please note that a parent mesh must be described before their children nodes</p>
 <h2 id="submeshes">SubMeshes</h2>
 <p>A subMesh is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    "<span class="hljs-attribute">materialIndex</span>": <span class="hljs-value">int</span>,
-    "<span class="hljs-attribute">verticesStart</span>": <span class="hljs-value">int</span>,
-    "<span class="hljs-attribute">verticesCount</span>": <span class="hljs-value">int</span>,
-    "<span class="hljs-attribute">indexStart</span>": <span class="hljs-value">int</span>,
-    "<span class="hljs-attribute">indexCount</span>": <span class="hljs-value">int
-</span>}
+    &quot;materialIndex&quot;: int,
+    &quot;verticesStart&quot;: int,
+    &quot;verticesCount&quot;: int,
+    &quot;indexStart&quot;: int,
+    &quot;indexCount&quot;: int
+}
 </code></pre>
 <h2 id="animations">Animations</h2>
 <p>An animation can be defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-string">"dataType"</span>: <span class="hljs-keyword">int</span> (0 = <span class="hljs-keyword">float</span>, 1 = vector3, 2 = quaternion, 3 = matrix),
-    <span class="hljs-string">"framePerSecond"</span>: <span class="hljs-keyword">int</span>,
-    <span class="hljs-string">"loopBehavior"</span>: <span class="hljs-keyword">int</span> (0 = relative, 1 = cycle, 2 = constant),
-    <span class="hljs-string">"name"</span>: string,
-    <span class="hljs-string">"property"</span>: string,
-    <span class="hljs-string">"keys"</span>: array of AnimationKeys (see below),
-    <span class="hljs-string">"autoAnimate"</span>: <span class="hljs-keyword">boolean</span>,
-    <span class="hljs-string">"autoAnimateFrom"</span>: <span class="hljs-keyword">int</span>,
-    <span class="hljs-string">"autoAnimateTo"</span>: <span class="hljs-keyword">int</span>,
-    <span class="hljs-string">"autoAnimateLoop"</span>: <span class="hljs-keyword">boolean</span>
+    &quot;dataType&quot;: int (0 = float, 1 = vector3, 2 = quaternion, 3 = matrix),
+    &quot;framePerSecond&quot;: int,
+    &quot;loopBehavior&quot;: int (0 = relative, 1 = cycle, 2 = constant),
+    &quot;name&quot;: string,
+    &quot;property&quot;: string,
+    &quot;keys&quot;: array of AnimationKeys (see below),
+    &quot;autoAnimate&quot;: boolean,
+    &quot;autoAnimateFrom&quot;: int,
+    &quot;autoAnimateTo&quot;: int,
+    &quot;autoAnimateLoop&quot;: boolean
 }
 </code></pre>
 <h2 id="animationkeys">AnimationKeys</h2>
 <p>An animationKey is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-string">"frame"</span>: int,
-    <span class="hljs-string">"values"</span>:<span class="hljs-instruction"> array </span>of<span class="hljs-instruction"> float </span>(depending of animated value<span class="hljs-function">)</span>
+    &quot;frame&quot;: int,
+    &quot;values&quot;: array of float (depending of animated value)
 }
 </code></pre>
 <h2 id="shadowgenerators">ShadowGenerators</h2>
 <p>A shadowGenerator is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-string">"useBlurVarianceShadowMap"</span>: <span class="hljs-type">boolean</span>,
-    <span class="hljs-string">"useVarianceShadowMap"</span>: <span class="hljs-type">boolean</span>,
-    <span class="hljs-string">"usePoissonSampling"</span>: <span class="hljs-type">boolean</span>,
-    <span class="hljs-string">"mapSize"</span>: int (<span class="hljs-keyword">between</span> <span class="hljs-number">64</span> <span class="hljs-keyword">and</span> <span class="hljs-number">2048</span>, must be a power <span class="hljs-keyword">of</span> <span class="hljs-number">2</span>),
-    <span class="hljs-string">"bias"</span>: shadow bias,
-    <span class="hljs-string">"lightId"</span>: <span class="hljs-type">string</span>,
-    <span class="hljs-string">"renderList"</span>: array <span class="hljs-keyword">of</span> <span class="hljs-type">string</span> (which are IDs <span class="hljs-keyword">of</span> meshes)
+    &quot;useBlurVarianceShadowMap&quot;: boolean,
+    &quot;useVarianceShadowMap&quot;: boolean,
+    &quot;usePoissonSampling&quot;: boolean,
+    &quot;mapSize&quot;: int (between 64 and 2048, must be a power of 2),
+    &quot;bias&quot;: shadow bias,
+    &quot;lightId&quot;: string,
+    &quot;renderList&quot;: array of string (which are IDs of meshes)
 }
 </code></pre>
 <h2 id="skeletons">Skeletons</h2>
 <p>A skeleton is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-string">"name"</span>: string,
-    <span class="hljs-string">"id"</span>: string,
-    <span class="hljs-string">"bones"</span>:<span class="hljs-instruction"> array </span>of Bones<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>
+    &quot;name&quot;: string,
+    &quot;id&quot;: string,
+    &quot;bones&quot;: array of Bones (see below)
 }
 </code></pre>
 <h2 id="bones">Bones</h2>
 <p>A bone is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-string">"parentBoneIndex"</span>: <span class="hljs-built_in">int</span>,
-    <span class="hljs-string">"name"</span>: <span class="hljs-built_in">string</span>,
-    <span class="hljs-string">"matrix"</span>: matrix,
-    <span class="hljs-string">"animations"</span>: <span class="hljs-built_in">array</span> <span class="hljs-keyword">of</span> <span class="hljs-type">Animations</span> (must be <span class="hljs-keyword">of</span> matrix <span class="hljs-keyword">type</span>)
+    &quot;parentBoneIndex&quot;: int,
+    &quot;name&quot;: string,
+    &quot;matrix&quot;: matrix,
+    &quot;animations&quot;: array of Animations (must be of matrix type)
 }
 </code></pre>
 <h2 id="particlesystems">ParticleSystems</h2>
 <p>A particle system is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-     "<span class="hljs-attribute">emitterId</span>": <span class="hljs-value">string</span>,
-     "<span class="hljs-attribute">gravity</span>": <span class="hljs-value">vector3</span>,
-     "<span class="hljs-attribute">direction1</span>": <span class="hljs-value">vector3</span>,
-     "<span class="hljs-attribute">direction2</span>": <span class="hljs-value">vector3</span>,
-     "<span class="hljs-attribute">minEmitBox</span>": <span class="hljs-value">vector3</span>,
-     "<span class="hljs-attribute">maxEmitBox</span>": <span class="hljs-value">vector3</span>,
-     "<span class="hljs-attribute">color1</span>": <span class="hljs-value">color3</span>,
-     "<span class="hljs-attribute">color2</span>": <span class="hljs-value">color3</span>,
-     "<span class="hljs-attribute">colorDead</span>": <span class="hljs-value">color3</span>,
-     "<span class="hljs-attribute">deadAlpha</span>": <span class="hljs-value">float</span>,
-     "<span class="hljs-attribute">emitRate</span>": <span class="hljs-value">float</span>,
-     "<span class="hljs-attribute">updateSpeed</span>": <span class="hljs-value">float</span>,
-     "<span class="hljs-attribute">targetStopFrame</span>": <span class="hljs-value">int</span>,
-     "<span class="hljs-attribute">minEmitPower</span>": <span class="hljs-value">int</span>,
-     "<span class="hljs-attribute">maxEmitPower</span>": <span class="hljs-value">float</span>,
-     "<span class="hljs-attribute">minLifeTime</span>": <span class="hljs-value">float</span>,
-     "<span class="hljs-attribute">maxLifeTime</span>": <span class="hljs-value">float</span>,
-     "<span class="hljs-attribute">minSize</span>": <span class="hljs-value">float</span>,
-     "<span class="hljs-attribute">maxSize</span>": <span class="hljs-value">float</span>,
-     "<span class="hljs-attribute">minAngularSpeed</span>": <span class="hljs-value">float</span>,
-     "<span class="hljs-attribute">maxAngularSpeed</span>": <span class="hljs-value">float</span>,
-     "<span class="hljs-attribute">textureName</span>": <span class="hljs-value">string</span>,
-     "<span class="hljs-attribute">blendMode</span>": <span class="hljs-value">int</span>,
-     "<span class="hljs-attribute">capacity</span>": <span class="hljs-value">int</span>,
-     "<span class="hljs-attribute">textureMask</span>": <span class="hljs-value">color4</span>,
-     "<span class="hljs-attribute">linkToEmitter</span>": <span class="hljs-value">bool
-</span>}
+     &quot;emitterId&quot;: string,
+     &quot;gravity&quot;: vector3,
+     &quot;direction1&quot;: vector3,
+     &quot;direction2&quot;: vector3,
+     &quot;minEmitBox&quot;: vector3,
+     &quot;maxEmitBox&quot;: vector3,
+     &quot;color1&quot;: color3,
+     &quot;color2&quot;: color3,
+     &quot;colorDead&quot;: color3,
+     &quot;deadAlpha&quot;: float,
+     &quot;emitRate&quot;: float,
+     &quot;updateSpeed&quot;: float,
+     &quot;targetStopFrame&quot;: int,
+     &quot;minEmitPower&quot;: int,
+     &quot;maxEmitPower&quot;: float,
+     &quot;minLifeTime&quot;: float,
+     &quot;maxLifeTime&quot;: float,
+     &quot;minSize&quot;: float,
+     &quot;maxSize&quot;: float,
+     &quot;minAngularSpeed&quot;: float,
+     &quot;maxAngularSpeed&quot;: float,
+     &quot;textureName&quot;: string,
+     &quot;blendMode&quot;: int,
+     &quot;capacity&quot;: int,
+     &quot;textureMask&quot;: color4,
+     &quot;linkToEmitter&quot;: bool
+}
 </code></pre>
 <h2 id="lensflaresystems">LensFlareSystems</h2>
 <p>A lens flare system is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-     <span class="hljs-string">"emitterId"</span>: string,
-     <span class="hljs-string">"borderLimit"</span>: int,
-     <span class="hljs-string">"flares"</span>:<span class="hljs-instruction"> array </span>of LensFlares<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>
+     &quot;emitterId&quot;: string,
+     &quot;borderLimit&quot;: int,
+     &quot;flares&quot;: array of LensFlares (see below)
 }
 </code></pre>
 <h2 id="lensflares">LensFlares</h2>
 <p>A lens flare is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
-     "<span class="hljs-attribute">position</span>": <span class="hljs-value">float</span>,
-     "<span class="hljs-attribute">size</span>": <span class="hljs-value">float</span>,
-     "<span class="hljs-attribute">color</span>": <span class="hljs-value">color3</span>,
-     "<span class="hljs-attribute">textureName</span>": <span class="hljs-value">string
-</span>}
+     &quot;position&quot;: float,
+     &quot;size&quot;: float,
+     &quot;color&quot;: color3,
+     &quot;textureName&quot;: string
+}
 </code></pre>
 <h2 id="sounds">Sounds</h2>
 <p>A sound is defined by the following JSON:</p>
-<pre><code class="lang-javascript"><span class="hljs-collection">{
-     <span class="hljs-string">"name"</span>: string, <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">name</span></span> of the file to load)</span>
-     <span class="hljs-string">"volume"</span>: float, <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">if</span></span> omitted will be <span class="hljs-number">1</span>)</span>
-     <span class="hljs-string">"autoplay"</span>: bool, <span class="hljs-list">(<span class="hljs-keyword">can</span> be omitted)</span>
-     <span class="hljs-string">"loop"</span>: bool, <span class="hljs-list">(<span class="hljs-keyword">can</span> be omitted)</span>
-     <span class="hljs-string">"soundTrackId"</span>: int, <span class="hljs-list">(<span class="hljs-keyword">can</span> be omitted)</span>
-     <span class="hljs-string">"spatialSound"</span>: bool, <span class="hljs-list">(<span class="hljs-keyword">to</span> enable <span class="hljs-number">3</span>D sound, can be omitted)</span>
-     <span class="hljs-string">"position"</span>: vector3, <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">if</span></span> omitted will be <span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)</span>
-     <span class="hljs-string">"refDistance"</span>: float, <span class="hljs-list">(<span class="hljs-keyword">can</span> be omitted, default to <span class="hljs-number">1</span>)</span>
-     <span class="hljs-string">"rolloffFactor"</span>: float, <span class="hljs-list">(<span class="hljs-keyword">can</span> be omitted, default to <span class="hljs-number">1</span>)</span>
-     <span class="hljs-string">"maxDistance"</span>: float, <span class="hljs-list">(<span class="hljs-keyword">can</span> be omitted, default to <span class="hljs-number">100</span>)</span>
-     <span class="hljs-string">"distanceModel"</span>: string, <span class="hljs-list">(<span class="hljs-keyword">can</span> be omitted, default to linear, other values: inverse or exponential)</span>
-     <span class="hljs-string">"panningModel"</span>: string, <span class="hljs-list">(<span class="hljs-keyword">can</span> be omitted, default to HRTF, other value: equalpower)</span>
-     <span class="hljs-string">"isDirectional"</span>: bool, <span class="hljs-list">(<span class="hljs-keyword">to</span> enable directional cone)</span>
-     <span class="hljs-string">"coneInnerAngle"</span>: float, <span class="hljs-list">(<span class="hljs-keyword">can</span> be omitted but set it for directional sound)</span>
-     <span class="hljs-string">"coneOuterAngle"</span>: float, <span class="hljs-list">(<span class="hljs-keyword">can</span> be omitted but set it for directional sound)</span>
-     <span class="hljs-string">"coneOuterGain"</span>: float, <span class="hljs-list">(<span class="hljs-keyword">can</span> be omitted but set it for directional sound)</span>
-     <span class="hljs-string">"connectedMeshId"</span>: string, <span class="hljs-list">(<span class="hljs-keyword">ID</span> of the mesh to attach to)</span>
-     <span class="hljs-string">"localDirectionToMesh"</span>: vector3 <span class="hljs-list">(<span class="hljs-keyword">can</span> be omitted, default to <span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)</span>
-}</span>
+<pre><code class="lang-javascript">{
+     &quot;name&quot;: string, (name of the file to load)
+     &quot;volume&quot;: float, (if omitted will be 1)
+     &quot;autoplay&quot;: bool, (can be omitted)
+     &quot;loop&quot;: bool, (can be omitted)
+     &quot;soundTrackId&quot;: int, (can be omitted)
+     &quot;spatialSound&quot;: bool, (to enable 3D sound, can be omitted)
+     &quot;position&quot;: vector3, (if omitted will be 0,0,0)
+     &quot;refDistance&quot;: float, (can be omitted, default to 1)
+     &quot;rolloffFactor&quot;: float, (can be omitted, default to 1)
+     &quot;maxDistance&quot;: float, (can be omitted, default to 100)
+     &quot;distanceModel&quot;: string, (can be omitted, default to linear, other values: inverse or exponential)
+     &quot;panningModel&quot;: string, (can be omitted, default to HRTF, other value: equalpower)
+     &quot;isDirectional&quot;: bool, (to enable directional cone)
+     &quot;coneInnerAngle&quot;: float, (can be omitted but set it for directional sound)
+     &quot;coneOuterAngle&quot;: float, (can be omitted but set it for directional sound)
+     &quot;coneOuterGain&quot;: float, (can be omitted but set it for directional sound)
+     &quot;connectedMeshId&quot;: string, (ID of the mesh to attach to)
+     &quot;localDirectionToMesh&quot;: vector3 (can be omitted, default to 1,0,0)
+}
 </code></pre>
 <h2 id="actions">Actions</h2>
 <p>An action is defined by the following JSON. An action can contain children actions.</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-string">"type"</span>: number,<span class="hljs-function"> (</span>action's type. 0 = Trigger, 1 = Action, 2 = Flow Control<span class="hljs-function">)</span>
-    <span class="hljs-string">"name"</span>: string,<span class="hljs-function"> (</span>name of the action, trigger<span class="hljs-instruction"> or </span>flow control<span class="hljs-function">)</span>
-    <span class="hljs-string">"detached"</span>: boolean,<span class="hljs-function"> (</span>if the node is detached<span class="hljs-instruction"> or </span>not. Means it will<span class="hljs-instruction"> not </span>be computed<span class="hljs-instruction"> if </span>detached === true<span class="hljs-function">)</span>
-    <span class="hljs-string">"properties"</span>:<span class="hljs-instruction"> array </span>of properties,<span class="hljs-function"> (</span>see below<span class="hljs-function">)</span>
-    <span class="hljs-string">"children"</span>:<span class="hljs-instruction"> array </span>of Actions,
-    <span class="hljs-string">"combine"</span>:<span class="hljs-instruction"> array </span>of Actions<span class="hljs-function"> (</span>used as a combine action. i.e name = <span class="hljs-string">"CombineAction"</span>. Can be null<span class="hljs-function">)</span>
+    &quot;type&quot;: number, (action&#39;s type. 0 = Trigger, 1 = Action, 2 = Flow Control)
+    &quot;name&quot;: string, (name of the action, trigger or flow control)
+    &quot;detached&quot;: boolean, (if the node is detached or not. Means it will not be computed if detached === true)
+    &quot;properties&quot;: array of properties, (see below)
+    &quot;children&quot;: array of Actions,
+    &quot;combine&quot;: array of Actions (used as a combine action. i.e name = &quot;CombineAction&quot;. Can be null)
 }
 </code></pre>
 <p>A property is defined by the following JSON. A property value is always a string</p>
 <pre><code class="lang-javascript">{
-    <span class="hljs-string">"name"</span>: <span class="hljs-keyword">string</span>, (name <span class="hljs-operator">of</span> <span class="hljs-operator">the</span> property)
-    <span class="hljs-string">"value"</span>: <span class="hljs-keyword">string</span>, (<span class="hljs-built_in">value</span> <span class="hljs-operator">of</span> <span class="hljs-operator">the</span> property. For example: name = <span class="hljs-string">"target"</span> <span class="hljs-operator">and</span> <span class="hljs-built_in">value</span> = <span class="hljs-string">"Plane001"</span>)
-    <span class="hljs-string">"targetType"</span>: <span class="hljs-keyword">string</span> (internal use <span class="hljs-keyword">for</span> <span class="hljs-operator">the</span> BabylonJS Actions Builder, specifies where <span class="hljs-built_in">to</span> find <span class="hljs-operator">the</span> properties <span class="hljs-keyword">for</span> <span class="hljs-string">"propertyPath"</span>)
+    &quot;name&quot;: string, (name of the property)
+    &quot;value&quot;: string, (value of the property. For example: name = &quot;target&quot; and value = &quot;Plane001&quot;)
+    &quot;targetType&quot;: string (internal use for the BabylonJS Actions Builder, specifies where to find the properties for &quot;propertyPath&quot;)
 }
 </code></pre>
 <h2 id="example">Example</h2>
 <p>Here is a simple example of .babylon file:</p>
 <pre><code class="lang-javascript">{
-    "<span class="hljs-attribute">autoClear</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-    "<span class="hljs-attribute">clearColor</span>": <span class="hljs-value">[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]</span>,
-    "<span class="hljs-attribute">ambientColor</span>": <span class="hljs-value">[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]</span>,
-    "<span class="hljs-attribute">gravity</span>": <span class="hljs-value">[<span class="hljs-number">0</span>, -<span class="hljs-number">9.81</span>, <span class="hljs-number">0</span>]</span>,
-    "<span class="hljs-attribute">cameras</span>": <span class="hljs-value">[{
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Camera"</span></span>,
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"Camera"</span></span>,
-        "<span class="hljs-attribute">position</span>": <span class="hljs-value">[<span class="hljs-number">7.4811</span>, <span class="hljs-number">5.3437</span>, -<span class="hljs-number">6.5076</span>]</span>,
-        "<span class="hljs-attribute">target</span>": <span class="hljs-value">[-<span class="hljs-number">0.3174</span>, <span class="hljs-number">0.8953</span>, <span class="hljs-number">0.3125</span>]</span>,
-        "<span class="hljs-attribute">fov</span>": <span class="hljs-value"><span class="hljs-number">0.8576</span></span>,
-        "<span class="hljs-attribute">minZ</span>": <span class="hljs-value"><span class="hljs-number">0.1</span></span>,
-        "<span class="hljs-attribute">maxZ</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
-        "<span class="hljs-attribute">speed</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-        "<span class="hljs-attribute">inertia</span>": <span class="hljs-value"><span class="hljs-number">0.9</span></span>,
-        "<span class="hljs-attribute">checkCollisions</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">applyGravity</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">ellipsoid</span>": <span class="hljs-value">[<span class="hljs-number">0.2</span>, <span class="hljs-number">0.9</span>, <span class="hljs-number">0.2</span>]
-    </span>}]</span>,
-    "<span class="hljs-attribute">activeCamera</span>": <span class="hljs-value"><span class="hljs-string">"Camera"</span></span>,
-    "<span class="hljs-attribute">lights</span>": <span class="hljs-value">[{
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Sun"</span></span>,
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"Sun"</span></span>,
-        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-        "<span class="hljs-attribute">position</span>": <span class="hljs-value">[<span class="hljs-number">0.926</span>, <span class="hljs-number">7.3608</span>, <span class="hljs-number">14.1829</span>]</span>,
-        "<span class="hljs-attribute">direction</span>": <span class="hljs-value">[-<span class="hljs-number">0.347</span>, -<span class="hljs-number">0.4916</span>, -<span class="hljs-number">0.7987</span>]</span>,
-        "<span class="hljs-attribute">intensity</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-        "<span class="hljs-attribute">diffuse</span>": <span class="hljs-value">[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>]</span>,
-        "<span class="hljs-attribute">specular</span>": <span class="hljs-value">[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>]
-    </span>}]</span>,
-    "<span class="hljs-attribute">materials</span>": <span class="hljs-value">[{
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Material"</span></span>,
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"Material"</span></span>,
-        "<span class="hljs-attribute">ambient</span>": <span class="hljs-value">[<span class="hljs-number">0.8</span>, <span class="hljs-number">0.8</span>, <span class="hljs-number">0.8</span>]</span>,
-        "<span class="hljs-attribute">diffuse</span>": <span class="hljs-value">[<span class="hljs-number">0.64</span>, <span class="hljs-number">0.64</span>, <span class="hljs-number">0.64</span>]</span>,
-        "<span class="hljs-attribute">specular</span>": <span class="hljs-value">[<span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>]</span>,
-        "<span class="hljs-attribute">specularPower</span>": <span class="hljs-value"><span class="hljs-number">50</span></span>,
-        "<span class="hljs-attribute">emissive</span>": <span class="hljs-value">[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]</span>,
-        "<span class="hljs-attribute">alpha</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-        "<span class="hljs-attribute">backFaceCulling</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">diffuseTexture</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Metal1.png"</span></span>,
-            "<span class="hljs-attribute">level</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-            "<span class="hljs-attribute">hasAlpha</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-            "<span class="hljs-attribute">coordinatesMode</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">uOffset</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">vOffset</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">uScale</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-            "<span class="hljs-attribute">vScale</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-            "<span class="hljs-attribute">uAng</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">vAng</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">wAng</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">wrapU</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-            "<span class="hljs-attribute">wrapV</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-            "<span class="hljs-attribute">coordinatesIndex</span>": <span class="hljs-value"><span class="hljs-number">0</span>
-        </span>}
-    </span>},
+    &quot;autoClear&quot;: true,
+    &quot;clearColor&quot;: [0, 0, 0],
+    &quot;ambientColor&quot;: [0, 0, 0],
+    &quot;gravity&quot;: [0, -9.81, 0],
+    &quot;cameras&quot;: [{
+        &quot;name&quot;: &quot;Camera&quot;,
+        &quot;id&quot;: &quot;Camera&quot;,
+        &quot;position&quot;: [7.4811, 5.3437, -6.5076],
+        &quot;target&quot;: [-0.3174, 0.8953, 0.3125],
+        &quot;fov&quot;: 0.8576,
+        &quot;minZ&quot;: 0.1,
+        &quot;maxZ&quot;: 100,
+        &quot;speed&quot;: 1,
+        &quot;inertia&quot;: 0.9,
+        &quot;checkCollisions&quot;: false,
+        &quot;applyGravity&quot;: false,
+        &quot;ellipsoid&quot;: [0.2, 0.9, 0.2]
+    }],
+    &quot;activeCamera&quot;: &quot;Camera&quot;,
+    &quot;lights&quot;: [{
+        &quot;name&quot;: &quot;Sun&quot;,
+        &quot;id&quot;: &quot;Sun&quot;,
+        &quot;type&quot;: 1,
+        &quot;position&quot;: [0.926, 7.3608, 14.1829],
+        &quot;direction&quot;: [-0.347, -0.4916, -0.7987],
+        &quot;intensity&quot;: 1,
+        &quot;diffuse&quot;: [1, 1, 1],
+        &quot;specular&quot;: [1, 1, 1]
+    }],
+    &quot;materials&quot;: [{
+        &quot;name&quot;: &quot;Material&quot;,
+        &quot;id&quot;: &quot;Material&quot;,
+        &quot;ambient&quot;: [0.8, 0.8, 0.8],
+        &quot;diffuse&quot;: [0.64, 0.64, 0.64],
+        &quot;specular&quot;: [0.5, 0.5, 0.5],
+        &quot;specularPower&quot;: 50,
+        &quot;emissive&quot;: [0, 0, 0],
+        &quot;alpha&quot;: 1,
+        &quot;backFaceCulling&quot;: true,
+        &quot;diffuseTexture&quot;: {
+            &quot;name&quot;: &quot;Metal1.png&quot;,
+            &quot;level&quot;: 1,
+            &quot;hasAlpha&quot;: 1,
+            &quot;coordinatesMode&quot;: 0,
+            &quot;uOffset&quot;: 0,
+            &quot;vOffset&quot;: 0,
+            &quot;uScale&quot;: 1,
+            &quot;vScale&quot;: 1,
+            &quot;uAng&quot;: 0,
+            &quot;vAng&quot;: 0,
+            &quot;wAng&quot;: 0,
+            &quot;wrapU&quot;: true,
+            &quot;wrapV&quot;: true,
+            &quot;coordinatesIndex&quot;: 0
+        }
+    },
     {
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Material.001"</span></span>,
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"Material.001"</span></span>,
-        "<span class="hljs-attribute">ambient</span>": <span class="hljs-value">[<span class="hljs-number">0.8</span>, <span class="hljs-number">0.8</span>, <span class="hljs-number">0.8</span>]</span>,
-        "<span class="hljs-attribute">diffuse</span>": <span class="hljs-value">[<span class="hljs-number">0.64</span>, <span class="hljs-number">0.64</span>, <span class="hljs-number">0.64</span>]</span>,
-        "<span class="hljs-attribute">specular</span>": <span class="hljs-value">[<span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>]</span>,
-        "<span class="hljs-attribute">specularPower</span>": <span class="hljs-value"><span class="hljs-number">50</span></span>,
-        "<span class="hljs-attribute">emissive</span>": <span class="hljs-value">[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]</span>,
-        "<span class="hljs-attribute">alpha</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-        "<span class="hljs-attribute">backFaceCulling</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">diffuseTexture</span>": <span class="hljs-value">{
-            "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"concrete5.png"</span></span>,
-            "<span class="hljs-attribute">level</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-            "<span class="hljs-attribute">hasAlpha</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-            "<span class="hljs-attribute">coordinatesMode</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">uOffset</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">vOffset</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">uScale</span>": <span class="hljs-value"><span class="hljs-number">5</span></span>,
-            "<span class="hljs-attribute">vScale</span>": <span class="hljs-value"><span class="hljs-number">5</span></span>,
-            "<span class="hljs-attribute">uAng</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">vAng</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">wAng</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">wrapU</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-            "<span class="hljs-attribute">wrapV</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-            "<span class="hljs-attribute">coordinatesIndex</span>": <span class="hljs-value"><span class="hljs-number">0</span>
-        </span>}
-    </span>}]</span>,
-    "<span class="hljs-attribute">geometries</span>": <span class="hljs-value">{
-        "<span class="hljs-attribute">boxes</span>": <span class="hljs-value">[{
-            "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"BoxPrimitive"</span></span>,
-            "<span class="hljs-attribute">size</span>": <span class="hljs-value"><span class="hljs-number">2</span></span>,
-            "<span class="hljs-attribute">canBeRegenerated</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-            "<span class="hljs-attribute">tags</span>": <span class="hljs-value"><span class="hljs-string">"Box Primitive Cube CanBeRegenerated"</span>
-        </span>}]</span>,
-        "<span class="hljs-attribute">vertexData</span>": <span class="hljs-value">[{
-            "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"CubeGeometry"</span></span>,
-            "<span class="hljs-attribute">updatable</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-            "<span class="hljs-attribute">positions</span>": <span class="hljs-value">[ <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>]</span>,
-            "<span class="hljs-attribute">normals</span>": <span class="hljs-value">[<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, -<span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>, <span class="hljs-number">0.5773</span>]</span>,
-            "<span class="hljs-attribute">uvs</span>": <span class="hljs-value">[<span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.5</span>]</span>,
-            "<span class="hljs-attribute">indices</span>": <span class="hljs-value">[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">0</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">11</span>, <span class="hljs-number">12</span>, <span class="hljs-number">13</span>, <span class="hljs-number">14</span>, <span class="hljs-number">15</span>, <span class="hljs-number">16</span>, <span class="hljs-number">1</span>, <span class="hljs-number">17</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">18</span>, <span class="hljs-number">5</span>, <span class="hljs-number">19</span>, <span class="hljs-number">20</span>, <span class="hljs-number">21</span>, <span class="hljs-number">22</span>, <span class="hljs-number">23</span>, <span class="hljs-number">10</span>, <span class="hljs-number">12</span>, <span class="hljs-number">24</span>, <span class="hljs-number">25</span>, <span class="hljs-number">26</span>, <span class="hljs-number">27</span>, <span class="hljs-number">28</span>]
-        </span>}]
-    </span>}</span>,
-    "<span class="hljs-attribute">meshes</span>": <span class="hljs-value">[{
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Plane"</span></span>,
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"Plane"</span></span>,
-        "<span class="hljs-attribute">materialId</span>": <span class="hljs-value"><span class="hljs-string">"Material.001"</span></span>,
-        "<span class="hljs-attribute">position</span>": <span class="hljs-value">[<span class="hljs-number">0.0172</span>, -<span class="hljs-number">2.9787</span>, -<span class="hljs-number">0.5184</span>]</span>,
-        "<span class="hljs-attribute">rotation</span>": <span class="hljs-value">[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]</span>,
-        "<span class="hljs-attribute">scaling</span>": <span class="hljs-value">[<span class="hljs-number">87.1479</span>, <span class="hljs-number">0.8635</span>, <span class="hljs-number">87.1479</span>]</span>,
-        "<span class="hljs-attribute">isVisible</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">isEnabled</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">checkCollisions</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">billboardMode</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-        "<span class="hljs-attribute">receiveShadows</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">positions</span>": <span class="hljs-value">[-<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>]</span>,
-        "<span class="hljs-attribute">normals</span>": <span class="hljs-value">[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">0</span>]</span>,
-        "<span class="hljs-attribute">uvs</span>": <span class="hljs-value">[<span class="hljs-number">0.0001</span>, <span class="hljs-number">0.0001</span>, <span class="hljs-number">0.9999</span>, <span class="hljs-number">0.0001</span>, <span class="hljs-number">0.0001</span>, <span class="hljs-number">0.9999</span>, <span class="hljs-number">0.9999</span>, <span class="hljs-number">0.9999</span>]</span>,
-        "<span class="hljs-attribute">indices</span>": <span class="hljs-value">[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>]</span>,
-        "<span class="hljs-attribute">subMeshes</span>": <span class="hljs-value">[{
-            "<span class="hljs-attribute">materialIndex</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">verticesStart</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">verticesCount</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
-            "<span class="hljs-attribute">indexStart</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">indexCount</span>": <span class="hljs-value"><span class="hljs-number">6</span>
-        </span>}]
-    </span>},
+        &quot;name&quot;: &quot;Material.001&quot;,
+        &quot;id&quot;: &quot;Material.001&quot;,
+        &quot;ambient&quot;: [0.8, 0.8, 0.8],
+        &quot;diffuse&quot;: [0.64, 0.64, 0.64],
+        &quot;specular&quot;: [0.5, 0.5, 0.5],
+        &quot;specularPower&quot;: 50,
+        &quot;emissive&quot;: [0, 0, 0],
+        &quot;alpha&quot;: 1,
+        &quot;backFaceCulling&quot;: true,
+        &quot;diffuseTexture&quot;: {
+            &quot;name&quot;: &quot;concrete5.png&quot;,
+            &quot;level&quot;: 1,
+            &quot;hasAlpha&quot;: 1,
+            &quot;coordinatesMode&quot;: 0,
+            &quot;uOffset&quot;: 0,
+            &quot;vOffset&quot;: 0,
+            &quot;uScale&quot;: 5,
+            &quot;vScale&quot;: 5,
+            &quot;uAng&quot;: 0,
+            &quot;vAng&quot;: 0,
+            &quot;wAng&quot;: 0,
+            &quot;wrapU&quot;: true,
+            &quot;wrapV&quot;: true,
+            &quot;coordinatesIndex&quot;: 0
+        }
+    }],
+    &quot;geometries&quot;: {
+        &quot;boxes&quot;: [{
+            &quot;id&quot;: &quot;BoxPrimitive&quot;,
+            &quot;size&quot;: 2,
+            &quot;canBeRegenerated&quot;: true,
+            &quot;tags&quot;: &quot;Box Primitive Cube CanBeRegenerated&quot;
+        }],
+        &quot;vertexData&quot;: [{
+            &quot;id&quot;: &quot;CubeGeometry&quot;,
+            &quot;updatable&quot;: false,
+            &quot;positions&quot;: [ 1, -1, 1, 1, -1, -1, -1, -1, 1, 1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, -1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, 1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1],
+            &quot;normals&quot;: [0.5773, -0.5773, 0.5773, 0.5773, -0.5773, -0.5773, -0.5773, -0.5773, 0.5773, 0.5773, 0.5773, 0.5773, -0.5773, 0.5773, 0.5773, 0.5773, 0.5773, -0.5773, 0.5773, 0.5773, 0.5773, 0.5773, -0.5773, -0.5773, 0.5773, -0.5773, -0.5773, 0.5773, 0.5773, -0.5773, -0.5773, -0.5773, -0.5773, -0.5773, -0.5773, -0.5773, -0.5773, 0.5773, -0.5773, -0.5773, -0.5773, 0.5773, 0.5773, 0.5773, 0.5773, 0.5773, -0.5773, 0.5773, -0.5773, 0.5773, 0.5773, -0.5773, -0.5773, -0.5773, -0.5773, 0.5773, -0.5773, 0.5773, 0.5773, 0.5773, 0.5773, 0.5773, -0.5773, 0.5773, -0.5773, -0.5773, 0.5773, 0.5773, -0.5773, -0.5773, 0.5773, -0.5773, -0.5773, 0.5773, 0.5773, -0.5773, -0.5773, 0.5773, 0.5773, -0.5773, 0.5773, -0.5773, -0.5773, 0.5773, -0.5773, 0.5773, 0.5773],
+            &quot;uvs&quot;: [0.5, 0.5, 0.5, 0, 0, 0.5, 0.5, 1, 0, 1, 0.5, 0.5, 0.5, 1, 0, 0.5, 0.5, 0.5, 0.5, 1, 0, 0.5, 0.5, 0.5, 0.5, 1, 1, 0.5, 0.5, 0.5, 0.5, 0, 0, 0.5, 0, 0, 0, 0.5, 0.5, 1, 0, 1, 0, 0.5, 0.5, 1, 0, 1, 1, 1, 1, 0.5, 0.5, 0, 0, 0, 0, 0.5],
+            &quot;indices&quot;: [0, 1, 2, 3, 4, 5, 0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 1, 17, 2, 4, 18, 5, 19, 20, 21, 22, 23, 10, 12, 24, 25, 26, 27, 28]
+        }]
+    },
+    &quot;meshes&quot;: [{
+        &quot;name&quot;: &quot;Plane&quot;,
+        &quot;id&quot;: &quot;Plane&quot;,
+        &quot;materialId&quot;: &quot;Material.001&quot;,
+        &quot;position&quot;: [0.0172, -2.9787, -0.5184],
+        &quot;rotation&quot;: [0, 0, 0],
+        &quot;scaling&quot;: [87.1479, 0.8635, 87.1479],
+        &quot;isVisible&quot;: true,
+        &quot;isEnabled&quot;: true,
+        &quot;checkCollisions&quot;: false,
+        &quot;billboardMode&quot;: 0,
+        &quot;receiveShadows&quot;: true,
+        &quot;positions&quot;: [-1, 0, -1, 1, 0, -1, -1, 0, 1, 1, 0, 1],
+        &quot;normals&quot;: [0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0],
+        &quot;uvs&quot;: [0.0001, 0.0001, 0.9999, 0.0001, 0.0001, 0.9999, 0.9999, 0.9999],
+        &quot;indices&quot;: [0, 1, 2, 1, 3, 2],
+        &quot;subMeshes&quot;: [{
+            &quot;materialIndex&quot;: 0,
+            &quot;verticesStart&quot;: 0,
+            &quot;verticesCount&quot;: 4,
+            &quot;indexStart&quot;: 0,
+            &quot;indexCount&quot;: 6
+        }]
+    },
     {
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Cube"</span></span>,
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"Cube"</span></span>,
-        "<span class="hljs-attribute">materialId</span>": <span class="hljs-value"><span class="hljs-string">"Material"</span></span>,
-        "<span class="hljs-attribute">geometryId</span>": <span class="hljs-value"><span class="hljs-string">"CubeGeometry"</span></span>,
-        "<span class="hljs-attribute">position</span>": <span class="hljs-value">[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]</span>,
-        "<span class="hljs-attribute">rotation</span>": <span class="hljs-value">[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]</span>,
-        "<span class="hljs-attribute">scaling</span>": <span class="hljs-value">[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>]</span>,
-        "<span class="hljs-attribute">isVisible</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">isEnabled</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">checkCollisions</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">billboardMode</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-        "<span class="hljs-attribute">receiveShadows</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">subMeshes</span>": <span class="hljs-value">[{
-            "<span class="hljs-attribute">materialIndex</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">verticesStart</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">verticesCount</span>": <span class="hljs-value"><span class="hljs-number">29</span></span>,
-            "<span class="hljs-attribute">indexStart</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">indexCount</span>": <span class="hljs-value"><span class="hljs-number">36</span>
-        </span>}]</span>,
-        "<span class="hljs-attribute">animations</span>": <span class="hljs-value">[{
-            "<span class="hljs-attribute">dataType</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-            "<span class="hljs-attribute">framePerSecond</span>": <span class="hljs-value"><span class="hljs-number">30</span></span>,
-            "<span class="hljs-attribute">loopBehavior</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-            "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"position animation"</span></span>,
-            "<span class="hljs-attribute">property</span>": <span class="hljs-value"><span class="hljs-string">"position"</span></span>,
-            "<span class="hljs-attribute">keys</span>": <span class="hljs-value">[{
-                "<span class="hljs-attribute">frame</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-                "<span class="hljs-attribute">values</span>": <span class="hljs-value">[<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.0291</span>]
-            </span>},
+        &quot;name&quot;: &quot;Cube&quot;,
+        &quot;id&quot;: &quot;Cube&quot;,
+        &quot;materialId&quot;: &quot;Material&quot;,
+        &quot;geometryId&quot;: &quot;CubeGeometry&quot;,
+        &quot;position&quot;: [0, 0, 0],
+        &quot;rotation&quot;: [0, 0, 0],
+        &quot;scaling&quot;: [1, 1, 1],
+        &quot;isVisible&quot;: true,
+        &quot;isEnabled&quot;: true,
+        &quot;checkCollisions&quot;: false,
+        &quot;billboardMode&quot;: 0,
+        &quot;receiveShadows&quot;: false,
+        &quot;subMeshes&quot;: [{
+            &quot;materialIndex&quot;: 0,
+            &quot;verticesStart&quot;: 0,
+            &quot;verticesCount&quot;: 29,
+            &quot;indexStart&quot;: 0,
+            &quot;indexCount&quot;: 36
+        }],
+        &quot;animations&quot;: [{
+            &quot;dataType&quot;: 1,
+            &quot;framePerSecond&quot;: 30,
+            &quot;loopBehavior&quot;: 1,
+            &quot;name&quot;: &quot;position animation&quot;,
+            &quot;property&quot;: &quot;position&quot;,
+            &quot;keys&quot;: [{
+                &quot;frame&quot;: 0,
+                &quot;values&quot;: [0,0,0.0291]
+            },
             {
-                "<span class="hljs-attribute">frame</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-                "<span class="hljs-attribute">values</span>": <span class="hljs-value">[<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0.0291</span>]
-            </span>},
+                &quot;frame&quot;: 1,
+                &quot;values&quot;: [0,0,0.0291]
+            },
             {
-                "<span class="hljs-attribute">frame</span>": <span class="hljs-value"><span class="hljs-number">30</span></span>,
-                "<span class="hljs-attribute">values</span>": <span class="hljs-value">[<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">10</span>]
-            </span>},
+                &quot;frame&quot;: 30,
+                &quot;values&quot;: [0,0,10]
+            },
             {
-                "<span class="hljs-attribute">frame</span>": <span class="hljs-value"><span class="hljs-number">60</span></span>,
-                "<span class="hljs-attribute">values</span>": <span class="hljs-value">[<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">9.975</span>]
-            </span>},
+                &quot;frame&quot;: 60,
+                &quot;values&quot;: [0,0,9.975]
+            },
             {
-                "<span class="hljs-attribute">frame</span>": <span class="hljs-value"><span class="hljs-number">90</span></span>,
-                "<span class="hljs-attribute">values</span>": <span class="hljs-value">[<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>]
-            </span>},
+                &quot;frame&quot;: 90,
+                &quot;values&quot;: [0,0,0]
+            },
             {
-                "<span class="hljs-attribute">frame</span>": <span class="hljs-value"><span class="hljs-number">250</span></span>,
-                "<span class="hljs-attribute">values</span>": <span class="hljs-value">[<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>]
-            </span>}]
-        </span>},
+                &quot;frame&quot;: 250,
+                &quot;values&quot;: [0,0,0]
+            }]
+        },
         {
-            "<span class="hljs-attribute">dataType</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-            "<span class="hljs-attribute">framePerSecond</span>": <span class="hljs-value"><span class="hljs-number">30</span></span>,
-            "<span class="hljs-attribute">loopBehavior</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-            "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"rotation animation"</span></span>,
-            "<span class="hljs-attribute">property</span>": <span class="hljs-value"><span class="hljs-string">"rotation"</span></span>,
-            "<span class="hljs-attribute">keys</span>": <span class="hljs-value">[{
-                "<span class="hljs-attribute">frame</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-                "<span class="hljs-attribute">values</span>": <span class="hljs-value">[-<span class="hljs-number">0.016</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]
-            </span>},
+            &quot;dataType&quot;: 1,
+            &quot;framePerSecond&quot;: 30,
+            &quot;loopBehavior&quot;: 1,
+            &quot;name&quot;: &quot;rotation animation&quot;,
+            &quot;property&quot;: &quot;rotation&quot;,
+            &quot;keys&quot;: [{
+                &quot;frame&quot;: 0,
+                &quot;values&quot;: [-0.016, 0, 0]
+            },
             {
-                "<span class="hljs-attribute">frame</span>": <span class="hljs-value"><span class="hljs-number">30</span></span>,
-                "<span class="hljs-attribute">values</span>": <span class="hljs-value">[-<span class="hljs-number">0.016</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]
-            </span>},
+                &quot;frame&quot;: 30,
+                &quot;values&quot;: [-0.016, 0, 0]
+            },
             {
-                "<span class="hljs-attribute">frame</span>": <span class="hljs-value"><span class="hljs-number">60</span></span>,
-                "<span class="hljs-attribute">values</span>": <span class="hljs-value">[-<span class="hljs-number">6.2832</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]
-            </span>},
+                &quot;frame&quot;: 60,
+                &quot;values&quot;: [-6.2832, 0, 0]
+            },
             {
-                "<span class="hljs-attribute">frame</span>": <span class="hljs-value"><span class="hljs-number">250</span></span>,
-                "<span class="hljs-attribute">values</span>": <span class="hljs-value">[-<span class="hljs-number">6.2832</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]
-            </span>}]
-        </span>}]</span>,
-        "<span class="hljs-attribute">autoAnimate</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">autoAnimateFrom</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-        "<span class="hljs-attribute">autoAnimateTo</span>": <span class="hljs-value"><span class="hljs-number">250</span></span>,
-        "<span class="hljs-attribute">autoAnimateLoop</span>": <span class="hljs-value"><span class="hljs-literal">true</span>
-    </span>},
+                &quot;frame&quot;: 250,
+                &quot;values&quot;: [-6.2832, 0, 0]
+            }]
+        }],
+        &quot;autoAnimate&quot;: true,
+        &quot;autoAnimateFrom&quot;: 0,
+        &quot;autoAnimateTo&quot;: 250,
+        &quot;autoAnimateLoop&quot;: true
+    },
     {
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Cube2"</span></span>,
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"Cube2"</span></span>,
-        "<span class="hljs-attribute">materialId</span>": <span class="hljs-value"><span class="hljs-string">"Material"</span></span>,
-        "<span class="hljs-attribute">geometryId</span>": <span class="hljs-value"><span class="hljs-string">"CubeGeometry"</span></span>,
-        "<span class="hljs-attribute">position</span>": <span class="hljs-value">[<span class="hljs-number">10</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]</span>,
-        "<span class="hljs-attribute">rotation</span>": <span class="hljs-value">[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]</span>,
-        "<span class="hljs-attribute">scaling</span>": <span class="hljs-value">[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>]</span>,
-        "<span class="hljs-attribute">isVisible</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">isEnabled</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">checkCollisions</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">billboardMode</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-        "<span class="hljs-attribute">receiveShadows</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">subMeshes</span>": <span class="hljs-value">[{
-            "<span class="hljs-attribute">materialIndex</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">verticesStart</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">verticesCount</span>": <span class="hljs-value"><span class="hljs-number">29</span></span>,
-            "<span class="hljs-attribute">indexStart</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">indexCount</span>": <span class="hljs-value"><span class="hljs-number">36</span>
-        </span>}]
-    </span>},
+        &quot;name&quot;: &quot;Cube2&quot;,
+        &quot;id&quot;: &quot;Cube2&quot;,
+        &quot;materialId&quot;: &quot;Material&quot;,
+        &quot;geometryId&quot;: &quot;CubeGeometry&quot;,
+        &quot;position&quot;: [10, 0, 0],
+        &quot;rotation&quot;: [0, 0, 0],
+        &quot;scaling&quot;: [1, 1, 1],
+        &quot;isVisible&quot;: true,
+        &quot;isEnabled&quot;: true,
+        &quot;checkCollisions&quot;: false,
+        &quot;billboardMode&quot;: 0,
+        &quot;receiveShadows&quot;: false,
+        &quot;subMeshes&quot;: [{
+            &quot;materialIndex&quot;: 0,
+            &quot;verticesStart&quot;: 0,
+            &quot;verticesCount&quot;: 29,
+            &quot;indexStart&quot;: 0,
+            &quot;indexCount&quot;: 36
+        }]
+    },
     {
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Cube3"</span></span>,
-        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"Cube3"</span></span>,
-        "<span class="hljs-attribute">materialId</span>": <span class="hljs-value"><span class="hljs-string">"Material"</span></span>,
-        "<span class="hljs-attribute">geometryId</span>": <span class="hljs-value"><span class="hljs-string">"BoxPrimitive"</span></span>,
-        "<span class="hljs-attribute">position</span>": <span class="hljs-value">[-<span class="hljs-number">10</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]</span>,
-        "<span class="hljs-attribute">rotation</span>": <span class="hljs-value">[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]</span>,
-        "<span class="hljs-attribute">scaling</span>": <span class="hljs-value">[<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>]</span>,
-        "<span class="hljs-attribute">isVisible</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">isEnabled</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">checkCollisions</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">billboardMode</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-        "<span class="hljs-attribute">receiveShadows</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">subMeshes</span>": <span class="hljs-value">[{
-            "<span class="hljs-attribute">materialIndex</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">verticesStart</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">verticesCount</span>": <span class="hljs-value"><span class="hljs-number">29</span></span>,
-            "<span class="hljs-attribute">indexStart</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-            "<span class="hljs-attribute">indexCount</span>": <span class="hljs-value"><span class="hljs-number">36</span>
-        </span>}]
-    </span>}]</span>,
-    "<span class="hljs-attribute">multiMaterials</span>": <span class="hljs-value">[]</span>,
-    "<span class="hljs-attribute">shadowGenerators</span>": <span class="hljs-value">[{
-        "<span class="hljs-attribute">useVarianceShadowMap</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">mapSize</span>": <span class="hljs-value"><span class="hljs-number">1024</span></span>,
-        "<span class="hljs-attribute">lightId</span>": <span class="hljs-value"><span class="hljs-string">"Sun"</span></span>,
-        "<span class="hljs-attribute">renderList</span>": <span class="hljs-value">[<span class="hljs-string">"Cube"</span>, <span class="hljs-string">"Cube2"</span>, <span class="hljs-string">"Cube3"</span>]
-    </span>}]</span>,
-    "<span class="hljs-attribute">skeletons</span>": <span class="hljs-value">[]</span>,
-    "<span class="hljs-attribute">sounds</span>": <span class="hljs-value">[{          
-        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"violons11.wav"</span></span>,
-        "<span class="hljs-attribute">volume</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-        "<span class="hljs-attribute">autoplay</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">loop</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">soundTrackId</span>": <span class="hljs-value"><span class="hljs-number">1</span>
-        <span class="hljs-string">"spatialSound"</span>: <span class="hljs-literal">true</span></span>,
-        "<span class="hljs-attribute">position</span>": <span class="hljs-value">[<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]
-        <span class="hljs-string">"refDistance"</span>: <span class="hljs-number">1.0</span></span>,
-        "<span class="hljs-attribute">rolloffFactor</span>": <span class="hljs-value"><span class="hljs-number">1.0</span></span>,
-        "<span class="hljs-attribute">maxDistance</span>": <span class="hljs-value"><span class="hljs-number">100</span></span>,
-        "<span class="hljs-attribute">distanceModel</span>": <span class="hljs-value"><span class="hljs-string">"linear"</span></span>,
-        "<span class="hljs-attribute">panningModel</span>": <span class="hljs-value"><span class="hljs-string">"equalpower"</span></span>,
-        "<span class="hljs-attribute">isDirectional</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
-        "<span class="hljs-attribute">coneInnerAngle</span>": <span class="hljs-value"><span class="hljs-number">90</span></span>,
-        "<span class="hljs-attribute">coneOuterAngle</span>": <span class="hljs-value"><span class="hljs-number">180</span></span>,
-        "<span class="hljs-attribute">coneOuterGain</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-        "<span class="hljs-attribute">connectedMeshId</span>": <span class="hljs-value"><span class="hljs-number">0</span></span>,
-        "<span class="hljs-attribute">localDirectionToMesh</span>": <span class="hljs-value">[<span class="hljs-number">1</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>]
-   </span>}]
-</span>}
+        &quot;name&quot;: &quot;Cube3&quot;,
+        &quot;id&quot;: &quot;Cube3&quot;,
+        &quot;materialId&quot;: &quot;Material&quot;,
+        &quot;geometryId&quot;: &quot;BoxPrimitive&quot;,
+        &quot;position&quot;: [-10, 0, 0],
+        &quot;rotation&quot;: [0, 0, 0],
+        &quot;scaling&quot;: [1, 1, 1],
+        &quot;isVisible&quot;: true,
+        &quot;isEnabled&quot;: true,
+        &quot;checkCollisions&quot;: false,
+        &quot;billboardMode&quot;: 0,
+        &quot;receiveShadows&quot;: false,
+        &quot;subMeshes&quot;: [{
+            &quot;materialIndex&quot;: 0,
+            &quot;verticesStart&quot;: 0,
+            &quot;verticesCount&quot;: 29,
+            &quot;indexStart&quot;: 0,
+            &quot;indexCount&quot;: 36
+        }]
+    }],
+    &quot;multiMaterials&quot;: [],
+    &quot;shadowGenerators&quot;: [{
+        &quot;useVarianceShadowMap&quot;: true,
+        &quot;mapSize&quot;: 1024,
+        &quot;lightId&quot;: &quot;Sun&quot;,
+        &quot;renderList&quot;: [&quot;Cube&quot;, &quot;Cube2&quot;, &quot;Cube3&quot;]
+    }],
+    &quot;skeletons&quot;: [],
+    &quot;sounds&quot;: [{          
+        &quot;name&quot;: &quot;violons11.wav&quot;,
+        &quot;volume&quot;: 1,
+        &quot;autoplay&quot;: true,
+        &quot;loop&quot;: true,
+        &quot;soundTrackId&quot;: 1
+        &quot;spatialSound&quot;: true,
+        &quot;position&quot;: [0, 0, 0]
+        &quot;refDistance&quot;: 1.0,
+        &quot;rolloffFactor&quot;: 1.0,
+        &quot;maxDistance&quot;: 100,
+        &quot;distanceModel&quot;: &quot;linear&quot;,
+        &quot;panningModel&quot;: &quot;equalpower&quot;,
+        &quot;isDirectional&quot;: false,
+        &quot;coneInnerAngle&quot;: 90,
+        &quot;coneOuterAngle&quot;: 180,
+        &quot;coneOuterGain&quot;: 0,
+        &quot;connectedMeshId&quot;: 0,
+        &quot;localDirectionToMesh&quot;: [1, 0, 0]
+   }]
+}
 </code></pre>
-</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
+    $(this).text($(this).text().replace(/&nbsp;/gi, ''));
+});
+hljs.initHighlightingOnLoad();</script>

@@ -1,5 +1,5 @@
 /**
- * Created by Zacaria on 15/07/2015.
+ * config file for the importer
  */
 var config = {
     baseUrl    : 'http://babylondoc.azurewebsites.net/private/api/',

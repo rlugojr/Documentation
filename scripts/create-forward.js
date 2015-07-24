@@ -14,7 +14,9 @@ var fs      = require('fs'),
     marked  = require('meta-marked'),
     async   = require('async'),
     helper  = require('./helpers/forwarder'),
-    readdirp = require('readdirp');
+    readdirp = require('readdirp'),
+    appRoot = require('app-root-path').path,
+    logger  = require(path.join(appRoot, 'config/logger'));
 
 /*************************************************************************
  *                               VARIABLES                               *
@@ -37,43 +39,52 @@ var config      = {
 
 var metaList = {};
 
-async.each(config.links, function(link, cb){
+module.exports = function(done) {
+    async.each(config.links, function (link, cb) {
 
-    console.log('beginning ' + link.type);
+        logger.info('beginning ' + link.type);
 
-    var pathToFolder = path.join(__DIRNAME__, link.type);
-    var options = {root: pathToFolder, fileFilter: '*.md'};
+        var pathToFolder = path.join(__DIRNAME__, link.type);
+        var options = {root: pathToFolder, fileFilter: '*.md'};
 
-    readdirp(options, function(err, data){
-        if(err) throw err;
+        readdirp(options, function (err, data) {
+            if (err) throw err;
 
-        async.each(data.files, function(file, callback){
-            var pathToFile = path.join(pathToFolder, file.path);
+            async.each(data.files, function (file, callback) {
+                var pathToFile = path.join(pathToFolder, file.path);
 
-            helper.extractMeta(pathToFile, function(meta){
-                if(link.type == "classes"){
-                    // type: class
-                    metaList[meta.ID_PAGE.toString()] = { "type": link.type, "name": meta.PG_TITLE, "version": meta.PG_VERSION + ''};
-                    // need to suffix version number with ".0" if it is a round number
-                    if(metaList[meta.ID_PAGE.toString()].version.lastIndexOf('.') == -1){
-                        metaList[meta.ID_PAGE.toString()].version += '.0';
+                helper.extractMeta(pathToFile, function (meta) {
+                    if (link.type == "classes") {
+                        // type: class
+                        if(meta.ID_PAGE){
+                            metaList[meta.ID_PAGE.toString()] = {
+                                "type": link.type,
+                                "name": meta.PG_TITLE,
+                                "version": meta.PG_VERSION + ''
+                            };
+                            // need to suffix version number with ".0" if it is a round number
+                            if (metaList[meta.ID_PAGE.toString()].version.lastIndexOf('.') == -1) {
+                                metaList[meta.ID_PAGE.toString()].version += '.0';
+                            }
+                        }
+
+                    } else {
+                        if(meta.ID_PAGE){
+                            // type: exporters || extensions || tutorials
+                            metaList[meta.ID_PAGE.toString()] = {"type": link.type, "name": meta.PG_TITLE};
+                        }
+
                     }
-                } else {
-                    // type: exporters || extensions || tutorials
-                    metaList[meta.ID_PAGE.toString()] = { "type": link.type, "name": meta.PG_TITLE };
-                }
 
-                callback();
+                    callback();
+                });
+            }, function () {
+                cb();
+                logger.info('ending ' + link.type);
             });
-        }, function(){
-            cb();
-            console.log('ending ' + link.type);
         });
+    }, function (err) {
+        if (err) throw err;
+        helper.createForward(err, metaList, done);
     });
-
-
-
-}, function(err){
-    if(err) throw err;
-    helper.createForward(err, metaList);
-});
+};

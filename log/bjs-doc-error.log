@@ -1,376 +1,1042 @@
-{"level":"error","message":"500 Error at D:\\00_SOKRATE-DOCS\\02-PROJECTS\\000-BabylonDoc\\v3\\git\\views\\class\\class.jade - { [Error: D:\\00_SOKRATE-DOCS\\02-PROJECTS\\000-BabylonDoc\\v3\\git\\views\\class\\class.jade:31\n    29|         //        span.classTag= tag\r\n    30|         //#classMd!= content\r\n  > 31| \r\n    32| include ../includes/footer\r\n    33| \r\n    34| //script(src=\"/js/classes.js\")\n\nunexpected token \"pipeless-text\"]\n  path: \u001b[32m'D:\\\\00_SOKRATE-DOCS\\\\02-PROJECTS\\\\000-BabylonDoc\\\\v3\\\\git\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-07T11:14:31.280Z"}
-{"level":"error","message":"500 Error at D:\\00_SOKRATE-DOCS\\02-PROJECTS\\000-BabylonDoc\\v3\\git\\views\\class\\class.jade - { [Error: D:\\00_SOKRATE-DOCS\\02-PROJECTS\\000-BabylonDoc\\v3\\git\\views\\class\\class.jade:31\n    29|         //        span.classTag= tag\r\n    30|         //#classMd!= content\r\n  > 31| \r\n    32| include ../includes/footer\r\n    33| \r\n    34| //script(src=\"/js/classes.js\")\n\nunexpected token \"pipeless-text\"]\n  path: \u001b[32m'D:\\\\00_SOKRATE-DOCS\\\\02-PROJECTS\\\\000-BabylonDoc\\\\v3\\\\git\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-07T11:14:33.847Z"}
-{"level":"error","message":"500 Error at D:\\00_SOKRATE-DOCS\\02-PROJECTS\\000-BabylonDoc\\v3\\git\\views\\class\\class.jade - { [Error: D:\\00_SOKRATE-DOCS\\02-PROJECTS\\000-BabylonDoc\\v3\\git\\views\\class\\class.jade:31\n    29|         //        span.classTag= tag\r\n    30|         //#classMd!= content\r\n  > 31| \r\n    32| include ../includes/footer\r\n    33| \r\n    34| //script(src=\"/js/classes.js\")\n\nunexpected token \"pipeless-text\"]\n  path: \u001b[32m'D:\\\\00_SOKRATE-DOCS\\\\02-PROJECTS\\\\000-BabylonDoc\\\\v3\\\\git\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-07T11:15:18.031Z"}
-{"level":"error","message":"500 Error at D:\\00_SOKRATE-DOCS\\02-PROJECTS\\000-BabylonDoc\\v3\\git\\views\\class\\class.jade - { [Error: D:\\00_SOKRATE-DOCS\\02-PROJECTS\\000-BabylonDoc\\v3\\git\\views\\class\\class.jade:31\n    29|         //        span.classTag= tag\r\n    30|         //#classMd!= content\r\n  > 31| \r\n    32| include ../includes/footer\r\n    33| \r\n    34| //script(src=\"/js/classes.js\")\n\nunexpected token \"pipeless-text\"]\n  path: \u001b[32m'D:\\\\00_SOKRATE-DOCS\\\\02-PROJECTS\\\\000-BabylonDoc\\\\v3\\\\git\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-07T11:15:18.896Z"}
-{"level":"error","message":"500 Error at D:\\00_SOKRATE-DOCS\\02-PROJECTS\\000-BabylonDoc\\v3\\git\\views\\class\\class.jade - { [Error: D:\\00_SOKRATE-DOCS\\02-PROJECTS\\000-BabylonDoc\\v3\\git\\views\\class\\class.jade:30\n    28|         //    each tag in classTags\r\n    29|         //        span.classTag= tag\r\n  > 30|         //#classMd!= content\r\n    31| include ../includes/footer\r\n    32| //script(src=\"/js/classes.js\")\n\nunexpected token \"pipeless-text\"]\n  path: \u001b[32m'D:\\\\00_SOKRATE-DOCS\\\\02-PROJECTS\\\\000-BabylonDoc\\\\v3\\\\git\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-07T11:16:11.080Z"}
-{"level":"error","message":"Forward failed. Requested page ID: 6679","timestamp":"2015-07-07T11:23:02.629Z"}
-{"level":"error","message":"Forward failed. Requested page ID: 6663","timestamp":"2015-07-07T13:24:28.331Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:46:28.725Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:46:28.898Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:46:28.929Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:47:26.357Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:47:26.553Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:47:26.570Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:47:45.224Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:47:45.257Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:47:45.285Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:48:03.037Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:48:04.255Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:48:04.270Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:48:17.299Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:48:17.353Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:48:17.386Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:48:20.861Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:48:20.897Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:48:20.925Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:48:39.452Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:48:39.485Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:48:39.521Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:48:44.445Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:48:44.664Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:48:44.732Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:48:56.322Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:48:56.355Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:48:56.383Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:49:31.190Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:49:31.414Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:49:31.499Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:50:49.024Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:50:49.348Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:50:49.365Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:50:54.876Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:50:54.905Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:50:54.927Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:52:10.735Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:52:10.762Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:52:10.792Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:52:41.705Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:52:41.745Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:52:41.778Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:52:42.904Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:52:42.941Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:52:42.985Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:52:44.075Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:52:44.108Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:52:44.135Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:52:56.182Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:52:56.211Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:52:56.237Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:53:54.828Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:53:54.860Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:53:54.889Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:54:24.354Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:54:24.387Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:54:24.415Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:54:25.573Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:54:25.615Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:54:25.650Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:54:26.691Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:54:26.737Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:54:26.766Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:54:28.123Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:54:28.149Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:54:28.197Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:54:52.639Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:54:52.671Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:54:52.705Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:54:54.336Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:54:54.368Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:54:54.401Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:55:25.412Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:55:25.444Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:55:25.453Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:56:15.781Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:56:16.001Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:56:16.111Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:57:00.369Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:57:00.398Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:57:00.427Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:57:42.953Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:57:43.185Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:57:43.292Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:58:00.563Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:58:00.630Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:58:00.658Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:58:03.843Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:58:03.881Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:58:03.902Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T13:59:19.756Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T13:59:19.792Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T13:59:19.821Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:00:36.898Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:00:36.932Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:00:36.944Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:00:47.936Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:00:48.248Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:00:48.266Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:00:59.630Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:00:59.656Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:00:59.671Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:01:24.601Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:01:24.658Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:01:24.704Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:02:02.230Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:02:02.260Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:02:02.271Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:02:31.041Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:02:31.261Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:02:31.286Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:03:00.284Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:03:00.452Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:03:00.480Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:03:46.948Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:03:47.137Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:03:47.160Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:04:03.307Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:04:03.506Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:04:03.522Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:04:04.779Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:04:04.801Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:04:04.820Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:04:18.798Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:04:18.832Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:04:18.853Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:04:42.012Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:04:42.041Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:04:42.081Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:06:12.989Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:06:13.165Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:06:13.180Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:11:02.531Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:11:02.566Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:11:02.576Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:11:03.839Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:11:03.862Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:11:03.899Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:11:04.701Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:11:04.724Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:11:04.748Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:11:05.420Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:11:05.460Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:11:05.484Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:11:35.190Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:11:35.218Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:11:35.252Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:11:36.044Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:11:36.082Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:11:36.102Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:11:36.659Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:11:36.688Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:11:36.711Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:11:37.288Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:11:37.320Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:11:37.331Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-07T14:11:58.444Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:11:58.604Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:11:58.611Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:19:01.653Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:19:01.689Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:19:01.708Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:19:03.356Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:19:03.403Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:19:03.416Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:19:05.133Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:19:05.174Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:19:05.191Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:19:06.333Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:19:06.363Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:19:06.378Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:22:06.491Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:22:06.512Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:22:06.518Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:22:12.901Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:22:12.971Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:22:12.990Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:22:34.662Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:22:34.761Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:22:34.781Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:23:22.943Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:23:22.982Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:23:23.015Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:36:44.973Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:36:45.004Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:36:45.035Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:37:18.080Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:37:18.109Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:37:18.134Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:37:41.785Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:37:41.816Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:37:41.840Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:37:43.046Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:37:43.085Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:37:43.103Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:37:44.511Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:37:44.539Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:37:44.561Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:37:46.454Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:37:46.489Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:37:46.511Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:38:09.046Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:38:09.219Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:38:09.339Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:38:09.346Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:38:15.725Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff2","timestamp":"2015-07-07T14:38:16.000Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:38:16.011Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:38:16.020Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T14:46:45.028Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-07T14:47:12.284Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:47:12.458Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:47:12.464Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-07T14:47:15.008Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:47:15.092Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:47:15.097Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-07T14:48:12.259Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:48:12.466Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:48:12.472Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-07T14:48:14.640Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:48:14.725Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:48:14.730Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-07T14:48:18.287Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:48:18.346Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:48:18.363Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-07T14:48:19.444Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:48:19.510Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:48:19.527Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-07T14:49:21.380Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:49:21.439Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:49:21.457Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-07T14:49:22.964Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:49:23.529Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:49:23.537Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-07T14:49:26.988Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:49:27.059Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:49:27.077Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-07T14:50:14.709Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-07T14:50:14.861Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-07T14:50:14.871Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:18:55.176Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:18:57.961Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:18:58.998Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:00.620Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:01.182Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:02.372Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:04.143Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:05.148Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:06.347Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:11.690Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:12.369Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:13.240Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:13.793Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:14.354Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:14.849Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:15.361Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:15.860Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:16.248Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:16.796Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:19:17.208Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:22:01.777Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:26:03.314Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:26:11.618Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:26:12.698Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:26:14.319Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:26:15.134Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:26:15.993Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:27:19.943Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:30:08.504Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:30:13.326Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:30:14.130Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:31:54.735Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:31:55.550Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:32:20.846Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:32:22.076Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:32:25.231Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:33:18.970Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:33:19.837Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:33:20.562Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:34:06.850Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:34:24.361Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:34:26.406Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:34:27.453Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:34:29.456Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:34:49.585Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:34:51.142Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:35:00.095Z"}
-{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:35:12.319Z"}
-{"level":"error","message":"404 error - Page not found: public/html/classes_2.2.html","timestamp":"2015-07-08T08:39:48.274Z"}
-{"level":"error","message":"404 error - Page not found: public/html/classes_2.2.html","timestamp":"2015-07-08T08:41:12.913Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:18:25.156Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:18:25.311Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:18:25.342Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:18:58.738Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:18:58.773Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:18:58.783Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:19:22.829Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:19:22.872Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:19:22.899Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:20:35.597Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:20:35.608Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:20:35.615Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:21:57.240Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:21:57.281Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:21:57.291Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:22:32.610Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:22:32.644Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:22:32.671Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:22:59.084Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:22:59.115Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:22:59.126Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:23:53.061Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:23:53.101Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:23:53.120Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:25:13.375Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:25:13.410Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:25:13.421Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:25:24.730Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:25:24.760Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:25:24.773Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:26:55.123Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:26:55.154Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:26:55.167Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:27:34.423Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:27:34.455Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:27:34.483Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:32:46.104Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:32:46.141Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:32:46.162Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:32:59.140Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:32:59.171Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:32:59.192Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:34:53.329Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:34:53.363Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:34:53.373Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:36:21.497Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:36:21.532Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:36:21.545Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:36:22.603Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:36:22.635Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:36:22.640Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:37:16.658Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:37:16.692Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:37:16.698Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:37:53.800Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:37:53.832Z"}
-{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:37:53.842Z"}
-{"level":"error","message":"404 Error -  /css/libs/slideout.css","timestamp":"2015-07-08T12:56:22.621Z"}
-{"level":"error","message":"404 Error -  /css/libs/highlight/github.css","timestamp":"2015-07-08T12:56:22.738Z"}
-{"level":"error","message":"404 Error -  /css/libs/slideout.css","timestamp":"2015-07-08T12:56:24.980Z"}
-{"level":"error","message":"404 Error -  /css/libs/highlight/github.css","timestamp":"2015-07-08T12:56:24.983Z"}
-{"level":"error","message":"404 Error -  /css/libs/slideout.css","timestamp":"2015-07-08T12:56:28.871Z"}
-{"level":"error","message":"404 Error -  /css/libs/highlight/github.css","timestamp":"2015-07-08T12:56:28.875Z"}
-{"level":"error","message":"404 Error -  /css/libs/slideout.css","timestamp":"2015-07-08T12:57:09.918Z"}
-{"level":"error","message":"404 Error -  /css/libs/highlight/github.css","timestamp":"2015-07-08T12:57:10.076Z"}
-{"level":"error","message":"404 Error -  /css/libs/normalize.css","timestamp":"2015-07-08T12:58:30.137Z"}
-{"level":"error","message":"404 Error -  /js/libs/slideoutjs/slideout.css","timestamp":"2015-07-08T12:58:30.297Z"}
-{"level":"error","message":"404 Error -  /css/libs/highlight/default.css","timestamp":"2015-07-08T12:58:30.302Z"}
-{"level":"error","message":"404 Error -  /js/libs/slideoutjs/slideout.min.js","timestamp":"2015-07-08T12:58:30.308Z"}
-{"level":"error","message":"404 Error -  /css/libs/normalize.css","timestamp":"2015-07-08T12:59:06.536Z"}
-{"level":"error","message":"404 Error -  /js/libs/slideoutjs/slideout.css","timestamp":"2015-07-08T12:59:06.712Z"}
-{"level":"error","message":"404 Error -  /css/libs/highlight/default.css","timestamp":"2015-07-08T12:59:06.716Z"}
-{"level":"error","message":"404 Error -  /js/libs/slideoutjs/slideout.min.js","timestamp":"2015-07-08T12:59:06.718Z"}
-{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\AbstractMesh.md.html","timestamp":"2015-07-08T13:11:50.896Z"}
-{"level":"error","message":"404 Error -  /classes/2.1/2.1/AbstractMesh","timestamp":"2015-07-09T07:50:06.728Z"}
-{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\2.0.html","timestamp":"2015-07-09T07:50:13.670Z"}
-{"level":"error","message":"404 error - Class not found: 2.2","timestamp":"2015-07-15T14:44:06.517Z"}
-{"level":"error","message":"500 Error at D:\\00_SOKRATE-DOCS\\02-PROJECTS\\000-BabylonDoc\\v3\\git\\public\\html\\html\\classes_2.1.html - { [Error: ENOENT, stat 'D:\\00_SOKRATE-DOCS\\02-PROJECTS\\000-BabylonDoc\\v3\\git\\public\\html\\html\\classes_2.1.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'D:\\\\00_SOKRATE-DOCS\\\\02-PROJECTS\\\\000-BabylonDoc\\\\v3\\\\git\\\\public\\\\html\\\\html\\\\classes_2.1.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-17T14:24:47.117Z"}
-{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-17T14:28:32.796Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\index.jade - { [Error: E:\\BabylonJS\\src\\views\\index.jade:52\n    50|             label.demo-label 15 MB\r\n    51|                 br\r\n  > 52|                 br by Michel Rousseau\r\n    53| \r\n    54| \r\n    55|     .horizontal-separator\r\n\nbr is self closing and should not have content.]\n  line: \u001b[33m52\u001b[39m,\n  filename: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\index.jade'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\index.jade'\u001b[39m }","timestamp":"2015-07-01T13:23:45.664Z"}
+{"level":"error","message":"404 Error - /tutorials","timestamp":"2015-07-01T14:03:21.578Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T14:03:21.584Z"}
+{"level":"error","message":"404 Error - /tutorials","timestamp":"2015-07-01T14:07:42.973Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T14:07:42.979Z"}
+{"level":"error","message":"404 Error - /tutorials","timestamp":"2015-07-01T14:10:22.793Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T14:10:22.795Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon.manifest","timestamp":"2015-07-01T15:28:29.017Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:28:29.022Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon.manifest","timestamp":"2015-07-01T15:28:29.149Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:28:29.150Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon","timestamp":"2015-07-01T15:28:29.161Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:28:29.162Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon","timestamp":"2015-07-01T15:28:29.167Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:28:29.168Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon.manifest","timestamp":"2015-07-01T15:29:09.151Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:29:09.156Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon.manifest","timestamp":"2015-07-01T15:29:09.241Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:29:09.242Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon","timestamp":"2015-07-01T15:29:09.252Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:29:09.253Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon","timestamp":"2015-07-01T15:29:09.256Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:29:09.257Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon.manifest","timestamp":"2015-07-01T15:29:27.644Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:29:27.646Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon.manifest","timestamp":"2015-07-01T15:29:27.647Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:29:27.647Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon","timestamp":"2015-07-01T15:29:27.657Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:29:27.657Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon","timestamp":"2015-07-01T15:29:27.659Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:29:27.660Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon.manifest","timestamp":"2015-07-01T15:30:48.058Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:30:48.063Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon.manifest","timestamp":"2015-07-01T15:30:48.198Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:30:48.199Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon","timestamp":"2015-07-01T15:30:48.234Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:30:48.234Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon","timestamp":"2015-07-01T15:30:48.237Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:30:48.238Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon.manifest","timestamp":"2015-07-01T15:33:09.844Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:33:09.848Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon.manifest","timestamp":"2015-07-01T15:33:09.952Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:33:09.953Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon","timestamp":"2015-07-01T15:33:09.963Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:33:09.964Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon","timestamp":"2015-07-01T15:33:09.967Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:33:09.968Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon.manifest","timestamp":"2015-07-01T15:33:56.291Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:33:56.292Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon.manifest","timestamp":"2015-07-01T15:33:56.293Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:33:56.294Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon","timestamp":"2015-07-01T15:33:56.438Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:33:56.439Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon","timestamp":"2015-07-01T15:33:56.483Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:33:56.483Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon.manifest","timestamp":"2015-07-01T15:34:21.490Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:34:21.495Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon.manifest","timestamp":"2015-07-01T15:34:21.988Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:34:21.989Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon","timestamp":"2015-07-01T15:34:22.007Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:34:22.008Z"}
+{"level":"error","message":"404 Error - /public/assets/v8.babylon","timestamp":"2015-07-01T15:34:22.020Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:34:22.021Z"}
+{"level":"error","message":"404 Error - /assets/v8.babylon.manifest","timestamp":"2015-07-01T15:36:39.373Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:36:39.377Z"}
+{"level":"error","message":"404 Error - /assets/v8.babylon.manifest","timestamp":"2015-07-01T15:36:39.505Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:36:39.506Z"}
+{"level":"error","message":"404 Error - /assets/v8.babylon.manifest","timestamp":"2015-07-01T15:36:52.904Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:36:52.908Z"}
+{"level":"error","message":"404 Error - /assets/v8.babylon.manifest","timestamp":"2015-07-01T15:36:53.014Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:36:53.015Z"}
+{"level":"error","message":"404 Error - /assets/v8.babylon.manifest","timestamp":"2015-07-01T15:37:10.459Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:37:10.460Z"}
+{"level":"error","message":"404 Error - /assets/v8.babylon.manifest","timestamp":"2015-07-01T15:37:10.461Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:37:10.462Z"}
+{"level":"error","message":"404 Error - /assets/v8.babylon.manifest","timestamp":"2015-07-01T15:42:55.414Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:42:55.418Z"}
+{"level":"error","message":"404 Error - /assets/v8.babylon.manifest","timestamp":"2015-07-01T15:42:55.542Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:42:55.542Z"}
+{"level":"error","message":"404 Error - /assets/v8.babylon.manifest","timestamp":"2015-07-01T15:43:57.883Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:43:57.888Z"}
+{"level":"error","message":"404 Error - /assets/v8.babylon.manifest","timestamp":"2015-07-01T15:43:58.025Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-01T15:43:58.026Z"}
+{"level":"error","message":"404 Error - /favicon.ico","timestamp":"2015-07-02T07:10:26.038Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:10:26.043Z"}
+{"level":"error","message":"404 Error - /favicon.ico","timestamp":"2015-07-02T07:10:26.524Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:10:26.527Z"}
+{"level":"error","message":"404 Error - /tutorials","timestamp":"2015-07-02T07:13:28.802Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:13:28.803Z"}
+{"level":"error","message":"404 Error - /exporters","timestamp":"2015-07-02T07:13:30.328Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:13:30.330Z"}
+{"level":"error","message":"404 Error - /extensions","timestamp":"2015-07-02T07:13:30.978Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:13:30.979Z"}
+{"level":"error","message":"404 Error - /favicon.ico","timestamp":"2015-07-02T07:24:39.565Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:24:39.569Z"}
+{"level":"error","message":"404 Error - /favicon.ico","timestamp":"2015-07-02T07:24:39.694Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:24:39.696Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon.ico","timestamp":"2015-07-02T07:52:59.767Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:52:59.771Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon.ico","timestamp":"2015-07-02T07:52:59.959Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:52:59.960Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon-32x32.png","timestamp":"2015-07-02T07:55:09.681Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:55:09.685Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon-96x96.png","timestamp":"2015-07-02T07:55:09.828Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:55:09.829Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon-16x16.png","timestamp":"2015-07-02T07:55:09.833Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:55:09.834Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon-32x32.png","timestamp":"2015-07-02T07:55:09.877Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:55:09.878Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon-96x96.png","timestamp":"2015-07-02T07:55:09.881Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:55:09.881Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon-16x16.png","timestamp":"2015-07-02T07:55:09.888Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:55:09.889Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon.ico","timestamp":"2015-07-02T07:58:20.856Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:58:20.861Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon-16x16.png","timestamp":"2015-07-02T07:58:20.993Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:58:20.994Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon-96x96.png","timestamp":"2015-07-02T07:58:21.017Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:58:21.022Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon-32x32.png","timestamp":"2015-07-02T07:58:21.028Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:58:21.028Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon.ico","timestamp":"2015-07-02T07:58:32.608Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:58:32.609Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon-16x16.png","timestamp":"2015-07-02T07:58:32.619Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:58:32.619Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon-96x96.png","timestamp":"2015-07-02T07:58:32.628Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:58:32.628Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon-32x32.png","timestamp":"2015-07-02T07:58:32.648Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:58:32.649Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon.ico","timestamp":"2015-07-02T07:58:36.180Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:58:36.181Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon-16x16.png","timestamp":"2015-07-02T07:58:36.185Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:58:36.186Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon-96x96.png","timestamp":"2015-07-02T07:58:36.191Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:58:36.191Z"}
+{"level":"error","message":"404 Error - /public/img/favicon/favicon-32x32.png","timestamp":"2015-07-02T07:58:36.195Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T07:58:36.196Z"}
+{"level":"error","message":"404 Error - /classes/2.1/img/favicon.ico","timestamp":"2015-07-02T08:11:24.600Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T08:11:24.604Z"}
+{"level":"error","message":"404 Error - /classes/2.1/img/favicon.ico","timestamp":"2015-07-02T08:11:24.684Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T08:11:24.685Z"}
+{"level":"error","message":"404 Error - /tutorials","timestamp":"2015-07-02T08:12:21.173Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T08:12:21.174Z"}
+{"level":"error","message":"404 Error - /exporters","timestamp":"2015-07-02T08:12:21.642Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T08:12:21.643Z"}
+{"level":"error","message":"404 Error - /extensions","timestamp":"2015-07-02T08:12:22.059Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T08:12:22.060Z"}
+{"level":"error","message":"404 Error - /extensions","timestamp":"2015-07-02T08:14:40.396Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: undefined is not a function]","timestamp":"2015-07-02T08:14:40.398Z"}
+{"level":"error","message":"404 error - Class not found: Axis","timestamp":"2015-07-02T08:25:04.238Z"}
+{"level":"error","message":"404 error - Class not found: Action","timestamp":"2015-07-02T09:33:28.133Z"}
+{"level":"error","message":"404 error - Class not found: A","timestamp":"2015-07-02T09:42:14.700Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\classes.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\classes.jade:25\n    23|     //List the classes categories\r\n    24|     #classesListByTag\r\n  > 25|         each bclasses, categorie in list\r\n    26|             div.category\r\n    27|                 div.categoryTitle\r\n    28|                     h3= categorie\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\classes.jade'\u001b[39m }","timestamp":"2015-07-02T11:56:13.493Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\classes.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\classes.jade:25\n    23|     //List the classes categories\r\n    24|     #classesListByTag\r\n  > 25|         each classes, categorie in list\r\n    26|             div.category\r\n    27|                 div.categoryTitle\r\n    28|                     h3= categorie\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\classes.jade'\u001b[39m }","timestamp":"2015-07-02T11:56:58.791Z"}
+{"level":"error","message":"404 error - Class not found: AbstractMesh.md","timestamp":"2015-07-02T12:03:59.927Z"}
+{"level":"error","message":"404 Error -  /tutorials","timestamp":"2015-07-02T12:05:11.596Z"}
+{"level":"error","message":"404 error - Class not found: AbstractMesh.md","timestamp":"2015-07-02T12:30:02.861Z"}
+{"level":"error","message":"404 Error -  /classes/2.0/img/favicon.ico","timestamp":"2015-07-02T12:30:03.001Z"}
+{"level":"error","message":"404 Error -  /classes/2.0/img/favicon.ico","timestamp":"2015-07-02T12:30:03.150Z"}
+{"level":"error","message":"404 Error -  /tutorials","timestamp":"2015-07-02T12:37:23.318Z"}
+{"level":"error","message":"404 error - Class not found: AbstractMesh.md","timestamp":"2015-07-02T12:37:30.984Z"}
+{"level":"error","message":"404 error - Class not found: AbstractMesh.md","timestamp":"2015-07-02T12:38:10.632Z"}
+{"level":"error","message":"404 error - Class not found: Analyser","timestamp":"2015-07-02T12:40:04.258Z"}
+{"level":"error","message":"404 error - Class not found: AssetsManager","timestamp":"2015-07-02T12:40:05.272Z"}
+{"level":"error","message":"404 Error -  /extensions","timestamp":"2015-07-02T12:46:40.070Z"}
+{"level":"error","message":"404 Error -  /extensions","timestamp":"2015-07-02T12:46:44.557Z"}
+{"level":"error","message":"404 Error -  /exporters","timestamp":"2015-07-02T12:46:53.566Z"}
+{"level":"error","message":"404 Error -  /tutorials","timestamp":"2015-07-02T12:47:02.087Z"}
+{"level":"error","message":"404 Error -  /tutorials","timestamp":"2015-07-02T12:49:59.944Z"}
+{"level":"error","message":"404 Error -  /exporters","timestamp":"2015-07-02T12:50:00.602Z"}
+{"level":"error","message":"404 Error -  /extensions","timestamp":"2015-07-02T12:50:01.218Z"}
+{"level":"error","message":"404 error - Class not found: ActionEvent","timestamp":"2015-07-02T13:00:20.724Z"}
+{"level":"error","message":"404 Error -  /tutorials","timestamp":"2015-07-02T13:15:53.907Z"}
+{"level":"error","message":"404 Error -  /exporters","timestamp":"2015-07-02T13:16:02.225Z"}
+{"level":"error","message":"404 Error -  /extensions","timestamp":"2015-07-02T13:16:02.906Z"}
+{"level":"error","message":"404 Error -  /tutorials","timestamp":"2015-07-02T14:07:37.682Z"}
+{"level":"error","message":"404 Error -  /tutorials","timestamp":"2015-07-02T14:07:45.400Z"}
+{"level":"error","message":"404 Error -  /tutorials","timestamp":"2015-07-02T14:08:36.267Z"}
+{"level":"error","message":"404 Error -  /tutorials","timestamp":"2015-07-02T14:09:08.026Z"}
+{"level":"error","message":"404 Error -  /exporters","timestamp":"2015-07-02T14:09:08.565Z"}
+{"level":"error","message":"404 Error -  /extensions","timestamp":"2015-07-02T14:09:09.196Z"}
+{"level":"error","message":"404 Error -  /tutorials","timestamp":"2015-07-02T14:11:00.558Z"}
+{"level":"error","message":"404 error - Class not found: AnaglyphGamepadCamera","timestamp":"2015-07-02T14:25:05.172Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/2.1/AbstractMesh","timestamp":"2015-07-02T14:49:49.128Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/2.1/img/favicon.ico","timestamp":"2015-07-02T14:49:49.209Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/2.1/img/favicon.ico","timestamp":"2015-07-02T14:49:49.297Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/2.1/AbstractMesh","timestamp":"2015-07-02T14:49:58.162Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/2.1/ActionEvent","timestamp":"2015-07-02T14:50:22.135Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/2.1/Action","timestamp":"2015-07-02T14:50:48.904Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/2.1/ActionManager","timestamp":"2015-07-02T14:51:06.314Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/2.1/AbstractMesh","timestamp":"2015-07-02T14:51:33.510Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\classes.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\classes.jade:12\n    10|     //List the versions\r\n    11|     #versionsList\r\n  > 12|         each version in versions\r\n    13|             // If it's the current version, apply a different style\r\n    14|             if currentVersion == version\r\n    15|                 a(href='./'+version)#version.selectedVersion= 'v'+version\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\classes.jade'\u001b[39m }","timestamp":"2015-07-02T15:17:20.495Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\classes.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\classes.jade:12\n    10|     //List the versions\r\n    11|     #versionsList\r\n  > 12|         each version in versions\r\n    13|             // If it's the current version, apply a different style\r\n    14|             if currentVersion == version\r\n    15|                 a(href='./'+version)#version.selectedVersion= 'v'+version\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\classes.jade'\u001b[39m }","timestamp":"2015-07-02T15:17:28.579Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\classes.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\classes.jade:12\n    10|     //List the versions\r\n    11|     #versionsList\r\n  > 12|         each version in versions\r\n    13|             // If it's the current version, apply a different style\r\n    14|             if currentVersion == version\r\n    15|                 a(href='./'+version)#version.selectedVersion= 'v'+version\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\classes.jade'\u001b[39m }","timestamp":"2015-07-02T15:18:01.464Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\classes.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\classes.jade:12\n    10|     //List the versions\r\n    11|     #versionsList\r\n  > 12|         each version in versions\r\n    13|             // If it's the current version, apply a different style\r\n    14|             if currentVersion == version\r\n    15|                 a(href='./'+version)#version.selectedVersion= 'v'+version\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\classes.jade'\u001b[39m }","timestamp":"2015-07-02T15:18:55.598Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\classes.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\classes.jade:12\n    10|     //List the versions\r\n    11|     #versionsList\r\n  > 12|         each version in versions\r\n    13|             // If it's the current version, apply a different style\r\n    14|             if currentVersion == version\r\n    15|                 a(href='./'+version)#version.selectedVersion= 'v'+version\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\classes.jade'\u001b[39m }","timestamp":"2015-07-02T15:28:16.899Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\classes.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\classes.jade:12\n    10|     //List the versions\r\n    11|     #versionsList\r\n  > 12|         each version in versions\r\n    13|             // If it's the current version, apply a different style\r\n    14|             if currentVersion == version\r\n    15|                 a(href='./'+version)#version.selectedVersion= 'v'+version\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\classes.jade'\u001b[39m }","timestamp":"2015-07-02T15:28:49.087Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/2.1/AbstractMesh","timestamp":"2015-07-02T15:30:26.299Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\class.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\class.jade:19\n    17|         #classesListSideOrdered\r\n    18|             #classesListByTags\r\n  > 19|                 each bclasses, categorie in list\r\n    20|                     div.categoryTitle(id='category_' + categorie)\r\n    21|                         span= categorie\r\n    22|                     div.categoryList.categoryListTags\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-02T15:30:43.501Z"}
+{"level":"error","message":"404 error - Class not found: page.php","timestamp":"2015-07-02T15:33:02.977Z"}
+{"level":"error","message":"404 Error -  /tutorials","timestamp":"2015-07-02T15:57:09.042Z"}
+{"level":"error","message":"404 Error -  /tutorials","timestamp":"2015-07-02T15:57:22.471Z"}
+{"level":"error","message":"404 Error -  /tutorials","timestamp":"2015-07-02T15:57:23.550Z"}
+{"level":"error","message":"404 Error -  /exporters","timestamp":"2015-07-02T15:57:27.559Z"}
+{"level":"error","message":"404 Error -  /extensions","timestamp":"2015-07-02T15:57:28.264Z"}
+{"level":"error","message":"404 Error -  /tutorials","timestamp":"2015-07-02T15:57:30.606Z"}
+{"level":"error","message":"404 error - Class not found: toto","timestamp":"2015-07-02T15:58:05.487Z"}
+{"level":"error","message":"404 Error -  /tutorials","timestamp":"2015-07-03T06:41:02.646Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\AbstractMesh.md","timestamp":"2015-07-03T06:41:08.744Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-03T06:51:31.151Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-03T06:51:31.210Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\AbstractMesh.md","timestamp":"2015-07-03T06:51:32.583Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-03T07:05:08.083Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-03T07:08:32.650Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/img/favicon.ico","timestamp":"2015-07-03T07:08:32.774Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/img/favicon.ico","timestamp":"2015-07-03T07:08:32.867Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-03T07:08:39.748Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-03T07:08:51.586Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-03T07:08:54.108Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-03T07:09:05.586Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-03T07:09:10.429Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-03T07:10:40.944Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-03T07:10:45.630Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-03T07:11:53.946Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\aeféva.md","timestamp":"2015-07-03T07:11:57.390Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\class.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\class.jade:19\n    17|         #classesListSideOrdered\r\n    18|             #classesListByTags\r\n  > 19|                 each bclasses, categorie in classListByTags\r\n    20|                     div.categoryTitle(id='category_' + categorie)\r\n    21|                         span= categorie\r\n    22|                     div.categoryList.categoryListTags\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-03T07:16:12.165Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\class.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\class.jade:19\n    17|         #classesListSideOrdered\r\n    18|             #classesListByTags\r\n  > 19|                 each bclasses, categorie in classListByTags\r\n    20|                     div.categoryTitle(id='category_' + categorie)\r\n    21|                         span= categorie\r\n    22|                     div.categoryList.categoryListTags\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-03T07:17:02.682Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\class.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\class.jade:19\n    17|         #classesListSideOrdered\r\n    18|             #classesListByTags\r\n  > 19|                 each bclasses, categorie in classListByTags\r\n    20|                     div.categoryTitle(id='category_' + categorie)\r\n    21|                         span= categorie\r\n    22|                     div.categoryList.categoryListTags\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-03T07:17:28.728Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\class.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\class.jade:19\n    17|         #classesListSideOrdered\r\n    18|             #classesListByTags\r\n  > 19|                 each bclasses, categorie in classListByTags\r\n    20|                     div.categoryTitle(id='category_' + categorie)\r\n    21|                         span= categorie\r\n    22|                     div.categoryList.categoryListTags\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-03T07:17:53.180Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\class.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\class.jade:19\n    17|         #classesListSideOrdered\r\n    18|             #classesListByTags\r\n  > 19|                 each bclasses, categorie in classListByTags\r\n    20|                     div.categoryTitle(id='category_' + categorie)\r\n    21|                         span= categorie\r\n    22|                     div.categoryList.categoryListTags\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-03T07:18:19.467Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\class.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\class.jade:19\n    17|         #classesListSideOrdered\r\n    18|             #classesListByTags\r\n  > 19|                 each bclasses, categorie in classListByTags\r\n    20|                     div.categoryTitle(id='category_' + categorie)\r\n    21|                         span= categorie\r\n    22|                     div.categoryList.categoryListTags\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-03T07:18:48.982Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\class.jade - { [TypeError: E:\\BabylonJS\\src\\views\\class\\class.jade:19\n    17|         #classesListSideOrdered\r\n    18|             #classesListByTags\r\n  > 19|                 each bclasses, categorie in classListByTags\r\n    20|                     div.categoryTitle(id='category_' + categorie)\r\n    21|                         span= categorie\r\n    22|                     div.categoryList.categoryListTags\r\n\nCannot read property 'length' of undefined] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-03T07:20:36.768Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-03T07:31:35.801Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-03T07:32:06.101Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\img\\favicon.ico.md","timestamp":"2015-07-03T08:19:11.007Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/img/favicon.ico","timestamp":"2015-07-03T08:19:23.166Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-03T08:31:32.346Z"}
+{"level":"error","message":"404 Error -  /exporters","timestamp":"2015-07-03T09:30:07.885Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\class.jade - { [SyntaxError: E:\\BabylonJS\\src\\views\\class\\class.jade:39\n    37|             each tag in classTags\r\n    38|                 span.classTag\r\n  > 39|                     a(href='/classes'+currentVersion+'/'+)= tag\r\n    40|         #classMd!= content\r\n    41| \r\n    42| include ../includes/footer\r\n\nUnexpected token )] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-03T13:49:02.922Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\class.jade - { [SyntaxError: E:\\BabylonJS\\src\\views\\class\\class.jade:39\n    37|             each tag in classTags\r\n    38|                 span.classTag\r\n  > 39|                     a(href='/classes'+currentVersion+'/'+)= tag\r\n    40|         #classMd!= content\r\n    41| \r\n    42| include ../includes/footer\r\n\nUnexpected token )] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-03T13:49:34.584Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\class\\class.jade - { [SyntaxError: E:\\BabylonJS\\src\\views\\class\\class.jade:39\n    37|         each tag in classTags\r\n    38|             span.classTag\r\n  > 39|                 a(href='/classes'+currentVersion+'/'+)= tag\r\n    40|         #classMd!= content\r\n    41| \r\n    42| include ../includes/footer\r\n\nUnexpected token )] path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\class\\\\class.jade'\u001b[39m }","timestamp":"2015-07-03T13:50:46.000Z"}
+{"level":"error","message":"No tag is connected with this class: v2.1/ActionEvent","timestamp":"2015-07-03T13:53:18.845Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/2.1/AbstractMesh","timestamp":"2015-07-03T13:54:48.990Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/2.1/AbstractMesh","timestamp":"2015-07-03T13:55:08.548Z"}
+{"level":"error","message":"500 Error at undefined - { [Error: Failed to lookup view \"/class/class.jade\" in views directory \"./views\"]\n  view: \n   { defaultEngine: \u001b[32m'jade'\u001b[39m,\n     ext: \u001b[32m'.jade'\u001b[39m,\n     name: \u001b[32m'/class/class.jade'\u001b[39m,\n     root: \u001b[32m'./views'\u001b[39m,\n     engine: \u001b[36m[Function]\u001b[39m,\n     path: \u001b[90mundefined\u001b[39m } }","timestamp":"2015-07-03T13:55:13.142Z"}
+{"level":"error","message":"500 Error at undefined - { [Error: Failed to lookup view \"/class/class.jade\" in views directory \"./views\"]\n  view: \n   { defaultEngine: \u001b[32m'jade'\u001b[39m,\n     ext: \u001b[32m'.jade'\u001b[39m,\n     name: \u001b[32m'/class/class.jade'\u001b[39m,\n     root: \u001b[32m'./views'\u001b[39m,\n     engine: \u001b[36m[Function]\u001b[39m,\n     path: \u001b[90mundefined\u001b[39m } }","timestamp":"2015-07-03T13:55:35.190Z"}
+{"level":"error","message":"500 Error at undefined - { [Error: Failed to lookup view \"/views/class/class.jade\" in views directory \"./views\"]\n  view: \n   { defaultEngine: \u001b[32m'jade'\u001b[39m,\n     ext: \u001b[32m'.jade'\u001b[39m,\n     name: \u001b[32m'/views/class/class.jade'\u001b[39m,\n     root: \u001b[32m'./views'\u001b[39m,\n     engine: \u001b[36m[Function]\u001b[39m,\n     path: \u001b[90mundefined\u001b[39m } }","timestamp":"2015-07-03T13:55:37.101Z"}
+{"level":"error","message":"500 Error at undefined - { [Error: Failed to lookup view \"/views/class/class.jade\" in views directory \"./views\"]\n  view: \n   { defaultEngine: \u001b[32m'jade'\u001b[39m,\n     ext: \u001b[32m'.jade'\u001b[39m,\n     name: \u001b[32m'/views/class/class.jade'\u001b[39m,\n     root: \u001b[32m'./views'\u001b[39m,\n     engine: \u001b[36m[Function]\u001b[39m,\n     path: \u001b[90mundefined\u001b[39m } }","timestamp":"2015-07-03T13:55:37.752Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\afav.md","timestamp":"2015-07-03T14:30:46.825Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/2.1/AnaglyphArcRotateCamera","timestamp":"2015-07-03T14:31:28.725Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\avva.md","timestamp":"2015-07-03T14:33:32.531Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-06T12:57:05.989Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-06T12:57:06.504Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/2.1/AnaglyphArcRotateCamera","timestamp":"2015-07-06T13:14:54.892Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\1.14\\Aabvar.md","timestamp":"2015-07-06T13:36:49.301Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:37:01.883Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:42:23.891Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:42:24.388Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:42:24.504Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:42:24.507Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: Cannot read property 'p' of undefined]","timestamp":"2015-07-06T13:43:06.613Z"}
+{"level":"error","message":"500 Error at undefined - [TypeError: Cannot read property 'p' of undefined]","timestamp":"2015-07-06T13:43:34.530Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:44:43.873Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:44:59.847Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:45:00.369Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:45:23.533Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:45:23.593Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:45:23.644Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:45:23.647Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:45:23.652Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:45:23.653Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:45:23.655Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:45:23.656Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:45:23.658Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:45:23.659Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:45:23.662Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:45:23.662Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:45:23.664Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:45:23.665Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:45:23.669Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:45:23.670Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:48:02.784Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:48:02.785Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:48:28.778Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:48:28.844Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:48:28.916Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:48:28.919Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:48:28.924Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:48:28.925Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:48:28.928Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:48:28.929Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:48:28.931Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:48:28.932Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:48:28.936Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:48:28.937Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:48:28.941Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:48:28.942Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:48:28.945Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:48:28.946Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:48:28.949Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:48:28.949Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:48:28.953Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:48:28.954Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:52:34.496Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:52:34.497Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:52:34.502Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:52:34.503Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:53:43.715Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:53:43.833Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:53:43.898Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:53:43.901Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:53:43.906Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:53:43.907Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:53:43.912Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:53:43.912Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:53:43.915Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:53:43.916Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:53:43.919Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:53:43.919Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:53:43.923Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:53:43.924Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:55:24.051Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:55:24.178Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:55:24.242Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:55:24.245Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:55:24.252Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:55:24.254Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:55:24.261Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:55:24.262Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:55:24.268Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:55:24.269Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:55:24.276Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:55:24.277Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:55:24.285Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:55:24.285Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:56:00.631Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:56:01.147Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:56:26.993Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:56:27.480Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\page.php.md","timestamp":"2015-07-06T13:57:00.358Z"}
+{"level":"error","message":"500 Error at undefined - [Error: Can't set headers after they are sent.]","timestamp":"2015-07-06T13:57:00.873Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\6662.md","timestamp":"2015-07-06T14:05:31.932Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2\\Scene.md","timestamp":"2015-07-06T14:09:29.222Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2\\Scene.md","timestamp":"2015-07-06T14:09:56.065Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2\\Scene.md","timestamp":"2015-07-06T14:10:28.698Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2\\Scene.md","timestamp":"2015-07-06T14:11:59.638Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-07T09:26:47.949Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-07T09:26:48.442Z"}
+{"level":"error","message":"404 error - Page not found: public/2..html","timestamp":"2015-07-07T09:31:05.602Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\2..html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\2..html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\2..html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-07T09:31:06.101Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\2..html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\2..html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\2..html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-07T09:31:49.964Z"}
+{"level":"error","message":"404 error - Page not found: public/2..html","timestamp":"2015-07-07T09:33:19.331Z"}
+{"level":"error","message":"500 Error at undefined - { [Error: Request aborted] code: \u001b[32m'ECONNABORTED'\u001b[39m }","timestamp":"2015-07-07T09:33:19.831Z"}
+{"level":"error","message":"404 error - Page not found: public/2..html","timestamp":"2015-07-07T09:33:37.246Z"}
+{"level":"error","message":"500 Error at undefined - { [Error: Request aborted] code: \u001b[32m'ECONNABORTED'\u001b[39m }","timestamp":"2015-07-07T09:33:37.735Z"}
+{"level":"error","message":"404 error - Page not found: public/2..html","timestamp":"2015-07-07T09:34:02.484Z"}
+{"level":"error","message":"404 error - Page not found: public/2..html","timestamp":"2015-07-07T09:34:19.093Z"}
+{"level":"error","message":"404 error - Page not found: public/2..html","timestamp":"2015-07-07T09:34:23.423Z"}
+{"level":"error","message":"404 error - Page not found: public/2..html","timestamp":"2015-07-07T09:34:42.357Z"}
+{"level":"error","message":"404 error - Page not found: public/2..html","timestamp":"2015-07-07T09:35:08.037Z"}
+{"level":"error","message":"404 error - Page not found: public/2..html","timestamp":"2015-07-07T09:35:26.421Z"}
+{"level":"error","message":"404 error - Page not found: public/2.1.html","timestamp":"2015-07-07T09:35:32.132Z"}
+{"level":"error","message":"404 error - Page not found: public/2.0.html","timestamp":"2015-07-07T09:35:38.558Z"}
+{"level":"error","message":"404 error - Page not found: public/2...html","timestamp":"2015-07-07T09:35:44.728Z"}
+{"level":"error","message":"404 error - Page not found: public/2..html","timestamp":"2015-07-07T09:35:59.707Z"}
+{"level":"error","message":"404 error - Page not found: public/2.2.html","timestamp":"2015-07-07T09:36:04.174Z"}
+{"level":"error","message":"404 error - Page not found: public/afaevravabv.html","timestamp":"2015-07-07T09:44:21.295Z"}
+{"level":"error","message":"404 error - Page not found: public/2.1.html","timestamp":"2015-07-07T09:49:46.944Z"}
+{"level":"error","message":"404 error - Page not found: public/2.1.html","timestamp":"2015-07-07T13:29:21.323Z"}
+{"level":"error","message":"404 error - Page not found: public/2.1.html","timestamp":"2015-07-07T13:31:49.772Z"}
+{"level":"error","message":"404 error - Page not found: public/2.1.html","timestamp":"2015-07-07T13:32:21.848Z"}
+{"level":"error","message":"404 error - Page not found: public/2.1.html","timestamp":"2015-07-07T13:32:23.395Z"}
+{"level":"error","message":"404 error - Page not found: public/2.1.html","timestamp":"2015-07-07T13:32:27.273Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_1.14.html","timestamp":"2015-07-07T13:34:12.107Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_2.1.html","timestamp":"2015-07-07T13:36:44.993Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_2.0.html","timestamp":"2015-07-07T13:36:51.483Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_2.html","timestamp":"2015-07-07T13:36:54.101Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_2.1.html","timestamp":"2015-07-07T13:37:01.384Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_2.1.html","timestamp":"2015-07-07T13:39:25.552Z"}
+{"level":"error","message":"500 Error at E:\\public\\html\\classes_2.1.html - { [Error: ENOENT, stat 'E:\\public\\html\\classes_2.1.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\public\\\\html\\\\classes_2.1.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-07T13:40:38.384Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\scripts\\router\\routes\\public\\html\\classes_2.1.html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\scripts\\router\\routes\\public\\html\\classes_2.1.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\scripts\\\\router\\\\routes\\\\public\\\\html\\\\classes_2.1.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-07T13:44:29.463Z"}
+{"level":"error","message":"500 Error at undefined - { [Error: Can't set headers after they are sent.] expose: \u001b[33mfalse\u001b[39m, statusCode: \u001b[33m500\u001b[39m, status: \u001b[33m500\u001b[39m }","timestamp":"2015-07-07T13:46:46.295Z"}
+{"level":"error","message":"500 Error at undefined - { [Error: Can't set headers after they are sent.] expose: \u001b[33mfalse\u001b[39m, statusCode: \u001b[33m500\u001b[39m, status: \u001b[33m500\u001b[39m }","timestamp":"2015-07-07T14:00:37.089Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\undefined\\AbstractMesh.md","timestamp":"2015-07-07T14:08:13.861Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T14:56:30.198Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T14:56:30.415Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T14:56:54.736Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T14:56:54.850Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:01:06.791Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:06:14.599Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:07:19.568Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:07:19.694Z"}
+{"level":"error","message":"404 error - File not found: content\\classes\\2.1\\OctreeBlock<T>.md","timestamp":"2015-07-07T15:07:26.217Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:08:43.217Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:15:04.353Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:15:32.530Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:15:32.712Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:15:37.359Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:15:37.615Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:28:34.704Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-07T15:28:34.797Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:14:30.437Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:14:30.567Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:14:30.572Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:14:40.566Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:14:40.594Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:14:40.623Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:14:40.636Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:14:42.773Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:14:42.812Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:14:42.841Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:14:42.846Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:14:43.600Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:14:43.636Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:14:43.667Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:14:43.672Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:14:44.644Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:14:44.752Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:14:44.759Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:23:43.443Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:23:43.931Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:23:43.944Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:23:43.948Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:23:46.755Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:23:47.263Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:23:47.274Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:23:47.278Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:23:47.394Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:23:47.429Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:23:47.456Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:23:47.461Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:23:48.705Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:23:48.746Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:23:48.779Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:23:48.782Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:23:49.763Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:23:49.798Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:23:49.802Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:23:51.355Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:23:51.395Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:23:51.424Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:23:51.428Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:23:52.203Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:23:52.240Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:23:52.266Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:23:52.272Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:23:52.830Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:23:52.862Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:23:52.885Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:23:53.813Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:23:53.853Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:23:53.879Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:23:53.884Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:23:54.884Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:23:54.922Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:23:54.953Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:23:54.957Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:23:55.778Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:23:55.818Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:23:55.820Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:23:56.963Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:23:57.002Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:23:57.033Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:23:57.037Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:26:44.405Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:26:44.896Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:26:44.909Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:26:44.913Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:26:45.174Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:26:45.208Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:26:45.234Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:26:45.239Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:26:46.059Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:26:46.094Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:26:46.124Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:26:46.129Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:27:00.909Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:27:01.018Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:27:01.024Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:27:01.489Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:27:01.525Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:27:01.555Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:27:01.559Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:27:03.330Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:27:03.369Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:27:03.377Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:30:03.151Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:30:03.189Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:30:03.219Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:30:03.223Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:38:43.808Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:38:43.924Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:38:43.930Z"}
+{"level":"error","message":"404 Error -  /js/classes.js","timestamp":"2015-07-08T07:38:44.855Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:38:44.888Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:38:44.920Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:38:44.924Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:43:25.331Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:43:25.815Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:43:25.820Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:44:57.714Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:44:57.753Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:44:57.757Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:44:59.558Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:44:59.589Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:44:59.593Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:45:37.944Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:45:37.956Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:45:37.972Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:46:48.124Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:46:48.138Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:46:48.154Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:46:49.880Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:46:49.896Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:46:49.912Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:46:50.397Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:46:50.413Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:46:50.428Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:47:37.252Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:47:37.261Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:47:37.277Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:47:58.202Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:47:58.210Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:47:58.226Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T07:48:21.178Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T07:48:21.192Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T07:48:21.208Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:21:58.130Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:21:58.241Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:21:58.246Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:21:59.508Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:21:59.549Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:21:59.552Z"}
+{"level":"error","message":"404 error - File not found: ..\\..\\..\\public\\class_2.1\\AbstractMesh.html","timestamp":"2015-07-08T12:22:00.913Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:22:01.025Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:22:01.048Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:22:01.051Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:22:51.699Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:22:51.843Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:22:51.849Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:22:52.240Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:22:52.270Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:22:52.275Z"}
+{"level":"error","message":"404 error - File not found: html\\class_2.1\\AbstractMesh.html","timestamp":"2015-07-08T12:22:53.195Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:22:53.331Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:22:53.356Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:22:53.359Z"}
+{"level":"error","message":"404 error - File not found: .public\\html\\class_2.1\\AbstractMesh.html","timestamp":"2015-07-08T12:23:37.507Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:23:38.060Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:23:38.184Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:23:38.190Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\public\\html\\class_2.1\\AbstractMesh.html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\public\\html\\class_2.1\\AbstractMesh.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\public\\\\html\\\\class_2.1\\\\AbstractMesh.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-08T12:23:52.014Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:23:52.558Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:23:52.676Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:23:52.682Z"}
+{"level":"error","message":"404 error - File not found: html\\class_2.1\\AbstractMesh.html","timestamp":"2015-07-08T12:24:08.215Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:24:08.769Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:24:08.909Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:24:08.915Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\public\\html\\class_2.1\\AbstractMesh.html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\public\\html\\class_2.1\\AbstractMesh.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\public\\\\html\\\\class_2.1\\\\AbstractMesh.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-08T12:25:16.453Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:25:17.019Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:25:17.136Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:25:17.141Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:25:42.048Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:25:42.557Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:25:42.564Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:25:47.142Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:25:47.178Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:25:47.181Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:25:47.887Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:25:47.924Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:25:47.929Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:25:48.507Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:25:48.542Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:25:48.546Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:26:17.368Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:26:17.403Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:26:17.407Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\Octree&lt;T&gt;.html","timestamp":"2015-07-08T12:26:32.707Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:26:32.898Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:26:32.922Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:26:32.925Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:26:36.177Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:26:36.213Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:26:36.215Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:27:07.548Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:27:07.581Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:27:07.584Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:27:08.205Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:27:08.238Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:27:08.242Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:27:11.517Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:27:11.545Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:27:11.549Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:27:23.189Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:27:23.225Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:27:23.228Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:31:38.627Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:31:39.148Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:31:39.154Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:31:48.493Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:31:48.571Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:31:48.575Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:31:49.934Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:31:50.043Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:31:50.054Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:31:57.270Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:31:57.302Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:31:57.306Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:32:11.386Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:32:11.422Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:32:11.428Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:32:13.161Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:32:13.210Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:32:13.214Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:32:13.716Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:32:13.755Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:32:13.759Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:32:14.800Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:32:14.909Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:32:14.913Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:32:16.474Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:32:16.590Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:32:16.602Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:32:17.163Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:32:17.209Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:32:17.213Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OctreeBlock&lt;T&gt;.html","timestamp":"2015-07-08T12:32:23.621Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:32:23.816Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:32:23.842Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:32:23.845Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:32:27.133Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:32:27.167Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:32:27.171Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:32:48.847Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:32:48.876Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:32:48.880Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:32:56.902Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:32:56.947Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:32:56.949Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:32:58.824Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:32:58.856Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:32:58.859Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:34:59.438Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:34:59.936Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:34:59.943Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:35:06.067Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:35:06.173Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:35:06.183Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OctreeBlock&lt;T&gt;.html","timestamp":"2015-07-08T12:35:18.323Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:35:18.503Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:35:18.530Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:35:18.534Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:35:21.212Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:35:21.333Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:35:21.337Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:38:43.415Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:38:43.532Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:38:43.537Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:38:48.400Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:38:48.428Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:38:48.433Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:38:57.950Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:38:57.995Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:38:58.000Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OctreeBlock&lt;T&gt;.html","timestamp":"2015-07-08T12:39:48.456Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:39:48.565Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:39:48.597Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:39:48.599Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:39:52.368Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:39:52.426Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:39:52.429Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:39:55.200Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:39:55.230Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:39:55.233Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:39:59.731Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:39:59.774Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:39:59.779Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:40:17.794Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:40:17.896Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:40:17.900Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:40:19.534Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:40:19.585Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:40:19.588Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:40:23.680Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:40:23.717Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:40:23.721Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OctreeBlock&lt;T&gt;.html","timestamp":"2015-07-08T12:40:33.404Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:40:33.453Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:40:33.478Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:40:33.482Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:40:34.493Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:40:34.529Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:40:34.531Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:40:35.427Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:40:35.455Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:40:35.459Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:40:49.752Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:40:49.780Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:40:49.785Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:40:50.810Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:40:50.838Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:40:50.842Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:40:52.393Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:40:52.423Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:40:52.427Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:40:53.506Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:40:53.534Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:40:53.538Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:40:54.709Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:40:54.747Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:40:54.749Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:41:00.872Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:41:00.902Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:41:00.906Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.eot","timestamp":"2015-07-08T12:41:02.529Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.woff","timestamp":"2015-07-08T12:41:02.556Z"}
+{"level":"error","message":"404 Error -  /fonts/fontawesome-webfont.ttf","timestamp":"2015-07-08T12:41:02.559Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/undefined/AbstractMesh","timestamp":"2015-07-08T15:52:31.474Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-08T15:52:35.507Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-08T15:52:35.531Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\2.1.html","timestamp":"2015-07-09T07:49:17.590Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-09T07:49:22.954Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-09T07:49:23.144Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\2.1.html","timestamp":"2015-07-09T07:49:32.415Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\html\\index - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\html\\index']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\html\\\\index'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-09T08:31:49.686Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_page.php.html","timestamp":"2015-07-09T08:49:50.816Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_page.php.html","timestamp":"2015-07-09T08:49:58.896Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-09T12:33:07.388Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-09T12:33:07.922Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\static-billboardmode_x-number.html","timestamp":"2015-07-09T13:28:21.658Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\new-abstractmesh-page-php-p-6657-name-scene-.html","timestamp":"2015-07-09T13:35:26.487Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\A….html","timestamp":"2015-07-09T14:19:12.907Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-10T07:12:43.993Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-10T07:12:45.071Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_AbstractMesh.html","timestamp":"2015-07-10T08:14:42.451Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_AbstractMesh.html","timestamp":"2015-07-10T08:38:00.593Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_AbstractMesh.html","timestamp":"2015-07-10T08:38:31.196Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_AbstractMesh.html","timestamp":"2015-07-10T08:38:54.439Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_AbstractMesh.html","timestamp":"2015-07-10T08:38:57.375Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_AbstractMesh.html","timestamp":"2015-07-10T08:40:21.034Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_AbstractMesh.html","timestamp":"2015-07-10T08:40:23.786Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_AbstractMesh.html","timestamp":"2015-07-10T08:40:44.691Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\Collection.html","timestamp":"2015-07-10T08:43:18.742Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\Collection_T_.html","timestamp":"2015-07-10T08:43:36.521Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\Collection_T_.html","timestamp":"2015-07-10T08:44:28.903Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\Collection_T_.html","timestamp":"2015-07-10T08:45:00.287Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\Collection_T_.html","timestamp":"2015-07-10T08:45:40.106Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\Collection_T_.html","timestamp":"2015-07-10T08:46:15.760Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\Collection_T_.html","timestamp":"2015-07-10T08:46:22.558Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\oculusCamera.html","timestamp":"2015-07-10T08:50:37.394Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\oculusCamera.html","timestamp":"2015-07-10T08:50:44.567Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:50:52.452Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\oculusCamera.html","timestamp":"2015-07-10T08:51:45.165Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:51:50.194Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:52:55.251Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:53:02.936Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:55:42.186Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:55:46.291Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:55:52.148Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:56:05.734Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:57:13.992Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:57:31.025Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:57:54.956Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:58:08.294Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:58:13.771Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:58:22.562Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:58:44.777Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:59:06.423Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:59:29.691Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T08:59:36.621Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_TOTO.html","timestamp":"2015-07-10T09:00:34.805Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_TOTO.html","timestamp":"2015-07-10T09:00:56.351Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:01:02.862Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:01:09.885Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:04:22.637Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:05:57.841Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:06:25.198Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:07:23.302Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:07:42.872Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:08:38.611Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:12:37.236Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:14:52.915Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:15:10.030Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:15:18.383Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:15:49.164Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:16:16.365Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:16:18.359Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:16:22.518Z"}
+{"level":"error","message":"404 Error -  /OculusCamera","timestamp":"2015-07-10T09:16:27.227Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:16:39.561Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:17:52.586Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:18:44.634Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_azfzvbva.html","timestamp":"2015-07-10T09:21:29.693Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:23:03.552Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:23:09.341Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:23:43.067Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:24:01.850Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:24:46.296Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\Oculus.html","timestamp":"2015-07-10T09:25:00.560Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\Oc.html","timestamp":"2015-07-10T09:25:06.274Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_Oc.html","timestamp":"2015-07-10T09:25:13.703Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_Oct.html","timestamp":"2015-07-10T09:25:20.046Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_Oct.html","timestamp":"2015-07-10T09:25:22.291Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_Octo.html","timestamp":"2015-07-10T09:25:28.094Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_Octo.html","timestamp":"2015-07-10T09:27:59.459Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_Octo.html","timestamp":"2015-07-10T09:28:38.269Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:28:46.043Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_oculuscamera.html","timestamp":"2015-07-10T09:31:03.575Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:33:26.731Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:33:49.693Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_1OculusCamera.html","timestamp":"2015-07-10T09:54:44.882Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T09:54:56.802Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\oculusCamera.html","timestamp":"2015-07-10T09:55:08.307Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_oculuscamera.html","timestamp":"2015-07-10T09:55:18.024Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_1culuscamera.html","timestamp":"2015-07-10T09:55:23.686Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_1culuscamera.html","timestamp":"2015-07-10T09:55:26.632Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\oculusCamera.html","timestamp":"2015-07-10T11:43:14.412Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_oculusCamera.html","timestamp":"2015-07-10T11:45:17.932Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_oculusCamera.html","timestamp":"2015-07-10T11:45:40.311Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T12:01:32.712Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\oculusCamera.html","timestamp":"2015-07-10T12:01:59.318Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\oculuscamera.html","timestamp":"2015-07-10T12:02:04.098Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_oculuscamera.html","timestamp":"2015-07-10T12:02:09.668Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\oculusCamera.html","timestamp":"2015-07-10T12:02:20.008Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\oculusCamera.html","timestamp":"2015-07-10T12:02:24.396Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\oculuscamera.html","timestamp":"2015-07-10T12:02:32.383Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_oculuscamera.html","timestamp":"2015-07-10T12:02:36.657Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\oculusCamera.html","timestamp":"2015-07-10T12:40:21.371Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T13:32:56.890Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T13:36:58.501Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T13:37:33.508Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-10T14:32:37.439Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-13T06:43:27.386Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-13T06:43:35.509Z"}
+{"level":"error","message":"404 error - Page not found: public/html/classes_ebzbvt.html","timestamp":"2015-07-13T06:45:40.041Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-13T07:09:29.036Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-13T07:12:49.071Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\oculusCamera.html","timestamp":"2015-07-13T07:12:57.393Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\oculusCamera.html","timestamp":"2015-07-13T07:13:03.674Z"}
+{"level":"error","message":"404 error - Class not found: oculuscamera","timestamp":"2015-07-13T07:13:09.551Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\oculusCamera.html","timestamp":"2015-07-13T07:13:17.506Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\oculusCamera.html","timestamp":"2015-07-13T07:13:32.882Z"}
+{"level":"error","message":"404 error - Class not found: oculuscamera","timestamp":"2015-07-13T07:13:41.206Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-13T07:41:29.432Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-13T07:42:34.781Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-13T07:42:46.796Z"}
+{"level":"error","message":"404 error - Class not found: zgelahbvzraghvazruiv","timestamp":"2015-07-13T07:43:00.993Z"}
+{"level":"error","message":"404 error - Class not found: 1.58","timestamp":"2015-07-13T07:52:19.751Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-13T08:22:07.323Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-13T08:23:17.132Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-13T08:23:27.435Z"}
+{"level":"error","message":"404 error - Class not found: avnuabvhzurbo","timestamp":"2015-07-13T08:23:33.257Z"}
+{"level":"error","message":"404 error - Class not found: 2.2","timestamp":"2015-07-13T08:31:31.488Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-13T08:31:58.492Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-13T08:31:58.646Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-13T09:42:39.584Z"}
+{"level":"error","message":"404 error - Class not found: oculusCamera","timestamp":"2015-07-15T06:56:42.880Z"}
+{"level":"error","message":"404 error - Class not found: OculusGamePadCamera","timestamp":"2015-07-15T07:20:42.200Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-15T07:37:38.548Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-15T07:37:39.630Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-15T08:32:09.430Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\AbstractMesh2.html","timestamp":"2015-07-15T09:19:29.478Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2\\Octree_T_.html","timestamp":"2015-07-16T14:52:56.928Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\exporters\\exporters.jade - { [Error: E:\\BabylonJS\\src\\views\\exporters\\exporters.jade:1\n  > 1| include includes/header.jade\r\n    2| #wrapper\r\n    3|     include includes/banner.jade\r\n    4|     #exporter!= content\r\n\nENOENT, no such file or directory 'E:\\BabylonJS\\src\\views\\exporters\\includes\\header.jade']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\exporters\\\\exporters.jade'\u001b[39m,\n  syscall: \u001b[32m'open'\u001b[39m }","timestamp":"2015-07-17T08:15:52.171Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\extensions\\extensions.jade - { [Error: E:\\BabylonJS\\src\\views\\extensions\\extensions.jade:1\n  > 1| include includes/header.jade\r\n    2| #wrapper\r\n    3|     include includes/banner.jade\r\n    4|     #extension!= content\r\n\nENOENT, no such file or directory 'E:\\BabylonJS\\src\\views\\extensions\\includes\\header.jade']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\extensions\\\\extensions.jade'\u001b[39m,\n  syscall: \u001b[32m'open'\u001b[39m }","timestamp":"2015-07-17T08:15:56.543Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\tutorials\\tutorials.jade - { [TypeError: E:\\BabylonJS\\src\\views\\tutorials\\tutorials.jade:5\n    3|     include ../includes/banner\r\n    4|     #tutorialsTagsList\r\n  > 5|         - for tag in tags\r\n    6|             div.tutorialTag\r\n    7|                 img(src=tag['img']).tagImage\r\n    8|                 h3.tagTitle=tag\r\n\nCannot read property 'length' of undefined]\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\tutorials\\\\tutorials.jade'\u001b[39m }","timestamp":"2015-07-17T12:06:28.041Z"}
+{"level":"error","message":"500 Error at undefined - [ReferenceError: options is not defined]","timestamp":"2015-07-17T12:08:00.766Z"}
+{"level":"error","message":"500 Error at undefined - [ReferenceError: path is not defined]","timestamp":"2015-07-17T12:09:14.918Z"}
+{"level":"error","message":"404 Error -  /url","timestamp":"2015-07-17T12:09:40.095Z"}
+{"level":"error","message":"404 Error -  /url","timestamp":"2015-07-17T12:10:24.838Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\html\\html\\tutorials.html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\html\\html\\tutorials.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\html\\\\html\\\\tutorials.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-17T12:12:05.895Z"}
+{"level":"error","message":"404 Error -  /url","timestamp":"2015-07-17T12:12:24.122Z"}
+{"level":"error","message":"404 Error -  /url","timestamp":"2015-07-17T12:22:33.660Z"}
+{"level":"error","message":"404 Error -  /url","timestamp":"2015-07-17T12:22:41.251Z"}
+{"level":"error","message":"404 Error -  /img/tagImage.png","timestamp":"2015-07-17T12:22:56.652Z"}
+{"level":"error","message":"404 Error -  /public/img/tagImage.png","timestamp":"2015-07-17T12:23:37.285Z"}
+{"level":"error","message":"404 Error -  /img/tagImage.png","timestamp":"2015-07-17T12:23:37.287Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-17T12:24:16.536Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-17T12:24:16.540Z"}
+{"level":"error","message":"404 Error -  /img/tagImage.png","timestamp":"2015-07-17T12:25:37.677Z"}
+{"level":"error","message":"404 Error -  /public/img/tutorials/tagImage.png","timestamp":"2015-07-17T12:25:50.637Z"}
+{"level":"error","message":"404 Error -  /img/tagImage.png","timestamp":"2015-07-17T12:25:50.639Z"}
+{"level":"error","message":"404 Error -  /public/img/tutorials/tagImage.png","timestamp":"2015-07-17T12:25:52.382Z"}
+{"level":"error","message":"404 Error -  /img/tagImage.png","timestamp":"2015-07-17T12:25:52.384Z"}
+{"level":"error","message":"404 Error -  /img/tagImage.png","timestamp":"2015-07-17T12:26:06.552Z"}
+{"level":"error","message":"404 Error -  /01.%20Advanced%20Texturing","timestamp":"2015-07-17T12:31:59.707Z"}
+{"level":"error","message":"404 Error -  /01.%20Advanced%20Texturing","timestamp":"2015-07-17T12:52:34.294Z"}
+{"level":"error","message":"404 Error -  /01.%20Advanced%20Texturing","timestamp":"2015-07-17T13:45:21.451Z"}
+{"level":"error","message":"404 Error -  /01.%20Advanced%20Texturing","timestamp":"2015-07-17T13:50:17.906Z"}
+{"level":"error","message":"404 Error -  /01.%20Advanced%20Texturing","timestamp":"2015-07-17T13:51:07.465Z"}
+{"level":"error","message":"404 Error -  /01.%20Advanced%20Texturing","timestamp":"2015-07-17T13:52:18.395Z"}
+{"level":"error","message":"404 Error -  /tutorial/01.%20Advanced%20Texturing","timestamp":"2015-07-17T13:53:13.217Z"}
+{"level":"error","message":"404 Error -  /tutorial/01.%20Advanced%20Texturing","timestamp":"2015-07-17T13:53:42.521Z"}
+{"level":"error","message":"500 Error at undefined - [ReferenceError: options is not defined]","timestamp":"2015-07-17T13:57:00.176Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\html\\html\\classes_2.1.html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\html\\html\\classes_2.1.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\html\\\\html\\\\classes_2.1.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-17T14:25:24.280Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\html\\tutorials\\05._Game_Pipeline_Integration_with_Babylon.js.html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\html\\tutorials\\05._Game_Pipeline_Integration_with_Babylon.js.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\html\\\\tutorials\\\\05._Game_Pipeline_Integration_with_Babylon.js.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-17T15:05:54.715Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\html\\tutorials\\01._Advanced_Texturing.html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\html\\tutorials\\01._Advanced_Texturing.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\html\\\\tutorials\\\\01._Advanced_Texturing.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-20T07:09:33.934Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-20T07:52:04.986Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-20T07:52:05.507Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\html\\tutorials\\Bones_influences_per_vertex.html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\html\\tutorials\\Bones_influences_per_vertex.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\html\\\\tutorials\\\\Bones_influences_per_vertex.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-20T12:13:50.418Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\html\\tutorials\\Installing__the_Babylon_Exporter.html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\html\\tutorials\\Installing__the_Babylon_Exporter.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\html\\\\tutorials\\\\Installing__the_Babylon_Exporter.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-20T12:19:41.024Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\html\\tutorials\\Installing__the_Babylon_Exporter.html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\html\\tutorials\\Installing__the_Babylon_Exporter.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\html\\\\tutorials\\\\Installing__the_Babylon_Exporter.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-20T12:20:00.357Z"}
+{"level":"error","message":"404 Error -  /js/babylon.2.1.js","timestamp":"2015-07-20T14:04:22.914Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-21T07:40:50.785Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-21T07:40:51.308Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\brgrabr.html","timestamp":"2015-07-21T08:45:26.424Z"}
+{"level":"error","message":"404 error - Class not found: agvzrabvzabzaj","timestamp":"2015-07-21T11:46:34.628Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\Aetbetbn rqn.html","timestamp":"2015-07-21T11:47:03.161Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T11:55:08.152Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T12:02:33.636Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T12:02:38.193Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T12:03:34.222Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T12:04:44.327Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T12:05:12.934Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T12:05:37.054Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T12:05:50.955Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T12:05:56.494Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T12:06:25.459Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T12:19:29.934Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T12:23:53.135Z"}
+{"level":"error","message":"404 Error -  /bzrb","timestamp":"2015-07-21T12:23:57.482Z"}
+{"level":"error","message":"404 Error -  /bzrb","timestamp":"2015-07-21T12:24:43.654Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\errorpages\\404.jade - { [Error: E:\\BabylonJS\\src\\views\\errorpages\\404.jade:12\n    10|         a(href=\"javascript:history.back()\")\r\n    11|             i.fa.fa-arrow-circle-left\r\n  > 12|             br You can go back to the previous page...\r\n    13|     div.rightie\r\n    14|         a(href=\"/\")\r\n    15|             i.fa.fa-arrow-circle-right\r\n\nbr is self closing and should not have content.]\n  line: \u001b[33m12\u001b[39m,\n  filename: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\errorpages\\\\404.jade'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\errorpages\\\\404.jade'\u001b[39m }","timestamp":"2015-07-21T12:24:44.077Z"}
+{"level":"error","message":"404 Error -  /gag","timestamp":"2015-07-21T12:24:53.201Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\views\\errorpages\\404.jade - { [Error: E:\\BabylonJS\\src\\views\\errorpages\\404.jade:12\n    10|         a(href=\"javascript:history.back()\")\r\n    11|             i.fa.fa-arrow-circle-left\r\n  > 12|             br You can go back to the previous page...\r\n    13|     div.rightie\r\n    14|         a(href=\"/\")\r\n    15|             i.fa.fa-arrow-circle-right\r\n\nbr is self closing and should not have content.]\n  line: \u001b[33m12\u001b[39m,\n  filename: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\errorpages\\\\404.jade'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\views\\\\errorpages\\\\404.jade'\u001b[39m }","timestamp":"2015-07-21T12:24:53.240Z"}
+{"level":"error","message":"404 Error -  /gag","timestamp":"2015-07-21T12:25:16.781Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T12:25:25.513Z"}
+{"level":"error","message":"404 Error -  /gag","timestamp":"2015-07-21T12:28:18.622Z"}
+{"level":"error","message":"404 error - Class not found: agvzrabvzabzaj","timestamp":"2015-07-21T12:28:24.901Z"}
+{"level":"error","message":"404 Error -  /azeg","timestamp":"2015-07-21T12:28:31.449Z"}
+{"level":"error","message":"404 Error -  /gag","timestamp":"2015-07-21T12:34:18.767Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T12:42:52.676Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T12:43:24.616Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T12:44:34.564Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T12:47:16.709Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T12:47:52.795Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T12:48:13.165Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T12:49:39.219Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T12:50:02.710Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T12:51:13.712Z"}
+{"level":"error","message":"404 Error -  /gag","timestamp":"2015-07-21T12:53:28.071Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T12:53:34.901Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T12:54:42.380Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T12:55:52.726Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T12:57:07.773Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T12:57:12.240Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:05:08.031Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:06:37.129Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:07:03.778Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:10:59.597Z"}
+{"level":"error","message":"404 Error -  /bzetub","timestamp":"2015-07-21T13:11:14.527Z"}
+{"level":"error","message":"404 error - Class not found: bnztzbn","timestamp":"2015-07-21T13:13:48.725Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:17:05.708Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:18:51.966Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:19:02.606Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:19:27.293Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:19:51.185Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:19:57.654Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:20:01.297Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:20:06.145Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:20:08.117Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:20:09.010Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:20:09.250Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:20:25.252Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:20:38.694Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:21:14.044Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:22:45.210Z"}
+{"level":"error","message":"404 error - Class not found: bnztzbn","timestamp":"2015-07-21T13:26:47.323Z"}
+{"level":"error","message":"404 error - Class not found: bnztzbn","timestamp":"2015-07-21T13:30:22.249Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:30:28.041Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:30:28.983Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:30:34.165Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:30:54.329Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:31:10.045Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:31:18.843Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:32:53.238Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:32:54.341Z"}
+{"level":"error","message":"404 error - Class not found: bnztzbn","timestamp":"2015-07-21T13:32:56.536Z"}
+{"level":"error","message":"404 error - Class not found: bnztzbn","timestamp":"2015-07-21T13:33:20.043Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:33:22.380Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:33:45.198Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:34:02.880Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:34:04.543Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:34:05.151Z"}
+{"level":"error","message":"404 error - Class not found: bnztzbn","timestamp":"2015-07-21T13:34:06.304Z"}
+{"level":"error","message":"404 error - Class not found: bnztzbn","timestamp":"2015-07-21T13:34:23.012Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:34:25.122Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:34:34.339Z"}
+{"level":"error","message":"404 Error -  /bvzrbzr","timestamp":"2015-07-21T13:37:55.392Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\AbstractMesh.html","timestamp":"2015-07-21T15:49:38.488Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-22T09:32:41.638Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-22T09:32:42.140Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\AbstractMesh.html","timestamp":"2015-07-22T12:09:54.637Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-23T06:57:12.006Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-23T06:57:12.575Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-23T07:43:28.828Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-24T09:14:24.890Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-24T09:14:25.434Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-27T07:40:43.511Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-27T07:40:44.028Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-27T12:48:18.429Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-27T12:48:19.040Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:20:33.328Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:21:23.355Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:21:25.394Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:21:28.506Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:21:30.738Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:22:19.943Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:22:30.877Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:22:38.802Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:22:48.798Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:22:50.009Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:22:50.851Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:22:52.120Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:22:52.834Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:22:55.744Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:22:56.846Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:22:58.001Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:22:58.900Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:25:40.646Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:26:16.959Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:29:39.279Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:30:02.452Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:32:04.513Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:32:28.255Z"}
+{"level":"error","message":"404 error - Class not found: oculusCamera","timestamp":"2015-07-28T09:32:43.010Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:32:43.111Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:32:43.223Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:33:43.728Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:33:43.833Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:34:15.242Z"}
+{"level":"error","message":"404 Error -  /js/index.js","timestamp":"2015-07-28T09:35:05.950Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\html\\exporters.html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\html\\exporters.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\html\\\\exporters.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-28T12:03:30.296Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-28T12:03:34.398Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-28T12:03:34.502Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\html\\exporters.html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\html\\exporters.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\html\\\\exporters.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-28T14:50:03.949Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\html\\tutorials.html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\html\\tutorials.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\html\\\\tutorials.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-28T14:50:05.371Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-29T07:20:36.868Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-29T07:20:37.373Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-29T08:09:02.042Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-29T08:09:05.751Z"}

@@ -13,7 +13,7 @@ app.use(express.static('public'));
 // Set the template engine to jade
 app.set('view engine', 'jade');
 
-//app.set('view cache', true);
+app.set('view cache', true);
 // Set the views folder to ./views
 app.set('views', './views');
 

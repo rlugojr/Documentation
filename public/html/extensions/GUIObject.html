@@ -1,10 +1,30 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item active"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>extensions</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>GUIObject</h1><br><div id="staticContent"><h2 id="new-guiobject-http-doc-babylonjs-com-page-php-p-25104-mesh-guisystem-">new <a href="http://doc.babylonjs.com/page.php?p=25104">GUIObject</a>(mesh, guiSystem)</h2>
-<p>Creates a new GUIObject from a babylon mesh, and add it to the GUI system given in parameter.
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item active"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>extensions</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>GUIObject</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
+<li><a href="#new-guiobjecthttpdocbabylonjscompagephpp25104mesh-guisystem">new <a href="http://doc.babylonjs.com/page.php?p=25104">GUIObject</a>(mesh, guiSystem)</a><ul>
+<li><a href="#parameters">Parameters</a></li>
+</ul>
+</li>
+<li><a href="#members">Members</a><ul>
+<li><a href="#mesh-babylonmeshhttpdocbabylonjscompagephpp24891">mesh : <a href="http://doc.babylonjs.com/page.php?p=24891">BABYLON.Mesh</a></a></li>
+<li><a href="#guiposition-babylonvector3httpdocbabylonjscompagephpp24977">guiPosition : <a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a></a></li>
+<li><a href="#guisystem-guisystemhttpdocbabylonjscompagephpp25103">guiSystem : <a href="http://doc.babylonjs.com/page.php?p=25103">GUISystem</a></a></li>
+<li><a href="#onclick-functionbabylonactioneventhttpdocbabylonjscompagephpp24909-void">onClick : function(<a href="http://doc.babylonjs.com/page.php?p=24909">BABYLON.ActionEvent</a>) → void</a></li>
+</ul>
+</li>
+<li><a href="#methods">Methods</a><ul>
+<li><a href="#guipositionbabylonvector3httpdocbabylonjscompagephpp24977-void">guiposition(<a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a>) → void</a></li>
+<li><a href="#relativepositionbabylonvector3httpdocbabylonjscompagephpp24977-babylonvector3httpdocbabylonjscompagephpp24977">relativePosition(<a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a>) → <a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a></a></li>
+<li><a href="#positionbabylonvector3httpdocbabylonjscompagephpp24977-void">position(<a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a>) → void</a></li>
+<li><a href="#scalingbabylonvector3httpdocbabylonjscompagephpp24977-void">scaling(<a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a>) → void</a></li>
+<li><a href="#dispose-void">dispose() → void</a></li>
+<li><a href="#setvisibleboolean-void">setVisible(boolean) → void</a></li>
+</ul>
+</li>
+</ul>
+</div></div><div id="staticContent"><h2><a name="new-a-href-http-docbabylonjscom-pagephpp-25104-guiobject-a-mesh-guisystem-" class="anchor" href="#new-a-href-http-docbabylonjscom-pagephpp-25104-guiobject-a-mesh-guisystem-"></a>new <a href="http://doc.babylonjs.com/page.php?p=25104">GUIObject</a>(mesh, guiSystem)</h2><p>Creates a new GUIObject from a babylon mesh, and add it to the GUI system given in parameter.
 The given mesh layer mask is updated to GUISystem.LAYER_MASK.
 Each object can be linked to an action, called when the user clicks/touch the object.
 The name of the GUIObject is the mesh name.</p>
-<h4 id="parameters">Parameters</h4>
-<table>
+<h4><a name="parameters" class="anchor" href="#parameters"></a>Parameters</h4><table>
 <thead>
 <tr>
 <th></th>
@@ -29,37 +49,25 @@ The name of the GUIObject is the mesh name.</p>
 </tbody>
 </table>
 <hr>
-<h2 id="members">Members</h2>
-<h3 id="mesh-babylon-mesh-http-doc-babylonjs-com-page-php-p-24891-">mesh : <a href="http://doc.babylonjs.com/page.php?p=24891">BABYLON.Mesh</a></h3>
-<p>The babylon mesh.</p>
-<h3 id="guiposition-babylon-vector3-http-doc-babylonjs-com-page-php-p-24977-">guiPosition : <a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a></h3>
-<p>The position of the panel in the GUI world (values in pixels)</p>
-<h3 id="guisystem-guisystem-http-doc-babylonjs-com-page-php-p-25103-">guiSystem : <a href="http://doc.babylonjs.com/page.php?p=25103">GUISystem</a></h3>
-<p>The GUI System</p>
-<h3 id="onclick-function-babylon-actionevent-http-doc-babylonjs-com-page-php-p-24909-void">onClick : function(<a href="http://doc.babylonjs.com/page.php?p=24909">BABYLON.ActionEvent</a>) → void</h3>
-<p>A callback function called when the object is clicked or touched (if hand.js is included). 
+<h2><a name="members" class="anchor" href="#members"></a>Members</h2><h3><a name="mesh-a-href-http-docbabylonjscom-pagephpp-24891-babylonmesh-a-" class="anchor" href="#mesh-a-href-http-docbabylonjscom-pagephpp-24891-babylonmesh-a-"></a>mesh : <a href="http://doc.babylonjs.com/page.php?p=24891">BABYLON.Mesh</a></h3><p>The babylon mesh.</p>
+<h3><a name="guiposition-a-href-http-docbabylonjscom-pagephpp-24977-babylonvector3-a-" class="anchor" href="#guiposition-a-href-http-docbabylonjscom-pagephpp-24977-babylonvector3-a-"></a>guiPosition : <a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a></h3><p>The position of the panel in the GUI world (values in pixels)</p>
+<h3><a name="guisystem-a-href-http-docbabylonjscom-pagephpp-25103-guisystem-a-" class="anchor" href="#guisystem-a-href-http-docbabylonjscom-pagephpp-25103-guisystem-a-"></a>guiSystem : <a href="http://doc.babylonjs.com/page.php?p=25103">GUISystem</a></h3><p>The GUI System</p>
+<h3><a name="onclick-function-a-href-http-docbabylonjscom-pagephpp-24909-babylonactionevent-a-void" class="anchor" href="#onclick-function-a-href-http-docbabylonjscom-pagephpp-24909-babylonactionevent-a-void"></a>onClick : function(<a href="http://doc.babylonjs.com/page.php?p=24909">BABYLON.ActionEvent</a>) → void</h3><p>A callback function called when the object is clicked or touched (if hand.js is included). 
 This function is not set when a new GUIObject is created.</p>
-<h2 id="methods">Methods</h2>
-<h3 id="guiposition-babylon-vector3-http-doc-babylonjs-com-page-php-p-24977-void">guiposition(<a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a>) → void</h3>
-<p>Set the gui position of this object (values in pixels)</p>
-<h3 id="relativeposition-babylon-vector3-http-doc-babylonjs-com-page-php-p-24977-babylon-vector3-http-doc-babylonjs-com-page-php-p-24977-">relativePosition(<a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a>) → <a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a></h3>
-<p>If the argument is not present, returns the relative position of this element.<br/>
+<h2><a name="methods" class="anchor" href="#methods"></a>Methods</h2><h3><a name="guiposition-a-href-http-docbabylonjscom-pagephpp-24977-babylonvector3-a-void" class="anchor" href="#guiposition-a-href-http-docbabylonjscom-pagephpp-24977-babylonvector3-a-void"></a>guiposition(<a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a>) → void</h3><p>Set the gui position of this object (values in pixels)</p>
+<h3><a name="relativeposition-a-href-http-docbabylonjscom-pagephpp-24977-babylonvector3-a-a-href-http-docbabylonjscom-pagephpp-24977-babylonvector3-a-" class="anchor" href="#relativeposition-a-href-http-docbabylonjscom-pagephpp-24977-babylonvector3-a-a-href-http-docbabylonjscom-pagephpp-24977-babylonvector3-a-"></a>relativePosition(<a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a>) → <a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a></h3><p>If the argument is not present, returns the relative position of this element.<br/>
 If the argument is present, set the relative position of this element according to the GUI width/height.
 This example will set the position of the object at 50% of canvas width, and 25% of canvas height: </p>
 <pre><code>var rp = new BABYLON.Vector3(0.5,0.25,0);
 obj.relativePosition(rp);
 </code></pre><p>The GUI system world is used for relative position.</p>
-<h3 id="position-babylon-vector3-http-doc-babylonjs-com-page-php-p-24977-void">position(<a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a>) → void</h3>
-<p>If the argument is not present, returns the position of the mesh.<br/>
+<h3><a name="position-a-href-http-docbabylonjscom-pagephpp-24977-babylonvector3-a-void" class="anchor" href="#position-a-href-http-docbabylonjscom-pagephpp-24977-babylonvector3-a-void"></a>position(<a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a>) → void</h3><p>If the argument is not present, returns the position of the mesh.<br/>
 If the argument is present, set the position of the mesh. The Babylon unit system is used for this function.</p>
-<h3 id="scaling-babylon-vector3-http-doc-babylonjs-com-page-php-p-24977-void">scaling(<a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a>) → void</h3>
-<p>If the argument is not present, returns the scaling of the mesh.<br/>
+<h3><a name="scaling-a-href-http-docbabylonjscom-pagephpp-24977-babylonvector3-a-void" class="anchor" href="#scaling-a-href-http-docbabylonjscom-pagephpp-24977-babylonvector3-a-void"></a>scaling(<a href="http://doc.babylonjs.com/page.php?p=24977">BABYLON.Vector3</a>) → void</h3><p>If the argument is not present, returns the scaling of the mesh.<br/>
 If the argument is present, set the scaling of the mesh. The Babylon unit system is used for this function.</p>
-<h3 id="dispose-void">dispose() → void</h3>
-<p>Dispose this GUI object</p>
-<h3 id="setvisible-boolean-void">setVisible(boolean) → void</h3>
-<p>Set this GUI element to visible or invisible</p>
+<h3><a name="dispose-void" class="anchor" href="#dispose-void"></a>dispose() → void</h3><p>Dispose this GUI object</p>
+<h3><a name="setvisible-boolean-void" class="anchor" href="#setvisible-boolean-void"></a>setVisible(boolean) → void</h3><p>Set this GUI element to visible or invisible</p>
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
     $(this).text($(this).text().replace(/&nbsp;/gi, ''));
 });
-hljs.initHighlightingOnLoad();</script>
+hljs.initHighlightingOnLoad();</script></body></html>

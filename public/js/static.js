@@ -1,7 +1,13 @@
 (function ($) {
+    $('.tocToggle').click(function(){
+        $('.tocContent').toggle(600);
 
-    $.each($('em'), function(i, em){
-        $(em).parent().css("text-align", "center");
+        $('.tocToggle i').attr('class',
+             $('.tocToggle i').attr('class') === 'fa fa-arrow-up' ? 'fa fa-arrow-down' : 'fa fa-arrow-up'
+        );
     });
 
+    $('.tocContent a').click(function(evt){
+
+    });
 })(jQuery);

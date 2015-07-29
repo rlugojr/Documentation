@@ -1,0 +1,20 @@
+.search-content {
+  @include outer-container(80%);
+
+  .searchHeader{
+
+  }
+
+  .result {
+
+    margin: 15px 0;
+
+    .resultTitle {
+      font-size: 1.1em;
+      margin: 0;
+    }
+    .resultText {
+
+    }
+  }
+}

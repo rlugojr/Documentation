@@ -1,7 +1,14 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item active"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to use Actions</h1><br><div id="staticContent"><p>Actions are a simple way to add interactions in your scenes. An action is launched when its trigger is fired.</p>
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item active"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to use Actions</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
+<li><a href="#how-to-use-it">How to use it</a></li>
+<li><a href="#triggers">Triggers</a></li>
+<li><a href="#actions">Actions</a></li>
+<li><a href="#conditions">Conditions</a></li>
+<li><a href="#experimenting-actions">Experimenting actions</a></li>
+<li><a href="#playground">Playground</a></li>
+</ul>
+</div></div><div id="staticContent"><p>Actions are a simple way to add interactions in your scenes. An action is launched when its trigger is fired.</p>
 <p>For instance, you can specify that when the user clicks (or touches) a mesh, an action is executed.</p>
-<h1 id="how-to-use-it">How to use it</h1>
-<p>To use actions, you have to attach an <code>BABYLON.ActionManager</code> to a mesh or to your scene:
+<h1><a name="how-to-use-it" class="anchor" href="#how-to-use-it"></a>How to use it</h1><p>To use actions, you have to attach an <code>BABYLON.ActionManager</code> to a mesh or to your scene:
 <code>mesh.actionManager = new BABYLON.ActionManager(scene);</code></p>
 <p>Once the ActionManager is created, you can start registering actions:</p>
 <pre><code class="lang-javascript">mesh.actionManager.registerAction(new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, light, &quot;diffuse&quot;, BABYLON.Color3.Black(), 1000));
@@ -19,8 +26,7 @@
 sphere.actionManager.registerAction(new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, camera, &quot;alpha&quot;, 0, 500, condition1));
 </code></pre>
 <p>In this example, the <code>camera.alpha</code> property will be animated to 0 in 500ms when the user clicks the sphere only if the <code>light1.diffuse</code> property is equal to red.</p>
-<h1 id="triggers">Triggers</h1>
-<p>Currently, 10 different triggers are supported:</p>
+<h1><a name="triggers" class="anchor" href="#triggers"></a>Triggers</h1><p>Currently, 10 different triggers are supported:</p>
 <p>The following list defines triggers associated with meshes:</p>
 <ul>
 <li><code>BABYLON.ActionManager.NothingTrigger</code>: Never raised. Used for sub-actions with <code>action.then</code> function</li>
@@ -66,8 +72,7 @@ scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction({ trigger: BABY
             ...
   }));
 </code></pre>
-<h1 id="actions">Actions</h1>
-<p>Most of the action have a <code>propertyPath</code> property. This string defines the path to the property to affect with the action. You can use direct values like <code>position</code> or <code>diffuse</code>. But you can also provide complex paths like <code>position.x</code></p>
+<h1><a name="actions" class="anchor" href="#actions"></a>Actions</h1><p>Most of the action have a <code>propertyPath</code> property. This string defines the path to the property to affect with the action. You can use direct values like <code>position</code> or <code>diffuse</code>. But you can also provide complex paths like <code>position.x</code></p>
 <ul>
 <li><code>BABYLON.SwitchBooleanAction</code>: Used to switch the current value of a boolean property:</li>
 </ul>
@@ -119,8 +124,7 @@ scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction({ trigger: BABY
 </ul>
 <p><code>PlaySoundAction(trigger, sound, condition)</code></p>
 <p><code>StopSoundAction(trigger, sound, condition)</code></p>
-<h1 id="conditions">Conditions</h1>
-<p>There are three kinds of conditions:</p>
+<h1><a name="conditions" class="anchor" href="#conditions"></a>Conditions</h1><p>There are three kinds of conditions:</p>
 <ul>
 <li><code>BABYLON.ValueCondition</code>: This condition is true when a given property is equal / greater / lesser / different from a specific value. The following operands are thus supported:<ul>
 <li><code>BABYLON.ValueCondition.IsEqual</code></li>
@@ -139,8 +143,7 @@ scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction({ trigger: BABY
 <li><code>BABYLON.StateCondition</code>: This condition checks the <code>state</code> property of an object and compares it to given value:</li>
 </ul>
 <p><code>StateCondition(actionManager, target, value)</code></p>
-<h1 id="experimenting-actions">Experimenting actions</h1>
-<p>So basically, let&#39;s imagine you want to almost hide a mesh when the user touches it.
+<h1><a name="experimenting-actions" class="anchor" href="#experimenting-actions"></a>Experimenting actions</h1><p>So basically, let&#39;s imagine you want to almost hide a mesh when the user touches it.
 First of all you have to add a <code>BABYLON.ActionManager</code> on it:</p>
 <p><code>mesh.actionManager = new BABYLON.ActionManager(scene);</code></p>
 <p>Then you can create an action that will be associated with the <code>BABYLON.ActionManager.OnPickTrigger</code> trigger. This action will interpolate the <code>mesh.visibility</code> property to 0.2:</p>
@@ -153,10 +156,9 @@ First of all you have to add a <code>BABYLON.ActionManager</code> on it:</p>
 <p><code>var action2 = new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, mesh, &quot;visibility&quot;, 1.0, 1000);</code></p>
 <p><code>mesh.actionManager.registerAction(action).then(action2);</code></p>
 <p>In this case, the first click will hide the button, the following click will restore it, and so on...</p>
-<h1 id="playground">Playground</h1>
-<p>If you want to play with actions, you can try them at our playground:
+<h1><a name="playground" class="anchor" href="#playground"></a>Playground</h1><p>If you want to play with actions, you can try them at our playground:
 <a href="http://www.babylonjs.com/playground/?17">http://www.babylonjs.com/playground/?17</a></p>
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
     $(this).text($(this).text().replace(/&nbsp;/gi, ''));
 });
-hljs.initHighlightingOnLoad();</script>
+hljs.initHighlightingOnLoad();</script></body></html>

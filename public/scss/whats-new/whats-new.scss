@@ -6,8 +6,7 @@
 }
 
 #whats-new{
-  width   : 80%;
-  margin  : auto;
+  @include outer-container(80%);
   line-height: 25px;
 
   ul{

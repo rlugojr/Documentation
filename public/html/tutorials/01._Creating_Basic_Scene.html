@@ -1,9 +1,18 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item active"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>01. Creating Basic Scene</h1><br><div id="staticContent"><h3 id="in-this-tutorial-we-are-going-to-create-a-basic-3d-scene-with-babylon-js-">In this tutorial, we are going to create a basic 3D scene with Babylon.js.</h3>
-<p><img src="http://urbanproductions.com/wingy/babylon/misc/tut01pic01.jpg" alt="Babylon JS 01"></p>
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item active"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>01. Creating Basic Scene</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
+<li><a href="#in-this-tutorial-we-are-going-to-create-a-basic-3d-scene-with-babylonjs">In this tutorial, we are going to create a basic 3D scene with Babylon.js.</a></li>
+<li><a href="#the-html-part">The HTML Part</a></li>
+<li><a href="#the-css-style-part">The CSS Style Part</a></li>
+<li><a href="#the-javascript-external-includes-part-the-framework">The Javascript External Includes Part (the framework)</a><ul>
+<li><a href="#got-troubles">Got Troubles?</a></li>
+<li><a href="#moving-on">Moving On</a></li>
+<li><a href="#next-step">Next step</a></li>
+</ul>
+</li>
+</ul>
+</div></div><div id="staticContent"><h3><a name="in-this-tutorial-we-are-going-to-create-a-basic-3d-scene-with-babylonjs" class="anchor" href="#in-this-tutorial-we-are-going-to-create-a-basic-3d-scene-with-babylonjs"></a>In this tutorial, we are going to create a basic 3D scene with Babylon.js.</h3><p><img src="http://urbanproductions.com/wingy/babylon/misc/tut01pic01.jpg" alt="Babylon JS 01"></p>
 <p><em>Two Basic Shapes in a Basic Scene</em></p>
 <p>Before you start, be sure you have a WebGL compatible browser (e.g.  Internet Explorer 11+, Firefox 4+, Google Chrome 9+, Opera 15+, etc.).</p>
-<h3 id="the-html-part">The HTML Part</h3>
-<p>First, create a basic HTML5 web page:</p>
+<h3><a name="the-html-part" class="anchor" href="#the-html-part"></a>The HTML Part</h3><p>First, create a basic HTML5 web page:</p>
 <pre><code class="lang-html">&lt;!DOCTYPE html&gt;
 &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
 
@@ -17,8 +26,7 @@
 
 &lt;/html&gt;
 </code></pre>
-<h3 id="the-css-style-part">The CSS Style Part</h3>
-<p>Inside the <code>&lt;head&gt;</code> part, please add this CSS to view the canvas in maximum size:</p>
+<h3><a name="the-css-style-part" class="anchor" href="#the-css-style-part"></a>The CSS Style Part</h3><p>Inside the <code>&lt;head&gt;</code> part, please add this CSS to view the canvas in maximum size:</p>
 <pre><code class="lang-css">&lt;style&gt;
   html, body {
     overflow: hidden;
@@ -35,8 +43,7 @@
   }
 &lt;/style&gt;
 </code></pre>
-<h3 id="the-javascript-external-includes-part-the-framework-">The Javascript External Includes Part (the framework)</h3>
-<p>Now we load our framework files.  After the CSS, (but still inside the <code>&lt;head&gt;</code> part), please add:</p>
+<h3><a name="the-javascript-external-includes-part-the-framework-" class="anchor" href="#the-javascript-external-includes-part-the-framework-"></a>The Javascript External Includes Part (the framework)</h3><p>Now we load our framework files.  After the CSS, (but still inside the <code>&lt;head&gt;</code> part), please add:</p>
 <pre><code class="lang-html">&lt;script src=&quot;babylon.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;hand.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;cannon.js&quot;&gt;&lt;/script&gt;  &lt;!-- optional physics engine --&gt;
@@ -126,8 +133,7 @@
 </code></pre>
 <p>You are done! Save your file (in the same folder as babylon.js, hand.js, and cannon.js) and browse it with your WebGL-ready browser.  You should see your new scene displayed in 3D on its canvas.</p>
 <p>A near-exact duplicate of the createScene function used in this tutorial... can be seen <a href="http://www.babylonjs.com/playground/#1GM4YQ"><strong>RIGHT HERE</strong></a> at the Babylon.js Playground.  You will also see the scene render LIVE, ONLINE!  Use the playground&#39;s &#39;Get .zip&#39; choice if you want to download the entire index.html file used in this tutorial.</p>
-<h2 id="got-troubles-">Got Troubles?</h2>
-<p>Here is what the entire web page should look like:</p>
+<h2><a name="got-troubles" class="anchor" href="#got-troubles"></a>Got Troubles?</h2><p>Here is what the entire web page should look like:</p>
 <pre><code class="lang-html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -199,14 +205,12 @@
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-<h2 id="moving-on">Moving On</h2>
-<p>From this point forward in the Basic Series tutorials, I will mostly talk about things that are contained in the createScene function (the part between the dashed lines). I will assume that you already know how to insert a createScene function into a Babylon.js HTML5 scene document (like the one above).</p>
+<h2><a name="moving-on" class="anchor" href="#moving-on"></a>Moving On</h2><p>From this point forward in the Basic Series tutorials, I will mostly talk about things that are contained in the createScene function (the part between the dashed lines). I will assume that you already know how to insert a createScene function into a Babylon.js HTML5 scene document (like the one above).</p>
 <p>Try to memorize this web page layout, and see how the createScene function is at the heart of it. After you have spent some time using the Babylon.js Playground, you will see how createScene() is portable, and can be easily copied and pasted TO and FROM the playground editor window. This will allow others to help you with problems, and will also allow you to help others with their problems.</p>
-<h2 id="next-step">Next step</h2>
-<hr>
+<h2><a name="next-step" class="anchor" href="#next-step"></a>Next step</h2><hr>
 <p>Now you are ready to go further and learn how to create more elements like spheres, cylinders, boxes, etc.</p>
 <p>Next in the Playpen Series - <a href="http://babylondoc.azurewebsites.net/page.php?p=22011"><strong>02-Basic elements</strong></a></p>
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
     $(this).text($(this).text().replace(/&nbsp;/gi, ''));
 });
-hljs.initHighlightingOnLoad();</script>
+hljs.initHighlightingOnLoad();</script></body></html>

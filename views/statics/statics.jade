@@ -1,22 +1,33 @@
 include ../includes/header
-include ../includes/banner
-#wrapper
-    .statics-banner
-        h1=category
-    .horizontal-separator
-    .statics-content
-        .tagList
-            for tag in tags
-                .tagWrapper
-                    .tag(data-name=tag['name'])
-                        .tagImage
-                            img(src="http://placehold.it/200x100")
-                        .tagDescriptionWrapper
-                            h3.tagTitle=tag['name']
-                            span.tagDescription=tag['desc']
-        .fileList
-            for file in files
-                .fileTitle(class=file['tags'] class='All')
-                    a(href='./' + file['category'] + '/'+file['url'])= file['name']
-include ../includes/footer
-script(src="/js/statics.js")
+    include ../includes/banner
+    #wrapper
+        .statics-banner
+            h1=dataObj.category
+            br
+
+        .horizontal-separator
+        .statics-content
+            .tagList
+                for tag in dataObj.tags
+                    .tagWrapper
+                        .tag(data-name=tag['name'])
+                            .tagImage
+                                img(src="http://placehold.it/200x100")
+                            .tagDescriptionWrapper
+                                h3.tagTitle=tag['name']
+                                span.tagDescription=tag['desc']
+            .fileList
+                for file, index in dataObj.files
+                    .fileTitle(class=file['tags'] class='All')
+                        .fileNumber=(index + 1)
+
+                        a(href='./' + file['category'] + '/'+file['url'])
+                            =file['name']
+                            .tags
+                                if file.tags
+                                    for tag in file.tags
+                                        .tag
+                                            =tag
+
+    include ../includes/footer
+    script(src="/js/statics.js")

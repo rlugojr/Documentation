@@ -8,7 +8,7 @@ nav.nav-main
 
     .banner
         .menu
-            .do-not-hover#home
+            .do-not-hover#home(class={homeClassMobile: currentUrl === '/classes/class'})
                 span.
                     Babylon.js | DOCUMENTATION
             #whatsnew.item(class={active: currentUrl === '/whats-new'})
@@ -23,14 +23,15 @@ nav.nav-main
             #extensions.item(class={active:currentUrl === '/extensions'})
                 span.
                     Extensions
-            #classes.item(class={active:currentUrl === '/classes' || '/classes/class'})
+            #classes.item(class={active:(currentUrl === '/classes') || (currentUrl === '/classes/class')})
                 span.
                     Classes
         .more
             .searchbar
-                meta(content="http://localhost:3000/search?q={q}" itemprop="target")
-                input(type='text', placeholder='Search...')
-                i.fa.fa-search
+                form(method='get', action='/search')
+                    input(type='text', name='q', placeholder='Search...')
+                    button(type='submit')
+                        i.fa.fa-search
             .forward
                 div
                     a(href="http://www.babylonjs.com", target="_blank") babylonjs.com

@@ -124,10 +124,12 @@ $title_width : 300px;
             outline: 0;
           }
         }
+
         // Search icon
-        i {
+        button {
           font-size: 16pt;
-          background-color: transparent;
+          background: transparent;
+          border: none;
           cursor: pointer;
         }
       }

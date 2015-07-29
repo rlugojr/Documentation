@@ -1,6 +1,28 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item active"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>extensions</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>POV</h1><br><div id="staticContent"><h1 id="point-of-view-movement-and-rotation">Point of View Movement and Rotation</h1>
-<h2 id="movement-">Movement:</h2>
-<p><img src="https://raw.githubusercontent.com/BabylonJS/Extensions/master/POV/doc-assist/POV-Movement.png" alt=""></p>
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item active"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>extensions</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>POV</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
+<li><a href="#point-of-view-movement-and-rotation">Point of View Movement and Rotation</a><ul>
+<li><a href="#movement">Movement:</a></li>
+<li><a href="#rotation">Rotation:</a></li>
+</ul>
+</li>
+<li><a href="#pov-before-render-extension">POV Before Render Extension</a><ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#motion-event">Motion Event</a></li>
+<li><a href="#event-series">Event Series</a></li>
+<li><a href="#series-queue">Series Queue</a></li>
+<li><a href="#attaching-to-mesh">Attaching to Mesh</a></li>
+<li><a href="#playground-example">Playground Example</a></li>
+<li><a href="#advanced-features">Advanced Features</a><ul>
+<li><a href="#action-system-integration">Action System Integration</a></li>
+<li><a href="#synchronized-movement-between-meshes">Synchronized movement between meshes</a></li>
+<li><a href="#non-linear-pacing">Non-Linear Pacing</a></li>
+<li><a href="#series-level-acceleration-deceleration">Series Level Acceleration-Deceleration</a></li>
+</ul>
+</li>
+<li><a href="#up-coming-features-for-version-11">Up Coming Features for Version 1.1</a></li>
+</ul>
+</li>
+</ul>
+</div></div><div id="staticContent"><h1><a name="point-of-view-movement-and-rotation" class="anchor" href="#point-of-view-movement-and-rotation"></a>Point of View Movement and Rotation</h1><h2><a name="movement-" class="anchor" href="#movement-"></a>Movement:</h2><p><img src="https://raw.githubusercontent.com/BabylonJS/Extensions/master/POV/doc-assist/POV-Movement.png" alt=""></p>
 <p><code>AbstractMesh</code> has a pair of functions which allow you to move it relative to the mesh&#39;s current position, but without regard to its current rotation. Amounts are expressed in terms so as to provide the point of view of: behind the front of the mesh.</p>
 <p>Here are their function definitions:</p>
 <pre><code class="lang-typescript">/**
@@ -26,8 +48,7 @@ calcMovePOV(amountRight: number, amountUp: number, amountForward: number): BABYL
 <p>Moving a mesh without having to take into account current rotation, frees application code from doing so at the time, and facilitates more reusable application code.</p>
 <p>Also consider that most things in the real world move in the &quot;Forward&quot; direction the vast majority of the time. This is true even of the airplane you just shot down in your FPS shooter. Maybe it was even spiraling as well, but all you coded was &quot;Forward&quot;.</p>
 <p>It is believed that most meshes are defined with their &quot;front side&quot; facing the viewer, much the same way they are defined with their &quot;bottom&quot; below their &quot;top&quot;. However, there is a switch in <code>AbstractMesh</code>, <code>definedFacingForward</code>, which can be set to false. Doing so implies it is defined facing backwards instead. </p>
-<h2 id="rotation-">Rotation:</h2>
-<p><em>to do: make an image for rotation</em></p>
+<h2><a name="rotation-" class="anchor" href="#rotation-"></a>Rotation:</h2><p><em>to do: make an image for rotation</em></p>
 <p>There are also similar functions for rotation. Rotation does not have as strong a relationship with Point-of-View as positioning, but they do take into account <code>definedFacingForward</code>. Their argument terminology is also less &quot;alien&quot; than that of either pilot (yaw-pitch-roll) or mathematics (alpha-beta-gamma). This is even more helpful if rotating in multiple axis&#39;s.</p>
 <pre><code class="lang-typescript">/**
  * Perform relative rotation change from the point of view of behind the front of the mesh.
@@ -47,15 +68,12 @@ rotatePOV(flipBack: number, twirlClockwise: number, tiltRight: number): void;
  */
 calcRotatePOV(flipBack: number, twirlClockwise: number, tiltRight: number): BABYLON.Vector3;
 </code></pre>
-<h1 id="pov-before-render-extension">POV Before Render Extension</h1>
-<p><img src="https://raw.githubusercontent.com/BabylonJS/Extensions/master/POV/doc-assist/POV-System.png" alt=""></p>
-<h2 id="introduction">Introduction</h2>
-<p>The functions inside of <code>AbstractMesh</code> are just raw material, so that they could be called under any circumstance. A queue based, POV before render animation system uses these methods to achieve coordinated, stepwise, movement &amp; rotation. It can be found in the <a href="https://github.com/BabylonJS/Extensions/tree/master/POV">Extensions</a> repository.</p>
+<h1><a name="pov-before-render-extension" class="anchor" href="#pov-before-render-extension"></a>POV Before Render Extension</h1><p><img src="https://raw.githubusercontent.com/BabylonJS/Extensions/master/POV/doc-assist/POV-System.png" alt=""></p>
+<h2><a name="introduction" class="anchor" href="#introduction"></a>Introduction</h2><p>The functions inside of <code>AbstractMesh</code> are just raw material, so that they could be called under any circumstance. A queue based, POV before render animation system uses these methods to achieve coordinated, stepwise, movement &amp; rotation. It can be found in the <a href="https://github.com/BabylonJS/Extensions/tree/master/POV">Extensions</a> repository.</p>
 <p>This enables meshes to move more like they do in the real world. Most people and vehicles turn (twirl) at the same time as moving forward, not behave as if they are marching. Babylon&#39;s animation system can perform concurrent animations, but since animations are independent, it would just move in a single direction while twirling.</p>
 <p>It is also crucial that &quot;Forward&quot; be redefined every frame, or stepwise. Even if a POV move was made for Babylon&#39;s animation system, without a rewrite, &quot;Forward&quot; and the final position based on it would be defined only once at the beginning. </p>
 <p>POV was developed for MORPH. Conveniently, MORPH already was using a before renderer, so adding on inside the render fit like a glove. This made the overall system quite large though, and harder to document. Meshes which perform no morphing also could not use it. It has now been made standalone, and MORPH now subclasses it.</p>
-<h2 id="motion-event">Motion Event</h2>
-<p>A <code>MotionEvent</code> is the base unit of the system. It holds the directions to perform an animation. They can be made in advance and reused, but it is not a good idea to share them across meshes. This is because they manage state when they are the event currently being performed.</p>
+<h2><a name="motion-event" class="anchor" href="#motion-event"></a>Motion Event</h2><p>A <code>MotionEvent</code> is the base unit of the system. It holds the directions to perform an animation. They can be made in advance and reused, but it is not a good idea to share them across meshes. This is because they manage state when they are the event currently being performed.</p>
 <pre><code class="lang-typescript">/**
  * Take in all the motion event info. Movement &amp; rotation are both optional, but both being null is usually for sub-classing.
  * 
@@ -75,8 +93,7 @@ constructor(
     public rotatePOV : BABYLON.Vector3, 
     private _pace : Pace = Pace.LINEAR)
 </code></pre>
-<h2 id="event-series">Event Series</h2>
-<p>An <code>EventSeries</code>, consisting of an array of &#39;MotionEvent&#39;s, is the unit placed in the render queue.</p>
+<h2><a name="event-series" class="anchor" href="#event-series"></a>Event Series</h2><p>An <code>EventSeries</code>, consisting of an array of &#39;MotionEvent&#39;s, is the unit placed in the render queue.</p>
 <pre><code class="lang-typescript">/**
  * Validate each of the events passed.
  * @param {Array} _eventSeries - Elements must either be a MotionEvent, Action, or function.
@@ -87,25 +104,16 @@ constructor(
  */
 constructor(public _eventSeries : Array&lt;any&gt;, public _nRepeats = 1, public _initialWallclockProrating = 1.0)
 </code></pre>
-<h2 id="series-queue">Series Queue</h2>
-<h2 id="attaching-to-mesh">Attaching to Mesh</h2>
-<h2 id="playground-example">Playground Example</h2>
-<h2 id="advanced-features">Advanced Features</h2>
-<h3 id="action-system-integration">Action System Integration</h3>
-<h3 id="synchronized-movement-between-meshes">Synchronized movement between meshes</h3>
-<p>Different meshes can move in coordination with each other. A <code>MotionEvent</code> of each is said to be a sync partner of the other. Using this can cause hangs unless the <code>EventSeries</code> of each is queued on each mesh at the same time.</p>
+<h2><a name="series-queue" class="anchor" href="#series-queue"></a>Series Queue</h2><h2><a name="attaching-to-mesh" class="anchor" href="#attaching-to-mesh"></a>Attaching to Mesh</h2><h2><a name="playground-example" class="anchor" href="#playground-example"></a>Playground Example</h2><h2><a name="advanced-features" class="anchor" href="#advanced-features"></a>Advanced Features</h2><h3><a name="action-system-integration" class="anchor" href="#action-system-integration"></a>Action System Integration</h3><h3><a name="synchronized-movement-between-meshes" class="anchor" href="#synchronized-movement-between-meshes"></a>Synchronized movement between meshes</h3><p>Different meshes can move in coordination with each other. A <code>MotionEvent</code> of each is said to be a sync partner of the other. Using this can cause hangs unless the <code>EventSeries</code> of each is queued on each mesh at the same time.</p>
 <p>The sync partner of a <code>MotionEvent</code> cannot be part of the constructor, since how would the partner of the first to be instanced be passed? After construction, the <code>setSyncPartner</code> function of each is then called:</p>
 <pre><code class="lang-typescript">/**
  * @param {MotionEvent} syncPartner - MotionEvent which should start at the same time as this one.
  */
 public setSyncPartner(syncPartner : MotionEvent) : void{
 </code></pre>
-<h3 id="non-linear-pacing">Non-Linear Pacing</h3>
-<h3 id="series-level-acceleration-deceleration">Series Level Acceleration-Deceleration</h3>
-<h2 id="up-coming-features-for-version-1-1">Up Coming Features for Version 1.1</h2>
-<p>The first new feature is a method to clear what the mesh is currently doing and or clear what is queued to do next. </p>
+<h3><a name="non-linear-pacing" class="anchor" href="#non-linear-pacing"></a>Non-Linear Pacing</h3><h3><a name="series-level-acceleration-deceleration" class="anchor" href="#series-level-acceleration-deceleration"></a>Series Level Acceleration-Deceleration</h3><h2><a name="up-coming-features-for-version-11" class="anchor" href="#up-coming-features-for-version-11"></a>Up Coming Features for Version 1.1</h2><p>The first new feature is a method to clear what the mesh is currently doing and or clear what is queued to do next. </p>
 <p>The second is to integrate optional sound to start playing at the beginning of a <code>MotionEvent</code>. Timing of audio to motion is very often important to make things believable. The Sound object is passed in the <code>MotionEvent</code> constructor. When the <code>MotionEvent</code> is activated by the before-renderer, the sound will be checked if it is ready to play. If not, the event will enter a wait state until the frame that the sound indicates ready. Should a sound be part of an event that is stopped, the playing will also be stopped.</p>
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
     $(this).text($(this).text().replace(/&nbsp;/gi, ''));
 });
-hljs.initHighlightingOnLoad();</script>
+hljs.initHighlightingOnLoad();</script></body></html>

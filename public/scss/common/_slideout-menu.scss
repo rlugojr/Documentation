@@ -2,6 +2,7 @@
 // LEFT MENU FOR MOBILE
 // ----------------------
 .slideout-menu{
+  display:none;
   margin-top: 50px;
   z-index:0;
   background-color: $black;
@@ -23,7 +24,7 @@
 
     input {
       height  : 30px;
-      width   : 200px;
+      width   : 180px;
       border  : none;
 
       margin-left       : 10px;
@@ -34,6 +35,15 @@
         outline : 0;
       }
     }
+
+    // Search icon
+    button {
+      font-size: 16pt;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
     // Search icon
     i {
       font-size: 16pt;

@@ -9,13 +9,26 @@ var fs      = require('fs'),
     appRoot = require('app-root-path').path,
     logger  = require(path.join(appRoot, 'config/logger')),
     marked  = require('meta-marked'),
-    rimraf  = require('rimraf');
+    renderer= new marked.Renderer(),
+    rimraf  = require('rimraf'),
+    toc     = require('marked-toc');
 
+renderer.heading = function(text, level){
+    var escapedText = text.toLowerCase().replace(/[?\.,]/g, '').trim().replace(/[^\w]+/g, '-');
+
+    return '<h' + level + '><a name="' +
+        escapedText +
+        '" class="anchor" href="#' +
+        escapedText +
+        '"></a>' +
+        text + '</h' + level + '>';
+};
 
 marked.setOptions({
     gfm: true,
     breaks: false,
-    tables: true
+    tables: true,
+    renderer:renderer
 });
 
 var __FILES_LIST__      = path.join(appRoot, 'data/static-list.json'),
@@ -108,7 +121,7 @@ module.exports = function(done){
 };
 
 var createStaticsPage = function(dataObj, category, cb){
-    var statics_page = jade.renderFile(__JADE_STATICS__, dataObj);
+    var statics_page = jade.renderFile(__JADE_STATICS__, {dataObj: dataObj, currentUrl: '/' + category});
 
     fs.writeFile(path.join(__FILES_DEST__, category + '.html'), statics_page, function(writeErr){
         if (writeErr) throw writeErr;
@@ -130,12 +143,14 @@ var getStaticPagesContent = function(dataObj, category, cb){
                     if (readErr) {
                         console.log(readErr);
                     } else {
-                        var markedContent = marked(content);
+                        var markedContent = marked(content),
+                            tableOfContent = marked(toc(content, { omit:['PG_TITLE'] })).html;
                         staticsContents.push({
                             "staticName": markedContent.meta['PG_TITLE'],
                             "staticFileName": markedContent.meta['PG_TITLE'].replace(/\s/g, "_"),
                             "staticMeta": markedContent.meta,
-                            "staticContent": markedContent.html
+                            "staticContent": markedContent.html,
+                            "toc":tableOfContent
                         });
                         callback();
                     }
@@ -158,7 +173,7 @@ var createStaticPages = function(staticsContents, category, cb){
             async.each(staticsContents, function(staticContent, callback){
                 var filename = path.join(__FILES_DEST__, category, staticContent.staticFileName + '.html');
                 staticContent['category'] = category;
-                var staticPage = jade.renderFile(path.join(__JADE_STATIC__), staticContent);
+                var staticPage = jade.renderFile(path.join(__JADE_STATIC__), {staticContent: staticContent, currentUrl: '/' + category});
 
                 logger.info('Page ' + category + '/' + staticContent.staticFileName + '.html about to be compiled.');
                 fs.writeFile(filename, staticPage, function(writeErr){

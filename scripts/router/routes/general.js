@@ -6,7 +6,8 @@ var express = require('express'),
     fs = require('fs'),
     path = require('path'),
     async = require('async'),
-    marked_github = require('meta-marked');
+    marked_github = require('meta-marked'),
+    _ = require('lodash');
 
 
 marked_github.setOptions({
@@ -82,49 +83,86 @@ router.get('/', function (req, res) {
 /***************
  * SEARCH PAGE *
  ***************/
-/*router.get('/search', function (req, res) {
-    var searchTerm = req.query.q;
-    var page = req.query.page;
+router.get('/search', function (req, res) {
+    var searchTerm = req.query.q + '';
+    var page = req.query.page - 1;
+    var resultMax = 25;
+    var offset = page * resultMax;
 
-    if (searchTerm && searchTerm.length > 2) {
-        console.log('search route');
+    if (searchTerm && searchTerm.length + '' >= 2) {
         var results = [];
         var uniq = [];
+        var totalCount = 0;
+        //loop through indexes
         async.each(searchIndexes,
             function (index, endIteration) {
 
                 var result = index.search(searchTerm);
 
+                //Filter results
                 async.each(result,
                     function (r, endIteration2) {
-                        if (new RegExp(searchTerm, 'i').test(r.text) && uniq.indexOf(r.src) == -1) {
-                            uniq.push(r);
+                        if (new RegExp(searchTerm, 'i').test(r.text) && !_.some(uniq, {src: r.src})) {
+                            //skip results to simulate page change
+                            if (offset > 0) {
+                                offset--;
+                            } else {
+                                if (uniq.length < resultMax) {
+
+                                    /**
+                                     * To get the version, there are two cases :
+                                     * exporters/Cheetah
+                                     * classes/1.14/Action
+                                     *
+                                     * We only want the 'exporters' and '1.14'
+                                     */
+
+                                    //Remove the /Cheetah and /Action
+                                    var version = r.src.substr(0, r.src.lastIndexOf('/'));
+                                    //Remove the classes/ but keep the 1.14 and exporters !
+                                    if (version.indexOf('/') != -1) version = version.substr(version.indexOf('/') + 1);
+
+                                    uniq.push({
+                                        src    : r.src,
+                                        name   : r.name,
+                                        version: version
+                                        //text: r.text
+                                    });
+                                    //uniq.push(r);
+                                }
+                            }
+                            totalCount++;
                         }
-                        endIteration2();
+                        //when we got max results, just break the loop
+                        if (page != 'NaN' && uniq.length >= resultMax) {
+                            endIteration2(false);
+                        } else {
+                            endIteration2();
+                        }
                     },
                     function (err) {
+                        if (err) console.log(uniq.length);
                         results = results.concat(uniq);
                         endIteration();
                     }
                 );
             },
-            function (err) {
-                res.render('search', {results: uniq});
-                console.log(uniq);
+            function () {
+                res.render('search', {searchTerm: searchTerm, resultsCount: totalCount, results: uniq});
             }
         );
     } else {
         //default search page
-        res.send('nooooooooooo ');
+        res.render('search', {searchTerm: searchTerm, resultsCount: 0});
     }
-});*/
+});
 
 //We have to load all the indexes at the server start
-//var fulltextsearchlight = require('full-text-search-light');
-//var dirs = fs.readdirSync('data/search');
-//var searchIndexes = [];
-//for (var i = 0; i < dirs.length; i++) {
-//    searchIndexes.push(fulltextsearchlight.loadSync(path.join('data/search/', dirs[i])));
-//}
+var fulltextsearchlight = require('full-text-search-light');
+var dirs = fs.readdirSync('data/search');
+var searchIndexes = [];
+for (var i = 0; i < dirs.length; i++) {
+    searchIndexes.push(fulltextsearchlight.loadSync(path.join('data/search/', dirs[i])));
+}
 
 module.exports = router;

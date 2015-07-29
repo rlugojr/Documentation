@@ -57,8 +57,8 @@ router.get('/:version', function(req, res) {
 
             res.status(200);
             res.set({
-                'Content-type':'text/html',
-                'Cache-Control': 'no-cache'
+                'Cache-Control': 'no-cache',
+                'Content-type':'text/html'
             });
             res.sendFile('./html/classes_' + version + '.html', options);
         } else {
@@ -145,8 +145,8 @@ router.get('/:version/:className', function(req, res) {
 
                 res.status(200);
                 res.set({
-                    'Content-type':'text/html',
-                    'Cache-Control': 'no-cache'
+                    'Cache-Control': 'no-cache',
+                    'Content-type':'text/html'
                 });
                 res.sendFile(fileName, options);
             }

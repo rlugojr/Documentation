@@ -25,12 +25,12 @@
 
     .tagWrapper {
       display: inline-block;
-      width: 25%;
-      min-width: 210px;
-      max-width: 280px;
+      width: 280px;
       padding: 20px 2% 20px;
 
       .tag {
+        display: flex;
+        flex-flow: column nowrap;
         border: 2px solid $grey;
         height: 100%;
         padding: 5px;
@@ -39,15 +39,16 @@
           display: block;
           margin: 0 auto;
           max-height: 65%;
-          //height: 60%;
+          width: 100%;
           img {
             width: 100%;
           }
         }
         .tagDescriptionWrapper {
+          flex: auto;
           background-color: $grey;
           padding: 4px;
-          height: 80px;
+          //height: 80px;
           word-break: normal;
           overflow: hidden;
 
@@ -64,12 +65,15 @@
         }
 
       }
+
+      .active {
+        border-color: $red;
+      }
     }
   }
 
   .fileList {
-    @include outer-container(50%);
-    border: 1px solid whitesmoke;
+    @include outer-container(70%);
 
     //box-shadow: 12px 15px 22px -10px #EEE;
 
@@ -79,24 +83,58 @@
       padding: 3px;
       width: 100%;
       cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+
+      .fileNumber {
+        color: $red;
+        margin-right:15px;
+        font-weight: bold;
+      }
 
       a {
         color: $black;
         text-decoration: none;
-        display: block;
+        //display: inline-block;
         padding: 5px;
+        border-bottom: 2px dashed $red;
+        flex: auto;
+
+        .tags {
+          margin:0;
+          padding:0;
+          right:24px;
+          display: inline-block;
+          float: right;
+          clear: right;
+
+          .tag {
+            display: inline-block;
+            position:relative;
+            background-color: $red;
+            margin-left:8px;
+            padding:0px 4px;
+            color:whitesmoke;
+            text-decoration:none;
+            border-radius:4px;
+          }
+        }
 
         &:hover {
-          color: white;
+          color: whitesmoke;
           text-decoration: underline;
           background-color: $red;
+
+          .tag{
+            background-color: whitesmoke;
+            color: $red;
+          }
 
         }
       }
 
-      &:nth-child(even) {
-        background-color: whitesmoke;
-      }
+
+
 
       h3:hover {
         background-color: $red;

@@ -21,8 +21,8 @@ router.get('/', function(req, res) {
 
     res.status(200);
     res.set({
-        'Content-type':'text/html',
-        'Cache-Control': 'no-cache'
+        'Cache-Control': 'no-cache',
+        'Content-type':'text/html'
     });
     res.sendFile('./tutorials.html', options);
 });
@@ -36,8 +36,8 @@ router.get('/:tutorial', function(req, res){
 
     res.status(200);
     res.set({
-        'Content-type':'text/html',
-        'Cache-Control': 'no-cache'
+        'Cache-Control': 'no-cache',
+        'Content-type':'text/html'
     });
     res.sendFile('./tutorials/'+ tutorial +'.html', options);
 });

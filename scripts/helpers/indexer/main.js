@@ -1,7 +1,7 @@
-//input : content/
-//read all .md with readdirp
-//
-//output data/index.json
+/**
+ * Load and write search index
+ * @type {*}
+ */
 
 var fs = require('fs');
 var path = require('path');
@@ -50,7 +50,20 @@ module.exports = function index(done) {
                         .on('line', function (line) {
                             if (line) {
                                 lr.pause();
-                                search.add({src: fileInfo.path, text: line});
+                                var changeSlashes = /\\/g;
+                                //var changeSlashes = new RegExp(path.sep, 'g');
+                                var src = path.join(fileInfo.parentDir, path.basename(fileInfo.name, '.md')).replace(changeSlashes, '/');
+
+                                //console.log(fileInfo.parentDir);
+                                //console.log(fileInfo.parentDir.replace(changeSlashes, '/'));
+                                //console.log(src);
+
+                                search.add({
+                                    //path is the link in the website
+                                    src: src,
+                                    name: path.basename(fileInfo.name, '.md'),
+                                    text: line
+                                });
                                 lr.resume();
                             }
                         })
@@ -69,20 +82,11 @@ module.exports = function index(done) {
                         var path = 'data/search/' + key + '.json';
 
                         console.log('wait during index building : ', path);
-                        //value.saveSync(path);
-                        //console.log(path, ' saved');
-                        //endIteration();
 
                         async.asyncify(value.saveSync(path))(function () {
-                            //console.log(cb);
                             console.log(path, ' saved');
                             endIteration();
                         });
-
-                        //async.asyncify(value.saveSync(path), function (cb) {
-                        //    console.log(path, ' saved');
-                        //    cb(null, endIteration);
-                        //});
                     }, function (err) {
                         console.log('markdown totally indexed !');
                         if (done) done();

@@ -61,6 +61,8 @@ body {
   height  : 100%;
   font-weight: 300;
   font-family : $font-regular;
+  //overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 // Font displayed when a code tag is used
@@ -101,3 +103,7 @@ $footer-height : 40px;
   margin-bottom: $footer-height;
 }
 
+p {
+  max-width:100%;
+  word-wrap : break-word;
+}

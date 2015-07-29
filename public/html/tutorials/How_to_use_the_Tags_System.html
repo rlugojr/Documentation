@@ -1,7 +1,20 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item active"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to use the Tags System</h1><br><div id="staticContent"><h2 id="concepts">Concepts</h2>
-<p>Tag? You may already have heard or read this word before. Let&#39;s see some generic concepts.</p>
-<h3 id="tags-are-used-">Tags are used:</h3>
-<ul>
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item active"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to use the Tags System</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
+<li><a href="#concepts">Concepts</a><ul>
+<li><a href="#tags-are-used">Tags are used:</a></li>
+<li><a href="#tags-on-forums-categories">Tags on forums / Categories</a></li>
+<li><a href="#css-classes">CSS classes</a></li>
+</ul>
+</li>
+<li><a href="#integration-to-babylonjs">Integration to babylon.js</a><ul>
+<li><a href="#pure-javascript">Pure javascript</a></li>
+<li><a href="#rules-to-respect">Rules to respect</a></li>
+<li><a href="#use-in-babylonjs">Use in babylon.js</a></li>
+</ul>
+</li>
+<li><a href="#what-to-do-with-them">What to do with them?</a></li>
+</ul>
+</div></div><div id="staticContent"><h2><a name="concepts" class="anchor" href="#concepts"></a>Concepts</h2><p>Tag? You may already have heard or read this word before. Let&#39;s see some generic concepts.</p>
+<h3><a name="tags-are-used-" class="anchor" href="#tags-are-used-"></a>Tags are used:</h3><ul>
 <li>as an index term assigned to a piece of information</li>
 <li>to pass parameters to subroutines</li>
 <li>as components of the HTML markup language</li>
@@ -11,8 +24,7 @@
 ...</li>
 </ul>
 <p>(from <a href="http://en.wikipedia.org/wiki/Tag">Wikipedia</a>)</p>
-<h3 id="tags-on-forums-categories">Tags on forums / Categories</h3>
-<p>If you spend some time on forums (let&#39;s pick one randomly: <a href="http://http://www.html5gamedevs.com/forum/16-babylonjs/">forum</a> ;)), you may have noticed that tags are attached to topics (and/or posts sometimes).
+<h3><a name="tags-on-forums-categories" class="anchor" href="#tags-on-forums-categories"></a>Tags on forums / Categories</h3><p>If you spend some time on forums (let&#39;s pick one randomly: <a href="http://http://www.html5gamedevs.com/forum/16-babylonjs/">forum</a> ;)), you may have noticed that tags are attached to topics (and/or posts sometimes).
 The author can write words (tags) to shortly describe his/her topic without having to write a gramatically correct sentence. It&#39;s kind of a list of words that you could say during a brainstorming after reading the post.</p>
 <p>Example of a topic with tags:</p>
 <p><img src="http://pix.keuse.fr/images/topic.jpg" alt="Topic with tags"></p>
@@ -20,8 +32,7 @@ The author can write words (tags) to shortly describe his/her topic without havi
 Tags can be used to categorize/group things.</p>
 <p>Here the first search results:</p>
 <p><img src="http://pix.keuse.fr/images/meshtag.jpg" alt="Search results for &quot;mesh&quot; tag"></p>
-<h3 id="css-classes">CSS classes</h3>
-<p>OK...? What&#39;s the link with tags? Why are we about to talk about CSS classes?</p>
+<h3><a name="css-classes" class="anchor" href="#css-classes"></a>CSS classes</h3><p>OK...? What&#39;s the link with tags? Why are we about to talk about CSS classes?</p>
 <p>Because CSS classes are great and Tags in Babylon.js can be considered similar, in principle, to CSS classes. So let&#39;s talk about them.</p>
 <p>CSS stands for Cascading Style Sheets. It&#39;s used to define how to display HTML elements.</p>
 <p>CSS classes are added to HTML elements (by writing them directly in the HTML code or by adding them via javascript) as a value of the <code>class</code> attribute of the corresponding HTML elements.</p>
@@ -38,11 +49,9 @@ Tags can be used to categorize/group things.</p>
 </code></pre>
 <p>The above directive would gather a collection of all HTML elements that use the .center class.</p>
 <p>Here we are! <strong>Tags in babylon.js can be used to categorize/group elements, and helper functions are provided to retrieve/gather tagged elements.</strong></p>
-<h2 id="integration-to-babylon-js">Integration to babylon.js</h2>
-<p>Tags were integrated into babylon.js on April 7, 2014. <a href="https://github.com/BabylonJS/Babylon.js/pull/170#event-109351015">Pull request</a></p>
+<h2><a name="integration-to-babylonjs" class="anchor" href="#integration-to-babylonjs"></a>Integration to babylon.js</h2><p>Tags were integrated into babylon.js on April 7, 2014. <a href="https://github.com/BabylonJS/Babylon.js/pull/170#event-109351015">Pull request</a></p>
 <p>There was a <a href="http://www.html5gamedevs.com/topic/4961-user-data-in-mesh-object/?p=30458">discussion</a> about adding this feature on the forum. The goal was to be able to retrieve meshes.</p>
-<h3 id="pure-javascript">Pure javascript</h3>
-<p>The concept was expanded to allow the adding of tags on any javascript object (not necessarily only the objects created by babylon.js). The <code>Tag</code> class that has been added to babylon.js contains all the necessary code for this generic concept (<a href="https://github.com/BabylonJS/Babylon.js/blob/master/Babylon/Tools/babylon.tags.ts">Typescript code</a>) and internally uses the <code>AndOrNotEvaluator</code> class (<a href="https://github.com/BabylonJS/Babylon.js/blob/master/Babylon/Tools/babylon.andOrNotEvaluator.ts">Typescript code</a>).</p>
+<h3><a name="pure-javascript" class="anchor" href="#pure-javascript"></a>Pure javascript</h3><p>The concept was expanded to allow the adding of tags on any javascript object (not necessarily only the objects created by babylon.js). The <code>Tag</code> class that has been added to babylon.js contains all the necessary code for this generic concept (<a href="https://github.com/BabylonJS/Babylon.js/blob/master/Babylon/Tools/babylon.tags.ts">Typescript code</a>) and internally uses the <code>AndOrNotEvaluator</code> class (<a href="https://github.com/BabylonJS/Babylon.js/blob/master/Babylon/Tools/babylon.andOrNotEvaluator.ts">Typescript code</a>).</p>
 <p>The use of tags for a javascript object can be enabled/disabled like this (javascript code):</p>
 <pre><code class="lang-javascript">var myJSObj = {};
 // enable tags for myJSObj
@@ -126,19 +135,16 @@ BABYLON.Tags.MatchesQuery(myJSObj4, &quot;&quot;); // false
 BABYLON.Tags.MatchesQuery(myJSObj4, undefined); // true
 BABYLON.Tags.MatchesQuery(myJSObj4); // true
 </code></pre>
-<h3 id="rules-to-respect">Rules to respect</h3>
-<ul>
+<h3><a name="rules-to-respect" class="anchor" href="#rules-to-respect"></a>Rules to respect</h3><ul>
 <li>the tags &quot;true&quot; and &quot;false&quot; are reserved and cannot be used as tags.</li>
 <li>a tag cannot start with &quot;||&quot;, &quot;&amp;&amp;&quot;, or &#39;!&#39;</li>
 <li>a tag cannot contain whitespaces</li>
 </ul>
-<h3 id="use-in-babylon-js">Use in babylon.js</h3>
-<p>Since it&#39;s possible to use tags on any javascript object and since meshes are javascript objects, it&#39;s possible to add tags on them and to retrieve them according to a tags query.</p>
+<h3><a name="use-in-babylonjs" class="anchor" href="#use-in-babylonjs"></a>Use in babylon.js</h3><p>Since it&#39;s possible to use tags on any javascript object and since meshes are javascript objects, it&#39;s possible to add tags on them and to retrieve them according to a tags query.</p>
 <pre><code class="lang-javascript">var meshes = myScene.getMeshesByTags(&quot;tag1 &amp;&amp; (tag2 || tag4 || !tag5)) || !(!tag1) &amp;&amp; !!!tag5&quot;);
 </code></pre>
 <p>All tags added to meshes, cameras, lights... are saved to the scene files (see <a href="https://github.com/BabylonJS/Babylon.js/wiki/Babylon.js-file-format">.babylon file format</a>) and reloaded from them.</p>
-<h2 id="what-to-do-with-them-">What to do with them?</h2>
-<p>It&#39;s up to you!</p>
+<h2><a name="what-to-do-with-them" class="anchor" href="#what-to-do-with-them"></a>What to do with them?</h2><p>It&#39;s up to you!</p>
 <p>You can use them to retrieve all the meshes that should be lighted by the light &quot;light1&quot;:</p>
 <pre><code class="lang-javascript">var meshesToLightByLight1 = myScene.getMeshesByTags(&quot;mustBeLightedByLight1&quot;);
 </code></pre>
@@ -152,4 +158,4 @@ for(var index=0; index &lt; ghosts.length; index++) {
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
     $(this).text($(this).text().replace(/&nbsp;/gi, ''));
 });
-hljs.initHighlightingOnLoad();</script>
+hljs.initHighlightingOnLoad();</script></body></html>

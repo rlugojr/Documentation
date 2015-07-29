@@ -1,7 +1,7 @@
 /* MOBILE VERSION - WHAT'S NEW */
 @include media($small-screen) {
   #whats-new{
-    width: 100%;
+    @include outer-container(90%);
     word-wrap : break-word;
 
     ul {

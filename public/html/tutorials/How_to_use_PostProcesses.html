@@ -1,7 +1,13 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item active"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to use PostProcesses</h1><br><div id="staticContent"><p>Postprocesses allow you to create 2D effects on top of your scene.
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item active"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to use PostProcesses</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
+<li><a href="#base-postprocess">Base postprocess</a></li>
+<li><a href="#attach-postprocess">Attach postprocess</a></li>
+<li><a href="#builtin-postprocesses">Builtin postprocesses</a></li>
+<li><a href="#custom-postprocesses">Custom postprocesses</a></li>
+<li><a href="#chaining-postprocesses">Chaining postprocesses</a></li>
+</ul>
+</div></div><div id="staticContent"><p>Postprocesses allow you to create 2D effects on top of your scene.
 A postprocess is linked to a camera and can be part of a chain of postprocesses where each postprocess uses the result of the previous one as input for its own processing.</p>
-<h1 id="base-postprocess">Base postprocess</h1>
-<p>Every postprocess is based upon <code>BABYLON.PostProcess</code> which uses this constructor:</p>
+<h1><a name="base-postprocess" class="anchor" href="#base-postprocess"></a>Base postprocess</h1><p>Every postprocess is based upon <code>BABYLON.PostProcess</code> which uses this constructor:</p>
 <pre><code class="lang-javascript">BABYLON.PostProcess = function (name, fragmentUrl, parameters, samplers, ratio, camera, samplingMode, engine, reusable)
 </code></pre>
 <p>We will get back to <em>fragmentUrl</em>, <em>parameters</em> and <em>samplers</em> parameters.</p>
@@ -15,18 +21,14 @@ A postprocess is linked to a camera and can be part of a chain of postprocesses 
 </ul>
 <p>The <em>engine</em> parameter is the engine where you want to attach your postprocess.</p>
 <p>The <em>reusable</em> paameter indicates if your postprocess can be reused multiple times on the same camera (default is false).</p>
-<h1 id="attach-postprocess">Attach postprocess</h1>
-<p>Depending on how you have defined a postprocess, it can be attached one or more times to the same camera. 
+<h1><a name="attach-postprocess" class="anchor" href="#attach-postprocess"></a>Attach postprocess</h1><p>Depending on how you have defined a postprocess, it can be attached one or more times to the same camera. 
 The same instance can also be attached to multiple cameras.</p>
 <p>A camera has two methods:</p>
-<h4 id="-attachpostprocess-"><strong>attachPostProcess</strong></h4>
-<pre><code class="lang-javascript">NUMBER function(PostProcess postProcess [,NUMBER atIndice])
+<h4><a name="-strong-attachpostprocess-strong-" class="anchor" href="#-strong-attachpostprocess-strong-"></a><strong>attachPostProcess</strong></h4><pre><code class="lang-javascript">NUMBER function(PostProcess postProcess [,NUMBER atIndice])
 </code></pre>
-<h4 id="-detachpostprocess-"><strong>detachPostProcess</strong></h4>
-<pre><code class="lang-javascript">NUMBER function(PostProcess postProcess [,NUMBER[] atIndices])
+<h4><a name="-strong-detachpostprocess-strong-" class="anchor" href="#-strong-detachpostprocess-strong-"></a><strong>detachPostProcess</strong></h4><pre><code class="lang-javascript">NUMBER function(PostProcess postProcess [,NUMBER[] atIndices])
 </code></pre>
-<h1 id="builtin-postprocesses">Builtin postprocesses</h1>
-<p>Babylon.js comes with a set of ready to use postprocesses.</p>
+<h1><a name="builtin-postprocesses" class="anchor" href="#builtin-postprocesses"></a>Builtin postprocesses</h1><p>Babylon.js comes with a set of ready to use postprocesses.</p>
 <ul>
 <li>Pass: Do nothing. Used to copy the framebuffer into a postprocess for further use</li>
 </ul>
@@ -86,8 +88,7 @@ var postProcess = new BABYLON.ConvolutionPostProcess(&quot;Sepia&quot;, sepiaKer
 <p><img src="http://i.imgur.com/IX93hGO.png" alt="LUT">
  Posterize</p>
 <p>You can easily create new filters by using a image editing software to alter the look-up table to fit your needs. Copy/paste the default look-up table on a screenshot or picture before altering it to see in real time what the filtered image will look like.</p>
-<h1 id="custom-postprocesses">Custom postprocesses</h1>
-<p>You can also develop your own postprocess using <code>BABYLON.PostProcess</code> object.</p>
+<h1><a name="custom-postprocesses" class="anchor" href="#custom-postprocesses"></a>Custom postprocesses</h1><p>You can also develop your own postprocess using <code>BABYLON.PostProcess</code> object.</p>
 <p>To do so, you need to create a .fragment.fx file, a shader-storing DOM node, or a ShaderStore entry where you will store the GLSL shader code used for every pixel of the screen:</p>
 <pre><code class="lang-javascript">GLSL
 #ifdef GL_ES
@@ -151,8 +152,7 @@ void main(void)
 <p>Please note that you can also use the output of a previous postprocess as the source for your own sampler:</p>
 <pre><code class="lang-javascript">effect.setTextureFromPostProcess(&quot;sceneSampler&quot;, postProcess0);
 </code></pre>
-<h1 id="chaining-postprocesses">Chaining postprocesses</h1>
-<p>You can chain postprocesses on a specific camera. They are processed using the creation order. For instance here is the code used to simulate a bloom effect:</p>
+<h1><a name="chaining-postprocesses" class="anchor" href="#chaining-postprocesses"></a>Chaining postprocesses</h1><p>You can chain postprocesses on a specific camera. They are processed using the creation order. For instance here is the code used to simulate a bloom effect:</p>
 <pre><code class="lang-javascript">var blurWidth = 1.0;
 
 var postProcess0 = new BABYLON.PassPostProcess(&quot;Scene copy&quot;, 1.0, camera);
@@ -175,4 +175,4 @@ postProcess4.onApply = function (effect) {
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
     $(this).text($(this).text().replace(/&nbsp;/gi, ''));
 });
-hljs.initHighlightingOnLoad();</script>
+hljs.initHighlightingOnLoad();</script></body></html>

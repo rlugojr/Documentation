@@ -14,7 +14,7 @@ If you right click on the scene, on a light, on a camera or on a mesh you fill h
 
 To export you can use the [Babylon] menu in the main menu bar.
 
-### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#exported-features)Exported features
+### Exported features
 
 - _Scene_
     - Clear color

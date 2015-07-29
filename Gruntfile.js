@@ -123,7 +123,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('search-index', [
-            'build-index:build',
+            'build-index',
             "json-minify:build"
         ]);
 

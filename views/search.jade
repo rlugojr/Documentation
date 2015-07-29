@@ -1,13 +1,20 @@
 include includes/header.jade
 include includes/banner.jade
 #wrapper
-   .whats-new-banner
-      h1 Search
-   .horizontal-separator
+    .whats-new-banner
+        h1 Search
+    .horizontal-separator
 
-   div
-      each result in results
-         p
-            h2= result.src
-            p= result.text
+    .search-content
+        h2.searchHeader
+            | #{resultsCount} results for "<a href="/search?q=#{searchTerm}">#{searchTerm}</a>"
+        if(results)
+            each result in results
+                .result
+                    .resultTitle
+                        a(href=result.src)
+                            | #{result.version} : #{result.name}
+                    //.resultText= result.text
+        else
+            | no result
 include includes/footer.jade

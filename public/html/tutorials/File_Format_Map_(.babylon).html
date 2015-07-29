@@ -1,8 +1,39 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item active"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>File Format Map (.babylon)</h1><br><div id="staticContent"><p><strong>Babylon.js</strong> uses a JSON file format for describing scenes.</p>
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item active"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>File Format Map (.babylon)</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
+<li><a href="#basic-types">Basic types</a></li>
+<li><a href="#global-structure">Global structure</a></li>
+<li><a href="#cameras">Cameras</a></li>
+<li><a href="#lights">Lights</a></li>
+<li><a href="#materials">Materials</a></li>
+<li><a href="#textures">Textures</a></li>
+<li><a href="#multimaterials">MultiMaterials</a></li>
+<li><a href="#geometries">Geometries</a></li>
+<li><a href="#boxes">Boxes</a></li>
+<li><a href="#spheres">Spheres</a></li>
+<li><a href="#cylinders">Cylinders</a></li>
+<li><a href="#toruses">Toruses</a></li>
+<li><a href="#grounds">Grounds</a></li>
+<li><a href="#planes">Planes</a></li>
+<li><a href="#torusknots">TorusKnots</a></li>
+<li><a href="#vertexdata">VertexData</a></li>
+<li><a href="#instances">Instances</a></li>
+<li><a href="#meshes">Meshes</a></li>
+<li><a href="#submeshes">SubMeshes</a></li>
+<li><a href="#animations">Animations</a></li>
+<li><a href="#animationkeys">AnimationKeys</a></li>
+<li><a href="#shadowgenerators">ShadowGenerators</a></li>
+<li><a href="#skeletons">Skeletons</a></li>
+<li><a href="#bones">Bones</a></li>
+<li><a href="#particlesystems">ParticleSystems</a></li>
+<li><a href="#lensflaresystems">LensFlareSystems</a></li>
+<li><a href="#lensflares">LensFlares</a></li>
+<li><a href="#sounds">Sounds</a></li>
+<li><a href="#actions">Actions</a></li>
+<li><a href="#example">Example</a></li>
+</ul>
+</div></div><div id="staticContent"><p><strong>Babylon.js</strong> uses a JSON file format for describing scenes.</p>
 <p>You can find the complete loader code here:
 <a href="https://github.com/BabylonJS/Babylon.js/blob/master/Babylon/Loading/Plugins/babylon.babylonFileLoader.js">https://github.com/BabylonJS/Babylon.js/blob/master/Babylon/Loading/Plugins/babylon.babylonFileLoader.js</a></p>
-<h2 id="basic-types">Basic types</h2>
-<p>.babylon files uses the following convention for basic types:</p>
+<h2><a name="basic-types" class="anchor" href="#basic-types"></a>Basic types</h2><p>.babylon files uses the following convention for basic types:</p>
 <ul>
 <li><strong>Vector3</strong>: An array of 3 floats ([x, y, z]). Example: [1.1, 2.2, 3.3]</li>
 <li><strong>Vector4</strong>: An array of 4 floats ([x, y, z, w]). Example: [1.1, 2.2, 3.3, 4.4]</li>
@@ -10,8 +41,7 @@
 <li><strong>Matrix</strong>: An array of 16 floats exposed with row first convention</li>
 <li><strong>Boolean</strong>: true or false</li>
 </ul>
-<h2 id="global-structure">Global structure</h2>
-<p>The global structure of a .babylon file is the following:</p>
+<h2><a name="global-structure" class="anchor" href="#global-structure"></a>Global structure</h2><p>The global structure of a .babylon file is the following:</p>
 <pre><code class="lang-javascript">{
     &quot;autoClear&quot;: boolean,
     &quot;clearColor&quot;: color3,
@@ -32,8 +62,7 @@
     &quot;sounds&quot;: array of Sounds (see below)
 }
 </code></pre>
-<h2 id="cameras">Cameras</h2>
-<p>A camera is defined by the following JSON:</p>
+<h2><a name="cameras" class="anchor" href="#cameras"></a>Cameras</h2><p>A camera is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;name&quot;: string,
     &quot;id&quot;: string,
@@ -65,8 +94,7 @@
     &quot;autoAnimateLoop&quot;: boolean (can be omitted)
 }
 </code></pre>
-<h2 id="lights">Lights</h2>
-<p>A light is defined by the following JSON:</p>
+<h2><a name="lights" class="anchor" href="#lights"></a>Lights</h2><p>A light is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;name&quot;: string,
     &quot;id&quot;: string,
@@ -85,8 +113,7 @@
     &quot;includedOnlyMeshesIds&quot;: array of string
 }
 </code></pre>
-<h2 id="materials">Materials</h2>
-<p>A material is defined by the following JSON:</p>
+<h2><a name="materials" class="anchor" href="#materials"></a>Materials</h2><p>A material is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;name&quot;: string,
     &quot;id&quot;: string,
@@ -109,8 +136,7 @@
     &quot;checkReadyOnlyOnce&quot;: boolean
 }
 </code></pre>
-<h2 id="textures">Textures</h2>
-<p>A texture is defined by the following JSON:</p>
+<h2><a name="textures" class="anchor" href="#textures"></a>Textures</h2><p>A texture is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;name&quot;: string (filename),
     &quot;level&quot;: float (between 0 and 1),
@@ -131,8 +157,7 @@
     &quot;base64String&quot;: string (can be omitted)
 }
 </code></pre>
-<h2 id="multimaterials">MultiMaterials</h2>
-<p>A multiMaterial is defined by the following JSON:</p>
+<h2><a name="multimaterials" class="anchor" href="#multimaterials"></a>MultiMaterials</h2><p>A multiMaterial is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;name&quot;: string,
     &quot;id&quot;: string,
@@ -140,8 +165,7 @@
     &quot;materials&quot;: array of string (which are the ids of sub-materials)
 }
 </code></pre>
-<h2 id="geometries">Geometries</h2>
-<p>The structure of &quot;geometries&quot; is the following:</p>
+<h2><a name="geometries" class="anchor" href="#geometries"></a>Geometries</h2><p>The structure of &quot;geometries&quot; is the following:</p>
 <pre><code class="lang-javascript">{
     &quot;boxes&quot;: array of Boxes (see below),
     &quot;spheres&quot;: array of Spheres (see below),
@@ -153,8 +177,7 @@
     &quot;vertexData&quot;: array of VertexData (see below)
 }
 </code></pre>
-<h2 id="boxes">Boxes</h2>
-<p>A box is defined by the following JSON:</p>
+<h2><a name="boxes" class="anchor" href="#boxes"></a>Boxes</h2><p>A box is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;id&quot;: string,
     &quot;size&quot;: float,
@@ -162,8 +185,7 @@
     &quot;tags&quot;: string
 }
 </code></pre>
-<h2 id="spheres">Spheres</h2>
-<p>A sphere is defined by the following JSON:</p>
+<h2><a name="spheres" class="anchor" href="#spheres"></a>Spheres</h2><p>A sphere is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;id&quot;: string,
     &quot;segments&quot;: float,
@@ -172,8 +194,7 @@
     &quot;tags&quot;: string
 }
 </code></pre>
-<h2 id="cylinders">Cylinders</h2>
-<p>A cylinder is defined by the following JSON:</p>
+<h2><a name="cylinders" class="anchor" href="#cylinders"></a>Cylinders</h2><p>A cylinder is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;id&quot;: string,
     &quot;height&quot;: float,
@@ -185,8 +206,7 @@
     &quot;tags&quot;: string
 }
 </code></pre>
-<h2 id="toruses">Toruses</h2>
-<p>A torus is defined by the following JSON:</p>
+<h2><a name="toruses" class="anchor" href="#toruses"></a>Toruses</h2><p>A torus is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;id&quot;: string,
     &quot;diameter&quot;: float,
@@ -196,8 +216,7 @@
     &quot;tags&quot;: string
 }
 </code></pre>
-<h2 id="grounds">Grounds</h2>
-<p>A ground is defined by the following JSON:</p>
+<h2><a name="grounds" class="anchor" href="#grounds"></a>Grounds</h2><p>A ground is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;id&quot;: string,
     &quot;width&quot;: float,
@@ -207,8 +226,7 @@
     &quot;tags&quot;: string
 }
 </code></pre>
-<h2 id="planes">Planes</h2>
-<p>A plane is defined by the following JSON:</p>
+<h2><a name="planes" class="anchor" href="#planes"></a>Planes</h2><p>A plane is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;id&quot;: string,
     &quot;size&quot;: float,
@@ -216,8 +234,7 @@
     &quot;tags&quot;: string
 }
 </code></pre>
-<h2 id="torusknots">TorusKnots</h2>
-<p>A torusKnot is defined by the following JSON:</p>
+<h2><a name="torusknots" class="anchor" href="#torusknots"></a>TorusKnots</h2><p>A torusKnot is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;id&quot;: string,
     &quot;radius&quot;: float,
@@ -230,8 +247,7 @@
     &quot;tags&quot;: string
 }
 </code></pre>
-<h2 id="vertexdata">VertexData</h2>
-<p>A vertexData is defined by the following JSON:</p>
+<h2><a name="vertexdata" class="anchor" href="#vertexdata"></a>VertexData</h2><p>A vertexData is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;id&quot;: string,
     &quot;updatable&quot;: bool,
@@ -250,8 +266,7 @@
     &quot;tags&quot;: string
 }
 </code></pre>
-<h2 id="instances">Instances</h2>
-<p>A instance is defined by the following JSON:</p>
+<h2><a name="instances" class="anchor" href="#instances"></a>Instances</h2><p>A instance is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;name&quot;: string,
     &quot;tags&quot;: string,
@@ -261,8 +276,7 @@
     &quot;scaling&quot;: vector3
 }
 </code></pre>
-<h2 id="meshes">Meshes</h2>
-<p>A mesh is defined by the following JSON:</p>
+<h2><a name="meshes" class="anchor" href="#meshes"></a>Meshes</h2><p>A mesh is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;name&quot;: string,
     &quot;id&quot;: string,
@@ -315,8 +329,7 @@
 }
 </code></pre>
 <p>Please note that a parent mesh must be described before their children nodes</p>
-<h2 id="submeshes">SubMeshes</h2>
-<p>A subMesh is defined by the following JSON:</p>
+<h2><a name="submeshes" class="anchor" href="#submeshes"></a>SubMeshes</h2><p>A subMesh is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;materialIndex&quot;: int,
     &quot;verticesStart&quot;: int,
@@ -325,8 +338,7 @@
     &quot;indexCount&quot;: int
 }
 </code></pre>
-<h2 id="animations">Animations</h2>
-<p>An animation can be defined by the following JSON:</p>
+<h2><a name="animations" class="anchor" href="#animations"></a>Animations</h2><p>An animation can be defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;dataType&quot;: int (0 = float, 1 = vector3, 2 = quaternion, 3 = matrix),
     &quot;framePerSecond&quot;: int,
@@ -340,15 +352,13 @@
     &quot;autoAnimateLoop&quot;: boolean
 }
 </code></pre>
-<h2 id="animationkeys">AnimationKeys</h2>
-<p>An animationKey is defined by the following JSON:</p>
+<h2><a name="animationkeys" class="anchor" href="#animationkeys"></a>AnimationKeys</h2><p>An animationKey is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;frame&quot;: int,
     &quot;values&quot;: array of float (depending of animated value)
 }
 </code></pre>
-<h2 id="shadowgenerators">ShadowGenerators</h2>
-<p>A shadowGenerator is defined by the following JSON:</p>
+<h2><a name="shadowgenerators" class="anchor" href="#shadowgenerators"></a>ShadowGenerators</h2><p>A shadowGenerator is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;useBlurVarianceShadowMap&quot;: boolean,
     &quot;useVarianceShadowMap&quot;: boolean,
@@ -359,16 +369,14 @@
     &quot;renderList&quot;: array of string (which are IDs of meshes)
 }
 </code></pre>
-<h2 id="skeletons">Skeletons</h2>
-<p>A skeleton is defined by the following JSON:</p>
+<h2><a name="skeletons" class="anchor" href="#skeletons"></a>Skeletons</h2><p>A skeleton is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;name&quot;: string,
     &quot;id&quot;: string,
     &quot;bones&quot;: array of Bones (see below)
 }
 </code></pre>
-<h2 id="bones">Bones</h2>
-<p>A bone is defined by the following JSON:</p>
+<h2><a name="bones" class="anchor" href="#bones"></a>Bones</h2><p>A bone is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
     &quot;parentBoneIndex&quot;: int,
     &quot;name&quot;: string,
@@ -376,8 +384,7 @@
     &quot;animations&quot;: array of Animations (must be of matrix type)
 }
 </code></pre>
-<h2 id="particlesystems">ParticleSystems</h2>
-<p>A particle system is defined by the following JSON:</p>
+<h2><a name="particlesystems" class="anchor" href="#particlesystems"></a>ParticleSystems</h2><p>A particle system is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
      &quot;emitterId&quot;: string,
      &quot;gravity&quot;: vector3,
@@ -407,16 +414,14 @@
      &quot;linkToEmitter&quot;: bool
 }
 </code></pre>
-<h2 id="lensflaresystems">LensFlareSystems</h2>
-<p>A lens flare system is defined by the following JSON:</p>
+<h2><a name="lensflaresystems" class="anchor" href="#lensflaresystems"></a>LensFlareSystems</h2><p>A lens flare system is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
      &quot;emitterId&quot;: string,
      &quot;borderLimit&quot;: int,
      &quot;flares&quot;: array of LensFlares (see below)
 }
 </code></pre>
-<h2 id="lensflares">LensFlares</h2>
-<p>A lens flare is defined by the following JSON:</p>
+<h2><a name="lensflares" class="anchor" href="#lensflares"></a>LensFlares</h2><p>A lens flare is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
      &quot;position&quot;: float,
      &quot;size&quot;: float,
@@ -424,8 +429,7 @@
      &quot;textureName&quot;: string
 }
 </code></pre>
-<h2 id="sounds">Sounds</h2>
-<p>A sound is defined by the following JSON:</p>
+<h2><a name="sounds" class="anchor" href="#sounds"></a>Sounds</h2><p>A sound is defined by the following JSON:</p>
 <pre><code class="lang-javascript">{
      &quot;name&quot;: string, (name of the file to load)
      &quot;volume&quot;: float, (if omitted will be 1)
@@ -447,8 +451,7 @@
      &quot;localDirectionToMesh&quot;: vector3 (can be omitted, default to 1,0,0)
 }
 </code></pre>
-<h2 id="actions">Actions</h2>
-<p>An action is defined by the following JSON. An action can contain children actions.</p>
+<h2><a name="actions" class="anchor" href="#actions"></a>Actions</h2><p>An action is defined by the following JSON. An action can contain children actions.</p>
 <pre><code class="lang-javascript">{
     &quot;type&quot;: number, (action&#39;s type. 0 = Trigger, 1 = Action, 2 = Flow Control)
     &quot;name&quot;: string, (name of the action, trigger or flow control)
@@ -465,8 +468,7 @@
     &quot;targetType&quot;: string (internal use for the BabylonJS Actions Builder, specifies where to find the properties for &quot;propertyPath&quot;)
 }
 </code></pre>
-<h2 id="example">Example</h2>
-<p>Here is a simple example of .babylon file:</p>
+<h2><a name="example" class="anchor" href="#example"></a>Example</h2><p>Here is a simple example of .babylon file:</p>
 <pre><code class="lang-javascript">{
     &quot;autoClear&quot;: true,
     &quot;clearColor&quot;: [0, 0, 0],
@@ -745,4 +747,4 @@
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
     $(this).text($(this).text().replace(/&nbsp;/gi, ''));
 });
-hljs.initHighlightingOnLoad();</script>
+hljs.initHighlightingOnLoad();</script></body></html>

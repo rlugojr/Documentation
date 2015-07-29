@@ -20,8 +20,8 @@ router.get('/', function(req, res) {
 
     res.status(200);
     res.set({
-        'Content-type':'text/html',
-        'Cache-Control': 'no-cache'
+        'Cache-Control': 'no-cache',
+        'Content-type':'text/html'
     });
     res.sendFile('./exporters.html', options);
 });
@@ -35,8 +35,8 @@ router.get('/:exporter', function(req, res){
 
     res.status(200);
     res.set({
-        'Content-type':'text/html',
-        'Cache-Control': 'no-cache'
+        'Cache-Control': 'no-cache',
+        'Content-type':'text/html'
     });
     res.sendFile('./exporters/'+ exporter +'.html', options);
 });

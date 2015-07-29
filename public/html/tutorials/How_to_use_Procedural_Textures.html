@@ -1,4 +1,17 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item active"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to use Procedural Textures</h1><br><div id="staticContent"><p>In classic texturing, we use 2D images, often pictures that have been shaped specifically to match an object. Let’s imagine you are creating a medieval fantasy game, working on a dwarf pub, where there are multiple, big, &quot;old school&quot; wooden tables. With classic 2D texturing, you have 3 choices:</p>
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item active"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to use Procedural Textures</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
+<li><a href="#procedural-textures-in-babylonjs">Procedural Textures in Babylon.js</a><ul>
+<li><a href="#using-standard-procedural-textures">Using Standard Procedural Textures</a></li>
+<li><a href="#all-standard-procedural-textures">All Standard Procedural Textures</a></li>
+<li><a href="#creating-custom-procedural-textures">Creating Custom Procedural Textures</a><ul>
+<li><a href="#using-a-files-based-custom-procedural-texture">Using a Files-Based Custom Procedural Texture</a></li>
+<li><a href="#using-a-shaderstore-for-shader-storage">Using a ShaderStore for Shader Storage</a></li>
+<li><a href="#using-a-dom-element-for-shader-storage">Using a DOM Element for Shader Storage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div></div><div id="staticContent"><p>In classic texturing, we use 2D images, often pictures that have been shaped specifically to match an object. Let’s imagine you are creating a medieval fantasy game, working on a dwarf pub, where there are multiple, big, &quot;old school&quot; wooden tables. With classic 2D texturing, you have 3 choices:</p>
 <ul>
 <li><p>Create a single texture and use it on all of the tables (but every table is going to look the same)</p>
 </li>
@@ -19,10 +32,8 @@
 </li>
 </ul>
 <p>See more about &#39;refreshrate&#39; in the Custom Procedural Textures section... far below.</p>
-<h1 id="procedural-textures-in-babylon-js">Procedural Textures in Babylon.js</h1>
-<p><strong>Babylon.js</strong> offers you an easy out-of-the-box way to use this kind of texture. The engine itself provides you with standard default textures that you can use right now. It also gives you the ability to create custom procedural textures and package them in a simple way.</p>
-<h2 id="using-standard-procedural-textures">Using Standard Procedural Textures</h2>
-<p>Babylon.js has a number of pre-built procedural textures that are very easy to use. Applying a procedural texture is just the same as using a classic one. Let’s start with a simple mesh (a cylinder in this case) and attach it to your scene:</p>
+<h1><a name="procedural-textures-in-babylonjs" class="anchor" href="#procedural-textures-in-babylonjs"></a>Procedural Textures in Babylon.js</h1><p><strong>Babylon.js</strong> offers you an easy out-of-the-box way to use this kind of texture. The engine itself provides you with standard default textures that you can use right now. It also gives you the ability to create custom procedural textures and package them in a simple way.</p>
+<h2><a name="using-standard-procedural-textures" class="anchor" href="#using-standard-procedural-textures"></a>Using Standard Procedural Textures</h2><p>Babylon.js has a number of pre-built procedural textures that are very easy to use. Applying a procedural texture is just the same as using a classic one. Let’s start with a simple mesh (a cylinder in this case) and attach it to your scene:</p>
 <pre><code class="lang-javascript">    var cylinder = BABYLON.Mesh.CreateCylinder(&quot;mycylinder&quot;, 7, 2, 2, 12, 1, scene);
 </code></pre>
 <p>Then, you need to create a StandardMaterial:</p>
@@ -39,8 +50,7 @@
 <pre><code class="lang-javascript">    texture.woodColor = new BABYLON.Color3(0.49, 0.25, 0);
     texture.ampScale = new BABYLON.Vector2(1.0, 1.0);
 </code></pre>
-<h2 id="all-standard-procedural-textures">All Standard Procedural Textures</h2>
-<p>All standard procedural textures can be used in the same ways, but they each have specific (special) properties:</p>
+<h2><a name="all-standard-procedural-textures" class="anchor" href="#all-standard-procedural-textures"></a>All Standard Procedural Textures</h2><p>All standard procedural textures can be used in the same ways, but they each have specific (special) properties:</p>
 <ul>
 <li><strong>WoodProceduralTexture</strong><ul>
 <li><strong>woodColor</strong> to modify the color of the wood in the texture (<em><strong>BABYLON.Color3/4</strong></em>)</li>
@@ -82,9 +92,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="creating-custom-procedural-textures">Creating Custom Procedural Textures</h2>
-<h3 id="using-a-files-based-custom-procedural-texture">Using a Files-Based Custom Procedural Texture</h3>
-<p>To use a files-based custom procedural texture, you need to create a folder containing at least 2 files:</p>
+<h2><a name="creating-custom-procedural-textures" class="anchor" href="#creating-custom-procedural-textures"></a>Creating Custom Procedural Textures</h2><h3><a name="using-a-files-based-custom-procedural-texture" class="anchor" href="#using-a-files-based-custom-procedural-texture"></a>Using a Files-Based Custom Procedural Texture</h3><p>To use a files-based custom procedural texture, you need to create a folder containing at least 2 files:</p>
 <ul>
 <li>config.json</li>
 <li>custom.fragment.fx</li>
@@ -155,8 +163,7 @@ Here is a more complex example using 2 samplers and mixing their color equally. 
 <p>To use this custom texture, you need to make your folder available to your babylon.js html/javascript files and use a <strong>CustomProceduralTexture</strong> class instead of a standard one. The difference is only that you specify a new parameter which is the relative path to the folder containing the custom texture. Babylon.js will automatically read the config.json and custom.fragment.fx files and load everything for you.</p>
 <pre><code class="lang-javascript">    var texture = new BABYLON.CustomProceduralTexture(&quot;texture&quot;, &quot;./pathtotexture&quot;, 1024, scene);
 </code></pre>
-<h3 id="using-a-shaderstore-for-shader-storage">Using a ShaderStore for Shader Storage</h3>
-<p>You can also use the ShaderStore to write a shader inline and use it in a CustomProceduralTexture.
+<h3><a name="using-a-shaderstore-for-shader-storage" class="anchor" href="#using-a-shaderstore-for-shader-storage"></a>Using a ShaderStore for Shader Storage</h3><p>You can also use the ShaderStore to write a shader inline and use it in a CustomProceduralTexture.
 This can be done easily using the <strong>BABYLON.Effect.ShaderStore</strong> array : </p>
 <pre><code class="lang-javascript">BABYLON.Effect.ShadersStore[&quot;LinesPixelShader&quot;] =
        &quot;#ifdef GL_ES\n&quot; +
@@ -172,8 +179,7 @@ This can be done easily using the <strong>BABYLON.Effect.ShaderStore</strong> ar
 <p>To use this shader, you just have to create a CustomProceduralTexture and put the name of your shader in the store instead of the path to the files.</p>
 <pre><code class="lang-javascript">var customProcText = new BABYLON.CustomProceduralTexture(&quot;customtext&quot;, &quot;Lines&quot;, 1024, scene);
 </code></pre>
-<h3 id="using-a-dom-element-for-shader-storage">Using a DOM Element for Shader Storage</h3>
-<p>Finally you can also use <strong>DOM Elements</strong> to store your shader. You just have to create a script tag in your HTML file like this:</p>
+<h3><a name="using-a-dom-element-for-shader-storage" class="anchor" href="#using-a-dom-element-for-shader-storage"></a>Using a DOM Element for Shader Storage</h3><p>Finally you can also use <strong>DOM Elements</strong> to store your shader. You just have to create a script tag in your HTML file like this:</p>
 <pre><code class="lang-javascript">&lt;script type=&quot;application/pixelShader&quot; id=&quot;LinesPixelShader&quot;&gt;
         #ifdef GL_ES
         precision highp float;
@@ -193,4 +199,4 @@ var customProcText = new BABYLON.CustomProceduralTexture(&quot;customtext&quot;,
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
     $(this).text($(this).text().replace(/&nbsp;/gi, ''));
 });
-hljs.initHighlightingOnLoad();</script>
+hljs.initHighlightingOnLoad();</script></body></html>

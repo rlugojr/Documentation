@@ -1,32 +1,36 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"><div class="searchbar-mobile"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><a href="/"><i class="fa fa-home"></i>Home</a><a href="/whats-new"><i class="fa fa-file-text-o"></i>What's new</a><a href="/tutorials"><i class="fa fa-cogs"></i>Tutorials</a><a href="/exporters"><i class="fa fa-rocket"></i>Exporters</a><a href="/extensions"><i class="fa fa-wrench"></i>Extensions</a><a href="/classes"><i class="fa fa-files-o"></i>Classes</a><div class="links"><a href="http://www.babylonjs.com" target="_blank"><i class="fa fa-play"></i>babylonjs.com</a><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>Github</a><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>Forum</a></div></nav></body></html><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item active"><span>Classes</span></div></div><div class="more"><div class="searchbar"><meta content="http://localhost:3000/search?q={q}" itemprop="target"><input type="text" placeholder="Search..."><i class="fa fa-search"></i></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>Using the HDR Rendering Pipeline</h1><br><div id="staticContent"><p>The HDR Rendering pipeline is a set of multiple post-processes. It tends to simulate the eye adaptation to the light and darkness and also simulate the most realistic glare.</p>
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item active"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>Using the HDR Rendering Pipeline</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
+<li><a href="#instancing-the-pipeline">Instancing the pipeline</a></li>
+<li><a href="#remove-the-pipeline">Remove the pipeline</a></li>
+<li><a href="#working-with-parameters">Working with parameters</a><ul>
+<li><a href="#gaussian-blur">Gaussian Blur</a></li>
+<li><a href="#bright-pass">Bright Pass</a></li>
+<li><a href="#hdr">HDR</a></li>
+</ul>
+</li>
+<li><a href="#example-of-configuration-to-get-focus-on-the-effect">Example of configuration to get focus on the effect</a></li>
+</ul>
+</div></div><div id="staticContent"><p>The HDR Rendering pipeline is a set of multiple post-processes. It tends to simulate the eye adaptation to the light and darkness and also simulate the most realistic glare.</p>
 <p>The train demo (focus on the tunnel) : <a href="http://reath.free.fr/HDR/test.html">http://reath.free.fr/HDR/test.html</a></p>
-<h2 id="instancing-the-pipeline">Instancing the pipeline</h2>
-<pre><code class="lang-javascript">var hdr = new BABYLON.HDRRenderingPipeline(&quot;pipeline_name&quot;, scene, ratio, originalPostProcess, cameras);
+<h2><a name="instancing-the-pipeline" class="anchor" href="#instancing-the-pipeline"></a>Instancing the pipeline</h2><pre><code class="lang-javascript">var hdr = new BABYLON.HDRRenderingPipeline(&quot;pipeline_name&quot;, scene, ratio, originalPostProcess, cameras);
 </code></pre>
 <p>The parameter <code>originalPostProcess</code> is the base color post-process for the pipeline. If <code>null</code>, a <code>BABYLON.PassPostProcess</code> is created by default.</p>
 <p>The parameter <code>cameras</code> is an array of cameras on which the pipeline will be attached to.</p>
-<h2 id="remove-the-pipeline">Remove the pipeline</h2>
-<pre><code class="lang-javascript">hdr.dispose();
+<h2><a name="remove-the-pipeline" class="anchor" href="#remove-the-pipeline"></a>Remove the pipeline</h2><pre><code class="lang-javascript">hdr.dispose();
 </code></pre>
 <p>Will detach the pipeline from all cameras of the previously given scene.</p>
-<h2 id="working-with-parameters">Working with parameters</h2>
-<h3 id="gaussian-blur">Gaussian Blur</h3>
-<p>The Gaussian Blur equation used:
+<h2><a name="working-with-parameters" class="anchor" href="#working-with-parameters"></a>Working with parameters</h2><h3><a name="gaussian-blur" class="anchor" href="#gaussian-blur"></a>Gaussian Blur</h3><p>The Gaussian Blur equation used:
 <img src="http://homepages.inf.ed.ac.uk/rbf/HIPR2/eqns/eqngaus1.gif" alt="Elements"></p>
 <p><code>hdr.gaussCoeff</code> controls the overall effect: <code>hdr.gaussCoeff * theEffect</code>. Default 0.3</p>
 <p><code>hdr.gaussMean</code> is used to ajust the <code>x</code> value:  <code>x - hdr.gaussMean</code>. Default 1.0</p>
 <p><code>hdr.gaussStandDev</code> controls the gaussian blur standard deviation (sigma). Default 0.8</p>
-<h3 id="bright-pass">Bright Pass</h3>
-<p>The bright pass is rendered before the gaussian blur pass. It is used to compute the minimum light needed to compute the HDR effect.</p>
+<h3><a name="bright-pass" class="anchor" href="#bright-pass"></a>Bright Pass</h3><p>The bright pass is rendered before the gaussian blur pass. It is used to compute the minimum light needed to compute the HDR effect.</p>
 <p><code>hdr.brightThreshold</code> default value is 0.8</p>
-<h3 id="hdr">HDR</h3>
-<p><code>hdr.exposure</code> is used to ajust the colors. High exposures are used to see details in darkness and low exposures in bright areas. Default value is 1.0</p>
+<h3><a name="hdr" class="anchor" href="#hdr"></a>HDR</h3><p><code>hdr.exposure</code> is used to ajust the colors. High exposures are used to see details in darkness and low exposures in bright areas. Default value is 1.0</p>
 <p><code>hdr.minimumLuminance</code> is the minimum luminance that the post-process can output. Luminance is &gt;= 0. Default value is 1.0.</p>
 <p><code>hdr.maximumLuminance</code> is the maximum luminance that the post-process can output. Luminance is &gt; <code>hdr.minimumLuminance</code>. Default value is 1e20.</p>
 <p><code>hdr.luminanceIncreaserate</code> controls the eye adaptation speed to the darkness. Default value is 0.5.</p>
 <p><code>hdr.luminanceDecreaseRate</code> controls the eye adaptation speed to the light Default value is 0.5.</p>
-<h2 id="example-of-configuration-to-get-focus-on-the-effect">Example of configuration to get focus on the effect</h2>
-<pre><code class="lang-javascript">var hdr = new BABYLON.HDRRenderingPipeline(&quot;hdr&quot;, scene, 1.0, [scene.activeCamera]);
+<h2><a name="example-of-configuration-to-get-focus-on-the-effect" class="anchor" href="#example-of-configuration-to-get-focus-on-the-effect"></a>Example of configuration to get focus on the effect</h2><pre><code class="lang-javascript">var hdr = new BABYLON.HDRRenderingPipeline(&quot;hdr&quot;, scene, 1.0, [scene.activeCamera]);
 hdr.brightThreshold = 0.7; // Minimum luminance needed to compute HDR
 hdr.gaussCoeff = 0.5; // Gaussian coefficient = gaussCoeff * theEffectOutput;
 hdr.gaussMean = 1; // The Gaussian blur mean
@@ -40,4 +44,4 @@ hdr.luminanceIncreaserate = 0.5; // Increase rate: light to darkness
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank" class="bjs-forum"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank" class="bjs-github"><i class="fa fa-github"></i>    Github</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
     $(this).text($(this).text().replace(/&nbsp;/gi, ''));
 });
-hljs.initHighlightingOnLoad();</script>
+hljs.initHighlightingOnLoad();</script></body></html>

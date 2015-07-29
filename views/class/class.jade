@@ -1,45 +1,45 @@
 include ../includes/header
-include ../includes/banner
-.classBar
-    .classesTitle CLASSES
-    .sorts
-        span#orderByTags.order Tags
-        span#orderByAlpha.order.selectedOrder A - Z
-    #classes_classesListByTag.hidden.sidemenu
-        each bClasses, category in classListByTag
-            div(id=category).category
-                div.categoryTitle
-                    h3= category
-                div.categoryList
-                    //List the classes of a category
-                    each bClass in bClasses
-                        li
-                            a(href='/classes/'+currentVersion+'/'+bClass).className= bClass
-    #classes_classesListByAlpha.sideClassesListByAlpha
-        - for className in classListByAlpha
-            a.class(href='./'+className)= className.replace('_T_','<T>')
+    include ../includes/banner
+    .classBar
+        .classesTitle CLASSES
+        .sorts
+            span#orderByTags.order Tags
+            span#orderByAlpha.order.selectedOrder A - Z
+        #classes_classesListByTag.hidden.sidemenu
+            each bClasses, category in classListByTag
+                div(id=category).category
+                    div.categoryTitle
+                        h3= category
+                    div.categoryList
+                        //List the classes of a category
+                        each bClass in bClasses
+                            li
+                                a(href='/classes/'+currentVersion+'/'+bClass).className= bClass
+        #classes_classesListByAlpha.sideClassesListByAlpha
+            - for className in classListByAlpha
+                a.class(href='./'+className)= className.replace('_T_','<T>')
 
-// Element to resize the sidebar
-.classBarResize#resizeBar(draggable=true)
+    // Element to resize the sidebar
+    .classBarResize#resizeBar(draggable=true)
 
-// Content of the selected class
-.classContent
-    #classTitle
-        h1= className.replace('_T_','<T>')
-        #selectList
-            select#methodsList
-    if(classTags)
-        #classTags
-            each tag in classTags
-                a(href='/classes/'+currentVersion, id=tag).classTag= tag
-    #classMd!= content
+    // Content of the selected class
+    .classContent
+        #classTitle
+            h1= className.replace('_T_','<T>')
+            #selectList
+                select#methodsList
+        if(classTags)
+            #classTags
+                each tag in classTags
+                    a(href='/classes/'+currentVersion, id=tag).classTag= tag
+        #classMd!= content
 
-// The content wrapper
-#wrapper
+    // The content wrapper
+    #wrapper
 
 
-include ../includes/footer
+    include ../includes/footer
 
-script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/js/min/perfect-scrollbar.jquery.min.js')
-script(src='/js/classes.js')
-script(src="/js/class.js")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/js/min/perfect-scrollbar.jquery.min.js')
+    script(src='/js/classes.js')
+    script(src="/js/class.js")

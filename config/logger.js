@@ -5,9 +5,14 @@ var winston = require('winston');
  * silly
  * debug
  * verbose
- * info
+ * info         - logger.info("The information");
  * warn
- * error
+ * error        - logger.error(util.inspect(err, {showHidden: false, colors: true}));
+ */
+ /* Need these vars to work :
+    path    = require('path'),
+    appRoot = require('app-root-path').path,
+    logger  = require(path.join(appRoot, 'config/logger'));
  */
 
 var logger = new (winston.Logger)({

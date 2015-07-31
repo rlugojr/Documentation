@@ -2,6 +2,8 @@
 ID_PAGE: 6786
 PG_TITLE: ParticleSystem
 PG_VERSION: 2.1
+TAGS:
+    - Particle
 ---
 ##new [ParticleSystem](page.php?p=6786)(name, capacity, scene, customEffect)
 

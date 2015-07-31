@@ -2,6 +2,10 @@
 ID_PAGE: 6737
 PG_TITLE: MirrorTexture
 PG_VERSION: 2.1
+TAGS:
+    - BaseTexture
+    - Texture
+    - TargetTexture
 ---
 ##new [MirrorTexture](page.php?p=6737)(name, size, scene, generateMipMaps)
 
@@ -22,7 +26,8 @@ A tutorial about advanced texturing can be found here : https://github.com/Babyl
 optional | generateMipMaps | boolean | True to generate the mip map ; Fals otherwise
 ---
 
-##Extends [RenderTargetTexture](page.php?p=6736)
+##Extends
+ [RenderTargetTexture](page.php?p=6736)
 ##Members
 
 ###mirrorPlane : [Plane](page.php?p=6755)

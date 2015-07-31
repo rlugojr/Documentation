@@ -2,12 +2,17 @@
 ID_PAGE: 6632
 PG_TITLE: ArcRotateCamera
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Camera
+    - ArcRotateCamera
 ---
 ##new [ArcRotateCamera](page.php?p=6632)(name, alpha, beta, radius, target, scene)
 
 
 
-Create a new [ArcRotateCamera](page.php?p=6632). [ArcRotateCamera](page.php?p=6632) is a camera that rotates around a given pivot. It can be controlled with the mouse or touch events (and it also requires hand.js to work)
+Create a new [ArcRotateCamera](page.php?p=6632).
+ [ArcRotateCamera](page.php?p=6632) is a camera that rotates around a given pivot. It can be controlled with the mouse or touch events (and it also requires hand.js to work)
 A tutorial about [ArcRotateCamera](page.php?p=6632) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
 
 
@@ -24,7 +29,8 @@ A tutorial about [ArcRotateCamera](page.php?p=6632) can be found [here](https://
  | scene | [Scene](page.php?p=6662) | 
 ---
 
-##Extends [Camera](page.php?p=6631)
+##Extends
+ [Camera](page.php?p=6631)
 ##Members
 
 ###alpha : number

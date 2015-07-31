@@ -2,6 +2,8 @@
 ID_PAGE: 6803
 PG_TITLE: VolumetricLightScatteringPostProcess
 PG_VERSION: 2.1
+TAGS:
+    - PostProcess
 ---
 ##new [VolumetricLightScatteringPostProcess](page.php?p=6803)(name, ratio, camera, mesh, samples, samplingMode, engine, reusable)
 
@@ -19,7 +21,8 @@ optional | engine | [Engine](page.php?p=6629) |
 optional | reusable | boolean | 
 ---
 
-##Extends [PostProcess](page.php?p=6790)
+##Extends
+ [PostProcess](page.php?p=6790)
 ##Members
 
 ###useCustomMeshPosition : boolean

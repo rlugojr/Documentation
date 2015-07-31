@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 22601
 PG_TITLE: How to use Procedural Textures
+TAGS:
+    - 04.MoreAdvancedFeatures
 ---
 In classic texturing, we use 2D images, often pictures that have been shaped specifically to match an object. Let’s imagine you are creating a medieval fantasy game, working on a dwarf pub, where there are multiple, big, "old school" wooden tables. With classic 2D texturing, you have 3 choices:
 

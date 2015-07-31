@@ -2,6 +2,8 @@
 ID_PAGE: 6718
 PG_TITLE: DebugLayer
 PG_VERSION: 2.1
+TAGS:
+    - Tools
 ---
 ##new [DebugLayer](page.php?p=6718)(scene)
 

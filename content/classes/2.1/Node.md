@@ -2,8 +2,11 @@
 ID_PAGE: 6630
 PG_TITLE: Node
 PG_VERSION: 2.1
+TAGS:
+    - Node
 ---
- [Node](page.php?p=6630) is the basic class for all scene objects (Mesh, [Light](page.php?p=6652) [Camera](page.php?p=6631)).
+
+ [Node](page.php?p=6630) is the basic class for all scene objects (Mesh, [Light](page.php?p=6652) [Camera](page.php?p=6631)).
 ##new [Node](page.php?p=6630)(name, scene)
 
 @constructor

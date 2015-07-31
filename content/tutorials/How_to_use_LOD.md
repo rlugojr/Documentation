@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 22591
 PG_TITLE: How to use LOD
+TAGS:
+    - 04.MoreAdvancedFeatures
 ---
 Babylon.js comes with an integrated support for level of detail.
 

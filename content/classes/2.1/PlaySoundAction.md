@@ -2,6 +2,8 @@
 ID_PAGE: 6674
 PG_TITLE: PlaySoundAction
 PG_VERSION: 2.1
+TAGS:
+    - Action
 ---
 ##new [PlaySoundAction](page.php?p=6674)(triggerOptions, sound, condition)
 
@@ -16,7 +18,8 @@ PG_VERSION: 2.1
 optional | condition | [Condition](page.php?p=6679) | 
 ---
 
-##Extends [Action](page.php?p=6663)
+##Extends
+ [Action](page.php?p=6663)
 
 
 ##Methods

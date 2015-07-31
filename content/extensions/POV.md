@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 24842
 PG_TITLE: POV
+TAGS:
+    - POV
 ---
 #Point of View Movement and Rotation
 ## Movement: ##

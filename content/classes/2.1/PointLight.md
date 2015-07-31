@@ -2,6 +2,9 @@
 ID_PAGE: 6655
 PG_TITLE: PointLight
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Light
 ---
 
 A point light is a light defined by an unique point in world space.
@@ -26,7 +29,8 @@ Creates a new [PointLight](page.php?p=6655) object
  | scene | [Scene](page.php?p=6662) | The scene to create the light into
 ---
 
-##Extends [Light](page.php?p=6652)
+##Extends
+ [Light](page.php?p=6652)
 ##Members
 
 ###position : [Vector3](page.php?p=6751)

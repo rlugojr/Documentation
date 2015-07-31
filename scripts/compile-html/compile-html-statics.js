@@ -10,11 +10,12 @@ var fs      = require('fs'),
     logger  = require(path.join(appRoot, 'config/logger')),
     marked  = require('meta-marked'),
     renderer= new marked.Renderer(),
+
     rimraf  = require('rimraf'),
     toc     = require('marked-toc');
 
 renderer.heading = function(text, level){
-    var escapedText = text.toLowerCase().replace(/[?\.,]/g, '').trim().replace(/[^\w]+/g, '-');
+    var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-').replace(/-$/, '');
 
     return '<h' + level + '><a name="' +
         escapedText +
@@ -141,7 +142,7 @@ var getStaticPagesContent = function(dataObj, category, cb){
             } else {
                 fs.readFile(filename, {encoding: 'utf-8', flag: 'r'}, function(readErr, content){
                     if (readErr) {
-                        console.log(readErr);
+                        logger.info(readErr);
                     } else {
                         var markedContent = marked(content),
                             tableOfContent = marked(toc(content, { omit:['PG_TITLE'] })).html;

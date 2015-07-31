@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 25103
 PG_TITLE: GUISystem
+TAGS:
+    - bGUI
 ---
 ##new [GUISystem](http://doc.babylonjs.com/page.php?p=25103)(scene, guiWidth, guiHeight)
 

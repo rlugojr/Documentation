@@ -2,6 +2,9 @@
 ID_PAGE: 6834
 PG_TITLE: HardwareScalingOptimization
 PG_VERSION: 2.1
+TAGS:
+    - Scene
+    - SceneOptimization
 ---
 ##new [HardwareScalingOptimization](page.php?p=6834)(priority, maximumScale)
 
@@ -15,7 +18,8 @@ optional | priority | number |
 optional | maximumScale | number | 
 ---
 
-##Extends [SceneOptimization](page.php?p=6832)
+##Extends
+ [SceneOptimization](page.php?p=6832)
 ##Members
 
 ###priority : number

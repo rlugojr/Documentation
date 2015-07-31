@@ -2,6 +2,8 @@
 ID_PAGE: 6872
 PG_TITLE: Plane
 PG_VERSION: 2.1
+TAGS:
+    - Geometry
 ---
 ##new [Plane](page.php?p=6755)(id, scene, size, canBeRegenerated, mesh, side)
 
@@ -23,7 +25,8 @@ optional | mesh | [Mesh](page.php?p=6659) | @param mesh
 optional | side | number | 
 ---
 
-##Extends [_Primitive](page.php?p=6864)
+##Extends
+ [_Primitive](page.php?p=6864)
 ##Members
 
 ###size : number

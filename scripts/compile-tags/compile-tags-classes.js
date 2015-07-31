@@ -25,10 +25,11 @@
  *   }
  * }
  */
-var marked = require('meta-marked');
-var fs = require('fs');
-var path = require('path');
-var appRoot = require('app-root-path').path;
+var marked = require('meta-marked'),
+    fs = require('fs'),
+    path = require('path'),
+    appRoot = require('app-root-path').path,
+    logger  = require(path.join(appRoot, 'config/logger'));
 
 var CLASSES_FOLDER = path.join(appRoot, 'content/classes/');
 var TAG_FILENAME = path.join(appRoot, 'data/classes-tags.json');
@@ -39,7 +40,7 @@ module.exports = function () {
 
     // Create a json file for all classes versions.
     fs.readdirSync(CLASSES_FOLDER).map(function(dir){
-        console.log(dir);
+        logger.info(dir);
         createJson(dir);
     });
 
@@ -47,7 +48,7 @@ module.exports = function () {
     var myTagFile = TAG_FILENAME;
     // Creat dir if not existing
     fs.writeFileSync(myTagFile, JSON.stringify(TAGS));
-    console.log("> data/classes-tags.json compiled.")
+    logger.info("> data/classes-tags.json compiled.")
 };
 
 /**
@@ -66,7 +67,7 @@ function createJson(version) {
     fs.readdirSync(myClassesFolder)
         // Read each file from the class folder
         .map(function (f) {
-            console.log(f);
+            logger.info(f);
             return {file: f, md: fs.readFileSync(path.join(myClassesFolder, f)).toString()};
         })
         // Read tags in the markdown

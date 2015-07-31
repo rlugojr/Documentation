@@ -2,6 +2,9 @@
 ID_PAGE: 6659
 PG_TITLE: Mesh
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Mesh
 ---
 
 The [Mesh](page.php?p=6659) class extends [AbstractMesh](page.php?p=6657)
@@ -20,7 +23,8 @@ optional | source | [Mesh](page.php?p=6659) |
 optional | doNotCloneChildren | boolean | 
 ---
 
-##Extends [AbstractMesh](page.php?p=6657)
+##Extends
+ [AbstractMesh](page.php?p=6657)
 ##Members
 
 ###static FRONTSIDE : number

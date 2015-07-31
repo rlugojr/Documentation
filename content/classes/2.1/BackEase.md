@@ -2,6 +2,8 @@
 ID_PAGE: 6687
 PG_TITLE: BackEase
 PG_VERSION: 2.1
+TAGS:
+    - EasingFunction
 ---
 ##new [BackEase](page.php?p=6687)(amplitude)
 
@@ -14,7 +16,8 @@ PG_VERSION: 2.1
 optional | amplitude | number | 
 ---
 
-##Extends [EasingFunction](page.php?p=6685)
+##Extends
+ [EasingFunction](page.php?p=6685)
 ##Members
 
 ###amplitude : number

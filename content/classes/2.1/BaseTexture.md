@@ -2,6 +2,8 @@
 ID_PAGE: 6731
 PG_TITLE: BaseTexture
 PG_VERSION: 2.1
+TAGS:
+    - BaseTexture
 ---
 ##new [BaseTexture](page.php?p=6731)(scene)
 

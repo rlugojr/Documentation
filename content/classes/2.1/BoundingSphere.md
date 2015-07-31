@@ -2,6 +2,9 @@
 ID_PAGE: 6715
 PG_TITLE: BoundingSphere
 PG_VERSION: 2.1
+TAGS:
+    - Mesh
+    - Bounding
 ---
 
 Create a bounding sphere for the given mesh

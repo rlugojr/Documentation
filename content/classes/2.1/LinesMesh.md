@@ -2,6 +2,9 @@
 ID_PAGE: 6661
 PG_TITLE: LinesMesh
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Mesh
 ---
 
 The [LinesMesh](page.php?p=6661) class
@@ -22,7 +25,8 @@ The [LinesMesh](page.php?p=6661) constructor
 optional | updatable | boolean | @param updatable
 ---
 
-##Extends [Mesh](page.php?p=6659)
+##Extends
+ [Mesh](page.php?p=6659)
 ##Members
 
 ###color : [Color3](page.php?p=6748)

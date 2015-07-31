@@ -2,6 +2,9 @@
 ID_PAGE: 6631
 PG_TITLE: Camera
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Camera
 ---
 ##new [Camera](page.php?p=6631)(name, position, scene)
 
@@ -21,7 +24,8 @@ A tutorial about [ArcRotateCamera](page.php?p=6632) can be found [here](https://
  | scene | [Scene](page.php?p=6662) | The scene linked to this camera
 ---
 
-##Extends [Node](page.php?p=6630)
+##Extends
+ [Node](page.php?p=6630)
 ##Members
 
 ###position : [Vector3](page.php?p=6751)
@@ -79,7 +83,8 @@ Position of the camera
 
 
 
- [Camera](page.php?p=6631) up
+
+ [Camera](page.php?p=6631) up
 
 
 

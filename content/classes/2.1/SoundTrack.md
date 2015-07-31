@@ -2,6 +2,8 @@
 ID_PAGE: 6701
 PG_TITLE: SoundTrack
 PG_VERSION: 2.1
+TAGS:
+    - Audio
 ---
 ##new [SoundTrack](page.php?p=6701)(scene, options)
 

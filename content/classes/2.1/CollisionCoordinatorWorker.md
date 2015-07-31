@@ -2,6 +2,8 @@
 ID_PAGE: 6706
 PG_TITLE: CollisionCoordinatorWorker
 PG_VERSION: 2.1
+TAGS:
+    - Collision
 ---
 ##new [CollisionCoordinatorWorker](page.php?p=6706)()
 

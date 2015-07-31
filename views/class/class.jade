@@ -28,6 +28,11 @@ include ../includes/header
             h1= className.replace('_T_','<T>')
             #selectList
                 select#methodsList
+                    //for tocElement in toc
+                    //    if(tocElement.depth === "")
+                    //        option(value=tocElement.url, class="cat")= tocElement.heading
+                    //    else
+                    //        option(value=tocElement.url)= tocElement.heading
         if(classTags)
             #classTags
                 each tag in classTags

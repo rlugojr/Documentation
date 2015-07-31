@@ -2,6 +2,9 @@
 ID_PAGE: 6734
 PG_TITLE: DynamicTexture
 PG_VERSION: 2.1
+TAGS:
+    - BaseTexture
+    - Texture
 ---
 ##new [DynamicTexture](page.php?p=6734)(name, options, scene, generateMipMaps, samplingMode)
 
@@ -23,7 +26,8 @@ A tutorial about dynamic textures can be found here : http://blogs.msdn.com/b/et
 optional | samplingMode | number | @param samplingMode
 ---
 
-##Extends [Texture](page.php?p=6733)
+##Extends
+ [Texture](page.php?p=6733)
 ##Members
 
 ###canRescale : boolean

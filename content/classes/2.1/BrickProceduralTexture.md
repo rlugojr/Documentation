@@ -2,6 +2,10 @@
 ID_PAGE: 6746
 PG_TITLE: BrickProceduralTexture
 PG_VERSION: 2.1
+TAGS:
+    - BaseTexture
+    - Texture
+    - ProceduralTexture
 ---
 ##new [BrickProceduralTexture](page.php?p=6746)(name, size, scene, fallbackTexture, generateMipMaps)
 
@@ -18,7 +22,8 @@ optional | fallbackTexture | [Texture](page.php?p=6733) |
 optional | generateMipMaps | boolean | 
 ---
 
-##Extends [ProceduralTexture](page.php?p=6739)
+##Extends
+ [ProceduralTexture](page.php?p=6739)
 ##Members
 
 ###numberOfBricksHeight : number

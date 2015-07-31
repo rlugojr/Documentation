@@ -2,6 +2,8 @@
 ID_PAGE: 6790
 PG_TITLE: PostProcess
 PG_VERSION: 2.1
+TAGS:
+    - PostProcess
 ---
 
 Postprocesses allow you to create 2D effects on top of your scene.
@@ -46,7 +48,8 @@ optional | defines | string |
 
 
 
- [Action](page.php?p=6663) to execute just before the postprocess is applied
+
+ [Action](page.php?p=6663) to execute just before the postprocess is applied
 
 
 
@@ -54,7 +57,8 @@ optional | defines | string |
 
 
 
- [Action](page.php?p=6663) to execute just before the postprocess is rendered
+
+ [Action](page.php?p=6663) to execute just before the postprocess is rendered
 
 
 
@@ -62,7 +66,8 @@ optional | defines | string |
 
 
 
- [Action](page.php?p=6663) to execute just before the postprocess' size is changed
+
+ [Action](page.php?p=6663) to execute just before the postprocess' size is changed
 
 
 
@@ -70,7 +75,8 @@ optional | defines | string |
 
 
 
- [Action](page.php?p=6663) to execute just before the postprocess is activated
+
+ [Action](page.php?p=6663) to execute just before the postprocess is activated
 
 
 

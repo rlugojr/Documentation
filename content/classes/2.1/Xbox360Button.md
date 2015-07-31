@@ -2,6 +2,8 @@
 ID_PAGE: 6855
 PG_TITLE: Xbox360Button
 PG_VERSION: 2.1
+TAGS:
+    - Gamepad
 ---
 #Enumeration
 

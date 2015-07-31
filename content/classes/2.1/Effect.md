@@ -2,6 +2,8 @@
 ID_PAGE: 6725
 PG_TITLE: Effect
 PG_VERSION: 2.1
+TAGS:
+    - Effect
 ---
 ##new [Effect](page.php?p=6725)(baseName, attributesNames, uniformsNames, samplers, engine, defines, fallbacks, onCompiled, onError)
 

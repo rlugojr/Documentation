@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 25109
 PG_TITLE: STL
+TAGS:
+    - STL
 ---
 You can find the STL loader [here](https://github.com/BabylonJS/Babylon.js/tree/master/Loaders/STL)
 

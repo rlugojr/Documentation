@@ -2,6 +2,9 @@
 ID_PAGE: 6808
 PG_TITLE: PostProcessRenderPipeline
 PG_VERSION: 2.1
+TAGS:
+    - PostProcess
+    - PostProcessRenderPipeline
 ---
 
 Post Process Renders pipelines allow you to create a chain of post processes and attach it to a camera.

@@ -2,6 +2,8 @@
 ID_PAGE: 6671
 PG_TITLE: CombineAction
 PG_VERSION: 2.1
+TAGS:
+    - Action
 ---
 ##new [CombineAction](page.php?p=6671)(triggerOptions, children, condition)
 
@@ -20,7 +22,8 @@ This action is a container. You can use it to execute many actions simultaneousl
 optional | condition | [Condition](page.php?p=6679) | The condition to do the action
 ---
 
-##Extends [Action](page.php?p=6663)
+##Extends
+ [Action](page.php?p=6663)
 ##Members
 
 ###children : [Action](page.php?p=6663)[]

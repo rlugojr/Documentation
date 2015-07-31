@@ -2,6 +2,8 @@
 ID_PAGE: 6727
 PG_TITLE: MultiMaterial
 PG_VERSION: 2.1
+TAGS:
+    - Material
 ---
 ##new [MultiMaterial](page.php?p=6727)(name, scene)
 
@@ -20,7 +22,8 @@ A tutorial about multi materials can be found here : http://blogs.msdn.com/b/ete
  | scene | [Scene](page.php?p=6662) | [Scene](page.php?p=6662) which contain the [MultiMaterial](page.php?p=6727)
 ---
 
-##Extends [Material](page.php?p=6726)
+##Extends
+ [Material](page.php?p=6726)
 ##Members
 
 ###subMaterials : [Material](page.php?p=6726)[]

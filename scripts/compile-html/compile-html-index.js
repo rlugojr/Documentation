@@ -7,7 +7,10 @@
  ************************************************************************/
 
 var jade    = require('jade'),
-    fs      = require('fs');
+    fs      = require('fs'),
+    path    = require('path'),
+    appRoot = require('app-root-path').path,
+    logger  = require(path.join(appRoot, 'config/logger'));
 
 /*************************************************************************
  *                                 SCRIPT                                *
@@ -16,5 +19,5 @@ var jade    = require('jade'),
 module.exports = function(done) {
     var htmlRender = jade.renderFile('views/index.jade', { pretty: false, currentUrl: '/' });
     fs.writeFileSync('public/html/index.html', htmlRender);
-    console.log("> Index.html compiled.")
+    logger.info("> Index.html compiled.");
 };

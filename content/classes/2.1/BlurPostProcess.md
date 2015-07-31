@@ -2,6 +2,8 @@
 ID_PAGE: 6793
 PG_TITLE: BlurPostProcess
 PG_VERSION: 2.1
+TAGS:
+    - PostProcess
 ---
 
 Builtin postprocess applying a directional blur
@@ -27,7 +29,8 @@ optional | engine | [Engine](page.php?p=6629) | The engine to attach the postpro
 optional | reusable | boolean | Indicates if the postprocess can be reused multiple times on the same camera
 ---
 
-##Extends [PostProcess](page.php?p=6790)
+##Extends
+ [PostProcess](page.php?p=6790)
 ##Members
 
 ###direction : [Vector2](page.php?p=6750)

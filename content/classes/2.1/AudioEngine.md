@@ -2,6 +2,8 @@
 ID_PAGE: 6699
 PG_TITLE: AudioEngine
 PG_VERSION: 2.1
+TAGS:
+    - Audio
 ---
 ##new [AudioEngine](page.php?p=6699)()
 

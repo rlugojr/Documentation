@@ -2,6 +2,9 @@
 ID_PAGE: 6819
 PG_TITLE: MeshAssetTask
 PG_VERSION: 2.1
+TAGS:
+    - Mesh
+    - Assets
 ---
 
 Load the task on the given [Mesh](page.php?p=6659)

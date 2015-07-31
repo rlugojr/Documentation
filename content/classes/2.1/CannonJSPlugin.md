@@ -2,6 +2,8 @@
 ID_PAGE: 6788
 PG_TITLE: CannonJSPlugin
 PG_VERSION: 2.1
+TAGS:
+    -   Plugins
 ---
 
 The cannonJS physic engine, more info [there](http://cannonjs.org/)

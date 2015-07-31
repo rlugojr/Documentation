@@ -2,6 +2,10 @@
 ID_PAGE: 6635
 PG_TITLE: StereoscopicArcRotateCamera
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Camera
+    - ArcRotateCamera
 ---
 ##new [StereoscopicArcRotateCamera](page.php?p=6635)(name, alpha, beta, radius, target, interaxialDistance, isSideBySide, scene)
 
@@ -18,7 +22,8 @@ PG_VERSION: 2.1
  | scene | [Scene](page.php?p=6662) | 
 ---
 
-##Extends [ArcRotateCamera](page.php?p=6632)
+##Extends
+ [ArcRotateCamera](page.php?p=6632)
 
 
 ##Methods

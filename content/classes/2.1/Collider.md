@@ -2,6 +2,8 @@
 ID_PAGE: 6705
 PG_TITLE: Collider
 PG_VERSION: 2.1
+TAGS:
+    - Collision
 ---
 
 

@@ -2,6 +2,8 @@
 ID_PAGE: 6728
 PG_TITLE: ShaderMaterial
 PG_VERSION: 2.1
+TAGS:
+    - Material
 ---
 ##new [ShaderMaterial](page.php?p=6728)(name, scene, shaderPath, options)
 
@@ -24,7 +26,8 @@ A tutorial abouth ShaderMaterials can be found here : http://blogs.msdn.com/b/et
  | options | any | An options object should contain needAlphaBlending, needAlphaTesting, attributes, uniforms and samplers
 ---
 
-##Extends [Material](page.php?p=6726)
+##Extends
+ [Material](page.php?p=6726)
 
 
 ##Methods

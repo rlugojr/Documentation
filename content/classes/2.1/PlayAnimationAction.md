@@ -2,6 +2,8 @@
 ID_PAGE: 6668
 PG_TITLE: PlayAnimationAction
 PG_VERSION: 2.1
+TAGS:
+    - Action
 ---
 ##new [PlayAnimationAction](page.php?p=6668)(triggerOptions, target, from, to, loop, condition)
 
@@ -23,7 +25,8 @@ optional | loop | boolean | True to loop the animation
 optional | condition | [Condition](page.php?p=6679) | The condition to play animation
 ---
 
-##Extends [Action](page.php?p=6663)
+##Extends
+ [Action](page.php?p=6663)
 ##Members
 
 ###from : number
@@ -48,7 +51,8 @@ The ending frame index
 
 
 
- [Animation](page.php?p=6684) loop or not
+
+ [Animation](page.php?p=6684) loop or not
 
 
 

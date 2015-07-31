@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 22461
 PG_TITLE: How to use Multi-Views
+TAGS:
+    - 04.MoreAdvancedFeatures
 ---
 Babylon.js is able to render multi views of the same scene.
 

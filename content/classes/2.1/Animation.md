@@ -2,6 +2,8 @@
 ID_PAGE: 6684
 PG_TITLE: Animation
 PG_VERSION: 2.1
+TAGS:
+    - Animation
 ---
 
 The animation is based on objects called [Animation](page.php?p=6684).

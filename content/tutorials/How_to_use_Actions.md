@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 22531
 PG_TITLE: How to use Actions
+TAGS:
+    - 04.MoreAdvancedFeatures
 ---
 Actions are a simple way to add interactions in your scenes. An action is launched when its trigger is fired.
 

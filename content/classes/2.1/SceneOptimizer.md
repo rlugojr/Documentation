@@ -2,6 +2,8 @@
 ID_PAGE: 6842
 PG_TITLE: SceneOptimizer
 PG_VERSION: 2.1
+TAGS:
+    - Scene
 ---
 
 

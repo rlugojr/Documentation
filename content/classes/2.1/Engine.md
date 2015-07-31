@@ -2,6 +2,8 @@
 ID_PAGE: 6629
 PG_TITLE: Engine
 PG_VERSION: 2.1
+TAGS:
+    -   Engine
 ---
 
 The engine class is responsible for interfacing with all lower-level APIs such as WebGL and Audio.

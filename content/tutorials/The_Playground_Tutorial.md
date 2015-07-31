@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 22631
 PG_TITLE: The Playground Tutorial
+TAGS:
+    - General
 ---
 ## Introducing...
 # The BabylonJS Playground!

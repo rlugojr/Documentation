@@ -2,6 +2,8 @@
 ID_PAGE: 6664
 PG_TITLE: SwitchBooleanAction
 PG_VERSION: 2.1
+TAGS:
+    - Action
 ---
 ##new [SwitchBooleanAction](page.php?p=6664)(triggerOptions, target, propertyPath, condition)
 
@@ -21,7 +23,8 @@ Create a new switch boolean action
 optional | condition | [Condition](page.php?p=6679) | The condition to trigger the action
 ---
 
-##Extends [Action](page.php?p=6663)
+##Extends
+ [Action](page.php?p=6663)
 ##Members
 
 ###propertyPath : string

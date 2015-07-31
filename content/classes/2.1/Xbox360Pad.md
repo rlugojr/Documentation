@@ -2,13 +2,16 @@
 ID_PAGE: 6831
 PG_TITLE: Xbox360Pad
 PG_VERSION: 2.1
+TAGS:
+    - Gamepad
 ---
 
 
 
 
 
-##Extends [Gamepad](page.php?p=6829)
+##Extends
+ [Gamepad](page.php?p=6829)
 ##Members
 
 ###leftTrigger : number

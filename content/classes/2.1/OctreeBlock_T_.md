@@ -2,6 +2,8 @@
 ID_PAGE: 6717
 PG_TITLE: OctreeBlock<T>
 PG_VERSION: 2.1
+TAGS:
+    - Octree
 ---
 
 Create a new OctreeBlock

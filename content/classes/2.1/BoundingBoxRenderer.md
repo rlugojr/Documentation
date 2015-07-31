@@ -2,6 +2,9 @@
 ID_PAGE: 6812
 PG_TITLE: BoundingBoxRenderer
 PG_VERSION: 2.1
+TAGS:
+    - Mesh
+    - Bounding
 ---
 ##new [BoundingBoxRenderer](page.php?p=6812)(scene)
 

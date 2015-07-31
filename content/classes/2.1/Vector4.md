@@ -2,6 +2,8 @@
 ID_PAGE: 6752
 PG_TITLE: Vector4
 PG_VERSION: 2.1
+TAGS:
+    - Objects
 ---
 ##new [Vector4](page.php?p=6752)(x, y, z, w)
 

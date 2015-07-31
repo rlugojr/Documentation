@@ -2,6 +2,8 @@
 ID_PAGE: 6871
 PG_TITLE: TiledGround
 PG_VERSION: 2.1
+TAGS:
+    - Geometry
 ---
 ##new [TiledGround](page.php?p=6871)(id, scene, xmin, zmin, xmax, zmax, subdivisions, precision, canBeRegenerated, mesh)
 
@@ -27,7 +29,8 @@ optional | canBeRegenerated | boolean | @param canBeRegenerated
 optional | mesh | [Mesh](page.php?p=6659) | @param mesh
 ---
 
-##Extends [_Primitive](page.php?p=6864)
+##Extends
+ [_Primitive](page.php?p=6864)
 ##Members
 
 ###xmin : number

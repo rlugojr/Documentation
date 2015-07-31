@@ -5,30 +5,35 @@
 
 /* SMALL SCREENS VERSION */
 @include media($small-screen) {
-  #wrapper.error{
-    .error_message{
+  #wrapper.error {
+    .error_message {
       padding-top: $bh;
-      font-size: 64pt;
-      margin:0;
+      font-size: 5.1em;
+      margin: 0;
     }
 
-    .leftie, .rightie {
-      display:none;
+    //.leftie, .rightie {
+    //  display:none;
 
-      &.error_choice_mobile{
-        display: block;
-        text-align: center;
-        padding:0;
+    .error_choice_mobile {
+      display: inherit;
+      text-align: center;
+      padding: 0;
 
-        i{
-          font-size: 40pt;
-        }
-      }
+      flex:auto;
 
-      a:hover {
-        background-color: white;
-        color:$red;
+      i {
+        font-size: 3.1em;
       }
     }
+    .error_choice{
+      display: none;
+    }
+
+    a:hover {
+      background-color: white;
+      color: $red;
+    }
+    //}
   }
 }

@@ -2,6 +2,8 @@
 ID_PAGE: 6628
 PG_TITLE: EngineCapabilities
 PG_VERSION: 2.1
+TAGS:
+    -   Engine
 ---
 
 Regroup the different parameters linked to the using browser

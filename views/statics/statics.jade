@@ -12,7 +12,7 @@ include ../includes/header
                     .tagWrapper
                         .tag(data-name=tag['name'])
                             .tagImage
-                                img(src="http://placehold.it/200x100")
+                                img(src=tag['img'])
                             .tagDescriptionWrapper
                                 h3.tagTitle=tag['name']
                                 span.tagDescription=tag['desc']
@@ -28,6 +28,12 @@ include ../includes/header
                                     for tag in file.tags
                                         .tag
                                             =tag
+                .emptyList(style='display:none')
+                    h2
+                        | There is nothing in this category
+
+
+
 
     include ../includes/footer
     script(src="/js/statics.js")

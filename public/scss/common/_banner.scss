@@ -1,7 +1,7 @@
 // Banner height
 $bh : 50px;
 // Font size
-$bfs : 12pt;
+$bfs : 1em;
 // The width of title
 $title_width : 300px;
 
@@ -23,7 +23,7 @@ $title_width : 300px;
     position  : absolute;
     z-index   : 2;
     color     : white;
-    font-size : 20pt;
+    font-size : 1.4em;
     left      : 5px;
     padding   : 12px;
 
@@ -37,7 +37,7 @@ $title_width : 300px;
     position  : absolute;
     z-index   : 2;
     color     : white;
-    font-size : 20pt;
+    font-size : 1.4em;
     left      : 45px;
     padding   : 12px;
 
@@ -92,7 +92,7 @@ $title_width : 300px;
       .item {
         width : 100px;
         text-transform: uppercase;
-        font-size : 10pt;
+        font-size : 0.8em;
         cursor: pointer;
       }
     }
@@ -127,7 +127,7 @@ $title_width : 300px;
 
         // Search icon
         button {
-          font-size: 16pt;
+          font-size: 1.3em;
           background: transparent;
           border: none;
           cursor: pointer;

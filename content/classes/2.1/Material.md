@@ -2,6 +2,8 @@
 ID_PAGE: 6726
 PG_TITLE: Material
 PG_VERSION: 2.1
+TAGS:
+    - Material
 ---
 ##new [Material](page.php?p=6726)(name, scene, doNotAdd)
 

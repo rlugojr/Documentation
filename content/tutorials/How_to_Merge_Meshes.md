@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 22451
 PG_TITLE: How to Merge Meshes
+TAGS:
+    - 04.MoreAdvancedFeatures
 ---
 If you want to merge meshes into a new one, you can use the following code:
 

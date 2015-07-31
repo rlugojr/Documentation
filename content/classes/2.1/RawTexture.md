@@ -2,6 +2,9 @@
 ID_PAGE: 6735
 PG_TITLE: RawTexture
 PG_VERSION: 2.1
+TAGS:
+    - BaseTexture
+    - Texture
 ---
 ##new [RawTexture](page.php?p=6735)(data, width, height, format, scene, generateMipMaps, invertY, samplingMode)
 
@@ -21,7 +24,8 @@ optional | invertY | boolean |
 optional | samplingMode | number | 
 ---
 
-##Extends [Texture](page.php?p=6733)
+##Extends
+ [Texture](page.php?p=6733)
 
 
 ##Methods

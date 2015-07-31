@@ -2,6 +2,11 @@
 ID_PAGE: 6647
 PG_TITLE: TouchCamera
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Camera
+    - TargetCamera
+    - FreeCamera
 ---
 ##new [TouchCamera](page.php?p=6647)(name, position, scene)
 
@@ -21,7 +26,8 @@ A tutorial about [ArcRotateCamera](page.php?p=6632) can be found [here](https://
  | scene | [Scene](page.php?p=6662) | The scene which contain camera
 ---
 
-##Extends [FreeCamera](page.php?p=6638)
+##Extends
+ [FreeCamera](page.php?p=6638)
 ##Members
 
 ###angularSensibility : number

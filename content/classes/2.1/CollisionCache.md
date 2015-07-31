@@ -2,6 +2,8 @@
 ID_PAGE: 6708
 PG_TITLE: CollisionCache
 PG_VERSION: 2.1
+TAGS:
+    - Collision
 ---
 
 

@@ -2,6 +2,9 @@
 ID_PAGE: 6809
 PG_TITLE: LensRenderingPipeline
 PG_VERSION: 2.1
+TAGS:
+    - PostProcess
+    - PostProcessRenderPipeline
 ---
 ##new [LensRenderingPipeline](page.php?p=6809)(name, parameters, scene, ratio, cameras)
 
@@ -15,7 +18,8 @@ optional | ratio | number |
 optional | cameras | [Camera](page.php?p=6631)[] | 
 ---
 
-##Extends [PostProcessRenderPipeline](page.php?p=6808)
+##Extends
+ [PostProcessRenderPipeline](page.php?p=6808)
 ##Members
 
 ###LensChromaticAberrationEffect : string

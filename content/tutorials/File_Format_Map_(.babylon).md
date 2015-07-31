@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 22661
 PG_TITLE: File Format Map (.babylon)
+TAGS:
+    - General
 ---
 **Babylon.js** uses a JSON file format for describing scenes.
 

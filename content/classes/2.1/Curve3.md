@@ -2,6 +2,8 @@
 ID_PAGE: 6766
 PG_TITLE: Curve3
 PG_VERSION: 2.1
+TAGS:
+    - Objects
 ---
 ##new [Curve3](page.php?p=6766)(points)
 

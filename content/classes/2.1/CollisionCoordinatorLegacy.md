@@ -2,6 +2,8 @@
 ID_PAGE: 6707
 PG_TITLE: CollisionCoordinatorLegacy
 PG_VERSION: 2.1
+TAGS:
+    - Collision
 ---
 
 

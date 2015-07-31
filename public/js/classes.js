@@ -43,6 +43,10 @@
                     if($(categoryTitle).parent('.category').attr('id') == window.localStorage.selectedTag){
                         if($(categoryTitle).next().is(':hidden')){
                             $(categoryTitle).next().toggle(150);
+
+                            // jump to this category title
+                            window.scrollTo(0, $(categoryTitle).offset().top - 50);
+                            //$('.classContent').scrollTop($selectedElement.offset().top - 50);
                         }
                     }
                 });
@@ -56,10 +60,10 @@
         * Get the older selected order, and apply it
         */
         if(localStorage.orderClassesby) {
-            if(localStorage.orderClassesby == 'tags') {
+            if(window.localStorage.orderClassesby == 'tags') {
                 showClassesByTags();
             }
-            else if(localStorage.orderClassesby == 'alpha') {
+            else if(window.localStorage.orderClassesby == 'alpha') {
                 showClassesByAlpha();
             }
         }

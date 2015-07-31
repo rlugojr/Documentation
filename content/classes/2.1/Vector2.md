@@ -2,6 +2,8 @@
 ID_PAGE: 6750
 PG_TITLE: Vector2
 PG_VERSION: 2.1
+TAGS:
+    - Objects
 ---
 ##new [Vector2](page.php?p=6750)(x, y)
 

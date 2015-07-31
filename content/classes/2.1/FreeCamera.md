@@ -2,6 +2,11 @@
 ID_PAGE: 6638
 PG_TITLE: FreeCamera
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Camera
+    - TargetCamera
+    - FreeCamera
 ---
 ##new [FreeCamera](page.php?p=6638)(name, position, scene)
 
@@ -22,7 +27,8 @@ A tutorial about [FreeCamera](page.php?p=6638) can be found [here](https://githu
  | scene | [Scene](page.php?p=6662) | [Scene](page.php?p=6662) which contain the camera
 ---
 
-##Extends [TargetCamera](page.php?p=6636)
+##Extends
+ [TargetCamera](page.php?p=6636)
 ##Members
 
 ###ellipsoid : [Vector3](page.php?p=6751)

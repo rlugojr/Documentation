@@ -12,7 +12,8 @@ Welcome on the repository of the official documentation of [Babylon.js](http://w
 
 ## Useful commands
 If you want to develop/modify your local copy of the website, here's some useful commands for you:
- * ```npm run clean-n-compile``` deletes all generated files and re-compiles everything
+ * ```grunt serve``` will start the Express server and watch for modification of SCSS files
+ * ```grunt clean-n-compile``` deletes all generated files and re-compiles everything
  * ```grunt clean``` deletes all generated files
  * ```grunt compile``` re-compiles everything
  * ```grunt index``` compile the HTML file for the home page of the site
@@ -21,3 +22,4 @@ If you want to develop/modify your local copy of the website, here's some useful
  * ```grunt classes``` compile the HTML files for the pages listing all  the classes per version of Babylon.js and the pages for every class
  * ```grunt lists``` reads meta-data related to the exporters, extensions and tutorials, and compile theses informations into data/static-list.json
  * ```grunt statics``` reads data/static-list.json and compiles every HTML files for the exporters, extensions and tutorials pages
+ * ```grunt search-index``` will build the index files for the search API implemented on the website

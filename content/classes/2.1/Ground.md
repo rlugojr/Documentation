@@ -2,6 +2,8 @@
 ID_PAGE: 6870
 PG_TITLE: Ground
 PG_VERSION: 2.1
+TAGS:
+    - Geometry
 ---
 ##new [Ground](page.php?p=6870)(id, scene, width, height, subdivisions, canBeRegenerated, mesh)
 
@@ -24,7 +26,8 @@ optional | canBeRegenerated | boolean | @param canBeRegenerated
 optional | mesh | [Mesh](page.php?p=6659) | @param mesh
 ---
 
-##Extends [_Primitive](page.php?p=6864)
+##Extends
+ [_Primitive](page.php?p=6864)
 ##Members
 
 ###width : number

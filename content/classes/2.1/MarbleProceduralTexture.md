@@ -2,6 +2,10 @@
 ID_PAGE: 6747
 PG_TITLE: MarbleProceduralTexture
 PG_VERSION: 2.1
+TAGS:
+    - BaseTexture
+    - Texture
+    - ProceduralTexture
 ---
 ##new [MarbleProceduralTexture](page.php?p=6747)(name, size, scene, fallbackTexture, generateMipMaps)
 
@@ -18,7 +22,8 @@ optional | fallbackTexture | [Texture](page.php?p=6733) |
 optional | generateMipMaps | boolean | 
 ---
 
-##Extends [ProceduralTexture](page.php?p=6739)
+##Extends
+ [ProceduralTexture](page.php?p=6739)
 ##Members
 
 ###numberOfTilesHeight : number

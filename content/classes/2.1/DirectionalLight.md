@@ -2,6 +2,9 @@
 ID_PAGE: 6653
 PG_TITLE: DirectionalLight
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Light
 ---
 
 A directional light is defined by a direction.
@@ -24,7 +27,8 @@ Creates a [DirectionalLight](page.php?p=6653) object
  | scene | [Scene](page.php?p=6662) | The scene to create the light into
 ---
 
-##Extends [Light](page.php?p=6652)
+##Extends
+ [Light](page.php?p=6652)
 ##Members
 
 ###direction : [Vector3](page.php?p=6751)

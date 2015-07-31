@@ -2,6 +2,9 @@
 ID_PAGE: 6652
 PG_TITLE: Light
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Light
 ---
 
 Lights are used to produce the diffuse and specular color received by each pixel.
@@ -27,7 +30,8 @@ Creates a new [Light](page.php?p=6652) object
  | scene | [Scene](page.php?p=6662) | The scene to append the light
 ---
 
-##Extends [Node](page.php?p=6630)
+##Extends
+ [Node](page.php?p=6630)
 ##Members
 
 ###diffuse : [Color3](page.php?p=6748)

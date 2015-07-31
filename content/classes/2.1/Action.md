@@ -2,6 +2,8 @@
 ID_PAGE: 6663
 PG_TITLE: Action
 PG_VERSION: 2.1
+TAGS:
+    - Action
 ---
 ##new [Action](page.php?p=6663)(triggerOptions, condition)
 

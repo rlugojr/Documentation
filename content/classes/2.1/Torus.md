@@ -2,6 +2,8 @@
 ID_PAGE: 6869
 PG_TITLE: Torus
 PG_VERSION: 2.1
+TAGS:
+    - Geometry
 ---
 
 The [Torus](page.php?p=6869) Class
@@ -27,7 +29,8 @@ optional | mesh | [Mesh](page.php?p=6659) | @param mesh
 optional | side | number | 
 ---
 
-##Extends [_Primitive](page.php?p=6864)
+##Extends
+ [_Primitive](page.php?p=6864)
 ##Members
 
 ###diameter : number

@@ -34,7 +34,11 @@
           padding:0;
           margin:0;
           visibility: initial;
-          display:none;
+
+          &.permalink{
+            display:none;
+          }
+
         }
         a.invisible{
           visibility: initial;

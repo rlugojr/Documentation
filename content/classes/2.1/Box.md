@@ -2,6 +2,8 @@
 ID_PAGE: 6866
 PG_TITLE: Box
 PG_VERSION: 2.1
+TAGS:
+    - Geometry
 ---
 
 The box class
@@ -25,7 +27,8 @@ optional | mesh | [Mesh](page.php?p=6659) | @param mesh
 optional | side | number | 
 ---
 
-##Extends [_Primitive](page.php?p=6864)
+##Extends
+ [_Primitive](page.php?p=6864)
 ##Members
 
 ###size : number

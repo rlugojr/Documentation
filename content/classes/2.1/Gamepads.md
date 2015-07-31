@@ -2,6 +2,8 @@
 ID_PAGE: 6827
 PG_TITLE: Gamepads
 PG_VERSION: 2.1
+TAGS:
+    - Gamepad
 ---
 ##new [Gamepads](page.php?p=6827)(ongamedpadconnected)
 

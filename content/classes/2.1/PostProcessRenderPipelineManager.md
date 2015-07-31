@@ -2,6 +2,8 @@
 ID_PAGE: 6811
 PG_TITLE: PostProcessRenderPipelineManager
 PG_VERSION: 2.1
+TAGS:
+    - PostProcess
 ---
 
 Managing all pipelines, allow you to enable or disable an effect, displaying a pass of post process for debugging.

@@ -2,6 +2,10 @@
 ID_PAGE: 6742
 PG_TITLE: FireProceduralTexture
 PG_VERSION: 2.1
+TAGS:
+    - BaseTexture
+    - Texture
+    - ProceduralTexture
 ---
 ##new [FireProceduralTexture](page.php?p=6742)(name, size, scene, fallbackTexture, generateMipMaps)
 
@@ -18,7 +22,8 @@ optional | fallbackTexture | [Texture](page.php?p=6733) |
 optional | generateMipMaps | boolean | 
 ---
 
-##Extends [ProceduralTexture](page.php?p=6739)
+##Extends
+ [ProceduralTexture](page.php?p=6739)
 ##Members
 
 ###static PurpleFireColors : [Color3](page.php?p=6748)[]

@@ -2,6 +2,10 @@
 ID_PAGE: 6637
 PG_TITLE: FollowCamera
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Camera
+    - TargetCamera
 ---
 ##new [FollowCamera](page.php?p=6637)(name, position, scene)
 
@@ -20,7 +24,8 @@ Create a new [FollowCamera](page.php?p=6637)
  | scene | [Scene](page.php?p=6662) | The scene which contains the camera
 ---
 
-##Extends [TargetCamera](page.php?p=6636)
+##Extends
+ [TargetCamera](page.php?p=6636)
 ##Members
 
 ###radius : number
@@ -54,7 +59,8 @@ Height offset of the camera
 
 
 
- [Camera](page.php?p=6631) acceleration
+
+ [Camera](page.php?p=6631) acceleration
 
 
 

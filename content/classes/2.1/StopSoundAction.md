@@ -2,6 +2,8 @@
 ID_PAGE: 6675
 PG_TITLE: StopSoundAction
 PG_VERSION: 2.1
+TAGS:
+    - Action
 ---
 ##new [StopSoundAction](page.php?p=6675)(triggerOptions, sound, condition)
 
@@ -16,7 +18,8 @@ PG_VERSION: 2.1
 optional | condition | [Condition](page.php?p=6679) | 
 ---
 
-##Extends [Action](page.php?p=6663)
+##Extends
+ [Action](page.php?p=6663)
 
 
 ##Methods

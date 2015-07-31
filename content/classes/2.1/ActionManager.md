@@ -2,8 +2,11 @@
 ID_PAGE: 6678
 PG_TITLE: ActionManager
 PG_VERSION: 2.1
+TAGS:
+    - Action
 ---
- [Action](page.php?p=6663) Manager manages all events to be triggered on a given mesh or the global scene.
+
+ [Action](page.php?p=6663) Manager manages all events to be triggered on a given mesh or the global scene.
 
 A single scene can have many [Action](page.php?p=6663) Managers to handle predefined actions on specific meshes.
 ##new [ActionManager](page.php?p=6678)(scene)

@@ -2,6 +2,8 @@
 ID_PAGE: 6841
 PG_TITLE: SceneOptimizerOptions
 PG_VERSION: 2.1
+TAGS:
+    - Scene
 ---
 ##new [SceneOptimizerOptions](page.php?p=6841)(targetFrameRate, trackerDuration)
 

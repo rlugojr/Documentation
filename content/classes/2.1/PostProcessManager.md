@@ -2,6 +2,8 @@
 ID_PAGE: 6805
 PG_TITLE: PostProcessManager
 PG_VERSION: 2.1
+TAGS:
+    - PostProcess
 ---
 ##new [PostProcessManager](page.php?p=6805)(scene)
 

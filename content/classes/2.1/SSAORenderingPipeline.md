@@ -2,6 +2,9 @@
 ID_PAGE: 6810
 PG_TITLE: SSAORenderingPipeline
 PG_VERSION: 2.1
+TAGS:
+    - PostProcess
+    - PostProcessRenderPipeline
 ---
 ##new [SSAORenderingPipeline](page.php?p=6810)(name, scene, ratio, cameras)
 
@@ -15,7 +18,8 @@ PG_VERSION: 2.1
 optional | cameras | [Camera](page.php?p=6631)[] | 
 ---
 
-##Extends [PostProcessRenderPipeline](page.php?p=6808)
+##Extends
+ [PostProcessRenderPipeline](page.php?p=6808)
 ##Members
 
 ###SSAOOriginalSceneColorEffect : string

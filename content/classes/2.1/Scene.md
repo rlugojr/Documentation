@@ -2,6 +2,8 @@
 ID_PAGE: 6662
 PG_TITLE: Scene
 PG_VERSION: 2.1
+TAGS:
+    - Scene
 ---
 
 Represents a scene to be rendered by the engine.

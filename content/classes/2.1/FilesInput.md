@@ -2,6 +2,8 @@
 ID_PAGE: 6826
 PG_TITLE: FilesInput
 PG_VERSION: 2.1
+TAGS:
+    - Files
 ---
 ##new [FilesInput](page.php?p=6826)(p_engine, p_scene, p_canvas, p_sceneLoadedCallback, p_progressCallback, p_additionnalRenderLoopLogicCallback, p_textureLoadingCallback, p_startingProcessingFilesCallback)
 

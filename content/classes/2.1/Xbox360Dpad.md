@@ -2,6 +2,8 @@
 ID_PAGE: 6856
 PG_TITLE: Xbox360Dpad
 PG_VERSION: 2.1
+TAGS:
+    - Gamepad
 ---
 #Enumeration
 

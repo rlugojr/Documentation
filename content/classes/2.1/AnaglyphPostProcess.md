@@ -2,6 +2,8 @@
 ID_PAGE: 6791
 PG_TITLE: AnaglyphPostProcess
 PG_VERSION: 2.1
+TAGS:
+    - PostProcess
 ---
 ##new [AnaglyphPostProcess](page.php?p=6791)(name, ratio, camera, samplingMode, engine, reusable)
 
@@ -16,7 +18,8 @@ optional | engine | [Engine](page.php?p=6629) |
 optional | reusable | boolean | 
 ---
 
-##Extends [PostProcess](page.php?p=6790)
+##Extends
+ [PostProcess](page.php?p=6790)
 
 
 ##Methods

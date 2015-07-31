@@ -2,6 +2,8 @@
 ID_PAGE: 6759
 PG_TITLE: Axis
 PG_VERSION: 2.1
+TAGS:
+    - Math
 ---
 
 

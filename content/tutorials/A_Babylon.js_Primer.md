@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 22621
 PG_TITLE: A Babylon.js Primer
+TAGS:
+    - Others
 ---
 ### Welcome to the... ###
 ## Babylon.js WebGL Game Creation System!##

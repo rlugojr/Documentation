@@ -2,6 +2,8 @@
 ID_PAGE: 6691
 PG_TITLE: ExponentialEase
 PG_VERSION: 2.1
+TAGS:
+    - EasingFunction
 ---
 ##new [ExponentialEase](page.php?p=6691)(exponent)
 
@@ -14,7 +16,8 @@ PG_VERSION: 2.1
 optional | exponent | number | 
 ---
 
-##Extends [EasingFunction](page.php?p=6685)
+##Extends
+ [EasingFunction](page.php?p=6685)
 ##Members
 
 ###exponent : number

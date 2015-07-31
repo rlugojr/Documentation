@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 22571
 PG_TITLE: How to use Instances
+TAGS:
+    - 04.MoreAdvancedFeatures
 ---
 Instances are an excellent way to use hardware accelerated rendering to draw a huge number of identical meshes (let's imagine a forest or an army).
 

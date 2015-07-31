@@ -2,6 +2,8 @@
 ID_PAGE: 6700
 PG_TITLE: Sound
 PG_VERSION: 2.1
+TAGS:
+    - Audio
 ---
 ##new [Sound](page.php?p=6700)(name, urlOrArrayBuffer, scene, readyToPlayCallback, options)
 

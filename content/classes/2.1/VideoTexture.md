@@ -2,6 +2,9 @@
 ID_PAGE: 6738
 PG_TITLE: VideoTexture
 PG_VERSION: 2.1
+TAGS:
+    - BaseTexture
+    - Texture
 ---
 ##new [VideoTexture](page.php?p=6738)(name, urls, scene, generateMipMaps, invertY, samplingMode)
 
@@ -24,7 +27,8 @@ optional | invertY | boolean | True to invert on Y axis
 optional | samplingMode | number | 
 ---
 
-##Extends [Texture](page.php?p=6733)
+##Extends
+ [Texture](page.php?p=6733)
 ##Members
 
 ###video : HTMLVideoElement

@@ -2,6 +2,8 @@
 ID_PAGE: 6685
 PG_TITLE: EasingFunction
 PG_VERSION: 2.1
+TAGS:
+    - EasingFunction
 ---
 
 

@@ -2,6 +2,8 @@
 ID_PAGE: 6807
 PG_TITLE: PostProcessRenderPass
 PG_VERSION: 2.1
+TAGS:
+    - PostProcess
 ---
 
 A render pass is render texture that can be used in differents render effects

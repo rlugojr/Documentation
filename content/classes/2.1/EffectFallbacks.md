@@ -2,6 +2,8 @@
 ID_PAGE: 6724
 PG_TITLE: EffectFallbacks
 PG_VERSION: 2.1
+TAGS:
+    - Effect
 ---
 
 

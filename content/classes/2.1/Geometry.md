@@ -2,6 +2,8 @@
 ID_PAGE: 6771
 PG_TITLE: Geometry
 PG_VERSION: 2.1
+TAGS:
+    - Geometry
 ---
 
 The [Geometry](page.php?p=6771) class

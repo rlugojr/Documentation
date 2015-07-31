@@ -6,15 +6,42 @@ include includes/banner.jade
     .horizontal-separator
 
     .search-content
-        h2.searchHeader
-            | #{resultsCount} results for "<a href="/search?q=#{searchTerm}">#{searchTerm}</a>"
-        if(results)
-            each result in results
-                .result
-                    .resultTitle
-                        a(href=result.src)
-                            | #{result.version} : #{result.name}
-                    //.resultText= result.text
+
+
+        if(resultsCount <= 0 || !results)
+            .searchHeader
+                h2
+                    | Sorry, we found nothing for "#{searchTerm}"
         else
-            | no result
+            .searchHeader
+                h2
+                    | #{resultsCount} results for "<a href="/search?q=#{searchTerm}">#{searchTerm}</a>"
+
+        .pageChangeWrapper
+            if(page - 1 > 0)
+                a(class="pageChangeLink", href="/search?q=#{searchTerm}&page=#{ page - 1 <= 0 ? 1 : page - 1}")
+                    | Previous Page
+
+            if(page * resultMax < resultsCount)
+                a(class="pageChangeLink", href="/search?q=#{searchTerm}&page=#{ page*1 + 1 }")
+                    | Next Page
+
+        each result in results
+            .result
+                .resultTitle
+                    a(href=result.src)
+                        | #{result.version} : #{result.name}
+                    //.resultText= result.text
+
+
+
+        .pageChangeWrapper
+            if(page - 1 > 0)
+                a(class="pageChangeLink", href="/search?q=#{searchTerm}&page=#{ page - 1 <= 0 ? 1 : page - 1}")
+                    | Previous Page
+
+            if(page * resultMax < resultsCount)
+                a(class="pageChangeLink", href="/search?q=#{searchTerm}&page=#{ page*1 + 1 }")
+                    | Next Page
+
 include includes/footer.jade

@@ -29,5 +29,5 @@ $small-screen: new-breakpoint(max-width 960px 6);
 @import "classes/mobile_classes";
 @import "statics/mobile_statics";
 @import "statics/mobile_static";
-@import "search/search";
+@import "search/mobile_search";
 @import "error/mobile_error";

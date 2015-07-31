@@ -121,7 +121,7 @@ particleSystem.targetStopDuration = 5;
 <pre><code class="lang-javascript">particleSystem.stop();
 </code></pre>
 <p>Feel free to play with this scene... <a href="http://babylonjs-playground.azurewebsites.net/?12"><strong>at our online playground</strong></a>.</p>
-<h3><a name="customeffect-the-fourth-parameter-in-the-constructor-" class="anchor" href="#customeffect-the-fourth-parameter-in-the-constructor-"></a>customEffect (the fourth parameter in the constructor)</h3><p>var ps = new BABYLON.ParticleSystem(&quot;particles&quot;, 2000, scene, <strong>customEffect</strong>);</p>
+<h3><a name="customeffect-the-fourth-parameter-in-the-constructor" class="anchor" href="#customeffect-the-fourth-parameter-in-the-constructor"></a>customEffect (the fourth parameter in the constructor)</h3><p>var ps = new BABYLON.ParticleSystem(&quot;particles&quot;, 2000, scene, <strong>customEffect</strong>);</p>
 <p>The customEffect is a type of BABYLON.Effect used to target a valid shader program.</p>
 <p>The primary author of Babylon.js was kind enough to make us <a href="http://babylonjs-playground.azurewebsites.net/#1ASENS">a fantastic playground demo of a particle system using a fragment shader effect</a>. Visit that link, and you can see a fragment shader program that has been stored in a shader store. Notice the line:</p>
 <pre><code class="lang-javascript">BABYLON.Effect.ShadersStore[&quot;myParticleFragmentShader&quot;] = [...]

@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 24822
 PG_TITLE: In-Browser Mesh Simplification (Auto-LOD)
+TAGS:
+    - 04.MoreAdvancedFeatures
 ---
 #About
 

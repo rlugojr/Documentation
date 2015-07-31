@@ -2,6 +2,8 @@
 ID_PAGE: 6820
 PG_TITLE: TextFileAssetTask
 PG_VERSION: 2.1
+TAGS:
+    - Assets
 ---
 
 Load task on the given text file

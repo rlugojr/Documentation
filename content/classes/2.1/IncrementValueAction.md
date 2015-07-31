@@ -2,6 +2,8 @@
 ID_PAGE: 6667
 PG_TITLE: IncrementValueAction
 PG_VERSION: 2.1
+TAGS:
+    - Action
 ---
 ##new [IncrementValueAction](page.php?p=6667)(triggerOptions, target, propertyPath, value, condition)
 
@@ -22,7 +24,8 @@ Create a new increment value action
 optional | condition | [Condition](page.php?p=6679) | The condition to trigger the action
 ---
 
-##Extends [Action](page.php?p=6663)
+##Extends
+ [Action](page.php?p=6663)
 ##Members
 
 ###propertyPath : string

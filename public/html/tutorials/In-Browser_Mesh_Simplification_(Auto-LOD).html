@@ -106,7 +106,7 @@ var ground = BABYLON.Mesh.CreateGroundFromHeightMap("ground", "worldHeightMap.jp
 
 </li>
 </ul>
-<h2><a name="mesh-optimization-starting-babylonjs-21-" class="anchor" href="#mesh-optimization-starting-babylonjs-21-"></a>Mesh optimization (Starting BabylonJS 2.1)</h2><p>Due to the nature of Babylon&#39;s file format, it is possible that many vertices will have the same positions, normals, but different color/uv information. This presents a problem to the decimation process, which relays on having all triangles with the same position altered. </p>
+<h2><a name="mesh-optimization-starting-babylonjs-2-1" class="anchor" href="#mesh-optimization-starting-babylonjs-2-1"></a>Mesh optimization (Starting BabylonJS 2.1)</h2><p>Due to the nature of Babylon&#39;s file format, it is possible that many vertices will have the same positions, normals, but different color/uv information. This presents a problem to the decimation process, which relays on having all triangles with the same position altered. </p>
 <p>If you try simplifying a mesh, and it suddenly lacks a few triangles, this will be the reason - your mesh is not &quot;optimized&quot; for simplification.</p>
 <p>There are two types of optimization available:</p>
 <ol>

@@ -17,7 +17,9 @@
 var marked = require('meta-marked'),
     fs = require('fs'),
     path = require('path'),
-    async = require('async');
+    async = require('async'),
+    appRoot = require('app-root-path').path,
+    logger  = require(path.join(appRoot, 'config/logger'));
 
 /*************************************************************************
  *                               VARIABLES                               *
@@ -44,7 +46,7 @@ module.exports = function(done) {
             done(false);
             throw error;
         }
-        console.log("> "+__FILENAME__+" compiled.");
+        logger.info("> "+__FILENAME__+" compiled.");
         done();
     });
 };

@@ -2,6 +2,8 @@
 ID_PAGE: 6723
 PG_TITLE: SceneLoader
 PG_VERSION: 2.1
+TAGS:
+    - Scene
 ---
 
 This class is used to import .babylon files into the scene

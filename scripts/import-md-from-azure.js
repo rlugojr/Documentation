@@ -51,8 +51,10 @@ var cleanMDDir = function (data, callback) {
         cleanDirectory(path.join(__DIRNAME__, directory));
 
         fs.rmdir(path.join(__DIRNAME__, directory), function (err) {
-            if (err) console.log(err);
-            console.log("Directory " + path.join(__DIRNAME__, directory) + " removed.");
+            if (err) {
+                logger.info(err);
+            }
+            logger.info("Directory " + path.join(__DIRNAME__, directory) + " removed.");
         });
     });
 
@@ -67,7 +69,7 @@ var cleanMDDir = function (data, callback) {
 var cleanDirectory = function (directory_path) {
     var files = fs.readdirSync(directory_path);
 
-    console.log("Cleaning the directory: " + directory_path + "...");
+    logger.info("Cleaning the directory: " + directory_path + "...");
 
     // remove every files found in the directory
     files.forEach(function (file) {

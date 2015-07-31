@@ -2,6 +2,10 @@
 ID_PAGE: 6736
 PG_TITLE: RenderTargetTexture
 PG_VERSION: 2.1
+TAGS:
+    - BaseTexture
+    - Texture
+    - TargetTexture
 ---
 ##new [RenderTargetTexture](page.php?p=6736)(name, size, scene, generateMipMaps, doNotChangeAspectRatio, type)
 
@@ -24,7 +28,8 @@ optional | doNotChangeAspectRatio | boolean |
 optional | type | number | 
 ---
 
-##Extends [Texture](page.php?p=6733)
+##Extends
+ [Texture](page.php?p=6733)
 ##Members
 
 ###renderList : [AbstractMesh](page.php?p=6657)[]

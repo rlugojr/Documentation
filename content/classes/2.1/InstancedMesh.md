@@ -2,6 +2,9 @@
 ID_PAGE: 6658
 PG_TITLE: InstancedMesh
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Mesh
 ---
 
 Creates an instance based on a source mesh.
@@ -21,7 +24,8 @@ The [InstancedMesh](page.php?p=6658) constructor
  | source | [Mesh](page.php?p=6659) | @param source
 ---
 
-##Extends [AbstractMesh](page.php?p=6657)
+##Extends
+ [AbstractMesh](page.php?p=6657)
 ##Members
 
 ###receiveShadows : boolean

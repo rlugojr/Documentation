@@ -2,6 +2,9 @@
 ID_PAGE: 6733
 PG_TITLE: Texture
 PG_VERSION: 2.1
+TAGS:
+    - BaseTexture
+    - Texture
 ---
 ##new [Texture](page.php?p=6733)(url, scene, noMipmap, invertY, samplingMode, onLoad, onError, buffer, deleteBuffer)
 
@@ -29,7 +32,8 @@ optional | buffer | any |
 optional | deleteBuffer | boolean | 
 ---
 
-##Extends [BaseTexture](page.php?p=6731)
+##Extends
+ [BaseTexture](page.php?p=6731)
 ##Members
 
 ###static NEAREST_SAMPLINGMODE : number

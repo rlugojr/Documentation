@@ -2,6 +2,9 @@
 ID_PAGE: 6660
 PG_TITLE: GroundMesh
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Mesh
 ---
 
 The [GroundMesh](page.php?p=6660) Class extends [Mesh](page.php?p=6659)
@@ -21,7 +24,8 @@ The [GroundMesh](page.php?p=6660) constructor
  | scene | [Scene](page.php?p=6662) | @param scene
 ---
 
-##Extends [Mesh](page.php?p=6659)
+##Extends
+ [Mesh](page.php?p=6659)
 ##Members
 
 ###generateOctree : boolean

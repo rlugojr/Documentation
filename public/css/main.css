@@ -99,7 +99,7 @@ p {
     position: absolute;
     z-index: 2;
     color: white;
-    font-size: 20pt;
+    font-size: 1.4em;
     left: 5px;
     padding: 12px; }
     .nav-main #mobilemenu:hover {
@@ -109,7 +109,7 @@ p {
     position: absolute;
     z-index: 2;
     color: white;
-    font-size: 20pt;
+    font-size: 1.4em;
     left: 45px;
     padding: 12px; }
     .nav-main #goBackToClassList:hover {
@@ -142,7 +142,7 @@ p {
       .nav-main .banner .menu > div {
         height: 50px;
         line-height: 50px;
-        font-size: 12pt;
+        font-size: 1em;
         padding: 0 5px 0 5px;
         text-align: center; }
         .nav-main .banner .menu > div.active {
@@ -163,7 +163,7 @@ p {
       .nav-main .banner .menu .item {
         width: 100px;
         text-transform: uppercase;
-        font-size: 10pt;
+        font-size: 0.8em;
         cursor: pointer; }
     .nav-main .banner .more {
       display: -webkit-box;
@@ -224,7 +224,7 @@ p {
             border: none;
             outline: 0; }
         .nav-main .banner .more .searchbar button {
-          font-size: 16pt;
+          font-size: 1.3em;
           background: transparent;
           border: none;
           cursor: pointer; }
@@ -270,7 +270,7 @@ p {
   padding: 0;
   margin: 20px 0 0 0;
   background-color: #dcdcdc;
-  font-size: 14px; }
+  font-size: 0.8em; }
   .footer .footer-item {
     float: left;
     display: block;
@@ -302,7 +302,7 @@ p {
   margin: 10px 0px 25px 0px;
   text-align: center; }
   #versionsList .selectedVersion {
-    font-size: 20px;
+    font-size: 1.4em;
     color: #fc4349;
     margin: 5px 10px;
     font-weight: 400; }
@@ -337,7 +337,7 @@ p {
       padding: 8px 40px;
       display: none; }
       #classes_classesListByTag .category .categoryList li {
-        font-size: 20px;
+        font-size: 1.4em;
         list-style-type: square;
         color: #DCDCDC; }
         #classes_classesListByTag .category .categoryList li a {
@@ -409,7 +409,7 @@ p {
     padding: 10px;
     margin-bottom: 10px; }
   .classBar .class {
-    font-size: 11pt;
+    font-size: 1.0em;
     padding: 5px 0 5px 10px;
     color: #333;
     display: block; }
@@ -444,7 +444,7 @@ p {
       width: 48.82117%;
       padding-bottom: 2px;
       margin-bottom: 15px;
-      font-size: 20pt;
+      font-size: 1.7em;
       margin-top: 5px; }
       .classContent #classTitle h1:last-child {
         margin-right: 0; }
@@ -461,7 +461,7 @@ p {
         margin-right: 0; }
       .classContent #classTitle #selectList #methodsList {
         width: 100%;
-        font-size: 16px;
+        font-size: 1.2em;
         height: 34px; }
         .classContent #classTitle #selectList #methodsList option {
           padding: 8px; }
@@ -491,7 +491,7 @@ p {
     font-weight: 600; }
   .classContent #classMd h2 a, .classContent #classMd h3 a {
     margin: 0px 5px; }
-  .classContent #classMd h2 a.invisible, .classContent #classMd h3 a.invisible {
+  .classContent #classMd h2 a.permalink.invisible, .classContent #classMd h3 a.permalink.invisible {
     visibility: hidden; }
   .classContent #classMd h4 {
     margin-left: 15px;
@@ -544,7 +544,7 @@ p {
     background-color: #dcdcdc; }
   .presentation-header .bjs-moto {
     text-align: center;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: normal; }
 
 .bjs-components {
@@ -665,7 +665,8 @@ p {
         flex-flow: column nowrap;
         border: 2px solid #dcdcdc;
         height: 100%;
-        padding: 5px; }
+        padding: 5px;
+        cursor: pointer; }
         .statics-content .tagList .tagWrapper .tag .tagImage {
           display: block;
           margin: 0 auto;
@@ -695,6 +696,8 @@ p {
       clear: both;
       content: "";
       display: table; }
+    .statics-content .fileList .emptyList {
+      text-align: center; }
     .statics-content .fileList .fileTitle {
       padding: 3px;
       width: 100%;
@@ -770,11 +773,31 @@ p {
 .search-content {
   max-width: 80%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-bottom: 30px; }
   .search-content::after {
     clear: both;
     content: "";
     display: table; }
+  .search-content .searchHeader {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin-bottom: 30px; }
+    .search-content .searchHeader h2 {
+      margin: 0;
+      padding: 20px 0; }
+  .search-content .pageChangeWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around; }
+    .search-content .pageChangeWrapper .pageChangeLink {
+      border: 1px solid #fc4349;
+      padding: 3px 7px;
+      border-radius: 3px; }
+      .search-content .pageChangeWrapper .pageChangeLink:hover {
+        color: whitesmoke;
+        background-color: #fc4349;
+        text-decoration: none; }
   .search-content .result {
     margin: 15px 0; }
     .search-content .result .resultTitle {
@@ -784,40 +807,43 @@ p {
 #wrapper.error {
   background-color: white;
   text-align: center;
-  height: 100%; }
+  height: 100%;
+  cursor: pointer; }
   #wrapper.error .error_message {
     color: #fc4349;
-    font-size: 220pt;
+    font-size: 18.1em;
     margin: 0;
     font-family: "Open Sans"; }
   #wrapper.error .errorBaseline {
     margin-bottom: 50px;
-    font-size: 22pt;
+    font-size: 1.7em;
     font-family: "Open Sans"; }
+  #wrapper.error .redirectWrapper {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin-bottom: 60px; }
+    #wrapper.error .redirectWrapper::after {
+      clear: both;
+      content: "";
+      display: table; }
+    #wrapper.error .redirectWrapper .error_choice {
+      flex: auto; }
   #wrapper.error .error_link {
     text-decoration: underline; }
-  #wrapper.error .leftie, #wrapper.error .rightie {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    cursor: pointer; }
-    #wrapper.error .leftie:last-child, #wrapper.error .rightie:last-child {
-      margin-right: 0; }
-    #wrapper.error .leftie a, #wrapper.error .rightie a {
-      padding: 15px;
-      color: black; }
-      #wrapper.error .leftie a:hover, #wrapper.error .rightie a:hover {
-        background-color: #fc4349;
-        color: white; }
-      #wrapper.error .leftie a i, #wrapper.error .rightie a i {
-        margin: 0 15px 0 15px; }
-    #wrapper.error .leftie.error_choice_mobile, #wrapper.error .rightie.error_choice_mobile {
-      display: none; }
-  #wrapper.error .leftie {
-    text-align: right; }
-  #wrapper.error .rightie {
-    text-align: left; }
+  #wrapper.error a {
+    padding: 15px;
+    color: black; }
+    #wrapper.error a:hover {
+      background-color: #fc4349;
+      color: white; }
+    #wrapper.error a i {
+      margin: 0 15px 0 15px; }
+  #wrapper.error .error_choice_mobile {
+    display: none; }
 
 .slideout-menu {
   display: none;
@@ -850,7 +876,7 @@ p {
     -ms-flex-align: center; }
     .slideout-menu .searchbar-mobile input {
       height: 30px;
-      width: 180px;
+      width: 177px;
       border: none;
       margin-left: 10px;
       background-color: transparent; }
@@ -858,12 +884,12 @@ p {
         border: none;
         outline: 0; }
     .slideout-menu .searchbar-mobile button {
-      font-size: 16pt;
+      font-size: 1.2em;
       background: transparent;
       border: none;
       cursor: pointer; }
     .slideout-menu .searchbar-mobile i {
-      font-size: 16pt;
+      font-size: 1.2em;
       background-color: transparent;
       cursor: pointer;
       position: relative;
@@ -1020,8 +1046,9 @@ p {
     .classContent #classMd h2 a, .classContent #classMd h3 a {
       padding: 0;
       margin: 0;
-      visibility: initial;
-      display: none; }
+      visibility: initial; }
+      .classContent #classMd h2 a.permalink, .classContent #classMd h3 a.permalink {
+        display: none; }
     .classContent #classMd h2 a.invisible, .classContent #classMd h3 a.invisible {
       visibility: initial; }
     .classContent #classMd h1, .classContent #classMd h2, .classContent #classMd h3, .classContent #classMd h4, .classContent #classMd h5, .classContent #classMd h6 {
@@ -1086,36 +1113,26 @@ p {
       content: "";
       display: table; } }
 .search-content {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto; }
-  .search-content::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .search-content .result {
-    margin: 15px 0; }
-    .search-content .result .resultTitle {
-      font-size: 1.1em;
-      margin: 0; }
+  word-break: break-all; }
 
 /* MEDIUM SCREEN*/
 /* SMALL SCREENS VERSION */
 @media screen and (max-width: 960px) {
   #wrapper.error .error_message {
     padding-top: 50px;
-    font-size: 64pt;
+    font-size: 5.1em;
     margin: 0; }
-  #wrapper.error .leftie, #wrapper.error .rightie {
+  #wrapper.error .error_choice_mobile {
+    display: inherit;
+    text-align: center;
+    padding: 0;
+    flex: auto; }
+    #wrapper.error .error_choice_mobile i {
+      font-size: 3.1em; }
+  #wrapper.error .error_choice {
     display: none; }
-    #wrapper.error .leftie.error_choice_mobile, #wrapper.error .rightie.error_choice_mobile {
-      display: block;
-      text-align: center;
-      padding: 0; }
-      #wrapper.error .leftie.error_choice_mobile i, #wrapper.error .rightie.error_choice_mobile i {
-        font-size: 40pt; }
-    #wrapper.error .leftie a:hover, #wrapper.error .rightie a:hover {
-      background-color: white;
-      color: #fc4349; } }
+  #wrapper.error a:hover {
+    background-color: white;
+    color: #fc4349; } }
 
 /*# sourceMappingURL=main.css.map */

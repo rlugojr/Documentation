@@ -2,6 +2,8 @@
 ID_PAGE: 6817
 PG_TITLE: Sprite
 PG_VERSION: 2.1
+TAGS:
+    - Sprite
 ---
 ##new [Sprite](page.php?p=6817)(name, manager)
 

@@ -2,6 +2,8 @@
 ID_PAGE: 6818
 PG_TITLE: SpriteManager
 PG_VERSION: 2.1
+TAGS:
+    - Sprite
 ---
 ##new [SpriteManager](page.php?p=6818)(name, imgUrl, capacity, cellSize, scene, epsilon, samplingMode)
 

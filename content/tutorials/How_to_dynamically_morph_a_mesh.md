@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 25096
-PG_TITLE: How to dynamically morph a mesh 
+PG_TITLE: How to dynamically morph a mesh
+TAGS:
+    - 04.MoreAdvancedFeatures
 ---
 ###What is morphing ?
 

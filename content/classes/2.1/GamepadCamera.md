@@ -2,6 +2,12 @@
 ID_PAGE: 6641
 PG_TITLE: GamepadCamera
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Camera
+    - TargetCamera
+    - FreeCamera
+    - GamepadCamera
 ---
 ##new [GamepadCamera](page.php?p=6641)(name, position, scene)
 
@@ -20,7 +26,8 @@ Create a new [GamepadCamera](page.php?p=6641)
  | scene | [Scene](page.php?p=6662) | [Scene](page.php?p=6662) which contain the camera
 ---
 
-##Extends [FreeCamera](page.php?p=6638)
+##Extends
+ [FreeCamera](page.php?p=6638)
 ##Members
 
 ###angularSensibility : number

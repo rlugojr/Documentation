@@ -2,6 +2,8 @@
 ID_PAGE: 6823
 PG_TITLE: TextureAssetTask
 PG_VERSION: 2.1
+TAGS:
+    - Assets
 ---
 
 Load task on the given texture

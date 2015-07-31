@@ -2,6 +2,10 @@
 ID_PAGE: 6740
 PG_TITLE: CustomProceduralTexture
 PG_VERSION: 2.1
+TAGS:
+    - BaseTexture
+    - Texture
+    - ProceduralTexture
 ---
 ##new [CustomProceduralTexture](page.php?p=6740)(name, texturePath, size, scene, fallbackTexture, generateMipMaps)
 
@@ -19,7 +23,8 @@ optional | fallbackTexture | [Texture](page.php?p=6733) |
 optional | generateMipMaps | boolean | 
 ---
 
-##Extends [ProceduralTexture](page.php?p=6739)
+##Extends
+ [ProceduralTexture](page.php?p=6739)
 ##Members
 
 ###animate : boolean

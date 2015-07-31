@@ -2,6 +2,8 @@
 ID_PAGE: 6806
 PG_TITLE: PostProcessRenderEffect
 PG_VERSION: 2.1
+TAGS:
+    - PostProcess
 ---
 
 A render effect is a smart postprocess which can manage its own instances itself.

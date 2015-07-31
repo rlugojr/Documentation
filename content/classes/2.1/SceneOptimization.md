@@ -2,6 +2,9 @@
 ID_PAGE: 6832
 PG_TITLE: SceneOptimization
 PG_VERSION: 2.1
+TAGS:
+    - Scene
+    - SceneOptimization
 ---
 ##new [SceneOptimization](page.php?p=6832)(priority)
 

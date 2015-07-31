@@ -2,6 +2,8 @@
 ID_PAGE: 6825
 PG_TITLE: Database
 PG_VERSION: 2.1
+TAGS:
+    - Database
 ---
 ##new [Database](page.php?p=6825)(urlToScene, callbackManifestChecked)
 

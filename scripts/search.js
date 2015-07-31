@@ -14,10 +14,11 @@ var fs      = require('fs'),
     marked  = require('meta-marked'),
     async   = require('async'),
     LineByLineReader = require('line-by-line'),
-    appRoot = require('app-root-path').path;
+    appRoot = require('app-root-path').path,
+    logger  = require(path.join(appRoot, 'config/logger'));
 
-var fulltextsearchlight = require('full-text-search-light');
-var search = new fulltextsearchlight();
+var fulltextsearch = require('full-text-search');
+var search = new fulltextsearch();
 
 /*************************************************************************
  *                               VARIABLES                               *
@@ -26,7 +27,7 @@ var search = new fulltextsearchlight();
 
 var CLASSES_FOLDER = path.join(appRoot, 'content/classes/2.1/');
 
-//var search = fulltextsearchlight.loadSync('index.json');
+//var search = fulltextsearch.loadSync('index.json');
 var files = fs.readdirSync(CLASSES_FOLDER);
 
 async.each(files, function(f, cb) {
@@ -42,7 +43,7 @@ async.each(files, function(f, cb) {
     });
 }, function() {
     search.saveSync('data/search/index.json');
-    console.log("debut de la recherche");
+    logger.info("debut de la recherche");
     //ss('mesh');
     ss('constructor');
     //ss('shader');
@@ -61,8 +62,8 @@ function ss(term) {
             uniqLine.push(r.text);
         }
     });
-    console.log(uniq);
-    console.log(uniqLine);
+    logger.info(uniq);
+    logger.info(uniqLine);
 }
 /*************************************************************************
  *                                 SCRIPT                                *

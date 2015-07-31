@@ -2,6 +2,8 @@
 ID_PAGE: 6789
 PG_TITLE: OimoJSPlugin
 PG_VERSION: 2.1
+TAGS:
+    - Plugins
 ---
 
 

@@ -2,6 +2,9 @@
 ID_PAGE: 6656
 PG_TITLE: SpotLight
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Light
 ---
 
 A spot light is defined by a position, a direction, an angle and an exponent.
@@ -29,7 +32,8 @@ Creates a new [SpotLight](page.php?p=6656) object
  | scene | [Scene](page.php?p=6662) | The scene to create the light into
 ---
 
-##Extends [Light](page.php?p=6652)
+##Extends
+ [Light](page.php?p=6652)
 ##Members
 
 ###position : [Vector3](page.php?p=6751)

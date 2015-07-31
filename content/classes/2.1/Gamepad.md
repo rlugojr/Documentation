@@ -2,6 +2,8 @@
 ID_PAGE: 6829
 PG_TITLE: Gamepad
 PG_VERSION: 2.1
+TAGS:
+    - Gamepad
 ---
 ##new [Gamepad](page.php?p=6829)(id, index, browserGamepad)
 

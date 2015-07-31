@@ -2,6 +2,8 @@
 ID_PAGE: 6729
 PG_TITLE: StandardMaterial
 PG_VERSION: 2.1
+TAGS:
+    - Material
 ---
 ##new [StandardMaterial](page.php?p=6729)(name, scene)
 
@@ -21,7 +23,8 @@ And here : http://blogs.msdn.com/b/eternalcoding/archive/2013/07/01/babylon-js-u
  | scene | [Scene](page.php?p=6662) | [Scene](page.php?p=6662) which contain the standardMaterial
 ---
 
-##Extends [Material](page.php?p=6726)
+##Extends
+ [Material](page.php?p=6726)
 ##Members
 
 ###diffuseTexture : [BaseTexture](page.php?p=6731)

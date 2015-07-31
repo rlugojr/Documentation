@@ -2,6 +2,8 @@
 ID_PAGE: 6716
 PG_TITLE: Octree<T>
 PG_VERSION: 2.1
+TAGS:
+    - Octree
 ---
 
 Data structure class based on space coordinates

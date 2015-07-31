@@ -2,6 +2,8 @@
 ID_PAGE: 6682
 PG_TITLE: StateCondition
 PG_VERSION: 2.1
+TAGS:
+    - Condition
 ---
 
 This condition checks the state property of an object and compares it to the given value
@@ -22,7 +24,8 @@ The state condition constructor
  | value | string | The given value
 ---
 
-##Extends [Condition](page.php?p=6679)
+##Extends
+ [Condition](page.php?p=6679)
 ##Members
 
 ###value : string

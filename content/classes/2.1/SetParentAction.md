@@ -2,6 +2,8 @@
 ID_PAGE: 6673
 PG_TITLE: SetParentAction
 PG_VERSION: 2.1
+TAGS:
+    - Action
 ---
 ##new [SetParentAction](page.php?p=6673)(triggerOptions, target, parent, condition)
 
@@ -21,7 +23,8 @@ Used to define the parent of a node (camera, light, mesh)
 optional | condition | [Condition](page.php?p=6679) | The condition to do the action
 ---
 
-##Extends [Action](page.php?p=6663)
+##Extends
+ [Action](page.php?p=6663)
 
 
 ##Methods

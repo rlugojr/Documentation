@@ -2,6 +2,8 @@
 ID_PAGE: 6799
 PG_TITLE: PassPostProcess
 PG_VERSION: 2.1
+TAGS:
+    - PostProcess
 ---
 
 Builtin postprocess doing nothing. Used to copy the framebuffer into a postprocess for further use
@@ -18,7 +20,8 @@ optional | engine | [Engine](page.php?p=6629) | The engine to attach the postpro
 optional | reusable | boolean | Indicates if the postprocess can be reused multiple times on the same camera
 ---
 
-##Extends [PostProcess](page.php?p=6790)
+##Extends
+ [PostProcess](page.php?p=6790)
 
 
 ##Methods

@@ -2,6 +2,8 @@
 ID_PAGE: 6787
 PG_TITLE: PhysicsEngine
 PG_VERSION: 2.1
+TAGS:
+    - Engine
 ---
 ##new [PhysicsEngine](page.php?p=6787)(plugin)
 

@@ -18,22 +18,50 @@
  *                             REQUIREMENTS                              *
  ************************************************************************/
 
-var fs      = require('fs'),
-    path    = require('path'),
-    async   = require('async'),
-    jade    = require('jade'),
-    appRoot = require('app-root-path').path,
-    logger  = require(path.join(appRoot, 'config/logger')),
-    marked  = require('meta-marked'),
-    rimraf  = require('rimraf'),
-    util    = require('util');
+var fs       = require('fs'),
+    path     = require('path'),
+    async    = require('async'),
+    jade     = require('jade'),
+    appRoot  = require('app-root-path').path,
+    logger   = require(path.join(appRoot, 'config/logger')),
+    marked   = require('meta-marked'),
+    renderer = new marked.Renderer(),
+    toc      = require('marked-toc'),
+    tocRenderer = new marked.Renderer(),
+    rimraf   = require('rimraf'),
+    util     = require('util');
 
+// custom renderer that modifies heading and insert a permalink icon before each title
+renderer.heading = function(text, level, raw){
+    raw_escaped = raw.toLowerCase().replace(/[^\w]+/g, '-');
 
+    // if <h2> or <h3>, add permalink icon
+    if(level >= 2 && level <= 3){
+        var link = '<a href="#'+ this.options.headerPrefix + raw_escaped + '" class="invisible permalink">' +
+            '<i class="fa fa-link"></i>' +
+            '</a>';
+        return '<h' + level + ' id="' + this.options.headerPrefix + raw_escaped + '">'
+            + link
+            + text
+            + '</h' + level + '>\n';
+    // else return default heading rendered by marked
+    } else {
+        return '<h' + level + ' id="' + this.options.headerPrefix + raw_escaped + '">'
+            + raw
+            + '</h' + level + '>\n';
+    }
+};
+
+tocRenderer.link = function(href, title, text){
+    return '<option value="' + href.split('#')[1] + '">' + text + '</option>\n';
+};
+
+// don't forget to set the render of marked
 marked.setOptions({
     gfm: true,
     breaks: false,
     tables: true,
-    sanitize: false
+    renderer: renderer
 });
 
 
@@ -75,7 +103,7 @@ module.exports = function (done) {
 
             // FLUSH DIRECTORY /public/html/class_<version>/
             var dirPath = path.join(__HTML_FILES_DESTDIR__, 'class_' + version);
-            console.log(dirPath);
+            logger.info(dirPath);
 
             logger.info('Directory html/class_' + version + ' is about to be cleaned...');
 
@@ -87,7 +115,7 @@ module.exports = function (done) {
                 // as rimraf flush the directory THEN delete it, we need to recreate it
                 fs.mkdir(dirPath, function(mkdirErr){
                     if(mkdirErr){
-                        console.log('mkdirError!', mkdirErr);
+                        logger.info('mkdirError!' + mkdirErr);
                         throw mkdirErr;
                     }
 
@@ -213,7 +241,7 @@ var compileClassesPages = function(versions, version, classesList, tagsList, cal
         if (err) {
             throw err;
         } else {
-            logger.info("> HTML page for classes_" + version + " compiled." )
+            logger.info("> HTML page for classes_" + version + " compiled." );
             callback(null);
         }
     });
@@ -239,6 +267,25 @@ var compileClassPages = function(versions, version, classesList, tagsList, callb
                 throw readMDErr;
             } else {
                 var markedContent = marked(data);
+                //var documentToc = toc(data, {
+                //    omit:['PG_TITLE', 'PG_VERSION', 'TAGS', 'Extends'],
+                //    bullet: ['-', '*'],
+                //    maxDepth: 2
+                //});
+
+                //var processedToc = [];
+                //
+                //documentToc = documentToc.replace(/&rarr;/, '->').split('\n');
+                //
+                //documentToc.forEach(function(str, i){
+                //    var modifiedStr = marked(str.trim(), { renderer: tocRenderer }).html;
+                //    modifiedStr = processTocString(modifiedStr);
+                //    if(modifiedStr) {
+                //        processedToc.push(modifiedStr);
+                //    }
+                //});
+
+                //console.log(processedToc);
 
                 var optionsClass = {
                     pretty          : false,
@@ -249,6 +296,7 @@ var compileClassPages = function(versions, version, classesList, tagsList, callb
                     className       : className,
                     classTags       : markedContent.meta['TAGS'],
                     content         : markedContent.html
+                    //toc             : processedToc
                 };
 
                 logger.info('public/html/class_' + version + '/' + className + '.html is about to be compiled...');
@@ -268,4 +316,19 @@ var compileClassPages = function(versions, version, classesList, tagsList, callb
         logger.info('> All "class" for BJSv' + version + ' pages compiled.');
         callback(null);
     });
+};
+
+var processTocString = function(tocString){
+    if(tocString.match(/^<p>-/)){
+        // Members/Methods/constructor
+        if(tocString.match(/>Members</)){
+            return '<option value="members" class="cat">Members</option>';
+        } else if(tocString.match(/>Methods</)){
+            return '<option value="members" class="cat">Methods</option>';
+        } else {
+            return false;
+        }
+    } else if(tocString.match(/^<p>\*/)){
+        return tocString.slice(4, -6);
+    }
 };

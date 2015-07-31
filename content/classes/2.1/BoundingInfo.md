@@ -2,6 +2,9 @@
 ID_PAGE: 6714
 PG_TITLE: BoundingInfo
 PG_VERSION: 2.1
+TAGS:
+    - Mesh
+    - Bounding
 ---
 
 Create bounding info for the given mesh

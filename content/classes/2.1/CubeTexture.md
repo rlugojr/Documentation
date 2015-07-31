@@ -2,6 +2,8 @@
 ID_PAGE: 6732
 PG_TITLE: CubeTexture
 PG_VERSION: 2.1
+TAGS:
+    - BaseTexture
 ---
 ##new [CubeTexture](page.php?p=6732)(rootUrl, scene, extensions, noMipmap)
 
@@ -22,7 +24,8 @@ optional | extensions | string[] | The cube texture extensions. The defaults ext
 optional | noMipmap | boolean | @param noMipmap
 ---
 
-##Extends [BaseTexture](page.php?p=6731)
+##Extends
+ [BaseTexture](page.php?p=6731)
 ##Members
 
 ###url : string

@@ -1,8 +1,37 @@
 .search-content {
   @include outer-container(80%);
+  padding-bottom: 30px;
 
-  .searchHeader{
+  .searchHeader {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin-bottom: 30px;
 
+    h2{
+      margin: 0;
+      padding: 20px 0;
+    }
+  }
+
+  .pageChangeWrapper {
+    display: flex;
+    flex-flow: row wrap;
+
+    //align-items: ;
+    justify-content: space-around;
+    .pageChangeLink {
+      border: 1px solid $red;
+
+      padding: 3px 7px;
+
+      border-radius: 3px;
+
+      &:hover {
+        color: whitesmoke;
+        background-color: $red;
+        text-decoration: none;
+      }
+    }
   }
 
   .result {

@@ -2,6 +2,10 @@
 ID_PAGE: 6636
 PG_TITLE: TargetCamera
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Camera
+    - TargetCamera
 ---
 ##new [TargetCamera](page.php?p=6636)(name, position, scene)
 
@@ -20,7 +24,8 @@ Create a new targetCamera
  | scene | [Scene](page.php?p=6662) | The scene where the targetCamera will be create
 ---
 
-##Extends [Camera](page.php?p=6631)
+##Extends
+ [Camera](page.php?p=6631)
 ##Members
 
 ###cameraDirection : [Vector3](page.php?p=6751)

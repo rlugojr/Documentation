@@ -2,6 +2,8 @@
 ID_PAGE: 6843
 PG_TITLE: SceneSerializer
 PG_VERSION: 2.1
+TAGS:
+    - Scene
 ---
 
 Serializes a scene

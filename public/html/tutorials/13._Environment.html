@@ -19,14 +19,14 @@
 <li><code>scene.ambientColor</code> - changes the color used in several effects, including ambient lighting.</li>
 </ul>
 <p>Both of them are very useful, and powerful in their own right.</p>
-<h3><a name="changing-the-background-color-code-sceneclearcolor-code-" class="anchor" href="#changing-the-background-color-code-sceneclearcolor-code-"></a>Changing the Background color (<code>scene.clearColor</code>)</h3><p>The &#39;clearColor&#39; property on the scene object is the most rudimentary of environment properties/adjustments. Simply stated, this is how you change the background color of the scene.&nbsp; Here is how it is done:</p>
+<h3><a name="changing-the-background-color-code-scene-clearcolor-code" class="anchor" href="#changing-the-background-color-code-scene-clearcolor-code"></a>Changing the Background color (<code>scene.clearColor</code>)</h3><p>The &#39;clearColor&#39; property on the scene object is the most rudimentary of environment properties/adjustments. Simply stated, this is how you change the background color of the scene.&nbsp; Here is how it is done:</p>
 <pre><code class="lang-javascript">scene.clearColor = new BABYLON.Color3(0.5, 0.8, 0.5);
 </code></pre>
 <p>Or maybe you want to use one of our preset colors and avoid using the <code>new</code> keyword:</p>
 <pre><code class="lang-javascript">scene.clearColor = BABYLON.Color3.Blue();
 </code></pre>
 <p>This color and property is not used in any calculations for the final colors of mesh, materials, textures, or anything else. It is simply the background color of the scene.&nbsp; Easy.</p>
-<h3><a name="changing-the-ambient-color-code-sceneambientcolor-code-" class="anchor" href="#changing-the-ambient-color-code-sceneambientcolor-code-"></a>Changing the Ambient color (<code>scene.ambientColor</code>)</h3><p>Conversely, the <code>ambientColor</code> property on the scene object is a very powerful and influential environment property/adjustment.&nbsp; First, let&#39;s have a look at its syntax:</p>
+<h3><a name="changing-the-ambient-color-code-scene-ambientcolor-code" class="anchor" href="#changing-the-ambient-color-code-scene-ambientcolor-code"></a>Changing the Ambient color (<code>scene.ambientColor</code>)</h3><p>Conversely, the <code>ambientColor</code> property on the scene object is a very powerful and influential environment property/adjustment.&nbsp; First, let&#39;s have a look at its syntax:</p>
 <pre><code class="lang-javascript">scene.ambientColor = new BABYLON.Color3(0.3, 0.3, 0.3);
 </code></pre>
 <p>As you can see, it is set using the same format as <code>clearColor</code>, but <code>ambientColor</code> is used in quite a few calculations toward determining the final colors of scene items.&nbsp; Mainly, it is used in conjunction with a mesh&#39;s <code>StandardMaterial.ambientColor</code> to determine a FINAL <code>ambientColor</code> for the mesh material. </p>

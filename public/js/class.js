@@ -79,16 +79,11 @@
         //});
 
         // handles the permalinks
-        $.each($("#classMd h3"), function(i, title){
-            addPermalink(title);
-
+        $.each($("#classMd h3, #classMd h2"), function(i, title){
+            if(title){
+                handlePermalink(title);
+            }
         });
-        console.log('ended prepend h3');
-        $.each($("#classMd h2"), function(i, title){
-            addPermalink(title);
-
-        });
-        //console.log('ended prepend h2');
 
         // check if an anchor is specified in the page url, goes to
         // specified anchor if true
@@ -119,6 +114,7 @@
          * with the correct class list by tag open */
         $.each($('.classTag'), function(i, tag){
             $(tag).on('click', function(evt){
+                window.localStorage.orderClassesby = 'tags';
                 window.localStorage.selectedTag = $(tag).attr('id');
             });
         });
@@ -140,35 +136,33 @@
                 }));
             }
         });
-        //console.log('ended selectList');
 
         // select#methodsList -> action on change of selected value
         $('#methodsList').on('change', function(){
             var id = $(this).val(),
-                selectedElement = $('#' + id);
+                $selectedElement = $('#' + id);
+
+            console.log($selectedElement);
 
             $('.highlighted').removeClass('highlighted');
-            selectedElement.addClass('highlighted');
+            $selectedElement.addClass('highlighted');
 
             var currentPage = window.location.toString().split('#', [0]);
             window.history.pushState({id: id}, '', currentPage + '#' + id);
 
-            window.scrollTo(0, selectedElement.offset().top - 50);
-            $('.classContent').scrollTop(selectedElement.offset().top - 50);
+            window.scrollTo(0, $selectedElement.offset().top - 50);
+            $('.classContent').scrollTop($selectedElement.offset().top - 50);
         });
 
      });
 
     /**
-     * Prepends every <h2> and <h3> with a little icon which highlights the selected line
-     * and changes the current page url when clicked (give the possibility to the user to
+     * Changes the current page url when clicked (give the possibility to the user to
      * copy-paste links directly to a method or attribute of a class, for example).
+     * Just like in Github ;-)
      * @param title
      */
-    var addPermalink = function(title){
-        var titleHref = $(title).attr('id');
-        $(title).prepend('<a href="#' + titleHref + '" class="invisible permalink"><i class="fa fa-link"></i></a>');
-
+    var handlePermalink = function(title){
         // show the anchors only when you pass the mouse over the name of the linked method/attribute
         $(title).on('mouseover', function(evt){
             if($(title).children("a:first").hasClass('permalink')){
@@ -190,7 +184,5 @@
             window.history.pushState({id: id}, '', currentPage + '#' + id);
         });
     };
-
-
 })();
 

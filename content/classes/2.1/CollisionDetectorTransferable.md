@@ -2,6 +2,8 @@
 ID_PAGE: 6710
 PG_TITLE: CollisionDetectorTransferable
 PG_VERSION: 2.1
+TAGS:
+    - Collision
 ---
 
 

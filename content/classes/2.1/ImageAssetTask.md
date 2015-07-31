@@ -2,6 +2,8 @@
 ID_PAGE: 6822
 PG_TITLE: ImageAssetTask
 PG_VERSION: 2.1
+TAGS:
+    - Assets
 ---
 
 Load task on the given image

@@ -2,6 +2,8 @@
 ID_PAGE: 6868
 PG_TITLE: Cylinder
 PG_VERSION: 2.1
+TAGS:
+    - Geometry
 ---
 
 The [Cylinder](page.php?p=6868) Class
@@ -29,7 +31,8 @@ optional | mesh | [Mesh](page.php?p=6659) | @param mesh
 optional | side | number | 
 ---
 
-##Extends [_Primitive](page.php?p=6864)
+##Extends
+ [_Primitive](page.php?p=6864)
 ##Members
 
 ###height : number

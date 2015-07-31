@@ -2,6 +2,8 @@
 ID_PAGE: 6761
 PG_TITLE: Angle
 PG_VERSION: 2.1
+TAGS:
+    - Math
 ---
 ##new [Angle](page.php?p=6761)(radians)
 

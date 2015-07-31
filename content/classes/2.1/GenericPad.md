@@ -2,6 +2,8 @@
 ID_PAGE: 6830
 PG_TITLE: GenericPad
 PG_VERSION: 2.1
+TAGS:
+    - Gamepad
 ---
 ##new [GenericPad](page.php?p=6830)(id, index, gamepad)
 
@@ -20,7 +22,8 @@ Builds a [Gamepad](page.php?p=6829) object
  | gamepad | any | The object that holds the gamepad informations
 ---
 
-##Extends [Gamepad](page.php?p=6829)
+##Extends
+ [Gamepad](page.php?p=6829)
 ##Members
 
 ###id : string

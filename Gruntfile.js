@@ -88,6 +88,11 @@ module.exports = function (grunt) {
                     'public/html/**',
                     '!public/html'
                 ]
+            },
+            tmp: {
+                src: [
+                    '.tmp/**/*'
+                ]
             }
         }
     });
@@ -111,7 +116,7 @@ module.exports = function (grunt) {
         'watch'
     ]);
 
-    grunt.registerTask('build-index', 'Create index search file',
+    grunt.registerTask('search-index', 'Create index search file',
         function () {
             var done = this.async();
         require('./scripts/helpers/indexer/main')(done);
@@ -121,11 +126,6 @@ module.exports = function (grunt) {
     grunt.registerTask('index', 'Compile the static HTML page index', function () {
         require('./scripts/compile-html/compile-html-index.js')();
     });
-
-    grunt.registerTask('search-index', [
-            'build-index',
-            "json-minify:build"
-        ]);
 
     /** Compile the static HTML page whats-new **/
     grunt.registerTask('whats-new', 'Compile the static HTML page whats-new', function () {
@@ -177,13 +177,14 @@ module.exports = function (grunt) {
     );
     grunt.registerTask('compile',
         'Compile all HTML pages.',
-        ['index', 'whats-new', 'tags', 'classes', 'forward', 'lists', 'statics']
+        ['index', 'whats-new', 'tags', 'classes', 'forward', 'lists', 'statics', 'search-index', 'clean:tmp']
     );
     grunt.registerTask('clean-n-compile',
         'Clean every generated/compiled files then recompile everything.',
-        ['clean', 'compile']
+        ['clean:deleteFiles', 'compile']
     );
-// load all grunt tasks
+
+    // load all grunt tasks
     require('load-grunt-tasks')(grunt);
 };
 

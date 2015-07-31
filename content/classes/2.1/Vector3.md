@@ -2,6 +2,8 @@
 ID_PAGE: 6751
 PG_TITLE: Vector3
 PG_VERSION: 2.1
+TAGS:
+    - Objects
 ---
 ##new [Vector3](page.php?p=6751)(x, y, z)
 

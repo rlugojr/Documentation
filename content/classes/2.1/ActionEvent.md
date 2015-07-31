@@ -2,8 +2,11 @@
 ID_PAGE: 6677
 PG_TITLE: ActionEvent
 PG_VERSION: 2.1
+TAGS:
+    - Action
 ---
- [ActionEvent](page.php?p=6677) is the event beint sent when an action is triggered.
+
+ [ActionEvent](page.php?p=6677) is the event beint sent when an action is triggered.
 ##new [ActionEvent](page.php?p=6677)(source, pointerX, pointerY, meshUnderPointer, sourceEvent)
 
 @constructor

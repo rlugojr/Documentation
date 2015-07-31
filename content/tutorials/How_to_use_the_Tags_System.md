@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 22521
 PG_TITLE: How to use the Tags System
+TAGS:
+    - 04.MoreAdvancedFeatures
 ---
 ## Concepts
 

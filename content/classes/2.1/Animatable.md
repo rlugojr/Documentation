@@ -2,6 +2,8 @@
 ID_PAGE: 6683
 PG_TITLE: Animatable
 PG_VERSION: 2.1
+TAGS:
+    - Animation
 ---
 
 Used to access to individual animations

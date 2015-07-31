@@ -2,6 +2,8 @@
 ID_PAGE: 6749
 PG_TITLE: Color4
 PG_VERSION: 2.1
+TAGS:
+    - Objects
 ---
 ##new [Color4](page.php?p=6749)(r, g, b, a)
 

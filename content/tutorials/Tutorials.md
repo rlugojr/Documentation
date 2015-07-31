@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 6411
 PG_TITLE: Tutorials
+TAGS:
+    - Others
 ---
 ## Tutorials and documentation of every flavor.
 

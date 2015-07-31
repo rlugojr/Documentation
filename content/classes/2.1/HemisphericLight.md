@@ -2,6 +2,9 @@
 ID_PAGE: 6654
 PG_TITLE: HemisphericLight
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Light
 ---
 
 Hemispheric light represents a simple and easy way to simulate realistic ambient light.
@@ -26,7 +29,8 @@ Creates a new [HemisphericLight](page.php?p=6654) object
  | scene | [Scene](page.php?p=6662) | The scene to create the light into
 ---
 
-##Extends [Light](page.php?p=6652)
+##Extends
+ [Light](page.php?p=6652)
 ##Members
 
 ###direction : [Vector3](page.php?p=6751)

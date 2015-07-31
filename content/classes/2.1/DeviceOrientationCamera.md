@@ -2,6 +2,11 @@
 ID_PAGE: 6640
 PG_TITLE: DeviceOrientationCamera
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Camera
+    - TargetCamera
+    - FreeCamera
 ---
 ##new [DeviceOrientationCamera](page.php?p=6640)(name, position, scene)
 
@@ -21,7 +26,8 @@ A tutorial about [DeviceOrientationCamera](page.php?p=6640) can be found [here](
  | scene | [Scene](page.php?p=6662) | 
 ---
 
-##Extends [FreeCamera](page.php?p=6638)
+##Extends
+ [FreeCamera](page.php?p=6638)
 ##Members
 
 ###angularSensibility : number

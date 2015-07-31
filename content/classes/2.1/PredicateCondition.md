@@ -2,6 +2,8 @@
 ID_PAGE: 6681
 PG_TITLE: PredicateCondition
 PG_VERSION: 2.1
+TAGS:
+    - Condition
 ---
 
 This condition uses a predicate to determine its state
@@ -21,7 +23,8 @@ The predicate condition constructor
  | predicate | () =&gt; boolean | The predicate
 ---
 
-##Extends [Condition](page.php?p=6679)
+##Extends
+ [Condition](page.php?p=6679)
 ##Members
 
 ###predicate : () =&gt; boolean

@@ -9,7 +9,10 @@
 
 var jade    = require('jade'),
     fs      = require('fs'),
-    marked  = require('meta-marked');
+    marked  = require('meta-marked'),
+    path    = require('path'),
+    appRoot = require('app-root-path').path,
+    logger  = require(path.join(appRoot, 'config/logger'));
 
 /*************************************************************************
  *                                 SCRIPT                                *
@@ -28,5 +31,5 @@ module.exports = function(done) {
 
     var htmlRender = jade.renderFile('views/whats-new.jade', options);
     fs.writeFileSync('public/html/whats-new.html', htmlRender);
-    console.log("> Whats-new.html compiled.")
+    logger.info("> Whats-new.html compiled.")
 };

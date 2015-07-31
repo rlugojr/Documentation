@@ -1040,3 +1040,19 @@
 {"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-29T07:20:37.373Z"}
 {"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-29T08:09:02.042Z"}
 {"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\OculusCamera.html","timestamp":"2015-07-29T08:09:05.751Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-30T07:12:49.329Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-30T07:12:49.823Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-30T12:34:31.578Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-30T12:34:32.070Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\html\\tutorials.html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\html\\tutorials.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\html\\\\tutorials.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-30T13:14:57.237Z"}
+{"level":"error","message":"500 Error at E:\\BabylonJS\\src\\public\\html\\tutorials.html - { [Error: ENOENT, stat 'E:\\BabylonJS\\src\\public\\html\\tutorials.html']\n  errno: \u001b[33m-4058\u001b[39m,\n  code: \u001b[32m'ENOENT'\u001b[39m,\n  path: \u001b[32m'E:\\\\BabylonJS\\\\src\\\\public\\\\html\\\\tutorials.html'\u001b[39m,\n  expose: \u001b[33mfalse\u001b[39m,\n  statusCode: \u001b[33m404\u001b[39m,\n  status: \u001b[33m404\u001b[39m }","timestamp":"2015-07-30T13:15:15.530Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\AbstractMesh.html","timestamp":"2015-07-30T14:16:37.570Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\static-billboardmode_z-number.html","timestamp":"2015-07-31T12:10:41.941Z"}
+{"level":"error","message":"404 Error -  /classes/2.1/2.1/AbstractMesh","timestamp":"2015-07-31T12:11:38.408Z"}
+{"level":"error","message":"404 error - File not found: public\\html\\class_2.1\\static-billboardmodenone-number.html","timestamp":"2015-07-31T12:12:43.321Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-31T12:12:47.836Z"}
+{"level":"error","message":"404 Error -  /favicon.ico","timestamp":"2015-07-31T12:12:47.900Z"}
+{"level":"error","message":"404 Error -  /vzrv","timestamp":"2015-07-31T13:32:22.180Z"}
+{"level":"error","message":"404 Error -  /vzrv","timestamp":"2015-07-31T13:32:34.518Z"}
+{"level":"error","message":"404 Error -  /gkjf","timestamp":"2015-07-31T13:59:56.381Z"}
+{"level":"error","message":"404 Error -  /-g%20gr%20rs","timestamp":"2015-07-31T14:00:17.116Z"}

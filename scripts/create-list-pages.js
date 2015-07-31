@@ -51,7 +51,9 @@ module.exports = function (dirs, done) {
                  * Clean the msg objects
                  */
 
-                if (err) console.log(err);
+                if (err) {
+                    logger.info(err);
+                }
                 delete msg.flash.path;
                 delete msg.files;
                 endIteration(err);

@@ -2,6 +2,8 @@
 ID_PAGE: 6680
 PG_TITLE: ValueCondition
 PG_VERSION: 2.1
+TAGS:
+    - Condition
 ---
 
 This condition is true when the given property
@@ -24,7 +26,8 @@ The Value condition constructor
 optional | operator | number | The operator used
 ---
 
-##Extends [Condition](page.php?p=6679)
+##Extends
+ [Condition](page.php?p=6679)
 ##Members
 
 ###propertyPath : string

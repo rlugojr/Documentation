@@ -2,6 +2,8 @@
 ID_PAGE: 6867
 PG_TITLE: Sphere
 PG_VERSION: 2.1
+TAGS:
+    - Geometry
 ---
 
 The [Sphere](page.php?p=6867) Class
@@ -26,7 +28,8 @@ optional | mesh | [Mesh](page.php?p=6659) | @param mesh
 optional | side | number | 
 ---
 
-##Extends [_Primitive](page.php?p=6864)
+##Extends
+ [_Primitive](page.php?p=6864)
 ##Members
 
 ###segments : number

@@ -2,6 +2,11 @@
 ID_PAGE: 6651
 PG_TITLE: WebVRFreeCamera
 PG_VERSION: 2.1
+TAGS:
+    - Node
+    - Camera
+    - TargetCamera
+    - FreeCamera
 ---
 ##new [WebVRFreeCamera](page.php?p=6651)(name, position, scene, compensateDistorsion)
 
@@ -14,7 +19,8 @@ PG_VERSION: 2.1
 optional | compensateDistorsion | boolean | 
 ---
 
-##Extends [FreeCamera](page.php?p=6638)
+##Extends
+ [FreeCamera](page.php?p=6638)
 
 
 ##Methods

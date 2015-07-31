@@ -2,6 +2,8 @@
 ID_PAGE: 6676
 PG_TITLE: InterpolateValueAction
 PG_VERSION: 2.1
+TAGS:
+    - Action
 ---
 
 This action creates an animation to interpolate the current value of a property to a given target.
@@ -32,7 +34,8 @@ optional | condition | [Condition](page.php?p=6679) | The condition
 optional | stopOtherAnimations | boolean | Set true to stop other animation, false otherwise.
 ---
 
-##Extends [Action](page.php?p=6663)
+##Extends
+ [Action](page.php?p=6663)
 ##Members
 
 ###propertyPath : string

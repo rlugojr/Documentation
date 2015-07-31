@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 22481
 PG_TITLE: How to use FresnelParameters
+TAGS:
+    - 04.MoreAdvancedFeatures
 ---
 Babylon.js 1.14 introduced new parameters for the StandardMaterial: _FresnelParameters_.
 

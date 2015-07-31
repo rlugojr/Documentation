@@ -7,13 +7,16 @@ var fs = require('fs');
 var path = require('path');
 var async = require('async');
 var readdirp = require('readdirp');
+var mkpath = require('mkpath');
 
 var lbl = require('line-by-line');
 
 var _ = require('lodash');
 
 var appRoot = require('app-root-path').path;
-var fulltextsearchlight = require('full-text-search-light');
+var fulltextsearch = require('full-text-search');
+
+var fileSplitter = require('../fileSplitter');
 
 module.exports = function index(done) {
 
@@ -33,13 +36,13 @@ module.exports = function index(done) {
                 delete element.stat;
 
                 //Ignore directory classes
-                if (element.name !== 'classes')  indexes[element.name] = new fulltextsearchlight();
+                if (element.name !== 'classes')  indexes[element.name] = new fulltextsearch();
             });
 
             async.each(allFiles.files,
                 function (fileInfo, endIteration) {
 
-                    var search = _.get(indexes, fileInfo.parentDir.substring(fileInfo.parentDir.lastIndexOf('\\') + 1));
+                    var search = _.get(indexes, fileInfo.parentDir.substring(fileInfo.parentDir.lastIndexOf(path.sep) + 1));
 
                     var lr = new lbl(fileInfo.fullPath);
                     lr
@@ -50,13 +53,8 @@ module.exports = function index(done) {
                         .on('line', function (line) {
                             if (line) {
                                 lr.pause();
-                                var changeSlashes = /\\/g;
-                                //var changeSlashes = new RegExp(path.sep, 'g');
+                                var changeSlashes = new RegExp(_.escapeRegExp(path.sep), 'g');
                                 var src = path.join(fileInfo.parentDir, path.basename(fileInfo.name, '.md')).replace(changeSlashes, '/');
-
-                                //console.log(fileInfo.parentDir);
-                                //console.log(fileInfo.parentDir.replace(changeSlashes, '/'));
-                                //console.log(src);
 
                                 search.add({
                                     //path is the link in the website
@@ -75,25 +73,34 @@ module.exports = function index(done) {
 
                 },
                 function (err) {
-                    if (err) console.log('each error : ', err)
+                    if (err) console.log('each error : ', err);
                     console.log('all indexes loaded');
+                    var newDir = '.tmp/search/';
+                    createDir(newDir, function(){
+                        async.forEachOf(indexes, function (value, key, endIteration) {
 
-                    async.forEachOf(indexes, function (value, key, endIteration) {
-                        var path = 'data/search/' + key + '.json';
+                            var newFile =  path.join(newDir, key + '.json');
+                            //var path = 'data/search/' + key + '.json';
 
-                        console.log('wait during index building : ', path);
+                            console.log('wait during index building : ', newFile);
 
-                        async.asyncify(value.saveSync(path))(function () {
-                            console.log(path, ' saved');
-                            endIteration();
+                            //Save index
+                            fs.writeFile(newFile, JSON.stringify(value), function(err2){
+                                if(err2) console.log(err2);
+
+                                fileSplitter.split(newFile, {target: 'data/search'}, endIteration);
+                            });
+                        }, function (err) {
+                            console.log('markdown totally indexed !');
+                            if (done) done();
                         });
-                    }, function (err) {
-                        console.log('markdown totally indexed !');
-                        if (done) done();
                     });
-
                 }
             );
         }
     );
 };
+
+function createDir(dir, cb){
+    mkpath(dir, cb);
+}

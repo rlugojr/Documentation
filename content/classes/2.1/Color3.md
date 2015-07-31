@@ -2,6 +2,8 @@
 ID_PAGE: 6748
 PG_TITLE: Color3
 PG_VERSION: 2.1
+TAGS:
+    - Objects
 ---
 ##new [Color3](page.php?p=6748)(r, g, b)
 

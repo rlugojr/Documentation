@@ -2,6 +2,9 @@
 ID_PAGE: 6713
 PG_TITLE: BoundingBox
 PG_VERSION: 2.1
+TAGS:
+    - Mesh
+    - Bounding
 ---
 
 Create the bounding box for the given mesh

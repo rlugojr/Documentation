@@ -2,6 +2,8 @@
 ID_PAGE: 6873
 PG_TITLE: TorusKnot
 PG_VERSION: 2.1
+TAGS:
+    - Geometry
 ---
 ##new [TorusKnot](page.php?p=6873)(id, scene, radius, tube, radialSegments, tubularSegments, p, q, canBeRegenerated, mesh, side)
 
@@ -28,7 +30,8 @@ optional | mesh | [Mesh](page.php?p=6659) | @param mesh
 optional | side | number | 
 ---
 
-##Extends [_Primitive](page.php?p=6864)
+##Extends
+ [_Primitive](page.php?p=6864)
 ##Members
 
 ###radius : number

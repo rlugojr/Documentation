@@ -1,6 +1,8 @@
 ---
 ID_PAGE: 24847
 PG_TITLE: Parametric Shapes
+TAGS:
+    - 01.ThePlayPenTutorials
 ---
 The basic meshes you've seen up until now have an expected shape : when you create a sphere mesh, you expect to see a spherical shape. The same goes for a box mesh, a torus, a cylinder, etc.
 

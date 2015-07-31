@@ -2,13 +2,16 @@
 ID_PAGE: 6783
 PG_TITLE: SubMesh
 PG_VERSION: 2.1
+TAGS:
+    - Mesh
 ---
 
 Create a new [SubMesh](page.php?p=6783)
 ##new [SubMesh](page.php?p=6783)(materialIndex, verticesStart, verticesCount, indexStart, indexCount, mesh, renderingMesh, createBoundingBox)
 
 
- [SubMesh](page.php?p=6783) constructor
+
+ [SubMesh](page.php?p=6783) constructor
 
 
 

@@ -2,6 +2,8 @@
 ID_PAGE: 6709
 PG_TITLE: CollideWorker
 PG_VERSION: 2.1
+TAGS:
+    - Collision
 ---
 ##new [CollideWorker](page.php?p=6709)(collider, _collisionCache, finalPosition)
 

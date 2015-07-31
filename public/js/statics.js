@@ -6,12 +6,12 @@
         $('.tag').removeClass('active');
         $(this).addClass('active');
 
-        $('.fileTitle:not(.' + tagName + ')').fadeOut();
-        $('.fileTitle.'+ tagName).fadeIn();
-
-        if($('.fileTitle:visible').length == 0){
-            $('.fileList').append($('<p>', { text : 'nothing in this category :('}));
-        }
+        $('.fileTitle:not(.' + tagName + ')').fadeOut(toggleEmptyDiv);
+        $('.fileTitle.' + tagName).fadeIn(toggleEmptyDiv);
     });
 
+    function toggleEmptyDiv(){
+        if ($('.fileTitle:visible').length == 0) $('.emptyList').fadeIn();
+        else $('.emptyList').fadeOut();
+    }
 })(jQuery);

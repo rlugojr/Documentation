@@ -49,7 +49,7 @@
   "exporters": [
     {
       "name": "All",
-      "img": "img/tutorials/exporters.jpg",
+      "img": "img/exporters/all.jpg",
       "desc": "All tutos"
     },
     {
@@ -59,7 +59,7 @@
     },
     {
       "name": "Blender",
-      "img": "img/exporters/Blender.png",
+      "img": "img/exporters/Blender.jpg",
       "desc": "Learn how to use Blender."
     },
     {

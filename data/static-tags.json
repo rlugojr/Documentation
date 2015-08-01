@@ -3,25 +3,25 @@
     {
       "name": "All",
       "img": "img/tutorials/All.png",
-      "desc": "All tutos"
+      "desc": "All the tutorials."
     },
     {
-      "name": "01.ThePlayPenTutorials",
+      "name": "01ThePlayPenTutorials",
       "img": "img/tutorials/01.ThePlayPenTutorials.png",
       "desc": "The tutorials of the playpen."
     },
     {
-      "name": "02.MidLevelTutorials",
+      "name": "02MidLevelTutorials",
       "img": "img/tutorials/02.MidLevelTutorials.png",
       "desc": "Learn how to use cool things."
     },
     {
-      "name": "03.TheTemechonFiles",
+      "name": "03TheTemechonFiles",
       "img": "img/tutorials/03.TheTemechonFiles.png",
-      "desc": "The great tutorials writted by Temechon."
+      "desc": "Great tutorials writted by Temechon."
     },
     {
-      "name": "04.MoreAdvancedFeatures",
+      "name": "04MoreAdvancedFeatures",
       "img": "img/tutorials/04.MoreAdvancedFeatures.png",
       "desc": "Some hard things."
     },
@@ -39,59 +39,54 @@
       "name": "Videos",
       "img": "img/tutorials/Video.png",
       "desc": "Video courses."
-    },
-    {
-      "name": "Basics tutos",
-      "img": "img/tutorials/tagImage.png",
-      "desc": "Basic tutorials."
     }
   ],
   "exporters": [
     {
       "name": "All",
       "img": "img/exporters/all.jpg",
-      "desc": "All tutos"
+      "desc": "All the exporters."
     },
     {
       "name": "3DSMax",
       "img": "img/exporters/3DSMax.jpg",
-      "desc": "Learn how to use 3DSMax."
+      "desc": "Learn how to export from 3DSMax."
     },
     {
       "name": "Blender",
       "img": "img/exporters/Blender.jpg",
-      "desc": "Learn how to use Blender."
+      "desc": "Learn how to export from Blender."
     },
     {
       "name": "Cheetah3D",
       "img": "img/exporters/Cheetah3D.png",
-      "desc": "Learn how to use Cheetah3D."
+      "desc": "Learn how to export from Cheetah3D."
     },
     {
       "name": "Unity",
       "img": "img/exporters/Unity.jpg",
-      "desc": "Learn how to use Unity."
+      "desc": "Learn how to export from Unity."
     }
   ],
   "extensions": [
     {
       "name": "All",
       "img": "img/tutorials/tagImage.png",
-      "desc": "All tutos"
+      "desc": "All the extensions."
     },
     {
       "name": "Loaders",
-      "img": "img/extensions/tagImage.png",
+      "img": "img/extensions/loaders.jpg",
       "desc": "Learn how to use loaders."
     },
     {
       "name": "POV",
-      "img": "img/extensions/tagImage.png",
+      "img": "img/extensions/POV.jpg",
       "desc": "Learn how to use POV."
     },
     {
       "name": "bGUI",
-      "img": "img/extensions/tagImage.png",
+      "img": "img/extensions/bGUI.jpg",
       "desc": "Learn how to use bGUI."
     }
   ]

@@ -2,7 +2,7 @@
 ID_PAGE: 22611
 PG_TITLE: Using the Debug Layer
 TAGS:
-    - 04.MoreAdvancedFeatures
+    - 04MoreAdvancedFeatures
 ---
 The main goal of the debug layer is to provide a fully functional UI to help you debug a scene and find potential culprits.
 

@@ -2,7 +2,7 @@
 ID_PAGE: 25090
 PG_TITLE: How to use Path3D
 TAGS:
-    - 04.MoreAdvancedFeatures
+    - 04MoreAdvancedFeatures
 ---
 **Path3D** is a math object.  
 Given an array of successive _Vector3_, it allows you to construct a path in space by computing on each point a triplet of vectors, the tangent, the normal and the binormal to keep direction and consistency (reduction of rotations).  

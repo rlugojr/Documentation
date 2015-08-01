@@ -2,7 +2,7 @@
 ID_PAGE: 25362
 PG_TITLE: Using the HDR Rendering Pipeline
 TAGS:
-    - 04.MoreAdvancedFeatures
+    - 04MoreAdvancedFeatures
 ---
 The HDR Rendering pipeline is a set of multiple post-processes. It tends to simulate the eye adaptation to the light and darkness and also simulate the most realistic glare.
 

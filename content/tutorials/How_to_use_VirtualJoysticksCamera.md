@@ -2,7 +2,7 @@
 ID_PAGE: 22502
 PG_TITLE: How to use VirtualJoysticksCamera
 TAGS:
-    - 04.MoreAdvancedFeatures
+    - 04MoreAdvancedFeatures
 ---
 The VirtualJoysticksCamera will create a Babylon.js camera that can move within your games, thanks to 2 touch-enabled joysticks drawn on the left &amp; right sides of the screen. It’s designed to be controlled via your 2 thumbs.
 

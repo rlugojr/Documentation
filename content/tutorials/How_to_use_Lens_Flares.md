@@ -2,7 +2,7 @@
 ID_PAGE: 22471
 PG_TITLE: How to use Lens Flares
 TAGS:
-    - 04.MoreAdvancedFeatures
+    - 04MoreAdvancedFeatures
 ---
 Babylon.js allows you to simply create lens flares effect:
 

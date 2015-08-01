@@ -6,22 +6,22 @@
       "desc": "All tutos"
     },
     {
-      "name": "01.ThePlayPenTutorials",
+      "name": "01ThePlayPenTutorials",
       "img": "img/tutorials/01.ThePlayPenTutorials.png",
       "desc": "The tutorials of the playpen."
     },
     {
-      "name": "02.MidLevelTutorials",
+      "name": "02MidLevelTutorials",
       "img": "img/tutorials/02.MidLevelTutorials.png",
       "desc": "Learn how to use cool things."
     },
     {
-      "name": "03.TheTemechonFiles",
+      "name": "03TheTemechonFiles",
       "img": "img/tutorials/03.TheTemechonFiles.png",
       "desc": "The great tutorials writted by Temechon."
     },
     {
-      "name": "04.MoreAdvancedFeatures",
+      "name": "04MoreAdvancedFeatures",
       "img": "img/tutorials/04.MoreAdvancedFeatures.png",
       "desc": "Some hard things."
     },
@@ -39,11 +39,6 @@
       "name": "Videos",
       "img": "img/tutorials/Video.png",
       "desc": "Video courses."
-    },
-    {
-      "name": "Basics tutos",
-      "img": "img/tutorials/tagImage.png",
-      "desc": "Basic tutorials."
     }
   ],
   "exporters": [

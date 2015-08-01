@@ -2,7 +2,7 @@
 ID_PAGE: 25110
 PG_TITLE: Position, Rotate, Translate and Spaces
 TAGS:
-    - 02.MidLevelTutorials
+    - 02MidLevelTutorials
 ---
 The simple creature in Fig 1 is our pilot (a mesh) through the world of positions, rotations, translations and spaces in Babylon.js.
 

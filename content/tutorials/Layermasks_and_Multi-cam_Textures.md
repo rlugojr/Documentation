@@ -2,7 +2,7 @@
 ID_PAGE: 22641
 PG_TITLE: Creating the Mini-fied Version
 TAGS:
-    - 04.MoreAdvancedFeatures
+    - 04MoreAdvancedFeatures
 ---
 ## Different meshes for multiple cameras using Layermasks
 

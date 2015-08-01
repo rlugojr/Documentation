@@ -2,7 +2,7 @@
 ID_PAGE: 22411
 PG_TITLE: How Rotations and Translations Work
 TAGS:
-    - 04.MoreAdvancedFeatures
+    - 04MoreAdvancedFeatures
 ---
 Babylon.js provides many ways to locate and rotate your meshes.
 

@@ -2,7 +2,7 @@
 ID_PAGE: 25091
 PG_TITLE: How to use Curve3
 TAGS:
-    - 04.MoreAdvancedFeatures
+    - 04MoreAdvancedFeatures
 ---
 BabylonJS provides an object to manage some math curves for you : **Curve3**.
 

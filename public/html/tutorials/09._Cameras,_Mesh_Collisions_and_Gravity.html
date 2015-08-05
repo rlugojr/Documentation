@@ -53,7 +53,7 @@ var backwards = new BABYLON.Vector3(parseFloat(Math.sin(character.rotation.y)) /
 character.moveWithCollisions(backwards);
 </code></pre>
 <p>Demo by Dad72: <a href="http://www.castorengine.com/babylon/moveCharacter/"><strong>Move character with gravity and collision</strong></a></p>
-<h2><a name="web-worker-based-collision-system-since-2-1" class="anchor" href="#web-worker-based-collision-system-since-2-1"></a>Web worker based collision system (Since 2.1)</h2><p>BabylonJS 2.1 allows the user to move the collision calculations to an external web worker thus achieving better rendering time.
+<h2><a name="web-worker-based-collision-system-since-21" class="anchor" href="#web-worker-based-collision-system-since-21"></a>Web worker based collision system (Since 2.1)</h2><p>BabylonJS 2.1 allows the user to move the collision calculations to an external web worker thus achieving better rendering time.
 The worker is integrated in the single framework file, and no changes are required by the developer.
 The scene has now a new flag (false per default):</p>
 <pre><code class="lang-javascript">scene.workerCollisions = true|false

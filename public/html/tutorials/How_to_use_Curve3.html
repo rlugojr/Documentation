@@ -6,8 +6,7 @@
 </ul>
 </div></div><div id="staticContent"><p>BabylonJS provides an object to manage some math curves for you : <strong>Curve3</strong>.</p>
 <p>This object allow you to generate 3D curves according to some complex math function. You can then get an array of successive points (<em>Vector3</em>) representing the curve.</p>
-<p>##Quadratic Bezier curve
-<a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve#Quadratic_curves">http://en.wikipedia.org/wiki/B%C3%A9zier_curve#Quadratic_curves</a></p>
+<h2><a name="quadratic-bezier-curve" class="anchor" href="#quadratic-bezier-curve"></a>Quadratic Bezier curve</h2><p><a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve#Quadratic_curves">http://en.wikipedia.org/wiki/B%C3%A9zier_curve#Quadratic_curves</a></p>
 <p><img src="http://upload.wikimedia.org/wikipedia/commons/3/3d/B%C3%A9zier_2_big.gif" alt="Wikipedia Quadratic Bezier Curve"></p>
 <pre><code class="lang-javascript">var bezier2 = BABYLON.Curve3.CreateQuadraticBezier(origin, control, destination, nb_of_points);
 </code></pre>
@@ -21,8 +20,7 @@
 <pre><code class="lang-javascript">var path = bezier2.getPoints();
 var l = bezier2.length();
 </code></pre>
-<p>##Cubic Bezier curve
-<a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve#Higher-order_curves">http://en.wikipedia.org/wiki/B%C3%A9zier_curve#Higher-order_curves</a></p>
+<h2><a name="cubic-bezier-curve" class="anchor" href="#cubic-bezier-curve"></a>Cubic Bezier curve</h2><p><a href="http://en.wikipedia.org/wiki/B%C3%A9zier_curve#Higher-order_curves">http://en.wikipedia.org/wiki/B%C3%A9zier_curve#Higher-order_curves</a></p>
 <p><img src="http://upload.wikimedia.org/wikipedia/commons/d/db/B%C3%A9zier_3_big.gif" alt="Wikipedia Cubic Bezier Curve"></p>
 <pre><code class="lang-javascript">var bezier3 = BABYLON.Curve3.CreateCubicBezier(origin, control1, control2, destination, nb_of_points)
 </code></pre>
@@ -39,8 +37,7 @@ var l = bezier3.length();
 </code></pre>
 <p>Playground example : <a href="http://www.babylonjs-playground.com/#1PSZDF#2">http://www.babylonjs-playground.com/#1PSZDF#2</a>
 Read from line 50</p>
-<p>##Hermite spline
-<a href="http://en.wikipedia.org/wiki/Cubic_Hermite_spline">http://en.wikipedia.org/wiki/Cubic_Hermite_spline</a></p>
+<h2><a name="hermite-spline" class="anchor" href="#hermite-spline"></a>Hermite spline</h2><p><a href="http://en.wikipedia.org/wiki/Cubic_Hermite_spline">http://en.wikipedia.org/wiki/Cubic_Hermite_spline</a></p>
 <p><img src="http://escience.anu.edu.au/lecture/cg/Spline/Image/HermiteSpec.gif" alt="EScience Hermite"></p>
 <pre><code class="lang-javascript">var hermite = BABYLON.Curve3.CreateHermiteSpline(p1, t1, p2, t2, nbPoints);
 </code></pre>
@@ -55,8 +52,7 @@ Read from line 50</p>
 <pre><code class="lang-javascript">var path = hermite.getPoints();
 var l = hermite.length();
 </code></pre>
-<p>##Curve3 object
-You can also instantiate your own Curve3 object from a simple array of successive Vector3.<br>Why would you do this ?<br>Because you can then use the <em>continue()</em> method to stick together many curves whatever their initial origin.   </p>
+<h2><a name="curve3-object" class="anchor" href="#curve3-object"></a>Curve3 object</h2><p>You can also instantiate your own Curve3 object from a simple array of successive Vector3.<br>Why would you do this ?<br>Because you can then use the <em>continue()</em> method to stick together many curves whatever their initial origin.   </p>
 <p>Let&#39;s imagine you&#39;ve got an array of your own filled Vector3 along a simple sinus curve.  </p>
 <pre><code class="lang-javascript">var mySinus = [];
 for (var i = 0; i &lt; 30; i++) {

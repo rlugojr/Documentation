@@ -12,6 +12,7 @@
 
         // get the necessary values
         var hrefString = $(this).attr('href');
+
         //var titleId = hrefString.split('\#')[1];
         var $selectedElement = $('a.anchor[href="' + hrefString + '"]');
 

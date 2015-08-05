@@ -11,7 +11,7 @@ module.exports = function (app) {
     app.use('/tutorials', require('./routes/tutorials'));
     app.use('/extensions', require('./routes/extensions'));
     app.use('/exporters', require('./routes/exporters'));
-    app.use('/forward', require('./routes/forward'));
+    app.use('/page.php', require('./routes/forward'));
     app.use('/search', require('./routes/search'));
 
 

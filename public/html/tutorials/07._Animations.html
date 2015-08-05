@@ -76,16 +76,62 @@ var keys = [];
 <p>Finally, you can launch your animation in one line of code, at any time in your application:</p>
 <pre><code class="lang-javascript">scene.beginAnimation(box1, 0, 100, true);
 </code></pre>
-<p>####Parameters for scene.beginAnimation
-&nbsp;| Name | Type | Description
----|---|---|---
-&nbsp;| target | any | The target
-&nbsp;| from | number | The fps starting frame
-&nbsp;| to | number | The fps ending frame
-optional | loop | boolean | If true, the animation will loop (dependent upon BABYLON.Animation.ANIMATIONLOOPMODE)
-optional | speedRatio | number | default : 1. The speed ratio of this animation
-optional | onAnimationEnd | () =&gt; void | The function triggered on the end of the animation (also dependent upon ANIMATIONLOOPMODE)</p>
-<h2><a name="optional-animatable-a-href-page-php-p-25171-animatable-a-an-optional-specific-animation" class="anchor" href="#optional-animatable-a-href-page-php-p-25171-animatable-a-an-optional-specific-animation"></a>optional | animatable | <a href="page.php?p=25171">Animatable</a> | An optional specific animation</h2><p>This function returns a <code>BABYLON.Animatable</code> object that you can use to get access to individual animations (for instance using <code>getAnimationByTargetProperty</code> function).</p>
+<h4><a name="parameters-for-scenebeginanimation" class="anchor" href="#parameters-for-scenebeginanimation"></a>Parameters for scene.beginAnimation</h4><table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&nbsp;</td>
+<td>target</td>
+<td>any</td>
+<td>The target</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>from</td>
+<td>number</td>
+<td>The fps starting frame</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>to</td>
+<td>number</td>
+<td>The fps ending frame</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>loop</td>
+<td>boolean</td>
+<td>If true, the animation will loop (dependent upon BABYLON.Animation.ANIMATIONLOOPMODE)</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>speedRatio</td>
+<td>number</td>
+<td>default : 1. The speed ratio of this animation</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>onAnimationEnd</td>
+<td>() =&gt; void</td>
+<td>The function triggered on the end of the animation (also dependent upon ANIMATIONLOOPMODE)</td>
+</tr>
+<tr>
+<td>optional</td>
+<td>animatable</td>
+<td><a href="page.php?p=25171">Animatable</a></td>
+<td>An optional specific animation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>This function returns a <code>BABYLON.Animatable</code> object that you can use to get access to individual animations (for instance using <code>getAnimationByTargetProperty</code> function).</p>
 <p>The <code>BABYLON.Animatable</code> object also supports the following functions:</p>
 <ul>
 <li><code>pause()</code></li>

@@ -71,7 +71,7 @@
   "extensions": [
     {
       "name": "All",
-      "img": "img/tutorials/tagImage.png",
+      "img": "img/extensions/tagImage.png",
       "desc": "All the extensions."
     },
     {

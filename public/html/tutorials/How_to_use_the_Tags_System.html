@@ -49,7 +49,7 @@ Tags can be used to categorize/group things.</p>
 </code></pre>
 <p>The above directive would gather a collection of all HTML elements that use the .center class.</p>
 <p>Here we are! <strong>Tags in babylon.js can be used to categorize/group elements, and helper functions are provided to retrieve/gather tagged elements.</strong></p>
-<h2><a name="integration-to-babylon-js" class="anchor" href="#integration-to-babylon-js"></a>Integration to babylon.js</h2><p>Tags were integrated into babylon.js on April 7, 2014. <a href="https://github.com/BabylonJS/Babylon.js/pull/170#event-109351015">Pull request</a></p>
+<h2><a name="integration-to-babylonjs" class="anchor" href="#integration-to-babylonjs"></a>Integration to babylon.js</h2><p>Tags were integrated into babylon.js on April 7, 2014. <a href="https://github.com/BabylonJS/Babylon.js/pull/170#event-109351015">Pull request</a></p>
 <p>There was a <a href="http://www.html5gamedevs.com/topic/4961-user-data-in-mesh-object/?p=30458">discussion</a> about adding this feature on the forum. The goal was to be able to retrieve meshes.</p>
 <h3><a name="pure-javascript" class="anchor" href="#pure-javascript"></a>Pure javascript</h3><p>The concept was expanded to allow the adding of tags on any javascript object (not necessarily only the objects created by babylon.js). The <code>Tag</code> class that has been added to babylon.js contains all the necessary code for this generic concept (<a href="https://github.com/BabylonJS/Babylon.js/blob/master/Babylon/Tools/babylon.tags.ts">Typescript code</a>) and internally uses the <code>AndOrNotEvaluator</code> class (<a href="https://github.com/BabylonJS/Babylon.js/blob/master/Babylon/Tools/babylon.andOrNotEvaluator.ts">Typescript code</a>).</p>
 <p>The use of tags for a javascript object can be enabled/disabled like this (javascript code):</p>
@@ -140,7 +140,7 @@ BABYLON.Tags.MatchesQuery(myJSObj4); // true
 <li>a tag cannot start with &quot;||&quot;, &quot;&amp;&amp;&quot;, or &#39;!&#39;</li>
 <li>a tag cannot contain whitespaces</li>
 </ul>
-<h3><a name="use-in-babylon-js" class="anchor" href="#use-in-babylon-js"></a>Use in babylon.js</h3><p>Since it&#39;s possible to use tags on any javascript object and since meshes are javascript objects, it&#39;s possible to add tags on them and to retrieve them according to a tags query.</p>
+<h3><a name="use-in-babylonjs" class="anchor" href="#use-in-babylonjs"></a>Use in babylon.js</h3><p>Since it&#39;s possible to use tags on any javascript object and since meshes are javascript objects, it&#39;s possible to add tags on them and to retrieve them according to a tags query.</p>
 <pre><code class="lang-javascript">var meshes = myScene.getMeshesByTags(&quot;tag1 &amp;&amp; (tag2 || tag4 || !tag5)) || !(!tag1) &amp;&amp; !!!tag5&quot;);
 </code></pre>
 <p>All tags added to meshes, cameras, lights... are saved to the scene files (see <a href="https://github.com/BabylonJS/Babylon.js/wiki/Babylon.js-file-format">.babylon file format</a>) and reloaded from them.</p>

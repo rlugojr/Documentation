@@ -111,6 +111,9 @@ $title_width : 300px;
         background-color: white;
         border-radius: 20px;
         width : 250px;
+
+        margin: 0 5px;
+
         @include display(flex);
         @include align-items(center);
         input {

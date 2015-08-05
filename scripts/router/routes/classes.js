@@ -122,7 +122,7 @@ router.get('/:version/:className', function(req, res) {
 
         res.writeHead(303, {
             'Cache-Control': 'no-cache',
-            Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/forward/page.php?p=' + pageID
+            Location: (req.socket.encrypted ? 'https://' : 'http://') + req.headers.host + '/page.php?p=' + pageID
         });
 
         res.end();

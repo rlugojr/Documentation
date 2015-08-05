@@ -23,10 +23,10 @@ include ../includes/header
 
                         a(href='./' + file['category'] + '/'+file['url'])
                             =file['name']
-                            .tags
+                            .inline-tags
                                 if file.tags
                                     for tag in file.tags
-                                        .tag
+                                        .inline-tag
                                             =tag
                 .emptyList(style='display:none')
                     h2

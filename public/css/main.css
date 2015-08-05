@@ -198,6 +198,7 @@ p {
         background-color: white;
         border-radius: 20px;
         width: 250px;
+        margin: 0 5px;
         display: -webkit-box;
         display: -moz-box;
         display: box;
@@ -714,14 +715,14 @@ p {
         padding: 5px;
         border-bottom: 2px dashed #fc4349;
         flex: auto; }
-        .statics-content .fileList .fileTitle a .tags {
+        .statics-content .fileList .fileTitle a .inline-tags {
           margin: 0;
           padding: 0;
           right: 24px;
           display: inline-block;
           float: right;
           clear: right; }
-          .statics-content .fileList .fileTitle a .tags .tag {
+          .statics-content .fileList .fileTitle a .inline-tags .inline-tag {
             display: inline-block;
             position: relative;
             background-color: #fc4349;
@@ -929,7 +930,7 @@ p {
     .nav-main .banner .more .forward {
       display: none; }
     .nav-main .banner .more .searchbar input {
-      width: 80%; }
+      width: 77%; }
 
   .bigimage {
     width: 95%;

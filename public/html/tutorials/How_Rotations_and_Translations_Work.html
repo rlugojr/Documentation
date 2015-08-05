@@ -28,8 +28,7 @@ mesh.rotationQuaternion = new BABYLON.Quaternion(x, y, z, w); // Quaternion
 mesh.translate(BABYLON.Axis.X, 1.0, BABYLON.Space.WORLD);
 </code></pre>
 <p>Please note that <code>mesh.rotate</code> generates a quaternion and then uses <code>mesh.rotationQuaternion</code>.</p>
-<p>#Generating a rotation from a target system#
-Sometimes you may know the final orientation you want to give to a mesh in terms of alignment with distant axis, but you don&#39;t what rotation to apply to it to achieve this wanted orientation. 
+<h1><a name="generating-a-rotation-from-a-target-system" class="anchor" href="#generating-a-rotation-from-a-target-system"></a>Generating a rotation from a target system</h1><p>Sometimes you may know the final orientation you want to give to a mesh in terms of alignment with distant axis, but you don&#39;t what rotation to apply to it to achieve this wanted orientation. 
 There is a way to compute an Euler rotation from a set of axis : </p>
 <pre><code class="lang-javascript">var rot = BABYLON.Vector.RotationFromAxis(axis1, axis2, axis3);
 mesh.rotation = rot;
@@ -43,8 +42,7 @@ With this code, the mesh will be aligned thus : </p>
 </ul>
 <p>example : <a href="http://www.babylonjs-playground.com/#VYM1E#5">http://www.babylonjs-playground.com/#VYM1E#5</a> 
 The textured plane mesh is currently aligned with the axis between spheres (axis1) and &quot;faces&quot; the camera : axis2 = camera.position </p>
-<p>#Baking Transform#</p>
-<p>In certain situations you might be interested in applying a transform (position, rotation, scale) directly to the mesh vertices, instead of saving it as a property of the mesh. This is called baking, and can be useful in the following situations:</p>
+<h1><a name="baking-transform" class="anchor" href="#baking-transform"></a>Baking Transform</h1><p>In certain situations you might be interested in applying a transform (position, rotation, scale) directly to the mesh vertices, instead of saving it as a property of the mesh. This is called baking, and can be useful in the following situations:</p>
 <ul>
 <li>building a set of static geometry</li>
 <li>randomizing a series of mesh copies</li>
@@ -66,8 +64,7 @@ var normals = mesh.getVerticesData(VertexBuffer.NormalKind);
 BABYLON.VertexData.ComputeNormals(positions, indices, normals);
 mesh.updateVerticesData(VertexBuffer.NormalKind, normals, false, false);
 </code></pre><p>Please note that recomputing the normals of your mesh may not be an ideal solution, as the results may be wrong in some parts of the mesh (e.g. seams on a sphere).</p>
-<p>#Changing the Frame of Reference#</p>
-<p>Every mathematical vector and transformation is expressed in a certain <em>frame of reference</em>. This is for example handled by the <code>BABYLON.Space.LOCAL</code> and <code>BABYLON.Space.WORLD</code> constants used in the <code>rotate()</code> and <code>translate()</code> functions cited above, or <code>locallyTranslate()</code> and other similar functions.</p>
+<h1><a name="changing-the-frame-of-reference" class="anchor" href="#changing-the-frame-of-reference"></a>Changing the Frame of Reference</h1><p>Every mathematical vector and transformation is expressed in a certain <em>frame of reference</em>. This is for example handled by the <code>BABYLON.Space.LOCAL</code> and <code>BABYLON.Space.WORLD</code> constants used in the <code>rotate()</code> and <code>translate()</code> functions cited above, or <code>locallyTranslate()</code> and other similar functions.</p>
 <p>A <em>frame of reference</em> is in fact a regular transformation matrix, i.e. an association of rotation, translation and scaling operations.</p>
 <p>You may need to express a certain vector in a precise frame of reference, be it the one of a mesh or an arbitrary one. In this case, the function <code>BABYLON.Vector3.TransformCoordinates()</code> will come in handy. </p>
 <p>Here is how you would compute the <em>up</em> vector (Y+) inside the frame of reference of a mesh:</p>

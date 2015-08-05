@@ -20,15 +20,15 @@ var __FORWARD_FILE__ = 'data/forward.json';
 // TEST : localhost:3000/forward/page.php?p=3269
 // -> AbstractMesh, v1.14
 
-router.get('/:pageID', function(req, res){
+router.get('/', function(req, res){
     var pageID = req.query.p;
 
     fs.readFile(__FORWARD_FILE__, function(err, data){
         if (err) throw err;
-        parsedData = JSON.parse(data);
+        var parsedData = JSON.parse(data);
 
         // JSON object
-        forwardData = parsedData[pageID];
+        var forwardData = parsedData[pageID];
 
         switch(forwardData.type){
             case 'tutorials':

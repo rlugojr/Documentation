@@ -44,6 +44,12 @@ module.exports = function (grunt) {
                 }
             }
         },
+        // Open Config
+        open: {
+            local: {
+                path: 'http://localhost:3000'
+            }
+        },
         // Sass Config
         sass         : {
             options: {
@@ -148,10 +154,11 @@ module.exports = function (grunt) {
     grunt.registerTask('serve', 'Start working', [
         'sass:dev',
         'express:dev',
+        'open:local',
         'watch'
     ]);
 
-    grunt.registerTask('build', [
+    grunt.registerTask('build', 'Build content and index it', [
         'clean:json',
         'execute:compileTagsClasses',
         'execute:createListClasses',

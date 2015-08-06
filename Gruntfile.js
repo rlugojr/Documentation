@@ -107,15 +107,6 @@ module.exports = function (grunt) {
                     require('./scripts/create-list/create-list-classes.js')(async());
                 }
             },
-            createListPages   : {
-                call: function (grunt, options, async) {
-                    require('./scripts/create-list-pages')([
-                        {name: 'exporters', path: 'content/exporters'},
-                        {name: 'extensions', path: 'content/extensions'},
-                        {name: 'tutorials', path: 'content/tutorials'}
-                    ], async());
-                }
-            },
             compileIndex      : {
                 options: {
                     module: true
@@ -162,7 +153,6 @@ module.exports = function (grunt) {
         'clean:json',
         'execute:compileTagsClasses',
         'execute:createListClasses',
-        'execute:createListPages',
         'execute:compileIndex',
         'execute:compileWhatsNew',
         'execute:compileHtmlClasses',

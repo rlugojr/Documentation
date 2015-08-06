@@ -151,7 +151,7 @@ module.exports = function (done) {
             }, function(){
                 // final callback
                 logger.info('> ALL CLASSES PAGES COMPILED.');
-                done(true);
+                done();
             });
         });
     });

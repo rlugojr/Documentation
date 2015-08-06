@@ -31,15 +31,14 @@
     "grunt-contrib-jade": "^0.15.0",
     "grunt-contrib-sass": "~0.5.0",
     "grunt-contrib-watch": "~0.5.2",
+    "grunt-execute": "^0.2.2",
     "grunt-express-server": "~0.4.2",
-    "grunt-json-minify": "^0.4.0",
     "load-grunt-tasks": "~0.1.0",
     "time-grunt": "~0.1.1"
   },
   "scripts": {
     "import-md": "node ./scripts/import-md-from-azure.js",
     "build": "node ./scripts/helpers/builder/main.js",
-    "import": "node ./scripts/helpers/importer/main.js",
-    "clean-n-compile": "grunt clean-n-compile"
+    "import": "node ./scripts/helpers/importer/main.js"
   }
 }

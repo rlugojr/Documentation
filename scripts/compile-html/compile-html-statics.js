@@ -10,12 +10,14 @@ var fs      = require('fs'),
     logger  = require(path.join(appRoot, 'config/logger')),
     marked  = require('meta-marked'),
     renderer= new marked.Renderer(),
-
+    slugify = require('uslug'),
+    $       = require('cheerio'),
     rimraf  = require('rimraf'),
     toc     = require('marked-toc');
 
 renderer.heading = function(text, level){
-    var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-').replace(/-$/, '');
+    var escapedText = slugify(text, {allowedChars: '-'});
+    //var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-').replace(/-$/, '');
 
     return '<h' + level + '><a name="' +
         escapedText +
@@ -34,6 +36,7 @@ marked.setOptions({
 
 var __FILES_LIST__      = path.join(appRoot, 'data/static-list.json'),
     __TAGS_LIST__       = path.join(appRoot, 'data/static-tags.json'),
+    __STATICS_LIST__    = path.join(appRoot, 'data/statics.json'),
     __JADE_STATICS__    = path.join(appRoot, 'views/statics/statics.jade'),
     __JADE_STATIC__     = path.join(appRoot, 'views/statics/static.jade'),
     __FILES_SOURCE__    = path.join(appRoot, 'content/'),
@@ -114,7 +117,7 @@ module.exports = function(done){
                 }, function(){
                     // final callback
                     logger.info('> ALL EXPORTERS/EXTENSIONS/TUTORIALS PAGES COMPILED.');
-                    done(true);
+                    if(done) done();
                 })
             });
         });
@@ -145,7 +148,15 @@ var getStaticPagesContent = function(dataObj, category, cb){
                         logger.info(readErr);
                     } else {
                         var markedContent = marked(content),
-                            tableOfContent = marked(toc(content, { omit:['PG_TITLE'] })).html;
+                            tableOfContent = marked(toc(content, { omit:['PG_TITLE'], clean: ['a', 'href'] })).html;
+
+                        //if(markedContent.meta['PG_TITLE'] =='GUIGroup') {
+                        //    //var $ = cheerio.load(markedContent.html);
+                        //    console.log($('a.anchor', markedContent.html));
+                        //    //console.log(markedContent.html);
+                        //}
+
+
                         staticsContents.push({
                             "staticName": markedContent.meta['PG_TITLE'],
                             "staticFileName": markedContent.meta['PG_TITLE'].replace(/\s/g, "_"),

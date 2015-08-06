@@ -14,6 +14,7 @@ var fs      = require('fs'),
     marked  = require('meta-marked'),
     async   = require('async'),
     helper  = require('./helpers/forwarder'),
+    sanitize = require('sanitize-filename'),
     readdirp = require('readdirp'),
     appRoot = require('app-root-path').path,
     logger  = require(path.join(appRoot, 'config/logger'));
@@ -48,11 +49,10 @@ module.exports = function(done) {
         var options = {root: pathToFolder, fileFilter: '*.md'};
 
         readdirp(options, function (err, data) {
-            if (err) throw err;
+            if (err) logger.info(err);
 
             async.each(data.files, function (file, callback) {
                 var pathToFile = path.join(pathToFolder, file.path);
-
                 helper.extractMeta(pathToFile, function (meta) {
                     if (link.type == "classes") {
                         // type: class
@@ -71,11 +71,13 @@ module.exports = function(done) {
                     } else {
                         if(meta.ID_PAGE){
                             // type: exporters || extensions || tutorials
-                            metaList[meta.ID_PAGE.toString()] = {"type": link.type, "name": meta.PG_TITLE};
+                            metaList[meta.ID_PAGE.toString()] = {
+                                "type": link.type,
+                                "name": sanitize(meta.PG_TITLE).trim().replace(/\s/g, '_')
+                            };
                         }
 
                     }
-
                     callback();
                 });
             }, function () {

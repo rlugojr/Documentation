@@ -18,6 +18,6 @@ module.exports.createForward = function(err, metaList, cb){
     fs.writeFile(__FILENAME__, JSON.stringify(metaList), function(error){
         if (error) throw error;
         logger.info('> data/forward.json has been successfully compiled.');
-        cb(true);
+        cb();
     });
 };

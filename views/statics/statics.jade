@@ -8,26 +8,26 @@ include ../includes/header
         .horizontal-separator
         .statics-content
             .tagList
-                for tag in dataObj.tags
+                for folder in dataObj.folders
                     .tagWrapper
-                        .tag(data-name=tag['name'])
+                        .tag(data-name=folder.name)
                             .tagImage
-                                img(src=tag['img'])
+                                img(src=folder.img)
                             .tagDescriptionWrapper
-                                h3.tagTitle=tag['name']
-                                span.tagDescription=tag['desc']
+                                h3.tagTitle=folder.title
+                                span.tagDescription=folder.desc
             .fileList
-                for file, index in dataObj.files
-                    .fileTitle(class=file['tags'] class='All')
-                        .fileNumber=(index + 1)
+                for folder in dataObj.folders
+                    if(folder.files)
+                        for file, index in folder.files
+                            .fileTitle(class=folder.name class='All')
+                                .fileNumber=(index + 1)
 
-                        a(href='./' + file['category'] + '/'+file['url'])
-                            =file['name']
-                            .inline-tags
-                                if file.tags
-                                    for tag in file.tags
+                                a(href='./' + dataObj.category + '/'+file.filename)
+                                    =file.title
+                                    .inline-tags
                                         .inline-tag
-                                            =tag
+                                            =folder.title
                 .emptyList(style='display:none')
                     h2
                         | There is nothing in this category

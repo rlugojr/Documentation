@@ -54,10 +54,17 @@ module.exports = function index(done) {
                             if (line) {
                                 lr.pause();
                                 var changeSlashes = new RegExp(_.escapeRegExp(path.sep), 'g');
-                                var src = path.join(fileInfo.parentDir, path.basename(fileInfo.name, '.md')).replace(changeSlashes, '/');
 
+                                //FIXME this is a hotfix to keep links working for statics
+                                if(fileInfo.parentDir.indexOf('classes'+path.sep) != -1){
+                                    var src = path.join(fileInfo.parentDir, path.basename(fileInfo.name, '.md')).replace(changeSlashes, '/');
+                                } else {
+
+                                    //remove the folder name between tutorials ane the tuto name, for example
+                                    var src = path.join(fileInfo.parentDir.substr(0, fileInfo.parentDir.indexOf(path.sep)), path.basename(fileInfo.name, '.md')).replace(changeSlashes, '/');
+                                }
                                 search.add({
-                                    //path is the link in the website
+                                    //src is the link in the website
                                     src: src,
                                     name: path.basename(fileInfo.name, '.md'),
                                     text: line
@@ -80,7 +87,6 @@ module.exports = function index(done) {
                         async.forEachOf(indexes, function (value, key, endIteration) {
 
                             var newFile =  path.join(newDir, key + '.json');
-                            //var path = 'data/search/' + key + '.json';
 
                             console.log('wait during index building : ', newFile);
 

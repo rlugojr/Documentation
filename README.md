@@ -4,22 +4,57 @@
 
 Welcome on the repository of the official documentation of [Babylon.js](http://www.babylonjs.com).
 
-## Run a local copy of the documentation
- * Clone this repository
- * ```npm install``` to install all dependencies
- * ```node server.js``` runs the server
- * Open a browser at http://localhost:3000 to see the website.
+## Prequisites
+Before beginning, please be sure to have installed these :
 
-## Useful commands
-If you want to develop/modify your local copy of the website, here's some useful commands for you:
- * ```grunt serve``` will start the Express server and watch for modification of SCSS files
- * ```grunt clean-n-compile``` deletes all generated files and re-compiles everything
- * ```grunt clean``` deletes all generated files
- * ```grunt compile``` re-compiles everything
- * ```grunt index``` compile the HTML file for the home page of the site
- * ```grunt whats-new``` compile the HTML file for the What's New page of the site
- * ```grunt tags``` will read every tags related to the classes in their respective MD and compile the data/classes-tags.json file
- * ```grunt classes``` compile the HTML files for the pages listing all  the classes per version of Babylon.js and the pages for every class
- * ```grunt lists``` reads meta-data related to the exporters, extensions and tutorials, and compile theses informations into data/static-list.json
- * ```grunt statics``` reads data/static-list.json and compiles every HTML files for the exporters, extensions and tutorials pages
- * ```grunt search-index``` will build the index files for the search API implemented on the website
+ * [Nodejs](https://nodejs.org/)
+ * [grunt-cli](https://www.npmjs.com/package/grunt-cli)
+
+
+## Run a local copy of the documentation
+ * ```git clone https://github.com/BabylonJS/Documentation.git && cd Documentation```Clone this repository
+ * ```npm install``` to install all dependencies
+ * ```grunt serve``` runs the server and open a tab in your default browser
+
+## Useful command
+
+Use ```grunt build```  to rebuild html from markdown and index the search
+ 
+## How to contribute ?
+
+### Update content
+1. head to content folder
+2. edit markdown 
+3. Use ```grunt build```
+
+### Add a new category
+categories only work in exporters, tutorials, extensions folder
+
+1. head to the root of exporters or extensions or tutorials
+2. create a new folder
+3. fill it with your markdown
+4. head to data/statics.json
+5. add your folder and files
+
+
+#### statics.json structure
+
+    {
+        "tutorials": [
+            {
+              "name": "foldername",
+              "img": "img/tutorials/name.jpg",
+              "desc": "my great tutos serie",
+              "files": [
+                {
+                    "name":'tuto title',
+                    "src": "file_name_without_extension"
+                },
+                ...
+              ]
+            },
+            ...
+        ],
+        "exporters": [],
+        "extensions": []
+    }

@@ -5,6 +5,7 @@
 var fs      = require('fs'),
     path    = require('path'),
     async   = require('async'),
+    _       = require('lodash'),
     jade    = require('jade'),
     appRoot = require('app-root-path').path,
     logger  = require(path.join(appRoot, 'config/logger')),
@@ -14,6 +15,7 @@ var fs      = require('fs'),
     $       = require('cheerio'),
     rimraf  = require('rimraf'),
     toc     = require('marked-toc');
+
 
 renderer.heading = function(text, level){
     var escapedText = slugify(text, {allowedChars: '-'});
@@ -34,9 +36,7 @@ marked.setOptions({
     renderer:renderer
 });
 
-var __FILES_LIST__      = path.join(appRoot, 'data/static-list.json'),
-    __TAGS_LIST__       = path.join(appRoot, 'data/static-tags.json'),
-    __STATICS_LIST__    = path.join(appRoot, 'data/statics.json'),
+var __STATICS_LIST__    = path.join(appRoot, 'data/statics.json'),
     __JADE_STATICS__    = path.join(appRoot, 'views/statics/statics.jade'),
     __JADE_STATIC__     = path.join(appRoot, 'views/statics/static.jade'),
     __FILES_SOURCE__    = path.join(appRoot, 'content/'),
@@ -50,77 +50,48 @@ module.exports = function(done){
         "tutorials"
     ];
 
-    var globalObj = {
-        "tags": {},
-        "files": {}
-    };
+    var globalObj = {};
 
-    fs.readFile(__TAGS_LIST__, function(errTag, tags_data){
-        if(errTag) throw errTag;
+    fs.readFile(__STATICS_LIST__, function(err, staticsList){
+        if(err) logger.log('error', err);
 
-        globalObj.tags = JSON.parse(tags_data);
+        globalObj = JSON.parse(staticsList);
 
-        fs.readFile(__FILES_LIST__, function(errFiles, list_data){
-            if (errFiles) throw errFiles;
-            globalObj.files = JSON.parse(list_data);
+        // we have all the data we need in globObj; now we can process these data
+        async.each(staticCategories, function(category, finalCallback){
 
-            // for jade rendering purpose, add a "url" property, that is the name
-            // of the tutorial with blank spaces replaced by "_"
-            async.forEachOf(globalObj.files, function(value, category, cb){
-                // category = exporters/extensions/tutorials
-                async.forEachOf(globalObj.files[category], function(value2, file, cb2){
+            var dataObject = {
+                "category": category,
+                "folders": globalObj[category]
+            };
+            dataObject.files = _.flatten(_.pluck(globalObj[category], 'files').filter(Boolean));
 
-                    // for example: globalObj.files[exporters][0] =
-                    // {
-                    //      name: 'Bones influences per vertex'
-                    // }
-
-                    globalObj.files[category][file]['url'] = globalObj.files[category][file].name.replace(/\s/g, "_");
-                    globalObj.files[category][file]['category'] = category;
-
-                    // and now: globalObj.files[exporters][0] =
-                    // {
-                    //      "name": "Bones influences per vertex",
-                    //      "url": "Bones_influences_per_vertex",
-                    //      "category": "exporters"
-                    // }
-
-                    cb2();
-                }, function(){
-                    cb();
+            //need to get parent folder name in order to build the file path
+            dataObject.folders.map(function(folder){
+                _.each(folder.files, function(file){
+                    file.folder = folder.name;
                 });
-            }, function(){
-                // we have all the data we need in globObj; now we can process these data
-                async.each(staticCategories, function(category, finalCallback){
-                    var tags = globalObj.tags[category],
-                        files = globalObj.files[category];
-
-                    var dataObject = {
-                        "category": category,
-                        "tags": tags,
-                        "files": files
-                    };
-
-                    async.waterfall([
-                        async.constant(dataObject, category),
-                        createStaticsPage,
-                        getStaticPagesContent,
-                        createStaticPages
-                    ], function(error){
-                        if(error){
-                            throw error;
-                        } else {
-                            logger.info('> All pages for ' + category + ' have been compiled.');
-                            finalCallback();
-                        }
-                    });
-                }, function(){
-                    // final callback
-                    logger.info('> ALL EXPORTERS/EXTENSIONS/TUTORIALS PAGES COMPILED.');
-                    if(done) done();
-                })
             });
+
+            async.waterfall([
+                async.constant(dataObject, category),
+                createStaticsPage,
+                getStaticPagesContent,
+                createStaticPages
+            ], function(error){
+                if(error){
+                    throw error;
+                } else {
+                    logger.info('> All pages for ' + category + ' have been compiled.');
+                    finalCallback();
+                }
+            });
+        }, function(){
+            // final callback
+            logger.info('> ALL EXPORTERS/EXTENSIONS/TUTORIALS PAGES COMPILED.');
+            if(done) done();
         });
+
     });
 };
 
@@ -137,7 +108,7 @@ var getStaticPagesContent = function(dataObj, category, cb){
     var staticsContents = [];
 
     async.each(dataObj.files, function(file, callback){
-        var filename = path.join(__FILES_SOURCE__, category, file.url + '.md');
+        var filename = path.join(__FILES_SOURCE__, category, file.folder+'', file.filename + '.md');
 
         fs.exists(filename, function(exists){
             if(!exists){

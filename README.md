@@ -18,7 +18,18 @@ Before beginning, please be sure to have these packages installed :
 
 ## Useful command
 
-Use ```grunt build```  to rebuild html from markdown and index the search
+You don't need to edit html yourself, just edit markdown files, then use :
+ 
+```grunt build``` to rebuild html from markdown and index the search.
+
+If you want to edit some styles or see your changes without repeating ```grunt build```, then use ```grunt serve```.
+
+
+```grunt serve``` features :
+ * Opens automatically the browser at ```localhost:3000```
+ * Watcher on markdown, views, data/statics.json, sass styles and node routes
+ * Recompiles everything on detected change
+
  
 ## How to contribute ?
 
@@ -30,14 +41,31 @@ If you want to add/update a tutorial, an extension or a class, you have to follo
 3. Use ```grunt build```
 4. Pull request :)
 
-### Add a new category
-Categories only work in exporters, tutorials, extensions folder
+NB : the sections like : 
 
-1. head to the root of exporters or extensions or tutorials
-2. create a new folder
-3. fill it with your markdown
-4. head to data/statics.json
-5. add your folder and files
+    ---
+    ID_PAGE: 24441       // Id of the page in the old doc, use to forward links
+    PG_TITLE: Cheetah3D  // Name of the page in the old doc
+    TAGS:
+        - Cheetah3D      // Deprecated, will be remove soon, except for classes
+    ---
+Are YAML meta description for files, this is used to make some link between the old and the new documentation.
+
+Wherever you find these, please don't touch them :)
+
+### Add a new category
+Categories classify the content, it is implemented in can be seen in :
+    * [tutorials](http://doc.babylonjs.com/tutorials)
+    * [exporters](http://doc.babylonjs.com/exporters)
+    * [extensions](http://doc.babylonjs.com/extensions)
+    
+If you want to add your own :
+
+1. Head to the root of exporters or extensions or tutorials
+2. Create a new folder
+3. Fill it with your markdown
+4. Head to data/statics.json
+5. Add your folder and files
 6. Use ```grunt build```
 7. Pull request :)
 

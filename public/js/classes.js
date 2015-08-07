@@ -25,6 +25,21 @@
 
                 localStorage.orderClassesby = 'alpha';
             }
+
+            // if a class has been selected, open the correct list
+            if(localStorage.getItem('selectedClass')){
+                $.each($('.class'), function(i, classTitle){
+                    if($(classTitle).text == localStorage.getItem('selectedClass')){
+                    //    if($(categoryTitle).next().is(':hidden')){
+                    //        $(categoryTitle).next().toggle(150);
+
+                            // jump to this class title
+                            window.scrollTo(0, $(classTitle).offset().top - 50);
+                            //$('.classContent').scrollTop($selectedElement.offset().top - 50);
+                    //    }
+                    }
+                });
+            }
         }
         function showClassesByTags(evt) {
             if (listClassesTags.hasClass('hidden')) {
@@ -37,7 +52,7 @@
                 localStorage.orderClassesby = 'tags';
             }
 
-            // if a tag has been seleted, open the correct list
+            // if a tag has been selected, open the correct list
             if(window.localStorage.selectedTag){
                 $.each($('.categoryTitle'), function(i, categoryTitle){
                     if($(categoryTitle).parent('.category').attr('id') == window.localStorage.selectedTag){

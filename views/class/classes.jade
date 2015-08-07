@@ -15,7 +15,7 @@ include ../includes/header
             span#orderByAlpha.order.selectedOrder A - Z
         #classes_classesListByAlpha
             - for className in classesByAlpha
-                a(href!='./'+currentVersion+'/'+className)= className.replace('_T_','<T>')
+                a(href!='./'+currentVersion+'/'+className data-name=className)= className.replace('_T_','<T>')
         //List the classes categories
         #classes_classesListByTag.hidden
             each bClasses, category in classesByTags

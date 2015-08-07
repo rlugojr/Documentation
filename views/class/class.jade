@@ -17,7 +17,7 @@ include ../includes/header
                                 a(href='/classes/'+currentVersion+'/'+bClass).className= bClass
         #classes_classesListByAlpha.sideClassesListByAlpha
             - for className in classListByAlpha
-                a.class(href='./'+className)= className.replace('_T_','<T>')
+                a.class(href='./'+className data-name=className )= className.replace('_T_','<T>')
 
     // Element to resize the sidebar
     .classBarResize#resizeBar(draggable=true)

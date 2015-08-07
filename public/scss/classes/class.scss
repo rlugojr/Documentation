@@ -70,6 +70,8 @@ $sidebar_width: 300px;
     padding: 5px 0 5px 10px;
     color: $black;
     display: block;
+
+
     &:hover {
       background-color: $darkgrey;
       color: white;
@@ -233,7 +235,14 @@ $sidebar_width: 300px;
 #classes_classesListByAlpha.sideClassesListByAlpha {
   a {
     margin-right: 65px;
+
+
   }
+  .selected{
+     background-color: $red;
+     color: whitesmoke;
+  }
+
 }
 
 .highlighted {

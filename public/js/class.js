@@ -101,6 +101,13 @@
             }
         }
 
+        var selectedClass = $('#classes_classesListByAlpha').find('> a.class[data-name='+$('#classTitle > h1').text()+']');
+
+        selectedClass.addClass('selected');
+        $('.classBar').scrollTop(selectedClass.offset().top - 100 );
+
+
+
         /* when user clicks on a class name in the class list by tag, redirect
          * to the "classes" page, with the correct class list by tag open */
         $.each($('.categoryList'), function(i, classList){

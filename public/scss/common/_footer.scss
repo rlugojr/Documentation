@@ -1,18 +1,18 @@
-.footer{
+.footer {
 
-  position:fixed;
-  bottom    : 0;
-  width     : 100%;
-  height    : $footer-height;
-  padding   : 0;
-  margin    : 20px 0 0 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $footer-height;
+  z-index:2;
 
-  background-color  : $grey;
-  font-size   : 0.8em;
+  background-color: $grey;
+  font-size: 0.8em;
 
-  .footer-item{
+  .footer-item {
     @include span-columns(6 of 12);
-    height:40px !important;
+    height: 40px !important;
 
     a {
       color: $black;
@@ -28,15 +28,15 @@
     }
   }
 
-  .bjs-forum:hover, .bjs-github:hover{
+  .bjs-forum:hover, .bjs-github:hover {
     @include transition(all .2s ease-in);
-    background-color : $red;
+    background-color: $red;
   }
 
-  .bjs-forum{
-    float : right;
+  .bjs-forum {
+    float: right;
   }
-  .bjs-github{
-    float : left;
+  .bjs-github {
+    float: left;
   }
 }

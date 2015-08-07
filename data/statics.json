@@ -515,6 +515,10 @@
         {
           "title": "Loaders",
           "filename": "Loaders"
+        },
+        {
+          "title": "STL",
+          "filename": "STL"
         }
       ]
     },
@@ -559,18 +563,6 @@
         {
           "title": "GUIText",
           "filename": "GUIText"
-        }
-      ]
-    },
-    {
-      "title": "Others",
-      "name": "Others",
-      "img": "img/extensions/POV.jpg",
-      "desc": "Learn how to use POV.",
-      "files": [
-        {
-          "title": "STL",
-          "filename": "STL"
         }
       ]
     }

@@ -17,7 +17,8 @@ The [AbstractMesh](page.php?p=3269) constructor
  | scene | [Scene](page.php?p=3274) | The scene where the mesh is.
 ---
 
-##Extends [Node](page.php?p=3248)
+##Extends
+ [Node](page.php?p=3248)
 ##Members
 
 ###static BILLBOARDMODE_NONE : number

@@ -10,13 +10,23 @@
   background-color: $grey;
   font-size: 0.8em;
 
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-content: center;
+
   .footer-item {
     @include span-columns(6 of 12);
     height: 40px !important;
+    //display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: auto;
 
     a {
       color: $black;
       padding: 12px;
+      display: inline-block;
       height: 40px !important;
 
       &:visited {
@@ -28,15 +38,8 @@
     }
   }
 
-  .bjs-forum:hover, .bjs-github:hover {
+  .footer-item:hover {
     @include transition(all .2s ease-in);
     background-color: $red;
-  }
-
-  .bjs-forum {
-    float: right;
-  }
-  .bjs-github {
-    float: left;
   }
 }

@@ -27,7 +27,8 @@ module.exports = function (grunt) {
                 ],
                 //As a very heavy task, put a little debounce of two seconds
                 options: {
-                    debounceDelay: 2000
+                    debounceDelay: 2000,
+                    interrupt: true
                 }
             },
             design : {

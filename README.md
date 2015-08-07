@@ -23,7 +23,9 @@ Use ```grunt build```  to rebuild html from markdown and index the search
 ## How to contribute ?
 
 ### Update content
-1. Head to content folder
+If you want to add/update a tutorial, an extension or a class, you have to follow these steps:
+
+1. Head to content folder. All markdowns files are located in this folder.
 2. Edit markdown 
 3. Use ```grunt build```
 4. Pull request :)

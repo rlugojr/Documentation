@@ -18,7 +18,7 @@ Before beginning, please be sure to have these packages installed :
 
 ## Useful command
 
-You don't need to edit html yourself, just edit markdown files, then use :
+You don't need to edit html yourself: edit markdown files and use :
  
 ```grunt build``` to rebuild html from markdown and index the search.
 
@@ -37,11 +37,11 @@ If you want to edit some styles or see your changes without repeating ```grunt b
 If you want to add/update a tutorial, an extension or a class, you have to follow these steps:
 
 1. Head to content folder. All markdowns files are located in this folder.
-2. Edit markdown 
+2. Edit markdown acording to your need
 3. Use ```grunt build```
 4. Pull request :)
 
-NB : the sections like : 
+NB : Sections like : 
 
     ---
     ID_PAGE: 24441       // Id of the page in the old doc, use to forward links
@@ -53,8 +53,8 @@ Are YAML meta description for files, this is used to make some link between the 
 
 Wherever you find these, please don't touch them :)
 
-### Add a new category
-Categories classify the content, it is implemented in can be seen in :
+### Add a new content
+Categories classify the content, it is implemented and can be seen in :
     * [tutorials](http://doc.babylonjs.com/tutorials)
     * [exporters](http://doc.babylonjs.com/exporters)
     * [extensions](http://doc.babylonjs.com/extensions)
@@ -62,7 +62,7 @@ Categories classify the content, it is implemented in can be seen in :
 If you want to add your own :
 
 1. Head to the root of exporters or extensions or tutorials
-2. Create a new folder
+2. Create a new folder (or use an existing one)
 3. Fill it with your markdown
 4. Head to data/statics.json
 5. Add your folder and files

@@ -69,7 +69,7 @@ module.exports = function(done) {
                         }
 
                     } else {
-                        if(meta.ID_PAGE){
+                        if(meta && meta.ID_PAGE){
                             // type: exporters || extensions || tutorials
                             metaList[meta.ID_PAGE.toString()] = {
                                 "type": link.type,

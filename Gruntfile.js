@@ -19,7 +19,6 @@ module.exports = function (grunt) {
                     'clean:json',
                     'execute:compileTagsClasses',
                     'execute:createListClasses',
-                    'execute:createListPages',
                     'execute:compileIndex',
                     'execute:compileWhatsNew',
                     'execute:compileHtmlClasses',
@@ -87,6 +86,11 @@ module.exports = function (grunt) {
                     '!data/statics.json',
                     'public/html/**',
                     '!public/html'
+                ]
+            },
+            index: {
+                src: [
+                    'data/search/**/*'
                 ]
             },
             tmp : {
@@ -158,6 +162,7 @@ module.exports = function (grunt) {
         'execute:compileHtmlClasses',
         'execute:compileHtmlStatics',
         'execute:forwarder',
+        'clean:index',
         'execute:indexer',
         'clean:tmp'
     ]);

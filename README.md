@@ -5,7 +5,7 @@
 Welcome on the repository of the official documentation of [Babylon.js](http://www.babylonjs.com).
 
 ## Prequisites
-Before beginning, please be sure to have installed these :
+Before beginning, please be sure to have these packages installed :
 
  * [Nodejs](https://nodejs.org/)
  * [grunt-cli](https://www.npmjs.com/package/grunt-cli)

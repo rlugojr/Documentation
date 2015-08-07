@@ -285,8 +285,6 @@ var compileClassPages = function(versions, version, classesList, tagsList, callb
                 //    }
                 //});
 
-                //console.log(processedToc);
-
                 var optionsClass = {
                     pretty          : false,
                     currentUrl      : '/classes/class',

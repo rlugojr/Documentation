@@ -129,9 +129,10 @@ var getStaticPagesContent = function(dataObj, category, cb){
 
 
                         staticsContents.push({
-                            "staticName": markedContent.meta['PG_TITLE'],
-                            "staticFileName": markedContent.meta['PG_TITLE'].replace(/\s/g, "_"),
-                            "staticMeta": markedContent.meta,
+                            "staticName": file.title,
+                            "staticFileName": file.filename,
+                            //"staticFileName": markedContent.meta['PG_TITLE'].replace(/\s/g, "_"),
+                            //"staticMeta": markedContent.meta,
                             "staticContent": markedContent.html,
                             "toc":tableOfContent
                         });

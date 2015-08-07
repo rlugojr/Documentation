@@ -23,38 +23,46 @@ Use ```grunt build```  to rebuild html from markdown and index the search
 ## How to contribute ?
 
 ### Update content
-1. head to content folder
-2. edit markdown 
+1. Head to content folder
+2. Edit markdown 
 3. Use ```grunt build```
+4. Pull request :)
 
 ### Add a new category
-categories only work in exporters, tutorials, extensions folder
+Categories only work in exporters, tutorials, extensions folder
 
 1. head to the root of exporters or extensions or tutorials
 2. create a new folder
 3. fill it with your markdown
 4. head to data/statics.json
 5. add your folder and files
+6. Use ```grunt build```
+7. Pull request :)
 
 
 #### statics.json structure
 
+The three root arrays are mandatory, when displayed, object's order is kept.
+
+Here is how the object is structured.
+
     {
-        "tutorials": [
-            {
-              "name": "foldername",
-              "img": "img/tutorials/name.jpg",
-              "desc": "my great tutos serie",
-              "files": [
+        "tutorials": [                         // Mandatory
+            {                                  // This object represents a folder inside the tutorials folder 
+              "title": "title displayed",      // The title displayed in the list of folders 
+              "name": "foldername",            // The folder name with no spaces, no special chars except underscores
+              "img": "img/tutorials/name.jpg", // Place your image inside the public/img/tutorials/
+              "desc": "my great tutos serie",  // This is the description of the folder, don't make it too long :)
+              "files": [                       // This is the list of files inside your folder
                 {
-                    "name":'tuto title',
-                    "src": "file_name_without_extension"
+                    "title":'tuto title',      // The title displayed in the list of tutorials 
+                    "filename":'tuto title',   // The file name with no spaces, no special chars except underscores, and no extension
                 },
                 ...
               ]
             },
             ...
         ],
-        "exporters": [],
-        "extensions": []
+        "exporters": [],                       // Mandatory
+        "extensions": []                       // Mandatory
     }

@@ -34,7 +34,8 @@
     "grunt-express-server": "~0.4.2",
     "grunt-open": "^0.2.3",
     "load-grunt-tasks": "~0.1.0",
-    "time-grunt": "~0.1.1"
+    "time-grunt": "~0.1.1",
+    "grunt-cli": "^0.1.13"
   },
   "scripts": {
     "import-md": "node ./scripts/import-md-from-azure.js",

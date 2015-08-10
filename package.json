@@ -40,5 +40,10 @@
     "import-md": "node ./scripts/import-md-from-azure.js",
     "build": "node ./scripts/helpers/builder/main.js",
     "import": "node ./scripts/helpers/importer/main.js"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BabylonJS/Documentation"
   }
 }

@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6836
+ID_PAGE: 25324
 PG_TITLE: PostProcessesOptimization
 PG_VERSION: 2.1
 TAGS:
@@ -10,11 +10,13 @@ TAGS:
 
 
 
+
+
 ##Extends
- [SceneOptimization](page.php?p=6832)
+ [SceneOptimization](/classes/SceneOptimization)
 ##Members
 
-###apply : (scene: [Scene](page.php?p=6662)) =&gt; boolean
+###apply : (scene: [Scene](/classes/Scene)) =&gt; boolean
 
 
 

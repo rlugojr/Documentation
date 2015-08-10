@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 25107
 PG_TITLE: GUIPanel
-TAGS:
-    - bGUI
 ---
 ##new [GUIPanel](http://doc.babylonjs.com/page.php?p=25107)(name, texture, textureOnPress, guiSystem) - extends [GUIObject](http://doc.babylonjs.com/page.php?p=25104)
 

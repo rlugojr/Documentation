@@ -1,19 +1,19 @@
 ---
-ID_PAGE: 3286
+ID_PAGE: 24494
 PG_TITLE: InterpolateValueAction
 PG_VERSION: 1.14
 ---
 
 This action creates an animation to interpolate the current value of a property to a given target.
 
-The supported types are: Float, [Color3](page.php?p=3324), [Vector3](page.php?p=3327), [Matrix](page.php?p=3329) and [Quaternion](page.php?p=3328)
+The supported types are: Float, [Color3](/classes/Color3), [Vector3](/classes/Vector3), [Matrix](/classes/Matrix) and [Quaternion](/classes/Quaternion)
 
 https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-Actions
 
 http://www.babylonjs-playground.com/?17
-##new [InterpolateValueAction](page.php?p=3286)(triggerOptions, target, propertyPath, value, duration, condition, stopOtherAnimations)
+##new [InterpolateValueAction](/classes/InterpolateValueAction)(triggerOptions, target, propertyPath, value, duration, condition, stopOtherAnimations)
 
-The Interpolate Value [Action](page.php?p=3275) constructor
+The Interpolate Value [Action](/classes/Action) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -22,11 +22,11 @@ The Interpolate Value [Action](page.php?p=3275) constructor
  | propertyPath | string | Property of the target
  | value | any | The target value
 optional | duration | number | The duration
-optional | condition | [Condition](page.php?p=3289) | The condition
+optional | condition | [Condition](/classes/Condition) | The condition
 optional | stopOtherAnimations | boolean | Set true to stop other animation, false otherwise.
 ---
 
-##Extends [Action](page.php?p=3275)
+##Extends [Action](/classes/Action)
 ##Members
 
 ###propertyPath : string

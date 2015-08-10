@@ -1,11 +1,11 @@
 ---
-ID_PAGE: 6762
+ID_PAGE: 25250
 PG_TITLE: Arc2
 PG_VERSION: 2.1
 TAGS:
     - Math
 ---
-##new [Arc2](page.php?p=6762)(startPoint, midPoint, endPoint)
+##new [Arc2](/classes/Arc2)(startPoint, midPoint, endPoint)
 
 
 
@@ -13,29 +13,29 @@ TAGS:
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | startPoint | [Vector2](page.php?p=6750) | 
- | midPoint | [Vector2](page.php?p=6750) | 
- | endPoint | [Vector2](page.php?p=6750) | 
+ | startPoint | [Vector2](/classes/Vector2) | 
+ | midPoint | [Vector2](/classes/Vector2) | 
+ | endPoint | [Vector2](/classes/Vector2) | 
 ---
 
 ##Members
 
-###startPoint : [Vector2](page.php?p=6750)
+###startPoint : [Vector2](/classes/Vector2)
 
 
 
 
-###midPoint : [Vector2](page.php?p=6750)
+###midPoint : [Vector2](/classes/Vector2)
 
 
 
 
-###endPoint : [Vector2](page.php?p=6750)
+###endPoint : [Vector2](/classes/Vector2)
 
 
 
 
-###centerPoint : [Vector2](page.php?p=6750)
+###centerPoint : [Vector2](/classes/Vector2)
 
 
 
@@ -45,17 +45,17 @@ TAGS:
 
 
 
-###angle : [Angle](page.php?p=6761)
+###angle : [Angle](/classes/Angle)
 
 
 
 
-###startAngle : [Angle](page.php?p=6761)
+###startAngle : [Angle](/classes/Angle)
 
 
 
 
-###orientation : [Orientation](page.php?p=6853)
+###orientation : [Orientation](/classes/Orientation)
 
 
 

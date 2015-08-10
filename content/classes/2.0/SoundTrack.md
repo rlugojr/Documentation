@@ -1,14 +1,17 @@
 ---
-ID_PAGE: 5764
+ID_PAGE: 24933
 PG_TITLE: SoundTrack
 PG_VERSION: 2.0
 ---
-##new [SoundTrack](page.php?p=5764)(scene, options)
+##new [SoundTrack](/classes/SoundTrack)(scene, options)
+
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [BABYLON](page.php?p=5696).Scene | 
+ | scene | [Scene](/classes/Scene) | 
 optional | options | any | 
 ---
 
@@ -17,7 +20,14 @@ optional | options | any |
 ###id : number
 
 
+
+
 ###soundCollection : Array&lt;BABYLON.Sound&gt;
+
+
+
+
+
 
 
 
@@ -29,18 +39,22 @@ optional | options | any |
 
 ###AddSound(sound) &rarr; void
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | sound | [BABYLON](page.php?p=5696).Sound | 
+ | sound | [Sound](/classes/Sound) | 
 ---
 
 ###RemoveSound(sound) &rarr; void
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | sound | [BABYLON](page.php?p=5696).Sound | 
+ | sound | [Sound](/classes/Sound) | 
 ---
 
 ###setVolume(newVolume) &rarr; void
@@ -56,5 +70,5 @@ optional | options | any |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | analyser | [Analyser](page.php?p=5761) | 
+ | analyser | [Analyser](/classes/Analyser) | 
 ---

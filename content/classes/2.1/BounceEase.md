@@ -1,11 +1,14 @@
 ---
-ID_PAGE: 6688
+ID_PAGE: 25176
 PG_TITLE: BounceEase
 PG_VERSION: 2.1
 TAGS:
     - EasingFunction
 ---
-##new [BounceEase](page.php?p=6688)(bounces, bounciness)
+##new [BounceEase](/classes/BounceEase)(bounces, bounciness)
+
+
+
 
 
 
@@ -18,7 +21,7 @@ optional | bounciness | number |
 ---
 
 ##Extends
- [EasingFunction](page.php?p=6685)
+ [EasingFunction](/classes/EasingFunction)
 ##Members
 
 ###bounces : number
@@ -26,7 +29,14 @@ optional | bounciness | number |
 
 
 
+
+
 ###bounciness : number
+
+
+
+
+
 
 
 

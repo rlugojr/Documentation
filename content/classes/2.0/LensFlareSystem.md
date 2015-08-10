@@ -1,14 +1,17 @@
 ---
-ID_PAGE: 5778
+ID_PAGE: 24947
 PG_TITLE: LensFlareSystem
 PG_VERSION: 2.0
 ---
 
 Create a lens Flare system
-##new [LensFlareSystem](page.php?p=5778)(name, emitter, scene)
+##new [LensFlareSystem](/classes/LensFlareSystem)(name, emitter, scene)
+
 
 
 The lens Flare system
+
+
 
 
 ####Parameters
@@ -16,7 +19,7 @@ The lens Flare system
 ---|---|---|---
  | name | string | The name of the lens flare system
  | emitter | any | The Emitter of the lens flare system : it can be a camera, a light or a mesh.
- | scene | [Scene](page.php?p=5725) | [Scene](page.php?p=5725) where the lens flare system is.
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) where the lens flare system is.
 ---
 
 ##Members
@@ -25,31 +28,40 @@ The lens Flare system
 
 
 
+
 The name of the lens Flare system
 
 
-###lensFlares : [LensFlare](page.php?p=5777)[]
+
+###lensFlares : [LensFlare](/classes/LensFlare)[]
+
 
 
 
 Lens flares array containing all lens flares
 
 
+
 ###borderLimit : number
+
 
 
 
 Lens flare system border limit.
 
 
-###meshesSelectionPredicate : (mesh: [Mesh](page.php?p=5722)) =&gt; boolean
+
+###meshesSelectionPredicate : (mesh: [Mesh](/classes/Mesh)) =&gt; boolean
+
 
 
 
 Verify that a mesh can receive lens flares.
 
 
+
 ###isEnabled : boolean
+
 
 
 
@@ -61,10 +73,16 @@ Lens flare system is enabled
 
 
 
+
+
+
+
 ##Methods
 
-###getScene() &rarr; [Scene](page.php?p=5725)
+###getScene() &rarr; [Scene](/classes/Scene)
 Get the scene where the lens flare system is.
+
+
 
 
 
@@ -75,8 +93,12 @@ Get the emitter
 
 
 
-###getEmitterPosition() &rarr; [Vector3](page.php?p=5808)
+
+
+###getEmitterPosition() &rarr; [Vector3](/classes/Vector3)
 Get the emitter position. Returns its absolute position if the emitter has an absolute position.
+
+
 
 
 
@@ -86,14 +108,18 @@ Compute the effective position
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | globalViewport | [Viewport](page.php?p=5813) | The global viewport
+ | globalViewport | [Viewport](/classes/Viewport) | The global viewport
 ---
 
 ###render() &rarr; boolean
 Render the lens flare system
+
+
 
 
 

@@ -1,15 +1,15 @@
 ---
-ID_PAGE: 3288
+ID_PAGE: 24496
 PG_TITLE: ActionManager
 PG_VERSION: 1.14
 ---
-##new [ActionManager](page.php?p=3288)(scene)
+##new [ActionManager](/classes/ActionManager)(scene)
 
 See more about Actions [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-Actions)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=3274) | The scene which contains the new action manager
+ | scene | [Scene](/classes/Scene) | The scene which contains the new action manager
 ---
 
 ##Members
@@ -74,7 +74,7 @@ On key down trigger
 
 on key up trigger
 
-###actions : [Action](page.php?p=3275)[]
+###actions : [Action](/classes/Action)[]
 
 
 The actions of the action manager
@@ -97,7 +97,7 @@ Return true if the action manager has pick triggers ; False otherwise
 Delete the action manager
 
 
-###getScene() &rarr; [Scene](page.php?p=3274)
+###getScene() &rarr; [Scene](/classes/Scene)
 Get the scene which contains the action manager
 
 
@@ -110,13 +110,13 @@ Return true if the action manager has specific specified triggers ; False otherw
  | triggers | number[] | @param triggers
 ---
 
-###registerAction(action) &rarr; [Action](page.php?p=3275)
+###registerAction(action) &rarr; [Action](/classes/Action)
 Register a new aciton in the action manager
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | action | [Action](page.php?p=3275) | The action to register
+ | action | [Action](/classes/Action) | The action to register
 ---
 
 ###processTrigger(trigger, evt) &rarr; void
@@ -126,5 +126,5 @@ Process trigger
  | Name | Type | Description
 ---|---|---|---
  | trigger | number | The trigger
- | evt | [ActionEvent](page.php?p=3287) | The event
+ | evt | [ActionEvent](/classes/ActionEvent) | The event
 ---

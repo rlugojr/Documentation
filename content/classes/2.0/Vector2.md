@@ -1,12 +1,15 @@
 ---
-ID_PAGE: 5807
+ID_PAGE: 24976
 PG_TITLE: Vector2
 PG_VERSION: 2.0
 ---
-##new [Vector2](page.php?p=5807)(x, y)
+##new [Vector2](/classes/Vector2)(x, y)
 
 
-Creates a new [Vector2](page.php?p=5807)
+
+Creates a new [Vector2](/classes/Vector2)
+
+
 
 
 ####Parameters
@@ -22,14 +25,21 @@ Creates a new [Vector2](page.php?p=5807)
 
 
 
+
 The first coordinate
+
 
 
 ###y : number
 
 
 
+
 The second coordinate
+
+
+
+
 
 
 
@@ -45,8 +55,12 @@ Returns a string representation of the vector
 
 
 
-###toArray(array, index) &rarr; [Vector2](page.php?p=5807)
+
+
+###toArray(array, index) &rarr; [Vector2](/classes/Vector2)
 Fills an array from a given index with the vector's coordinates
+
+
 
 
 
@@ -63,22 +77,28 @@ Returns an array representation of the vector
 
 
 
-###copyFrom(source) &rarr; [Vector2](page.php?p=5807)
+
+
+###copyFrom(source) &rarr; [Vector2](/classes/Vector2)
 Copies another vector
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | source | [Vector2](page.php?p=5807) | The source vector
+ | source | [Vector2](/classes/Vector2) | The source vector
 ---
 
-###copyFromFloats(x, y) &rarr; [Vector2](page.php?p=5807)
+###copyFromFloats(x, y) &rarr; [Vector2](/classes/Vector2)
 Copies another vector in float form
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -86,86 +106,102 @@ Copies another vector in float form
  | y | number | The Y coordinate of another vector
 ---
 
-###add(otherVector) &rarr; [Vector2](page.php?p=5807)
+###add(otherVector) &rarr; [Vector2](/classes/Vector2)
 Adds an another vector and returns the result as a new vector
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](page.php?p=5807) | Another vector
+ | otherVector | [Vector2](/classes/Vector2) | Another vector
 ---
 
-###addVector3(otherVector) &rarr; [Vector2](page.php?p=5807)
+###addVector3(otherVector) &rarr; [Vector2](/classes/Vector2)
 Adds the vector, the vector3's x and y
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector3](page.php?p=5808) | Another vector
+ | otherVector | [Vector3](/classes/Vector3) | Another vector
 ---
 
-###subtract(otherVector) &rarr; [Vector2](page.php?p=5807)
+###subtract(otherVector) &rarr; [Vector2](/classes/Vector2)
 Substracts another vector and returns the result in a new vector
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](page.php?p=5807) | Another vector
+ | otherVector | [Vector2](/classes/Vector2) | Another vector
 ---
 
-###subtractInPlace(otherVector) &rarr; [Vector2](page.php?p=5807)
+###subtractInPlace(otherVector) &rarr; [Vector2](/classes/Vector2)
 Substracts another vector
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](page.php?p=5807) | Another vector
+ | otherVector | [Vector2](/classes/Vector2) | Another vector
 ---
 
-###multiplyInPlace(otherVector) &rarr; [Vector2](page.php?p=5807)
+###multiplyInPlace(otherVector) &rarr; [Vector2](/classes/Vector2)
 Multiply by another vector
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](page.php?p=5807) | Another vector
+ | otherVector | [Vector2](/classes/Vector2) | Another vector
 ---
 
-###multiply(otherVector) &rarr; [Vector2](page.php?p=5807)
+###multiply(otherVector) &rarr; [Vector2](/classes/Vector2)
 Multiply by another vector and returns the result in a new vector
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](page.php?p=5807) | Another vector
+ | otherVector | [Vector2](/classes/Vector2) | Another vector
 ---
 
-###multiplyToRef(otherVector, result) &rarr; [Vector2](page.php?p=5807)
+###multiplyToRef(otherVector, result) &rarr; [Vector2](/classes/Vector2)
 Multiply by another vector into a third target vector
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](page.php?p=5807) | Another vector
- | result | [Vector2](page.php?p=5807) | The target vector
+ | otherVector | [Vector2](/classes/Vector2) | Another vector
+ | result | [Vector2](/classes/Vector2) | The target vector
 ---
 
-###multiplyByFloats(x, y) &rarr; [Vector2](page.php?p=5807)
+###multiplyByFloats(x, y) &rarr; [Vector2](/classes/Vector2)
 Multiply by another vector in float form and returns the result in a new vector
+
+
 
 
 
@@ -176,37 +212,45 @@ Multiply by another vector in float form and returns the result in a new vector
  | y | number | The Y coordinate of another vector
 ---
 
-###divide(otherVector) &rarr; [Vector2](page.php?p=5807)
+###divide(otherVector) &rarr; [Vector2](/classes/Vector2)
 Divides by another vector and returns the result nin a new vector
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](page.php?p=5807) | Another vector
+ | otherVector | [Vector2](/classes/Vector2) | Another vector
 ---
 
-###divideToRef(otherVector, result) &rarr; [Vector2](page.php?p=5807)
+###divideToRef(otherVector, result) &rarr; [Vector2](/classes/Vector2)
 Divides by another vector into a third target vector
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](page.php?p=5807) | Another vector
- | result | [Vector2](page.php?p=5807) | The target vector
+ | otherVector | [Vector2](/classes/Vector2) | Another vector
+ | result | [Vector2](/classes/Vector2) | The target vector
 ---
 
-###negate() &rarr; [Vector2](page.php?p=5807)
+###negate() &rarr; [Vector2](/classes/Vector2)
 Returns the opposite vector, that is the vector with opposite coordinates
 
 
 
 
-###scaleInPlace(scale) &rarr; [Vector2](page.php?p=5807)
+
+
+###scaleInPlace(scale) &rarr; [Vector2](/classes/Vector2)
 Scales the vector with the given factor
+
+
 
 
 
@@ -216,8 +260,10 @@ Scales the vector with the given factor
  | scale | number | The scaling factor
 ---
 
-###scale(scale) &rarr; [Vector2](page.php?p=5807)
+###scale(scale) &rarr; [Vector2](/classes/Vector2)
 Scales the vector and retruns the result as a new vector
+
+
 
 
 
@@ -233,14 +279,18 @@ Returns true if X,Y coordinates are equal
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](page.php?p=5807) | The vector to test against
+ | otherVector | [Vector2](/classes/Vector2) | The vector to test against
 ---
 
 ###length() &rarr; number
 The length of the vector
+
+
 
 
 
@@ -251,26 +301,36 @@ The squared length of the vector
 
 
 
-###normalize() &rarr; [Vector2](page.php?p=5807)
+
+
+###normalize() &rarr; [Vector2](/classes/Vector2)
 Normalizes a vector
 
 
 
 
-###clone() &rarr; [Vector2](page.php?p=5807)
+
+
+###clone() &rarr; [Vector2](/classes/Vector2)
 Clones a vector
 
 
 
 
-###static Zero() &rarr; [Vector2](page.php?p=5807)
-Returns a new [Vector2](page.php?p=5807) with x and y to zero
+
+
+###static Zero() &rarr; [Vector2](/classes/Vector2)
+Returns a new [Vector2](/classes/Vector2) with x and y to zero
 
 
 
 
-###static FromArray(array, offset) &rarr; [Vector2](page.php?p=5807)
+
+
+###static FromArray(array, offset) &rarr; [Vector2](/classes/Vector2)
 Creates a new vector from a given array
+
+
 
 
 
@@ -286,68 +346,78 @@ Sets an existing vector from a given array
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | array | number[] | The given array
  | offset | number | The first index of the array to look at
- | result | [Vector2](page.php?p=5807) | The existing vector
+ | result | [Vector2](/classes/Vector2) | The existing vector
 ---
 
-###static CatmullRom(value1, value2, value3, value4, amount) &rarr; [Vector2](page.php?p=5807)
+###static CatmullRom(value1, value2, value3, value4, amount) &rarr; [Vector2](/classes/Vector2)
 Performs a Catmull-Rom interpolation using the specified positions.
 When the method completes, returns the result of the Catmull-Rom interpolation
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value1 | [Vector2](page.php?p=5807) | The first position in the interpolation.
- | value2 | [Vector2](page.php?p=5807) | The second position in the interpolation.
- | value3 | [Vector2](page.php?p=5807) | The third position in the interpolation.
- | value4 | [Vector2](page.php?p=5807) | The fourth position in the interpolation.
+ | value1 | [Vector2](/classes/Vector2) | The first position in the interpolation.
+ | value2 | [Vector2](/classes/Vector2) | The second position in the interpolation.
+ | value3 | [Vector2](/classes/Vector2) | The third position in the interpolation.
+ | value4 | [Vector2](/classes/Vector2) | The fourth position in the interpolation.
  | amount | number | Weighting factor.
 ---
 
-###static Clamp(value, min, max) &rarr; [Vector2](page.php?p=5807)
+###static Clamp(value, min, max) &rarr; [Vector2](/classes/Vector2)
 Restricts a value to be within a specified range.
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value | [Vector2](page.php?p=5807) | The value to clamp
- | min | [Vector2](page.php?p=5807) | The minimum value
- | max | [Vector2](page.php?p=5807) | The maximum value
+ | value | [Vector2](/classes/Vector2) | The value to clamp
+ | min | [Vector2](/classes/Vector2) | The minimum value
+ | max | [Vector2](/classes/Vector2) | The maximum value
 ---
 
-###static Hermite(value1, tangent1, value2, tangent2, amount) &rarr; [Vector2](page.php?p=5807)
+###static Hermite(value1, tangent1, value2, tangent2, amount) &rarr; [Vector2](/classes/Vector2)
 Performs a Hermite spline interpolation.
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value1 | [Vector2](page.php?p=5807) | First source position vector.
- | tangent1 | [Vector2](page.php?p=5807) | First source tangent vector.
- | value2 | [Vector2](page.php?p=5807) | Second source position vector.
- | tangent2 | [Vector2](page.php?p=5807) | Second source tangent vector.
+ | value1 | [Vector2](/classes/Vector2) | First source position vector.
+ | tangent1 | [Vector2](/classes/Vector2) | First source tangent vector.
+ | value2 | [Vector2](/classes/Vector2) | Second source position vector.
+ | tangent2 | [Vector2](/classes/Vector2) | Second source tangent vector.
  | amount | number | Weighting factor.
 ---
 
-###static Lerp(start, end, amount) &rarr; [Vector2](page.php?p=5807)
+###static Lerp(start, end, amount) &rarr; [Vector2](/classes/Vector2)
 Performs a linear interpolation between two vectors.
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | start | [Vector2](page.php?p=5807) | interpolation start vector
- | end | [Vector2](page.php?p=5807) | interpolation end vector
+ | start | [Vector2](/classes/Vector2) | interpolation start vector
+ | end | [Vector2](/classes/Vector2) | interpolation end vector
  | amount | number | Weighting factor
 ---
 
@@ -356,58 +426,68 @@ Dot product between two vectors
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | left | [Vector2](page.php?p=5807) | first operand
- | right | [Vector2](page.php?p=5807) | second operand
+ | left | [Vector2](/classes/Vector2) | first operand
+ | right | [Vector2](/classes/Vector2) | second operand
 ---
 
-###static Normalize(vector) &rarr; [Vector2](page.php?p=5807)
+###static Normalize(vector) &rarr; [Vector2](/classes/Vector2)
 Normalizes a vector
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vector | [Vector2](page.php?p=5807) | 
+ | vector | [Vector2](/classes/Vector2) | 
 ---
 
-###static Minimize(left, right) &rarr; [Vector2](page.php?p=5807)
+###static Minimize(left, right) &rarr; [Vector2](/classes/Vector2)
 Minimizes the left vector with the right vector
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | left | [Vector2](page.php?p=5807) | The vector to minimize
- | right | [Vector2](page.php?p=5807) | The vector used to minimize
+ | left | [Vector2](/classes/Vector2) | The vector to minimize
+ | right | [Vector2](/classes/Vector2) | The vector used to minimize
 ---
 
-###static Maximize(left, right) &rarr; [Vector2](page.php?p=5807)
+###static Maximize(left, right) &rarr; [Vector2](/classes/Vector2)
 Maximizes the left vector with the right vector
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | left | [Vector2](page.php?p=5807) | The vector to maximize
- | right | [Vector2](page.php?p=5807) | the vector used to maximize
+ | left | [Vector2](/classes/Vector2) | The vector to maximize
+ | right | [Vector2](/classes/Vector2) | the vector used to maximize
 ---
 
-###static Transform(vector, transformation) &rarr; [Vector2](page.php?p=5807)
+###static Transform(vector, transformation) &rarr; [Vector2](/classes/Vector2)
 Transforms a vector into a new vector
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vector | [Vector2](page.php?p=5807) | The vector to transform
- | transformation | [Matrix](page.php?p=5811) | The transformation matrix
+ | vector | [Vector2](/classes/Vector2) | The vector to transform
+ | transformation | [Matrix](/classes/Matrix) | The transformation matrix
 ---
 
 ###static Distance(value1, value2) &rarr; number
@@ -415,11 +495,13 @@ Returns the distance between two vectors
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value1 | [Vector2](page.php?p=5807) | first vector
- | value2 | [Vector2](page.php?p=5807) | second vector
+ | value1 | [Vector2](/classes/Vector2) | first vector
+ | value2 | [Vector2](/classes/Vector2) | second vector
 ---
 
 ###static DistanceSquared(value1, value2) &rarr; number
@@ -427,6 +509,6 @@ Returns the distance between two vectors
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value1 | [Vector2](page.php?p=5807) | first vector
- | value2 | [Vector2](page.php?p=5807) | second vector
+ | value1 | [Vector2](/classes/Vector2) | first vector
+ | value2 | [Vector2](/classes/Vector2) | second vector
 ---

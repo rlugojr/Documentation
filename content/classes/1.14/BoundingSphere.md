@@ -1,33 +1,33 @@
 ---
-ID_PAGE: 3302
+ID_PAGE: 24510
 PG_TITLE: BoundingSphere
 PG_VERSION: 1.14
 ---
 
 Create a bounding sphere for the given mesh
-##new [BoundingSphere](page.php?p=3302)(minimum, maximum)
+##new [BoundingSphere](/classes/BoundingSphere)(minimum, maximum)
 
-The [BoundingSphere](page.php?p=3302) constructor
+The [BoundingSphere](/classes/BoundingSphere) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | minimum | [Vector3](page.php?p=3327) | The minimum of the sphere
- | maximum | [Vector3](page.php?p=3327) | The maximum of the sphere
+ | minimum | [Vector3](/classes/Vector3) | The minimum of the sphere
+ | maximum | [Vector3](/classes/Vector3) | The maximum of the sphere
 ---
 
 ##Members
 
-###minimum : [Vector3](page.php?p=3327)
+###minimum : [Vector3](/classes/Vector3)
 
 
 The minimum size of the bounding sphere
 
-###maximum : [Vector3](page.php?p=3327)
+###maximum : [Vector3](/classes/Vector3)
 
 
 The minimum of the bounding sphere
 
-###center : [Vector3](page.php?p=3327)
+###center : [Vector3](/classes/Vector3)
 
 
 The center of the bounding sphere
@@ -37,7 +37,7 @@ The center of the bounding sphere
 
 The radius of the bounding sphere
 
-###centerWorld : [Vector3](page.php?p=3327)
+###centerWorld : [Vector3](/classes/Vector3)
 
 
 ###radiusWorld : number
@@ -53,7 +53,7 @@ Check if the boundingSphere is in frustum
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](page.php?p=3330)[] | the frustum planes
+ | frustumPlanes | [Plane](/classes/Plane)[] | the frustum planes
 ---
 
 ###intersectsPoint(point) &rarr; boolean
@@ -62,7 +62,7 @@ Check if this bounding sphere intersect the point given in parameter
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | point | [Vector3](page.php?p=3327) | The point
+ | point | [Vector3](/classes/Vector3) | The point
 ---
 
 ###static Intersects(sphere0, sphere1) &rarr; boolean
@@ -71,6 +71,6 @@ Check if the two given sphere are intersecting each other
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | sphere0 | [BoundingSphere](page.php?p=3302) | The first sphere
- | sphere1 | [BoundingSphere](page.php?p=3302) | The second sphere
+ | sphere0 | [BoundingSphere](/classes/BoundingSphere) | The first sphere
+ | sphere1 | [BoundingSphere](/classes/BoundingSphere) | The second sphere
 ---

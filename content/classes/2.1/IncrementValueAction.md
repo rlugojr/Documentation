@@ -1,15 +1,18 @@
 ---
-ID_PAGE: 6667
+ID_PAGE: 25155
 PG_TITLE: IncrementValueAction
 PG_VERSION: 2.1
 TAGS:
     - Action
 ---
-##new [IncrementValueAction](page.php?p=6667)(triggerOptions, target, propertyPath, value, condition)
+##new [IncrementValueAction](/classes/IncrementValueAction)(triggerOptions, target, propertyPath, value, condition)
+
 
 
 
 Create a new increment value action
+
+
 
 
 
@@ -21,14 +24,15 @@ Create a new increment value action
  | target | any | The action target
  | propertyPath | string | 
  | value | any | The action value
-optional | condition | [Condition](page.php?p=6679) | The condition to trigger the action
+optional | condition | [Condition](/classes/Condition) | The condition to trigger the action
 ---
 
 ##Extends
- [Action](page.php?p=6663)
+ [Action](/classes/Action)
 ##Members
 
 ###propertyPath : string
+
 
 
 
@@ -37,12 +41,18 @@ The action property path
 
 
 
+
 ###value : any
 
 
 
 
+
 The action value
+
+
+
+
 
 
 

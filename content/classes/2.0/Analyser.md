@@ -1,14 +1,14 @@
 ---
-ID_PAGE: 5761
+ID_PAGE: 24930
 PG_TITLE: Analyser
 PG_VERSION: 2.0
 ---
-##new [Analyser](page.php?p=5761)(scene)
+##new [Analyser](/classes/Analyser)(scene)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [BABYLON](page.php?p=5696).Scene | 
+ | scene | [Scene](/classes/Scene) | 
 ---
 
 ##Members

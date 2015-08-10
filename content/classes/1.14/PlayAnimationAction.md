@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 3280
+ID_PAGE: 24488
 PG_TITLE: PlayAnimationAction
 PG_VERSION: 1.14
 ---
-##new [PlayAnimationAction](page.php?p=3280)(triggerOptions, target, from, to, loop, condition)
+##new [PlayAnimationAction](/classes/PlayAnimationAction)(triggerOptions, target, from, to, loop, condition)
 
 Launch an animation on a specified target
 ####Parameters
@@ -14,10 +14,10 @@ Launch an animation on a specified target
  | from | number | The starting frame index
  | to | number | The ending frame index
 optional | loop | boolean | True to loop the animation
-optional | condition | [Condition](page.php?p=3289) | The condition to play animation
+optional | condition | [Condition](/classes/Condition) | The condition to play animation
 ---
 
-##Extends [Action](page.php?p=3275)
+##Extends [Action](/classes/Action)
 ##Members
 
 ###from : number
@@ -32,7 +32,7 @@ The ending frame index
 
 ###loop : boolean
 
- [Animation](page.php?p=3294) loop or not
+ [Animation](/classes/Animation) loop or not
 
 
 

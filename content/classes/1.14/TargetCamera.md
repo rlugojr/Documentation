@@ -1,33 +1,33 @@
 ---
-ID_PAGE: 3252
+ID_PAGE: 24460
 PG_TITLE: TargetCamera
 PG_VERSION: 1.14
 ---
-##new [TargetCamera](page.php?p=3252)(name, position, scene)
+##new [TargetCamera](/classes/TargetCamera)(name, position, scene)
 
 Create a new targetCamera
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the targetCamera
- | position | [Vector3](page.php?p=3327) | Position of the targetCamera
- | scene | [Scene](page.php?p=3274) | The scene where the targetCamera will be create
+ | position | [Vector3](/classes/Vector3) | Position of the targetCamera
+ | scene | [Scene](/classes/Scene) | The scene where the targetCamera will be create
 ---
 
-##Extends [Camera](page.php?p=3249)
+##Extends [Camera](/classes/Camera)
 ##Members
 
-###cameraDirection : [Vector3](page.php?p=3327)
+###cameraDirection : [Vector3](/classes/Vector3)
 
 
 The camera direction
 
-###cameraRotation : [Vector2](page.php?p=3326)
+###cameraRotation : [Vector2](/classes/Vector2)
 
 
 The camera rotation
 
-###rotation : [Vector3](page.php?p=3327)
+###rotation : [Vector3](/classes/Vector3)
 
 
 The rotation
@@ -57,9 +57,9 @@ Set the target of the targetCamera
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | target | [Vector3](page.php?p=3327) | The target position
+ | target | [Vector3](/classes/Vector3) | The target position
 ---
 
-###getTarget() &rarr; [Vector3](page.php?p=3327)
+###getTarget() &rarr; [Vector3](/classes/Vector3)
 Get the target position of the targetCamera
 

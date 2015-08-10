@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 3304
+ID_PAGE: 24512
 PG_TITLE: OctreeBlock<T>
 PG_VERSION: 1.14
 ---
@@ -11,8 +11,8 @@ The OctreeBlock constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | minPoint | [Vector3](page.php?p=3327) | The minimum point
- | maxPoint | [Vector3](page.php?p=3327) | The maximum point
+ | minPoint | [Vector3](/classes/Vector3) | The minimum point
+ | maxPoint | [Vector3](/classes/Vector3) | The maximum point
  | capacity | number | @param capacity
  | depth | number | @param depth
  | maxDepth | number | @param maxDepth
@@ -36,12 +36,12 @@ The blocks
 
 The capacity of the octreeBlock
 
-###minPoint : [Vector3](page.php?p=3327)
+###minPoint : [Vector3](/classes/Vector3)
 
 
 The min point
 
-###maxPoint : [Vector3](page.php?p=3327)
+###maxPoint : [Vector3](/classes/Vector3)
 
 
 The max point
@@ -74,7 +74,7 @@ Select
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](page.php?p=3330)[] | [Frustum](page.php?p=3332) plan of the mesh
+ | frustumPlanes | [Plane](/classes/Plane)[] | [Frustum](/classes/Frustum) plan of the mesh
  | selection | SmartArray&lt;T&gt; | @param selection
 optional | allowDuplicate | boolean | True if you want to duplicate it, false otherwise.
 ---
@@ -85,7 +85,7 @@ Intersects
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | sphereCenter | [Vector3](page.php?p=3327) | The sphere center
+ | sphereCenter | [Vector3](/classes/Vector3) | The sphere center
  | sphereRadius | number | The sphere radius
  | selection | SmartArray&lt;T&gt; | The selection element
 optional | allowDuplicate | boolean | True if you want to duplicate it, false otherwise.
@@ -97,7 +97,7 @@ Intersects ray
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](page.php?p=3333) | @param ray
+ | ray | [Ray](/classes/Ray) | @param ray
  | selection | SmartArray&lt;T&gt; | @param selection
 ---
 

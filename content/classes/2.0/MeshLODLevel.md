@@ -1,15 +1,18 @@
 ---
-ID_PAGE: 5903
+ID_PAGE: 25072
 PG_TITLE: MeshLODLevel
 PG_VERSION: 2.0
 ---
-##new [MeshLODLevel](page.php?p=5903)(distance, mesh)
+##new [MeshLODLevel](/classes/MeshLODLevel)(distance, mesh)
+
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | distance | number | 
- | mesh | [Mesh](page.php?p=5722) | 
+ | mesh | [Mesh](/classes/Mesh) | 
 ---
 
 ##Members
@@ -17,7 +20,9 @@ PG_VERSION: 2.0
 ###distance : number
 
 
-###mesh : [Mesh](page.php?p=5722)
+
+
+###mesh : [Mesh](/classes/Mesh)
 
 
 

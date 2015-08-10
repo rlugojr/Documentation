@@ -1,59 +1,61 @@
 ---
-ID_PAGE: 6810
+ID_PAGE: 25298
 PG_TITLE: SSAORenderingPipeline
 PG_VERSION: 2.1
 TAGS:
     - PostProcess
     - PostProcessRenderPipeline
 ---
-##new [SSAORenderingPipeline](page.php?p=6810)(name, scene, ratio, cameras)
+Builtin rendering pipeline applying the ambient occlusion of a given scene
+&nbsp;using the screen space
+##new [SSAORenderingPipeline](/classes/SSAORenderingPipeline)(name, scene, ratio, cameras)
 
 @constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | scene | [Scene](page.php?p=6662) | 
- | ratio | any | 
-optional | cameras | [Camera](page.php?p=6631)[] | 
+ | name | string | The rendering pipeline name
+ | scene | [Scene](/classes/Scene) | The scene linked to this pipeline
+ | ratio | any | The size of the postprocess (0.5 means that your postprocess will have a width = canvas.width * 0.5 and a height = canvas.height * 0.5)
+optional | cameras | [Camera](/classes/Camera)[] | The array of cameras that the rendering pipeline will be attached to
 ---
 
 ##Extends
- [PostProcessRenderPipeline](page.php?p=6808)
+ [PostProcessRenderPipeline](/classes/PostProcessRenderPipeline)
 ##Members
 
 ###SSAOOriginalSceneColorEffect : string
 
 
-The [PassPostProcess](page.php?p=6799) id in the pipeline that contains the original scene color
+The [PassPostProcess](/classes/PassPostProcess) id in the pipeline that contains the original scene color
 
 @type {string}
 
 ###SSAORenderEffect : string
 
 
-The SSAO [PostProcess](page.php?p=6790) id in the pipeline
+The SSAO [PostProcess](/classes/PostProcess) id in the pipeline
 
 @type {string}
 
 ###SSAOBlurHRenderEffect : string
 
 
-The horizontal blur [PostProcess](page.php?p=6790) id in the pipeline
+The horizontal blur [PostProcess](/classes/PostProcess) id in the pipeline
 
 @type {string}
 
 ###SSAOBlurVRenderEffect : string
 
 
-The vertical blur [PostProcess](page.php?p=6790) id in the pipeline
+The vertical blur [PostProcess](/classes/PostProcess) id in the pipeline
 
 @type {string}
 
 ###SSAOCombineRenderEffect : string
 
 
-The [PostProcess](page.php?p=6790) id in the pipeline that combines the SSAO-Blur output with the original scene color (SSAOOriginalSceneColorEffect)
+The [PostProcess](/classes/PostProcess) id in the pipeline that combines the SSAO-Blur output with the original scene color (SSAOOriginalSceneColorEffect)
 
 @type {string}
 
@@ -97,13 +99,13 @@ Default value is 0.0002
 
 ##Methods
 
-###getBlurHPostProcess() &rarr; [BlurPostProcess](page.php?p=6793)
-Returns the horizontal blur [PostProcess](page.php?p=6790)
+###getBlurHPostProcess() &rarr; [BlurPostProcess](/classes/BlurPostProcess)
+Returns the horizontal blur [PostProcess](/classes/PostProcess)
 @return {BABYLON.BlurPostProcess} The horizontal blur post-process
 
 
-###getBlurVPostProcess() &rarr; [BlurPostProcess](page.php?p=6793)
-Returns the vertical blur [PostProcess](page.php?p=6790)
+###getBlurVPostProcess() &rarr; [BlurPostProcess](/classes/BlurPostProcess)
+Returns the vertical blur [PostProcess](/classes/PostProcess)
 @return {BABYLON.BlurPostProcess} The vertical blur post-process
 
 

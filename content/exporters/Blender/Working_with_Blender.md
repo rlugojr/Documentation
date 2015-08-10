@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 24820
 PG_TITLE: Working with Blender
-TAGS:
-    - Blender
 ---
 This tutorial is going to teach you how you can load a complete scene from Blender, directly to BabylonJS !
 Babylon engine can load an entire scene, or simply one 3D object.

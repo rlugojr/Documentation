@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 3308
+ID_PAGE: 24516
 PG_TITLE: ShadowGenerator
 PG_VERSION: 1.14
 ---
@@ -7,14 +7,14 @@ PG_VERSION: 1.14
 Shadows are dynamic, they are dynamically generated depending upon a Directionallight.
 
 A tutorial about shadows can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/15-Shadows)
-##new [ShadowGenerator](page.php?p=3308)(mapSize, light)
+##new [ShadowGenerator](/classes/ShadowGenerator)(mapSize, light)
 
-Creates a new [ShadowGenerator](page.php?p=3308) object
+Creates a new [ShadowGenerator](/classes/ShadowGenerator) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | mapSize | number | The size of the shadow map
- | light | [DirectionalLight](page.php?p=3265) | The light used for the shadow map's computation
+ | light | [DirectionalLight](/classes/DirectionalLight) | The light used for the shadow map's computation
 ---
 
 ##Members
@@ -58,20 +58,20 @@ Disables the useVarianceShadowMap and activates poisson sampling to soften shado
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | subMesh | [SubMesh](page.php?p=3339) | @param subMesh
+ | subMesh | [SubMesh](/classes/SubMesh) | @param subMesh
  | useInstances | boolean | @param useInstances
 ---
 
-###getShadowMap() &rarr; [RenderTargetTexture](page.php?p=3321)
+###getShadowMap() &rarr; [RenderTargetTexture](/classes/RenderTargetTexture)
 Defines which shadow will be rendered
 
 
-###getLight() &rarr; [DirectionalLight](page.php?p=3265)
-Returns the [DirectionalLight](page.php?p=3265) of this [ShadowGenerator](page.php?p=3308)
+###getLight() &rarr; [DirectionalLight](/classes/DirectionalLight)
+Returns the [DirectionalLight](/classes/DirectionalLight) of this [ShadowGenerator](/classes/ShadowGenerator)
 
 
-###getTransformMatrix() &rarr; [Matrix](page.php?p=3329)
-Returns the transform matrix of this [ShadowGenerator](page.php?p=3308)
+###getTransformMatrix() &rarr; [Matrix](/classes/Matrix)
+Returns the transform matrix of this [ShadowGenerator](/classes/ShadowGenerator)
 
 
 ###getDarkness() &rarr; number
@@ -97,5 +97,5 @@ Defines if the light goes through the object's holes and non opaque surfaces
 ---
 
 ###dispose() &rarr; void
-Removes this [ShadowGenerator](page.php?p=3308) from the scene
+Removes this [ShadowGenerator](/classes/ShadowGenerator) from the scene
 

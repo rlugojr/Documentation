@@ -1,24 +1,32 @@
 ---
-ID_PAGE: 5802
+ID_PAGE: 24971
 PG_TITLE: RoadProceduralTexture
 PG_VERSION: 2.0
 ---
-##new [RoadProceduralTexture](page.php?p=5802)(name, size, scene, fallbackTexture, generateMipMaps)
+##new [RoadProceduralTexture](/classes/RoadProceduralTexture)(name, size, scene, fallbackTexture, generateMipMaps)
+
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
  | size | number | 
- | scene | [Scene](page.php?p=5725) | 
-optional | fallbackTexture | [Texture](page.php?p=5790) | 
+ | scene | [Scene](/classes/Scene) | 
+optional | fallbackTexture | [Texture](/classes/Texture) | 
 optional | generateMipMaps | boolean | 
 ---
 
-##Extends [ProceduralTexture](page.php?p=5796)
+##Extends [ProceduralTexture](/classes/ProceduralTexture)
 ##Members
 
-###roadColor : [Color3](page.php?p=5805)
+###roadColor : [Color3](/classes/Color3)
+
+
+
+
+
 
 
 

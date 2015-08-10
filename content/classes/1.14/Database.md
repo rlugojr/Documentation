@@ -1,11 +1,11 @@
 ---
-ID_PAGE: 3374
+ID_PAGE: 24582
 PG_TITLE: Database
 PG_VERSION: 1.14
 ---
-##new [Database](page.php?p=3374)(urlToScene, callbackManifestChecked)
+##new [Database](/classes/Database)(urlToScene, callbackManifestChecked)
 
-Create a new [Database](page.php?p=3374)
+Create a new [Database](/classes/Database)
 An explanation about how BabylonJs index all its resources can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/Caching-the-resources-in-IndexedDB)
 ####Parameters
  | Name | Type | Description

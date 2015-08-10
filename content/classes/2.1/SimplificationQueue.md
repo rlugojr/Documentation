@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 6775
+ID_PAGE: 25263
 PG_TITLE: SimplificationQueue
 PG_VERSION: 2.1
 ---
-##new [SimplificationQueue](page.php?p=6775)()
+##new [SimplificationQueue](/classes/SimplificationQueue)()
 
 
 ##Members

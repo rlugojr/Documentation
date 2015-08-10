@@ -1,10 +1,12 @@
 ---
-ID_PAGE: 5758
+ID_PAGE: 24927
 PG_TITLE: QuinticEase
 PG_VERSION: 2.0
 ---
 
-##Extends [EasingFunction](page.php?p=5748)
+
+
+##Extends [EasingFunction](/classes/EasingFunction)
 
 
 ##Methods

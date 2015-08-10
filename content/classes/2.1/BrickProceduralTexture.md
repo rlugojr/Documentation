@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6746
+ID_PAGE: 25234
 PG_TITLE: BrickProceduralTexture
 PG_VERSION: 2.1
 TAGS:
@@ -7,7 +7,10 @@ TAGS:
     - Texture
     - ProceduralTexture
 ---
-##new [BrickProceduralTexture](page.php?p=6746)(name, size, scene, fallbackTexture, generateMipMaps)
+##new [BrickProceduralTexture](/classes/BrickProceduralTexture)(name, size, scene, fallbackTexture, generateMipMaps)
+
+
+
 
 
 
@@ -17,16 +20,18 @@ TAGS:
 ---|---|---|---
  | name | string | 
  | size | number | 
- | scene | [Scene](page.php?p=6662) | 
-optional | fallbackTexture | [Texture](page.php?p=6733) | 
+ | scene | [Scene](/classes/Scene) | 
+optional | fallbackTexture | [Texture](/classes/Texture) | 
 optional | generateMipMaps | boolean | 
 ---
 
 ##Extends
- [ProceduralTexture](page.php?p=6739)
+ [ProceduralTexture](/classes/ProceduralTexture)
 ##Members
 
 ###numberOfBricksHeight : number
+
+
 
 
 
@@ -36,12 +41,21 @@ optional | generateMipMaps | boolean |
 
 
 
-###jointColor : [Color3](page.php?p=6748)
+
+
+###jointColor : [Color3](/classes/Color3)
 
 
 
 
-###brickColor : [Color3](page.php?p=6748)
+
+
+###brickColor : [Color3](/classes/Color3)
+
+
+
+
+
 
 
 

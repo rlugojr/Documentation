@@ -1,11 +1,11 @@
 ---
-ID_PAGE: 3379
+ID_PAGE: 24587
 PG_TITLE: GenericPad
 PG_VERSION: 1.14
 ---
-##new [GenericPad](page.php?p=3379)(id, index, gamepad)
+##new [GenericPad](/classes/GenericPad)(id, index, gamepad)
 
-Builds a [Gamepad](page.php?p=3378) object
+Builds a [Gamepad](/classes/Gamepad) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -14,7 +14,7 @@ Builds a [Gamepad](page.php?p=3378) object
  | gamepad | any | The object that holds the gamepad informations
 ---
 
-##Extends [Gamepad](page.php?p=3378)
+##Extends [Gamepad](/classes/Gamepad)
 ##Members
 
 ###id : string

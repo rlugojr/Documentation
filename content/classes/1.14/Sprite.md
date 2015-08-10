@@ -1,17 +1,17 @@
 ---
-ID_PAGE: 3366
+ID_PAGE: 24574
 PG_TITLE: Sprite
 PG_VERSION: 1.14
 ---
-##new [Sprite](page.php?p=3366)(name, manager)
+##new [Sprite](/classes/Sprite)(name, manager)
 
-Create a new [Sprite](page.php?p=3366).
+Create a new [Sprite](/classes/Sprite).
 A tutorial about sprites can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/08-Sprites)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the sprite
- | manager | [SpriteManager](page.php?p=3367) | The sprite manager
+ | manager | [SpriteManager](/classes/SpriteManager) | The sprite manager
 ---
 
 ##Members
@@ -21,12 +21,12 @@ A tutorial about sprites can be found [here](https://github.com/BabylonJS/Babylo
 
 The sprite name
 
-###position : [Vector3](page.php?p=3327)
+###position : [Vector3](/classes/Vector3)
 
 
 The sprite position
 
-###color : [Color4](page.php?p=3325)
+###color : [Color4](/classes/Color4)
 
 
 The sprite color
@@ -61,7 +61,7 @@ True if invert in V axis ; False otherwise
 
 True if dispose when finished animating ; False otherwise
 
-###animations : [Animation](page.php?p=3294)[]
+###animations : [Animation](/classes/Animation)[]
 
 
 Animations array

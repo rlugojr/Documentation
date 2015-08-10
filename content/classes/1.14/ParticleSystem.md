@@ -1,17 +1,17 @@
 ---
-ID_PAGE: 3342
+ID_PAGE: 24550
 PG_TITLE: ParticleSystem
 PG_VERSION: 1.14
 ---
-##new [ParticleSystem](page.php?p=3342)(name, capacity, scene, customEffect)
+##new [ParticleSystem](/classes/ParticleSystem)(name, capacity, scene, customEffect)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | name of the particle system
  | capacity | number | The total number of particles contained into the particle system
- | scene | [Scene](page.php?p=3274) | The scene of the particle system
-optional | customEffect | [Effect](page.php?p=3311) | The reference to a shader effect for the particles, overriding the default shader
+ | scene | [Scene](/classes/Scene) | The scene of the particle system
+optional | customEffect | [Effect](/classes/Effect) | The reference to a shader effect for the particles, overriding the default shader
 ---
 
 ##Members
@@ -111,7 +111,7 @@ Minimum angular speed of particle in radian
 
 Maximum angular speed of particle in radian
 
-###particleTexture : [Texture](page.php?p=3319)
+###particleTexture : [Texture](/classes/Texture)
 
 
 The particle texture
@@ -131,55 +131,55 @@ The selected mode for particles : BLENDMODE_ONEONE or BLENDMODE_STANDARD
 
 default : false
 
-###gravity : [Vector3](page.php?p=3327)
+###gravity : [Vector3](/classes/Vector3)
 
 
 The gravity of the particle to give an orientation to the particle
 
-###direction1 : [Vector3](page.php?p=3327)
+###direction1 : [Vector3](/classes/Vector3)
 
 
 Random direction of each particle emitted between direction1 and direction2
 
-###direction2 : [Vector3](page.php?p=3327)
+###direction2 : [Vector3](/classes/Vector3)
 
 
 Random direction of each particle emitted between direction1 and direction2
 
-###minEmitBox : [Vector3](page.php?p=3327)
+###minEmitBox : [Vector3](/classes/Vector3)
 
 
 Begining of the box emitting the particles
 
-###maxEmitBox : [Vector3](page.php?p=3327)
+###maxEmitBox : [Vector3](/classes/Vector3)
 
 
 Ending of the box emitting the particles
 
-###color1 : [Color4](page.php?p=3325)
+###color1 : [Color4](/classes/Color4)
 
 
 First color to be combined to produce the particle color
 
-###color2 : [Color4](page.php?p=3325)
+###color2 : [Color4](/classes/Color4)
 
 
 Second color to be combined to produce the particle color
 
-###colorDead : [Color4](page.php?p=3325)
+###colorDead : [Color4](/classes/Color4)
 
 
 Color taken by the particle just before it disappears
 
-###textureMask : [Color4](page.php?p=3325)
+###textureMask : [Color4](/classes/Color4)
 
 
 Mask used to filter a texture color
 
-###startDirectionFunction : (emitPower: number, worldMatrix: [Matrix](page.php?p=3329), directionToUpdate: [Vector3](page.php?p=3327)) =&gt; void
+###startDirectionFunction : (emitPower: number, worldMatrix: [Matrix](/classes/Matrix), directionToUpdate: [Vector3](/classes/Vector3)) =&gt; void
 
 
-###startPositionFunction : (worldMatrix: [Matrix](page.php?p=3329), positionToUpdate: [Vector3](page.php?p=3327)) =&gt; void
+###startPositionFunction : (worldMatrix: [Matrix](/classes/Matrix), positionToUpdate: [Vector3](/classes/Vector3)) =&gt; void
 
 
 
@@ -217,12 +217,12 @@ Animates the particle system
 Destroyes this particle system
 
 
-###clone(name, newEmitter) &rarr; [ParticleSystem](page.php?p=3342)
+###clone(name, newEmitter) &rarr; [ParticleSystem](/classes/ParticleSystem)
 Clones this particle system and appends it to the given emitter
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | The name of the cloned [ParticleSystem](page.php?p=3342)
+ | name | string | The name of the cloned [ParticleSystem](/classes/ParticleSystem)
  | newEmitter | any | The given new emitter
 ---

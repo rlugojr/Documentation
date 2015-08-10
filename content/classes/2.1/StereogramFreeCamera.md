@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6645
+ID_PAGE: 25133
 PG_TITLE: StereogramFreeCamera
 PG_VERSION: 2.1
 TAGS:
@@ -8,20 +8,20 @@ TAGS:
     - TargetCamera
     - FreeCamera
 ---
-##new [StereogramFreeCamera](page.php?p=6645)(name, position, eyeSpace, isVertical, scene)
+##new [StereogramFreeCamera](/classes/StereogramFreeCamera)(name, position, eyeSpace, isVertical, scene)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | position | [Vector3](page.php?p=6751) | 
+ | position | [Vector3](/classes/Vector3) | 
  | eyeSpace | number | 
  | isVertical | boolean | 
- | scene | [Scene](page.php?p=6662) | 
+ | scene | [Scene](/classes/Scene) | 
 ---
 
 ##Extends
- [FreeCamera](page.php?p=6638)
+ [FreeCamera](/classes/FreeCamera)
 
 
 ##Methods

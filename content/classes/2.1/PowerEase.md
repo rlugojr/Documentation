@@ -1,11 +1,14 @@
 ---
-ID_PAGE: 6692
+ID_PAGE: 25180
 PG_TITLE: PowerEase
 PG_VERSION: 2.1
 TAGS:
     - EasingFunction
 ---
-##new [PowerEase](page.php?p=6692)(power)
+##new [PowerEase](/classes/PowerEase)(power)
+
+
+
 
 
 
@@ -17,10 +20,15 @@ optional | power | number |
 ---
 
 ##Extends
- [EasingFunction](page.php?p=6685)
+ [EasingFunction](/classes/EasingFunction)
 ##Members
 
 ###power : number
+
+
+
+
+
 
 
 

@@ -1,12 +1,15 @@
 ---
-ID_PAGE: 6832
+ID_PAGE: 25320
 PG_TITLE: SceneOptimization
 PG_VERSION: 2.1
 TAGS:
     - Scene
     - SceneOptimization
 ---
-##new [SceneOptimization](page.php?p=6832)(priority)
+##new [SceneOptimization](/classes/SceneOptimization)(priority)
+
+
+
 
 
 
@@ -24,7 +27,9 @@ optional | priority | number |
 
 
 
-###apply : (scene: [Scene](page.php?p=6662)) =&gt; boolean
+
+
+###apply : (scene: [Scene](/classes/Scene)) =&gt; boolean
 
 
 

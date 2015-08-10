@@ -1,37 +1,46 @@
 ---
-ID_PAGE: 5822
+ID_PAGE: 24991
 PG_TITLE: CSG
 PG_VERSION: 2.0
 ---
 
-The [CSG](page.php?p=5822) class
+The [CSG](/classes/CSG) class
+
+
 
 
 
 ##Members
 
-###matrix : [Matrix](page.php?p=5811)
+###matrix : [Matrix](/classes/Matrix)
+
 
 
 
 The matrix
 
 
-###position : [Vector3](page.php?p=5808)
+
+###position : [Vector3](/classes/Vector3)
+
 
 
 
 The position
 
 
-###rotation : [Vector3](page.php?p=5808)
+
+###rotation : [Vector3](/classes/Vector3)
+
 
 
 
 The rotation
 
 
-###scaling : [Vector3](page.php?p=5808)
+
+###scaling : [Vector3](/classes/Vector3)
+
 
 
 
@@ -43,34 +52,44 @@ The scaling
 
 
 
+
+
+
+
 ##Methods
 
-###static FromMesh(mesh) &rarr; [CSG](page.php?p=5822)
-Convert [BABYLON](page.php?p=5696).Mesh to [BABYLON](page.php?p=5696).CSG
+###static FromMesh(mesh) &rarr; [CSG](/classes/CSG)
+Convert [Mesh](/classes/Mesh) to [CSG](/classes/CSG)
+
+
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](page.php?p=5722) | @param mesh
+ | mesh | [Mesh](/classes/Mesh) | @param mesh
 ---
 
-###clone() &rarr; [CSG](page.php?p=5822)
-Clone this [CSG](page.php?p=5822)
+###clone() &rarr; [CSG](/classes/CSG)
+Clone this [CSG](/classes/CSG)
 
 
 
 
-###union(csg) &rarr; [CSG](page.php?p=5822)
-Union the [CSG](page.php?p=5822)
+
+
+###union(csg) &rarr; [CSG](/classes/CSG)
+Union the [CSG](/classes/CSG)
+
+
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | csg | [CSG](page.php?p=5822) | using this [CSG](page.php?p=5822)
+ | csg | [CSG](/classes/CSG) | using this [CSG](/classes/CSG)
 ---
 
 ###unionInPlace(csg) &rarr; void
@@ -78,21 +97,25 @@ Union in place
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | csg | [CSG](page.php?p=5822) | @param csg
+ | csg | [CSG](/classes/CSG) | @param csg
 ---
 
-###subtract(csg) &rarr; [CSG](page.php?p=5822)
-Subtract the [CSG](page.php?p=5822)
+###subtract(csg) &rarr; [CSG](/classes/CSG)
+Subtract the [CSG](/classes/CSG)
+
+
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | csg | [CSG](page.php?p=5822) | using this [CSG](page.php?p=5822)
+ | csg | [CSG](/classes/CSG) | using this [CSG](/classes/CSG)
 ---
 
 ###subtractInPlace(csg) &rarr; void
@@ -100,21 +123,25 @@ Subtract in place
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | csg | [CSG](page.php?p=5822) | @param csg
+ | csg | [CSG](/classes/CSG) | @param csg
 ---
 
-###intersect(csg) &rarr; [CSG](page.php?p=5822)
+###intersect(csg) &rarr; [CSG](/classes/CSG)
 Intersect first solid with the second
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | csg | [CSG](page.php?p=5822) | @param csg
+ | csg | [CSG](/classes/CSG) | @param csg
 ---
 
 ###intersectInPlace(csg) &rarr; void
@@ -122,14 +149,18 @@ Intersect in place
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | csg | [CSG](page.php?p=5822) | @param csg
+ | csg | [CSG](/classes/CSG) | @param csg
 ---
 
-###inverse() &rarr; [CSG](page.php?p=5822)
-Return a new [BABYLON](page.php?p=5696).CSG solid with solid and empty space swtiched. This solid is not modified.
+###inverse() &rarr; [CSG](/classes/CSG)
+Return a new [CSG](/classes/CSG) solid with solid and empty space swtiched. This solid is not modified.
+
+
 
 
 
@@ -140,40 +171,46 @@ Inverse in place
 
 
 
-###copyTransformAttributes(csg) &rarr; [CSG](page.php?p=5822)
+
+
+###copyTransformAttributes(csg) &rarr; [CSG](/classes/CSG)
 This is used to keep meshes transformations so they can be restored
-when we build back a [BABYLON](page.php?p=5696).Mesh
-NB : All [CSG](page.php?p=5822) operations are performed in world coordinates
+when we build back a [Mesh](/classes/Mesh)
+NB : All [CSG](/classes/CSG) operations are performed in world coordinates
+
+
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | csg | [CSG](page.php?p=5822) | @param csg
+ | csg | [CSG](/classes/CSG) | @param csg
 ---
 
-###buildMeshGeometry(name, scene, keepSubMeshes) &rarr; [Mesh](page.php?p=5722)
-Build raw mesh from [CSG](page.php?p=5822)
+###buildMeshGeometry(name, scene, keepSubMeshes) &rarr; [Mesh](/classes/Mesh)
+Build raw mesh from [CSG](/classes/CSG)
 Coordinates here are in world space
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | @param name
- | scene | [Scene](page.php?p=5725) | @param scene
+ | scene | [Scene](/classes/Scene) | @param scene
  | keepSubMeshes | boolean | @param keepSubMeshes
 ---
 
-###toMesh(name, material, scene, keepSubMeshes) &rarr; [Mesh](page.php?p=5722)
+###toMesh(name, material, scene, keepSubMeshes) &rarr; [Mesh](/classes/Mesh)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | @param name
- | material | [Material](page.php?p=5783) | @param material
- | scene | [Scene](page.php?p=5725) | @param scene
+ | material | [Material](/classes/Material) | @param material
+ | scene | [Scene](/classes/Scene) | @param scene
  | keepSubMeshes | boolean | @param keepSubMeshes
 ---

@@ -1,42 +1,42 @@
 ---
-ID_PAGE: 5819
+ID_PAGE: 24988
 PG_TITLE: Arc2
 PG_VERSION: 2.0
 ---
-##new [Arc2](page.php?p=5819)(startPoint, midPoint, endPoint)
+##new [Arc2](/classes/Arc2)(startPoint, midPoint, endPoint)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | startPoint | [Vector2](page.php?p=5807) | 
- | midPoint | [Vector2](page.php?p=5807) | 
- | endPoint | [Vector2](page.php?p=5807) | 
+ | startPoint | [Vector2](/classes/Vector2) | 
+ | midPoint | [Vector2](/classes/Vector2) | 
+ | endPoint | [Vector2](/classes/Vector2) | 
 ---
 
 ##Members
 
-###startPoint : [Vector2](page.php?p=5807)
+###startPoint : [Vector2](/classes/Vector2)
 
 
-###midPoint : [Vector2](page.php?p=5807)
+###midPoint : [Vector2](/classes/Vector2)
 
 
-###endPoint : [Vector2](page.php?p=5807)
+###endPoint : [Vector2](/classes/Vector2)
 
 
-###centerPoint : [Vector2](page.php?p=5807)
+###centerPoint : [Vector2](/classes/Vector2)
 
 
 ###radius : number
 
 
-###angle : [Angle](page.php?p=5818)
+###angle : [Angle](/classes/Angle)
 
 
-###startAngle : [Angle](page.php?p=5818)
+###startAngle : [Angle](/classes/Angle)
 
 
-###orientation : [Orientation](page.php?p=5897)
+###orientation : [Orientation](/classes/Orientation)
 
 
 

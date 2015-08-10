@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 6779
+ID_PAGE: 25267
 PG_TITLE: Reference
 PG_VERSION: 2.1
 ---
-##new [Reference](page.php?p=6779)(vertexId, triangleId)
+##new [Reference](/classes/Reference)(vertexId, triangleId)
 
 
 

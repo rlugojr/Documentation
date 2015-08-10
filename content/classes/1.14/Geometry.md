@@ -1,21 +1,21 @@
 ---
-ID_PAGE: 3336
+ID_PAGE: 24544
 PG_TITLE: Geometry
 PG_VERSION: 1.14
 ---
 
-The [Geometry](page.php?p=3336) class
-##new [Geometry](page.php?p=3336)(id, scene, vertexData, updatable, mesh)
+The [Geometry](/classes/Geometry) class
+##new [Geometry](/classes/Geometry)(id, scene, vertexData, updatable, mesh)
 
-The [Geometry](page.php?p=3336) constructor
+The [Geometry](/classes/Geometry) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | id | string | @param id
- | scene | [Scene](page.php?p=3274) | @param scene
-optional | vertexData | [VertexData](page.php?p=3338) | @param vertexData
+ | scene | [Scene](/classes/Scene) | @param scene
+optional | vertexData | [VertexData](/classes/VertexData) | @param vertexData
 optional | updatable | boolean | @param updatable
-optional | mesh | [Mesh](page.php?p=3271) | @param mesh
+optional | mesh | [Mesh](/classes/Mesh) | @param mesh
 ---
 
 ##Members
@@ -33,11 +33,11 @@ optional | mesh | [Mesh](page.php?p=3271) | @param mesh
 
 ##Methods
 
-###getScene() &rarr; [Scene](page.php?p=3274)
+###getScene() &rarr; [Scene](/classes/Scene)
 Get the scene
 
 
-###getEngine() &rarr; [Engine](page.php?p=3247)
+###getEngine() &rarr; [Engine](/classes/Engine)
 Get the engine
 
 
@@ -51,7 +51,7 @@ Set all vertices data
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vertexData | [VertexData](page.php?p=3338) | send all elements of vertices
+ | vertexData | [VertexData](/classes/VertexData) | send all elements of vertices
 optional | updatable | boolean | @param updatable
 ---
 
@@ -100,7 +100,7 @@ Get total vertices data
  | kind | string | @param kind
 ---
 
-###getVertexBuffer(kind) &rarr; [VertexBuffer](page.php?p=3340)
+###getVertexBuffer(kind) &rarr; [VertexBuffer](/classes/VertexBuffer)
 Get vertex buffer for this kind
 
 ####Parameters
@@ -109,7 +109,7 @@ Get vertex buffer for this kind
  | kind | string | Use only one parameters
 ---
 
-###getVertexBuffers() &rarr; [VertexBuffer](page.php?p=3340)[]
+###getVertexBuffers() &rarr; [VertexBuffer](/classes/VertexBuffer)[]
 Get vertex buffers, use all element of vertex buffer
 
 
@@ -153,7 +153,7 @@ Release for mesh
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](page.php?p=3271) | your mesh
+ | mesh | [Mesh](/classes/Mesh) | your mesh
 optional | shouldDispose | boolean | true if mesh is dispose, false if is not.
 ---
 
@@ -163,7 +163,7 @@ Apply to a mesh
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](page.php?p=3271) | the mesh
+ | mesh | [Mesh](/classes/Mesh) | the mesh
 ---
 
 ###load(scene, onLoaded) &rarr; void
@@ -172,7 +172,7 @@ Load function
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=3274) | the platform
+ | scene | [Scene](/classes/Scene) | the platform
 optional | onLoaded | () =&gt; void | @param onLoaded
 ---
 
@@ -180,7 +180,7 @@ optional | onLoaded | () =&gt; void | @param onLoaded
 Dispose this geometry object
 
 
-###copy(id) &rarr; [Geometry](page.php?p=3336)
+###copy(id) &rarr; [Geometry](/classes/Geometry)
 Copy function
 
 ####Parameters
@@ -189,13 +189,13 @@ Copy function
  | id | string | this geometry object
 ---
 
-###static ExtractFromMesh(mesh, id) &rarr; [Geometry](page.php?p=3336)
-Extract From [Mesh](page.php?p=3271)
+###static ExtractFromMesh(mesh, id) &rarr; [Geometry](/classes/Geometry)
+Extract From [Mesh](/classes/Mesh)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](page.php?p=3271) | the mesh
+ | mesh | [Mesh](/classes/Mesh) | the mesh
  | id | string | Given this id to the new geometry object
 ---
 

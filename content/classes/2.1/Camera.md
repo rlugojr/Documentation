@@ -1,17 +1,20 @@
 ---
-ID_PAGE: 6631
+ID_PAGE: 25119
 PG_TITLE: Camera
 PG_VERSION: 2.1
 TAGS:
     - Node
     - Camera
 ---
-##new [Camera](page.php?p=6631)(name, position, scene)
+##new [Camera](/classes/Camera)(name, position, scene)
 
 
 
-Creates a new [Camera](page.php?p=6631).
-A tutorial about [ArcRotateCamera](page.php?p=6632) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+
+Creates a new [Camera](/classes/Camera).
+A tutorial about [ArcRotateCamera](/classes/ArcRotateCamera) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+
+
 
 
 
@@ -20,20 +23,22 @@ A tutorial about [ArcRotateCamera](page.php?p=6632) can be found [here](https://
  | Name | Type | Description
 ---|---|---|---
  | name | string | The camera name
- | position | [Vector3](page.php?p=6751) | The camera position
- | scene | [Scene](page.php?p=6662) | The scene linked to this camera
+ | position | [Vector3](/classes/Vector3) | The camera position
+ | scene | [Scene](/classes/Scene) | The scene linked to this camera
 ---
 
 ##Extends
- [Node](page.php?p=6630)
+ [Node](/classes/Node)
 ##Members
 
-###position : [Vector3](page.php?p=6751)
+###position : [Vector3](/classes/Vector3)
+
 
 
 
 
 Position of the camera
+
 
 
 
@@ -44,7 +49,11 @@ Position of the camera
 
 
 
+
+
 ###static ORTHOGRAPHIC_CAMERA : number
+
+
 
 
 
@@ -79,12 +88,14 @@ Position of the camera
 ###static RIG_MODE_VR : number
 
 
-###upVector : [Vector3](page.php?p=6751)
+###upVector : [Vector3](/classes/Vector3)
 
 
 
 
- [Camera](page.php?p=6631) up
+
+ [Camera](/classes/Camera) up
+
 
 
 
@@ -93,7 +104,9 @@ Position of the camera
 
 
 
+
 For orthographic camera, it's the left side of point of view
+
 
 
 
@@ -102,7 +115,9 @@ For orthographic camera, it's the left side of point of view
 
 
 
+
 For orthographic camera, it's the right side of point of view
+
 
 
 
@@ -111,7 +126,9 @@ For orthographic camera, it's the right side of point of view
 
 
 
+
 For orthegraphic camera, it's the bottom side of point of view
+
 
 
 
@@ -120,7 +137,9 @@ For orthegraphic camera, it's the bottom side of point of view
 
 
 
+
 For orthographic camera, it's the top side of point of view
+
 
 
 
@@ -129,7 +148,9 @@ For orthographic camera, it's the top side of point of view
 
 
 
+
 Field of view of the camera
+
 
 
 
@@ -138,7 +159,9 @@ Field of view of the camera
 
 
 
+
 Minimum distance of view
+
 
 
 
@@ -147,7 +170,9 @@ Minimum distance of view
 
 
 
+
 Maximum distance of view
+
 
 
 
@@ -156,11 +181,14 @@ Maximum distance of view
 
 
 
+
 Inertia of the camera
 
 
 
+
 ###mode : number
+
 
 
 
@@ -171,7 +199,9 @@ Inertia of the camera
 
 
 
+
 ###isIntermediate : boolean
+
 
 
 
@@ -180,7 +210,9 @@ True if this camera is a subcamera, false otherwise
 
 
 
-###viewport : [Viewport](page.php?p=6756)
+
+###viewport : [Viewport](/classes/Viewport)
+
 
 
 
@@ -189,12 +221,18 @@ The viewport
 
 
 
+
 ###layerMask : number
 
 
 
 
+
 The layerMask
+
+
+
+
 
 
 
@@ -212,7 +250,7 @@ The layerMask
 ###cameraRigMode : number
 
 
-###globalPosition : [Vector3](page.php?p=6751)
+###globalPosition : [Vector3](/classes/Vector3)
 
 
 
@@ -227,11 +265,13 @@ The layerMask
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](page.php?p=6659) | 
+ | mesh | [Mesh](/classes/Mesh) | 
 ---
 
 ###attachControl(element) &rarr; void
 Attach the control and display of the camera to the element
+
+
 
 
 
@@ -250,6 +290,8 @@ Detach the control and display of the camera from the element
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -263,10 +305,12 @@ Attaches a given post process
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | postProcess | [PostProcess](page.php?p=6790) | @param postProcess
+ | postProcess | [PostProcess](/classes/PostProcess) | @param postProcess
 optional | insertAt | number | Index of postProcess to add
 ---
 
@@ -277,14 +321,16 @@ Detach a fiven post process
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | postProcess | [PostProcess](page.php?p=6790) | @param postProcess
+ | postProcess | [PostProcess](/classes/PostProcess) | @param postProcess
 optional | atIndices | any | Index of postProcess to detach
 ---
 
-###getWorldMatrix() &rarr; [Matrix](page.php?p=6754)
+###getWorldMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the worldMatrix
 
 
@@ -292,8 +338,12 @@ Get the worldMatrix
 
 
 
-###getViewMatrix(force) &rarr; [Matrix](page.php?p=6754)
+
+
+###getViewMatrix(force) &rarr; [Matrix](/classes/Matrix)
 Get the viewMatrix
+
+
 
 
 
@@ -305,8 +355,10 @@ Get the viewMatrix
 optional | force | boolean | 
 ---
 
-###getProjectionMatrix(force) &rarr; [Matrix](page.php?p=6754)
+###getProjectionMatrix(force) &rarr; [Matrix](/classes/Matrix)
 Get the projectionMatrix
+
+
 
 
 
@@ -339,7 +391,7 @@ optional | force | boolean |
  | value | any | 
 ---
 
-###createRigCamera(name, cameraIndex) &rarr; [Camera](page.php?p=6631)
+###createRigCamera(name, cameraIndex) &rarr; [Camera](/classes/Camera)
 May needs to be overridden by children so sub has required properties to be copied
 
 ####Parameters

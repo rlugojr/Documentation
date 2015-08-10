@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 5763
+ID_PAGE: 24932
 PG_TITLE: Sound
 PG_VERSION: 2.0
 ---
-##new [Sound](page.php?p=5763)(name, urlOrArrayBuffer, scene, readyToPlayCallback, options)
+##new [Sound](/classes/Sound)(name, urlOrArrayBuffer, scene, readyToPlayCallback, options)
 
 Create a sound and attach it to a scene
 ####Parameters
@@ -11,7 +11,7 @@ Create a sound and attach it to a scene
 ---|---|---|---
  | name | string | Name of your sound
  | urlOrArrayBuffer | any | Url to the sound to load async or ArrayBuffer
- | scene | [Scene](page.php?p=5725) | 
+ | scene | [Scene](/classes/Scene) | 
 optional | readyToPlayCallback | () =&gt; void | Provide a callback function if you'd like to load your code once the sound is ready to be played
 optional | options | any | Objects to provide with the current available options: autoplay, loop, volume, spatialSound, maxDistance, rolloffFactor, refDistance, distanceModel, panningModel
 ---
@@ -24,13 +24,22 @@ optional | options | any | Objects to provide with the current available options
 ###autoplay : boolean
 
 
+
+
 ###loop : boolean
+
+
 
 
 ###useCustomAttenuation : boolean
 
 
 ###soundTrackId : number
+
+
+
+
+
 
 
 ###spatialSound : boolean
@@ -43,6 +52,8 @@ optional | options | any | Objects to provide with the current available options
 
 
 ###maxDistance : number
+
+
 
 
 ###distanceModel : string
@@ -79,6 +90,8 @@ optional | options | any | Objects to provide with the current available options
 
 ###connectToSoundTrackAudioNode(soundTrackAudioNode) &rarr; void
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -98,21 +111,27 @@ Transform this sound into a directional source
 
 ###setPosition(newPosition) &rarr; void
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newPosition | [Vector3](page.php?p=5808) | 
+ | newPosition | [Vector3](/classes/Vector3) | 
 ---
 
 ###setLocalDirectionToMesh(newLocalDirection) &rarr; void
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newLocalDirection | [Vector3](page.php?p=5808) | 
+ | newLocalDirection | [Vector3](/classes/Vector3) | 
 ---
 
 ###updateDistanceFromListener() &rarr; void
+
+
 
 
 ###setAttenuationFunction(callback) &rarr; void
@@ -144,7 +163,11 @@ optional | time | number | (optional) Stop the sound after X seconds. Stop immed
 ###pause() &rarr; void
 
 
+
+
 ###setVolume(newVolume, time) &rarr; void
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -164,10 +187,12 @@ optional | time | number |
 ###getVolume() &rarr; number
 
 
+
+
 ###attachToMesh(meshToConnectTo) &rarr; void
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | meshToConnectTo | [AbstractMesh](page.php?p=5720) | 
+ | meshToConnectTo | [AbstractMesh](/classes/AbstractMesh) | 
 ---

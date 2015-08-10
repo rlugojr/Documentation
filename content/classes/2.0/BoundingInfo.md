@@ -1,51 +1,65 @@
 ---
-ID_PAGE: 5771
+ID_PAGE: 24940
 PG_TITLE: BoundingInfo
 PG_VERSION: 2.0
 ---
 
 Create bounding info for the given mesh
-##new [BoundingInfo](page.php?p=5771)(minimum, maximum)
+##new [BoundingInfo](/classes/BoundingInfo)(minimum, maximum)
+
 
 
 The Bounding Info constructor
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | minimum | [Vector3](page.php?p=5808) | The minimum of the bounding info
- | maximum | [Vector3](page.php?p=5808) | The maximum of the bounding info
+ | minimum | [Vector3](/classes/Vector3) | The minimum of the bounding info
+ | maximum | [Vector3](/classes/Vector3) | The maximum of the bounding info
 ---
 
 ##Members
 
-###minimum : [Vector3](page.php?p=5808)
+###minimum : [Vector3](/classes/Vector3)
+
 
 
 
 The minimum of the bounding info
 
 
-###maximum : [Vector3](page.php?p=5808)
+
+###maximum : [Vector3](/classes/Vector3)
+
 
 
 
 The maximum of the bounding info
 
 
-###boundingBox : [BoundingBox](page.php?p=5770)
+
+###boundingBox : [BoundingBox](/classes/BoundingBox)
+
 
 
 
 The bounding box of the bounding info
 
 
-###boundingSphere : [BoundingSphere](page.php?p=5772)
+
+###boundingSphere : [BoundingSphere](/classes/BoundingSphere)
+
 
 
 
 The bounding sphere of the bounding info
+
+
+
+
 
 
 
@@ -60,18 +74,22 @@ Check if the bounding
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](page.php?p=5812)[] | The frustum planes
+ | frustumPlanes | [Plane](/classes/Plane)[] | The frustum planes
 ---
 
 ###isCompletelyInFrustum(frustumPlanes) &rarr; boolean
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](page.php?p=5812)[] | 
+ | frustumPlanes | [Plane](/classes/Plane)[] | 
 ---
 
 ###intersectsPoint(point) &rarr; boolean
@@ -79,10 +97,12 @@ Check if the bounding sphere or the bounding box intersect the given point.
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | point | [Vector3](page.php?p=5808) | The point
+ | point | [Vector3](/classes/Vector3) | The point
 ---
 
 ###intersects(boundingInfo, precise) &rarr; boolean
@@ -90,6 +110,6 @@ Check if the bounding sphere or the bounding box intersect the given point.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | boundingInfo | [BoundingInfo](page.php?p=5771) | The bounding info
+ | boundingInfo | [BoundingInfo](/classes/BoundingInfo) | The bounding info
  | precise | boolean | False : check only bounding volumes, true check point by point
 ---

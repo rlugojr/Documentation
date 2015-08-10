@@ -1,9 +1,10 @@
 ---
-ID_PAGE: 6816
+ID_PAGE: 25304
 PG_TITLE: RenderingManager
 PG_VERSION: 2.1
 ---
-##new [RenderingManager](page.php?p=6816)(scene)
+##new [RenderingManager](/classes/RenderingManager)(scene)
+
 
 
 
@@ -12,10 +13,12 @@ Builds a new Rendering manager object
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=6662) | The scene linked to this rendering manager
+ | scene | [Scene](/classes/Scene) | The scene linked to this rendering manager
 ---
 
 ##Members
@@ -25,9 +28,14 @@ Builds a new Rendering manager object
 
 
 
+
 The max rendering groups
 
 default : 4
+
+
+
+
 
 
 
@@ -47,11 +55,13 @@ default : 4
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | customRenderFunction | (opaqueSubMeshes: SmartArray&lt;SubMesh&gt;, transparentSubMeshes: SmartArray&lt;SubMesh&gt;, alphaTestSubMeshes: SmartArray&lt;SubMesh&gt;) =&gt; void | 
- | activeMeshes | [AbstractMesh](page.php?p=6657)[] | 
+ | activeMeshes | [AbstractMesh](/classes/AbstractMesh)[] | 
  | renderParticles | boolean | 
  | renderSprites | boolean | 
 ---
@@ -63,10 +73,12 @@ default : 4
 
 
 
+
+
 ###dispatch(subMesh) &rarr; void
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | subMesh | [SubMesh](page.php?p=6783) | 
+ | subMesh | [SubMesh](/classes/SubMesh) | 
 ---

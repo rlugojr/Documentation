@@ -1,12 +1,12 @@
 ---
-ID_PAGE: 3250
+ID_PAGE: 24458
 PG_TITLE: ArcRotateCamera
 PG_VERSION: 1.14
 ---
-##new [ArcRotateCamera](page.php?p=3250)(name, alpha, beta, radius, target, scene)
+##new [ArcRotateCamera](/classes/ArcRotateCamera)(name, alpha, beta, radius, target, scene)
 
-Create a new [ArcRotateCamera](page.php?p=3250). [ArcRotateCamera](page.php?p=3250) is a camera that rotates around a given pivot. It can be controlled with the mouse or touch events (and it also requires hand.js to work)
-A tutorial about [ArcRotateCamera](page.php?p=3250) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+Create a new [ArcRotateCamera](/classes/ArcRotateCamera). [ArcRotateCamera](/classes/ArcRotateCamera) is a camera that rotates around a given pivot. It can be controlled with the mouse or touch events (and it also requires hand.js to work)
+A tutorial about [ArcRotateCamera](/classes/ArcRotateCamera) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -15,31 +15,31 @@ A tutorial about [ArcRotateCamera](page.php?p=3250) can be found [here](https://
  | beta | number | 
  | radius | number | 
  | target | any | 
- | scene | [Scene](page.php?p=3274) | 
+ | scene | [Scene](/classes/Scene) | 
 ---
 
-##Extends [Camera](page.php?p=3249)
+##Extends [Camera](/classes/Camera)
 ##Members
 
 ###alpha : number
 
 
-Alpha of the [ArcRotateCamera](page.php?p=3250) (Rotation angle around Y axis)
+Alpha of the [ArcRotateCamera](/classes/ArcRotateCamera) (Rotation angle around Y axis)
 
 ###beta : number
 
 
-Beta of the [ArcRotateCamera](page.php?p=3250) (Rotation angle around X axis)
+Beta of the [ArcRotateCamera](/classes/ArcRotateCamera) (Rotation angle around X axis)
 
 ###radius : number
 
 
-Radius of the [ArcRotateCamera](page.php?p=3250)
+Radius of the [ArcRotateCamera](/classes/ArcRotateCamera)
 
 ###target : any
 
 
-Target of the [ArcRotateCamera](page.php?p=3250)
+Target of the [ArcRotateCamera](/classes/ArcRotateCamera)
 
 ###inertialAlphaOffset : number
 
@@ -121,7 +121,7 @@ Key to control the camera RIGHT
 
 Zoom on factor
 
-###onCollide : (collidedMesh: [AbstractMesh](page.php?p=3269)) =&gt; void
+###onCollide : (collidedMesh: [AbstractMesh](/classes/AbstractMesh)) =&gt; void
 
 
 OnCollide
@@ -131,7 +131,7 @@ OnCollide
 
 CheckCollisions
 
-###collisionRadius : [Vector3](page.php?p=3327)
+###collisionRadius : [Vector3](/classes/Vector3)
 
 
 CollisionsRadius
@@ -165,12 +165,12 @@ Detach camera control and display from the specified canvas
 ---
 
 ###setPosition(position) &rarr; void
-Set the position of the [ArcRotateCamera](page.php?p=3250)
+Set the position of the [ArcRotateCamera](/classes/ArcRotateCamera)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | position | [Vector3](page.php?p=3327) | The new position of the [ArcRotateCamera](page.php?p=3250)
+ | position | [Vector3](/classes/Vector3) | The new position of the [ArcRotateCamera](/classes/ArcRotateCamera)
 ---
 
 ###zoomOn(meshes) &rarr; void
@@ -179,7 +179,7 @@ Zoom on specified meshes
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | meshes | [AbstractMesh](page.php?p=3269)[] | Meshes to zoom on
+optional | meshes | [AbstractMesh](/classes/AbstractMesh)[] | Meshes to zoom on
 ---
 
 ###focusOn(meshesOrMinMaxVectorAndDistance) &rarr; void

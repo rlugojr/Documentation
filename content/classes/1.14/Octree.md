@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 3303
+ID_PAGE: 24511
 PG_TITLE: Octree<T>
 PG_VERSION: 1.14
 ---
@@ -33,12 +33,12 @@ The blocks
 
 The dynamic content
 
-###static CreationFuncForMeshes : (entry: [AbstractMesh](page.php?p=3269), block: OctreeBlock&lt;AbstractMesh&gt;) =&gt; void
+###static CreationFuncForMeshes : (entry: [AbstractMesh](/classes/AbstractMesh), block: OctreeBlock&lt;AbstractMesh&gt;) =&gt; void
 
 
 Create function for Meshes
 
-###static CreationFuncForSubMeshes : (entry: [SubMesh](page.php?p=3339), block: OctreeBlock&lt;SubMesh&gt;) =&gt; void
+###static CreationFuncForSubMeshes : (entry: [SubMesh](/classes/SubMesh), block: OctreeBlock&lt;SubMesh&gt;) =&gt; void
 
 
 Create function for SubMeshes
@@ -53,8 +53,8 @@ Update this octree
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | worldMin | [Vector3](page.php?p=3327) | the minimum world
- | worldMax | [Vector3](page.php?p=3327) | the maximum world
+ | worldMin | [Vector3](/classes/Vector3) | the minimum world
+ | worldMax | [Vector3](/classes/Vector3) | the maximum world
  | entries | T[] | @param entries
 ---
 
@@ -73,7 +73,7 @@ Select octree
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](page.php?p=3330)[] | [Frustum](page.php?p=3332) plan of the mesh
+ | frustumPlanes | [Plane](/classes/Plane)[] | [Frustum](/classes/Frustum) plan of the mesh
 optional | allowDuplicate | boolean | True if you want to duplicate it, false otherwise.
 ---
 
@@ -83,7 +83,7 @@ Intersects
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | sphereCenter | [Vector3](page.php?p=3327) | The sphere center
+ | sphereCenter | [Vector3](/classes/Vector3) | The sphere center
  | sphereRadius | number | The sphere radius
 optional | allowDuplicate | boolean | True if you want to duplicate it, false otherwise.
 ---
@@ -94,5 +94,5 @@ Intersects ray
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](page.php?p=3333) | @param ray
+ | ray | [Ray](/classes/Ray) | @param ray
 ---

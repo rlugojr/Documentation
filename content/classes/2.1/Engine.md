@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6629
+ID_PAGE: 25117
 PG_TITLE: Engine
 PG_VERSION: 2.1
 TAGS:
@@ -7,7 +7,7 @@ TAGS:
 ---
 
 The engine class is responsible for interfacing with all lower-level APIs such as WebGL and Audio.
-##new [Engine](page.php?p=6629)(canvas, antialias, options)
+##new [Engine](/classes/Engine)(canvas, antialias, options)
 
 @constructor
 ####Parameters
@@ -25,7 +25,9 @@ optional | options | any | - further options to be sent to the getContext functi
 
 
 
+
 Alpha disable
+
 
 
 
@@ -34,7 +36,9 @@ Alpha disable
 
 
 
+
 Add Alpha
+
 
 
 
@@ -43,7 +47,9 @@ Add Alpha
 
 
 
+
 Combine Alpha
+
 
 
 
@@ -52,7 +58,9 @@ Combine Alpha
 
 
 
+
 The delay when you don't load
+
 
 
 
@@ -61,7 +69,9 @@ The delay when you don't load
 
 
 
+
 The delay for loaded
+
 
 
 
@@ -70,7 +80,9 @@ The delay for loaded
 
 
 
+
 The delay of loading
+
 
 
 
@@ -79,7 +91,9 @@ The delay of loading
 
 
 
+
 The delay
+
 
 
 
@@ -125,14 +139,18 @@ The delay
 
 
 
+
+
 ###static Epsilon : number
 
 
 
 
-This member is static : use [BABYLON](page.php?p=6625).Engine.Epsilon
+
+This member is static : use [Engine](/classes/Engine).Epsilon
 
 Default value : 0.001
+
 
 
 
@@ -141,9 +159,11 @@ Default value : 0.001
 
 
 
-This member is static : use [BABYLON](page.php?p=6625).Engine.CollisionsEpsilon
+
+This member is static : use [Engine](/classes/Engine).CollisionsEpsilon
 
 Default value : 0.001
+
 
 
 
@@ -155,9 +175,13 @@ Default value : 0.001
 
 
 
-This member is static : use [BABYLON](page.php?p=6625).Engine.ShadersRepository
+
+This member is static : use [Engine](/classes/Engine).ShadersRepository
 
 Default value : &quot;Babylon/Shaders/&quot;
+
+Used as the source directory of shaders on the host machine
+
 
 
 
@@ -165,8 +189,10 @@ Default value : &quot;Babylon/Shaders/&quot;
 
 
 
+Default value: false
 
 True if fullscreen, false otherwise
+
 
 
 
@@ -174,13 +200,20 @@ True if fullscreen, false otherwise
 
 
 
+Default value: false
 
-True if the pointer is lock, false otherwise
+True if the pointer is locked, false otherwise
+
 
 
 
 ###cullBackFaces : boolean
 
+
+
+Default value: true
+
+True if back faces should be culled, false otherwise
 
 
 
@@ -190,21 +223,25 @@ True if the pointer is lock, false otherwise
 
 
 
+Default value: true
 
 If true, the engine will compute all frames even if the app is in background
 
 
 
-###scenes : [Scene](page.php?p=6662)[]
+
+###scenes : [Scene](/classes/Scene)[]
 
 
 
 
-An array of [BABYLON](page.php?p=6625).Scene
+
+An array of [Scene](/classes/Scene)
 
 
 
-###static audioEngine : [AudioEngine](page.php?p=6699)
+
+###static audioEngine : [AudioEngine](/classes/AudioEngine)
 
 
 
@@ -212,14 +249,18 @@ An array of [BABYLON](page.php?p=6625).Scene
 ###drawCalls : number
 
 
+The number of draw calls submitted last frame
+
 
 
 ###loadingUIText : string
 
 
 
+Default Value: &quot;Loading&quot;
 
-Load the user interface text
+Sets the innerHTML for the loading UI created in to displayLoadingUI : void
+
 
 
 
@@ -228,7 +269,12 @@ Load the user interface text
 
 
 
-Load the user interface background color
+
+Get/Set the background color for the loading UI created in to displayLoadingUI : void
+
+
+
+
 
 
 
@@ -254,14 +300,18 @@ Returns the screen aspect ratio
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | camera | [Camera](page.php?p=6631) | @param camera
+ | camera | [Camera](/classes/Camera) | @param camera
 ---
 
 ###getRenderWidth() &rarr; number
 If a current render target is set, returns its width.
+
+
 
 
 
@@ -277,8 +327,12 @@ Otherwise, returns the rendering canvas height
 
 
 
+
+
 ###getRenderingCanvas() &rarr; HTMLCanvasElement
 Returns the rendering canvas
+
+
 
 
 
@@ -292,8 +346,12 @@ Returns the rendering canvas
 
 
 
+
+
 ###setHardwareScalingLevel(level) &rarr; void
 Set the hardware scaling level. The engine is then resized with these new parameters (width/level, height/level).
+
+
 
 
 
@@ -313,6 +371,8 @@ Returns the hardware scaling level
 
 
 
+
+
 ###getLoadedTexturesCache() &rarr; WebGLTexture[]
 Returns all loaded textures from the caches
 
@@ -321,8 +381,12 @@ Returns all loaded textures from the caches
 
 
 
-###getCaps() &rarr; [EngineCapabilities](page.php?p=6628)
+
+
+###getCaps() &rarr; [EngineCapabilities](/classes/EngineCapabilities)
 Returns the engine capabilities
+
+
 
 
 
@@ -334,8 +398,12 @@ Returns the engine capabilities
 
 
 
+
+
 ###setDepthFunctionToGreater() &rarr; void
 Set the Depth function to greater
+
+
 
 
 
@@ -350,6 +418,8 @@ Set the Depth function to greater or equal
 
 
 
+
+
 ###setDepthFunctionToLess() &rarr; void
 Set the Depth function to less
 
@@ -358,8 +428,12 @@ Set the Depth function to less
 
 
 
+
+
 ###setDepthFunctionToLessOrEqual() &rarr; void
 Set the Depth function to less or equal
+
+
 
 
 
@@ -404,6 +478,8 @@ Clear the canvas with the given parameters.
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -418,13 +494,15 @@ Set the WebGL's viewport
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | viewport | [Viewport](page.php?p=6756) | @param viewport
+ | viewport | [Viewport](/classes/Viewport) | @param viewport
 optional | requiredWidth | number | The required width of the viewport. By defaults, equals to the rendering canvas width
 optional | requiredHeight | number | The required height of the viewport. By defaults, equals to the rendering canvas height
 ---
 
 ###setDirectViewport(x, y, width, height) &rarr; void
 Set the viewport of this engine. The cached viewport is cleared and the viewport takes exactly the size given in parameter.
+
+
 
 
 
@@ -447,8 +525,12 @@ Method used at the beginning of the frame rendering. Currently, measure the numb
 
 
 
+
+
 ###endFrame() &rarr; void
 Method used at the end of a frame rendering. Flushes the frame buffer of the canvas.
+
+
 
 
 
@@ -480,6 +562,8 @@ Bind Frame buffer
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -488,6 +572,8 @@ Bind Frame buffer
 
 ###unBindFramebuffer(texture) &rarr; void
 Unbind frame buffer
+
+
 
 
 
@@ -507,6 +593,8 @@ Flushes the frame buffer
 
 
 
+
+
 ###restoreDefaultFramebuffer() &rarr; void
 Restore the default frame buffer
 
@@ -515,8 +603,12 @@ Restore the default frame buffer
 
 
 
+
+
 ###createVertexBuffer(vertices) &rarr; WebGLBuffer
 Create a new vertex Buffer object
+
+
 
 
 
@@ -535,6 +627,8 @@ Create a dynamic vertex buffer object
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -543,6 +637,8 @@ Create a dynamic vertex buffer object
 
 ###updateDynamicVertexBuffer(vertexBuffer, vertices, offset) &rarr; void
 Updates the given dynamic vertex buffer object
+
+
 
 
 
@@ -563,6 +659,8 @@ Create a new index buffer
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -576,6 +674,8 @@ Bind buffer with the given vertexBuffer, indexBuffer, vertexDeclaration vertexSt
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -583,7 +683,7 @@ Bind buffer with the given vertexBuffer, indexBuffer, vertexDeclaration vertexSt
  | indexBuffer | WebGLBuffer | The given index buffer
  | vertexDeclaration | number[] | The given vertex declaration
  | vertexStrideSize | number | The given vertex
- | effect | [Effect](page.php?p=6725) | @param effect
+ | effect | [Effect](/classes/Effect) | @param effect
 ---
 
 ###bindMultiBuffers(vertexBuffers, indexBuffer, effect) &rarr; void
@@ -593,16 +693,20 @@ Bind some buffers with the given vertexBuffer, indexBuffer and effect
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vertexBuffers | [VertexBuffer](page.php?p=6784)[] | The given vextex buffer
+ | vertexBuffers | [VertexBuffer](/classes/VertexBuffer)[] | The given vextex buffer
  | indexBuffer | WebGLBuffer | The given index buffer
- | effect | [Effect](page.php?p=6725) | @param effect
+ | effect | [Effect](/classes/Effect) | @param effect
 ---
 
 ###createInstancesBuffer(capacity) &rarr; WebGLBuffer
 Create a dynamic instance buffer
+
+
 
 
 
@@ -621,6 +725,8 @@ Delete an existing instance buffer
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -629,6 +735,8 @@ Delete an existing instance buffer
 
 ###updateAndBindInstancesBuffer(instancesBuffer, data, offsetLocations) &rarr; void
 Update and bind the given instance buffer
+
+
 
 
 
@@ -649,6 +757,8 @@ Unbind the given instance buffer
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -663,8 +773,12 @@ Unbind the given instance buffer
 
 
 
+
+
 ###draw(useTriangles, indexStart, indexCount, instancesCount) &rarr; void
 Draw
+
+
 
 
 
@@ -683,6 +797,8 @@ optional | instancesCount | number | If true, uses the engine capabilities.
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -691,8 +807,10 @@ optional | instancesCount | number | If true, uses the engine capabilities.
 optional | instancesCount | number | 
 ---
 
-###createEffect(baseName, attributesNames, uniformsNames, samplers, defines, fallbacks, onCompiled, onError) &rarr; [Effect](page.php?p=6725)
+###createEffect(baseName, attributesNames, uniformsNames, samplers, defines, fallbacks, onCompiled, onError) &rarr; [Effect](/classes/Effect)
 Compiled/linked your shaders into a simple object.
+
+
 
 
 
@@ -706,13 +824,15 @@ Compiled/linked your shaders into a simple object.
  | uniformsNames | string[] | An array of uniforms (the external variables) defined by the shaders
  | samplers | string[] | An array of samplers (the objects used to read textures)
  | defines | string | A define string
-optional | fallbacks | [EffectFallbacks](page.php?p=6724) | @param fallbacks
-optional | onCompiled | (effect: [Effect](page.php?p=6725)) =&gt; void | Function launched when the effect is compiled
-optional | onError | (effect: [Effect](page.php?p=6725), errors: string) =&gt; void | Function launched when an error occurs
+optional | fallbacks | [EffectFallbacks](/classes/EffectFallbacks) | @param fallbacks
+optional | onCompiled | (effect: [Effect](/classes/Effect)) =&gt; void | Function launched when the effect is compiled
+optional | onError | (effect: [Effect](/classes/Effect), errors: string) =&gt; void | Function launched when an error occurs
 ---
 
-###createEffectForParticles(fragmentName, uniformsNames, samplers, defines, fallbacks, onCompiled, onError) &rarr; [Effect](page.php?p=6725)
+###createEffectForParticles(fragmentName, uniformsNames, samplers, defines, fallbacks, onCompiled, onError) &rarr; [Effect](/classes/Effect)
 Compiled/linked your shaders into a simple object.
+
+
 
 
 
@@ -725,13 +845,15 @@ Compiled/linked your shaders into a simple object.
 optional | uniformsNames | string[] | An array of uniforms (the external variables) defined by the shaders
 optional | samplers | string[] | An array of samplers (the objects used to read textures)
 optional | defines | string | A define string
-optional | fallbacks | [EffectFallbacks](page.php?p=6724) | @param fallbacks
-optional | onCompiled | (effect: [Effect](page.php?p=6725)) =&gt; void | Function launched when the effect is compiled
-optional | onError | (effect: [Effect](page.php?p=6725), errors: string) =&gt; void | Function launched when an error occurs
+optional | fallbacks | [EffectFallbacks](/classes/EffectFallbacks) | @param fallbacks
+optional | onCompiled | (effect: [Effect](/classes/Effect)) =&gt; void | Function launched when the effect is compiled
+optional | onError | (effect: [Effect](/classes/Effect), errors: string) =&gt; void | Function launched when an error occurs
 ---
 
 ###createShaderProgram(vertexCode, fragmentCode, defines) &rarr; WebGLProgram
 Creates a shader program
+
+
 
 
 
@@ -752,6 +874,8 @@ Return the uniforms location for the given shader program
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -761,6 +885,8 @@ Return the uniforms location for the given shader program
 
 ###getAttributes(shaderProgram, attributesNames) &rarr; number[]
 Return the attributes for the given shader program
+
+
 
 
 
@@ -780,14 +906,18 @@ Enable effect
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | effect | [Effect](page.php?p=6725) | @param effect
+ | effect | [Effect](/classes/Effect) | @param effect
 ---
 
 ###setArray(uniform, array) &rarr; void
 Set array of given shader
+
+
 
 
 
@@ -840,6 +970,8 @@ Set matrices for a given shader
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -854,14 +986,18 @@ Set matrix for a given shader
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | uniform | WebGLUniformLocation | The uniforms of the shader
- | matrix | [Matrix](page.php?p=6754) | @param matrix
+ | matrix | [Matrix](/classes/Matrix) | @param matrix
 ---
 
 ###setFloat(uniform, value) &rarr; void
+
+
 
 
 
@@ -880,6 +1016,8 @@ Set matrix for a given shader
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -889,6 +1027,8 @@ Set matrix for a given shader
 ---
 
 ###setFloat3(uniform, x, y, z) &rarr; void
+
+
 
 
 
@@ -910,6 +1050,8 @@ Set bool for this given shader
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -918,6 +1060,8 @@ Set bool for this given shader
 ---
 
 ###setFloat4(uniform, x, y, z, w) &rarr; void
+
+
 
 
 
@@ -939,11 +1083,13 @@ Set bool for this given shader
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | uniform | WebGLUniformLocation | The uniforms of the shader
- | color3 | [Color3](page.php?p=6748) | The color of the shader
+ | color3 | [Color3](/classes/Color3) | The color of the shader
 ---
 
 ###setColor4(uniform, color3, alpha) &rarr; void
@@ -952,16 +1098,20 @@ Set bool for this given shader
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | uniform | WebGLUniformLocation | The uniforms of the shader
- | color3 | [Color3](page.php?p=6748) | The color of the shader
+ | color3 | [Color3](/classes/Color3) | The color of the shader
  | alpha | number | The alpha of the shader
 ---
 
 ###setState(culling, zOffset, force) &rarr; void
 Set the culling state (true : front faces are visible. If cullBackFaces is set to true, back and front faces are visible).
+
+
 
 
 
@@ -982,6 +1132,8 @@ Enable or disable the depth buffer
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -996,8 +1148,12 @@ Get the depth mask
 
 
 
+
+
 ###setDepthWrite(enable) &rarr; void
 Enables or disables the depth mask
+
+
 
 
 
@@ -1016,6 +1172,8 @@ Enables or disables the writing or red, blue, green and alpha
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -1024,6 +1182,8 @@ Enables or disables the writing or red, blue, green and alpha
 
 ###setAlphaMode(mode) &rarr; void
 Set the engine alpha mode
+
+
 
 
 
@@ -1040,8 +1200,12 @@ Set the engine alpha mode
 
 
 
+
+
 ###setAlphaTesting(enable) &rarr; void
 Enables or disables the alpha testing
+
+
 
 
 
@@ -1061,6 +1225,8 @@ Returns true if the alpha testing is enabled, false otherwise.
 
 
 
+
+
 ###wipeCaches() &rarr; void
 Reset the cache
 
@@ -1069,8 +1235,12 @@ Reset the cache
 
 
 
+
+
 ###setSamplingMode(texture, samplingMode) &rarr; void
 Set the default texture sampling mode
+
+
 
 
 
@@ -1090,13 +1260,15 @@ Create a new texture
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | url | string | The texture url
  | noMipmap | boolean | True if you want to activate the Mipmap, false otherwise.
  | invertY | boolean | @param invertY
- | scene | [Scene](page.php?p=6662) | The scene where the shader is.
+ | scene | [Scene](/classes/Scene) | The scene where the shader is.
 optional | samplingMode | number | The sampling mode
 optional | onLoad | () =&gt; void | Function when load.
 optional | onError | () =&gt; void | Function when error occurs.
@@ -1121,6 +1293,8 @@ optional | buffer | any | The buffer
 
 ###createDynamicTexture(width, height, generateMipMaps, samplingMode, forceExponantOfTwo) &rarr; WebGLTexture
 Create a new dynamic texture
+
+
 
 
 
@@ -1152,6 +1326,8 @@ Update the given dynamic texture
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -1162,6 +1338,8 @@ Update the given dynamic texture
 
 ###updateVideoTexture(texture, video, invertY) &rarr; void
 Update the given dynamic texture with the video given in parameter
+
+
 
 
 
@@ -1185,6 +1363,8 @@ in the same way, generateDepthBuffer is defaulted to true
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -1199,11 +1379,13 @@ Create a new cube texture
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | rootUrl | string | @param rootUrl
- | scene | [Scene](page.php?p=6662) | The scene where the cube texture
+ | scene | [Scene](/classes/Scene) | The scene where the cube texture
  | extensions | string[] | Contains the image extensions in string format
 optional | noMipmap | boolean | Set true if you want to activate Mipmap, false otherwise.
 ---
@@ -1215,10 +1397,12 @@ Bind the given effect to samplers
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | effect | [Effect](page.php?p=6725) | @param effect
+ | effect | [Effect](/classes/Effect) | @param effect
 ---
 
 ###setTextureFromPostProcess(channel, postProcess) &rarr; void
@@ -1228,11 +1412,13 @@ Set texture from post process
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | channel | number | The index in the array _activeTexturesCache
- | postProcess | [PostProcess](page.php?p=6790) | @param postProcess
+ | postProcess | [PostProcess](/classes/PostProcess) | @param postProcess
 ---
 
 ###setTexture(channel, texture) &rarr; void
@@ -1242,15 +1428,19 @@ The index in the array _activeTexturesCache
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | channel | number | The index in the array _activeTexturesCache
- | texture | [BaseTexture](page.php?p=6731) | @param texture
+ | texture | [BaseTexture](/classes/BaseTexture) | @param texture
 ---
 
 ###readPixels(x, y, width, height) &rarr; Uint8Array
 Read pixels in the given rectangle
+
+
 
 
 
@@ -1273,8 +1463,12 @@ Delete this engine. Calls dispose on each of the registered scene and deletes al
 
 
 
+
+
 ###displayLoadingUI() &rarr; void
 Display loading User Interface
+
+
 
 
 
@@ -1289,14 +1483,16 @@ Hide the loading state to the User Interface
 
 
 
+
+
 ###getFps() &rarr; number
 
 
 
 
+
+
 ###getDeltaTime() &rarr; number
-
-
 
 
 ###static isSupported() &rarr; boolean

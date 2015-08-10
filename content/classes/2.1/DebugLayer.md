@@ -1,11 +1,14 @@
 ---
-ID_PAGE: 6718
+ID_PAGE: 25206
 PG_TITLE: DebugLayer
 PG_VERSION: 2.1
 TAGS:
     - Tools
 ---
-##new [DebugLayer](page.php?p=6718)(scene)
+##new [DebugLayer](/classes/DebugLayer)(scene)
+
+
+
 
 
 
@@ -13,22 +16,31 @@ TAGS:
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=6662) | 
+ | scene | [Scene](/classes/Scene) | 
 ---
 
 ##Members
 
-###shouldDisplayLabel : (node: [Node](page.php?p=6630)) =&gt; boolean
+###shouldDisplayLabel : (node: [Node](/classes/Node)) =&gt; boolean
 
 
 
 
-###shouldDisplayAxis : (mesh: [Mesh](page.php?p=6659)) =&gt; boolean
+
+
+###shouldDisplayAxis : (mesh: [Mesh](/classes/Mesh)) =&gt; boolean
+
+
 
 
 
 
 ###axisRatio : number
+
+
+
+
+
 
 
 
@@ -55,7 +67,11 @@ TAGS:
 
 
 
+
+
 ###hide() &rarr; void
+
+
 
 
 
@@ -66,5 +82,5 @@ TAGS:
  | Name | Type | Description
 ---|---|---|---
 optional | showUI | boolean | 
-optional | camera | [Camera](page.php?p=6631) | 
+optional | camera | [Camera](/classes/Camera) | 
 ---

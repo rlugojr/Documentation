@@ -1,9 +1,10 @@
 ---
-ID_PAGE: 6703
+ID_PAGE: 25191
 PG_TITLE: Skeleton
 PG_VERSION: 2.1
 ---
-##new [Skeleton](page.php?p=6703)(name, id, scene)
+##new [Skeleton](/classes/Skeleton)(name, id, scene)
+
 
 
 
@@ -14,12 +15,14 @@ A tutorial about Bones and Skeletons ban be found [here](https://github.com/Baby
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the skeleton
  | id | string | ID of the skeleton
- | scene | [Scene](page.php?p=6662) | The scene where the skeleton is
+ | scene | [Scene](/classes/Scene) | The scene where the skeleton is
 ---
 
 ##Members
@@ -29,7 +32,9 @@ A tutorial about Bones and Skeletons ban be found [here](https://github.com/Baby
 
 
 
+
 Name of the skeleton
+
 
 
 
@@ -38,16 +43,23 @@ Name of the skeleton
 
 
 
+
 Name of the skeleton
 
 
 
-###bones : [Bone](page.php?p=6702)[]
+
+###bones : [Bone](/classes/Bone)[]
+
 
 
 
 
 Array of bones composing the skeleton
+
+
+
+
 
 
 
@@ -69,8 +81,12 @@ Get the transform matrices of the skeleton
 
 
 
+
+
 ###prepare() &rarr; void
 Prepare bones' skeleton
+
+
 
 
 
@@ -85,7 +101,9 @@ Get the animatables of the skeleton
 
 
 
-###clone(name, id) &rarr; [Skeleton](page.php?p=6703)
+
+
+###clone(name, id) &rarr; [Skeleton](/classes/Skeleton)
 
 ####Parameters
  | Name | Type | Description

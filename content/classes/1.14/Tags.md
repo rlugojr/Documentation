@@ -1,10 +1,10 @@
 ---
-ID_PAGE: 3383
+ID_PAGE: 24591
 PG_TITLE: Tags
 PG_VERSION: 1.14
 ---
- [Tags](page.php?p=3383) can be added to ANY javascript object (not necessarily reserved to BabylonJS) by calling [BABYLON](page.php?p=3243).Tags.AddTagsTo.
- [BABYLON](page.php?p=3243).Tags.MatchesQuery can be used to check if a javascript object matches a &quot;boolean&quot; query&lt;br/&gt;
+ [Tags](/classes/Tags) can be added to ANY javascript object (not necessarily reserved to BabylonJS) by calling [Tags](/classes/Tags).AddTagsTo.
+ [Tags](/classes/Tags).MatchesQuery can be used to check if a javascript object matches a &quot;boolean&quot; query&lt;br/&gt;
 
 The tags 'true' and 'false' are reserved and cannot be used as tags
 

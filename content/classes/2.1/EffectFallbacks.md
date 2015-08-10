@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6724
+ID_PAGE: 25212
 PG_TITLE: EffectFallbacks
 PG_VERSION: 2.1
 TAGS:
@@ -10,9 +10,12 @@ TAGS:
 
 
 
+
+
 ##Members
 
 ###isMoreFallbacks : boolean
+
 
 
 
@@ -29,10 +32,16 @@ Returns true if the current rank value is lower than or equal to the max rank va
 
 
 
+
+
+
+
 ##Methods
 
 ###addFallback(rank, define) &rarr; void
 Adds a fallback effect to the given rank
+
+
 
 
 

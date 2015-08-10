@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6683
+ID_PAGE: 25171
 PG_TITLE: Animatable
 PG_VERSION: 2.1
 TAGS:
@@ -7,11 +7,14 @@ TAGS:
 ---
 
 Used to access to individual animations
-##new [Animatable](page.php?p=6683)(scene, target, fromFrame, toFrame, loopAnimation, speedRatio, onAnimationEnd, animations)
+##new [Animatable](/classes/Animatable)(scene, target, fromFrame, toFrame, loopAnimation, speedRatio, onAnimationEnd, animations)
 
 
 
-Builds an [Animatable](page.php?p=6683) object
+
+Builds an [Animatable](/classes/Animatable) object
+
+
 
 
 
@@ -19,7 +22,7 @@ Builds an [Animatable](page.php?p=6683) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=6662) | The scene where takes place the animation
+ | scene | [Scene](/classes/Scene) | The scene where takes place the animation
  | target | any | The target object
 optional | fromFrame | number | default : 0
 optional | toFrame | number | default : 100
@@ -36,7 +39,9 @@ optional | animations | any | The array of animations to run
 
 
 
+
 The animated target
+
 
 
 
@@ -45,7 +50,9 @@ The animated target
 
 
 
+
 The begining frame of the animation
+
 
 
 
@@ -54,7 +61,9 @@ The begining frame of the animation
 
 
 
+
 The ending frame of the animation
+
 
 
 
@@ -63,7 +72,9 @@ The ending frame of the animation
 
 
 
+
 default : false. Sets if the animation loops or not
+
 
 
 
@@ -72,7 +83,9 @@ default : false. Sets if the animation loops or not
 
 
 
+
 default : 1.0. The speed Ratio, lower gives a slower animation
+
 
 
 
@@ -81,7 +94,9 @@ default : 1.0. The speed Ratio, lower gives a slower animation
 
 
 
+
 Function to execute on animation end
+
 
 
 
@@ -90,7 +105,12 @@ Function to execute on animation end
 
 
 
+
 Tests if the animation is in started state
+
+
+
+
 
 
 
@@ -111,15 +131,19 @@ Append a new animation
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | target | any | The target which will be animated
- | animations | [Animation](page.php?p=6684)[] | The animation(s) to apply
+ | animations | [Animation](/classes/Animation)[] | The animation(s) to apply
 ---
 
-###getAnimationByTargetProperty(property) &rarr; [Animation](page.php?p=6684)
+###getAnimationByTargetProperty(property) &rarr; [Animation](/classes/Animation)
 Returns animations that have to given property
+
+
 
 
 
@@ -139,8 +163,12 @@ Pauses the animation
 
 
 
+
+
 ###restart() &rarr; void
 Restarts the animation
+
+
 
 
 

@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 22661
 PG_TITLE: File Format Map (.babylon)
-TAGS:
-    - General
 ---
 **Babylon.js** uses a JSON file format for describing scenes.
 
@@ -106,6 +104,7 @@ A material is defined by the following JSON:
     "name": string,
     "id": string,
     "tags": string,
+    "disableDepthWrite": boolean (can be omitted),
     "ambient": color3,
     "diffuse": color3,
     "specular": color3,

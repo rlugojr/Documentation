@@ -1,12 +1,15 @@
 ---
-ID_PAGE: 5813
+ID_PAGE: 24982
 PG_TITLE: Viewport
 PG_VERSION: 2.0
 ---
-##new [Viewport](page.php?p=5813)(x, y, width, height)
+##new [Viewport](/classes/Viewport)(x, y, width, height)
 
 
-Builds a new [Viewport](page.php?p=5813) object
+
+Builds a new [Viewport](/classes/Viewport) object
+
+
 
 
 ####Parameters
@@ -24,24 +27,31 @@ Builds a new [Viewport](page.php?p=5813) object
 
 
 
+
 The pixel x coordinate of the upper-left corner of the viewport on the render-target surface
+
 
 
 ###y : number
 
 
 
+
 The pixel y coordinate of the upper-left corner of the viewport on the render-target surface
+
 
 
 ###width : number
 
 
 
+
 The width of the viewport on the render-target surface in pixels
 
 
+
 ###height : number
+
 
 
 
@@ -53,9 +63,13 @@ The height of the  viewport on the render-target surface in pixels
 
 
 
+
+
+
+
 ##Methods
 
-###toGlobal(engine) &rarr; [Viewport](page.php?p=5813)
+###toGlobal(engine) &rarr; [Viewport](/classes/Viewport)
 
 ####Parameters
  | Name | Type | Description

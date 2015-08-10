@@ -1,10 +1,12 @@
 ---
-ID_PAGE: 5749
+ID_PAGE: 24918
 PG_TITLE: CircleEase
 PG_VERSION: 2.0
 ---
 
-##Extends [EasingFunction](page.php?p=5748)
+
+
+##Extends [EasingFunction](/classes/EasingFunction)
 
 
 ##Methods

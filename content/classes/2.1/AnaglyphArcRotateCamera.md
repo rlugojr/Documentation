@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6633
+ID_PAGE: 25121
 PG_TITLE: AnaglyphArcRotateCamera
 PG_VERSION: 2.1
 TAGS:
@@ -7,7 +7,7 @@ TAGS:
     - Camera
     - ArcRotateCamera
 ---
-##new [AnaglyphArcRotateCamera](page.php?p=6633)(name, alpha, beta, radius, target, interaxialDistance, scene)
+##new [AnaglyphArcRotateCamera](/classes/AnaglyphArcRotateCamera)(name, alpha, beta, radius, target, interaxialDistance, scene)
 
 ####Parameters
  | Name | Type | Description
@@ -18,11 +18,11 @@ TAGS:
  | radius | number | @param radius
  | target | any | The target of the camera
  | interaxialDistance | number | 
- | scene | [Scene](page.php?p=6662) | The scene which contain the camera
+ | scene | [Scene](/classes/Scene) | The scene which contain the camera
 ---
 
 ##Extends
- [ArcRotateCamera](page.php?p=6632)
+ [ArcRotateCamera](/classes/ArcRotateCamera)
 
 
 ##Methods

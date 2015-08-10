@@ -1,8 +1,10 @@
 ---
-ID_PAGE: 5893
+ID_PAGE: 25062
 PG_TITLE: Tools
 PG_VERSION: 2.0
 ---
+
+
 
 
 
@@ -13,7 +15,11 @@ PG_VERSION: 2.0
 
 
 
+
+
 ###static GetExponantOfTwo : (value: number, max: number) =&gt; number
+
+
 
 
 
@@ -21,7 +27,11 @@ PG_VERSION: 2.0
 ###static OnNewCacheEntry : (entry: string) =&gt; void
 
 
+
+
 ###static NoneLogLevel : number
+
+
 
 
 
@@ -31,7 +41,11 @@ PG_VERSION: 2.0
 
 
 
+
+
 ###static WarningLogLevel : number
+
+
 
 
 
@@ -41,7 +55,11 @@ PG_VERSION: 2.0
 
 
 
+
+
 ###static AllLogLevel : number
+
+
 
 
 
@@ -51,7 +69,11 @@ PG_VERSION: 2.0
 
 
 
+
+
 ###static Warn : (message: string) =&gt; void
+
+
 
 
 
@@ -61,7 +83,11 @@ PG_VERSION: 2.0
 
 
 
+
+
 ###static LogCache : string
+
+
 
 
 ###static LogLevels : number
@@ -72,25 +98,44 @@ PG_VERSION: 2.0
 
 
 
+
+
 ###static PerformanceNoneLogLevel : number
+
+
 
 
 ###static PerformanceUserMarkLogLevel : number
 
 
+
+
 ###static PerformanceConsoleLogLevel : number
+
+
 
 
 ###static PerformanceLogLevel : number
 
 
+
+
 ###static StartPerformanceCounter : (counterName: string, condition?: boolean) =&gt; void
+
+
 
 
 ###static EndPerformanceCounter : (counterName: string, condition?: boolean) =&gt; void
 
 
+
+
 ###static Now : number
+
+
+
+
+
 
 
 
@@ -99,6 +144,8 @@ PG_VERSION: 2.0
 
 ###static GetFilename(path) &rarr; string
 Gets the filename from a complete path name
+
+
 
 
 
@@ -113,6 +160,8 @@ Returns the DOM text content of the given element
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -121,6 +170,8 @@ Returns the DOM text content of the given element
 
 ###static ToDegrees(angle) &rarr; number
 Converts an angle in radian to degrees
+
+
 
 
 
@@ -135,14 +186,18 @@ Converts an angle in degrees to radian
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | angle | number | The angle to convert
 ---
 
-###static ExtractMinAndMaxIndexed(positions, indices, indexStart, indexCount) &rarr; {minimum: [Vector3](page.php?p=5808); maximum: [Vector3](page.php?p=5808); }; 
+###static ExtractMinAndMaxIndexed(positions, indices, indexStart, indexCount) &rarr; {minimum: [Vector3](/classes/Vector3); maximum: [Vector3](/classes/Vector3); }; 
 Extracts the minimum and the maximum indexed of the positions given in parameters
+
+
 
 
 
@@ -155,8 +210,10 @@ Extracts the minimum and the maximum indexed of the positions given in parameter
  | indexCount | number | The number of position to browse.
 ---
 
-###static ExtractMinAndMax(positions, start, count) &rarr; {minimum: [Vector3](page.php?p=5808); maximum: [Vector3](page.php?p=5808); }; 
+###static ExtractMinAndMax(positions, start, count) &rarr; {minimum: [Vector3](/classes/Vector3); maximum: [Vector3](/classes/Vector3); }; 
 Extracts the minimum and the maximum of the positions given in parameters
+
+
 
 
 
@@ -173,6 +230,8 @@ Make an array
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -186,7 +245,11 @@ Returns the pointer prefix Checks if hand.js is referenced in this project or if
 
 
 
+
+
 ###static QueueNewFrame(func) &rarr; void
+
+
 
 
 
@@ -198,6 +261,8 @@ Returns the pointer prefix Checks if hand.js is referenced in this project or if
 
 ###static RequestFullscreen(element) &rarr; void
 Request to get the fullscreen
+
+
 
 
 
@@ -213,8 +278,12 @@ Exit fullscreen
 
 
 
+
+
 ###static CleanUrl(url) &rarr; string
 Execute regex, and replace &quot;#&quot; to &quot;%23&quot; and return the new url.
+
+
 
 
 
@@ -226,6 +295,8 @@ Execute regex, and replace &quot;#&quot; to &quot;%23&quot; and return the new u
 
 ###static LoadImage(url, onload, onerror, database) &rarr; HTMLImageElement
 Load the image described by its URL. Check first if this image is in the indexeDB if the parameter {database} is specified.
+
+
 
 
 
@@ -241,6 +312,8 @@ Load the image described by its URL. Check first if this image is in the indexeD
 ###static LoadFile(url, callback, progressCallBack, database, useArrayBuffer, onError) &rarr; void
 Load the file given by its URL. Check first if this file is in the indexeDB if the parameter {database} is specified.
 This file is loaded via an ajax call otherwise.
+
+
 
 
 
@@ -260,6 +333,8 @@ Read the given file as data url
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -273,6 +348,8 @@ Read the given file
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -283,6 +360,8 @@ optional | useArrayBuffer | boolean | @param useArrayBuffer
 ---
 
 ###static Clamp(value, min, max) &rarr; number
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -302,6 +381,8 @@ optional | max | number |
 
 ###static Format(value, decimals) &rarr; string
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -314,17 +395,21 @@ Check extends
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | v | [Vector3](page.php?p=5808) | @param v
- | min | [Vector3](page.php?p=5808) | @param min
- | max | [Vector3](page.php?p=5808) | @param max
+ | v | [Vector3](/classes/Vector3) | @param v
+ | min | [Vector3](/classes/Vector3) | @param min
+ | max | [Vector3](/classes/Vector3) | @param max
 ---
 
 ###static WithinEpsilon(a, b, epsilon) &rarr; boolean
 Returns true if the difference between the two parameter is within epsilon.
 If yes, the two parameters can be considered equals.
+
+
 
 
 
@@ -337,6 +422,8 @@ optional | epsilon | number |
 ---
 
 ###static DeepCopy(source, destination, doNotCopyList, mustCopyList) &rarr; void
+
+
 
 
 
@@ -354,6 +441,8 @@ Returns true if the given array is empty, false otherwise
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -364,6 +453,8 @@ Returns true if the given array is empty, false otherwise
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -371,6 +462,8 @@ Returns true if the given array is empty, false otherwise
 ---
 
 ###static UnregisterTopRootEvents(events) &rarr; void; 
+
+
 
 
 
@@ -385,15 +478,19 @@ Take a screenshot
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | engine | [Engine](page.php?p=5700) | The engine
- | camera | [Camera](page.php?p=5702) | The camera
+ | engine | [Engine](/classes/Engine) | The engine
+ | camera | [Camera](/classes/Camera) | The camera
  | size | any | The size of the screenshot
 ---
 
 ###static ValidateXHRData(xhr, dataType) &rarr; boolean
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -403,7 +500,4 @@ optional | dataType | number | @param dataType
 ---
 
 ###static GetFps() &rarr; number
-Get Frame per seconds
-
-
 

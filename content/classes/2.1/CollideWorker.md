@@ -1,23 +1,23 @@
 ---
-ID_PAGE: 6709
+ID_PAGE: 25197
 PG_TITLE: CollideWorker
 PG_VERSION: 2.1
 TAGS:
     - Collision
 ---
-##new [CollideWorker](page.php?p=6709)(collider, _collisionCache, finalPosition)
+##new [CollideWorker](/classes/CollideWorker)(collider, _collisionCache, finalPosition)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | collider | [Collider](page.php?p=6705) | 
- | _collisionCache | [CollisionCache](page.php?p=6708) | 
- | finalPosition | [Vector3](page.php?p=6751) | 
+ | collider | [Collider](/classes/Collider) | 
+ | _collisionCache | [CollisionCache](/classes/CollisionCache) | 
+ | finalPosition | [Vector3](/classes/Vector3) | 
 ---
 
 ##Members
 
-###collider : [Collider](page.php?p=6705)
+###collider : [Collider](/classes/Collider)
 
 
 
@@ -29,8 +29,8 @@ TAGS:
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | position | [Vector3](page.php?p=6751) | 
- | velocity | [Vector3](page.php?p=6751) | 
+ | position | [Vector3](/classes/Vector3) | 
+ | velocity | [Vector3](/classes/Vector3) | 
  | maximumRetry | number | 
 optional | excludedMeshUniqueId | number | 
 ---

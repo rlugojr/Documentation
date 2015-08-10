@@ -1,18 +1,18 @@
 ---
-ID_PAGE: 3312
+ID_PAGE: 24520
 PG_TITLE: Material
 PG_VERSION: 1.14
 ---
-##new [Material](page.php?p=3312)(name, scene, doNotAdd)
+##new [Material](/classes/Material)(name, scene, doNotAdd)
 
-Create a new [Material](page.php?p=3312).
+Create a new [Material](/classes/Material).
 Everything to know about material can be found here : https://github.com/BabylonJS/Babylon.js/wiki/04-Materials
 And here : http://blogs.msdn.com/b/eternalcoding/archive/2013/07/01/babylon-js-unleash-the-standardmaterial-for-your-babylon-js-game.aspx
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the material
- | scene | [Scene](page.php?p=3274) | 
+ | scene | [Scene](/classes/Scene) | 
 optional | doNotAdd | boolean | Not add the material
 ---
 
@@ -62,12 +62,12 @@ True to not render material on back face
 
 Default value : true
 
-###onCompiled : (effect: [Effect](page.php?p=3311)) =&gt; void
+###onCompiled : (effect: [Effect](/classes/Effect)) =&gt; void
 
 
 Callback function on compiled
 
-###onError : (effect: [Effect](page.php?p=3311), errors: string) =&gt; void
+###onError : (effect: [Effect](/classes/Effect), errors: string) =&gt; void
 
 
 Callback function on error
@@ -93,18 +93,18 @@ Function to know if material is ready
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | mesh | [AbstractMesh](page.php?p=3269) | The mesh to test
+optional | mesh | [AbstractMesh](/classes/AbstractMesh) | The mesh to test
 optional | useInstances | boolean | 
 ---
 
-###getEffect() &rarr; [Effect](page.php?p=3311)
+###getEffect() &rarr; [Effect](/classes/Effect)
 Get effect of the material
-@return [Effect](page.php?p=3311) The effect
+@return [Effect](/classes/Effect) The effect
 
 
-###getScene() &rarr; [Scene](page.php?p=3274)
+###getScene() &rarr; [Scene](/classes/Scene)
 Get the scene which contain the material
-@return [Scene](page.php?p=3274) The scene which contain the material
+@return [Scene](/classes/Scene) The scene which contain the material
 
 
 ###needAlphaBlending() &rarr; boolean
@@ -116,9 +116,9 @@ Function to know if alpha is necessary (1.0 = no transparency)
 Function to know if alpha testing is necessary
 
 
-###getAlphaTestTexture() &rarr; [BaseTexture](page.php?p=3317)
+###getAlphaTestTexture() &rarr; [BaseTexture](/classes/BaseTexture)
 Function to get the alpha test texture
-@return [BaseTexture](page.php?p=3317) The alpha test texture
+@return [BaseTexture](/classes/BaseTexture) The alpha test texture
 
 
 ###trackCreation(onCompiled, onError) &rarr; void
@@ -127,8 +127,8 @@ Track the creation
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | onCompiled | (effect: [Effect](page.php?p=3311)) =&gt; void | Callback function called on compiled (effect on compiled)
- | onError | (effect: [Effect](page.php?p=3311), errors: string) =&gt; void | Callback function called on error (effect on error, error string)
+ | onCompiled | (effect: [Effect](/classes/Effect)) =&gt; void | Callback function called on compiled (effect on compiled)
+ | onError | (effect: [Effect](/classes/Effect), errors: string) =&gt; void | Callback function called on error (effect on error, error string)
 ---
 
 ###bind(world, mesh) &rarr; void
@@ -137,8 +137,8 @@ Function to bind the material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | world | [Matrix](page.php?p=3329) | The world matrix
- | mesh | [Mesh](page.php?p=3271) | The mesh to bind
+ | world | [Matrix](/classes/Matrix) | The world matrix
+ | mesh | [Mesh](/classes/Mesh) | The mesh to bind
 ---
 
 ###bindOnlyWorldMatrix(world) &rarr; void
@@ -147,7 +147,7 @@ Function to bind only the world matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | world | [Matrix](page.php?p=3329) | The world matrix
+ | world | [Matrix](/classes/Matrix) | The world matrix
 ---
 
 ###unbind() &rarr; void

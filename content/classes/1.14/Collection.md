@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 3405
+ID_PAGE: 24613
 PG_TITLE: Collection<T>
 PG_VERSION: 1.14
 ---

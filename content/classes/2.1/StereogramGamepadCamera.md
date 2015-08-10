@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6643
+ID_PAGE: 25131
 PG_TITLE: StereogramGamepadCamera
 PG_VERSION: 2.1
 TAGS:
@@ -9,20 +9,20 @@ TAGS:
     - FreeCamera
     - GamepadCamera
 ---
-##new [StereogramGamepadCamera](page.php?p=6643)(name, position, eyeSpace, isVertical, scene)
+##new [StereogramGamepadCamera](/classes/StereogramGamepadCamera)(name, position, eyeSpace, isVertical, scene)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | position | [Vector3](page.php?p=6751) | 
+ | position | [Vector3](/classes/Vector3) | 
  | eyeSpace | number | 
  | isVertical | boolean | 
- | scene | [Scene](page.php?p=6662) | 
+ | scene | [Scene](/classes/Scene) | 
 ---
 
 ##Extends
- [GamepadCamera](page.php?p=6641)
+ [GamepadCamera](/classes/GamepadCamera)
 
 
 ##Methods

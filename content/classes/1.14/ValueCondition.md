@@ -1,24 +1,24 @@
 ---
-ID_PAGE: 3290
+ID_PAGE: 24498
 PG_TITLE: ValueCondition
 PG_VERSION: 1.14
 ---
 
 This condition is true when the given property
-##new [ValueCondition](page.php?p=3290)(actionManager, target, propertyPath, value, operator)
+##new [ValueCondition](/classes/ValueCondition)(actionManager, target, propertyPath, value, operator)
 
 The Value condition constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | actionManager | [ActionManager](page.php?p=3288) | The action manager
+ | actionManager | [ActionManager](/classes/ActionManager) | The action manager
  | target | any | The target
  | propertyPath | string | The property Path
  | value | any | The given value
 optional | operator | number | The operator used
 ---
 
-##Extends [Condition](page.php?p=3289)
+##Extends [Condition](/classes/Condition)
 ##Members
 
 ###propertyPath : string

@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 20
 PG_TITLE: 3DSMax
-TAGS:
-    - 3DSMax
 ---
 ## 3DS Max to Babylon.js exporter
 
@@ -14,7 +12,7 @@ If you right click on the scene, on a light, on a camera or on a mesh you fill h
 
 To export you can use the [Babylon] menu in the main menu bar.
 
-### Exported features
+### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#exported-features)Exported features
 
 - _Scene_
     - Clear color

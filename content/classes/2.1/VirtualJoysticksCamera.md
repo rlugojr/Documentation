@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6648
+ID_PAGE: 25136
 PG_TITLE: VirtualJoysticksCamera
 PG_VERSION: 2.1
 TAGS:
@@ -8,11 +8,14 @@ TAGS:
     - TargetCamera
     - FreeCamera
 ---
-##new [VirtualJoysticksCamera](page.php?p=6648)(name, position, scene)
+##new [VirtualJoysticksCamera](/classes/VirtualJoysticksCamera)(name, position, scene)
 
 
 
-Creates a new [VirtualJoysticksCamera](page.php?p=6648)
+
+Creates a new [VirtualJoysticksCamera](/classes/VirtualJoysticksCamera)
+
+
 
 
 
@@ -21,12 +24,12 @@ Creates a new [VirtualJoysticksCamera](page.php?p=6648)
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the camera
- | position | [Vector3](page.php?p=6751) | The positon of the camera
- | scene | [Scene](page.php?p=6662) | The scene which contain the camera
+ | position | [Vector3](/classes/Vector3) | The positon of the camera
+ | scene | [Scene](/classes/Scene) | The scene which contain the camera
 ---
 
 ##Extends
- [FreeCamera](page.php?p=6638)
+ [FreeCamera](/classes/FreeCamera)
 
 
 ##Methods

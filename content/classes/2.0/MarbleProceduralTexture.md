@@ -1,33 +1,47 @@
 ---
-ID_PAGE: 5804
+ID_PAGE: 24973
 PG_TITLE: MarbleProceduralTexture
 PG_VERSION: 2.0
 ---
-##new [MarbleProceduralTexture](page.php?p=5804)(name, size, scene, fallbackTexture, generateMipMaps)
+##new [MarbleProceduralTexture](/classes/MarbleProceduralTexture)(name, size, scene, fallbackTexture, generateMipMaps)
+
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
  | size | number | 
- | scene | [Scene](page.php?p=5725) | 
-optional | fallbackTexture | [Texture](page.php?p=5790) | 
+ | scene | [Scene](/classes/Scene) | 
+optional | fallbackTexture | [Texture](/classes/Texture) | 
 optional | generateMipMaps | boolean | 
 ---
 
-##Extends [ProceduralTexture](page.php?p=5796)
+##Extends [ProceduralTexture](/classes/ProceduralTexture)
 ##Members
 
 ###numberOfTilesHeight : number
 
 
+
+
 ###numberOfTilesWidth : number
 
 
-###jointColor : [Color3](page.php?p=5805)
 
 
-###marbleColor : [Color3](page.php?p=5805)
+###jointColor : [Color3](/classes/Color3)
+
+
+
+
+###marbleColor : [Color3](/classes/Color3)
+
+
+
+
+
 
 
 

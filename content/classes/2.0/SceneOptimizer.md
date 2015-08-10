@@ -1,8 +1,12 @@
 ---
-ID_PAGE: 5889
+ID_PAGE: 25058
 PG_TITLE: SceneOptimizer
 PG_VERSION: 2.0
 ---
+
+
+
+
 
 
 
@@ -13,8 +17,8 @@ PG_VERSION: 2.0
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=5725) | 
-optional | options | [SceneOptimizerOptions](page.php?p=5888) | 
+ | scene | [Scene](/classes/Scene) | 
+optional | options | [SceneOptimizerOptions](/classes/SceneOptimizerOptions) | 
 optional | onSuccess | () =&gt; void | 
 optional | onFailure | () =&gt; void | 
 ---

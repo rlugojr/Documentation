@@ -1,13 +1,15 @@
 ---
-ID_PAGE: 5887
+ID_PAGE: 25056
 PG_TITLE: MergeMeshesOptimization
 PG_VERSION: 2.0
 ---
 
-##Extends [SceneOptimization](page.php?p=5879)
+
+
+##Extends [SceneOptimization](/classes/SceneOptimization)
 ##Members
 
-###apply : (scene: [Scene](page.php?p=5725)) =&gt; boolean
+###apply : (scene: [Scene](/classes/Scene)) =&gt; boolean
 
 
 

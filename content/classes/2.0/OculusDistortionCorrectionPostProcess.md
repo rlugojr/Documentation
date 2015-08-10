@@ -1,9 +1,12 @@
 ---
-ID_PAGE: 5849
+ID_PAGE: 25018
 PG_TITLE: OculusDistortionCorrectionPostProcess
 PG_VERSION: 2.0
 ---
-##new [OculusDistortionCorrectionPostProcess](page.php?p=5849)(name, camera, isRightEye, cameraSettings)
+##new [OculusDistortionCorrectionPostProcess](/classes/OculusDistortionCorrectionPostProcess)(name, camera, isRightEye, cameraSettings)
+
+
+
 
 
 
@@ -12,12 +15,12 @@ PG_VERSION: 2.0
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | camera | [Camera](page.php?p=5702) | 
+ | camera | [Camera](/classes/Camera) | 
  | isRightEye | boolean | 
  | cameraSettings | any | 
 ---
 
-##Extends [PostProcess](page.php?p=5841)
+##Extends [PostProcess](/classes/PostProcess)
 ##Members
 
 ###aspectRatio : number

@@ -1,15 +1,15 @@
 ---
-ID_PAGE: 3376
+ID_PAGE: 24584
 PG_TITLE: Gamepads
 PG_VERSION: 1.14
 ---
-##new [Gamepads](page.php?p=3376)(ongamedpadconnected)
+##new [Gamepads](/classes/Gamepads)(ongamedpadconnected)
 
-Builds a [Gamepads](page.php?p=3376) object
+Builds a [Gamepads](/classes/Gamepads) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ongamedpadconnected | (gamepad: [Gamepad](page.php?p=3378)) =&gt; void | Function called when a gamepad is connected
+ | ongamedpadconnected | (gamepad: [Gamepad](/classes/Gamepad)) =&gt; void | Function called when a gamepad is connected
 ---
 
 

@@ -1,21 +1,21 @@
 ---
-ID_PAGE: 3272
+ID_PAGE: 24480
 PG_TITLE: GroundMesh
 PG_VERSION: 1.14
 ---
 
-The [GroundMesh](page.php?p=3272) Class extends [Mesh](page.php?p=3271)
-##new [GroundMesh](page.php?p=3272)(name, scene)
+The [GroundMesh](/classes/GroundMesh) Class extends [Mesh](/classes/Mesh)
+##new [GroundMesh](/classes/GroundMesh)(name, scene)
 
-The [GroundMesh](page.php?p=3272) constructor
+The [GroundMesh](/classes/GroundMesh) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | @param name
- | scene | [Scene](page.php?p=3274) | @param scene
+ | scene | [Scene](/classes/Scene) | @param scene
 ---
 
-##Extends [Mesh](page.php?p=3271)
+##Extends [Mesh](/classes/Mesh)
 ##Members
 
 ###generateOctree : boolean
@@ -26,7 +26,7 @@ true if this is generated, false if is not
 ###subdivisions : number
 
 
-The subdivision of the [GroundMesh](page.php?p=3272)
+The subdivision of the [GroundMesh](/classes/GroundMesh)
 
 
 

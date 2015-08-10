@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6660
+ID_PAGE: 25148
 PG_TITLE: GroundMesh
 PG_VERSION: 2.1
 TAGS:
@@ -7,12 +7,15 @@ TAGS:
     - Mesh
 ---
 
-The [GroundMesh](page.php?p=6660) Class extends [Mesh](page.php?p=6659)
-##new [GroundMesh](page.php?p=6660)(name, scene)
+The [GroundMesh](/classes/GroundMesh) Class extends [Mesh](/classes/Mesh)
+##new [GroundMesh](/classes/GroundMesh)(name, scene)
 
 
 
-The [GroundMesh](page.php?p=6660) constructor
+
+The [GroundMesh](/classes/GroundMesh) constructor
+
+
 
 
 
@@ -21,14 +24,15 @@ The [GroundMesh](page.php?p=6660) constructor
  | Name | Type | Description
 ---|---|---|---
  | name | string | @param name
- | scene | [Scene](page.php?p=6662) | @param scene
+ | scene | [Scene](/classes/Scene) | @param scene
 ---
 
 ##Extends
- [Mesh](page.php?p=6659)
+ [Mesh](/classes/Mesh)
 ##Members
 
 ###generateOctree : boolean
+
 
 
 
@@ -37,12 +41,18 @@ true if this is generated, false if is not
 
 
 
+
 ###subdivisions : number
 
 
 
 
-The subdivision of the [GroundMesh](page.php?p=6660)
+
+The subdivision of the [GroundMesh](/classes/GroundMesh)
+
+
+
+
 
 
 
@@ -58,6 +68,8 @@ The subdivision of the [GroundMesh](page.php?p=6660)
 
 ###optimize(chunksCount) &rarr; void
 Optimize function
+
+
 
 
 

@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6658
+ID_PAGE: 25146
 PG_TITLE: InstancedMesh
 PG_VERSION: 2.1
 TAGS:
@@ -8,11 +8,14 @@ TAGS:
 ---
 
 Creates an instance based on a source mesh.
-##new [InstancedMesh](page.php?p=6658)(name, source)
+##new [InstancedMesh](/classes/InstancedMesh)(name, source)
 
 
 
-The [InstancedMesh](page.php?p=6658) constructor
+
+The [InstancedMesh](/classes/InstancedMesh) constructor
+
+
 
 
 
@@ -21,11 +24,11 @@ The [InstancedMesh](page.php?p=6658) constructor
  | Name | Type | Description
 ---|---|---|---
  | name | string | @param name
- | source | [Mesh](page.php?p=6659) | @param source
+ | source | [Mesh](/classes/Mesh) | @param source
 ---
 
 ##Extends
- [AbstractMesh](page.php?p=6657)
+ [AbstractMesh](/classes/AbstractMesh)
 ##Members
 
 ###receiveShadows : boolean
@@ -33,11 +36,14 @@ The [InstancedMesh](page.php?p=6658) constructor
 
 
 
-True if the Instanced [Mesh](page.php?p=6659) got shadows, false if is not
+
+True if the Instanced [Mesh](/classes/Mesh) got shadows, false if is not
 
 
 
-###material : [Material](page.php?p=6726)
+
+###material : [Material](/classes/Material)
+
 
 
 
@@ -46,16 +52,20 @@ The material
 
 
 
+
 ###visibility : number
 
 
 
 
-The visibility of the Instanced [Mesh](page.php?p=6659)
+
+The visibility of the Instanced [Mesh](/classes/Mesh)
 
 
 
-###skeleton : [Skeleton](page.php?p=6703)
+
+###skeleton : [Skeleton](/classes/Skeleton)
+
 
 
 
@@ -64,7 +74,9 @@ The skeleton
 
 
 
-###sourceMesh : [Mesh](page.php?p=6659)
+
+###sourceMesh : [Mesh](/classes/Mesh)
+
 
 
 
@@ -81,10 +93,16 @@ The sourceMesh
 
 
 
+
+
+
+
 ##Methods
 
 ###getTotalVertices() &rarr; number
-Get the total vertices of the Instanced [Mesh](page.php?p=6659)
+Get the total vertices of the Instanced [Mesh](/classes/Mesh)
+
+
 
 
 
@@ -98,6 +116,8 @@ Get the vertices data
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -106,6 +126,8 @@ Get the vertices data
 
 ###isVerticesDataPresent(kind) &rarr; boolean
 Is Vertices data present
+
+
 
 
 
@@ -125,26 +147,34 @@ Get Indices
 
 
 
+
+
 ###refreshBoundingInfo() &rarr; void
-Refresh Bounding Info of the Instanced [Mesh](page.php?p=6659)
+Refresh Bounding Info of the Instanced [Mesh](/classes/Mesh)
 
 
 
 
 
 
-###getLOD(camera) &rarr; [AbstractMesh](page.php?p=6657)
+
+
+###getLOD(camera) &rarr; [AbstractMesh](/classes/AbstractMesh)
+
+
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | camera | [Camera](page.php?p=6631) | 
+ | camera | [Camera](/classes/Camera) | 
 ---
 
-###clone(name, newParent, doNotCloneChildren) &rarr; [InstancedMesh](page.php?p=6658)
-Clone this instanced [Mesh](page.php?p=6659)
+###clone(name, newParent, doNotCloneChildren) &rarr; [InstancedMesh](/classes/InstancedMesh)
+Clone this instanced [Mesh](/classes/Mesh)
+
+
 
 
 
@@ -154,7 +184,7 @@ Clone this instanced [Mesh](page.php?p=6659)
  | Name | Type | Description
 ---|---|---|---
  | name | string | The given name
- | newParent | [Node](page.php?p=6630) | The parent
+ | newParent | [Node](/classes/Node) | The parent
 optional | doNotCloneChildren | boolean | True if you want to clone children, false if you don't want to.
 ---
 

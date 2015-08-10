@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 5827
+ID_PAGE: 24996
 PG_TITLE: DecimationTriangle
 PG_VERSION: 2.0
 ---
-##new [DecimationTriangle](page.php?p=5827)(vertices)
+##new [DecimationTriangle](/classes/DecimationTriangle)(vertices)
 
 ####Parameters
  | Name | Type | Description
@@ -16,7 +16,7 @@ PG_VERSION: 2.0
 ###vertices : Array&lt;number&gt;
 
 
-###normal : [Vector3](page.php?p=5808)
+###normal : [Vector3](/classes/Vector3)
 
 
 ###error : Array&lt;number&gt;

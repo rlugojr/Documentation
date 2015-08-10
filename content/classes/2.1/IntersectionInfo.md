@@ -1,15 +1,18 @@
 ---
-ID_PAGE: 6711
+ID_PAGE: 25199
 PG_TITLE: IntersectionInfo
 PG_VERSION: 2.1
 ---
 
 Get information of Intersection between two meshes
-##new [IntersectionInfo](page.php?p=6711)(bu, bv, distance)
+##new [IntersectionInfo](/classes/IntersectionInfo)(bu, bv, distance)
 
 
 
-The [IntersectionInfo](page.php?p=6711) constructor
+
+The [IntersectionInfo](/classes/IntersectionInfo) constructor
+
+
 
 
 
@@ -29,7 +32,9 @@ The [IntersectionInfo](page.php?p=6711) constructor
 
 
 
+
 Coordinates texture of the mesh represents the x axis
+
 
 
 
@@ -38,7 +43,9 @@ Coordinates texture of the mesh represents the x axis
 
 
 
+
 Coordinates texture of the mesh represents the y axis
+
 
 
 
@@ -47,7 +54,9 @@ Coordinates texture of the mesh represents the y axis
 
 
 
+
 Represents the distance between the screen the click on the mesh
+
 
 
 

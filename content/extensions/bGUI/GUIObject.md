@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 25104
 PG_TITLE: GUIObject
-TAGS:
-    - bGUI
 ---
 ##new [GUIObject](http://doc.babylonjs.com/page.php?p=25104)(mesh, guiSystem)
 

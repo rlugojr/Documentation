@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 3278
+ID_PAGE: 24486
 PG_TITLE: SetValueAction
 PG_VERSION: 1.14
 ---
-##new [SetValueAction](page.php?p=3278)(triggerOptions, target, propertyPath, value, condition)
+##new [SetValueAction](/classes/SetValueAction)(triggerOptions, target, propertyPath, value, condition)
 
 Create a new set value action
 ####Parameters
@@ -13,10 +13,10 @@ Create a new set value action
  | target | any | The action target
  | propertyPath | string | The action property path
  | value | any | The action value
-optional | condition | [Condition](page.php?p=3289) | The condition to trigger the action
+optional | condition | [Condition](/classes/Condition) | The condition to trigger the action
 ---
 
-##Extends [Action](page.php?p=3275)
+##Extends [Action](/classes/Action)
 ##Members
 
 ###propertyPath : string

@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 5818
+ID_PAGE: 24987
 PG_TITLE: Angle
 PG_VERSION: 2.0
 ---
-##new [Angle](page.php?p=5818)(radians)
+##new [Angle](/classes/Angle)(radians)
 
 ####Parameters
  | Name | Type | Description
@@ -23,16 +23,16 @@ PG_VERSION: 2.0
 
 ##Methods
 
-###static BetweenTwoPoints(a, b) &rarr; [Angle](page.php?p=5818)
+###static BetweenTwoPoints(a, b) &rarr; [Angle](/classes/Angle)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | a | [Vector2](page.php?p=5807) | 
- | b | [Vector2](page.php?p=5807) | 
+ | a | [Vector2](/classes/Vector2) | 
+ | b | [Vector2](/classes/Vector2) | 
 ---
 
-###static FromRadians(radians) &rarr; [Angle](page.php?p=5818)
+###static FromRadians(radians) &rarr; [Angle](/classes/Angle)
 
 ####Parameters
  | Name | Type | Description
@@ -40,7 +40,7 @@ PG_VERSION: 2.0
  | radians | number | 
 ---
 
-###static FromDegrees(degrees) &rarr; [Angle](page.php?p=5818)
+###static FromDegrees(degrees) &rarr; [Angle](/classes/Angle)
 
 ####Parameters
  | Name | Type | Description

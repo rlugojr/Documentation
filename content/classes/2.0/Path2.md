@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 5821
+ID_PAGE: 24990
 PG_TITLE: Path2
 PG_VERSION: 2.0
 ---
-##new [Path2](page.php?p=5821)(x, y)
+##new [Path2](/classes/Path2)(x, y)
 
 ####Parameters
  | Name | Type | Description
@@ -21,7 +21,7 @@ PG_VERSION: 2.0
 
 ##Methods
 
-###addLineTo(x, y) &rarr; [Path2](page.php?p=5821)
+###addLineTo(x, y) &rarr; [Path2](/classes/Path2)
 
 ####Parameters
  | Name | Type | Description
@@ -30,7 +30,7 @@ PG_VERSION: 2.0
  | y | number | 
 ---
 
-###addArcTo(midX, midY, endX, endY, numberOfSegments) &rarr; [Path2](page.php?p=5821)
+###addArcTo(midX, midY, endX, endY, numberOfSegments) &rarr; [Path2](/classes/Path2)
 
 ####Parameters
  | Name | Type | Description
@@ -42,16 +42,16 @@ PG_VERSION: 2.0
 optional | numberOfSegments | number | 
 ---
 
-###close() &rarr; [Path2](page.php?p=5821)
+###close() &rarr; [Path2](/classes/Path2)
 
 
 ###length() &rarr; number
 
 
-###getPoints() &rarr; [Vector2](page.php?p=5807)[]
+###getPoints() &rarr; [Vector2](/classes/Vector2)[]
 
 
-###getPointAtLengthPosition(normalizedLengthPosition) &rarr; [Vector2](page.php?p=5807)
+###getPointAtLengthPosition(normalizedLengthPosition) &rarr; [Vector2](/classes/Vector2)
 
 ####Parameters
  | Name | Type | Description
@@ -59,7 +59,7 @@ optional | numberOfSegments | number |
  | normalizedLengthPosition | number | 
 ---
 
-###static StartingAt(x, y) &rarr; [Path2](page.php?p=5821)
+###static StartingAt(x, y) &rarr; [Path2](/classes/Path2)
 
 ####Parameters
  | Name | Type | Description

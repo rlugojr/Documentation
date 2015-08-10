@@ -1,23 +1,23 @@
 ---
-ID_PAGE: 3284
+ID_PAGE: 24492
 PG_TITLE: ExecuteCodeAction
 PG_VERSION: 1.14
 ---
-##new [ExecuteCodeAction](page.php?p=3284)(triggerOptions, func, condition)
+##new [ExecuteCodeAction](/classes/ExecuteCodeAction)(triggerOptions, func, condition)
 
 Execute your own code when the trigger is raised and the condition is true
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | triggerOptions | any | 
- | func | (evt: [ActionEvent](page.php?p=3287)) =&gt; void | 
-optional | condition | [Condition](page.php?p=3289) | 
+ | func | (evt: [ActionEvent](/classes/ActionEvent)) =&gt; void | 
+optional | condition | [Condition](/classes/Condition) | 
 ---
 
-##Extends [Action](page.php?p=3275)
+##Extends [Action](/classes/Action)
 ##Members
 
-###func : (evt: [ActionEvent](page.php?p=3287)) =&gt; void
+###func : (evt: [ActionEvent](/classes/ActionEvent)) =&gt; void
 
 
 Func
@@ -32,5 +32,5 @@ Execute the action on a specified event
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | evt | [ActionEvent](page.php?p=3287) | The event to trigger
+ | evt | [ActionEvent](/classes/ActionEvent) | The event to trigger
 ---

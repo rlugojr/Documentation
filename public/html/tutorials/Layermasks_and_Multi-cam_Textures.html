@@ -1,99 +1,112 @@
 <!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><span>Babylon.js | DOCUMENTATION</span></div><div id="whatsnew" class="item"><span>What's new</span></div><div id="tutorials" class="item active"><span>Tutorials</span></div><div id="exporters" class="item"><span>Exporters</span></div><div id="extensions" class="item"><span>Extensions</span></div><div id="classes" class="item"><span>Classes</span></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>Layermasks and Multi-cam Textures</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
 <li><a href="#different-meshes-for-multiple-cameras-using-layermasks">Different meshes for multiple cameras using Layermasks</a></li>
-<li><a href="#lights">Lights</a></li>
-<li><a href="#gun-sight-example">Gun Sight Example</a></li>
 </ul>
-</div></div><div id="staticContent"><h2><a name="different-meshes-for-multiple-cameras-using-layermasks" class="anchor" href="#different-meshes-for-multiple-cameras-using-layermasks"></a>Different meshes for multiple cameras using Layermasks</h2><p>A <code>layerMask</code> is a number assigned to each mesh and camera. It is used at the bit level to indicate whether lights and cameras should shine-upon or show the mesh. The default value, 0x0FFFFFFF, will cause the mesh to be shined upon shown by any stock light and camera.</p>
-<p>The feature is used primarily when multiple cameras are active at the same time. If you wish to have a mesh that is always visible on the screen and pickable, e.g. a button, you might add a second camera and light to the scene to exclusively show and light it.</p>
-<p>You&#39;ll need the 2nd camera to ONLY see the button. The button should also only be visible once.</p>
-<p>Notice that the default <code>layerMask</code> starts with the first 4 bits being 0, or off. If the 2nd camera and button were to both have a <code>layerMask</code> with one of the 4 values below, then the 2nd camera would only see the button: - 0x10000000 - 0x20000000 - 0x40000000 - 0x80000000</p>
-<p>It should also be noted that should a mesh with a <code>layerMask</code> of 0, can never be seen by anyone. This might be good for hiding things.</p>
+</div></div><div id="staticContent"><h2><a name="different-meshes-for-multiple-cameras-using-layermasks" class="anchor" href="#different-meshes-for-multiple-cameras-using-layermasks"></a>Different meshes for multiple cameras using Layermasks</h2><hr>
+<p>A <code>layerMask</code> is a number assigned to each mesh and camera.&nbsp; It is used at the bit level to indicate whether lights and cameras should shine-upon or show the mesh.&nbsp; The default value, 0x0FFFFFFF, will cause the mesh to be shined upon shown by any stock light and camera.</p>
+<p>The feature is used primarily when multiple cameras are active at the same time.&nbsp; If you wish to have a mesh that is always visible on the screen and pickable, e.g. a button, you might add a second camera and light to the scene to exclusively show and light it.&nbsp; </p>
+<p>You&#39;ll need the 2nd camera to ONLY see the button.&nbsp; The button should also only be visible once. </p>
+<p>Notice that the default <code>layerMask</code> starts with the first 4 bits being 0, or off.&nbsp; If the 2nd camera and button were to both have a <code>layerMask</code> with one of the 4 values below, then the 2nd camera would only see the button:</p>
+<ul>
+<li>0x10000000</li>
+<li>0x20000000</li>
+<li>0x40000000</li>
+<li>0x80000000</li>
+</ul>
+<p>It should also be noted that should a mesh with a <code>layerMask</code> of 0, can never be seen by anyone.&nbsp; This might be good for hiding things.</p>
 <p>To setup for multi-cameras:</p>
 <pre><code class="lang-javascript">if (scene.activeCameras.length === 0){
-    scene.activeCameras.push(scene.activeCamera);
-}
+&amp;nbsp;&amp;nbsp; &amp;nbsp;scene.activeCameras.push(scene.activeCamera);
+}&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; 
 var secondCamera = new Babylon.Camera(...);
 secondCamera.layerMask = 0x10000000;
 scene.activeCameras.push(secondCamera);
 
 var Button = new BABYLON.Mesh(...);
 Button.layerMask = 0x10000000;
-</code></pre>
-<h2><a name="lights" class="anchor" href="#lights"></a>Lights</h2><p>Unless the material for the meshes for the 2nd camera is purely emissive, this still leaves any light for the button shining on all the other meshes, and lights of the scene shining on the button. To keep scene lights from shining on the button, loop through the existing lights, and set the excludeWithLayerMask value:</p>
-<pre><code class="lang-javascript">for(var i = scene.lights.length - 1; i &gt;= 0; i--){
-    scene.lights[i].excludeWithLayerMask = 0x10000000;
+```&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;
+##Lights##
+Unless the material for the meshes for the 2nd camera is purely emissive, this still leaves any light for the button shining on all the other meshes, and lights of the scene shining on the button.&amp;nbsp; To keep scene lights from shining on the button, loop through the existing lights, and set the excludeWithLayerMask value:
+```javascript
+for(var i = scene.lights.length - 1; i &gt;= 0; i--){
+&amp;nbsp;&amp;nbsp; &amp;nbsp;scene.lights[i].excludeWithLayerMask = 0x10000000;
 }
-</code></pre>
-<p>Then make the &quot;button&quot; light:</p>
-<pre><code class="lang-javascript">var light = new BABYLON.Light(...);
+```&amp;nbsp; 
+Then make the &quot;button&quot; light:
+```javascript
+var light = new BABYLON.Light(...);
 light.includeOnlyWithLayerMask = 0x10000000;
 </code></pre>
 <p>Finally, if there may be more lights generated later, you can register a call-back whenever a light is added:</p>
 <pre><code class="lang-javascript">scene.onNewLightAdded = onNewLight;
-</code></pre>
-<p>This could be:</p>
-<pre><code class="lang-javascript">onNewLight = function (newLight, positionInArray, scene) {
-    newLight.excludeWithLayerMask = 0x10000000;
+```&amp;nbsp; 
+This could be:
+```javascript
+onNewLight = function (newLight, positionInArray, scene) {
+&amp;nbsp;&amp;nbsp; &amp;nbsp;newLight.excludeWithLayerMask = 0x10000000;
 };
-</code></pre>
-<h2><a name="gun-sight-example" class="anchor" href="#gun-sight-example"></a>Gun Sight Example</h2><p>Here is a simple example of using a 2nd orthographic camera which shows a gun sight. To keep it simple, emissive material was used to avoid lighting it. Just copy and paste it into any scene, then call it. The <code>layerMask</code> chosen also allows Dialog extension to inter-operate. Perhaps these could be combined to do a heads-up tank sight with range finder.</p>
-<p>A commercial quality implementation would probably not use <code>CreateBox()</code>, since it creates depth faces that cannot be seen straight-on anyway. It should also take into account a window size change, unless it is a tablet app.</p>
-<pre><code class="lang-javascript">function addGunSight(scene){
-    if (scene.activeCameras.length === 0){
-        scene.activeCameras.push(scene.activeCamera);
-    }
-    var secondCamera = new BABYLON.FreeCamera(&quot;GunSightCamera&quot;, new BABYLON.Vector3(0, 0, -50), scene);
-    secondCamera.mode = BABYLON.Camera.ORTHOGRAPHIC_CAMERA;
-    secondCamera.layerMask = 0x20000000;
-    scene.activeCameras.push(secondCamera);
+```&amp;nbsp; 
+##Gun Sight Example##
+Here is a simple example of using a 2nd orthographic camera which shows a gun sight.&amp;nbsp; To keep it simple, emissive material was used to avoid lighting it.&amp;nbsp; Just copy and paste it into any scene, then call it.&amp;nbsp; The `layerMask` chosen also allows Dialog extension to inter-operate.&amp;nbsp; Perhaps these could be combined to do a heads-up tank sight with range finder.&amp;nbsp; 
 
-    meshes = [];
-    var h = window.innerHeight;
-    var w = window.innerWidth;
+A commercial quality implementation would probably not use `CreateBox()`, since it creates depth faces that cannot be seen straight-on anyway.&amp;nbsp; It should also take into account a window size change, unless it is a tablet app.
+```javascript
+function addGunSight(scene){
+&amp;nbsp;&amp;nbsp; &amp;nbsp;if (scene.activeCameras.length === 0){
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; scene.activeCameras.push(scene.activeCamera);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;}&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; 
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var secondCamera = new BABYLON.FreeCamera(&quot;GunSightCamera&quot;, new BABYLON.Vector3(0, 0, -50), scene);&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; 
+&amp;nbsp;&amp;nbsp; &amp;nbsp;secondCamera.mode = BABYLON.Camera.ORTHOGRAPHIC_CAMERA;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;secondCamera.layerMask = 0x20000000;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;scene.activeCameras.push(secondCamera);
 
-    var y = BABYLON.Mesh.CreateBox(&quot;y&quot;, h * .2, scene);
-    y.scaling = new BABYLON.Vector3(0.05, 1, 1);
-    y.position = new BABYLON.Vector3(0, 0, 0);
-    meshes.push(y);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;meshes = [];
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var h = window.innerHeight;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var w = window.innerWidth;
 
-    var x = BABYLON.Mesh.CreateBox(&quot;x&quot;, h * .2, scene);
-    x.scaling = new BABYLON.Vector3(1, 0.05, 1);
-    x.position = new BABYLON.Vector3(0, 0, 0);
-    meshes.push(x);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var y = BABYLON.Mesh.CreateBox(&quot;y&quot;, h * .2, scene);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;y.scaling = new BABYLON.Vector3(0.05, 1, 1);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;y.position = new BABYLON.Vector3(0, 0, 0);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;meshes.push(y);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var x = BABYLON.Mesh.CreateBox(&quot;x&quot;, h * .2, scene);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;x.scaling = new BABYLON.Vector3(1, 0.05, 1);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;x.position = new BABYLON.Vector3(0, 0, 0);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;meshes.push(x);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; 
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var lineTop = BABYLON.Mesh.CreateBox(&quot;lineTop&quot;, w * .8, scene);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;lineTop.scaling = new BABYLON.Vector3(1, 0.005, 1);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;lineTop.position = new BABYLON.Vector3(0, h * 0.5, 0);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;meshes.push(lineTop);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var lineBottom = BABYLON.Mesh.CreateBox(&quot;lineBottom&quot;, w * .8, scene);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;lineBottom.scaling = new BABYLON.Vector3(1, 0.005, 1);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;lineBottom.position = new BABYLON.Vector3(0, h * -0.5, 0);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;meshes.push(lineBottom);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var lineLeft = BABYLON.Mesh.CreateBox(&quot;lineLeft&quot;, h, scene);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;lineLeft.scaling = new BABYLON.Vector3(0.010, 1,&amp;nbsp; 1);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;lineLeft.position = new BABYLON.Vector3(w * -.4, 0, 0);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;meshes.push(lineLeft);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var lineRight = BABYLON.Mesh.CreateBox(&quot;lineRight&quot;, h, scene);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;lineRight.scaling = new BABYLON.Vector3(0.010, 1,&amp;nbsp; 1);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;lineRight.position = new BABYLON.Vector3(w * .4, 0, 0);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;meshes.push(lineRight);
 
-    var lineTop = BABYLON.Mesh.CreateBox(&quot;lineTop&quot;, w * .8, scene);
-    lineTop.scaling = new BABYLON.Vector3(1, 0.005, 1);
-    lineTop.position = new BABYLON.Vector3(0, h * 0.5, 0);
-    meshes.push(lineTop);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var gunSight = BABYLON.Mesh.MergeMeshes(meshes);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;gunSight.name = &quot;gunSight&quot;;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;gunSight.layerMask = 0x20000000;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;gunSight.freezeWorldMatrix();
 
-    var lineBottom = BABYLON.Mesh.CreateBox(&quot;lineBottom&quot;, w * .8, scene);
-    lineBottom.scaling = new BABYLON.Vector3(1, 0.005, 1);
-    lineBottom.position = new BABYLON.Vector3(0, h * -0.5, 0);
-    meshes.push(lineBottom);
-
-    var lineLeft = BABYLON.Mesh.CreateBox(&quot;lineLeft&quot;, h, scene);
-    lineLeft.scaling = new BABYLON.Vector3(0.010, 1,  1);
-    lineLeft.position = new BABYLON.Vector3(w * -.4, 0, 0);
-    meshes.push(lineLeft);
-
-
-    var lineRight = BABYLON.Mesh.CreateBox(&quot;lineRight&quot;, h, scene);
-    lineRight.scaling = new BABYLON.Vector3(0.010, 1,  1);
-    lineRight.position = new BABYLON.Vector3(w * .4, 0, 0);
-    meshes.push(lineRight);
-
-    var gunSight = BABYLON.Mesh.MergeMeshes(meshes);
-    gunSight.name = &quot;gunSight&quot;;
-    gunSight.layerMask = 0x20000000;
-    gunSight.freezeWorldMatrix();
-
-    var mat = new BABYLON.StandardMaterial(&quot;emissive mat&quot;,scene);
-    mat.checkReadyOnlyOnce = true;
-    mat.ambientColor = new BABYLON.Color3(1,1,1);
-
-    gunSight.material = mat;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;var mat = new BABYLON.StandardMaterial(&quot;emissive mat&quot;,scene);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;mat.checkReadyOnlyOnce = true;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;mat.ambientColor = new BABYLON.Color3(1,1,1);
+&amp;nbsp;&amp;nbsp; &amp;nbsp;
+&amp;nbsp;&amp;nbsp; &amp;nbsp;gunSight.material = mat;
 }
 </code></pre>
+<p>[ end of doc ]</p>
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>    Github</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Documentation" target="_blank"><i class="fa fa-code-fork"></i>    Contribute</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
     $(this).text($(this).text().replace(/&nbsp;/gi, ''));
 });

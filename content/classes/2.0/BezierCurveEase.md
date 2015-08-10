@@ -1,9 +1,12 @@
 ---
-ID_PAGE: 5760
+ID_PAGE: 24929
 PG_TITLE: BezierCurveEase
 PG_VERSION: 2.0
 ---
-##new [BezierCurveEase](page.php?p=5760)(x1, y1, x2, y2)
+##new [BezierCurveEase](/classes/BezierCurveEase)(x1, y1, x2, y2)
+
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -14,19 +17,30 @@ optional | x2 | number |
 optional | y2 | number | 
 ---
 
-##Extends [EasingFunction](page.php?p=5748)
+##Extends [EasingFunction](/classes/EasingFunction)
 ##Members
 
 ###x1 : number
 
 
+
+
 ###y1 : number
+
+
 
 
 ###x2 : number
 
 
+
+
 ###y2 : number
+
+
+
+
+
 
 
 

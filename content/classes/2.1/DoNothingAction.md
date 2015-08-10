@@ -1,11 +1,12 @@
 ---
-ID_PAGE: 6670
+ID_PAGE: 25158
 PG_TITLE: DoNothingAction
 PG_VERSION: 2.1
 TAGS:
     - Action
 ---
-##new [DoNothingAction](page.php?p=6670)(triggerOptions, condition)
+##new [DoNothingAction](/classes/DoNothingAction)(triggerOptions, condition)
+
 
 
 
@@ -14,15 +15,17 @@ Do nothing
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
 optional | triggerOptions | any | The trigger options
-optional | condition | [Condition](page.php?p=6679) | [Condition](page.php?p=6679) to trigger the action
+optional | condition | [Condition](/classes/Condition) | [Condition](/classes/Condition) to trigger the action
 ---
 
 ##Extends
- [Action](page.php?p=6663)
+ [Action](/classes/Action)
 
 
 ##Methods

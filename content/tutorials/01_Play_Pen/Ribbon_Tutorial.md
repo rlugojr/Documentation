@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 25088
 PG_TITLE: Ribbon Tutorial
-TAGS:
-    - 01ThePlayPenTutorials
 ---
 Here you'll find almost everything to understand how the Ribbon object works and how to play with it. 
 

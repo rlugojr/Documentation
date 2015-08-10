@@ -1,24 +1,24 @@
 ---
-ID_PAGE: 3249
+ID_PAGE: 24457
 PG_TITLE: Camera
 PG_VERSION: 1.14
 ---
-##new [Camera](page.php?p=3249)(name, position, scene)
+##new [Camera](/classes/Camera)(name, position, scene)
 
-Creates a new [Camera](page.php?p=3249).
-A tutorial about [ArcRotateCamera](page.php?p=3250) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+Creates a new [Camera](/classes/Camera).
+A tutorial about [ArcRotateCamera](/classes/ArcRotateCamera) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | The camera name
- | position | [Vector3](page.php?p=3327) | The camera position
- | scene | [Scene](page.php?p=3274) | The scene linked to this camera
+ | position | [Vector3](/classes/Vector3) | The camera position
+ | scene | [Scene](/classes/Scene) | The scene linked to this camera
 ---
 
-##Extends [Node](page.php?p=3248)
+##Extends [Node](/classes/Node)
 ##Members
 
-###position : [Vector3](page.php?p=3327)
+###position : [Vector3](/classes/Vector3)
 
 
 Position of the camera
@@ -29,9 +29,9 @@ Position of the camera
 ###static ORTHOGRAPHIC_CAMERA : number
 
 
-###upVector : [Vector3](page.php?p=3327)
+###upVector : [Vector3](/classes/Vector3)
 
- [Camera](page.php?p=3249) up
+ [Camera](/classes/Camera) up
 
 ###orthoLeft : any
 
@@ -85,7 +85,7 @@ Inertia of the camera
 
 True if this camera is a subcamera, false otherwise
 
-###viewport : [Viewport](page.php?p=3331)
+###viewport : [Viewport](/classes/Viewport)
 
 
 The viewport
@@ -128,7 +128,7 @@ Attaches a given post process
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | postProcess | [PostProcess](page.php?p=3346) | @param postProcess
+ | postProcess | [PostProcess](/classes/PostProcess) | @param postProcess
 optional | insertAt | number | Index of postProcess to add
 ---
 
@@ -138,19 +138,19 @@ Detach a fiven post process
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | postProcess | [PostProcess](page.php?p=3346) | @param postProcess
+ | postProcess | [PostProcess](/classes/PostProcess) | @param postProcess
 optional | atIndices | any | Index of postProcess to detach
 ---
 
-###getWorldMatrix() &rarr; [Matrix](page.php?p=3329)
+###getWorldMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the worldMatrix
 
 
-###getViewMatrix() &rarr; [Matrix](page.php?p=3329)
+###getViewMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the viewMatrix
 
 
-###getProjectionMatrix(force) &rarr; [Matrix](page.php?p=3329)
+###getProjectionMatrix(force) &rarr; [Matrix](/classes/Matrix)
 Get the projectionMatrix
 
 ####Parameters

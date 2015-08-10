@@ -1,12 +1,17 @@
 ---
-ID_PAGE: 5861
+ID_PAGE: 25030
 PG_TITLE: OutlineRenderer
 PG_VERSION: 2.0
 ---
-##new [OutlineRenderer](page.php?p=5861)(scene)
+##new [OutlineRenderer](/classes/OutlineRenderer)(scene)
 
 
-Builds an [OutlineRenderer](page.php?p=5861) object
+
+Builds an [OutlineRenderer](/classes/OutlineRenderer) object
+
+
+
+
 
 
 
@@ -14,7 +19,7 @@ Builds an [OutlineRenderer](page.php?p=5861) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=5725) | The scene linked to the outline renderer
+ | scene | [Scene](/classes/Scene) | The scene linked to the outline renderer
 ---
 
 
@@ -25,11 +30,13 @@ Builds an [OutlineRenderer](page.php?p=5861) object
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | subMesh | [SubMesh](page.php?p=5834) | 
- | batch | [_InstancesBatch](page.php?p=5824) | 
+ | subMesh | [SubMesh](/classes/SubMesh) | 
+ | batch | [_InstancesBatch](/classes/_InstancesBatch) | 
 optional | useOverlay | boolean | 
 ---
 
@@ -38,6 +45,6 @@ optional | useOverlay | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | subMesh | [SubMesh](page.php?p=5834) | 
+ | subMesh | [SubMesh](/classes/SubMesh) | 
  | useInstances | boolean | 
 ---

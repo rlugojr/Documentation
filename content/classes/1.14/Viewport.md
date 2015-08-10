@@ -1,11 +1,11 @@
 ---
-ID_PAGE: 3331
+ID_PAGE: 24539
 PG_TITLE: Viewport
 PG_VERSION: 1.14
 ---
-##new [Viewport](page.php?p=3331)(x, y, width, height)
+##new [Viewport](/classes/Viewport)(x, y, width, height)
 
-Builds a new [Viewport](page.php?p=3331) object
+Builds a new [Viewport](/classes/Viewport) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -41,8 +41,8 @@ The height of the  viewport on the render-target surface in pixels
 
 ##Methods
 
-###toGlobal(engine) &rarr; [Viewport](page.php?p=3331)
-Returns a [Viewport](page.php?p=3331) object using the given engine width and height
+###toGlobal(engine) &rarr; [Viewport](/classes/Viewport)
+Returns a [Viewport](/classes/Viewport) object using the given engine width and height
 
 ####Parameters
  | Name | Type | Description

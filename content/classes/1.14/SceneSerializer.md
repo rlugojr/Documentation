@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 3381
+ID_PAGE: 24589
 PG_TITLE: SceneSerializer
 PG_VERSION: 1.14
 ---
@@ -17,5 +17,5 @@ Contain the serialization object which composed of useDelayedTextureLoading, aut
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=3274) | The scene
+ | scene | [Scene](/classes/Scene) | The scene
 ---

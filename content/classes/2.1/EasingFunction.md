@@ -1,10 +1,12 @@
 ---
-ID_PAGE: 6685
+ID_PAGE: 25173
 PG_TITLE: EasingFunction
 PG_VERSION: 2.1
 TAGS:
     - EasingFunction
 ---
+
+
 
 
 
@@ -15,12 +17,21 @@ TAGS:
 
 
 
+
+
 ###static EASINGMODE_EASEOUT : number
 
 
 
 
+
+
 ###static EASINGMODE_EASEINOUT : number
+
+
+
+
+
 
 
 
@@ -36,6 +47,8 @@ TAGS:
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -47,7 +60,11 @@ TAGS:
 
 
 
+
+
 ###easeInCore(gradient) &rarr; number
+
+
 
 
 

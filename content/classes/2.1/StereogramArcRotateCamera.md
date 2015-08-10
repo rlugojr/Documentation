@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6634
+ID_PAGE: 25122
 PG_TITLE: StereogramArcRotateCamera
 PG_VERSION: 2.1
 TAGS:
@@ -7,7 +7,7 @@ TAGS:
     - Camera
     - ArcRotateCamera
 ---
-##new [StereogramArcRotateCamera](page.php?p=6634)(name, alpha, beta, radius, target, eyeSpace, isVertical, scene)
+##new [StereogramArcRotateCamera](/classes/StereogramArcRotateCamera)(name, alpha, beta, radius, target, eyeSpace, isVertical, scene)
 
 ####Parameters
  | Name | Type | Description
@@ -19,11 +19,11 @@ TAGS:
  | target | any | 
  | eyeSpace | number | 
  | isVertical | boolean | 
- | scene | [Scene](page.php?p=6662) | 
+ | scene | [Scene](/classes/Scene) | 
 ---
 
 ##Extends
- [ArcRotateCamera](page.php?p=6632)
+ [ArcRotateCamera](/classes/ArcRotateCamera)
 
 
 ##Methods

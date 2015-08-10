@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 5918
+ID_PAGE: 25087
 PG_TITLE: Collection<T>
 PG_VERSION: 2.0
 ---
@@ -8,7 +8,12 @@ Create an array
 ##new Collection&lt;T&gt;()
 
 
+
 The collection constructor
+
+
+
+
 
 
 
@@ -24,8 +29,12 @@ Return the count
 
 
 
+
+
 ###add&lt;T&gt;(key, item) &rarr; number
 Create a new element into collection with the given key and item.
+
+
 
 
 
@@ -41,6 +50,8 @@ Remove the item for this given key.
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -49,6 +60,8 @@ Remove the item for this given key.
 
 ###item(key) &rarr; any
 Return the collection for this given key
+
+
 
 
 

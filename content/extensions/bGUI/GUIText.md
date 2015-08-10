@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 25105
 PG_TITLE: GUIText
-TAGS:
-    - bGUI
 ---
 ##new [GUIText](http://doc.babylonjs.com/page.php?p=25105)(name, width, height, options, guiSystem) - extends [GUIPanel](http://doc.babylonjs.com/page.php?p=25107)
 

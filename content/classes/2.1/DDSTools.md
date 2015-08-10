@@ -1,15 +1,34 @@
 ---
-ID_PAGE: 6861
+ID_PAGE: 25349
 PG_TITLE: DDSTools
 PG_VERSION: 2.1
 TAGS:
     - Tools
 ---
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ##Methods
 
 ###static GetDDSInfo(arrayBuffer) &rarr; DDSInfo
 Get info about DDS image files
+
+
+
+
+
 
 
 ####Parameters

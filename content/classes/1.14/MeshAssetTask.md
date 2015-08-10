@@ -1,13 +1,13 @@
 ---
-ID_PAGE: 3368
+ID_PAGE: 24576
 PG_TITLE: MeshAssetTask
 PG_VERSION: 1.14
 ---
 
-Load the task on the given [Mesh](page.php?p=3271)
-##new [MeshAssetTask](page.php?p=3368)(name, meshesNames, rootUrl, sceneFilename)
+Load the task on the given [Mesh](/classes/Mesh)
+##new [MeshAssetTask](/classes/MeshAssetTask)(name, meshesNames, rootUrl, sceneFilename)
 
-The [MeshAssetTask](page.php?p=3368) constructor
+The [MeshAssetTask](/classes/MeshAssetTask) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -39,17 +39,17 @@ The root url for this mesh
 
 The babylon file name
 
-###loadedMeshes : [AbstractMesh](page.php?p=3269)[]
+###loadedMeshes : [AbstractMesh](/classes/AbstractMesh)[]
 
 
 The loaded meshes
 
-###loadedParticleSystems : [ParticleSystem](page.php?p=3342)[]
+###loadedParticleSystems : [ParticleSystem](/classes/ParticleSystem)[]
 
 
 The loaded Particule system linked to this mesh
 
-###loadedSkeletons : [Skeleton](page.php?p=3296)[]
+###loadedSkeletons : [Skeleton](/classes/Skeleton)[]
 
 
 The loaded Skeletons linked to this mesh
@@ -79,7 +79,7 @@ Run the loading
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=3274) | The scene where mesh is.
+ | scene | [Scene](/classes/Scene) | The scene where mesh is.
  | onSuccess | () =&gt; void | Function call when the mesh is load successfully
  | onError | () =&gt; void | Function call when the mesh isn't load successfully
 ---

@@ -1,13 +1,13 @@
 ---
-ID_PAGE: 3372
+ID_PAGE: 24580
 PG_TITLE: TextureAssetTask
 PG_VERSION: 1.14
 ---
 
 Load task on the given texture
-##new [TextureAssetTask](page.php?p=3372)(name, url, noMipmap, invertY, samplingMode)
+##new [TextureAssetTask](/classes/TextureAssetTask)(name, url, noMipmap, invertY, samplingMode)
 
-The [TextureAssetTask](page.php?p=3372) constructor
+The [TextureAssetTask](/classes/TextureAssetTask) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -60,7 +60,7 @@ Function call when the mesh isn't load successfully
 
 True if is completed, false otherwise.
 
-###texture : [Texture](page.php?p=3319)
+###texture : [Texture](/classes/Texture)
 
 
 The texture
@@ -75,7 +75,7 @@ Run the loading
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=3274) | The scene where this texture is.
+ | scene | [Scene](/classes/Scene) | The scene where this texture is.
  | onSuccess | () =&gt; void | Function call when the mesh is load successfully
  | onError | () =&gt; void | Function call when the mesh isn't load successfully
 ---

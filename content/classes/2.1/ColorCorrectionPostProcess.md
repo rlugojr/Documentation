@@ -1,11 +1,11 @@
 ---
-ID_PAGE: 6794
+ID_PAGE: 25282
 PG_TITLE: ColorCorrectionPostProcess
 PG_VERSION: 2.1
 TAGS:
     - PostProcess
 ---
-##new [ColorCorrectionPostProcess](page.php?p=6794)(name, colorTableUrl, ratio, camera, samplingMode, engine, reusable)
+##new [ColorCorrectionPostProcess](/classes/ColorCorrectionPostProcess)(name, colorTableUrl, ratio, camera, samplingMode, engine, reusable)
 
 ####Parameters
  | Name | Type | Description
@@ -13,14 +13,14 @@ TAGS:
  | name | string | 
  | colorTableUrl | string | 
  | ratio | number | 
- | camera | [Camera](page.php?p=6631) | 
+ | camera | [Camera](/classes/Camera) | 
 optional | samplingMode | number | 
-optional | engine | [Engine](page.php?p=6629) | 
+optional | engine | [Engine](/classes/Engine) | 
 optional | reusable | boolean | 
 ---
 
 ##Extends
- [PostProcess](page.php?p=6790)
+ [PostProcess](/classes/PostProcess)
 
 
 ##Methods

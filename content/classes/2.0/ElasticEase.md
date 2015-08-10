@@ -1,9 +1,12 @@
 ---
-ID_PAGE: 5753
+ID_PAGE: 24922
 PG_TITLE: ElasticEase
 PG_VERSION: 2.0
 ---
-##new [ElasticEase](page.php?p=5753)(oscillations, springiness)
+##new [ElasticEase](/classes/ElasticEase)(oscillations, springiness)
+
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -12,13 +15,20 @@ optional | oscillations | number |
 optional | springiness | number | 
 ---
 
-##Extends [EasingFunction](page.php?p=5748)
+##Extends [EasingFunction](/classes/EasingFunction)
 ##Members
 
 ###oscillations : number
 
 
+
+
 ###springiness : number
+
+
+
+
+
 
 
 

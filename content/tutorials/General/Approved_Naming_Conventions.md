@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 22671
 PG_TITLE: Approved Naming Conventions
-TAGS:
-    - General
 ---
 If you want to contribute to babylon.js (What an *excellent* idea!), you should attempt to align your code with the following naming conventions:
 

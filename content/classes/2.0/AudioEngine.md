@@ -1,9 +1,12 @@
 ---
-ID_PAGE: 5762
+ID_PAGE: 24931
 PG_TITLE: AudioEngine
 PG_VERSION: 2.0
 ---
-##new [AudioEngine](page.php?p=5762)()
+##new [AudioEngine](/classes/AudioEngine)()
+
+
+
 
 
 ##Members
@@ -11,10 +14,19 @@ PG_VERSION: 2.0
 ###audioContext : AudioContext
 
 
+
+
 ###canUseWebAudio : boolean
 
 
+
+
 ###masterGain : GainNode
+
+
+
+
+
 
 
 ###WarnedWebAudioUnsupported : boolean
@@ -30,6 +42,8 @@ PG_VERSION: 2.0
 ###getGlobalVolume() &rarr; number
 
 
+
+
 ###setGlobalVolume(newVolume) &rarr; void
 
 ####Parameters
@@ -43,5 +57,5 @@ PG_VERSION: 2.0
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | analyser | [Analyser](page.php?p=5761) | 
+ | analyser | [Analyser](/classes/Analyser) | 
 ---

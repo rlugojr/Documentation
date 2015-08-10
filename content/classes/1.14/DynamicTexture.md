@@ -1,23 +1,23 @@
 ---
-ID_PAGE: 3320
+ID_PAGE: 24528
 PG_TITLE: DynamicTexture
 PG_VERSION: 1.14
 ---
-##new [DynamicTexture](page.php?p=3320)(name, options, scene, generateMipMaps, samplingMode)
+##new [DynamicTexture](/classes/DynamicTexture)(name, options, scene, generateMipMaps, samplingMode)
 
-Create a new [DynamicTexture](page.php?p=3320).
+Create a new [DynamicTexture](/classes/DynamicTexture).
 A tutorial about dynamic textures can be found here : http://blogs.msdn.com/b/eternalcoding/archive/2013/08/12/creating-a-3d-chart-for-your-windows-8-1-app-using-babylon-js.aspx
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the texture
  | options | any | Options of the dynamic texture
- | scene | [Scene](page.php?p=3274) | [Scene](page.php?p=3274) which contain the texture
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the texture
  | generateMipMaps | boolean | @param generateMipMaps
 optional | samplingMode | number | @param samplingMode
 ---
 
-##Extends [Texture](page.php?p=3319)
+##Extends [Texture](/classes/Texture)
 
 
 ##Methods
@@ -51,7 +51,7 @@ Draw a text on view
 optional | invertY | boolean | Invert the text on Y axis
 ---
 
-###clone() &rarr; [DynamicTexture](page.php?p=3320)
+###clone() &rarr; [DynamicTexture](/classes/DynamicTexture)
 Clone the dynamic texture
-@return [DynamicTexture](page.php?p=3320) A clone of the dynamic texture
+@return [DynamicTexture](/classes/DynamicTexture) A clone of the dynamic texture
 

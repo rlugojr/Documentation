@@ -1,13 +1,13 @@
 ---
-ID_PAGE: 3298
+ID_PAGE: 24506
 PG_TITLE: IntersectionInfo
 PG_VERSION: 1.14
 ---
 
 Get information of Intersection between two meshes
-##new [IntersectionInfo](page.php?p=3298)(bu, bv, distance)
+##new [IntersectionInfo](/classes/IntersectionInfo)(bu, bv, distance)
 
-The [IntersectionInfo](page.php?p=3298) constructor
+The [IntersectionInfo](/classes/IntersectionInfo) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---

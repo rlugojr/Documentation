@@ -1,14 +1,14 @@
 ---
-ID_PAGE: 5860
+ID_PAGE: 25029
 PG_TITLE: DepthRenderer
 PG_VERSION: 2.0
 ---
-##new [DepthRenderer](page.php?p=5860)(scene, type)
+##new [DepthRenderer](/classes/DepthRenderer)(scene, type)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=5725) | 
+ | scene | [Scene](/classes/Scene) | 
 optional | type | number | 
 ---
 
@@ -21,11 +21,11 @@ optional | type | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | subMesh | [SubMesh](page.php?p=5834) | 
+ | subMesh | [SubMesh](/classes/SubMesh) | 
  | useInstances | boolean | 
 ---
 
-###getDepthMap() &rarr; [RenderTargetTexture](page.php?p=5793)
+###getDepthMap() &rarr; [RenderTargetTexture](/classes/RenderTargetTexture)
 
 
 ###dispose() &rarr; void

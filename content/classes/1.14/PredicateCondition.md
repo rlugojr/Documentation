@@ -1,21 +1,21 @@
 ---
-ID_PAGE: 3291
+ID_PAGE: 24499
 PG_TITLE: PredicateCondition
 PG_VERSION: 1.14
 ---
 
 This condition uses a predicate to determine its state
-##new [PredicateCondition](page.php?p=3291)(actionManager, predicate)
+##new [PredicateCondition](/classes/PredicateCondition)(actionManager, predicate)
 
 The predicate condition constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | actionManager | [ActionManager](page.php?p=3288) | The action manager
+ | actionManager | [ActionManager](/classes/ActionManager) | The action manager
  | predicate | () =&gt; boolean | The predicate
 ---
 
-##Extends [Condition](page.php?p=3289)
+##Extends [Condition](/classes/Condition)
 ##Members
 
 ###predicate : () =&gt; boolean

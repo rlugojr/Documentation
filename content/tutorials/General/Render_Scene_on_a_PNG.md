@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 22691
 PG_TITLE: Render Scene on a PNG
-TAGS:
-    - General
 ---
 # Why is it better than "ctrl + prt scr" screenshot?
 

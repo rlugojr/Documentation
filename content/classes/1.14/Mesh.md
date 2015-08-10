@@ -1,21 +1,21 @@
 ---
-ID_PAGE: 3271
+ID_PAGE: 24479
 PG_TITLE: Mesh
 PG_VERSION: 1.14
 ---
 
-The [Mesh](page.php?p=3271) class extends [AbstractMesh](page.php?p=3269)
-##new [Mesh](page.php?p=3271)(name, scene)
+The [Mesh](/classes/Mesh) class extends [AbstractMesh](/classes/AbstractMesh)
+##new [Mesh](/classes/Mesh)(name, scene)
 
-The [Mesh](page.php?p=3271) constructor
+The [Mesh](/classes/Mesh) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | @param name
- | scene | [Scene](page.php?p=3274) | The scene where the mesh is
+ | scene | [Scene](/classes/Scene) | The scene where the mesh is
 ---
 
-##Extends [AbstractMesh](page.php?p=3269)
+##Extends [AbstractMesh](/classes/AbstractMesh)
 ##Members
 
 ###delayLoadState : number
@@ -23,10 +23,10 @@ The [Mesh](page.php?p=3271) constructor
 
 Delay load mesh state
 
-###instances : [InstancedMesh](page.php?p=3270)[]
+###instances : [InstancedMesh](/classes/InstancedMesh)[]
 
 
-Instances [Mesh](page.php?p=3271)
+Instances [Mesh](/classes/Mesh)
 
 ###delayLoadingFile : string
 
@@ -50,13 +50,13 @@ Returns the data of a specific vertex buffer
  | kind | string | The kind of vertex buffer
 ---
 
-###getVertexBuffer(kind) &rarr; [VertexBuffer](page.php?p=3340)
+###getVertexBuffer(kind) &rarr; [VertexBuffer](/classes/VertexBuffer)
 Get the vertex buffer
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | kind | any | The kind of vertex buffer (Defined in class [VertexBuffer](page.php?p=3340))
+ | kind | any | The kind of vertex buffer (Defined in class [VertexBuffer](/classes/VertexBuffer))
 ---
 
 ###isVerticesDataPresent(kind) &rarr; boolean
@@ -190,18 +190,18 @@ Render the mesh
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | subMesh | [SubMesh](page.php?p=3339) | The subMesh
+ | subMesh | [SubMesh](/classes/SubMesh) | The subMesh
 ---
 
-###getEmittedParticleSystems() &rarr; [ParticleSystem](page.php?p=3342)[]
+###getEmittedParticleSystems() &rarr; [ParticleSystem](/classes/ParticleSystem)[]
 Returns the list of particle system in which this mesh is the emitter.
 
 
-###getHierarchyEmittedParticleSystems() &rarr; [ParticleSystem](page.php?p=3342)[]
+###getHierarchyEmittedParticleSystems() &rarr; [ParticleSystem](/classes/ParticleSystem)[]
 Returns a list of particle system. For all results, at least one descendant of this mesh is the emitter of it.
 
 
-###getChildren() &rarr; [Node](page.php?p=3248)[]
+###getChildren() &rarr; [Node](/classes/Node)[]
 Returns the list of children of this mesh.
 
 
@@ -211,7 +211,7 @@ Returns true if this mesh is in the frustrum defined by the 6 planes given in pa
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](page.php?p=3330)[] | [Frustum](page.php?p=3332) plan of the mesh
+ | frustumPlanes | [Plane](/classes/Plane)[] | [Frustum](/classes/Frustum) plan of the mesh
 ---
 
 ###setMaterialByID(id) &rarr; void
@@ -233,17 +233,17 @@ Apply the given transformation to this mesh
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | transform | [Matrix](page.php?p=3329) | The transform matrix
+ | transform | [Matrix](/classes/Matrix) | The transform matrix
 ---
 
-###clone(name, newParent, doNotCloneChildren) &rarr; [Mesh](page.php?p=3271)
+###clone(name, newParent, doNotCloneChildren) &rarr; [Mesh](/classes/Mesh)
 Clone a mesh
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the mesh
- | newParent | [Node](page.php?p=3248) | His parent
+ | newParent | [Node](/classes/Node) | His parent
 optional | doNotCloneChildren | boolean | True if you want to clone children, false if you don't want to.
 ---
 
@@ -285,8 +285,8 @@ Updates normals and vertices to get a flat shading rendering.
 Warning: This may imply adding vertices to the mesh in order to get exactly 3 vertices per face.
 
 
-###createInstance(name) &rarr; [InstancedMesh](page.php?p=3270)
-Create a new instance of [BABYLON](page.php?p=3243).InstanceMesh
+###createInstance(name) &rarr; [InstancedMesh](/classes/InstancedMesh)
+Create a new instance of [InstanceMesh](/classes/InstanceMesh)
 
 ####Parameters
  | Name | Type | Description
@@ -298,7 +298,7 @@ Create a new instance of [BABYLON](page.php?p=3243).InstanceMesh
 Synchronize the instances
 
 
-###static CreateBox(name, size, scene, updatable) &rarr; [Mesh](page.php?p=3271)
+###static CreateBox(name, size, scene, updatable) &rarr; [Mesh](/classes/Mesh)
 Create a box with the given properties
 
 ####Parameters
@@ -306,12 +306,12 @@ Create a box with the given properties
 ---|---|---|---
  | name | string | The name of the box
  | size | number | The size of the box
- | scene | [Scene](page.php?p=3274) | The [Scene](page.php?p=3274) contains the new [Box](page.php?p=3396)
+ | scene | [Scene](/classes/Scene) | The [Scene](/classes/Scene) contains the new [Box](/classes/Box)
 optional | updatable | boolean | True if the vertices buffers'll be updated afterwards, false otherwise
 ---
 
-###static CreateSphere(name, segments, diameter, scene, updatable) &rarr; [Mesh](page.php?p=3271)
-Create a [Sphere](page.php?p=3397) with the given properties
+###static CreateSphere(name, segments, diameter, scene, updatable) &rarr; [Mesh](/classes/Mesh)
+Create a [Sphere](/classes/Sphere) with the given properties
 
 ####Parameters
  | Name | Type | Description
@@ -319,11 +319,11 @@ Create a [Sphere](page.php?p=3397) with the given properties
  | name | string | The name of the sphere
  | segments | number | The segments of the sphere
  | diameter | number | The diameter of the sphere
- | scene | [Scene](page.php?p=3274) | The scene contains the new sphere
+ | scene | [Scene](/classes/Scene) | The scene contains the new sphere
 optional | updatable | boolean | True if the vertices buffers'll be updated afterwards, false otherwise
 ---
 
-###static CreateCylinder(name, height, diameterTop, diameterBottom, tessellation, subdivisions, scene, updatable) &rarr; [Mesh](page.php?p=3271)
+###static CreateCylinder(name, height, diameterTop, diameterBottom, tessellation, subdivisions, scene, updatable) &rarr; [Mesh](/classes/Mesh)
 Create a cylinder with the given properties
 
 ####Parameters
@@ -335,25 +335,25 @@ Create a cylinder with the given properties
  | diameterBottom | number | Diameter at bottom of the cylinder
  | tessellation | number | Number of vertex to create each cercle
  | subdivisions | any | Subdivision of the cylinder
- | scene | [Scene](page.php?p=3274) | The scene contains the mesh
+ | scene | [Scene](/classes/Scene) | The scene contains the mesh
 optional | updatable | any | True if the vertices buffers'll be updated afterwards, false otherwise
 ---
 
-###static CreateTorus(name, diameter, thickness, tessellation, scene, updatable) &rarr; [Mesh](page.php?p=3271)
-Create a [Torus](page.php?p=3399) with the given properties
+###static CreateTorus(name, diameter, thickness, tessellation, scene, updatable) &rarr; [Mesh](/classes/Mesh)
+Create a [Torus](/classes/Torus) with the given properties
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | The name of the [Torus](page.php?p=3399)
- | diameter | number | The diameter of the [Torus](page.php?p=3399)
- | thickness | number | The thickness of the [Torus](page.php?p=3399)
- | tessellation | number | The tessellation of the [Torus](page.php?p=3399)
- | scene | [Scene](page.php?p=3274) | The scene contains the mesh
+ | name | string | The name of the [Torus](/classes/Torus)
+ | diameter | number | The diameter of the [Torus](/classes/Torus)
+ | thickness | number | The thickness of the [Torus](/classes/Torus)
+ | tessellation | number | The tessellation of the [Torus](/classes/Torus)
+ | scene | [Scene](/classes/Scene) | The scene contains the mesh
 optional | updatable | boolean | True if the vertices buffers'll be updated afterwards, false otherwise
 ---
 
-###static CreateTorusKnot(name, radius, tube, radialSegments, tubularSegments, p, q, scene, updatable) &rarr; [Mesh](page.php?p=3271)
+###static CreateTorusKnot(name, radius, tube, radialSegments, tubularSegments, p, q, scene, updatable) &rarr; [Mesh](/classes/Mesh)
 Create a TorusKnut with the given properties
 
 ####Parameters
@@ -366,66 +366,66 @@ Create a TorusKnut with the given properties
  | tubularSegments | number | @param tubularSegments
  | p | number | Describes up-and-down (P) winding numbers
  | q | number | Describes around-the-center (Q) winding numbers
- | scene | [Scene](page.php?p=3274) | The scene contains the mesh
+ | scene | [Scene](/classes/Scene) | The scene contains the mesh
 optional | updatable | boolean | True if the vertices buffers'll be updated afterwards, false otherwise
 ---
 
-###static CreateLines(name, points, scene, updatable) &rarr; [LinesMesh](page.php?p=3273)
+###static CreateLines(name, points, scene, updatable) &rarr; [LinesMesh](/classes/LinesMesh)
 Create a Line with the given properties
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | The name of the Line
- | points | [Vector3](page.php?p=3327)[] | The points of the Line
- | scene | [Scene](page.php?p=3274) | The scene contains the mesh
+ | points | [Vector3](/classes/Vector3)[] | The points of the Line
+ | scene | [Scene](/classes/Scene) | The scene contains the mesh
 optional | updatable | boolean | True if the vertices buffers'll be updated afterwards, false otherwise
 ---
 
-###static CreatePlane(name, size, scene, updatable) &rarr; [Mesh](page.php?p=3271)
-Create a [Plane](page.php?p=3330) with the given properties
+###static CreatePlane(name, size, scene, updatable) &rarr; [Mesh](/classes/Mesh)
+Create a [Plane](/classes/Plane) with the given properties
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | The name of the [Plane](page.php?p=3330)
+ | name | string | The name of the [Plane](/classes/Plane)
  | size | number | The size of the plane
- | scene | [Scene](page.php?p=3274) | The scene contains the mesh
+ | scene | [Scene](/classes/Scene) | The scene contains the mesh
 optional | updatable | boolean | True if the vertices buffers'll be updated afterwards, false otherwise
 ---
 
-###static CreateGround(name, width, height, subdivisions, scene, updatable) &rarr; [Mesh](page.php?p=3271)
-Create a [Ground](page.php?p=3400) with the given properties
+###static CreateGround(name, width, height, subdivisions, scene, updatable) &rarr; [Mesh](/classes/Mesh)
+Create a [Ground](/classes/Ground) with the given properties
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | The name of the [Ground](page.php?p=3400)
- | width | number | The width of the [Ground](page.php?p=3400)
- | height | number | The height of the [Ground](page.php?p=3400)
- | subdivisions | number | The subdivision of the [Ground](page.php?p=3400)
- | scene | [Scene](page.php?p=3274) | The scene contains the mesh
+ | name | string | The name of the [Ground](/classes/Ground)
+ | width | number | The width of the [Ground](/classes/Ground)
+ | height | number | The height of the [Ground](/classes/Ground)
+ | subdivisions | number | The subdivision of the [Ground](/classes/Ground)
+ | scene | [Scene](/classes/Scene) | The scene contains the mesh
 optional | updatable | boolean | True if the vertices buffers'll be updated afterwards, false otherwise
 ---
 
-###static CreateTiledGround(name, xmin, zmin, xmax, zmax, subdivisions, precision, scene, updatable) &rarr; [Mesh](page.php?p=3271); 
-Create a [TiledGround](page.php?p=3401) with the given properties
+###static CreateTiledGround(name, xmin, zmin, xmax, zmax, subdivisions, precision, scene, updatable) &rarr; [Mesh](/classes/Mesh); 
+Create a [TiledGround](/classes/TiledGround) with the given properties
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | The name of the [TiledGround](page.php?p=3401)
- | xmin | number | The xmin of the [Ground](page.php?p=3400)
- | zmin | number | The zmin of the [Ground](page.php?p=3400)
- | xmax | number | The xmax of the [Ground](page.php?p=3400)
- | zmax | number | The zmax of the [Ground](page.php?p=3400)
+ | name | string | The name of the [TiledGround](/classes/TiledGround)
+ | xmin | number | The xmin of the [Ground](/classes/Ground)
+ | zmin | number | The zmin of the [Ground](/classes/Ground)
+ | xmax | number | The xmax of the [Ground](/classes/Ground)
+ | zmax | number | The zmax of the [Ground](/classes/Ground)
  | subdivisions | {w: number; h: number; } | The number of tiles (subdivisions.w : in width; subdivisions.h : in height)
  | precision | { w: number; h: number; } | The number of subdivisions in each tile (precision.w : in width; precision.h : in height)
- | scene | [Scene](page.php?p=3274) | The scene contains the mesh
+ | scene | [Scene](/classes/Scene) | The scene contains the mesh
 optional | updatable | boolean | True if the vertices buffers'll be updated afterwards, false otherwise
 ---
 
-###static CreateGroundFromHeightMap(name, url, width, height, subdivisions, minHeight, maxHeight, scene, updatable) &rarr; [GroundMesh](page.php?p=3272)
+###static CreateGroundFromHeightMap(name, url, width, height, subdivisions, minHeight, maxHeight, scene, updatable) &rarr; [GroundMesh](/classes/GroundMesh)
 Create a GroundFromHeightMap
 
 ####Parameters
@@ -438,19 +438,19 @@ Create a GroundFromHeightMap
  | subdivisions | number | The number of subdivisions in the GroundFromHeightMap
  | minHeight | number |  minHeight of the new GFHM
  | maxHeight | number | The maximum height of the Height map
- | scene | [Scene](page.php?p=3274) | The scene contains the mesh
+ | scene | [Scene](/classes/Scene) | The scene contains the mesh
 optional | updatable | boolean | True if the vertices buffers'll be updated afterwards, false otherwise
 ---
 
-###static MinMax(meshes) &rarr; {min: [Vector3](page.php?p=3327); max: [Vector3](page.php?p=3327); }; 
+###static MinMax(meshes) &rarr; {min: [Vector3](/classes/Vector3); max: [Vector3](/classes/Vector3); }; 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | meshes | [AbstractMesh](page.php?p=3269)[] | @param meshes
+ | meshes | [AbstractMesh](/classes/AbstractMesh)[] | @param meshes
 ---
 
-###static Center(meshesOrMinMaxVector) &rarr; [Vector3](page.php?p=3327)
+###static Center(meshesOrMinMaxVector) &rarr; [Vector3](/classes/Vector3)
 
 ####Parameters
  | Name | Type | Description

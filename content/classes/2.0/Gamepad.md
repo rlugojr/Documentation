@@ -1,12 +1,15 @@
 ---
-ID_PAGE: 5876
+ID_PAGE: 25045
 PG_TITLE: Gamepad
 PG_VERSION: 2.0
 ---
-##new [Gamepad](page.php?p=5876)(id, index, browserGamepad)
+##new [Gamepad](/classes/Gamepad)(id, index, browserGamepad)
 
 
-Builds a [Gamepad](page.php?p=5876) object
+
+Builds a [Gamepad](/classes/Gamepad) object
+
+
 
 
 ####Parameters
@@ -23,35 +26,48 @@ Builds a [Gamepad](page.php?p=5876) object
 
 
 
+
 The gamepad id
+
 
 
 ###index : number
 
 
 
+
 The gamepad index
+
 
 
 ###browserGamepad : any
 
 
 
+
 The gamepad browser, sets the sticks axes
 
 
-###leftStick : [StickValues](page.php?p=5875)
+
+###leftStick : [StickValues](/classes/StickValues)
+
 
 
 
 The left stick values
 
 
-###rightStick : [StickValues](page.php?p=5875)
+
+###rightStick : [StickValues](/classes/StickValues)
+
 
 
 
 The right stick values
+
+
+
+
 
 
 
@@ -66,10 +82,12 @@ Binds an action to the left stick
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | callback | (values: [StickValues](page.php?p=5875)) =&gt; void | The action to bind
+ | callback | (values: [StickValues](/classes/StickValues)) =&gt; void | The action to bind
 ---
 
 ###onrightstickchanged(callback) &rarr; void
@@ -77,10 +95,12 @@ Binds an action to the right stick
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | callback | (values: [StickValues](page.php?p=5875)) =&gt; void | The action to bind
+ | callback | (values: [StickValues](/classes/StickValues)) =&gt; void | The action to bind
 ---
 
 ###update() &rarr; void

@@ -1,15 +1,15 @@
 ---
-ID_PAGE: 3274
+ID_PAGE: 24482
 PG_TITLE: Scene
 PG_VERSION: 1.14
 ---
-##new [Scene](page.php?p=3274)(engine)
+##new [Scene](/classes/Scene)(engine)
 
-Constructs a [Scene](page.php?p=3274) object with a given Babylon engine.
+Constructs a [Scene](/classes/Scene) object with a given Babylon engine.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | engine | [Engine](page.php?p=3247) | [Engine](page.php?p=3247) The babylon engine
+ | engine | [Engine](/classes/Engine) | [Engine](/classes/Engine) The babylon engine
 ---
 
 ##Members
@@ -58,14 +58,14 @@ True to clear the color buffer at each render, false either
 ###clearColor : any
 
 
-default : [Color3](page.php?p=3324)(0.2, 0.2, 0.3)
+default : [Color3](/classes/Color3)(0.2, 0.2, 0.3)
 
 The color of the scene when cleared
 
-###ambientColor : [Color3](page.php?p=3324)
+###ambientColor : [Color3](/classes/Color3)
 
 
-default : [Color3](page.php?p=3324)(0, 0, 0)
+default : [Color3](/classes/Color3)(0, 0, 0)
 
 The scene ambiant color
 
@@ -84,12 +84,12 @@ Function triggered just after rendering the scene
 
 Function triggered when the scene is deleted
 
-###beforeCameraRender : (camera: [Camera](page.php?p=3249)) =&gt; void
+###beforeCameraRender : (camera: [Camera](/classes/Camera)) =&gt; void
 
 
 Function triggered before the camera is rendered, with the concerned camera passed in argument
 
-###afterCameraRender : (camera: [Camera](page.php?p=3249)) =&gt; void
+###afterCameraRender : (camera: [Camera](/classes/Camera)) =&gt; void
 
 
 Function triggered after the camera is rendered, with the concerned camera passed in argument
@@ -101,17 +101,17 @@ default : false
 
 Forces the wireframe display of meshes
 
-###clipPlane : [Plane](page.php?p=3330)
+###clipPlane : [Plane](/classes/Plane)
 
 
-###onPointerDown : (evt: PointerEvent, pickInfo: [PickingInfo](page.php?p=3299)) =&gt; void
+###onPointerDown : (evt: PointerEvent, pickInfo: [PickingInfo](/classes/PickingInfo)) =&gt; void
 
 
 Function triggered when the pointer interacts with the scene
 
 The passed argument are the event and the element concerned with this event
 
-###cameraToUseForPointers : [Camera](page.php?p=3249)
+###cameraToUseForPointers : [Camera](/classes/Camera)
 
 
 The camera used for pointers
@@ -119,12 +119,12 @@ The camera used for pointers
 ###fogMode : number
 
 
-One of the following values : [Scene](page.php?p=3274).FOGMODE_NONE, [Scene](page.php?p=3274).FOGMODE_EXP, [Scene](page.php?p=3274).FOGMODE_EXP2 , [Scene](page.php?p=3274).FOGMODE_LINEAR
+One of the following values : [Scene](/classes/Scene).FOGMODE_NONE, [Scene](/classes/Scene).FOGMODE_EXP, [Scene](/classes/Scene).FOGMODE_EXP2 , [Scene](/classes/Scene).FOGMODE_LINEAR
 
-###fogColor : [Color3](page.php?p=3324)
+###fogColor : [Color3](/classes/Color3)
 
 
-default : [Color3](page.php?p=3324)(0.2, 0.2, 0.3)
+default : [Color3](/classes/Color3)(0.2, 0.2, 0.3)
 
 The fog color
 
@@ -140,7 +140,7 @@ The fog density
 
 default : 0
 
-Used with the [Scene](page.php?p=3274).FOGMODE_LINEAR fogMode
+Used with the [Scene](/classes/Scene).FOGMODE_LINEAR fogMode
 
 Where the fog starts
 
@@ -149,7 +149,7 @@ Where the fog starts
 
 default : 1000.0
 
-Used with the [Scene](page.php?p=3274).FOGMODE_LINEAR fogMode
+Used with the [Scene](/classes/Scene).FOGMODE_LINEAR fogMode
 
 Where the fog ends
 
@@ -160,42 +160,42 @@ default : true
 
 Enables or disable lights for this scene
 
-###lights : [Light](page.php?p=3264)[]
+###lights : [Light](/classes/Light)[]
 
 
-The array holding the list of [Light](page.php?p=3264) instances
+The array holding the list of [Light](/classes/Light) instances
 
-###cameras : [Camera](page.php?p=3249)[]
-
-
-The array holding the list of [Camera](page.php?p=3249) instances
-
-###activeCameras : [Camera](page.php?p=3249)[]
+###cameras : [Camera](/classes/Camera)[]
 
 
-The array holding the list of active [Camera](page.php?p=3249) instances
+The array holding the list of [Camera](/classes/Camera) instances
 
-###activeCamera : [Camera](page.php?p=3249)
+###activeCameras : [Camera](/classes/Camera)[]
+
+
+The array holding the list of active [Camera](/classes/Camera) instances
+
+###activeCamera : [Camera](/classes/Camera)
 
 
 The active camera for this scene
 
-###meshes : [AbstractMesh](page.php?p=3269)[]
+###meshes : [AbstractMesh](/classes/AbstractMesh)[]
 
 
 The array holding all meshes of this scene
 
-###materials : [Material](page.php?p=3312)[]
+###materials : [Material](/classes/Material)[]
 
 
 The array holding all materials of this scene
 
-###multiMaterials : [MultiMaterial](page.php?p=3313)[]
+###multiMaterials : [MultiMaterial](/classes/MultiMaterial)[]
 
 
 The array holding all multimaterials of this scene
 
-###defaultMaterial : [StandardMaterial](page.php?p=3315)
+###defaultMaterial : [StandardMaterial](/classes/StandardMaterial)
 
 
 The default material used on meshes when no material is affected
@@ -205,7 +205,7 @@ The default material used on meshes when no material is affected
 
 True if texture should be enabled, false otherwise
 
-###textures : [BaseTexture](page.php?p=3317)[]
+###textures : [BaseTexture](/classes/BaseTexture)[]
 
 
 The array holding all textures used in the scene
@@ -215,27 +215,27 @@ The array holding all textures used in the scene
 
 True if Particles should be enabled, false otherwise
 
-###particleSystems : [ParticleSystem](page.php?p=3342)[]
+###particleSystems : [ParticleSystem](/classes/ParticleSystem)[]
 
 
 The array holding all particle systems of this scene
 
-###spriteManagers : [SpriteManager](page.php?p=3367)[]
+###spriteManagers : [SpriteManager](/classes/SpriteManager)[]
 
 
 The array holding all sprite managers of this scene
 
-###layers : [Layer](page.php?p=3305)[]
+###layers : [Layer](/classes/Layer)[]
 
 
 The array holding all layers of this scene
 
-###skeletons : [Skeleton](page.php?p=3296)[]
+###skeletons : [Skeleton](/classes/Skeleton)[]
 
 
 The array holding all skeletons of this scene
 
-###lensFlareSystems : [LensFlareSystem](page.php?p=3307)[]
+###lensFlareSystems : [LensFlareSystem](/classes/LensFlareSystem)[]
 
 
 The array holding all lensflare systems of this scene
@@ -245,7 +245,7 @@ The array holding all lensflare systems of this scene
 
 True if collisions should be enabled, false otherwise
 
-###gravity : [Vector3](page.php?p=3327)
+###gravity : [Vector3](/classes/Vector3)
 
 
 Defines the gravity applied to this scene
@@ -255,12 +255,12 @@ Defines the gravity applied to this scene
 
 True if postProcesses should be enabled, false otherwise
 
-###postProcessManager : [PostProcessManager](page.php?p=3357)
+###postProcessManager : [PostProcessManager](/classes/PostProcessManager)
 
 
 The post process manager of this scene
 
-###postProcessRenderPipelineManager : [PostProcessRenderPipelineManager](page.php?p=3361)
+###postProcessRenderPipelineManager : [PostProcessRenderPipelineManager](/classes/PostProcessRenderPipelineManager)
 
 
 The post process render pipeline manager of this scene
@@ -270,7 +270,7 @@ The post process render pipeline manager of this scene
 
 True if custom render target should be enabled, false otherwise
 
-###customRenderTargets : [RenderTargetTexture](page.php?p=3321)[]
+###customRenderTargets : [RenderTargetTexture](/classes/RenderTargetTexture)[]
 
 
 The array holding all custom render targets of this scene
@@ -290,12 +290,12 @@ The array holding all imported mesh files
 
 The database this scene is saved into
 
-###actionManager : [ActionManager](page.php?p=3288)
+###actionManager : [ActionManager](/classes/ActionManager)
 
 
 The action manager of this scene
 
-###meshUnderPointer : [AbstractMesh](page.php?p=3269)
+###meshUnderPointer : [AbstractMesh](/classes/AbstractMesh)
 
 
 Contains the mesh under the pointer
@@ -314,15 +314,15 @@ The y coordinate of the pointer in this scene
 
 ##Methods
 
-###getBoundingBoxRenderer() &rarr; [BoundingBoxRenderer](page.php?p=3362)
+###getBoundingBoxRenderer() &rarr; [BoundingBoxRenderer](/classes/BoundingBoxRenderer)
 Returns the bounding box renderer
 
 
-###getOutlineRenderer() &rarr; [OutlineRenderer](page.php?p=3363)
+###getOutlineRenderer() &rarr; [OutlineRenderer](/classes/OutlineRenderer)
 Returns the outline rendrer
 
 
-###getEngine() &rarr; [Engine](page.php?p=3247)
+###getEngine() &rarr; [Engine](/classes/Engine)
 Returns the engine
 
 
@@ -418,7 +418,7 @@ Registers in an array the given function which will be called when the scene is 
  | func | () =&gt; void | The given function to call
 ---
 
-###beginAnimation(target, from, to, loop, speedRatio, onAnimationEnd, animatable) &rarr; [Animatable](page.php?p=3293)
+###beginAnimation(target, from, to, loop, speedRatio, onAnimationEnd, animatable) &rarr; [Animatable](/classes/Animatable)
 Begin an animation. All children animations will be launched too.
 
 ####Parameters
@@ -430,17 +430,17 @@ Begin an animation. All children animations will be launched too.
 optional | loop | boolean | If true, the animation will loop
 optional | speedRatio | number | default : 1. The speed ratio of this animation
 optional | onAnimationEnd | () =&gt; void | The function triggered on the end of the animation
-optional | animatable | [Animatable](page.php?p=3293) | An optional specific animation
+optional | animatable | [Animatable](/classes/Animatable) | An optional specific animation
 ---
 
-###beginDirectAnimation(target, animations, from, to, loop, speedRatio, onAnimationEnd) &rarr; [Animatable](page.php?p=3293)
+###beginDirectAnimation(target, animations, from, to, loop, speedRatio, onAnimationEnd) &rarr; [Animatable](/classes/Animatable)
 Begins a direct animation (no children animations)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | target | any | The animation target
- | animations | [Animation](page.php?p=3294)[] | An array of animations
+ | animations | [Animation](/classes/Animation)[] | An array of animations
  | from | number | The fps starting frame
  | to | number | The fps ending frame
 optional | loop | boolean | If true, the animation will loop
@@ -448,8 +448,8 @@ optional | speedRatio | number | default : 1.The speed ratio of this animation
 optional | onAnimationEnd | () =&gt; void | The function triggered on the end of the animation
 ---
 
-###getAnimatableByTarget(target) &rarr; [Animatable](page.php?p=3293)
-Returns the first [Animatable](page.php?p=3293) instance having the given target in the active animatable array
+###getAnimatableByTarget(target) &rarr; [Animatable](/classes/Animatable)
+Returns the first [Animatable](/classes/Animatable) instance having the given target in the active animatable array
 
 ####Parameters
  | Name | Type | Description
@@ -466,66 +466,48 @@ Stops the animation of the given target
  | target | any | The given target
 ---
 
-###getViewMatrix() &rarr; [Matrix](page.php?p=3329)
-Returns the view [Matrix](page.php?p=3329)
+###getViewMatrix() &rarr; [Matrix](/classes/Matrix)
+Returns the view [Matrix](/classes/Matrix)
 
 
-###getProjectionMatrix() &rarr; [Matrix](page.php?p=3329)
-Returns the projection [Matrix](page.php?p=3329)
+###getProjectionMatrix() &rarr; [Matrix](/classes/Matrix)
+Returns the projection [Matrix](/classes/Matrix)
 
 
-###getTransformMatrix() &rarr; [Matrix](page.php?p=3329)
-Returns the transform [Matrix](page.php?p=3329)
+###getTransformMatrix() &rarr; [Matrix](/classes/Matrix)
+Returns the transform [Matrix](/classes/Matrix)
 
 
 ###setTransformMatrix(view, projection) &rarr; void
-Sets the transform matrix by multiplying the given view [Matrix](page.php?p=3329) by the given projection [Matrix](page.php?p=3329)
+Sets the transform matrix by multiplying the given view [Matrix](/classes/Matrix) by the given projection [Matrix](/classes/Matrix)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | view | [Matrix](page.php?p=3329) | The given view [Matrix](page.php?p=3329)
- | projection | [Matrix](page.php?p=3329) | The given projection [Matrix](page.php?p=3329)
+ | view | [Matrix](/classes/Matrix) | The given view [Matrix](/classes/Matrix)
+ | projection | [Matrix](/classes/Matrix) | The given projection [Matrix](/classes/Matrix)
 ---
 
-###setActiveCameraByID(id) &rarr; [Camera](page.php?p=3249)
+###setActiveCameraByID(id) &rarr; [Camera](/classes/Camera)
 Sets the given camera as the active camera using its given id
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | The given id of the [Camera](page.php?p=3249)
+ | id | string | The given id of the [Camera](/classes/Camera)
 ---
 
-###setActiveCameraByName(name) &rarr; [Camera](page.php?p=3249)
-Sets the given [Camera](page.php?p=3249) as the active [Camera](page.php?p=3249) using its given name
+###setActiveCameraByName(name) &rarr; [Camera](/classes/Camera)
+Sets the given [Camera](/classes/Camera) as the active [Camera](/classes/Camera) using its given name
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | The given name of the [Camera](page.php?p=3249)
+ | name | string | The given name of the [Camera](/classes/Camera)
 ---
 
-###getMaterialByID(id) &rarr; [Material](page.php?p=3312)
-Returns the first [Material](page.php?p=3312) instance corresponding to the given id
-
-####Parameters
- | Name | Type | Description
----|---|---|---
- | id | string | The given id
----
-
-###getMaterialByName(name) &rarr; [Material](page.php?p=3312)
-Returns the first [Material](page.php?p=3312) instance having the given name
-
-####Parameters
- | Name | Type | Description
----|---|---|---
- | name | string | The given name
----
-
-###getCameraByID(id) &rarr; [Camera](page.php?p=3249)
-Returns the first [Camera](page.php?p=3249) instance using the given id
+###getMaterialByID(id) &rarr; [Material](/classes/Material)
+Returns the first [Material](/classes/Material) instance corresponding to the given id
 
 ####Parameters
  | Name | Type | Description
@@ -533,8 +515,8 @@ Returns the first [Camera](page.php?p=3249) instance using the given id
  | id | string | The given id
 ---
 
-###getCameraByName(name) &rarr; [Camera](page.php?p=3249)
-Returns the first [Camera](page.php?p=3249) instance corresponding to the given name
+###getMaterialByName(name) &rarr; [Material](/classes/Material)
+Returns the first [Material](/classes/Material) instance having the given name
 
 ####Parameters
  | Name | Type | Description
@@ -542,17 +524,8 @@ Returns the first [Camera](page.php?p=3249) instance corresponding to the given 
  | name | string | The given name
 ---
 
-###getLightByName(name) &rarr; [Light](page.php?p=3264)
-Returns the first [Light](page.php?p=3264) instance corresponding to the given name
-
-####Parameters
- | Name | Type | Description
----|---|---|---
- | name | string | The given name
----
-
-###getLightByID(id) &rarr; [Light](page.php?p=3264)
-Returns the first [Light](page.php?p=3264) instance using the given id
+###getCameraByID(id) &rarr; [Camera](/classes/Camera)
+Returns the first [Camera](/classes/Camera) instance using the given id
 
 ####Parameters
  | Name | Type | Description
@@ -560,8 +533,35 @@ Returns the first [Light](page.php?p=3264) instance using the given id
  | id | string | The given id
 ---
 
-###getGeometryByID(id) &rarr; [Geometry](page.php?p=3336)
-Returns the first [Geometry](page.php?p=3336) instance using the given id
+###getCameraByName(name) &rarr; [Camera](/classes/Camera)
+Returns the first [Camera](/classes/Camera) instance corresponding to the given name
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | name | string | The given name
+---
+
+###getLightByName(name) &rarr; [Light](/classes/Light)
+Returns the first [Light](/classes/Light) instance corresponding to the given name
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | name | string | The given name
+---
+
+###getLightByID(id) &rarr; [Light](/classes/Light)
+Returns the first [Light](/classes/Light) instance using the given id
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | id | string | The given id
+---
+
+###getGeometryByID(id) &rarr; [Geometry](/classes/Geometry)
+Returns the first [Geometry](/classes/Geometry) instance using the given id
 
 ####Parameters
  | Name | Type | Description
@@ -570,21 +570,21 @@ Returns the first [Geometry](page.php?p=3336) instance using the given id
 ---
 
 ###pushGeometry(geometry, force) &rarr; boolean
-Pushes the given [Geometry](page.php?p=3336) to into the list of geometries of this scene
+Pushes the given [Geometry](/classes/Geometry) to into the list of geometries of this scene
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | geometry | [Geometry](page.php?p=3336) | The given geometry
+ | geometry | [Geometry](/classes/Geometry) | The given geometry
 optional | force | boolean | True to push the geometry even if it is not found in the list of geometries of the scene, false otherwise
 ---
 
-###getGeometries() &rarr; [Geometry](page.php?p=3336)[]
+###getGeometries() &rarr; [Geometry](/classes/Geometry)[]
 Returns the list of geometries of this scene
 
 
-###getMeshByID(id) &rarr; [AbstractMesh](page.php?p=3269)
-Returns the first [Mesh](page.php?p=3271) instance using the given id
+###getMeshByID(id) &rarr; [AbstractMesh](/classes/AbstractMesh)
+Returns the first [Mesh](/classes/Mesh) instance using the given id
 
 ####Parameters
  | Name | Type | Description
@@ -592,8 +592,8 @@ Returns the first [Mesh](page.php?p=3271) instance using the given id
  | id | string | The given id
 ---
 
-###getLastMeshByID(id) &rarr; [AbstractMesh](page.php?p=3269)
-Returns the last [Mesh](page.php?p=3271) instance of the array of meshes using the given id
+###getLastMeshByID(id) &rarr; [AbstractMesh](/classes/AbstractMesh)
+Returns the last [Mesh](/classes/Mesh) instance of the array of meshes using the given id
 
 ####Parameters
  | Name | Type | Description
@@ -601,7 +601,7 @@ Returns the last [Mesh](page.php?p=3271) instance of the array of meshes using t
  | id | string | The given id
 ---
 
-###getLastEntryByID(id) &rarr; [Node](page.php?p=3248)
+###getLastEntryByID(id) &rarr; [Node](/classes/Node)
 Returns one of the last mesh, camera or light having the given id
 
 ####Parameters
@@ -610,8 +610,8 @@ Returns one of the last mesh, camera or light having the given id
  | id | string | The given id
 ---
 
-###getMeshByName(name) &rarr; [AbstractMesh](page.php?p=3269)
-Returns the [Mesh](page.php?p=3271) instance having the given name
+###getMeshByName(name) &rarr; [AbstractMesh](/classes/AbstractMesh)
+Returns the [Mesh](/classes/Mesh) instance having the given name
 
 ####Parameters
  | Name | Type | Description
@@ -619,8 +619,8 @@ Returns the [Mesh](page.php?p=3271) instance having the given name
  | name | string | The given name
 ---
 
-###getLastSkeletonByID(id) &rarr; [Skeleton](page.php?p=3296)
-Returns the last instance of [Skeleton](page.php?p=3296) using the given id
+###getLastSkeletonByID(id) &rarr; [Skeleton](/classes/Skeleton)
+Returns the last instance of [Skeleton](/classes/Skeleton) using the given id
 
 ####Parameters
  | Name | Type | Description
@@ -628,8 +628,8 @@ Returns the last instance of [Skeleton](page.php?p=3296) using the given id
  | id | string | The given id
 ---
 
-###getSkeletonById(id) &rarr; [Skeleton](page.php?p=3296)
-Returns the first [Skeleton](page.php?p=3296) instance using the given id
+###getSkeletonById(id) &rarr; [Skeleton](/classes/Skeleton)
+Returns the first [Skeleton](/classes/Skeleton) instance using the given id
 
 ####Parameters
  | Name | Type | Description
@@ -637,8 +637,8 @@ Returns the first [Skeleton](page.php?p=3296) instance using the given id
  | id | string | The given id
 ---
 
-###getSkeletonByName(name) &rarr; [Skeleton](page.php?p=3296)
-Returns the first [Skeleton](page.php?p=3296) instance corresponding to the given name
+###getSkeletonByName(name) &rarr; [Skeleton](/classes/Skeleton)
+Returns the first [Skeleton](/classes/Skeleton) instance corresponding to the given name
 
 ####Parameters
  | Name | Type | Description
@@ -652,7 +652,7 @@ Tests if the given mesh is active or not
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](page.php?p=3271) | The given mesh
+ | mesh | [Mesh](/classes/Mesh) | The given mesh
 ---
 
 ###updateTransformMatrix(force) &rarr; void
@@ -665,7 +665,7 @@ optional | force | boolean | True to force the transform matrix update even if t
 ---
 
 ###render() &rarr; void
-Renders this [Scene](page.php?p=3274)
+Renders this [Scene](/classes/Scene)
 
 
 ###dispose() &rarr; void
@@ -682,7 +682,7 @@ optional | maxCapacity | number | default : 64 The maximum capacity of the octre
 optional | maxDepth | number | default : 2 The maximum depth of the octree
 ---
 
-###createPickingRay(x, y, world, camera) &rarr; [Ray](page.php?p=3333)
+###createPickingRay(x, y, world, camera) &rarr; [Ray](/classes/Ray)
 Creates a picking ray in the current view.
 
 ####Parameters
@@ -690,11 +690,11 @@ Creates a picking ray in the current view.
 ---|---|---|---
  | x | number | The mouse X coordinate in the render canvas
  | y | number | The mouse Y coordinate in the render canvas
- | world | [Matrix](page.php?p=3329) | The world [Matrix](page.php?p=3329)
- | camera | [Camera](page.php?p=3249) | The given [Camera](page.php?p=3249)
+ | world | [Matrix](/classes/Matrix) | The world [Matrix](/classes/Matrix)
+ | camera | [Camera](/classes/Camera) | The given [Camera](/classes/Camera)
 ---
 
-###pick(x, y, predicate, fastCheck, camera) &rarr; [PickingInfo](page.php?p=3299)
+###pick(x, y, predicate, fastCheck, camera) &rarr; [PickingInfo](/classes/PickingInfo)
 Launch a ray to try to pick a mesh in the scene
 
 ####Parameters
@@ -702,19 +702,19 @@ Launch a ray to try to pick a mesh in the scene
 ---|---|---|---
  | x | number | X position on screen
  | y | number | Y position on screen
-optional | predicate | (mesh: [AbstractMesh](page.php?p=3269)) =&gt; boolean | Predicate function used to determine eligible meshes. Can be set to null. In this case, a mesh must be enabled, visible and with isPickable set to true
+optional | predicate | (mesh: [AbstractMesh](/classes/AbstractMesh)) =&gt; boolean | Predicate function used to determine eligible meshes. Can be set to null. In this case, a mesh must be enabled, visible and with isPickable set to true
 optional | fastCheck | boolean | Launch a fast check only using the bounding boxes. Can be set to null.
-optional | camera | [Camera](page.php?p=3249) | [Camera](page.php?p=3249) to use for computing the picking ray. Can be set to null. In this case, the scene.activeCamera will be used
+optional | camera | [Camera](/classes/Camera) | [Camera](/classes/Camera) to use for computing the picking ray. Can be set to null. In this case, the scene.activeCamera will be used
 ---
 
-###pickWithRay(ray, predicate, fastCheck) &rarr; [PickingInfo](page.php?p=3299)
+###pickWithRay(ray, predicate, fastCheck) &rarr; [PickingInfo](/classes/PickingInfo)
 Function used to pick a mesh by giving a ray (instead of a position).
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](page.php?p=3333) | The given [Ray](page.php?p=3333)
- | predicate | (mesh: [Mesh](page.php?p=3271)) =&gt; boolean | Predicate function used to determine eligible meshes. Can be set to null. In this case, a mesh must be enabled, visible and with isPickable set to true
+ | ray | [Ray](/classes/Ray) | The given [Ray](/classes/Ray)
+ | predicate | (mesh: [Mesh](/classes/Mesh)) =&gt; boolean | Predicate function used to determine eligible meshes. Can be set to null. In this case, a mesh must be enabled, visible and with isPickable set to true
 optional | fastCheck | boolean | Launch a fast check only using the bounding boxes. Can be set to null.
 ---
 
@@ -724,14 +724,14 @@ The action OnPointerOutTrigger and OnPointerOverTrigger are triggered for the gi
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](page.php?p=3269) | The given mesh
+ | mesh | [AbstractMesh](/classes/AbstractMesh) | The given mesh
 ---
 
-###getPointerOverMesh() &rarr; [AbstractMesh](page.php?p=3269)
+###getPointerOverMesh() &rarr; [AbstractMesh](/classes/AbstractMesh)
 Returns the pointer over the mesh
 
 
-###getPhysicsEngine() &rarr; [PhysicsEngine](page.php?p=3343)
+###getPhysicsEngine() &rarr; [PhysicsEngine](/classes/PhysicsEngine)
 Returns the physic engine used for this scene
 
 
@@ -741,8 +741,8 @@ Enable the physic engine in this scene.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gravity | [Vector3](page.php?p=3327) | default : [Vector3](page.php?p=3327)(0, 0, -9.82). The scene gravity
-optional | plugin | IPhysicsEnginePlugin | default : [OimoJSPlugin](page.php?p=3345). The physics plugin used
+ | gravity | [Vector3](/classes/Vector3) | default : [Vector3](/classes/Vector3)(0, 0, -9.82). The scene gravity
+optional | plugin | IPhysicsEnginePlugin | default : [OimoJSPlugin](/classes/OimoJSPlugin). The physics plugin used
 ---
 
 ###disablePhysicsEngine() &rarr; void
@@ -759,7 +759,7 @@ Sets the given gracvity to the loaded physic engine
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gravity | [Vector3](page.php?p=3327) | The given gravity
+ | gravity | [Vector3](/classes/Vector3) | The given gravity
 ---
 
 ###createCompoundImpostor(parts, options) &rarr; any
@@ -768,7 +768,7 @@ Creates an impostor composed of the given parts
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | parts | any | The array of object build this way {mesh: [Mesh](page.php?p=3271), impostor: number}
+ | parts | any | The array of object build this way {mesh: [Mesh](/classes/Mesh), impostor: number}
  | options | PhysicsBodyCreationOptions | An object build this way {mass: number, friction: number, restitution: number}
 ---
 
@@ -781,7 +781,7 @@ Unregister the compound impostor in the physic engine.
  | compound | any | The param type is the one used by the physics plugin
 ---
 
-###getMeshesByTags(tagsQuery) &rarr; [Mesh](page.php?p=3271)[]
+###getMeshesByTags(tagsQuery) &rarr; [Mesh](/classes/Mesh)[]
 Returns the list of meshes corresponding to the tag query given in parameter
 
 ####Parameters
@@ -790,7 +790,7 @@ Returns the list of meshes corresponding to the tag query given in parameter
  | tagsQuery | string | The tags query, example : (tag1 &amp;&amp; (tag2 || tag4 || !tag5))
 ---
 
-###getCamerasByTags(tagsQuery) &rarr; [Camera](page.php?p=3249)[]
+###getCamerasByTags(tagsQuery) &rarr; [Camera](/classes/Camera)[]
 Returns the list of cameras corresponding to the tag query given in parameter
 
 ####Parameters
@@ -799,7 +799,7 @@ Returns the list of cameras corresponding to the tag query given in parameter
  | tagsQuery | string | The tags query, example : (tag1 &amp;&amp; (tag2 || tag4 || !tag5))
 ---
 
-###getLightsByTags(tagsQuery) &rarr; [Light](page.php?p=3264)[]
+###getLightsByTags(tagsQuery) &rarr; [Light](/classes/Light)[]
 Returns the list of lights corresponding to the tag query given in parameter
 
 ####Parameters
@@ -808,7 +808,7 @@ Returns the list of lights corresponding to the tag query given in parameter
  | tagsQuery | string | The tags query, example : (tag1 &amp;&amp; (tag2 || tag4 || !tag5))
 ---
 
-###getMaterialByTags(tagsQuery) &rarr; [Material](page.php?p=3312)[]
+###getMaterialByTags(tagsQuery) &rarr; [Material](/classes/Material)[]
 Returns the list of materials corresponding to the tag query given in parameter
 
 ####Parameters

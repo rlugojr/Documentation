@@ -1,12 +1,15 @@
 ---
-ID_PAGE: 6834
+ID_PAGE: 25322
 PG_TITLE: HardwareScalingOptimization
 PG_VERSION: 2.1
 TAGS:
     - Scene
     - SceneOptimization
 ---
-##new [HardwareScalingOptimization](page.php?p=6834)(priority, maximumScale)
+##new [HardwareScalingOptimization](/classes/HardwareScalingOptimization)(priority, maximumScale)
+
+
+
 
 
 
@@ -19,10 +22,12 @@ optional | maximumScale | number |
 ---
 
 ##Extends
- [SceneOptimization](page.php?p=6832)
+ [SceneOptimization](/classes/SceneOptimization)
 ##Members
 
 ###priority : number
+
+
 
 
 
@@ -32,7 +37,9 @@ optional | maximumScale | number |
 
 
 
-###apply : (scene: [Scene](page.php?p=6662)) =&gt; boolean
+
+
+###apply : (scene: [Scene](/classes/Scene)) =&gt; boolean
 
 
 

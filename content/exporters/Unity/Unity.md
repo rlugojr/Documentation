@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 25111
 PG_TITLE: Unity
-TAGS:
-    - Unity
 ---
 Unity 5 to Babylon.js exporter
 ==============================

@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 3344
+ID_PAGE: 24552
 PG_TITLE: CannonJSPlugin
 PG_VERSION: 1.14
 ---
@@ -13,7 +13,7 @@ The cannonJS physic engine, more info [there](http://cannonjs.org/)
 
 Tests if the given value is under the epsilon value
 
-###updateBodyPosition : (mesh: [AbstractMesh](page.php?p=3269)) =&gt; void
+###updateBodyPosition : (mesh: [AbstractMesh](/classes/AbstractMesh)) =&gt; void
 
 
 Updates the position of the body using the given mesh rotation
@@ -46,7 +46,7 @@ Applies the given gravity into the world
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gravity | [Vector3](page.php?p=3327) | The given gravity
+ | gravity | [Vector3](/classes/Vector3) | The given gravity
 ---
 
 ###registerMesh(mesh, impostor, options) &rarr; any
@@ -55,7 +55,7 @@ Registers a mesh
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](page.php?p=3269) | The mesh to register
+ | mesh | [AbstractMesh](/classes/AbstractMesh) | The mesh to register
  | impostor | number | The impostor to use
 optional | options | PhysicsBodyCreationOptions | An object build this way {mass: number, friction: number, restitution: number}
 ---
@@ -66,7 +66,7 @@ Registers meshes as compound
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | parts | PhysicsCompoundBodyPart[] | The array of object build this way {mesh: [Mesh](page.php?p=3271), impostor: number}
+ | parts | PhysicsCompoundBodyPart[] | The array of object build this way {mesh: [Mesh](/classes/Mesh), impostor: number}
  | options | PhysicsBodyCreationOptions | An object build this way {mass: number, friction: number, restitution: number}
 ---
 
@@ -76,7 +76,7 @@ Removes a mesh from the workd
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](page.php?p=3269) | The given mesh
+ | mesh | [AbstractMesh](/classes/AbstractMesh) | The given mesh
 ---
 
 ###applyImpulse(mesh, force, contactPoint) &rarr; void
@@ -85,9 +85,9 @@ Applies a force to the given mesh
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](page.php?p=3269) | The given mesh
- | force | [Vector3](page.php?p=3327) | The force to apply
- | contactPoint | [Vector3](page.php?p=3327) | The contact point on the given mesh
+ | mesh | [AbstractMesh](/classes/AbstractMesh) | The given mesh
+ | force | [Vector3](/classes/Vector3) | The force to apply
+ | contactPoint | [Vector3](/classes/Vector3) | The contact point on the given mesh
 ---
 
 ###createLink(mesh1, mesh2, pivot1, pivot2) &rarr; boolean
@@ -96,14 +96,14 @@ Create a physical link between two given meshes
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh1 | [AbstractMesh](page.php?p=3269) | The first mesh to link
- | mesh2 | [AbstractMesh](page.php?p=3269) | The second mesh to link
- | pivot1 | [Vector3](page.php?p=3327) | The point relative to the center of mass of the first given mesh
- | pivot2 | [Vector3](page.php?p=3327) | The point relative to the center of mass of the second given mesh
+ | mesh1 | [AbstractMesh](/classes/AbstractMesh) | The first mesh to link
+ | mesh2 | [AbstractMesh](/classes/AbstractMesh) | The second mesh to link
+ | pivot1 | [Vector3](/classes/Vector3) | The point relative to the center of mass of the first given mesh
+ | pivot2 | [Vector3](/classes/Vector3) | The point relative to the center of mass of the second given mesh
 ---
 
 ###dispose() &rarr; void
-Disposes the [CannonJSPlugin](page.php?p=3344)
+Disposes the [CannonJSPlugin](/classes/CannonJSPlugin)
 
 
 ###isSupported() &rarr; boolean

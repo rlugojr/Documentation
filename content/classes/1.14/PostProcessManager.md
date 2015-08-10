@@ -1,16 +1,16 @@
 ---
-ID_PAGE: 3357
+ID_PAGE: 24565
 PG_TITLE: PostProcessManager
 PG_VERSION: 1.14
 ---
-##new [PostProcessManager](page.php?p=3357)(scene)
+##new [PostProcessManager](/classes/PostProcessManager)(scene)
 
 Creates a new post process manager.
 A tutorial about post process can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-postprocesses)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=3274) | The scene linked to this postprocess
+ | scene | [Scene](/classes/Scene) | The scene linked to this postprocess
 ---
 
 

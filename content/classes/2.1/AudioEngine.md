@@ -1,11 +1,14 @@
 ---
-ID_PAGE: 6699
+ID_PAGE: 25187
 PG_TITLE: AudioEngine
 PG_VERSION: 2.1
 TAGS:
     - Audio
 ---
-##new [AudioEngine](page.php?p=6699)()
+##new [AudioEngine](/classes/AudioEngine)()
+
+
+
 
 
 
@@ -18,7 +21,14 @@ TAGS:
 
 
 
+
+
 ###masterGain : GainNode
+
+
+
+
+
 
 
 
@@ -38,6 +48,8 @@ TAGS:
 
 
 
+
+
 ##Methods
 
 ###dispose() &rarr; void
@@ -46,6 +58,8 @@ TAGS:
 
 
 ###getGlobalVolume() &rarr; number
+
+
 
 
 
@@ -65,5 +79,5 @@ TAGS:
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | analyser | [Analyser](page.php?p=6698) | 
+ | analyser | [Analyser](/classes/Analyser) | 
 ---

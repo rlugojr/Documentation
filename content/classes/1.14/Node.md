@@ -1,11 +1,11 @@
 ---
-ID_PAGE: 3248
+ID_PAGE: 24456
 PG_TITLE: Node
 PG_VERSION: 1.14
 ---
-##new [Node](page.php?p=3248)(name, scene)
+##new [Node](/classes/Node)(name, scene)
 
-Empty default constructor. A node is the super class of a [BABYLON](page.php?p=3243).Mesh, [BABYLON](page.php?p=3243).Light, and [BABYLON](page.php?p=3243).Camera.
+Empty default constructor. A node is the super class of a [Mesh](/classes/Mesh), [Light](/classes/Light), and [Camera](/classes/Camera).
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -15,7 +15,7 @@ Empty default constructor. A node is the super class of a [BABYLON](page.php?p=3
 
 ##Members
 
-###parent : [Node](page.php?p=3248)
+###parent : [Node](/classes/Node)
 
 
 The parent node of the node
@@ -35,12 +35,12 @@ The id of the node
 
 The state of the node
 
-###animations : [Animation](page.php?p=3294)[]
+###animations : [Animation](/classes/Animation)[]
 
 
 The animations of the node
 
-###onReady : (node: [Node](page.php?p=3248)) =&gt; void
+###onReady : (node: [Node](/classes/Node)) =&gt; void
 
 
 Called when node is ready
@@ -49,15 +49,15 @@ Called when node is ready
 
 ##Methods
 
-###getScene() &rarr; [Scene](page.php?p=3274)
+###getScene() &rarr; [Scene](/classes/Scene)
 Get the scene linked to this node
 
 
-###getEngine() &rarr; [Engine](page.php?p=3247)
+###getEngine() &rarr; [Engine](/classes/Engine)
 Get the engine linked to this node
 
 
-###getWorldMatrix() &rarr; [Matrix](page.php?p=3329)
+###getWorldMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the world matrix
 
 
@@ -115,9 +115,9 @@ Return true if the node is descendant of the specified other node
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ancestor | [Node](page.php?p=3248) | The ancestor node to test
+ | ancestor | [Node](/classes/Node) | The ancestor node to test
 ---
 
-###getDescendants() &rarr; [Node](page.php?p=3248)[]
+###getDescendants() &rarr; [Node](/classes/Node)[]
 Get the descendants of the node
 

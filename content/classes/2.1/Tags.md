@@ -1,14 +1,18 @@
 ---
-ID_PAGE: 6846
+ID_PAGE: 25334
 PG_TITLE: Tags
 PG_VERSION: 2.1
 ---
- [Tags](page.php?p=6846) can be added to ANY javascript object (not necessarily reserved to BabylonJS) by calling [BABYLON](page.php?p=6625).Tags.AddTagsTo.
- [BABYLON](page.php?p=6625).Tags.MatchesQuery can be used to check if a javascript object matches a &quot;boolean&quot; query&lt;br/&gt;
+ [Tags](/classes/Tags) can be added to ANY javascript object (not necessarily reserved to BabylonJS) by calling [Tags](/classes/Tags).AddTagsTo.
+ [Tags](/classes/Tags).MatchesQuery can be used to check if a javascript object matches a &quot;boolean&quot; query&lt;br/&gt;
 
 The tags 'true' and 'false' are reserved and cannot be used as tags
 
 a tag cannot start with '||', '&amp;&amp;', and '!' it cannot contain whitespaces
+
+
+
+
 
 
 
@@ -29,6 +33,8 @@ Enable the tag system for the given object.
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -37,6 +43,8 @@ Enable the tag system for the given object.
 
 ###static DisableFor(obj) &rarr; void
 Disable the tag system for the given object
+
+
 
 
 
@@ -55,6 +63,8 @@ True if given object has tags, false otherwise
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -63,6 +73,8 @@ True if given object has tags, false otherwise
 
 ###static GetTags(obj) &rarr; any
 Get tags
+
+
 
 
 
@@ -81,6 +93,8 @@ Add tags
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -90,6 +104,8 @@ Add tags
 
 ###static RemoveTagsFrom(obj, tagsString) &rarr; void
 Remove the list of tag to the given object
+
+
 
 
 

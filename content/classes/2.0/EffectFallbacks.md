@@ -1,14 +1,17 @@
 ---
-ID_PAGE: 5781
+ID_PAGE: 24950
 PG_TITLE: EffectFallbacks
 PG_VERSION: 2.0
 ---
 
 
 
+
+
 ##Members
 
 ###isMoreFallbacks : boolean
+
 
 
 
@@ -20,10 +23,16 @@ Returns true if the current rank value is lower than or equal to the max rank va
 
 
 
+
+
+
+
 ##Methods
 
 ###addFallback(rank, define) &rarr; void
 Adds a fallback effect to the given rank
+
+
 
 
 

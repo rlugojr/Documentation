@@ -1,15 +1,16 @@
 ---
-ID_PAGE: 6678
+ID_PAGE: 25166
 PG_TITLE: ActionManager
 PG_VERSION: 2.1
 TAGS:
     - Action
 ---
 
- [Action](page.php?p=6663) Manager manages all events to be triggered on a given mesh or the global scene.
+ [Action](/classes/Action) Manager manages all events to be triggered on a given mesh or the global scene.
 
-A single scene can have many [Action](page.php?p=6663) Managers to handle predefined actions on specific meshes.
-##new [ActionManager](page.php?p=6678)(scene)
+A single scene can have many [Action](/classes/Action) Managers to handle predefined actions on specific meshes.
+##new [ActionManager](/classes/ActionManager)(scene)
+
 
 
 
@@ -18,10 +19,12 @@ See more about Actions [here](https://github.com/BabylonJS/Babylon.js/wiki/How-t
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=6662) | The scene which contains the new action manager
+ | scene | [Scene](/classes/Scene) | The scene which contains the new action manager
 ---
 
 ##Members
@@ -31,7 +34,9 @@ See more about Actions [here](https://github.com/BabylonJS/Babylon.js/wiki/How-t
 
 
 
+
 Nothing trigger
+
 
 
 
@@ -40,7 +45,9 @@ Nothing trigger
 
 
 
+
 On pick trigger
+
 
 
 
@@ -49,7 +56,9 @@ On pick trigger
 
 
 
+
 On left pick trigger
+
 
 
 
@@ -58,7 +67,9 @@ On left pick trigger
 
 
 
+
 On right pick trigger
+
 
 
 
@@ -67,7 +78,9 @@ On right pick trigger
 
 
 
+
 On center pick trigger
+
 
 
 
@@ -76,7 +89,9 @@ On center pick trigger
 
 
 
+
 On pointer over trigger
+
 
 
 
@@ -85,7 +100,9 @@ On pointer over trigger
 
 
 
+
 On pointer out trigger
+
 
 
 
@@ -94,7 +111,9 @@ On pointer out trigger
 
 
 
+
 On every frame trigger
+
 
 
 
@@ -103,7 +122,9 @@ On every frame trigger
 
 
 
+
 On intersection enter trigger
+
 
 
 
@@ -112,7 +133,9 @@ On intersection enter trigger
 
 
 
+
 On intersection exit trigger
+
 
 
 
@@ -121,7 +144,9 @@ On intersection exit trigger
 
 
 
+
 On key down trigger
+
 
 
 
@@ -130,19 +155,23 @@ On key down trigger
 
 
 
+
 on key up trigger
+
 
 
 
 ###static OnPickUpTrigger : number
 
 
-###actions : [Action](page.php?p=6663)[]
+###actions : [Action](/classes/Action)[]
+
 
 
 
 
 The actions of the action manager
+
 
 
 
@@ -172,8 +201,12 @@ Delete the action manager
 
 
 
-###getScene() &rarr; [Scene](page.php?p=6662)
+
+
+###getScene() &rarr; [Scene](/classes/Scene)
 Get the scene which contains the action manager
+
+
 
 
 
@@ -200,14 +233,14 @@ Does this action manager handles actions of a given trigger
  | trigger | number | 
 ---
 
-###registerAction(action) &rarr; [Action](page.php?p=6663)
+###registerAction(action) &rarr; [Action](/classes/Action)
 Registers an action to this action manager
 @return {BABYLON.Action} the action amended (prepared) after registration
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | action | [Action](page.php?p=6663) | The action to register
+ | action | [Action](/classes/Action) | The action to register
 ---
 
 ###processTrigger(trigger, evt) &rarr; void
@@ -217,5 +250,5 @@ Process a specific trigger
  | Name | Type | Description
 ---|---|---|---
  | trigger | number | The trigger
- | evt | [ActionEvent](page.php?p=6677) | {BABYLON.ActionEvent} the event details to be processed
+ | evt | [ActionEvent](/classes/ActionEvent) | {BABYLON.ActionEvent} the event details to be processed
 ---

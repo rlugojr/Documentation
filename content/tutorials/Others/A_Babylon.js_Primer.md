@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 22621
 PG_TITLE: A Babylon.js Primer
-TAGS:
-    - Others
 ---
 ### Welcome to the... ###
 ## Babylon.js WebGL Game Creation System!##
@@ -97,7 +95,7 @@ Once again let's visit the saved playground scene that I sent you to, above.
 
 This time, I would like you to press the **Get .zip** button.&nbsp; The playground will open a small panel allowing you to download this scene.&nbsp; Save the zip file in some new empty folder on your home computer.&nbsp; Now use an UNZIP utility program to unzip it.&nbsp; Notice that there is one file in the folder, called index.html.&nbsp; Please load that file into a text editor or programming editor.&nbsp; Does it look like the big picture above?&nbsp; Sure it does.&nbsp; ANY scene from the Babylon.js playground, including its pre-installed demo scenes, can be brought to your home with the **Get .zip** button.&nbsp; Most of them will look very similar to the big picture, above.
 
-There is a tutorial for the Babylon.js playground.&nbsp; Just [**click here**](http://babylondoc.azurewebsites.net/page.php?p=22631).
+There is a tutorial for the Babylon.js playground.&nbsp; Just [**click here**](http://doc.babylonjs.com/page.php?p=22631).
 
 Wow, this is a lot of information, isn't it?&nbsp; You have learned what a scene file (the big picture) looks like, you have learned about its important createScene() function and how copy'n'paste portable it is.&nbsp; You have seen a createScene() function in the Babylon.js playground, and you have been introduced to the playground's RUN, SAVE, and Get .zip buttons.
 
@@ -123,7 +121,7 @@ To be honest, a light is not an absolute requirement.&nbsp; If the mesh in a sce
 
 **2. A Shape.**&nbsp; A shape is also called a **mesh**.&nbsp; Every scene needs something to be viewed, right?&nbsp; Cameras are invisible, and so are lights.&nbsp; Every scene needs a mesh, or many.&nbsp; There is no limit to the number of mesh in your scene.&nbsp; A mesh can be one of the many shapes that are built-in to Babylon.js, or it can be a shape that you plotted yourself using Babylon's VertexData system, or it can be a mesh that has been 'imported' into the scene... from a modeling package such as Blender or 3D Studio Max.
 
-You can learn many more things about Babylon.js scenes... in the other [tutorials and documentation](http://babylondoc.azurewebsites.net/index.php).&nbsp; And don't forget to look at the 'createScene()' functions of the playground's pre-installed demo scenes.&nbsp; The Babylon.js playground is a learning wonderland, and it is a whole lot of fun, too.
+You can learn many more things about Babylon.js scenes... in the other [tutorials and documentation](http://doc.babylonjs.com/).&nbsp; And don't forget to look at the 'createScene()' functions of the playground's pre-installed demo scenes.&nbsp; The Babylon.js playground is a learning wonderland, and it is a whole lot of fun, too.
 
 ## Babylon.js Objects, Properties, Methods, and Values ##
 

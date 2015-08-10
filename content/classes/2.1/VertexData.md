@@ -1,10 +1,12 @@
 ---
-ID_PAGE: 6773
+ID_PAGE: 25261
 PG_TITLE: VertexData
 PG_VERSION: 2.1
 ---
 
-The [VertexData](page.php?p=6773) Class
+The [VertexData](/classes/VertexData) Class
+
+
 
 
 
@@ -17,7 +19,9 @@ The [VertexData](page.php?p=6773) Class
 
 
 
-The [VertexData](page.php?p=6773) position
+
+The [VertexData](/classes/VertexData) position
+
 
 
 
@@ -26,7 +30,9 @@ The [VertexData](page.php?p=6773) position
 
 
 
-The [VertexData](page.php?p=6773) normals
+
+The [VertexData](/classes/VertexData) normals
+
 
 
 
@@ -35,7 +41,9 @@ The [VertexData](page.php?p=6773) normals
 
 
 
-The [VertexData](page.php?p=6773) uvs
+
+The [VertexData](/classes/VertexData) uvs
+
 
 
 
@@ -44,7 +52,9 @@ The [VertexData](page.php?p=6773) uvs
 
 
 
-The [VertexData](page.php?p=6773) uvs2
+
+The [VertexData](/classes/VertexData) uvs2
+
 
 
 
@@ -53,7 +63,9 @@ The [VertexData](page.php?p=6773) uvs2
 
 
 
-The [VertexData](page.php?p=6773) colors
+
+The [VertexData](/classes/VertexData) colors
+
 
 
 
@@ -62,7 +74,9 @@ The [VertexData](page.php?p=6773) colors
 
 
 
-The [VertexData](page.php?p=6773) matricesIndices
+
+The [VertexData](/classes/VertexData) matricesIndices
+
 
 
 
@@ -71,7 +85,9 @@ The [VertexData](page.php?p=6773) matricesIndices
 
 
 
-The [VertexData](page.php?p=6773) matricesWeights
+
+The [VertexData](/classes/VertexData) matricesWeights
+
 
 
 
@@ -80,7 +96,12 @@ The [VertexData](page.php?p=6773) matricesWeights
 
 
 
-The [VertexData](page.php?p=6773) indices
+
+The [VertexData](/classes/VertexData) indices
+
+
+
+
 
 
 
@@ -101,6 +122,8 @@ Set the vertex data
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -115,15 +138,19 @@ Apply To mesh
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](page.php?p=6659) | The mesh
+ | mesh | [Mesh](/classes/Mesh) | The mesh
 optional | updatable | boolean | @param updatable
 ---
 
 ###applyToGeometry(geometry, updatable) &rarr; void
-Apply to [Geometry](page.php?p=6771)
+Apply to [Geometry](/classes/Geometry)
+
+
 
 
 
@@ -132,12 +159,14 @@ Apply to [Geometry](page.php?p=6771)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | geometry | [Geometry](page.php?p=6771) | @param geometry
+ | geometry | [Geometry](/classes/Geometry) | @param geometry
 optional | updatable | boolean | @param updatable
 ---
 
 ###updateMesh(mesh, updateExtends, makeItUnique) &rarr; void
-Update [Mesh](page.php?p=6659)
+Update [Mesh](/classes/Mesh)
+
+
 
 
 
@@ -146,7 +175,7 @@ Update [Mesh](page.php?p=6659)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](page.php?p=6659) | This mesh
+ | mesh | [Mesh](/classes/Mesh) | This mesh
 optional | updateExtends | boolean | Not used here
 optional | makeItUnique | boolean | Not used here
 ---
@@ -158,10 +187,12 @@ Update
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | geometry | [Geometry](page.php?p=6771) | @param geometry
+ | geometry | [Geometry](/classes/Geometry) | @param geometry
 optional | updateExtends | boolean | Not used here
 optional | makeItUnique | boolean | Not used here
 ---
@@ -173,10 +204,12 @@ Transform his vertexdata with the given matri
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [Matrix](page.php?p=6754) | @param matrix
+ | matrix | [Matrix](/classes/Matrix) | @param matrix
 ---
 
 ###merge(other) &rarr; void
@@ -186,54 +219,62 @@ Merge this vertex data with the one given in parameter
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [VertexData](page.php?p=6773) | @param other
+ | other | [VertexData](/classes/VertexData) | @param other
 ---
 
-###static ExtractFromMesh(mesh, copyWhenShared) &rarr; [VertexData](page.php?p=6773)
+###static ExtractFromMesh(mesh, copyWhenShared) &rarr; [VertexData](/classes/VertexData)
 Creates a new VertexDataObject with values extracted of the given mesh
 
 
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](page.php?p=6659) | @param mesh
+ | mesh | [Mesh](/classes/Mesh) | @param mesh
 optional | copyWhenShared | boolean | 
 ---
 
-###static ExtractFromGeometry(geometry, copyWhenShared) &rarr; [VertexData](page.php?p=6773)
+###static ExtractFromGeometry(geometry, copyWhenShared) &rarr; [VertexData](/classes/VertexData)
 Creates a new VertexDataObject with values extracted of the given geometry
 
 
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | geometry | [Geometry](page.php?p=6771) | @param geometry
+ | geometry | [Geometry](/classes/Geometry) | @param geometry
 optional | copyWhenShared | boolean | 
 ---
 
-###static CreateRibbon(pathArray, closeArray, closePath, offset, sideOrientation) &rarr; [VertexData](page.php?p=6773)
+###static CreateRibbon(pathArray, closeArray, closePath, offset, sideOrientation) &rarr; [VertexData](/classes/VertexData)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | pathArray | [Vector3](page.php?p=6751)[][] | 
+ | pathArray | [Vector3](/classes/Vector3)[][] | 
  | closeArray | boolean | 
  | closePath | boolean | 
  | offset | number | 
 optional | sideOrientation | number | 
 ---
 
-###static CreateBox(size, sideOrientation) &rarr; [VertexData](page.php?p=6773)
-Creates a new [VertexData](page.php?p=6773) object of a box of the given size
+###static CreateBox(size, sideOrientation) &rarr; [VertexData](/classes/VertexData)
+Creates a new [VertexData](/classes/VertexData) object of a box of the given size
+
+
 
 
 
@@ -246,8 +287,10 @@ Creates a new [VertexData](page.php?p=6773) object of a box of the given size
 optional | sideOrientation | number | 
 ---
 
-###static CreateSphere(segments, diameter, sideOrientation) &rarr; [VertexData](page.php?p=6773)
-Creates a new [VertexData](page.php?p=6773) object of a sphere of the given diameter
+###static CreateSphere(segments, diameter, sideOrientation) &rarr; [VertexData](/classes/VertexData)
+Creates a new [VertexData](/classes/VertexData) object of a sphere of the given diameter
+
+
 
 
 
@@ -261,8 +304,10 @@ Creates a new [VertexData](page.php?p=6773) object of a sphere of the given diam
 optional | sideOrientation | number | 
 ---
 
-###static CreateCylinder(height, diameterTop, diameterBottom, tessellation, subdivisions, sideOrientation) &rarr; [VertexData](page.php?p=6773)
-Creates a new [VertexData](page.php?p=6773) object of a cylinder of the given parameters
+###static CreateCylinder(height, diameterTop, diameterBottom, tessellation, subdivisions, sideOrientation) &rarr; [VertexData](/classes/VertexData)
+Creates a new [VertexData](/classes/VertexData) object of a cylinder of the given parameters
+
+
 
 
 
@@ -279,8 +324,10 @@ optional | subdivisions | number | the subdivisions of the cylinder
 optional | sideOrientation | number | 
 ---
 
-###static CreateTorus(diameter, thickness, tessellation, sideOrientation) &rarr; [VertexData](page.php?p=6773)
-Creates a new [VertexData](page.php?p=6773) object of a torus of the given parameters
+###static CreateTorus(diameter, thickness, tessellation, sideOrientation) &rarr; [VertexData](/classes/VertexData)
+Creates a new [VertexData](/classes/VertexData) object of a torus of the given parameters
+
+
 
 
 
@@ -289,14 +336,16 @@ Creates a new [VertexData](page.php?p=6773) object of a torus of the given param
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | diameter | any | The diameter of the [Torus](page.php?p=6869)
- | thickness | any | The thickness of the [Torus](page.php?p=6869)
- | tessellation | any | The tessellation of the [Torus](page.php?p=6869)
+ | diameter | any | The diameter of the [Torus](/classes/Torus)
+ | thickness | any | The thickness of the [Torus](/classes/Torus)
+ | tessellation | any | The tessellation of the [Torus](/classes/Torus)
 optional | sideOrientation | number | 
 ---
 
-###static CreateLines(points) &rarr; [VertexData](page.php?p=6773)
-Creates a new [VertexData](page.php?p=6773) object of a ground of the given parameters
+###static CreateLines(points) &rarr; [VertexData](/classes/VertexData)
+Creates a new [VertexData](/classes/VertexData) object of a ground of the given parameters
+
+
 
 
 
@@ -305,22 +354,24 @@ Creates a new [VertexData](page.php?p=6773) object of a ground of the given para
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | points | [Vector3](page.php?p=6751)[] | The points of the Line
+ | points | [Vector3](/classes/Vector3)[] | The points of the Line
 ---
 
-###static CreateDashedLines(points, dashSize, gapSize, dashNb) &rarr; [VertexData](page.php?p=6773)
+###static CreateDashedLines(points, dashSize, gapSize, dashNb) &rarr; [VertexData](/classes/VertexData)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | points | [Vector3](page.php?p=6751)[] | 
+ | points | [Vector3](/classes/Vector3)[] | 
  | dashSize | number | 
  | gapSize | number | 
  | dashNb | number | 
 ---
 
-###static CreateGround(width, height, subdivisions) &rarr; [VertexData](page.php?p=6773)
-Creates a new [VertexData](page.php?p=6773) object of a ground of the given parameters
+###static CreateGround(width, height, subdivisions) &rarr; [VertexData](/classes/VertexData)
+Creates a new [VertexData](/classes/VertexData) object of a ground of the given parameters
+
+
 
 
 
@@ -334,8 +385,10 @@ Creates a new [VertexData](page.php?p=6773) object of a ground of the given para
  | subdivisions | number | The subdivisions of the ground
 ---
 
-###static CreateTiledGround(xmin, zmin, xmax, zmax, subdivisions, precision) &rarr; [VertexData](page.php?p=6773); 
-Create a new [VertexData](page.php?p=6773) object of a [TiledGround](page.php?p=6871) with the given properties
+###static CreateTiledGround(xmin, zmin, xmax, zmax, subdivisions, precision) &rarr; [VertexData](/classes/VertexData); 
+Create a new [VertexData](/classes/VertexData) object of a [TiledGround](/classes/TiledGround) with the given properties
+
+
 
 
 
@@ -344,16 +397,18 @@ Create a new [VertexData](page.php?p=6773) object of a [TiledGround](page.php?p=
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | xmin | number | The xmin of the [Ground](page.php?p=6870)
- | zmin | number | The zmin of the [Ground](page.php?p=6870)
- | xmax | number | The xmax of the [Ground](page.php?p=6870)
- | zmax | number | The zmax of the [Ground](page.php?p=6870)
+ | xmin | number | The xmin of the [Ground](/classes/Ground)
+ | zmin | number | The zmin of the [Ground](/classes/Ground)
+ | xmax | number | The xmax of the [Ground](/classes/Ground)
+ | zmax | number | The zmax of the [Ground](/classes/Ground)
 optional | subdivisions | {w: number; h: number; } | The number of tiles (subdivisions.w : in width; subdivisions.h : in height)
 optional | precision | { w: number; h: number; } | The number of subdivisions in each tile (precision.w : in width; precision.h : in height)
 ---
 
-###static CreateGroundFromHeightMap(width, height, subdivisions, minHeight, maxHeight, buffer, bufferWidth, bufferHeight) &rarr; [VertexData](page.php?p=6773)
-Creates a new [VertexData](page.php?p=6773) object of a huge ground of the given parameters
+###static CreateGroundFromHeightMap(width, height, subdivisions, minHeight, maxHeight, buffer, bufferWidth, bufferHeight) &rarr; [VertexData](/classes/VertexData)
+Creates a new [VertexData](/classes/VertexData) object of a huge ground of the given parameters
+
+
 
 
 
@@ -372,8 +427,10 @@ Creates a new [VertexData](page.php?p=6773) object of a huge ground of the given
  | bufferHeight | number | @param bufferHeight
 ---
 
-###static CreatePlane(size, sideOrientation) &rarr; [VertexData](page.php?p=6773)
-Creates a new [VertexData](page.php?p=6773) object of a plane of the given parameters
+###static CreatePlane(size, sideOrientation) &rarr; [VertexData](/classes/VertexData)
+Creates a new [VertexData](/classes/VertexData) object of a plane of the given parameters
+
+
 
 
 
@@ -386,7 +443,7 @@ Creates a new [VertexData](page.php?p=6773) object of a plane of the given param
 optional | sideOrientation | number | 
 ---
 
-###static CreateDisc(radius, tessellation, sideOrientation) &rarr; [VertexData](page.php?p=6773)
+###static CreateDisc(radius, tessellation, sideOrientation) &rarr; [VertexData](/classes/VertexData)
 
 ####Parameters
  | Name | Type | Description
@@ -396,9 +453,11 @@ optional | sideOrientation | number |
 optional | sideOrientation | number | 
 ---
 
-###static CreateTorusKnot(radius, tube, radialSegments, tubularSegments, p, q, sideOrientation) &rarr; [VertexData](page.php?p=6773)
-Creates a new [VertexData](page.php?p=6773) object of a torus knot of the given parameters. &lt;br/&gt;
+###static CreateTorusKnot(radius, tube, radialSegments, tubularSegments, p, q, sideOrientation) &rarr; [VertexData](/classes/VertexData)
+Creates a new [VertexData](/classes/VertexData) object of a torus knot of the given parameters. &lt;br/&gt;
 Based on &lt;a href=&quot;http://code.google.com/p/away3d/source/browse/trunk/fp10/Away3D/src/away3d/primitives/TorusKnot.as?spec=svn2473&amp;r=2473&quot;&gt;http://code.google.com/p/away3d/source/browse/trunk/fp10/Away3D/src/away3d/primitives/TorusKnot.as?spec=svn2473&amp;r=2473&lt;/a&gt;
+
+
 
 
 
@@ -407,7 +466,7 @@ Based on &lt;a href=&quot;http://code.google.com/p/away3d/source/browse/trunk/fp
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | radius | number | The radius of the [TorusKnot](page.php?p=6873)
+ | radius | number | The radius of the [TorusKnot](/classes/TorusKnot)
  | tube | number | @param tube
  | radialSegments | number | @param radialSegments
  | tubularSegments | number | @param tubularSegments

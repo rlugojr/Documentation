@@ -1,11 +1,11 @@
 ---
-ID_PAGE: 3325
+ID_PAGE: 24533
 PG_TITLE: Color4
 PG_VERSION: 1.14
 ---
-##new [Color4](page.php?p=3325)(r, g, b, a)
+##new [Color4](/classes/Color4)(r, g, b, a)
 
-Creates a new RGBA [Color4](page.php?p=3325)
+Creates a new RGBA [Color4](/classes/Color4)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -42,7 +42,7 @@ The alpha value
 ##Methods
 
 ###addInPlace(right) &rarr; void
-Adds another [Color4](page.php?p=3325)
+Adds another [Color4](/classes/Color4)
 
 ####Parameters
  | Name | Type | Description
@@ -64,22 +64,22 @@ Fills an array from a given index with the color's values
 optional | index | number | default : 0 The given index
 ---
 
-###add(right) &rarr; [Color4](page.php?p=3325)
+###add(right) &rarr; [Color4](/classes/Color4)
 Adds another color and returns the result
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | right | [Color4](page.php?p=3325) | 
+ | right | [Color4](/classes/Color4) | 
 ---
 
-###subtract(right) &rarr; [Color4](page.php?p=3325)
+###subtract(right) &rarr; [Color4](/classes/Color4)
 Substracts another color and returns the result
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | right | [Color4](page.php?p=3325) | The color to substract
+ | right | [Color4](/classes/Color4) | The color to substract
 ---
 
 ###subtractToRef(right, result) &rarr; void
@@ -88,12 +88,12 @@ Substracts another color into a third color
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | right | [Color4](page.php?p=3325) | The color to substract
- | result | [Color4](page.php?p=3325) | The color to return
+ | right | [Color4](/classes/Color4) | The color to substract
+ | result | [Color4](/classes/Color4) | The color to return
 ---
 
-###scale(scale) &rarr; [Color4](page.php?p=3325)
-Scales a [Color4](page.php?p=3325)
+###scale(scale) &rarr; [Color4](/classes/Color4)
+Scales a [Color4](/classes/Color4)
 
 ####Parameters
  | Name | Type | Description
@@ -102,48 +102,48 @@ Scales a [Color4](page.php?p=3325)
 ---
 
 ###scaleToRef(scale, result) &rarr; void
-Scales a [Color4](page.php?p=3325) into an existing [Color4](page.php?p=3325)
+Scales a [Color4](/classes/Color4) into an existing [Color4](/classes/Color4)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | scale | number | The scaling factor
- | result | [Color4](page.php?p=3325) | The color to return
+ | result | [Color4](/classes/Color4) | The color to return
 ---
 
 ###toString() &rarr; string
 Returns a string representation of the color
 
 
-###clone() &rarr; [Color4](page.php?p=3325)
-Clones the color into a new [Color4](page.php?p=3325)
+###clone() &rarr; [Color4](/classes/Color4)
+Clones the color into a new [Color4](/classes/Color4)
 
 
-###static Lerp(left, right, amount) &rarr; [Color4](page.php?p=3325)
+###static Lerp(left, right, amount) &rarr; [Color4](/classes/Color4)
 Linear interpolation of a color 4
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | left | [Color4](page.php?p=3325) | first color
- | right | [Color4](page.php?p=3325) | second color
+ | left | [Color4](/classes/Color4) | first color
+ | right | [Color4](/classes/Color4) | second color
  | amount | number | Weighting factor.
 ---
 
 ###static LerpToRef(left, right, amount, result) &rarr; void
-Linear interpolation of a color 4 into an existing [Color4](page.php?p=3325)
+Linear interpolation of a color 4 into an existing [Color4](/classes/Color4)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | left | [Color4](page.php?p=3325) | first color
- | right | [Color4](page.php?p=3325) | second color
+ | left | [Color4](/classes/Color4) | first color
+ | right | [Color4](/classes/Color4) | second color
  | amount | number | Weighting factor.
- | result | [Color4](page.php?p=3325) | The color which hold the result color
+ | result | [Color4](/classes/Color4) | The color which hold the result color
 ---
 
-###static FromArray(array, offset) &rarr; [Color4](page.php?p=3325)
-Creates new [Color4](page.php?p=3325) from the given array
+###static FromArray(array, offset) &rarr; [Color4](/classes/Color4)
+Creates new [Color4](/classes/Color4) from the given array
 
 ####Parameters
  | Name | Type | Description
@@ -152,8 +152,8 @@ Creates new [Color4](page.php?p=3325) from the given array
 optional | offset | number | The first index of the array to look at
 ---
 
-###static FromInts(r, g, b, a) &rarr; [Color4](page.php?p=3325)
-Creates a new [Color4](page.php?p=3325) from a set of integers. Values must be between 0 and 255
+###static FromInts(r, g, b, a) &rarr; [Color4](/classes/Color4)
+Creates a new [Color4](/classes/Color4) from a set of integers. Values must be between 0 and 255
 
 ####Parameters
  | Name | Type | Description

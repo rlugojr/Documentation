@@ -1,25 +1,25 @@
 ---
-ID_PAGE: 6796
+ID_PAGE: 25284
 PG_TITLE: DisplayPassPostProcess
 PG_VERSION: 2.1
 TAGS:
     - PostProcess
 ---
-##new [DisplayPassPostProcess](page.php?p=6796)(name, ratio, camera, samplingMode, engine, reusable)
+##new [DisplayPassPostProcess](/classes/DisplayPassPostProcess)(name, ratio, camera, samplingMode, engine, reusable)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
  | ratio | number | 
- | camera | [Camera](page.php?p=6631) | 
+ | camera | [Camera](/classes/Camera) | 
 optional | samplingMode | number | 
-optional | engine | [Engine](page.php?p=6629) | 
+optional | engine | [Engine](/classes/Engine) | 
 optional | reusable | boolean | 
 ---
 
 ##Extends
- [PostProcess](page.php?p=6790)
+ [PostProcess](/classes/PostProcess)
 
 
 ##Methods

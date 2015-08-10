@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6632
+ID_PAGE: 25120
 PG_TITLE: ArcRotateCamera
 PG_VERSION: 2.1
 TAGS:
@@ -7,13 +7,16 @@ TAGS:
     - Camera
     - ArcRotateCamera
 ---
-##new [ArcRotateCamera](page.php?p=6632)(name, alpha, beta, radius, target, scene)
+##new [ArcRotateCamera](/classes/ArcRotateCamera)(name, alpha, beta, radius, target, scene)
 
 
 
-Create a new [ArcRotateCamera](page.php?p=6632).
- [ArcRotateCamera](page.php?p=6632) is a camera that rotates around a given pivot. It can be controlled with the mouse or touch events (and it also requires hand.js to work)
-A tutorial about [ArcRotateCamera](page.php?p=6632) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+
+Create a new [ArcRotateCamera](/classes/ArcRotateCamera).
+ [ArcRotateCamera](/classes/ArcRotateCamera) is a camera that rotates around a given pivot. It can be controlled with the mouse or touch events (and it also requires hand.js to work)
+A tutorial about [ArcRotateCamera](/classes/ArcRotateCamera) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+
+
 
 
 
@@ -26,11 +29,11 @@ A tutorial about [ArcRotateCamera](page.php?p=6632) can be found [here](https://
  | beta | number | 
  | radius | number | 
  | target | any | 
- | scene | [Scene](page.php?p=6662) | 
+ | scene | [Scene](/classes/Scene) | 
 ---
 
 ##Extends
- [Camera](page.php?p=6631)
+ [Camera](/classes/Camera)
 ##Members
 
 ###alpha : number
@@ -38,7 +41,9 @@ A tutorial about [ArcRotateCamera](page.php?p=6632) can be found [here](https://
 
 
 
-Alpha of the [ArcRotateCamera](page.php?p=6632) (Rotation angle around Y axis)
+
+Alpha of the [ArcRotateCamera](/classes/ArcRotateCamera) (Rotation angle around Y axis)
+
 
 
 
@@ -47,7 +52,9 @@ Alpha of the [ArcRotateCamera](page.php?p=6632) (Rotation angle around Y axis)
 
 
 
-Beta of the [ArcRotateCamera](page.php?p=6632) (Rotation angle around X axis)
+
+Beta of the [ArcRotateCamera](/classes/ArcRotateCamera) (Rotation angle around X axis)
+
 
 
 
@@ -56,7 +63,9 @@ Beta of the [ArcRotateCamera](page.php?p=6632) (Rotation angle around X axis)
 
 
 
-Radius of the [ArcRotateCamera](page.php?p=6632)
+
+Radius of the [ArcRotateCamera](/classes/ArcRotateCamera)
+
 
 
 
@@ -65,7 +74,9 @@ Radius of the [ArcRotateCamera](page.php?p=6632)
 
 
 
-Target of the [ArcRotateCamera](page.php?p=6632)
+
+Target of the [ArcRotateCamera](/classes/ArcRotateCamera)
+
 
 
 
@@ -74,7 +85,9 @@ Target of the [ArcRotateCamera](page.php?p=6632)
 
 
 
+
 Inertial alpha offset
+
 
 
 
@@ -83,7 +96,9 @@ Inertial alpha offset
 
 
 
+
 Inertial beta offset
+
 
 
 
@@ -92,7 +107,9 @@ Inertial beta offset
 
 
 
+
 Inertial radius offset
+
 
 
 
@@ -101,7 +118,9 @@ Inertial radius offset
 
 
 
+
 Lower alpha limit
+
 
 
 
@@ -110,7 +129,9 @@ Lower alpha limit
 
 
 
+
 Upper alpha limit
+
 
 
 
@@ -119,7 +140,9 @@ Upper alpha limit
 
 
 
+
 Lower beta limit
+
 
 
 
@@ -128,7 +151,9 @@ Lower beta limit
 
 
 
+
 Upper beta limit
+
 
 
 
@@ -137,7 +162,9 @@ Upper beta limit
 
 
 
+
 Lower radius limit
+
 
 
 
@@ -146,7 +173,9 @@ Lower radius limit
 
 
 
+
 Upper radius limit
+
 
 
 
@@ -155,7 +184,9 @@ Upper radius limit
 
 
 
+
 Angular sensibility
+
 
 
 
@@ -164,11 +195,14 @@ Angular sensibility
 
 
 
+
 Wheel precision
 
 
 
+
 ###pinchPrecision : number
+
 
 
 
@@ -183,7 +217,12 @@ PinchPrecision
 
 
 
+
+
+
+
 ###keysUp : number[]
+
 
 
 
@@ -192,7 +231,9 @@ Key to control the camera UP
 
 
 
+
 ###keysDown : number[]
+
 
 
 
@@ -201,7 +242,9 @@ Key to control the camera DOWN
 
 
 
+
 ###keysLeft : number[]
+
 
 
 
@@ -210,7 +253,9 @@ Key to control the camera LEFT
 
 
 
+
 ###keysRight : number[]
+
 
 
 
@@ -219,7 +264,9 @@ Key to control the camera RIGHT
 
 
 
+
 ###zoomOnFactor : number
+
 
 
 
@@ -228,7 +275,10 @@ Zoom on factor
 
 
 
-###targetScreenOffset : [Vector2](page.php?p=6750)
+
+###targetScreenOffset : [Vector2](/classes/Vector2)
+
+
 
 
 
@@ -239,7 +289,8 @@ Zoom on factor
 ###allowUpsideDown : boolean
 
 
-###onCollide : (collidedMesh: [AbstractMesh](page.php?p=6657)) =&gt; void
+###onCollide : (collidedMesh: [AbstractMesh](/classes/AbstractMesh)) =&gt; void
+
 
 
 
@@ -248,7 +299,9 @@ OnCollide
 
 
 
+
 ###checkCollisions : boolean
+
 
 
 
@@ -257,7 +310,9 @@ CheckCollisions
 
 
 
-###collisionRadius : [Vector3](page.php?p=6751)
+
+###collisionRadius : [Vector3](/classes/Vector3)
+
 
 
 
@@ -268,10 +323,13 @@ CollisionsRadius
 
 
 
+
 ##Methods
 
 ###attachControl(element, noPreventDefault) &rarr; void
 Attach camera to a specified canvas, to control and display it
+
+
 
 
 
@@ -291,6 +349,8 @@ Detach camera control and display from the specified canvas
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -298,7 +358,9 @@ Detach camera control and display from the specified canvas
 ---
 
 ###setPosition(position) &rarr; void
-Set the position of the [ArcRotateCamera](page.php?p=6632)
+Set the position of the [ArcRotateCamera](/classes/ArcRotateCamera)
+
+
 
 
 
@@ -307,7 +369,7 @@ Set the position of the [ArcRotateCamera](page.php?p=6632)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | position | [Vector3](page.php?p=6751) | The new position of the [ArcRotateCamera](page.php?p=6632)
+ | position | [Vector3](/classes/Vector3) | The new position of the [ArcRotateCamera](/classes/ArcRotateCamera)
 ---
 
 ###zoomOn(meshes) &rarr; void
@@ -317,10 +379,12 @@ Zoom on specified meshes
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | meshes | [AbstractMesh](page.php?p=6657)[] | Meshes to zoom on
+optional | meshes | [AbstractMesh](/classes/AbstractMesh)[] | Meshes to zoom on
 ---
 
 ###focusOn(meshesOrMinMaxVectorAndDistance) &rarr; void
@@ -331,9 +395,9 @@ optional | meshes | [AbstractMesh](page.php?p=6657)[] | Meshes to zoom on
  | meshesOrMinMaxVectorAndDistance | any | @param meshesOrMinMaxVectorAndDistance
 ---
 
-###createRigCamera(name, cameraIndex) &rarr; [Camera](page.php?p=6631)
+###createRigCamera(name, cameraIndex) &rarr; [Camera](/classes/Camera)
 @override
-Override [Camera](page.php?p=6631).createRigCamera
+Override [Camera](/classes/Camera).createRigCamera
 
 ####Parameters
  | Name | Type | Description

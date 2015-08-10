@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 5901
+ID_PAGE: 25070
 PG_TITLE: JoystickAxis
 PG_VERSION: 2.0
 ---
@@ -10,6 +10,8 @@ X : Left and right position
 Y : Up and down position
 
 Z : Depth
+
+
 
 
 

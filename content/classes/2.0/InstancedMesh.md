@@ -1,55 +1,67 @@
 ---
-ID_PAGE: 5721
+ID_PAGE: 24890
 PG_TITLE: InstancedMesh
 PG_VERSION: 2.0
 ---
 
 Creates an instance based on a source mesh.
-##new [InstancedMesh](page.php?p=5721)(name, source)
+##new [InstancedMesh](/classes/InstancedMesh)(name, source)
 
 
-The [InstancedMesh](page.php?p=5721) constructor
+
+The [InstancedMesh](/classes/InstancedMesh) constructor
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | @param name
- | source | [Mesh](page.php?p=5722) | @param source
+ | source | [Mesh](/classes/Mesh) | @param source
 ---
 
-##Extends [AbstractMesh](page.php?p=5720)
+##Extends [AbstractMesh](/classes/AbstractMesh)
 ##Members
 
 ###receiveShadows : boolean
 
 
 
-True if the Instanced [Mesh](page.php?p=5722) got shadows, false if is not
+
+True if the Instanced [Mesh](/classes/Mesh) got shadows, false if is not
 
 
-###material : [Material](page.php?p=5783)
+
+###material : [Material](/classes/Material)
+
 
 
 
 The material
 
 
+
 ###visibility : number
 
 
 
-The visibility of the Instanced [Mesh](page.php?p=5722)
+
+The visibility of the Instanced [Mesh](/classes/Mesh)
 
 
-###skeleton : [Skeleton](page.php?p=5766)
+
+###skeleton : [Skeleton](/classes/Skeleton)
+
 
 
 
 The skeleton
 
 
-###sourceMesh : [Mesh](page.php?p=5722)
+
+###sourceMesh : [Mesh](/classes/Mesh)
+
 
 
 
@@ -61,16 +73,24 @@ The sourceMesh
 
 
 
+
+
+
+
 ##Methods
 
 ###getTotalVertices() &rarr; number
-Get the total vertices of the Instanced [Mesh](page.php?p=5722)
+Get the total vertices of the Instanced [Mesh](/classes/Mesh)
+
+
 
 
 
 
 ###getVerticesData(kind) &rarr; number[]
 Get the vertices data
+
+
 
 
 
@@ -82,6 +102,8 @@ Get the vertices data
 
 ###isVerticesDataPresent(kind) &rarr; boolean
 Is Vertices data present
+
+
 
 
 
@@ -97,22 +119,30 @@ Get Indices
 
 
 
+
+
 ###refreshBoundingInfo() &rarr; void
-Refresh Bounding Info of the Instanced [Mesh](page.php?p=5722)
+Refresh Bounding Info of the Instanced [Mesh](/classes/Mesh)
 
 
 
 
-###getLOD(camera) &rarr; [AbstractMesh](page.php?p=5720)
+
+
+###getLOD(camera) &rarr; [AbstractMesh](/classes/AbstractMesh)
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | camera | [Camera](page.php?p=5702) | 
+ | camera | [Camera](/classes/Camera) | 
 ---
 
-###clone(name, newParent, doNotCloneChildren) &rarr; [InstancedMesh](page.php?p=5721)
-Clone this instanced [Mesh](page.php?p=5722)
+###clone(name, newParent, doNotCloneChildren) &rarr; [InstancedMesh](/classes/InstancedMesh)
+Clone this instanced [Mesh](/classes/Mesh)
+
+
 
 
 
@@ -120,7 +150,7 @@ Clone this instanced [Mesh](page.php?p=5722)
  | Name | Type | Description
 ---|---|---|---
  | name | string | The given name
- | newParent | [Node](page.php?p=5701) | The parent
+ | newParent | [Node](/classes/Node) | The parent
 optional | doNotCloneChildren | boolean | True if you want to clone children, false if you don't want to.
 ---
 

@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6707
+ID_PAGE: 25195
 PG_TITLE: CollisionCoordinatorLegacy
 PG_VERSION: 2.1
 TAGS:
@@ -15,12 +15,12 @@ TAGS:
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | position | [Vector3](page.php?p=6751) | 
- | velocity | [Vector3](page.php?p=6751) | 
- | collider | [Collider](page.php?p=6705) | 
+ | position | [Vector3](/classes/Vector3) | 
+ | velocity | [Vector3](/classes/Vector3) | 
+ | collider | [Collider](/classes/Collider) | 
  | maximumRetry | number | 
- | excludedMesh | [AbstractMesh](page.php?p=6657) | 
- | onNewPosition | (collisionIndex: number, newPosition: [Vector3](page.php?p=6751), collidedMesh?: [AbstractMesh](page.php?p=6657)) =&gt; void | 
+ | excludedMesh | [AbstractMesh](/classes/AbstractMesh) | 
+ | onNewPosition | (collisionIndex: number, newPosition: [Vector3](/classes/Vector3), collidedMesh?: [AbstractMesh](/classes/AbstractMesh)) =&gt; void | 
  | collisionIndex | number | 
 ---
 
@@ -29,7 +29,7 @@ TAGS:
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=6662) | 
+ | scene | [Scene](/classes/Scene) | 
 ---
 
 ###destroy() &rarr; void
@@ -40,7 +40,7 @@ TAGS:
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](page.php?p=6657) | 
+ | mesh | [AbstractMesh](/classes/AbstractMesh) | 
 ---
 
 ###onMeshUpdated(mesh) &rarr; void
@@ -48,7 +48,7 @@ TAGS:
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](page.php?p=6657) | 
+ | mesh | [AbstractMesh](/classes/AbstractMesh) | 
 ---
 
 ###onMeshRemoved(mesh) &rarr; void
@@ -56,7 +56,7 @@ TAGS:
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](page.php?p=6657) | 
+ | mesh | [AbstractMesh](/classes/AbstractMesh) | 
 ---
 
 ###onGeometryAdded(geometry) &rarr; void
@@ -64,7 +64,7 @@ TAGS:
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | geometry | [Geometry](page.php?p=6771) | 
+ | geometry | [Geometry](/classes/Geometry) | 
 ---
 
 ###onGeometryUpdated(geometry) &rarr; void
@@ -72,7 +72,7 @@ TAGS:
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | geometry | [Geometry](page.php?p=6771) | 
+ | geometry | [Geometry](/classes/Geometry) | 
 ---
 
 ###onGeometryDeleted(geometry) &rarr; void
@@ -80,5 +80,5 @@ TAGS:
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | geometry | [Geometry](page.php?p=6771) | 
+ | geometry | [Geometry](/classes/Geometry) | 
 ---

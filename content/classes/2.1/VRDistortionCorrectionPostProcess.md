@@ -1,23 +1,23 @@
 ---
-ID_PAGE: 6804
+ID_PAGE: 25292
 PG_TITLE: VRDistortionCorrectionPostProcess
 PG_VERSION: 2.1
 TAGS:
     - PostProcess
 ---
-##new [VRDistortionCorrectionPostProcess](page.php?p=6804)(name, camera, isRightEye, vrMetrics)
+##new [VRDistortionCorrectionPostProcess](/classes/VRDistortionCorrectionPostProcess)(name, camera, isRightEye, vrMetrics)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | camera | [Camera](page.php?p=6631) | 
+ | camera | [Camera](/classes/Camera) | 
  | isRightEye | boolean | 
- | vrMetrics | [VRCameraMetrics](page.php?p=6704) | 
+ | vrMetrics | [VRCameraMetrics](/classes/VRCameraMetrics) | 
 ---
 
 ##Extends
- [PostProcess](page.php?p=6790)
+ [PostProcess](/classes/PostProcess)
 ##Members
 
 ###aspectRatio : number

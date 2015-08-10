@@ -1,30 +1,38 @@
 ---
-ID_PAGE: 5734
+ID_PAGE: 24903
 PG_TITLE: CombineAction
 PG_VERSION: 2.0
 ---
-##new [CombineAction](page.php?p=5734)(triggerOptions, children, condition)
+##new [CombineAction](/classes/CombineAction)(triggerOptions, children, condition)
+
 
 
 This action is a container. You can use it to execute many actions simultaneously on the same trigger. The children property must be an array of actions
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | triggerOptions | any | The trigger options
- | children | [Action](page.php?p=5726)[] | The childrens actions
-optional | condition | [Condition](page.php?p=5742) | The condition to do the action
+ | children | [Action](/classes/Action)[] | The childrens actions
+optional | condition | [Condition](/classes/Condition) | The condition to do the action
 ---
 
-##Extends [Action](page.php?p=5726)
+##Extends [Action](/classes/Action)
 ##Members
 
-###children : [Action](page.php?p=5726)[]
+###children : [Action](/classes/Action)[]
+
 
 
 
 The childrens actions
+
+
+
+
 
 
 
@@ -39,5 +47,5 @@ The childrens actions
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | evt | [ActionEvent](page.php?p=5740) | The event to trigger
+ | evt | [ActionEvent](/classes/ActionEvent) | The event to trigger
 ---

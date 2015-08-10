@@ -1,21 +1,21 @@
 ---
-ID_PAGE: 3262
+ID_PAGE: 24470
 PG_TITLE: TouchCamera
 PG_VERSION: 1.14
 ---
-##new [TouchCamera](page.php?p=3262)(name, position, scene)
+##new [TouchCamera](/classes/TouchCamera)(name, position, scene)
 
-Create a new [TouchCamera](page.php?p=3262) (camera controlled by touch with touchscreen)
-A tutorial about [ArcRotateCamera](page.php?p=3250) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+Create a new [TouchCamera](/classes/TouchCamera) (camera controlled by touch with touchscreen)
+A tutorial about [ArcRotateCamera](/classes/ArcRotateCamera) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the camera
- | position | [Vector3](page.php?p=3327) | Begin position of the camera (in [Vector3](page.php?p=3327))
- | scene | [Scene](page.php?p=3274) | The scene which contain camera
+ | position | [Vector3](/classes/Vector3) | Begin position of the camera (in [Vector3](/classes/Vector3))
+ | scene | [Scene](/classes/Scene) | The scene which contain camera
 ---
 
-##Extends [FreeCamera](page.php?p=3254)
+##Extends [FreeCamera](/classes/FreeCamera)
 ##Members
 
 ###angularSensibility : number

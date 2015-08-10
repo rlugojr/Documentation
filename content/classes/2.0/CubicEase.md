@@ -1,10 +1,12 @@
 ---
-ID_PAGE: 5752
+ID_PAGE: 24921
 PG_TITLE: CubicEase
 PG_VERSION: 2.0
 ---
 
-##Extends [EasingFunction](page.php?p=5748)
+
+
+##Extends [EasingFunction](/classes/EasingFunction)
 
 
 ##Methods

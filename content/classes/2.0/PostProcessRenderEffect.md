@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 5854
+ID_PAGE: 25023
 PG_TITLE: PostProcessRenderEffect
 PG_VERSION: 2.0
 ---
@@ -7,28 +7,36 @@ PG_VERSION: 2.0
 A render effect is a smart postprocess which can manage its own instances itself.
 
 A tutorial about the render pipeline can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-PostProcessRenderPipeline)
-##new [PostProcessRenderEffect](page.php?p=5854)(engine, name, getPostProcess, singleInstance)
+##new [PostProcessRenderEffect](/classes/PostProcessRenderEffect)(engine, name, getPostProcess, singleInstance)
 
 
-Builds a [PostProcessRenderEffect](page.php?p=5854) object
+
+Builds a [PostProcessRenderEffect](/classes/PostProcessRenderEffect) object
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | engine | [Engine](page.php?p=5700) | The used engine
+ | engine | [Engine](/classes/Engine) | The used engine
  | name | string | The name of the postprocess rendrer effect
- | getPostProcess | () =&gt; [PostProcess](page.php?p=5841) | The function has to return a new instance of the postprocess which will be used
+ | getPostProcess | () =&gt; [PostProcess](/classes/PostProcess) | The function has to return a new instance of the postprocess which will be used
 optional | singleInstance | boolean | default : true
 ---
 
 ##Members
 
-###applyParameters : (postProcess: [PostProcess](page.php?p=5841)) =&gt; void
+###applyParameters : (postProcess: [PostProcess](/classes/PostProcess)) =&gt; void
+
 
 
 
 Applies given postProcess object to the rendrer effect
+
+
+
+
 
 
 
@@ -43,10 +51,12 @@ Adds a new pass to the effect
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPass | [PostProcessRenderPass](page.php?p=5855) | The pass to add
+ | renderPass | [PostProcessRenderPass](/classes/PostProcessRenderPass) | The pass to add
 ---
 
 ###removePass(renderPass) &rarr; void
@@ -54,10 +64,12 @@ Removes a pass from the effect
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPass | [PostProcessRenderPass](page.php?p=5855) | The pass to remove
+ | renderPass | [PostProcessRenderPass](/classes/PostProcessRenderPass) | The pass to remove
 ---
 
 ###addRenderEffectAsPass(renderEffect) &rarr; void
@@ -65,14 +77,18 @@ Adds a render effect as a pass
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderEffect | [PostProcessRenderEffect](page.php?p=5854) | The effect to add
+ | renderEffect | [PostProcessRenderEffect](/classes/PostProcessRenderEffect) | The effect to add
 ---
 
 ###getPass(passName) &rarr; void
 Returns a pass using its name
+
+
 
 
 
@@ -88,10 +104,12 @@ Delete all passes
 
 
 
-###getPostProcess(camera) &rarr; [PostProcess](page.php?p=5841)
+
+
+###getPostProcess(camera) &rarr; [PostProcess](/classes/PostProcess)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | camera | [Camera](page.php?p=5702) | default : this camera
+optional | camera | [Camera](/classes/Camera) | default : this camera
 ---

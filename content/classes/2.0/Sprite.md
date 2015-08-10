@@ -1,20 +1,23 @@
 ---
-ID_PAGE: 5864
+ID_PAGE: 25033
 PG_TITLE: Sprite
 PG_VERSION: 2.0
 ---
-##new [Sprite](page.php?p=5864)(name, manager)
+##new [Sprite](/classes/Sprite)(name, manager)
 
 
-Create a new [Sprite](page.php?p=5864).
+
+Create a new [Sprite](/classes/Sprite).
 A tutorial about sprites can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/08-Sprites)
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the sprite
- | manager | [SpriteManager](page.php?p=5865) | The sprite manager
+ | manager | [SpriteManager](/classes/SpriteManager) | The sprite manager
 ---
 
 ##Members
@@ -23,70 +26,93 @@ A tutorial about sprites can be found [here](https://github.com/BabylonJS/Babylo
 
 
 
+
 The sprite name
 
 
-###position : [Vector3](page.php?p=5808)
+
+###position : [Vector3](/classes/Vector3)
+
 
 
 
 The sprite position
 
 
-###color : [Color4](page.php?p=5806)
+
+###color : [Color4](/classes/Color4)
+
 
 
 
 The sprite color
 
 
+
 ###size : number
+
 
 
 
 The sprite size
 
 
+
 ###angle : number
+
 
 
 
 The sprite angle
 
 
+
 ###cellIndex : number
+
 
 
 
 The index of the cell
 
 
+
 ###invertU : number
+
 
 
 
 True if invert in U axis ; False otherwise
 
 
+
 ###invertV : number
+
 
 
 
 True if invert in V axis ; False otherwise
 
 
+
 ###disposeWhenFinishedAnimating : boolean
+
 
 
 
 True if dispose when finished animating ; False otherwise
 
 
-###animations : [Animation](page.php?p=5747)[]
+
+###animations : [Animation](/classes/Animation)[]
+
 
 
 
 Animations array
+
+
+
+
 
 
 
@@ -101,6 +127,8 @@ Function to play the sprite animation
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -112,6 +140,8 @@ Function to play the sprite animation
 
 ###stopAnimation() &rarr; void
 Function to stop the sprite animation
+
+
 
 
 

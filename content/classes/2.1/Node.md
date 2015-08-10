@@ -1,25 +1,26 @@
 ---
-ID_PAGE: 6630
+ID_PAGE: 25118
 PG_TITLE: Node
 PG_VERSION: 2.1
 TAGS:
     - Node
 ---
 
- [Node](page.php?p=6630) is the basic class for all scene objects (Mesh, [Light](page.php?p=6652) [Camera](page.php?p=6631)).
-##new [Node](page.php?p=6630)(name, scene)
+ [Node](/classes/Node) is the basic class for all scene objects (Mesh, [Light](/classes/Light) [Camera](/classes/Camera)).
+##new [Node](/classes/Node)(name, scene)
 
 @constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | The node identifier
- | scene | [Scene](page.php?p=6662) | The scene linked to this node.
+ | scene | [Scene](/classes/Scene) | The scene linked to this node.
 ---
 
 ##Members
 
-###parent : [Node](page.php?p=6630)
+###parent : [Node](/classes/Node)
+
 
 
 
@@ -28,7 +29,9 @@ The parent node of the node
 
 
 
+
 ###name : string
+
 
 
 
@@ -37,12 +40,15 @@ The name of the node
 
 
 
+
 ###id : string
 
 
 
 
+
 The id of the node
+
 
 
 
@@ -54,11 +60,14 @@ The id of the node
 
 
 
+
 The state of the node
 
 
 
-###animations : [Animation](page.php?p=6684)[]
+
+###animations : [Animation](/classes/Animation)[]
+
 
 
 
@@ -67,7 +76,9 @@ The animations of the node
 
 
 
-###onReady : (node: [Node](page.php?p=6630)) =&gt; void
+
+###onReady : (node: [Node](/classes/Node)) =&gt; void
+
 
 
 
@@ -84,9 +95,13 @@ Called when node is ready
 
 
 
+
+
+
+
 ##Methods
 
-###getScene() &rarr; [Scene](page.php?p=6662)
+###getScene() &rarr; [Scene](/classes/Scene)
 Get the scene linked to this node
 
 
@@ -94,7 +109,9 @@ Get the scene linked to this node
 
 
 
-###getEngine() &rarr; [Engine](page.php?p=6629)
+
+
+###getEngine() &rarr; [Engine](/classes/Engine)
 Get the engine linked to this node
 
 
@@ -102,8 +119,12 @@ Get the engine linked to this node
 
 
 
-###getWorldMatrix() &rarr; [Matrix](page.php?p=6754)
+
+
+###getWorldMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the world matrix
+
+
 
 
 
@@ -112,6 +133,8 @@ Get the world matrix
 
 ###updateCache(force) &rarr; void
 Update the cache
+
+
 
 
 
@@ -131,8 +154,12 @@ Return true if the node is synchronized with parent
 
 
 
+
+
 ###isSynchronized(updateCache) &rarr; boolean
 Return true if the node is synchronized
+
+
 
 
 
@@ -146,6 +173,8 @@ optional | updateCache | boolean | True to update the cache
 
 ###hasNewParent(update) &rarr; boolean
 Return true if the node has new parent
+
+
 
 
 
@@ -187,10 +216,10 @@ The function will iterate up the hierarchy until the ancestor was found or no mo
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ancestor | [Node](page.php?p=6630) | The ancestor node to test
+ | ancestor | [Node](/classes/Node) | The ancestor node to test
 ---
 
-###getDescendants() &rarr; [Node](page.php?p=6630)[]
+###getDescendants() &rarr; [Node](/classes/Node)[]
 Will return all nodes that have this node as parent.
 @return {BABYLON.Node[]} all children nodes of all types.
 

@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6628
+ID_PAGE: 25116
 PG_TITLE: EngineCapabilities
 PG_VERSION: 2.1
 TAGS:
@@ -12,9 +12,12 @@ Regroup the different parameters linked to the using browser
 
 
 
+
+
 ##Members
 
 ###maxTexturesImageUnits : number
+
 
 
 
@@ -23,7 +26,9 @@ The maximum textures image
 
 
 
+
 ###maxTextureSize : number
+
 
 
 
@@ -32,7 +37,9 @@ The maximum texture size
 
 
 
+
 ###maxCubemapTextureSize : number
+
 
 
 
@@ -41,7 +48,9 @@ The maximum cube
 
 
 
+
 ###maxRenderTextureSize : number
+
 
 
 
@@ -50,7 +59,10 @@ The maximum render texture size
 
 
 
+
 ###standardDerivatives : boolean
+
+
 
 
 
@@ -64,7 +76,11 @@ The maximum render texture size
 
 
 
+
+
 ###textureFloat : boolean
+
+
 
 
 
@@ -78,7 +94,10 @@ The maximum render texture size
 
 
 
+
+
 ###maxAnisotropy : number
+
 
 
 
@@ -87,7 +106,10 @@ The maximum anisotropy for the using browser
 
 
 
+
 ###instancedArrays : any
+
+
 
 
 

@@ -1,10 +1,14 @@
 ---
-ID_PAGE: 5890
+ID_PAGE: 25059
 PG_TITLE: SceneSerializer
 PG_VERSION: 2.0
 ---
 
 Serializes a scene
+
+
+
+
 
 
 
@@ -19,5 +23,5 @@ Serializes a scene
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=5725) | The scene
+ | scene | [Scene](/classes/Scene) | The scene
 ---

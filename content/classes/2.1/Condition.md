@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6679
+ID_PAGE: 25167
 PG_TITLE: Condition
 PG_VERSION: 2.1
 TAGS:
@@ -7,7 +7,8 @@ TAGS:
 ---
 
 A great tutorial right here : https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-Actions
-##new [Condition](page.php?p=6679)(actionManager)
+##new [Condition](/classes/Condition)(actionManager)
+
 
 
 
@@ -20,10 +21,14 @@ The condition constructor
 
 
 
+
+
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | actionManager | [ActionManager](page.php?p=6678) | @param actionManager
+ | actionManager | [ActionManager](/classes/ActionManager) | @param actionManager
 ---
 
 

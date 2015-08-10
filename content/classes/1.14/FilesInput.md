@@ -1,15 +1,15 @@
 ---
-ID_PAGE: 3375
+ID_PAGE: 24583
 PG_TITLE: FilesInput
 PG_VERSION: 1.14
 ---
-##new [FilesInput](page.php?p=3375)(p_engine, p_scene, p_canvas, p_sceneLoadedCallback, p_progressCallback, p_additionnalRenderLoopLogicCallback, p_textureLoadingCallback, p_startingProcessingFilesCallback)
+##new [FilesInput](/classes/FilesInput)(p_engine, p_scene, p_canvas, p_sceneLoadedCallback, p_progressCallback, p_additionnalRenderLoopLogicCallback, p_textureLoadingCallback, p_startingProcessingFilesCallback)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | p_engine | [Engine](page.php?p=3247) | @param p_engine
- | p_scene | [Scene](page.php?p=3274) | @param p_scene
+ | p_engine | [Engine](/classes/Engine) | @param p_engine
+ | p_scene | [Scene](/classes/Scene) | @param p_scene
  | p_canvas | HTMLCanvasElement | @param p_canvas
  | p_sceneLoadedCallback | any | @param p_sceneLoadedCallback
  | p_progressCallback | any | @param p_progressCallback

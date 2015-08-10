@@ -1,24 +1,24 @@
 ---
-ID_PAGE: 3287
+ID_PAGE: 24495
 PG_TITLE: ActionEvent
 PG_VERSION: 1.14
 ---
-##new [ActionEvent](page.php?p=3287)(source, pointerX, pointerY, meshUnderPointer, sourceEvent)
+##new [ActionEvent](/classes/ActionEvent)(source, pointerX, pointerY, meshUnderPointer, sourceEvent)
 
 See more about Actions [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-Actions)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | source | [AbstractMesh](page.php?p=3269) | Source of the action event
+ | source | [AbstractMesh](/classes/AbstractMesh) | Source of the action event
  | pointerX | number | The pointer X
  | pointerY | number | The pointer Y
- | meshUnderPointer | [AbstractMesh](page.php?p=3269) | The mesh under the pointer
+ | meshUnderPointer | [AbstractMesh](/classes/AbstractMesh) | The mesh under the pointer
 optional | sourceEvent | any | The source event
 ---
 
 ##Members
 
-###source : [AbstractMesh](page.php?p=3269)
+###source : [AbstractMesh](/classes/AbstractMesh)
 
 
 The source of the action event
@@ -33,7 +33,7 @@ The pointer X position
 
 The pointer Y position
 
-###meshUnderPointer : [AbstractMesh](page.php?p=3269)
+###meshUnderPointer : [AbstractMesh](/classes/AbstractMesh)
 
 
 The mesh under the pointer position
@@ -47,21 +47,21 @@ The source of the event
 
 ##Methods
 
-###static CreateNew(source) &rarr; [ActionEvent](page.php?p=3287)
+###static CreateNew(source) &rarr; [ActionEvent](/classes/ActionEvent)
 Create a new action event
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | source | [AbstractMesh](page.php?p=3269) | Source to the action event
+ | source | [AbstractMesh](/classes/AbstractMesh) | Source to the action event
 ---
 
-###static CreateNewFromScene(scene, evt) &rarr; [ActionEvent](page.php?p=3287)
+###static CreateNewFromScene(scene, evt) &rarr; [ActionEvent](/classes/ActionEvent)
 Create a new action from the specified scene
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=3274) | The scene to create the new action
+ | scene | [Scene](/classes/Scene) | The scene to create the new action
  | evt | Event | The event to action event
 ---

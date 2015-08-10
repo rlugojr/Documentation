@@ -1,20 +1,23 @@
 ---
-ID_PAGE: 5746
+ID_PAGE: 24915
 PG_TITLE: Animatable
 PG_VERSION: 2.0
 ---
 
 Used to access to individual animations
-##new [Animatable](page.php?p=5746)(scene, target, fromFrame, toFrame, loopAnimation, speedRatio, onAnimationEnd, animations)
+##new [Animatable](/classes/Animatable)(scene, target, fromFrame, toFrame, loopAnimation, speedRatio, onAnimationEnd, animations)
 
 
-Builds an [Animatable](page.php?p=5746) object
+
+Builds an [Animatable](/classes/Animatable) object
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=5725) | The scene where takes place the animation
+ | scene | [Scene](/classes/Scene) | The scene where takes place the animation
  | target | any | The target object
 optional | fromFrame | number | default : 0
 optional | toFrame | number | default : 100
@@ -30,49 +33,66 @@ optional | animations | any | The array of animations to run
 
 
 
+
 The animated target
+
 
 
 ###fromFrame : number
 
 
 
+
 The begining frame of the animation
+
 
 
 ###toFrame : number
 
 
 
+
 The ending frame of the animation
+
 
 
 ###loopAnimation : boolean
 
 
 
+
 default : false. Sets if the animation loops or not
+
 
 
 ###speedRatio : number
 
 
 
+
 default : 1.0. The speed Ratio, lower gives a slower animation
+
 
 
 ###onAnimationEnd : any
 
 
 
+
 Function to execute on animation end
+
 
 
 ###animationStarted : boolean
 
 
 
+
 Tests if the animation is in started state
+
+
+
+
 
 
 
@@ -87,15 +107,19 @@ Append a new animation
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | target | any | The target which will be animated
- | animations | [Animation](page.php?p=5747)[] | The animation(s) to apply
+ | animations | [Animation](/classes/Animation)[] | The animation(s) to apply
 ---
 
-###getAnimationByTargetProperty(property) &rarr; [Animation](page.php?p=5747)
+###getAnimationByTargetProperty(property) &rarr; [Animation](/classes/Animation)
 Returns animations that have to given property
+
+
 
 
 
@@ -111,8 +135,12 @@ Pauses the animation
 
 
 
+
+
 ###restart() &rarr; void
 Restarts the animation
+
+
 
 
 

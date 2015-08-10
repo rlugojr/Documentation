@@ -1,11 +1,14 @@
 ---
-ID_PAGE: 6786
+ID_PAGE: 25274
 PG_TITLE: ParticleSystem
 PG_VERSION: 2.1
 TAGS:
     - Particle
 ---
-##new [ParticleSystem](page.php?p=6786)(name, capacity, scene, customEffect)
+##new [ParticleSystem](/classes/ParticleSystem)(name, capacity, scene, customEffect)
+
+
+
 
 
 
@@ -18,8 +21,8 @@ TAGS:
 ---|---|---|---
  | name | string | name of the particle system
  | capacity | number | The total number of particles contained into the particle system
- | scene | [Scene](page.php?p=6662) | The scene of the particle system
-optional | customEffect | [Effect](page.php?p=6725) | The reference to a shader effect for the particles, overriding the default shader
+ | scene | [Scene](/classes/Scene) | The scene of the particle system
+optional | customEffect | [Effect](/classes/Effect) | The reference to a shader effect for the particles, overriding the default shader
 ---
 
 ##Members
@@ -29,7 +32,9 @@ optional | customEffect | [Effect](page.php?p=6725) | The reference to a shader 
 
 
 
+
 The particle system name
+
 
 
 
@@ -38,7 +43,9 @@ The particle system name
 
 
 
+
 The source color is added to the destination color without alpha affecting the result
+
 
 
 
@@ -47,7 +54,9 @@ The source color is added to the destination color without alpha affecting the r
 
 
 
+
 Blend current color and particle color using particle&rsquo;s alpha
+
 
 
 
@@ -56,7 +65,9 @@ Blend current color and particle color using particle&rsquo;s alpha
 
 
 
+
 The particle system id
+
 
 
 
@@ -65,7 +76,9 @@ The particle system id
 
 
 
+
 The rendering group ID. default : 0
+
 
 
 
@@ -74,7 +87,9 @@ The rendering group ID. default : 0
 
 
 
+
 The particle emitter, where the particle comes from
+
 
 
 
@@ -83,7 +98,9 @@ The particle emitter, where the particle comes from
 
 
 
+
 The particle emit rate. default : 10
+
 
 
 
@@ -92,7 +109,9 @@ The particle emit rate. default : 10
 
 
 
+
 Emit only a specific number of particles at once, in a &quot;one shot&quot;
+
 
 
 
@@ -101,7 +120,9 @@ Emit only a specific number of particles at once, in a &quot;one shot&quot;
 
 
 
+
 The overall motion speed default : 0.01
+
 
 
 
@@ -110,7 +131,9 @@ The overall motion speed default : 0.01
 
 
 
+
 The amount of time the particle system is running
+
 
 
 
@@ -119,7 +142,9 @@ The amount of time the particle system is running
 
 
 
+
 Disposes (or not) the particle system on stop
+
 
 
 
@@ -128,7 +153,9 @@ Disposes (or not) the particle system on stop
 
 
 
+
 Minimum power of emitting particles
+
 
 
 
@@ -137,7 +164,9 @@ Minimum power of emitting particles
 
 
 
+
 Maximum power of emitting particles
+
 
 
 
@@ -146,7 +175,9 @@ Maximum power of emitting particles
 
 
 
+
 Minimum life time of particle
+
 
 
 
@@ -155,7 +186,9 @@ Minimum life time of particle
 
 
 
+
 Maximum life time of particle
+
 
 
 
@@ -164,7 +197,9 @@ Maximum life time of particle
 
 
 
+
 Minimum size of particle
+
 
 
 
@@ -173,7 +208,9 @@ Minimum size of particle
 
 
 
+
 Maximum size of particle
+
 
 
 
@@ -182,7 +219,9 @@ Maximum size of particle
 
 
 
+
 Minimum angular speed of particle in radian
+
 
 
 
@@ -191,11 +230,14 @@ Minimum angular speed of particle in radian
 
 
 
+
 Maximum angular speed of particle in radian
 
 
 
-###particleTexture : [Texture](page.php?p=6733)
+
+###particleTexture : [Texture](/classes/Texture)
+
 
 
 
@@ -204,7 +246,9 @@ The particle texture
 
 
 
+
 ###onDispose : () =&gt; void
+
 
 
 
@@ -213,7 +257,10 @@ The action to perform on dispose
 
 
 
-###updateFunction : (particles: [Particle](page.php?p=6785)[]) =&gt; void
+
+###updateFunction : (particles: [Particle](/classes/Particle)[]) =&gt; void
+
+
 
 
 
@@ -223,7 +270,9 @@ The action to perform on dispose
 
 
 
+
 The selected mode for particles : BLENDMODE_ONEONE or BLENDMODE_STANDARD
+
 
 
 
@@ -232,11 +281,14 @@ The selected mode for particles : BLENDMODE_ONEONE or BLENDMODE_STANDARD
 
 
 
+
 default : false
 
 
 
-###gravity : [Vector3](page.php?p=6751)
+
+###gravity : [Vector3](/classes/Vector3)
+
 
 
 
@@ -245,16 +297,9 @@ The gravity of the particle to give an orientation to the particle
 
 
 
-###direction1 : [Vector3](page.php?p=6751)
 
+###direction1 : [Vector3](/classes/Vector3)
 
-
-
-Random direction of each particle emitted between direction1 and direction2
-
-
-
-###direction2 : [Vector3](page.php?p=6751)
 
 
 
@@ -263,7 +308,20 @@ Random direction of each particle emitted between direction1 and direction2
 
 
 
-###minEmitBox : [Vector3](page.php?p=6751)
+
+###direction2 : [Vector3](/classes/Vector3)
+
+
+
+
+
+Random direction of each particle emitted between direction1 and direction2
+
+
+
+
+###minEmitBox : [Vector3](/classes/Vector3)
+
 
 
 
@@ -272,7 +330,9 @@ Begining of the box emitting the particles
 
 
 
-###maxEmitBox : [Vector3](page.php?p=6751)
+
+###maxEmitBox : [Vector3](/classes/Vector3)
+
 
 
 
@@ -281,7 +341,9 @@ Ending of the box emitting the particles
 
 
 
-###color1 : [Color4](page.php?p=6749)
+
+###color1 : [Color4](/classes/Color4)
+
 
 
 
@@ -290,7 +352,9 @@ First color to be combined to produce the particle color
 
 
 
-###color2 : [Color4](page.php?p=6749)
+
+###color2 : [Color4](/classes/Color4)
+
 
 
 
@@ -299,7 +363,9 @@ Second color to be combined to produce the particle color
 
 
 
-###colorDead : [Color4](page.php?p=6749)
+
+###colorDead : [Color4](/classes/Color4)
+
 
 
 
@@ -308,7 +374,9 @@ Color taken by the particle just before it disappears
 
 
 
-###textureMask : [Color4](page.php?p=6749)
+
+###textureMask : [Color4](/classes/Color4)
+
 
 
 
@@ -317,14 +385,22 @@ Mask used to filter a texture color
 
 
 
-###startDirectionFunction : (emitPower: number, worldMatrix: [Matrix](page.php?p=6754), directionToUpdate: [Vector3](page.php?p=6751)) =&gt; void
+
+###startDirectionFunction : (emitPower: number, worldMatrix: [Matrix](/classes/Matrix), directionToUpdate: [Vector3](/classes/Vector3)) =&gt; void
 
 
 
 
 
 
-###startPositionFunction : (worldMatrix: [Matrix](page.php?p=6754), positionToUpdate: [Vector3](page.php?p=6751)) =&gt; void
+
+
+###startPositionFunction : (worldMatrix: [Matrix](/classes/Matrix), positionToUpdate: [Vector3](/classes/Vector3)) =&gt; void
+
+
+
+
+
 
 
 
@@ -348,11 +424,13 @@ Mask used to filter a texture color
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | particle | [Particle](page.php?p=6785) | 
+ | particle | [Particle](/classes/Particle) | 
 ---
 
 ###getCapacity() &rarr; number
 Returns the capacity of the particle system
+
+
 
 
 
@@ -367,8 +445,12 @@ Returns if the particle system is alive
 
 
 
+
+
 ###isStarted() &rarr; boolean
 Returns if the particle system is started
+
+
 
 
 
@@ -383,8 +465,12 @@ Starts the particle system
 
 
 
+
+
 ###stop() &rarr; void
 Stops the particle system
+
+
 
 
 
@@ -399,7 +485,11 @@ Animates the particle system
 
 
 
+
+
 ###render() &rarr; number
+
+
 
 
 
@@ -414,11 +504,13 @@ Destroyes this particle system
 
 
 
-###clone(name, newEmitter) &rarr; [ParticleSystem](page.php?p=6786)
+
+
+###clone(name, newEmitter) &rarr; [ParticleSystem](/classes/ParticleSystem)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | The name of the cloned [ParticleSystem](page.php?p=6786)
+ | name | string | The name of the cloned [ParticleSystem](/classes/ParticleSystem)
  | newEmitter | any | The given new emitter
 ---

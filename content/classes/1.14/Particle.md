@@ -1,27 +1,27 @@
 ---
-ID_PAGE: 3341
+ID_PAGE: 24549
 PG_TITLE: Particle
 PG_VERSION: 1.14
 ---
 
 ##Members
 
-###position : [Vector3](page.php?p=3327)
+###position : [Vector3](/classes/Vector3)
 
 
 This particle position
 
-###direction : [Vector3](page.php?p=3327)
+###direction : [Vector3](/classes/Vector3)
 
 
 This particle direction
 
-###color : [Color4](page.php?p=3325)
+###color : [Color4](/classes/Color4)
 
 
 This particle color
 
-###colorStep : [Color4](page.php?p=3325)
+###colorStep : [Color4](/classes/Color4)
 
 
 ###lifeTime : number

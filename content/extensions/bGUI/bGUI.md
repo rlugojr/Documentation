@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 25102
 PG_TITLE: bGUI
-TAGS:
-    - bGUI
 ---
 # ![](https://raw.githubusercontent.com/Temechon/bGUI/master/logo_sd.png) v1.0
 

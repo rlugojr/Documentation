@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 5829
+ID_PAGE: 24998
 PG_TITLE: QuadraticMatrix
 PG_VERSION: 2.0
 ---
-##new [QuadraticMatrix](page.php?p=5829)(data)
+##new [QuadraticMatrix](/classes/QuadraticMatrix)(data)
 
 ####Parameters
  | Name | Type | Description
@@ -41,7 +41,7 @@ optional | data | Array&lt;number&gt; |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [QuadraticMatrix](page.php?p=5829) | 
+ | matrix | [QuadraticMatrix](/classes/QuadraticMatrix) | 
 ---
 
 ###addArrayInPlace(data) &rarr; void
@@ -52,15 +52,15 @@ optional | data | Array&lt;number&gt; |
  | data | Array&lt;number&gt; | 
 ---
 
-###add(matrix) &rarr; [QuadraticMatrix](page.php?p=5829)
+###add(matrix) &rarr; [QuadraticMatrix](/classes/QuadraticMatrix)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [QuadraticMatrix](page.php?p=5829) | 
+ | matrix | [QuadraticMatrix](/classes/QuadraticMatrix) | 
 ---
 
-###static FromData(a, b, c, d) &rarr; [QuadraticMatrix](page.php?p=5829)
+###static FromData(a, b, c, d) &rarr; [QuadraticMatrix](/classes/QuadraticMatrix)
 
 ####Parameters
  | Name | Type | Description

@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6831
+ID_PAGE: 25319
 PG_TITLE: Xbox360Pad
 PG_VERSION: 2.1
 TAGS:
@@ -10,8 +10,10 @@ TAGS:
 
 
 
+
+
 ##Extends
- [Gamepad](page.php?p=6829)
+ [Gamepad](/classes/Gamepad)
 ##Members
 
 ###leftTrigger : number
@@ -19,7 +21,9 @@ TAGS:
 
 
 
-Contains a value of the [Xbox360Dpad](page.php?p=6856) enum refering to the left pad's direction
+
+Contains a value of the [Xbox360Dpad](/classes/Xbox360Dpad) enum refering to the left pad's direction
+
 
 
 
@@ -28,11 +32,15 @@ Contains a value of the [Xbox360Dpad](page.php?p=6856) enum refering to the left
 
 
 
-Contains a value of the [Xbox360Dpad](page.php?p=6856) enum refering to the right pad's direction
+
+Contains a value of the [Xbox360Dpad](/classes/Xbox360Dpad) enum refering to the right pad's direction
+
 
 
 
 ###buttonA : number
+
+
 
 
 
@@ -46,7 +54,11 @@ Contains a value of the [Xbox360Dpad](page.php?p=6856) enum refering to the righ
 
 
 
+
+
 ###buttonX : number
+
+
 
 
 
@@ -60,7 +72,11 @@ Contains a value of the [Xbox360Dpad](page.php?p=6856) enum refering to the righ
 
 
 
+
+
 ###buttonStart : number
+
+
 
 
 
@@ -74,7 +90,11 @@ Contains a value of the [Xbox360Dpad](page.php?p=6856) enum refering to the righ
 
 
 
+
+
 ###buttonLB : number
+
+
 
 
 
@@ -88,7 +108,11 @@ Contains a value of the [Xbox360Dpad](page.php?p=6856) enum refering to the righ
 
 
 
+
+
 ###buttonLeftStick : number
+
+
 
 
 
@@ -102,7 +126,11 @@ Contains a value of the [Xbox360Dpad](page.php?p=6856) enum refering to the righ
 
 
 
+
+
 ###dPadUp : number
+
+
 
 
 
@@ -116,6 +144,8 @@ Contains a value of the [Xbox360Dpad](page.php?p=6856) enum refering to the righ
 
 
 
+
+
 ###dPadLeft : number
 
 
@@ -123,7 +153,14 @@ Contains a value of the [Xbox360Dpad](page.php?p=6856) enum refering to the righ
 
 
 
+
+
 ###dPadRight : number
+
+
+
+
+
 
 
 
@@ -147,6 +184,8 @@ Binds an action on the left trigger property change
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -155,6 +194,8 @@ Binds an action on the left trigger property change
 
 ###onrighttriggerchanged(callback) &rarr; void
 Binds an action on the right trigger property change
+
+
 
 
 
@@ -173,10 +214,12 @@ Binds an action on button pressed
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | callback | (buttonPressed: [Xbox360Button](page.php?p=6855)) =&gt; void | The function to execute with the button passed as argument
+ | callback | (buttonPressed: [Xbox360Button](/classes/Xbox360Button)) =&gt; void | The function to execute with the button passed as argument
 ---
 
 ###onbuttonup(callback) &rarr; void
@@ -186,10 +229,12 @@ Binds an action on button released
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | callback | (buttonReleased: [Xbox360Button](page.php?p=6855)) =&gt; void | The function to execute with the button passed as argument
+ | callback | (buttonReleased: [Xbox360Button](/classes/Xbox360Button)) =&gt; void | The function to execute with the button passed as argument
 ---
 
 ###ondpaddown(callback) &rarr; void
@@ -199,10 +244,12 @@ Binds an action on stick pressed
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | callback | (dPadPressed: [Xbox360Dpad](page.php?p=6856)) =&gt; void | The function to execute with the stick passed as argument
+ | callback | (dPadPressed: [Xbox360Dpad](/classes/Xbox360Dpad)) =&gt; void | The function to execute with the stick passed as argument
 ---
 
 ###ondpadup(callback) &rarr; void
@@ -212,10 +259,12 @@ Binds an action on stick released
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | callback | (dPadReleased: [Xbox360Dpad](page.php?p=6856)) =&gt; void | The function to execute with the stick passed as argument
+ | callback | (dPadReleased: [Xbox360Dpad](/classes/Xbox360Dpad)) =&gt; void | The function to execute with the stick passed as argument
 ---
 
 ###update() &rarr; void

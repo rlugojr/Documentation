@@ -1,45 +1,75 @@
 ---
-ID_PAGE: 6809
+ID_PAGE: 25297
 PG_TITLE: LensRenderingPipeline
 PG_VERSION: 2.1
 TAGS:
     - PostProcess
     - PostProcessRenderPipeline
 ---
-##new [LensRenderingPipeline](page.php?p=6809)(name, parameters, scene, ratio, cameras)
+##new [LensRenderingPipeline](/classes/LensRenderingPipeline)(name, parameters, scene, ratio, cameras)
 
 ####Parameters
- | Name | Type | Description
+&nbsp;| Name | Type | Description
 ---|---|---|---
- | name | string | 
- | parameters | any | 
- | scene | [Scene](page.php?p=6662) | 
-optional | ratio | number | 
-optional | cameras | [Camera](page.php?p=6631)[] | 
+&nbsp;| name | string | The rendering pipeline name
+&nbsp;| parameters | any | An object containing all parameters (see above)
+&nbsp;| scene | [Scene](/classes/Scene) | The scene linked to this pipeline
+optional | ratio | number | The size of the postprocesses (0.5 means that your postprocess will have a width = canvas.width 0.5 and a height = canvas.height 0.5)
+optional | cameras | [Camera](/classes/Camera)[] | The array of cameras that the rendering pipeline will be attached to
 ---
 
+Effect parameters are as follow:
+
+
+&nbsp; &nbsp; chromatic_aberration: number; // from 0 to x (1 for realism)
+
+&nbsp; &nbsp; edge_blur: number; // from 0 to x (1 for realism)
+
+&nbsp; &nbsp; distortion: number; // from 0 to x (1 for realism)
+
+&nbsp; &nbsp; grain_amount: number; // from 0 to 1
+
+&nbsp; &nbsp; grain_texture: BABYLON.Texture; // texture to use for grain effect; if unset, use random B&amp;W noise
+
+&nbsp; &nbsp; dof_focus_distance: number; // depth-of-field: focus distance; unset to disable (disabled by default)
+
+&nbsp; &nbsp; dof_aperture: number; // depth-of-field: focus blur bias (default: 1)
+
+&nbsp; &nbsp; dof_darken: number; // depth-of-field: darken that which is out of focus (from 0 to 1, disabled by default)
+
+&nbsp; &nbsp; dof_pentagon: boolean; // depth-of-field: makes a pentagon-like &quot;bokeh&quot; effect
+
+&nbsp; &nbsp; dof_gain: number; // depth-of-field: highlights gain; unset to disable (disabled by default)
+
+&nbsp; &nbsp; dof_threshold: number; // depth-of-field: highlights threshold (default: 1)
+
+&nbsp; &nbsp; blur_noise: boolean; // add a little bit of noise to the blur (default: true)
+
+
+Note: if an effect parameter is unset, effect is disabled
+
 ##Extends
- [PostProcessRenderPipeline](page.php?p=6808)
+&nbsp;[PostProcessRenderPipeline](/classes/PostProcessRenderPipeline)
 ##Members
 
 ###LensChromaticAberrationEffect : string
 
 
-The chromatic aberration [PostProcess](page.php?p=6790) id in the pipeline
+The chromatic aberration [PostProcess](/classes/PostProcess) id in the pipeline
 
 @type {string}
 
 ###HighlightsEnhancingEffect : string
 
 
-The highlights enhancing [PostProcess](page.php?p=6790) id in the pipeline
+The highlights enhancing [PostProcess](/classes/PostProcess) id in the pipeline
 
 @type {string}
 
 ###LensDepthOfFieldEffect : string
 
 
-The depth-of-field [PostProcess](page.php?p=6790) id in the pipeline
+The depth-of-field [PostProcess](/classes/PostProcess) id in the pipeline
 
 @type {string}
 
@@ -50,9 +80,9 @@ The depth-of-field [PostProcess](page.php?p=6790) id in the pipeline
 ###setEdgeBlur(amount) &rarr; void
 
 ####Parameters
- | Name | Type | Description
+&nbsp;| Name | Type | Description
 ---|---|---|---
- | amount | number | 
+&nbsp;| amount | number | 
 ---
 
 ###disableEdgeBlur() &rarr; void
@@ -61,9 +91,9 @@ The depth-of-field [PostProcess](page.php?p=6790) id in the pipeline
 ###setGrainAmount(amount) &rarr; void
 
 ####Parameters
- | Name | Type | Description
+&nbsp;| Name | Type | Description
 ---|---|---|---
- | amount | number | 
+&nbsp;| amount | number | 
 ---
 
 ###disableGrain() &rarr; void
@@ -72,9 +102,9 @@ The depth-of-field [PostProcess](page.php?p=6790) id in the pipeline
 ###setChromaticAberration(amount) &rarr; void
 
 ####Parameters
- | Name | Type | Description
+&nbsp;| Name | Type | Description
 ---|---|---|---
- | amount | number | 
+&nbsp;| amount | number | 
 ---
 
 ###disableChromaticAberration() &rarr; void
@@ -83,9 +113,9 @@ The depth-of-field [PostProcess](page.php?p=6790) id in the pipeline
 ###setEdgeDistortion(amount) &rarr; void
 
 ####Parameters
- | Name | Type | Description
+&nbsp;| Name | Type | Description
 ---|---|---|---
- | amount | number | 
+&nbsp;| amount | number | 
 ---
 
 ###disableEdgeDistortion() &rarr; void
@@ -94,9 +124,9 @@ The depth-of-field [PostProcess](page.php?p=6790) id in the pipeline
 ###setFocusDistance(amount) &rarr; void
 
 ####Parameters
- | Name | Type | Description
+&nbsp;| Name | Type | Description
 ---|---|---|---
- | amount | number | 
+&nbsp;| amount | number | 
 ---
 
 ###disableDepthOfField() &rarr; void
@@ -105,17 +135,17 @@ The depth-of-field [PostProcess](page.php?p=6790) id in the pipeline
 ###setAperture(amount) &rarr; void
 
 ####Parameters
- | Name | Type | Description
+&nbsp;| Name | Type | Description
 ---|---|---|---
- | amount | number | 
+&nbsp;| amount | number | 
 ---
 
 ###setDarkenOutOfFocus(amount) &rarr; void
 
 ####Parameters
- | Name | Type | Description
+&nbsp;| Name | Type | Description
 ---|---|---|---
- | amount | number | 
+&nbsp;| amount | number | 
 ---
 
 ###enablePentagonBokeh() &rarr; void
@@ -133,17 +163,17 @@ The depth-of-field [PostProcess](page.php?p=6790) id in the pipeline
 ###setHighlightsGain(amount) &rarr; void
 
 ####Parameters
- | Name | Type | Description
+&nbsp;| Name | Type | Description
 ---|---|---|---
- | amount | number | 
+&nbsp;| amount | number | 
 ---
 
 ###setHighlightsThreshold(amount) &rarr; void
 
 ####Parameters
- | Name | Type | Description
+&nbsp;| Name | Type | Description
 ---|---|---|---
- | amount | number | 
+&nbsp;| amount | number | 
 ---
 
 ###disableHighlights() &rarr; void
@@ -153,7 +183,7 @@ The depth-of-field [PostProcess](page.php?p=6790) id in the pipeline
 Removes the internal pipeline assets and detaches the pipeline from the scene cameras
 
 ####Parameters
- | Name | Type | Description
+&nbsp;| Name | Type | Description
 ---|---|---|---
 optional | disableDepthRender | boolean | 
 ---

@@ -1,13 +1,15 @@
 ---
-ID_PAGE: 5885
+ID_PAGE: 25054
 PG_TITLE: ParticlesOptimization
 PG_VERSION: 2.0
 ---
 
-##Extends [SceneOptimization](page.php?p=5879)
+
+
+##Extends [SceneOptimization](/classes/SceneOptimization)
 ##Members
 
-###apply : (scene: [Scene](page.php?p=5725)) =&gt; boolean
+###apply : (scene: [Scene](/classes/Scene)) =&gt; boolean
 
 
 

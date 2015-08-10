@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6694
+ID_PAGE: 25182
 PG_TITLE: QuarticEase
 PG_VERSION: 2.1
 TAGS:
@@ -8,8 +8,10 @@ TAGS:
 
 
 
+
+
 ##Extends
- [EasingFunction](page.php?p=6685)
+ [EasingFunction](/classes/EasingFunction)
 
 
 ##Methods

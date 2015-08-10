@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 3329
+ID_PAGE: 24537
 PG_TITLE: Matrix
 PG_VERSION: 1.14
 ---
@@ -43,7 +43,7 @@ Inverts the matrix and put it into another matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Matrix](page.php?p=3329) | Another matrix
+ | other | [Matrix](/classes/Matrix) | Another matrix
 ---
 
 ###setTranslation(vector3) &rarr; void
@@ -52,16 +52,16 @@ Sets a translation to the matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vector3 | [Vector3](page.php?p=3327) | The translation to apply
+ | vector3 | [Vector3](/classes/Vector3) | The translation to apply
 ---
 
-###multiply(other) &rarr; [Matrix](page.php?p=3329)
+###multiply(other) &rarr; [Matrix](/classes/Matrix)
 Multiplies by another matrix
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Matrix](page.php?p=3329) | Another matrix
+ | other | [Matrix](/classes/Matrix) | Another matrix
 ---
 
 ###copyFrom(other) &rarr; void
@@ -70,7 +70,7 @@ Copies another matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Matrix](page.php?p=3329) | Another matrix
+ | other | [Matrix](/classes/Matrix) | Another matrix
 ---
 
 ###copyToArray(array, offset) &rarr; void
@@ -89,8 +89,8 @@ Multiplies another matrix into an existing matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Matrix](page.php?p=3329) | Anoher matrix
- | result | [Matrix](page.php?p=3329) | The matrix to put the result into
+ | other | [Matrix](/classes/Matrix) | Anoher matrix
+ | result | [Matrix](/classes/Matrix) | The matrix to put the result into
 ---
 
 ###multiplyToArray(other, result, offset) &rarr; void
@@ -99,7 +99,7 @@ Multiplies another matrix into an existing array at a given index
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Matrix](page.php?p=3329) | Another matrix
+ | other | [Matrix](/classes/Matrix) | Another matrix
  | result | Float32Array | The matrix to put the result into
  | offset | number | The first index of the matrix to put the result into
 ---
@@ -110,14 +110,14 @@ Tests if two matrices are equal
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value | [Matrix](page.php?p=3329) | The matrix to test against
+ | value | [Matrix](/classes/Matrix) | The matrix to test against
 ---
 
-###clone() &rarr; [Matrix](page.php?p=3329)
+###clone() &rarr; [Matrix](/classes/Matrix)
 Clones a martix
 
 
-###static FromArray(array, offset) &rarr; [Matrix](page.php?p=3329)
+###static FromArray(array, offset) &rarr; [Matrix](/classes/Matrix)
 Creates a new matrix from an array from a given index
 
 ####Parameters
@@ -135,7 +135,7 @@ Fills an existing matrix with an array from a given index
 ---|---|---|---
  | array | number[] | The array to copy
  | offset | number | The first index to copy from
- | result | [Matrix](page.php?p=3329) | The existing matrix
+ | result | [Matrix](/classes/Matrix) | The existing matrix
 ---
 
 ###static FromValuesToRef(initialM11, initialM12, initialM13, initialM14, initialM21, initialM22, initialM23, initialM24, initialM31, initialM32, initialM33, initialM34, initialM41, initialM42, initialM43, initialM44, result) &rarr; void
@@ -160,10 +160,10 @@ Fills an existsing matrix with a set of values
  | initialM42 | number | initial MM42 4,2 value
  | initialM43 | number | initial MM43 4,3 value
  | initialM44 | number | initial MM44 4,4 value
- | result | [Matrix](page.php?p=3329) | The exisiting matrix
+ | result | [Matrix](/classes/Matrix) | The exisiting matrix
 ---
 
-###static FromValues(initialM11, initialM12, initialM13, initialM14, initialM21, initialM22, initialM23, initialM24, initialM31, initialM32, initialM33, initialM34, initialM41, initialM42, initialM43, initialM44) &rarr; [Matrix](page.php?p=3329)
+###static FromValues(initialM11, initialM12, initialM13, initialM14, initialM21, initialM22, initialM23, initialM24, initialM31, initialM32, initialM33, initialM34, initialM41, initialM42, initialM43, initialM44) &rarr; [Matrix](/classes/Matrix)
 Creates a matrix from set of values
 
 ####Parameters
@@ -187,7 +187,7 @@ Creates a matrix from set of values
  | initialM44 | number | initial MM44 4,4 value
 ---
 
-###static Identity() &rarr; [Matrix](page.php?p=3329)
+###static Identity() &rarr; [Matrix](/classes/Matrix)
 Returns the identity matrix
 
 
@@ -197,14 +197,14 @@ Fills an existing matrix with the identity matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | result | [Matrix](page.php?p=3329) | The existing matrix
+ | result | [Matrix](/classes/Matrix) | The existing matrix
 ---
 
-###static Zero() &rarr; [Matrix](page.php?p=3329)
+###static Zero() &rarr; [Matrix](/classes/Matrix)
 Returns a null matrix
 
 
-###static RotationX(angle) &rarr; [Matrix](page.php?p=3329)
+###static RotationX(angle) &rarr; [Matrix](/classes/Matrix)
 Rotates a matrix around X axis
 
 ####Parameters
@@ -220,10 +220,10 @@ Rotates a matrix around X axis into an existing matrix
  | Name | Type | Description
 ---|---|---|---
  | angle | number | The X angle of rotation
- | result | [Matrix](page.php?p=3329) | The existing matrix
+ | result | [Matrix](/classes/Matrix) | The existing matrix
 ---
 
-###static RotationY(angle) &rarr; [Matrix](page.php?p=3329)
+###static RotationY(angle) &rarr; [Matrix](/classes/Matrix)
 Rotates a matrix around Y axis
 
 ####Parameters
@@ -239,10 +239,10 @@ Rotates a matrix around Y axis into an existing axis
  | Name | Type | Description
 ---|---|---|---
  | angle | number | The Y angle of rotation
- | result | [Matrix](page.php?p=3329) | The existing matrix
+ | result | [Matrix](/classes/Matrix) | The existing matrix
 ---
 
-###static RotationZ(angle) &rarr; [Matrix](page.php?p=3329)
+###static RotationZ(angle) &rarr; [Matrix](/classes/Matrix)
 Rotates a matrix around Z axis
 
 ####Parameters
@@ -258,20 +258,20 @@ Rotates a matrix around Z axis into an existing axis
  | Name | Type | Description
 ---|---|---|---
  | angle | number | The Z angle of rotation
- | result | [Matrix](page.php?p=3329) | The existing matrix
+ | result | [Matrix](/classes/Matrix) | The existing matrix
 ---
 
-###static RotationAxis(axis, angle) &rarr; [Matrix](page.php?p=3329)
-Rotates a matrix using a [Vector3](page.php?p=3327)
+###static RotationAxis(axis, angle) &rarr; [Matrix](/classes/Matrix)
+Rotates a matrix using a [Vector3](/classes/Vector3)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | axis | [Vector3](page.php?p=3327) | [Vector3](page.php?p=3327) axis of the rotation
+ | axis | [Vector3](/classes/Vector3) | [Vector3](/classes/Vector3) axis of the rotation
  | angle | number | angle of the rotation
 ---
 
-###static RotationYawPitchRoll(yaw, pitch, roll) &rarr; [Matrix](page.php?p=3329)
+###static RotationYawPitchRoll(yaw, pitch, roll) &rarr; [Matrix](/classes/Matrix)
 Rotates a matrix using yaw, pitch and roll values
 
 ####Parameters
@@ -291,10 +291,10 @@ Rotates a matrix using yaw, pitch and roll values and put it into a target matri
  | yaw | number | The yaw rotation value
  | pitch | number | The pitch rotation value
  | roll | number | The roll rotation value
- | result | [Matrix](page.php?p=3329) | The target matrix
+ | result | [Matrix](/classes/Matrix) | The target matrix
 ---
 
-###static Scaling(x, y, z) &rarr; [Matrix](page.php?p=3329)
+###static Scaling(x, y, z) &rarr; [Matrix](/classes/Matrix)
 Creates a scaling matrix
 
 ####Parameters
@@ -314,10 +314,10 @@ Creates a scaling matrix and put it into a target matrix
  | x | number | The X scaling factor
  | y | number | The Y scaling factor
  | z | number | The Z scaling factor
- | result | [Matrix](page.php?p=3329) | The matrix target
+ | result | [Matrix](/classes/Matrix) | The matrix target
 ---
 
-###static Translation(x, y, z) &rarr; [Matrix](page.php?p=3329)
+###static Translation(x, y, z) &rarr; [Matrix](/classes/Matrix)
 Creates a matrix with a translation pitch defined by x, y, z
 
 ####Parameters
@@ -337,33 +337,33 @@ Creates a matrix with a translation pitch defined by x, y, z and put it into a t
  | x | number | The X translation value
  | y | number | The Y translation value
  | z | number | The Z translation value
- | result | [Matrix](page.php?p=3329) | The matrix target
+ | result | [Matrix](/classes/Matrix) | The matrix target
 ---
 
-###static LookAtLH(eye, target, up) &rarr; [Matrix](page.php?p=3329)
-Builds a left-handed look-at [Matrix](page.php?p=3329)
+###static LookAtLH(eye, target, up) &rarr; [Matrix](/classes/Matrix)
+Builds a left-handed look-at [Matrix](/classes/Matrix)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | eye | [Vector3](page.php?p=3327) | The [Vector3](page.php?p=3327) that defines the camera point
- | target | [Vector3](page.php?p=3327) | The [Vector3](page.php?p=3327) that defines the camera look-at target
- | up | [Vector3](page.php?p=3327) | The [Vector3](page.php?p=3327) that defines the up direction
+ | eye | [Vector3](/classes/Vector3) | The [Vector3](/classes/Vector3) that defines the camera point
+ | target | [Vector3](/classes/Vector3) | The [Vector3](/classes/Vector3) that defines the camera look-at target
+ | up | [Vector3](/classes/Vector3) | The [Vector3](/classes/Vector3) that defines the up direction
 ---
 
 ###static LookAtLHToRef(eye, target, up, result) &rarr; void
-Builds a left-handed look-at [Matrix](page.php?p=3329) and put it in a target matrix
+Builds a left-handed look-at [Matrix](/classes/Matrix) and put it in a target matrix
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | eye | [Vector3](page.php?p=3327) | The [Vector3](page.php?p=3327) that defines the camera point
- | target | [Vector3](page.php?p=3327) | The [Vector3](page.php?p=3327) that defines the camera look-at target
- | up | [Vector3](page.php?p=3327) | The [Vector3](page.php?p=3327) that defines the up direction
- | result | [Matrix](page.php?p=3329) | The matrix target
+ | eye | [Vector3](/classes/Vector3) | The [Vector3](/classes/Vector3) that defines the camera point
+ | target | [Vector3](/classes/Vector3) | The [Vector3](/classes/Vector3) that defines the camera look-at target
+ | up | [Vector3](/classes/Vector3) | The [Vector3](/classes/Vector3) that defines the up direction
+ | result | [Matrix](/classes/Matrix) | The matrix target
 ---
 
-###static OrthoLH(width, height, znear, zfar) &rarr; [Matrix](page.php?p=3329)
+###static OrthoLH(width, height, znear, zfar) &rarr; [Matrix](/classes/Matrix)
 Creates a left-handed orthogonal projection matrix.
 
 ####Parameters
@@ -375,7 +375,7 @@ Creates a left-handed orthogonal projection matrix.
  | zfar | number | The maximum z value of the view volume
 ---
 
-###static OrthoOffCenterLH(left, right, bottom, top, znear, zfar) &rarr; [Matrix](page.php?p=3329)
+###static OrthoOffCenterLH(left, right, bottom, top, znear, zfar) &rarr; [Matrix](/classes/Matrix)
 Creates a custom left-handed orthogonal projection matrix
 
 ####Parameters
@@ -401,10 +401,10 @@ Creates a custom left-handed orthogonal projection matrix and put it into the ta
  | top | number | The maximum y value of the view volume
  | znear | number | The minimum z value of the view volume
  | zfar | number | The maximum z value of the view volume
- | result | [Matrix](page.php?p=3329) | The target matrix
+ | result | [Matrix](/classes/Matrix) | The target matrix
 ---
 
-###static PerspectiveLH(width, height, znear, zfar) &rarr; [Matrix](page.php?p=3329)
+###static PerspectiveLH(width, height, znear, zfar) &rarr; [Matrix](/classes/Matrix)
 Creates a left-handed perspective projection matrix
 
 ####Parameters
@@ -416,7 +416,7 @@ Creates a left-handed perspective projection matrix
  | zfar | number | The z value of the far view place
 ---
 
-###static PerspectiveFovLH(fov, aspect, znear, zfar) &rarr; [Matrix](page.php?p=3329)
+###static PerspectiveFovLH(fov, aspect, znear, zfar) &rarr; [Matrix](/classes/Matrix)
 Creates a left-handed perspective projection matrix based on the field of view
 
 ####Parameters
@@ -438,47 +438,47 @@ Creates a left-handed perspective projection matrix based on the field of view a
  | aspect | number | Aspect ratio, defined as the view space width divided by height.
  | znear | number | Z-value of the near view plane.
  | zfar | number | Z-value of the far view plane.
- | result | [Matrix](page.php?p=3329) | The target matrix
+ | result | [Matrix](/classes/Matrix) | The target matrix
 ---
 
-###static GetFinalMatrix(viewport, world, view, projection, zmin, zmax) &rarr; [Matrix](page.php?p=3329)
+###static GetFinalMatrix(viewport, world, view, projection, zmin, zmax) &rarr; [Matrix](/classes/Matrix)
 ??
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | viewport | [Viewport](page.php?p=3331) | The [Viewport](page.php?p=3331) structure representing the viewport
- | world | [Matrix](page.php?p=3329) | The [Matrix](page.php?p=3329) structure representing the world
- | view | [Matrix](page.php?p=3329) | The [Matrix](page.php?p=3329) structure representing the view
- | projection | [Matrix](page.php?p=3329) | The [Matrix](page.php?p=3329) structure representing the projection
+ | viewport | [Viewport](/classes/Viewport) | The [Viewport](/classes/Viewport) structure representing the viewport
+ | world | [Matrix](/classes/Matrix) | The [Matrix](/classes/Matrix) structure representing the world
+ | view | [Matrix](/classes/Matrix) | The [Matrix](/classes/Matrix) structure representing the view
+ | projection | [Matrix](/classes/Matrix) | The [Matrix](/classes/Matrix) structure representing the projection
  | zmin | number | The minumum z value of the viewport
  | zmax | number | The maximum z value of the viewport
 ---
 
-###static Transpose(matrix) &rarr; [Matrix](page.php?p=3329)
+###static Transpose(matrix) &rarr; [Matrix](/classes/Matrix)
 Transposes the rows and the columns of the given matrix
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [Matrix](page.php?p=3329) | The matrix to transpose
+ | matrix | [Matrix](/classes/Matrix) | The matrix to transpose
 ---
 
-###static Reflection(plane) &rarr; [Matrix](page.php?p=3329)
-Creates the reflection matrix of a given [Plane](page.php?p=3330)
+###static Reflection(plane) &rarr; [Matrix](/classes/Matrix)
+Creates the reflection matrix of a given [Plane](/classes/Plane)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | plane | [Plane](page.php?p=3330) | The given plane
+ | plane | [Plane](/classes/Plane) | The given plane
 ---
 
 ###static ReflectionToRef(plane, result) &rarr; void
-Creates the reflection matrix of a given [Plane](page.php?p=3330) and put it into a target matrix
+Creates the reflection matrix of a given [Plane](/classes/Plane) and put it into a target matrix
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | plane | [Plane](page.php?p=3330) | The given plane
- | result | [Matrix](page.php?p=3329) | the target matrix
+ | plane | [Plane](/classes/Plane) | The given plane
+ | result | [Matrix](/classes/Matrix) | the target matrix
 ---

@@ -1,84 +1,104 @@
 ---
-ID_PAGE: 5707
+ID_PAGE: 24876
 PG_TITLE: FreeCamera
 PG_VERSION: 2.0
 ---
-##new [FreeCamera](page.php?p=5707)(name, position, scene)
+##new [FreeCamera](/classes/FreeCamera)(name, position, scene)
+
 
 
 Create a new free camera.
 You can move around the world with mouse and keyboard
-A tutorial about [FreeCamera](page.php?p=5707) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+A tutorial about [FreeCamera](/classes/FreeCamera) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the camera
- | position | [Vector3](page.php?p=5808) | Starting position of the camera
- | scene | [Scene](page.php?p=5725) | [Scene](page.php?p=5725) which contain the camera
+ | position | [Vector3](/classes/Vector3) | Starting position of the camera
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the camera
 ---
 
-##Extends [TargetCamera](page.php?p=5705)
+##Extends [TargetCamera](/classes/TargetCamera)
 ##Members
 
-###ellipsoid : [Vector3](page.php?p=5808)
+###ellipsoid : [Vector3](/classes/Vector3)
+
 
 
 
 The collision ellipsoid used to check collisions with the world
 
 
+
 ###keysUp : number[]
+
 
 
 
 List of keys to up camera
 
 
+
 ###keysDown : number[]
+
 
 
 
 List of keys to down camera
 
 
+
 ###keysLeft : number[]
+
 
 
 
 List of keys to left camera
 
 
+
 ###keysRight : number[]
+
 
 
 
 List of keys to right camera
 
 
+
 ###checkCollisions : boolean
+
 
 
 
 True : check collisions ; False : don't check collisions
 
 
+
 ###applyGravity : boolean
+
 
 
 
 True : apply gravity ; False : don't apply gravity
 
 
+
 ###angularSensibility : number
+
 
 
 
 The angular sensibility of the camera
 
 
-###onCollide : (collidedMesh: [AbstractMesh](page.php?p=5720)) =&gt; void
+
+###onCollide : (collidedMesh: [AbstractMesh](/classes/AbstractMesh)) =&gt; void
+
 
 
 
@@ -90,10 +110,16 @@ The function called when this camera collides with the world
 
 
 
+
+
+
+
 ##Methods
 
 ###attachControl(element, noPreventDefault) &rarr; void
 Attach the camera to an element
+
+
 
 
 

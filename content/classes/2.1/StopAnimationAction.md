@@ -1,15 +1,18 @@
 ---
-ID_PAGE: 6669
+ID_PAGE: 25157
 PG_TITLE: StopAnimationAction
 PG_VERSION: 2.1
 TAGS:
     - Action
 ---
-##new [StopAnimationAction](page.php?p=6669)(triggerOptions, target, condition)
+##new [StopAnimationAction](/classes/StopAnimationAction)(triggerOptions, target, condition)
+
 
 
 
 Stop an animation on a specified target.
+
+
 
 
 
@@ -19,11 +22,11 @@ Stop an animation on a specified target.
 ---|---|---|---
  | triggerOptions | any | The trigger options
  | target | any | The target
-optional | condition | [Condition](page.php?p=6679) | The condition to stop the animation
+optional | condition | [Condition](/classes/Condition) | The condition to stop the animation
 ---
 
 ##Extends
- [Action](page.php?p=6663)
+ [Action](/classes/Action)
 
 
 ##Methods

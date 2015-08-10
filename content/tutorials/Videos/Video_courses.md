@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 24826
 PG_TITLE: Video courses
-TAGS:
-    - Videos
 ---
 Do you have a great idea for a 3D game? If you want to build it with the same open source framework used to create Assassin's Creed Pirates, check out this exciting course! Babylon.js is a free, open source gaming framework that streamlines WebGL functionality. Use it to create 3D games and apps which work on every browser that has a GPU device.
 

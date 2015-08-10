@@ -1,18 +1,18 @@
 ---
-ID_PAGE: 3340
+ID_PAGE: 24548
 PG_TITLE: VertexBuffer
 PG_VERSION: 1.14
 ---
 
-Creates a new vertexBuffer. Methods of [VertexBuffer](page.php?p=3340) interface are used to manipulate vertex buffer resources
-##new [VertexBuffer](page.php?p=3340)(engine, data, kind, updatable, postponeInternalCreation)
- [VertexBuffer](page.php?p=3340) constructor
+Creates a new vertexBuffer. Methods of [VertexBuffer](/classes/VertexBuffer) interface are used to manipulate vertex buffer resources
+##new [VertexBuffer](/classes/VertexBuffer)(engine, data, kind, updatable, postponeInternalCreation)
+ [VertexBuffer](/classes/VertexBuffer) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | engine | any | @param engine
  | data | number[] | The data of this vertex buffer
- | kind | string | The kind of vertex buffer (defined as static variables in [VertexBuffer](page.php?p=3340) class)
+ | kind | string | The kind of vertex buffer (defined as static variables in [VertexBuffer](/classes/VertexBuffer) class)
  | updatable | boolean | True if the vertex buffer should be dynamic, false otherwise.
 optional | postponeInternalCreation | boolean | @param postponeInternalCreation
 ---
@@ -89,7 +89,7 @@ Update vertex buffer
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | number[] | [VertexData](page.php?p=3338) into buffer
+ | data | number[] | [VertexData](/classes/VertexData) into buffer
 ---
 
 ###updateDirectly(data) &rarr; void
@@ -98,7 +98,7 @@ Update vertex buffer directly
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | Float32Array | [VertexData](page.php?p=3338) into buffer
+ | data | Float32Array | [VertexData](/classes/VertexData) into buffer
 ---
 
 ###dispose() &rarr; void

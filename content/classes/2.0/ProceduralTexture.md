@@ -1,9 +1,12 @@
 ---
-ID_PAGE: 5796
+ID_PAGE: 24965
 PG_TITLE: ProceduralTexture
 PG_VERSION: 2.0
 ---
-##new [ProceduralTexture](page.php?p=5796)(name, size, fragment, scene, fallbackTexture, generateMipMaps)
+##new [ProceduralTexture](/classes/ProceduralTexture)(name, size, fragment, scene, fallbackTexture, generateMipMaps)
+
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -11,15 +14,20 @@ PG_VERSION: 2.0
  | name | string | 
  | size | any | 
  | fragment | any | 
- | scene | [Scene](page.php?p=5725) | 
-optional | fallbackTexture | [Texture](page.php?p=5790) | 
+ | scene | [Scene](/classes/Scene) | 
+optional | fallbackTexture | [Texture](/classes/Texture) | 
 optional | generateMipMaps | boolean | 
 ---
 
-##Extends [Texture](page.php?p=5790)
+##Extends [Texture](/classes/Texture)
 ##Members
 
 ###refreshRate : number
+
+
+
+
+
 
 
 
@@ -29,13 +37,21 @@ optional | generateMipMaps | boolean |
 ###reset() &rarr; void
 
 
+
+
 ###isReady() &rarr; boolean
+
+
 
 
 ###resetRefreshCounter() &rarr; void
 
 
+
+
 ###setFragment(fragment) &rarr; void
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -46,7 +62,11 @@ optional | generateMipMaps | boolean |
 ###getRenderSize() &rarr; number
 
 
+
+
 ###resize(size, generateMipMaps) &rarr; void
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -55,16 +75,20 @@ optional | generateMipMaps | boolean |
  | generateMipMaps | any | 
 ---
 
-###setTexture(name, texture) &rarr; [ProceduralTexture](page.php?p=5796)
+###setTexture(name, texture) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | texture | [Texture](page.php?p=5790) | 
+ | texture | [Texture](/classes/Texture) | 
 ---
 
-###setFloat(name, value) &rarr; [ProceduralTexture](page.php?p=5796)
+###setFloat(name, value) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -73,7 +97,9 @@ optional | generateMipMaps | boolean |
  | value | number | 
 ---
 
-###setFloats(name, value) &rarr; [ProceduralTexture](page.php?p=5796)
+###setFloats(name, value) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -82,52 +108,64 @@ optional | generateMipMaps | boolean |
  | value | number[] | 
 ---
 
-###setColor3(name, value) &rarr; [ProceduralTexture](page.php?p=5796)
+###setColor3(name, value) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | value | [Color3](page.php?p=5805) | 
+ | value | [Color3](/classes/Color3) | 
 ---
 
-###setColor4(name, value) &rarr; [ProceduralTexture](page.php?p=5796)
+###setColor4(name, value) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | value | [Color4](page.php?p=5806) | 
+ | value | [Color4](/classes/Color4) | 
 ---
 
-###setVector2(name, value) &rarr; [ProceduralTexture](page.php?p=5796)
+###setVector2(name, value) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | value | [Vector2](page.php?p=5807) | 
+ | value | [Vector2](/classes/Vector2) | 
 ---
 
-###setVector3(name, value) &rarr; [ProceduralTexture](page.php?p=5796)
+###setVector3(name, value) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | value | [Vector3](page.php?p=5808) | 
+ | value | [Vector3](/classes/Vector3) | 
 ---
 
-###setMatrix(name, value) &rarr; [ProceduralTexture](page.php?p=5796)
+###setMatrix(name, value) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | value | [Matrix](page.php?p=5811) | 
+ | value | [Matrix](/classes/Matrix) | 
 ---
 
 ###render(useCameraPostProcess) &rarr; void
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -135,7 +173,9 @@ optional | generateMipMaps | boolean |
 optional | useCameraPostProcess | boolean | 
 ---
 
-###clone() &rarr; [ProceduralTexture](page.php?p=5796)
+###clone() &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 
 ###dispose() &rarr; void

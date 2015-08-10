@@ -17,10 +17,6 @@
           "filename": "01._Creating_basic_Scene"
         },
         {
-          "title": "The PlayPen Tutorials",
-          "filename": "01._The_Playpen_Tutorials"
-        },
-        {
           "title": "Discover Basic Elements",
           "filename": "02._Discover_Basic_Elements"
         },
@@ -93,7 +89,7 @@
       "desc": "Learn how to use cool things.",
       "files": [
         {
-          "title": "Discover Basic Elements",
+          "title": "Advanced Texturing",
           "filename": "01._Advanced_Texturing"
         },
         {
@@ -101,15 +97,11 @@
           "filename": "02._Loading_a_Scene_Produced_with_Blender"
         },
         {
-          "title": "Mid-Level Tutorials",
-          "filename": "02._Mid-Level_Tutorials"
-        },
-        {
           "title": "Position, Rotation, Scaling",
           "filename": "03._Position,_Rotation,_Scaling"
         },
         {
-          "title": "03. Unleash the StandardMaterial",
+          "title": "Unleash the StandardMaterial",
           "filename": "03._Unleash_the_StandardMaterial"
         },
         {
@@ -175,27 +167,11 @@
       ]
     },
     {
-      "title": "The Temechon Files",
-      "name": "03_Temechon",
-      "img": "img/tutorials/03.TheTemechonFiles.png",
-      "desc": "Great tutorials writted by Temechon.",
-      "files": [
-        {
-          "title": "The Temechon Files",
-          "filename": "03._The_Temechon_Files"
-        }
-      ]
-    },
-    {
       "title": "More Advanced Features",
-      "name": "04_Advanced",
-      "img": "img/tutorials/04.MoreAdvancedFeatures.png",
+      "name": "03_Advanced",
+      "img": "img/tutorials/03.MoreAdvancedFeatures.png",
       "desc": "Some hard things.",
       "files": [
-        {
-          "title": "More Advanced Features",
-          "filename": "04._More_Advanced_Features"
-        },
         {
           "title": "Adding Your Own Physics Engine Plugin to Babylon.js",
           "filename": "Adding_Your_Own_Physics_Engine_Plugin_to_Babylon.js"
@@ -345,10 +321,6 @@
           "filename": "File_Format_Map_(.babylon)"
         },
         {
-          "title": "General",
-          "filename": "General"
-        },
-        {
           "title": "Render Scene on a PNG",
           "filename": "Render_Scene_on_a_PNG"
         },
@@ -379,10 +351,6 @@
         {
           "title": "Roadmap",
           "filename": "Roadmap"
-        },
-        {
-          "title": "Tutorials",
-          "filename": "Tutorials"
         }
       ]
     },
@@ -461,6 +429,10 @@
       "desc": "Learn how to export from Blender",
       "files": [
         {
+          "title": "Blender",
+          "filename": "Blender"
+        },
+        {
           "title": "Blender tips",
           "filename": "Blender_Tips"
         },
@@ -512,10 +484,6 @@
       "img": "img/extensions/loaders.jpg",
       "desc": "Learn how to use loaders.",
       "files": [
-        {
-          "title": "Loaders",
-          "filename": "Loaders"
-        },
         {
           "title": "STL",
           "filename": "STL"

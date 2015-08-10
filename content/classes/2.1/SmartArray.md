@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6844
+ID_PAGE: 25332
 PG_TITLE: SmartArray<T>
 PG_VERSION: 2.1
 ---
@@ -9,7 +9,10 @@ Create a new smart array
 
 
 
+
 SmartArray constructor
+
+
 
 
 
@@ -27,7 +30,9 @@ SmartArray constructor
 
 
 
+
 Array
+
 
 
 
@@ -36,7 +41,12 @@ Array
 
 
 
+
 The length of the smart array
+
+
+
+
 
 
 
@@ -57,6 +67,8 @@ Push method. If the length of the smart array is reached, the length of this arr
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -70,6 +82,8 @@ Push method to avoid any duplicate. If the value is found in the smart array, no
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -78,6 +92,8 @@ Push method to avoid any duplicate. If the value is found in the smart array, no
 
 ###sort(compareFn) &rarr; void
 Sort this array with the sort function given in parameter.
+
+
 
 
 
@@ -97,8 +113,12 @@ Reset the length of this smart array
 
 
 
+
+
 ###concat(array) &rarr; void
 Append the given smart array data to this smart array.
+
+
 
 
 
@@ -113,6 +133,8 @@ Append the given smart array data to this smart array.
 ###concatWithNoDuplicate(array) &rarr; void
 Append the given smart array data to this smart array.
 This function check if each values are not already in the smart array.
+
+
 
 
 

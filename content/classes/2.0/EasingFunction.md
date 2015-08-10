@@ -1,15 +1,21 @@
 ---
-ID_PAGE: 5748
+ID_PAGE: 24917
 PG_TITLE: EasingFunction
 PG_VERSION: 2.0
 ---
+
+
 
 ##Members
 
 ###static EASINGMODE_EASEIN : number
 
 
+
+
 ###static EASINGMODE_EASEOUT : number
+
+
 
 
 ###static EASINGMODE_EASEINOUT : number
@@ -17,9 +23,16 @@ PG_VERSION: 2.0
 
 
 
+
+
+
+
+
 ##Methods
 
 ###setEasingMode(easingMode) &rarr; void
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -30,7 +43,11 @@ PG_VERSION: 2.0
 ###getEasingMode() &rarr; number
 
 
+
+
 ###easeInCore(gradient) &rarr; number
+
+
 
 ####Parameters
  | Name | Type | Description

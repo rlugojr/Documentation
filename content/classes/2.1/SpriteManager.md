@@ -1,16 +1,19 @@
 ---
-ID_PAGE: 6818
+ID_PAGE: 25306
 PG_TITLE: SpriteManager
 PG_VERSION: 2.1
 TAGS:
     - Sprite
 ---
-##new [SpriteManager](page.php?p=6818)(name, imgUrl, capacity, cellSize, scene, epsilon, samplingMode)
+##new [SpriteManager](/classes/SpriteManager)(name, imgUrl, capacity, cellSize, scene, epsilon, samplingMode)
 
 
 
-Create a new [SpriteManager](page.php?p=6818)
+
+Create a new [SpriteManager](/classes/SpriteManager)
 A tutorial about sprites can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/08-Sprites)
+
+
 
 
 
@@ -22,7 +25,7 @@ A tutorial about sprites can be found [here](https://github.com/BabylonJS/Babylo
  | imgUrl | string | Link of the image
  | capacity | number | The capacity of the sprite manager
  | cellSize | number | Size of cells
- | scene | [Scene](page.php?p=6662) | [Scene](page.php?p=6662) which contain the sprite Manager
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the sprite Manager
 optional | epsilon | number | Epsilon
 optional | samplingMode | number | 
 ---
@@ -34,7 +37,9 @@ optional | samplingMode | number |
 
 
 
+
 Name of the sprite manager
+
 
 
 
@@ -43,11 +48,14 @@ Name of the sprite manager
 
 
 
+
 Size of cells
 
 
 
-###sprites : [Sprite](page.php?p=6817)[]
+
+###sprites : [Sprite](/classes/Sprite)[]
+
 
 
 
@@ -56,7 +64,9 @@ Sprites contains in the manager
 
 
 
+
 ###renderingGroupId : number
+
 
 
 
@@ -65,12 +75,15 @@ The rendering group ID
 
 
 
+
 ###onDispose : () =&gt; void
 
 
 
 
+
 Called on dispose
+
 
 
 
@@ -87,10 +100,17 @@ Called on dispose
 
 
 
+
+
+
+
+
 ##Methods
 
 ###render() &rarr; void
 Render this sprite manager
+
+
 
 
 

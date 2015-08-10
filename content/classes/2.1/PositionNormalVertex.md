@@ -1,28 +1,28 @@
 ---
-ID_PAGE: 6767
+ID_PAGE: 25255
 PG_TITLE: PositionNormalVertex
 PG_VERSION: 2.1
 ---
-##new [PositionNormalVertex](page.php?p=6767)(position, normal)
+##new [PositionNormalVertex](/classes/PositionNormalVertex)(position, normal)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | position | [Vector3](page.php?p=6751) | 
-optional | normal | [Vector3](page.php?p=6751) | 
+optional | position | [Vector3](/classes/Vector3) | 
+optional | normal | [Vector3](/classes/Vector3) | 
 ---
 
 ##Members
 
-###position : [Vector3](page.php?p=6751)
+###position : [Vector3](/classes/Vector3)
 
 
-###normal : [Vector3](page.php?p=6751)
+###normal : [Vector3](/classes/Vector3)
 
 
 
 
 ##Methods
 
-###clone() &rarr; [PositionNormalVertex](page.php?p=6767)
+###clone() &rarr; [PositionNormalVertex](/classes/PositionNormalVertex)
 

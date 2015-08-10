@@ -1,13 +1,16 @@
 ---
-ID_PAGE: 5835
+ID_PAGE: 25004
 PG_TITLE: VertexBuffer
 PG_VERSION: 2.0
 ---
 
-Creates a new vertexBuffer. Methods of [VertexBuffer](page.php?p=5835) interface are used to manipulate vertex buffer resources
-##new [VertexBuffer](page.php?p=5835)(engine, data, kind, updatable, postponeInternalCreation, stride)
+Creates a new vertexBuffer. Methods of [VertexBuffer](/classes/VertexBuffer) interface are used to manipulate vertex buffer resources
+##new [VertexBuffer](/classes/VertexBuffer)(engine, data, kind, updatable, postponeInternalCreation, stride)
 
- [VertexBuffer](page.php?p=5835) constructor
+
+ [VertexBuffer](/classes/VertexBuffer) constructor
+
+
 
 
 ####Parameters
@@ -15,7 +18,7 @@ Creates a new vertexBuffer. Methods of [VertexBuffer](page.php?p=5835) interface
 ---|---|---|---
  | engine | any | @param engine
  | data | number[] | The data of this vertex buffer
- | kind | string | The kind of vertex buffer (defined as static variables in [VertexBuffer](page.php?p=5835) class)
+ | kind | string | The kind of vertex buffer (defined as static variables in [VertexBuffer](/classes/VertexBuffer) class)
  | updatable | boolean | True if the vertex buffer should be dynamic, false otherwise.
 optional | postponeInternalCreation | boolean | @param postponeInternalCreation
 optional | stride | number | 
@@ -27,49 +30,66 @@ optional | stride | number |
 
 
 
+
 The position kind
+
 
 
 ###static NormalKind : string
 
 
 
+
 The normal kind
+
 
 
 ###static UVKind : string
 
 
 
+
 The UV kind
+
 
 
 ###static UV2Kind : string
 
 
 
+
 The UV2 kind
+
 
 
 ###static ColorKind : string
 
 
 
+
 The color kind
+
 
 
 ###static MatricesIndicesKind : string
 
 
 
+
 The matrice indice kind
+
 
 
 ###static MatricesWeightsKind : string
 
 
 
+
 The matrice weight kind
+
+
+
+
 
 
 
@@ -85,8 +105,12 @@ Return true if it's updatable
 
 
 
+
+
 ###getData() &rarr; number[]
 Get the data
+
+
 
 
 
@@ -97,14 +121,20 @@ Get the buffer
 
 
 
+
+
 ###getStrideSize() &rarr; number
 Get stride size
 
 
 
 
+
+
 ###create(data) &rarr; void
 Create a vertex buffer
+
+
 
 
 
@@ -119,10 +149,12 @@ Update vertex buffer
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | number[] | [VertexData](page.php?p=5825) into buffer
+ | data | number[] | [VertexData](/classes/VertexData) into buffer
 ---
 
 ###updateDirectly(data, offset) &rarr; void
@@ -130,10 +162,12 @@ Update vertex buffer directly
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | Float32Array | [VertexData](page.php?p=5825) into buffer
+ | data | Float32Array | [VertexData](/classes/VertexData) into buffer
  | offset | number | 
 ---
 

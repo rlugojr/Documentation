@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 5774
+ID_PAGE: 24943
 PG_TITLE: OctreeBlock<T>
 PG_VERSION: 2.0
 ---
@@ -8,14 +8,17 @@ Create a new OctreeBlock
 ##new OctreeBlock&lt;T&gt;(minPoint, maxPoint, capacity, depth, maxDepth, creationFunc)
 
 
+
 The OctreeBlock constructor
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | minPoint | [Vector3](page.php?p=5808) | The minimum point
- | maxPoint | [Vector3](page.php?p=5808) | The maximum point
+ | minPoint | [Vector3](/classes/Vector3) | The minimum point
+ | maxPoint | [Vector3](/classes/Vector3) | The maximum point
  | capacity | number | @param capacity
  | depth | number | @param depth
  | maxDepth | number | @param maxDepth
@@ -28,35 +31,48 @@ The OctreeBlock constructor
 
 
 
+
 The entries
+
 
 
 ###blocks : Array&lt;OctreeBlock&lt;T&gt;&gt;
 
 
 
+
 The blocks
+
 
 
 ###capacity : number
 
 
 
+
 The capacity of the octreeBlock
 
 
-###minPoint : [Vector3](page.php?p=5808)
+
+###minPoint : [Vector3](/classes/Vector3)
+
 
 
 
 The min point
 
 
-###maxPoint : [Vector3](page.php?p=5808)
+
+###maxPoint : [Vector3](/classes/Vector3)
+
 
 
 
 The max point
+
+
+
+
 
 
 
@@ -71,6 +87,8 @@ Add an entry to this octree block. The creationFunc linked to this octreeblock i
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -79,6 +97,8 @@ Add an entry to this octree block. The creationFunc linked to this octreeblock i
 
 ###addEntries(entries) &rarr; void
 Add an entries to this octree block.
+
+
 
 
 
@@ -93,10 +113,12 @@ Select
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](page.php?p=5812)[] | [Frustum](page.php?p=5814) plan of the mesh
+ | frustumPlanes | [Plane](/classes/Plane)[] | [Frustum](/classes/Frustum) plan of the mesh
  | selection | SmartArray&lt;T&gt; | @param selection
 optional | allowDuplicate | boolean | True if you want to duplicate it, false otherwise.
 ---
@@ -106,10 +128,12 @@ Intersects
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | sphereCenter | [Vector3](page.php?p=5808) | The sphere center
+ | sphereCenter | [Vector3](/classes/Vector3) | The sphere center
  | sphereRadius | number | The sphere radius
  | selection | SmartArray&lt;T&gt; | The selection element
 optional | allowDuplicate | boolean | True if you want to duplicate it, false otherwise.
@@ -120,10 +144,12 @@ Intersects ray
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](page.php?p=5815) | @param ray
+ | ray | [Ray](/classes/Ray) | @param ray
  | selection | SmartArray&lt;T&gt; | @param selection
 ---
 

@@ -1,16 +1,19 @@
 ---
-ID_PAGE: 6731
+ID_PAGE: 25219
 PG_TITLE: BaseTexture
 PG_VERSION: 2.1
 TAGS:
     - BaseTexture
 ---
-##new [BaseTexture](page.php?p=6731)(scene)
+##new [BaseTexture](/classes/BaseTexture)(scene)
 
 
 
-Create a new [BaseTexture](page.php?p=6731);
+
+Create a new [BaseTexture](/classes/BaseTexture);
 A tutorial about materials and textures can be found here : https://github.com/BabylonJS/Babylon.js/wiki/04-Materials
+
+
 
 
 
@@ -18,7 +21,7 @@ A tutorial about materials and textures can be found here : https://github.com/B
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=6662) | The scene which will contains the new base texture
+ | scene | [Scene](/classes/Scene) | The scene which will contains the new base texture
 ---
 
 ##Members
@@ -28,11 +31,14 @@ A tutorial about materials and textures can be found here : https://github.com/B
 
 
 
+
 Name of the base texture.
 
 
 
+
 ###delayLoadState : number
+
 
 
 
@@ -43,7 +49,9 @@ By default : no delay
 
 
 
+
 ###hasAlpha : boolean
+
 
 
 
@@ -54,7 +62,9 @@ By default : false
 
 
 
+
 ###getAlphaFromRGB : boolean
+
 
 
 
@@ -65,7 +75,9 @@ By default : false
 
 
 
+
 ###level : number
+
 
 
 
@@ -76,7 +88,9 @@ By default : 1
 
 
 
+
 ###isCube : boolean
+
 
 
 
@@ -87,7 +101,9 @@ By default : false
 
 
 
+
 ###isRenderTarget : boolean
+
 
 
 
@@ -98,7 +114,9 @@ By default : false
 
 
 
-###animations : [Animation](page.php?p=6684)[]
+
+###animations : [Animation](/classes/Animation)[]
+
 
 
 
@@ -107,7 +125,9 @@ The animations of the base texture
 
 
 
+
 ###onDispose : () =&gt; void
+
 
 
 
@@ -116,7 +136,9 @@ Function to call on dispose
 
 
 
+
 ###coordinatesIndex : number
+
 
 
 
@@ -127,7 +149,9 @@ By default : 0
 
 
 
+
 ###coordinatesMode : number
+
 
 
 
@@ -138,7 +162,9 @@ By default : Explicit_Mode
 
 
 
+
 ###wrapU : number
+
 
 
 
@@ -147,7 +173,9 @@ The texture repetition in U axis
 
 
 
+
 ###wrapV : number
+
 
 
 
@@ -156,7 +184,9 @@ The texture repetition in V axis
 
 
 
+
 ###anisotropicFilteringLevel : number
+
 
 
 
@@ -164,6 +194,7 @@ The texture repetition in V axis
 The level of the anisotropic filtering level
 
 By default : 4
+
 
 
 
@@ -180,9 +211,14 @@ By default : 4
 
 
 
+
+
+
+
+
 ##Methods
 
-###getScene() &rarr; [Scene](page.php?p=6662)
+###getScene() &rarr; [Scene](/classes/Scene)
 Get the scene which contains the base texture
 @return The scene
 
@@ -191,7 +227,9 @@ Get the scene which contains the base texture
 
 
 
-###getTextureMatrix() &rarr; [Matrix](page.php?p=6754)
+
+
+###getTextureMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the texture matrix - return null
 @return null
 
@@ -200,9 +238,13 @@ Get the texture matrix - return null
 
 
 
-###getReflectionTextureMatrix() &rarr; [Matrix](page.php?p=6754)
+
+
+###getReflectionTextureMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the reflection texture matrix - return null
 @return null
+
+
 
 
 
@@ -218,8 +260,12 @@ Get the internal texture
 
 
 
+
+
 ###isReady() &rarr; boolean
 True if the base texture is ready ; False otherwise
+
+
 
 
 
@@ -235,6 +281,8 @@ Get the size of the base texture
 
 
 
+
+
 ###getBaseSize() &rarr; ISize
 Get the base size of the base texture
 @return ISize
@@ -244,7 +292,11 @@ Get the base size of the base texture
 
 
 
+
+
 ###scale(ratio) &rarr; void
+
+
 
 
 
@@ -262,6 +314,8 @@ Do the load delay
 
 
 
+
+
 ###releaseInternalTexture() &rarr; void
 Release the internal texture
 
@@ -270,8 +324,12 @@ Release the internal texture
 
 
 
-###clone() &rarr; [BaseTexture](page.php?p=6731)
+
+
+###clone() &rarr; [BaseTexture](/classes/BaseTexture)
 Clone the base texture
+
+
 
 
 

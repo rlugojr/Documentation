@@ -1,17 +1,20 @@
 ---
-ID_PAGE: 6734
+ID_PAGE: 25222
 PG_TITLE: DynamicTexture
 PG_VERSION: 2.1
 TAGS:
     - BaseTexture
     - Texture
 ---
-##new [DynamicTexture](page.php?p=6734)(name, options, scene, generateMipMaps, samplingMode)
+##new [DynamicTexture](/classes/DynamicTexture)(name, options, scene, generateMipMaps, samplingMode)
 
 
 
-Create a new [DynamicTexture](page.php?p=6734).
+
+Create a new [DynamicTexture](/classes/DynamicTexture).
 A tutorial about dynamic textures can be found here : http://blogs.msdn.com/b/eternalcoding/archive/2013/08/12/creating-a-3d-chart-for-your-windows-8-1-app-using-babylon-js.aspx
+
+
 
 
 
@@ -21,13 +24,13 @@ A tutorial about dynamic textures can be found here : http://blogs.msdn.com/b/et
 ---|---|---|---
  | name | string | Name of the texture
  | options | any | Options of the dynamic texture
- | scene | [Scene](page.php?p=6662) | [Scene](page.php?p=6662) which contain the texture
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the texture
  | generateMipMaps | boolean | @param generateMipMaps
 optional | samplingMode | number | @param samplingMode
 ---
 
 ##Extends
- [Texture](page.php?p=6733)
+ [Texture](/classes/Texture)
 ##Members
 
 ###canRescale : boolean
@@ -40,9 +43,16 @@ optional | samplingMode | number | @param samplingMode
 
 
 
+
+
+
+
+
 ##Methods
 
 ###scale(ratio) &rarr; void
+
+
 
 
 
@@ -61,6 +71,8 @@ Get the context
 
 
 
+
+
 ###clear() &rarr; void
 
 
@@ -68,6 +80,8 @@ Get the context
 
 ###update(invertY) &rarr; void
 Update the dynamic texture
+
+
 
 
 
@@ -86,6 +100,8 @@ Draw a text on view
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -99,5 +115,5 @@ optional | invertY | boolean | Invert the text on Y axis
 optional | update | boolean | 
 ---
 
-###clone() &rarr; [DynamicTexture](page.php?p=6734)
+###clone() &rarr; [DynamicTexture](/classes/DynamicTexture)
 

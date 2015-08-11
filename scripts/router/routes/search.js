@@ -15,7 +15,7 @@ router.get('/', function (req, res) {
     var offset = page * resultMax;
 
 
-    if (searchTerm && searchTerm.length + '' >= 2) {
+    if (searchTerm && (searchTerm + '').length >= 2) {
         var results = [];
         var uniq = [];
         var totalCount = 0;
@@ -89,7 +89,11 @@ router.get('/', function (req, res) {
         );
     } else {
         //default search page
-        res.render('search', {searchTerm: searchTerm, resultsCount: 0});
+        res.render('search', {
+            message: "Please try to run a search with more than one character",
+            searchTerm: searchTerm,
+            resultsCount: 0
+        });
     }
 });
 

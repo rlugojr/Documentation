@@ -94,6 +94,8 @@ $title_width : 300px;
 
         a{
           color: whitesmoke;
+          display: inline-block;
+          width:100%;
         }
       }
 
@@ -140,6 +142,10 @@ $title_width : 300px;
           &:focus {
             border:none;
             outline: 0;
+          }
+
+          &:invalid{
+            border: solid 3px black;
           }
         }
 

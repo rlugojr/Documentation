@@ -3,7 +3,8 @@ ID_PAGE: 24909
 PG_TITLE: ActionEvent
 PG_VERSION: 2.0
 ---
- [ActionEvent](/classes/ActionEvent) is the event beint sent when an action is triggered.
+
+ [ActionEvent](/classes/ActionEvent) is the event beint sent when an action is triggered.
 ##new [ActionEvent](/classes/ActionEvent)(source, pointerX, pointerY, meshUnderPointer, sourceEvent)
 
 @constructor

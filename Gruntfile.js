@@ -77,9 +77,6 @@ module.exports = function (grunt) {
         },
         clean        : {
             json: {
-                options: {
-                    'no-write': false
-                },
                 src    : [
                     'data/**.json',
                     '!data/static-tags.json',
@@ -89,11 +86,17 @@ module.exports = function (grunt) {
                 ]
             },
             indexes: {
+                options:{
+                    force: true
+                },
                 src: [
                     'data/search/**/*'
                 ]
             },
             tmp : {
+                options:{
+                    force: true
+                },
                 src: [
                     '.tmp/**/*'
                 ]

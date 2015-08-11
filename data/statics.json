@@ -488,7 +488,7 @@
       "title": "General",
       "name": "General",
       "img": "img/tutorials/General.png",
-      "desc": "General things.",
+      "desc": "General good things to know",
       "files": [
         {
           "title": "Approved Naming Conventions",
@@ -524,7 +524,7 @@
       "title": "Others",
       "name": "Others",
       "img": "img/tutorials/All.png",
-      "desc": "Other things.",
+      "desc": "Other goot things to know",
       "files": [
         {
           "title": "A Babylon.js Primer",

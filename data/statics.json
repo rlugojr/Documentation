@@ -484,12 +484,32 @@
     }
   ],
   "generals": [
+     {
+      "title": "Essentials",
+      "name": "Essentials",
+      "img": "img/tutorials/All.png",
+      "desc": "Beginner? start here!",
+      "files": [
+        {
+          "title": "A Babylon.js Primer",
+          "filename": "A_Babylon.js_Primer"
+        },
+        {
+          "title": "The Playground Tutorial",
+          "filename": "The_Playground_Tutorial"
+        }
+      ]
+    },
     {
       "title": "General",
       "name": "General",
       "img": "img/tutorials/General.png",
       "desc": "General good things to know",
       "files": [
+        {
+          "title": "Roadmap",
+          "filename": "Roadmap"
+        },
         {
           "title": "Approved Naming Conventions",
           "filename": "Approved_Naming_Conventions"
@@ -507,10 +527,6 @@
           "filename": "Render_Scene_on_a_PNG"
         },
         {
-          "title": "The Playground Tutorial",
-          "filename": "The_Playground_Tutorial"
-        },
-        {
           "title": "v1.14 Classes Hotlist",
           "filename": "v1.14_Classes_Hotlist"
         },
@@ -519,23 +535,7 @@
           "filename": "v2.0_Classes_Hotlist"
         }
       ]
-    },
-    {
-      "title": "Others",
-      "name": "Others",
-      "img": "img/tutorials/All.png",
-      "desc": "Other goot things to know",
-      "files": [
-        {
-          "title": "A Babylon.js Primer",
-          "filename": "A_Babylon.js_Primer"
-        },
-        {
-          "title": "Roadmap",
-          "filename": "Roadmap"
-        }
-      ]
-    }
+    }   
   ]
 
 }

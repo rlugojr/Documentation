@@ -1,12 +1,12 @@
 ---
-ID_PAGE: 3251
+ID_PAGE: 24459
 PG_TITLE: AnaglyphArcRotateCamera
 PG_VERSION: 1.14
 ---
-##new [AnaglyphArcRotateCamera](page.php?p=3251)(name, alpha, beta, radius, target, eyeSpace, scene)
+##new [AnaglyphArcRotateCamera](/classes/AnaglyphArcRotateCamera)(name, alpha, beta, radius, target, eyeSpace, scene)
 
 The AnaglyphCamera is a camera package that is a more generic (non-Oculus) stereoscopic 3D camera.
-There are actually two types of AnaglyphCamera. This one is a [AnaglyphArcRotateCamera](page.php?p=3251) : Stereoscopic 3D with two [ArcRotateCamera](page.php?p=3250).
+There are actually two types of AnaglyphCamera. This one is a [AnaglyphArcRotateCamera](/classes/AnaglyphArcRotateCamera) : Stereoscopic 3D with two [ArcRotateCamera](/classes/ArcRotateCamera).
 Tutorial [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
 ####Parameters
  | Name | Type | Description
@@ -20,7 +20,7 @@ Tutorial [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
  | scene | any | The scene which contain the camera
 ---
 
-##Extends [ArcRotateCamera](page.php?p=3250)
+##Extends [ArcRotateCamera](/classes/ArcRotateCamera)
 
 
 ##Methods

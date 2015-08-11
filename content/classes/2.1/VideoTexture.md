@@ -1,17 +1,20 @@
 ---
-ID_PAGE: 6738
+ID_PAGE: 25226
 PG_TITLE: VideoTexture
 PG_VERSION: 2.1
 TAGS:
     - BaseTexture
     - Texture
 ---
-##new [VideoTexture](page.php?p=6738)(name, urls, scene, generateMipMaps, invertY, samplingMode)
+##new [VideoTexture](/classes/VideoTexture)(name, urls, scene, generateMipMaps, invertY, samplingMode)
 
 
 
-Create a new [VideoTexture](page.php?p=6738). Several videos can be used on one texture. In this case, all videos are appended.
-A tutorial about video textures can be found here : https://github.com/BabylonJS/Babylon.js/wiki/14-Advanced-Texturing
+
+Create a new [VideoTexture](/classes/VideoTexture). Several videos can be used on one texture. In this case, all videos are appended.
+A tutorial about video textures can be found here : http://doc.babylonjs.com/page.php?p=22161
+
+
 
 
 
@@ -21,14 +24,14 @@ A tutorial about video textures can be found here : https://github.com/BabylonJS
 ---|---|---|---
  | name | string | Name of the texture
  | urls | string[] | Link to the texture
- | scene | [Scene](page.php?p=6662) | [Scene](page.php?p=6662) which contain the texture
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the texture
 optional | generateMipMaps | boolean | True to generate a mipmaps
 optional | invertY | boolean | True to invert on Y axis
 optional | samplingMode | number | 
 ---
 
 ##Extends
- [Texture](page.php?p=6733)
+ [Texture](/classes/Texture)
 ##Members
 
 ###video : HTMLVideoElement
@@ -36,7 +39,12 @@ optional | samplingMode | number |
 
 
 
+
 The video element
+
+
+
+
 
 
 

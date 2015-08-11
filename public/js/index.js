@@ -1,28 +1,5 @@
 (function () {
 
-    //-----------------
-    //-- Action on banner
-    //-----------------
-    $("#home").click(function () {
-        window.location = "/";
-    });
-    $("#whatsnew").click(function () {
-        window.location = "/whats-new";
-    });
-    $("#tutorials").click(function () {
-        window.location = "/tutorials";
-    });
-    $("#exporters").click(function () {
-        window.location = "/exporters";
-    });
-    $("#extensions").click(function () {
-        window.location = "/extensions";
-    });
-    $("#classes").click(function () {
-        window.location = "/classes";
-    });
-
-
     // ----------------------
     // LEFT MENU FOR MOBILE
     // ----------------------
@@ -45,6 +22,10 @@
                 $('<a>', {
                     href: '/whats-new',
                     html: '<i class="fa fa-file-text-o"></i>What\'s new?'
+                }),
+                $('<a>', {
+                    href: '/generals',
+                    html: '<i class="fa fa-book"></i>Generals'
                 }),
                 $('<a>', {
                     href: '/tutorials',
@@ -74,6 +55,11 @@
                     href: 'https://github.com/BabylonJS/Babylon.js',
                     target: '_blank',
                     html: '<i class="fa fa-github"></i>Github'
+                }),
+                $('<a>', {
+                    href: 'https://github.com/BabylonJS/Documentation',
+                    target: '_blank',
+                    html: '<i class="fa fa-code-fork"></i>Contribute'
                 }),
                 $('<a>', {
                     href: 'http://www.html5gamedevs.com/forum/16-babylonjs',

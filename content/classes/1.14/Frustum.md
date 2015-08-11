@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 3332
+ID_PAGE: 24540
 PG_TITLE: Frustum
 PG_VERSION: 1.14
 ---
@@ -10,12 +10,12 @@ Defines the geometric portion of an object between two parallel Planes
 
 ##Methods
 
-###static GetPlanes(transform) &rarr; [Plane](page.php?p=3330)[]
+###static GetPlanes(transform) &rarr; [Plane](/classes/Plane)[]
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | transform | [Matrix](page.php?p=3329) | 
+ | transform | [Matrix](/classes/Matrix) | 
 ---
 
 ###static GetPlanesToRef(transform, frustumPlanes) &rarr; void
@@ -23,6 +23,6 @@ Defines the geometric portion of an object between two parallel Planes
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | transform | [Matrix](page.php?p=3329) | 
- | frustumPlanes | [Plane](page.php?p=3330)[] | 
+ | transform | [Matrix](/classes/Matrix) | 
+ | frustumPlanes | [Plane](/classes/Plane)[] | 
 ---

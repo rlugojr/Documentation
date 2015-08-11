@@ -1,11 +1,14 @@
 ---
-ID_PAGE: 6690
+ID_PAGE: 25178
 PG_TITLE: ElasticEase
 PG_VERSION: 2.1
 TAGS:
     - EasingFunction
 ---
-##new [ElasticEase](page.php?p=6690)(oscillations, springiness)
+##new [ElasticEase](/classes/ElasticEase)(oscillations, springiness)
+
+
+
 
 
 
@@ -18,7 +21,7 @@ optional | springiness | number |
 ---
 
 ##Extends
- [EasingFunction](page.php?p=6685)
+ [EasingFunction](/classes/EasingFunction)
 ##Members
 
 ###oscillations : number
@@ -26,7 +29,14 @@ optional | springiness | number |
 
 
 
+
+
 ###springiness : number
+
+
+
+
+
 
 
 

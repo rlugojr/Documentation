@@ -1,11 +1,11 @@
 ---
-ID_PAGE: 6700
+ID_PAGE: 25188
 PG_TITLE: Sound
 PG_VERSION: 2.1
 TAGS:
     - Audio
 ---
-##new [Sound](page.php?p=6700)(name, urlOrArrayBuffer, scene, readyToPlayCallback, options)
+##new [Sound](/classes/Sound)(name, urlOrArrayBuffer, scene, readyToPlayCallback, options)
 
 Create a sound and attach it to a scene
 ####Parameters
@@ -13,7 +13,7 @@ Create a sound and attach it to a scene
 ---|---|---|---
  | name | string | Name of your sound
  | urlOrArrayBuffer | any | Url to the sound to load async or ArrayBuffer
- | scene | [Scene](page.php?p=6662) | 
+ | scene | [Scene](/classes/Scene) | 
 optional | readyToPlayCallback | () =&gt; void | Provide a callback function if you'd like to load your code once the sound is ready to be played
 optional | options | any | Objects to provide with the current available options: autoplay, loop, volume, spatialSound, maxDistance, rolloffFactor, refDistance, distanceModel, panningModel
 ---
@@ -30,7 +30,11 @@ optional | options | any | Objects to provide with the current available options
 
 
 
+
+
 ###loop : boolean
+
+
 
 
 
@@ -41,6 +45,11 @@ optional | options | any | Objects to provide with the current available options
 
 
 ###soundTrackId : number
+
+
+
+
+
 
 
 
@@ -61,6 +70,8 @@ optional | options | any | Objects to provide with the current available options
 
 
 ###maxDistance : number
+
+
 
 
 
@@ -123,6 +134,8 @@ optional | options | any | Objects to provide with the current available options
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -144,23 +157,29 @@ Transform this sound into a directional source
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newPosition | [Vector3](page.php?p=6751) | 
+ | newPosition | [Vector3](/classes/Vector3) | 
 ---
 
 ###setLocalDirectionToMesh(newLocalDirection) &rarr; void
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newLocalDirection | [Vector3](page.php?p=6751) | 
+ | newLocalDirection | [Vector3](/classes/Vector3) | 
 ---
 
 ###updateDistanceFromListener() &rarr; void
+
+
 
 
 
@@ -198,7 +217,11 @@ optional | time | number | (optional) Stop the sound after X seconds. Stop immed
 
 
 
+
+
 ###setVolume(newVolume, time) &rarr; void
+
+
 
 
 
@@ -224,10 +247,12 @@ optional | time | number |
 
 
 
+
+
 ###attachToMesh(meshToConnectTo) &rarr; void
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | meshToConnectTo | [AbstractMesh](page.php?p=6657) | 
+ | meshToConnectTo | [AbstractMesh](/classes/AbstractMesh) | 
 ---

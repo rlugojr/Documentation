@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 5831
+ID_PAGE: 25000
 PG_TITLE: QuadraticErrorSimplification
 PG_VERSION: 2.0
 ---
@@ -11,12 +11,12 @@ Original paper : http://www1.cs.columbia.edu/~cs4162/html05s/garland97.pdf
 Ported mostly from QSlim and http://voxels.blogspot.de/2014/05/quadric-mesh-simplification-with-source.html to babylon JS
 
 @author RaananW
-##new [QuadraticErrorSimplification](page.php?p=5831)(_mesh)
+##new [QuadraticErrorSimplification](/classes/QuadraticErrorSimplification)(_mesh)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | _mesh | [Mesh](page.php?p=5722) | 
+ | _mesh | [Mesh](/classes/Mesh) | 
 ---
 
 ##Members
@@ -40,5 +40,5 @@ Ported mostly from QSlim and http://voxels.blogspot.de/2014/05/quadric-mesh-simp
  | Name | Type | Description
 ---|---|---|---
  | settings | ISimplificationSettings | 
- | successCallback | (simplifiedMeshes: [Mesh](page.php?p=5722)) =&gt; void | 
+ | successCallback | (simplifiedMeshes: [Mesh](/classes/Mesh)) =&gt; void | 
 ---

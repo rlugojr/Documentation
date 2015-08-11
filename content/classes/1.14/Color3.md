@@ -1,11 +1,11 @@
 ---
-ID_PAGE: 3324
+ID_PAGE: 24532
 PG_TITLE: Color3
 PG_VERSION: 1.14
 ---
-##new [Color3](page.php?p=3324)(r, g, b)
+##new [Color3](/classes/Color3)(r, g, b)
 
-Creates a new RGB [Color3](page.php?p=3324)
+Creates a new RGB [Color3](/classes/Color3)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -49,8 +49,8 @@ Fills an array from a given index with the color's RGB values
 optional | index | number | The given index
 ---
 
-###toColor4(alpha) &rarr; [Color4](page.php?p=3325)
-Return a [Color4](page.php?p=3325) object
+###toColor4(alpha) &rarr; [Color4](/classes/Color4)
+Return a [Color4](/classes/Color4) object
 
 ####Parameters
  | Name | Type | Description
@@ -66,36 +66,36 @@ Returns an array representation of the color
 Returns the luminance of the color
 
 
-###multiply(otherColor) &rarr; [Color3](page.php?p=3324)
-Multiplies two [Color3](page.php?p=3324) and returns the result
+###multiply(otherColor) &rarr; [Color3](/classes/Color3)
+Multiplies two [Color3](/classes/Color3) and returns the result
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherColor | [Color3](page.php?p=3324) | The other color to multiply
+ | otherColor | [Color3](/classes/Color3) | The other color to multiply
 ---
 
 ###multiplyToRef(otherColor, result) &rarr; void
-Multiplies two [Color3](page.php?p=3324) into an existing Color
+Multiplies two [Color3](/classes/Color3) into an existing Color
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherColor | [Color3](page.php?p=3324) | The other color to multiply
- | result | [Color3](page.php?p=3324) | The color that will contain the result
+ | otherColor | [Color3](/classes/Color3) | The other color to multiply
+ | result | [Color3](/classes/Color3) | The color that will contain the result
 ---
 
 ###equals(otherColor) &rarr; boolean
-Tests if two [Color3](page.php?p=3324) have the same rgb values
+Tests if two [Color3](/classes/Color3) have the same rgb values
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherColor | [Color3](page.php?p=3324) | The other color to test
+ | otherColor | [Color3](/classes/Color3) | The other color to test
 ---
 
-###scale(scale) &rarr; [Color3](page.php?p=3324)
-Scales a [Color3](page.php?p=3324) : multiply red, green and blue values by the given number
+###scale(scale) &rarr; [Color3](/classes/Color3)
+Scales a [Color3](/classes/Color3) : multiply red, green and blue values by the given number
 
 ####Parameters
  | Name | Type | Description
@@ -104,22 +104,22 @@ Scales a [Color3](page.php?p=3324) : multiply red, green and blue values by the 
 ---
 
 ###scaleToRef(scale, result) &rarr; void
-Scale a [Color3](page.php?p=3324) into an existing Color
+Scale a [Color3](/classes/Color3) into an existing Color
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | scale | number | The scaling factor
- | result | [Color3](page.php?p=3324) | The color that will contain the result
+ | result | [Color3](/classes/Color3) | The color that will contain the result
 ---
 
-###add(otherColor) &rarr; [Color3](page.php?p=3324)
+###add(otherColor) &rarr; [Color3](/classes/Color3)
 Adds another color and returns the result
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherColor | [Color3](page.php?p=3324) | The color to add
+ | otherColor | [Color3](/classes/Color3) | The color to add
 ---
 
 ###addToRef(otherColor, result) &rarr; void
@@ -128,17 +128,17 @@ Adds another color and store the result in the color given in parameter
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherColor | [Color3](page.php?p=3324) | The color to add
- | result | [Color3](page.php?p=3324) | The resulting color
+ | otherColor | [Color3](/classes/Color3) | The color to add
+ | result | [Color3](/classes/Color3) | The resulting color
 ---
 
-###subtract(otherColor) &rarr; [Color3](page.php?p=3324)
+###subtract(otherColor) &rarr; [Color3](/classes/Color3)
 Substracts another color and returns the result
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherColor | [Color3](page.php?p=3324) | The color to substract
+ | otherColor | [Color3](/classes/Color3) | The color to substract
 ---
 
 ###subtractToRef(otherColor, result) &rarr; void
@@ -147,21 +147,21 @@ Substracts another color and store the result in the given color
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherColor | [Color3](page.php?p=3324) | The color to substract
- | result | [Color3](page.php?p=3324) | The resulting color
+ | otherColor | [Color3](/classes/Color3) | The color to substract
+ | result | [Color3](/classes/Color3) | The resulting color
 ---
 
-###clone() &rarr; [Color3](page.php?p=3324)
-Create a clone of a [Color3](page.php?p=3324)
+###clone() &rarr; [Color3](/classes/Color3)
+Create a clone of a [Color3](/classes/Color3)
 
 
 ###copyFrom(source) &rarr; void
-Copies a [Color3](page.php?p=3324)
+Copies a [Color3](/classes/Color3)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | source | [Color3](page.php?p=3324) | color to copy from
+ | source | [Color3](/classes/Color3) | color to copy from
 ---
 
 ###copyFromFloats(r, g, b) &rarr; void
@@ -175,8 +175,8 @@ Copies a color from numbers
  | b | number | The blue value
 ---
 
-###static FromArray(array) &rarr; [Color3](page.php?p=3324)
-Creates a new [Color3](page.php?p=3324) from an array
+###static FromArray(array) &rarr; [Color3](/classes/Color3)
+Creates a new [Color3](/classes/Color3) from an array
 
 ####Parameters
  | Name | Type | Description
@@ -184,8 +184,8 @@ Creates a new [Color3](page.php?p=3324) from an array
  | array | number[] | An array of rgb values
 ---
 
-###static FromInts(r, g, b) &rarr; [Color3](page.php?p=3324)
-Creates a new [Color3](page.php?p=3324) from a set of integers. Values must be between 0 and 255
+###static FromInts(r, g, b) &rarr; [Color3](/classes/Color3)
+Creates a new [Color3](/classes/Color3) from a set of integers. Values must be between 0 and 255
 
 ####Parameters
  | Name | Type | Description
@@ -195,49 +195,49 @@ Creates a new [Color3](page.php?p=3324) from a set of integers. Values must be b
  | b | number | The blue value (0&lt;b&lt;255)
 ---
 
-###static Lerp(start, end, amount) &rarr; [Color3](page.php?p=3324)
+###static Lerp(start, end, amount) &rarr; [Color3](/classes/Color3)
 Linear interpolation of a color
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | start | [Color3](page.php?p=3324) | interpolation start color
- | end | [Color3](page.php?p=3324) | interpolation end color
+ | start | [Color3](/classes/Color3) | interpolation start color
+ | end | [Color3](/classes/Color3) | interpolation end color
  | amount | number | Weighting factor
 ---
 
-###static Red() &rarr; [Color3](page.php?p=3324)
+###static Red() &rarr; [Color3](/classes/Color3)
 Red color
 
 
-###static Green() &rarr; [Color3](page.php?p=3324)
+###static Green() &rarr; [Color3](/classes/Color3)
 Green color
 
 
-###static Blue() &rarr; [Color3](page.php?p=3324)
+###static Blue() &rarr; [Color3](/classes/Color3)
 Blue color
 
 
-###static Black() &rarr; [Color3](page.php?p=3324)
+###static Black() &rarr; [Color3](/classes/Color3)
 Black color
 
 
-###static White() &rarr; [Color3](page.php?p=3324)
+###static White() &rarr; [Color3](/classes/Color3)
 White color
 
 
-###static Purple() &rarr; [Color3](page.php?p=3324)
+###static Purple() &rarr; [Color3](/classes/Color3)
 Purple color
 
 
-###static Magenta() &rarr; [Color3](page.php?p=3324)
+###static Magenta() &rarr; [Color3](/classes/Color3)
 Magenta color
 
 
-###static Yellow() &rarr; [Color3](page.php?p=3324)
+###static Yellow() &rarr; [Color3](/classes/Color3)
 Yellow color
 
 
-###static Gray() &rarr; [Color3](page.php?p=3324)
+###static Gray() &rarr; [Color3](/classes/Color3)
 Gray color
 

@@ -1,21 +1,21 @@
 ---
-ID_PAGE: 3305
+ID_PAGE: 24513
 PG_TITLE: Layer
 PG_VERSION: 1.14
 ---
 
 Create a new 2D layer (used to represents backgrounds and/or foregrounds)
-##new [Layer](page.php?p=3305)(name, imgUrl, scene, isBackground, color)
+##new [Layer](/classes/Layer)(name, imgUrl, scene, isBackground, color)
 
-The [Layer](page.php?p=3305) constructor
+The [Layer](/classes/Layer) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | The layer name
  | imgUrl | string | The texture URL to display for this layer
- | scene | [Scene](page.php?p=3274) | The scene linked to this layer
+ | scene | [Scene](/classes/Scene) | The scene linked to this layer
 optional | isBackground | boolean | If set to true, then this layer will be displayed as a background
-optional | color | [Color4](page.php?p=3325) | The color of this layer
+optional | color | [Color4](/classes/Color4) | The color of this layer
 ---
 
 ##Members
@@ -25,7 +25,7 @@ optional | color | [Color4](page.php?p=3325) | The color of this layer
 
 The layer name
 
-###texture : [Texture](page.php?p=3319)
+###texture : [Texture](/classes/Texture)
 
 
 The texture to display for this layer
@@ -35,7 +35,7 @@ The texture to display for this layer
 
 If set to true, then this layer will be displayed as a background.
 
-###color : [Color4](page.php?p=3325)
+###color : [Color4](/classes/Color4)
 
 
 The color of this layer

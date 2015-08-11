@@ -1,21 +1,21 @@
 ---
-ID_PAGE: 3256
+ID_PAGE: 24464
 PG_TITLE: DeviceOrientationCamera
 PG_VERSION: 1.14
 ---
-##new [DeviceOrientationCamera](page.php?p=3256)(name, position, scene)
+##new [DeviceOrientationCamera](/classes/DeviceOrientationCamera)(name, position, scene)
 
-Create a new [DeviceOrientationCamera](page.php?p=3256). It's a camera controlled by device orientation
-A tutorial about [DeviceOrientationCamera](page.php?p=3256) can be found [here](http://blogs.msdn.com/b/eternalcoding/archive/2013/10/07/understanding-deviceorientation-events-by-creating-a-small-3d-game-with-babylon-js.aspx)
+Create a new [DeviceOrientationCamera](/classes/DeviceOrientationCamera). It's a camera controlled by device orientation
+A tutorial about [DeviceOrientationCamera](/classes/DeviceOrientationCamera) can be found [here](http://blogs.msdn.com/b/eternalcoding/archive/2013/10/07/understanding-deviceorientation-events-by-creating-a-small-3d-game-with-babylon-js.aspx)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | position | [Vector3](page.php?p=3327) | 
- | scene | [Scene](page.php?p=3274) | 
+ | position | [Vector3](/classes/Vector3) | 
+ | scene | [Scene](/classes/Scene) | 
 ---
 
-##Extends [FreeCamera](page.php?p=3254)
+##Extends [FreeCamera](/classes/FreeCamera)
 ##Members
 
 ###angularSensibility : number

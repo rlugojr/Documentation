@@ -1,35 +1,45 @@
 ---
-ID_PAGE: 5836
+ID_PAGE: 25005
 PG_TITLE: Particle
 PG_VERSION: 2.0
 ---
 
 
 
+
+
 ##Members
 
-###position : [Vector3](page.php?p=5808)
+###position : [Vector3](/classes/Vector3)
+
 
 
 
 This particle position
 
 
-###direction : [Vector3](page.php?p=5808)
+
+###direction : [Vector3](/classes/Vector3)
+
 
 
 
 This particle direction
 
 
-###color : [Color4](page.php?p=5806)
+
+###color : [Color4](/classes/Color4)
+
 
 
 
 This particle color
 
 
-###colorStep : [Color4](page.php?p=5806)
+
+###colorStep : [Color4](/classes/Color4)
+
+
 
 
 
@@ -38,28 +48,36 @@ This particle color
 
 
 
+
 This particle lifetime
+
 
 
 ###age : number
 
 
 
+
 This particle age
+
 
 
 ###size : number
 
 
 
+
 This particle size
+
 
 
 ###angle : number
 
 
 
+
 This particle angle
+
 
 
 ###angularSpeed : number
@@ -74,5 +92,5 @@ This particle angle
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Particle](page.php?p=5836) | 
+ | other | [Particle](/classes/Particle) | 
 ---

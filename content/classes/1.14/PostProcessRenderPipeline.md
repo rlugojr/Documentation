@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 3360
+ID_PAGE: 24568
 PG_TITLE: PostProcessRenderPipeline
 PG_VERSION: 1.14
 ---
@@ -9,13 +9,13 @@ Post Process Renders pipelines allow you to create a chain of post processes and
 A render pipeline can be managed by enabling and disabling some effects and displaying a specific pass for debugging.
 
 A tutorial about the render pipeline can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-PostProcessRenderPipeline)
-##new [PostProcessRenderPipeline](page.php?p=3360)(engine, name)
+##new [PostProcessRenderPipeline](/classes/PostProcessRenderPipeline)(engine, name)
 
-Builds a [PostProcessRenderPipeline](page.php?p=3360) object
+Builds a [PostProcessRenderPipeline](/classes/PostProcessRenderPipeline) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | engine | [Engine](page.php?p=3247) | The used engine
+ | engine | [Engine](/classes/Engine) | The used engine
  | name | string | The name of the object
 ---
 
@@ -29,5 +29,5 @@ Add the given render effect to the pipeline
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderEffect | [PostProcessRenderEffect](page.php?p=3358) | The given render effect
+ | renderEffect | [PostProcessRenderEffect](/classes/PostProcessRenderEffect) | The given render effect
 ---

@@ -1,25 +1,25 @@
 ---
-ID_PAGE: 3254
+ID_PAGE: 24462
 PG_TITLE: FreeCamera
 PG_VERSION: 1.14
 ---
-##new [FreeCamera](page.php?p=3254)(name, position, scene)
+##new [FreeCamera](/classes/FreeCamera)(name, position, scene)
 
 Create a new free camera.
 You can move around the world with mouse and keyboard
-A tutorial about [FreeCamera](page.php?p=3254) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+A tutorial about [FreeCamera](/classes/FreeCamera) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the camera
- | position | [Vector3](page.php?p=3327) | Starting position of the camera
- | scene | [Scene](page.php?p=3274) | [Scene](page.php?p=3274) which contain the camera
+ | position | [Vector3](/classes/Vector3) | Starting position of the camera
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the camera
 ---
 
-##Extends [TargetCamera](page.php?p=3252)
+##Extends [TargetCamera](/classes/TargetCamera)
 ##Members
 
-###ellipsoid : [Vector3](page.php?p=3327)
+###ellipsoid : [Vector3](/classes/Vector3)
 
 
 The collision ellipsoid used to check collisions with the world
@@ -59,7 +59,7 @@ True : apply gravity ; False : don't apply gravity
 
 The angular sensibility of the camera
 
-###onCollide : (collidedMesh: [AbstractMesh](page.php?p=3269)) =&gt; void
+###onCollide : (collidedMesh: [AbstractMesh](/classes/AbstractMesh)) =&gt; void
 
 
 The function called when this camera collides with the world

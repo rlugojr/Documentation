@@ -9,23 +9,26 @@ nav.nav-main
     .banner
         .menu
             .do-not-hover#home(class={homeClassMobile: currentUrl === '/classes/class'})
-                span.
-                    Babylon.js | DOCUMENTATION
+                a(href='/')
+                    | Babylon.js | DOCUMENTATION
             #whatsnew.item(class={active: currentUrl === '/whats-new'})
-                span.
-                    What's new
+                a(href='/whats-new')
+                    | What's new
+            #general.item(class={active: currentUrl === '/generals'})
+                a(href='/generals')
+                    | Generals
             #tutorials.item(class={active: currentUrl === '/tutorials'})
-                span.
-                    Tutorials
-            #exporters.item(class={active:currentUrl === '/exporters'})
-                span.
-                    Exporters
-            #extensions.item(class={active:currentUrl === '/extensions'})
-                span.
-                    Extensions
-            #classes.item(class={active:(currentUrl === '/classes') || (currentUrl === '/classes/class')})
-                span.
-                    Classes
+                a(href='/tutorials')
+                    | Tutorials
+            #exporters.item(class={active: currentUrl === '/exporters'})
+                a(href='/exporters')
+                    | Exporters
+            #extensions.item(class={active: currentUrl === '/extensions'})
+                a(href='/extensions')
+                    | Extensions
+            #classes.item(class={active: (currentUrl === '/classes') || (currentUrl === '/classes/class')})
+                a(href='/classes')
+                    | Classes
         .more
             .searchbar
                 form(method='get', action='/search')

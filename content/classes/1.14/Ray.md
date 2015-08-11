@@ -1,29 +1,29 @@
 ---
-ID_PAGE: 3333
+ID_PAGE: 24541
 PG_TITLE: Ray
 PG_VERSION: 1.14
 ---
-##new [Ray](page.php?p=3333)(origin, direction)
+##new [Ray](/classes/Ray)(origin, direction)
 
-Defines a [Ray](page.php?p=3333)
+Defines a [Ray](/classes/Ray)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | origin | [Vector3](page.php?p=3327) | The initial starting point of the [Ray](page.php?p=3333)
- | direction | [Vector3](page.php?p=3327) | The initial vector describing the direction of the [Ray](page.php?p=3333)
+ | origin | [Vector3](/classes/Vector3) | The initial starting point of the [Ray](/classes/Ray)
+ | direction | [Vector3](/classes/Vector3) | The initial vector describing the direction of the [Ray](/classes/Ray)
 ---
 
 ##Members
 
-###origin : [Vector3](page.php?p=3327)
+###origin : [Vector3](/classes/Vector3)
 
 
-The starting point of the [Ray](page.php?p=3333)
+The starting point of the [Ray](/classes/Ray)
 
-###direction : [Vector3](page.php?p=3327)
+###direction : [Vector3](/classes/Vector3)
 
 
-The vector describing the direction of the [Ray](page.php?p=3333)
+The vector describing the direction of the [Ray](/classes/Ray)
 
 
 
@@ -35,8 +35,8 @@ Tests if the ray intersects with the box defined by minimum and maximum
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | minimum | [Vector3](page.php?p=3327) | The minimum vector defining the box
- | maximum | [Vector3](page.php?p=3327) | The maximum vector defining the box
+ | minimum | [Vector3](/classes/Vector3) | The minimum vector defining the box
+ | maximum | [Vector3](/classes/Vector3) | The maximum vector defining the box
 ---
 
 ###intersectsBox(box) &rarr; boolean
@@ -45,11 +45,11 @@ Tests if the ray intersects with the given box
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | box | [BoundingBox](page.php?p=3300) | The box to test with
+ | box | [BoundingBox](/classes/BoundingBox) | The box to test with
 ---
 
 ###intersectsSphere(sphere) &rarr; boolean
-Tests if the ray intersects with the given [Sphere](page.php?p=3397)
+Tests if the ray intersects with the given [Sphere](/classes/Sphere)
 
 ####Parameters
  | Name | Type | Description
@@ -57,19 +57,19 @@ Tests if the ray intersects with the given [Sphere](page.php?p=3397)
  | sphere | any | The sphere to test with
 ---
 
-###intersectsTriangle(vertex0, vertex1, vertex2) &rarr; [IntersectionInfo](page.php?p=3298)
+###intersectsTriangle(vertex0, vertex1, vertex2) &rarr; [IntersectionInfo](/classes/IntersectionInfo)
 Tests if the ray intersects with the given triangle defined by the three vectors
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vertex0 | [Vector3](page.php?p=3327) | The first vector defining the triangle
- | vertex1 | [Vector3](page.php?p=3327) | The second vector defining the triangle
- | vertex2 | [Vector3](page.php?p=3327) | The third vector defining the triangle
+ | vertex0 | [Vector3](/classes/Vector3) | The first vector defining the triangle
+ | vertex1 | [Vector3](/classes/Vector3) | The second vector defining the triangle
+ | vertex2 | [Vector3](/classes/Vector3) | The third vector defining the triangle
 ---
 
-###static CreateNew(x, y, viewportWidth, viewportHeight, world, view, projection) &rarr; [Ray](page.php?p=3333)
-Creates new [Ray](page.php?p=3333)
+###static CreateNew(x, y, viewportWidth, viewportHeight, world, view, projection) &rarr; [Ray](/classes/Ray)
+Creates new [Ray](/classes/Ray)
 
 ####Parameters
  | Name | Type | Description
@@ -78,17 +78,17 @@ Creates new [Ray](page.php?p=3333)
  | y | number | @param y
  | viewportWidth | number | @param viewportWidth
  | viewportHeight | number | @param viewportHeight
- | world | [Matrix](page.php?p=3329) | @param world
- | view | [Matrix](page.php?p=3329) | @param view
- | projection | [Matrix](page.php?p=3329) | @param projection
+ | world | [Matrix](/classes/Matrix) | @param world
+ | view | [Matrix](/classes/Matrix) | @param view
+ | projection | [Matrix](/classes/Matrix) | @param projection
 ---
 
-###static Transform(ray, matrix) &rarr; [Ray](page.php?p=3333)
+###static Transform(ray, matrix) &rarr; [Ray](/classes/Ray)
 Transforms a given ray using a given matrix
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](page.php?p=3333) | The given ray
- | matrix | [Matrix](page.php?p=3329) | The given matrix to apply
+ | ray | [Ray](/classes/Ray) | The given ray
+ | matrix | [Matrix](/classes/Matrix) | The given matrix to apply
 ---

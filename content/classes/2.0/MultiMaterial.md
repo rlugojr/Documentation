@@ -1,26 +1,30 @@
 ---
-ID_PAGE: 5784
+ID_PAGE: 24953
 PG_TITLE: MultiMaterial
 PG_VERSION: 2.0
 ---
-##new [MultiMaterial](page.php?p=5784)(name, scene)
+##new [MultiMaterial](/classes/MultiMaterial)(name, scene)
 
 
-Create a new [MultiMaterial](page.php?p=5784).
+
+Create a new [MultiMaterial](/classes/MultiMaterial).
 A tutorial about multi materials can be found here : http://blogs.msdn.com/b/eternalcoding/archive/2013/07/10/babylon-js-using-multi-materials.aspx
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the multimaterial
- | scene | [Scene](page.php?p=5725) | [Scene](page.php?p=5725) which contain the [MultiMaterial](page.php?p=5784)
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the [MultiMaterial](/classes/MultiMaterial)
 ---
 
-##Extends [Material](page.php?p=5783)
+##Extends [Material](/classes/Material)
 ##Members
 
-###subMaterials : [Material](page.php?p=5783)[]
+###subMaterials : [Material](/classes/Material)[]
+
 
 
 
@@ -32,10 +36,16 @@ Array of sub materials
 
 
 
+
+
+
+
 ##Methods
 
-###getSubMaterial(index) &rarr; [Material](page.php?p=5783)
+###getSubMaterial(index) &rarr; [Material](/classes/Material)
 Get a sub material
+
+
 
 
 
@@ -50,5 +60,5 @@ Get a sub material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | mesh | [AbstractMesh](page.php?p=5720) | The mesh with the multi material
+optional | mesh | [AbstractMesh](/classes/AbstractMesh) | The mesh with the multi material
 ---

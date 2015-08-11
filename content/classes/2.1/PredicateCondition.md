@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6681
+ID_PAGE: 25169
 PG_TITLE: PredicateCondition
 PG_VERSION: 2.1
 TAGS:
@@ -7,7 +7,8 @@ TAGS:
 ---
 
 This condition uses a predicate to determine its state
-##new [PredicateCondition](page.php?p=6681)(actionManager, predicate)
+##new [PredicateCondition](/classes/PredicateCondition)(actionManager, predicate)
+
 
 
 
@@ -16,15 +17,17 @@ The predicate condition constructor
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | actionManager | [ActionManager](page.php?p=6678) | The action manager
+ | actionManager | [ActionManager](/classes/ActionManager) | The action manager
  | predicate | () =&gt; boolean | The predicate
 ---
 
 ##Extends
- [Condition](page.php?p=6679)
+ [Condition](/classes/Condition)
 ##Members
 
 ###predicate : () =&gt; boolean
@@ -32,7 +35,12 @@ The predicate condition constructor
 
 
 
+
 The predicate
+
+
+
+
 
 
 

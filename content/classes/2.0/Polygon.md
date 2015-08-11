@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 5832
+ID_PAGE: 25001
 PG_TITLE: Polygon
 PG_VERSION: 2.0
 ---
@@ -8,7 +8,7 @@ PG_VERSION: 2.0
 
 ##Methods
 
-###static Rectangle(xmin, ymin, xmax, ymax) &rarr; [Vector2](page.php?p=5807)[]
+###static Rectangle(xmin, ymin, xmax, ymax) &rarr; [Vector2](/classes/Vector2)[]
 
 ####Parameters
  | Name | Type | Description
@@ -19,7 +19,7 @@ PG_VERSION: 2.0
  | ymax | number | 
 ---
 
-###static Circle(radius, cx, cy, numberOfSides) &rarr; [Vector2](page.php?p=5807)[]
+###static Circle(radius, cx, cy, numberOfSides) &rarr; [Vector2](/classes/Vector2)[]
 
 ####Parameters
  | Name | Type | Description
@@ -30,7 +30,7 @@ optional | cy | number |
 optional | numberOfSides | number | 
 ---
 
-###static Parse(input) &rarr; [Vector2](page.php?p=5807)[]
+###static Parse(input) &rarr; [Vector2](/classes/Vector2)[]
 
 ####Parameters
  | Name | Type | Description
@@ -38,7 +38,7 @@ optional | numberOfSides | number |
  | input | string | 
 ---
 
-###static StartingAt(x, y) &rarr; [Path2](page.php?p=5821)
+###static StartingAt(x, y) &rarr; [Path2](/classes/Path2)
 
 ####Parameters
  | Name | Type | Description

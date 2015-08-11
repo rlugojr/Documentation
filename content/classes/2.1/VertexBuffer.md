@@ -1,14 +1,17 @@
 ---
-ID_PAGE: 6784
+ID_PAGE: 25272
 PG_TITLE: VertexBuffer
 PG_VERSION: 2.1
 ---
 
-Creates a new vertexBuffer. Methods of [VertexBuffer](page.php?p=6784) interface are used to manipulate vertex buffer resources
-##new [VertexBuffer](page.php?p=6784)(engine, data, kind, updatable, postponeInternalCreation, stride)
+Creates a new vertexBuffer. Methods of [VertexBuffer](/classes/VertexBuffer) interface are used to manipulate vertex buffer resources
+##new [VertexBuffer](/classes/VertexBuffer)(engine, data, kind, updatable, postponeInternalCreation, stride)
 
 
- [VertexBuffer](page.php?p=6784) constructor
+
+ [VertexBuffer](/classes/VertexBuffer) constructor
+
+
 
 
 
@@ -18,7 +21,7 @@ Creates a new vertexBuffer. Methods of [VertexBuffer](page.php?p=6784) interface
 ---|---|---|---
  | engine | any | @param engine
  | data | number[] | The data of this vertex buffer
- | kind | string | The kind of vertex buffer (defined as static variables in [VertexBuffer](page.php?p=6784) class)
+ | kind | string | The kind of vertex buffer (defined as static variables in [VertexBuffer](/classes/VertexBuffer) class)
  | updatable | boolean | True if the vertex buffer should be dynamic, false otherwise.
 optional | postponeInternalCreation | boolean | @param postponeInternalCreation
 optional | stride | number | 
@@ -31,7 +34,9 @@ optional | stride | number |
 
 
 
+
 The position kind
+
 
 
 
@@ -40,7 +45,9 @@ The position kind
 
 
 
+
 The normal kind
+
 
 
 
@@ -49,7 +56,9 @@ The normal kind
 
 
 
+
 The UV kind
+
 
 
 
@@ -58,7 +67,9 @@ The UV kind
 
 
 
+
 The UV2 kind
+
 
 
 
@@ -67,7 +78,9 @@ The UV2 kind
 
 
 
+
 The color kind
+
 
 
 
@@ -76,7 +89,9 @@ The color kind
 
 
 
+
 The matrice indice kind
+
 
 
 
@@ -85,7 +100,12 @@ The matrice indice kind
 
 
 
+
 The matrice weight kind
+
+
+
+
 
 
 
@@ -107,8 +127,12 @@ Return true if it's updatable
 
 
 
+
+
 ###getData() &rarr; number[]
 Get the data
+
+
 
 
 
@@ -123,6 +147,8 @@ Get the buffer
 
 
 
+
+
 ###getStrideSize() &rarr; number
 Get stride size
 
@@ -131,8 +157,12 @@ Get stride size
 
 
 
+
+
 ###create(data) &rarr; void
 Create a vertex buffer
+
+
 
 
 
@@ -151,10 +181,12 @@ Update vertex buffer
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | number[] | [VertexData](page.php?p=6773) into buffer
+ | data | number[] | [VertexData](/classes/VertexData) into buffer
 ---
 
 ###updateDirectly(data, offset) &rarr; void
@@ -164,10 +196,12 @@ Update vertex buffer directly
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | Float32Array | [VertexData](page.php?p=6773) into buffer
+ | data | Float32Array | [VertexData](/classes/VertexData) into buffer
  | offset | number | 
 ---
 

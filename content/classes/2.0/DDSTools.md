@@ -1,8 +1,12 @@
 ---
-ID_PAGE: 5905
+ID_PAGE: 25074
 PG_TITLE: DDSTools
 PG_VERSION: 2.0
 ---
+
+
+
+
 
 
 
@@ -14,6 +18,8 @@ PG_VERSION: 2.0
 
 ###static GetDDSInfo(arrayBuffer) &rarr; DDSInfo
 Get info about DDS image files
+
+
 
 
 

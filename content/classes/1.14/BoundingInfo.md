@@ -1,38 +1,38 @@
 ---
-ID_PAGE: 3301
+ID_PAGE: 24509
 PG_TITLE: BoundingInfo
 PG_VERSION: 1.14
 ---
 
 Create bounding info for the given mesh
-##new [BoundingInfo](page.php?p=3301)(minimum, maximum)
+##new [BoundingInfo](/classes/BoundingInfo)(minimum, maximum)
 
 The Bounding Info constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | minimum | [Vector3](page.php?p=3327) | The minimum of the bounding info
- | maximum | [Vector3](page.php?p=3327) | The maximum of the bounding info
+ | minimum | [Vector3](/classes/Vector3) | The minimum of the bounding info
+ | maximum | [Vector3](/classes/Vector3) | The maximum of the bounding info
 ---
 
 ##Members
 
-###minimum : [Vector3](page.php?p=3327)
+###minimum : [Vector3](/classes/Vector3)
 
 
 The minimum of the bounding info
 
-###maximum : [Vector3](page.php?p=3327)
+###maximum : [Vector3](/classes/Vector3)
 
 
 The maximum of the bounding info
 
-###boundingBox : [BoundingBox](page.php?p=3300)
+###boundingBox : [BoundingBox](/classes/BoundingBox)
 
 
 The bounding box of the bounding info
 
-###boundingSphere : [BoundingSphere](page.php?p=3302)
+###boundingSphere : [BoundingSphere](/classes/BoundingSphere)
 
 
 The bounding sphere of the bounding info
@@ -47,7 +47,7 @@ Check if the bounding
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](page.php?p=3330)[] | The frustum planes
+ | frustumPlanes | [Plane](/classes/Plane)[] | The frustum planes
 ---
 
 ###intersectsPoint(point) &rarr; boolean
@@ -56,7 +56,7 @@ Check if the bounding sphere or the bounding box intersect the given point.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | point | [Vector3](page.php?p=3327) | The point
+ | point | [Vector3](/classes/Vector3) | The point
 ---
 
 ###intersects(boundingInfo, precise) &rarr; boolean
@@ -65,6 +65,6 @@ Check if the bounding sphere intersects the other object bounding sphere. Same w
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | boundingInfo | [BoundingInfo](page.php?p=3301) | The bounding info
+ | boundingInfo | [BoundingInfo](/classes/BoundingInfo) | The bounding info
  | precise | boolean | False : check only bounding volumes, true check point by point
 ---

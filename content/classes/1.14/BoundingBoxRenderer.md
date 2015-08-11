@@ -1,25 +1,25 @@
 ---
-ID_PAGE: 3362
+ID_PAGE: 24570
 PG_TITLE: BoundingBoxRenderer
 PG_VERSION: 1.14
 ---
-##new [BoundingBoxRenderer](page.php?p=3362)(scene)
+##new [BoundingBoxRenderer](/classes/BoundingBoxRenderer)(scene)
 
 Creates a new renderer used to display the bounding box of its render list
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=3274) | The scene linked to this [BoundingBoxRenderer](page.php?p=3362)
+ | scene | [Scene](/classes/Scene) | The scene linked to this [BoundingBoxRenderer](/classes/BoundingBoxRenderer)
 ---
 
 ##Members
 
-###frontColor : [Color3](page.php?p=3324)
+###frontColor : [Color3](/classes/Color3)
 
 
 The front color of the bounding box
 
-###backColor : [Color3](page.php?p=3324)
+###backColor : [Color3](/classes/Color3)
 
 
 The back color of the bounding box

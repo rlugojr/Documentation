@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 6777
+ID_PAGE: 25265
 PG_TITLE: DecimationVertex
 PG_VERSION: 2.1
 ---
-##new [DecimationVertex](page.php?p=6777)(position, id)
+##new [DecimationVertex](/classes/DecimationVertex)(position, id)
 
 
 
@@ -11,13 +11,13 @@ PG_VERSION: 2.1
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | position | [Vector3](page.php?p=6751) | 
+ | position | [Vector3](/classes/Vector3) | 
  | id | any | 
 ---
 
 ##Members
 
-###position : [Vector3](page.php?p=6751)
+###position : [Vector3](/classes/Vector3)
 
 
 
@@ -27,7 +27,7 @@ PG_VERSION: 2.1
 
 
 
-###q : [QuadraticMatrix](page.php?p=6778)
+###q : [QuadraticMatrix](/classes/QuadraticMatrix)
 
 
 
@@ -59,5 +59,5 @@ PG_VERSION: 2.1
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newPosition | [Vector3](page.php?p=6751) | 
+ | newPosition | [Vector3](/classes/Vector3) | 
 ---

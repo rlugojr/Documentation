@@ -1,16 +1,19 @@
 ---
-ID_PAGE: 6825
+ID_PAGE: 25313
 PG_TITLE: Database
 PG_VERSION: 2.1
 TAGS:
     - Database
 ---
-##new [Database](page.php?p=6825)(urlToScene, callbackManifestChecked)
+##new [Database](/classes/Database)(urlToScene, callbackManifestChecked)
 
 
 
-Create a new [Database](page.php?p=6825)
+
+Create a new [Database](/classes/Database)
 An explanation about how BabylonJs index all its resources can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/Caching-the-resources-in-IndexedDB)
+
+
 
 
 
@@ -35,9 +38,11 @@ An explanation about how BabylonJs index all its resources can be found [here](h
 
 
 
+
 Returns an absolute url using the given string
 
 @param url The url to parse
+
 
 
 
@@ -46,9 +51,14 @@ Returns an absolute url using the given string
 
 
 
+
 Returns the full location string
 
 @param url The url location to complete
+
+
+
+
 
 
 
@@ -70,8 +80,12 @@ Checks the manifest file
 
 
 
+
+
 ###openAsync(successCallback, errorCallback) &rarr; void
 Tries to use the offline data if the manifest indicates so
+
+
 
 
 

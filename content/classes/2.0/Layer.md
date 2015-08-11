@@ -1,14 +1,17 @@
 ---
-ID_PAGE: 5776
+ID_PAGE: 24945
 PG_TITLE: Layer
 PG_VERSION: 2.0
 ---
 
 Create a new 2D layer (used to represents backgrounds and/or foregrounds)
-##new [Layer](page.php?p=5776)(name, imgUrl, scene, isBackground, color)
+##new [Layer](/classes/Layer)(name, imgUrl, scene, isBackground, color)
 
 
-The [Layer](page.php?p=5776) constructor
+
+The [Layer](/classes/Layer) constructor
+
+
 
 
 ####Parameters
@@ -16,9 +19,9 @@ The [Layer](page.php?p=5776) constructor
 ---|---|---|---
  | name | string | The layer name
  | imgUrl | string | The texture URL to display for this layer
- | scene | [Scene](page.php?p=5725) | The scene linked to this layer
+ | scene | [Scene](/classes/Scene) | The scene linked to this layer
 optional | isBackground | boolean | If set to true, then this layer will be displayed as a background
-optional | color | [Color4](page.php?p=5806) | The color of this layer
+optional | color | [Color4](/classes/Color4) | The color of this layer
 ---
 
 ##Members
@@ -27,31 +30,40 @@ optional | color | [Color4](page.php?p=5806) | The color of this layer
 
 
 
+
 The layer name
 
 
-###texture : [Texture](page.php?p=5790)
+
+###texture : [Texture](/classes/Texture)
+
 
 
 
 The texture to display for this layer
 
 
+
 ###isBackground : boolean
+
 
 
 
 If set to true, then this layer will be displayed as a background.
 
 
-###color : [Color4](page.php?p=5806)
+
+###color : [Color4](/classes/Color4)
+
 
 
 
 The color of this layer
 
 
+
 ###onDispose : () =&gt; void
+
 
 
 
@@ -63,10 +75,16 @@ Dispose
 
 
 
+
+
+
+
 ##Methods
 
 ###render() &rarr; void
 Function used to render this layer
+
+
 
 
 

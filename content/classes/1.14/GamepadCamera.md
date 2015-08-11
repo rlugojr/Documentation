@@ -1,20 +1,20 @@
 ---
-ID_PAGE: 3257
+ID_PAGE: 24465
 PG_TITLE: GamepadCamera
 PG_VERSION: 1.14
 ---
-##new [GamepadCamera](page.php?p=3257)(name, position, scene)
+##new [GamepadCamera](/classes/GamepadCamera)(name, position, scene)
 
-Create a new [GamepadCamera](page.php?p=3257)
+Create a new [GamepadCamera](/classes/GamepadCamera)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the camera
- | position | [Vector3](page.php?p=3327) | Starting position of the camera
- | scene | [Scene](page.php?p=3274) | [Scene](page.php?p=3274) which contain the camera
+ | position | [Vector3](/classes/Vector3) | Starting position of the camera
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the camera
 ---
 
-##Extends [FreeCamera](page.php?p=3254)
+##Extends [FreeCamera](/classes/FreeCamera)
 ##Members
 
 ###angularSensibility : number

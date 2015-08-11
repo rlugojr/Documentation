@@ -1,11 +1,11 @@
 ---
-ID_PAGE: 3377
+ID_PAGE: 24585
 PG_TITLE: StickValues
 PG_VERSION: 1.14
 ---
-##new [StickValues](page.php?p=3377)(x, y)
+##new [StickValues](/classes/StickValues)(x, y)
 
-Builds a [StickValues](page.php?p=3377) object
+Builds a [StickValues](/classes/StickValues) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---

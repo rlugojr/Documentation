@@ -1,13 +1,16 @@
 ---
-ID_PAGE: 5865
+ID_PAGE: 25034
 PG_TITLE: SpriteManager
 PG_VERSION: 2.0
 ---
-##new [SpriteManager](page.php?p=5865)(name, imgUrl, capacity, cellSize, scene, epsilon)
+##new [SpriteManager](/classes/SpriteManager)(name, imgUrl, capacity, cellSize, scene, epsilon)
 
 
-Create a new [SpriteManager](page.php?p=5865)
+
+Create a new [SpriteManager](/classes/SpriteManager)
 A tutorial about sprites can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/08-Sprites)
+
+
 
 
 ####Parameters
@@ -17,7 +20,7 @@ A tutorial about sprites can be found [here](https://github.com/BabylonJS/Babylo
  | imgUrl | string | Link of the image
  | capacity | number | The capacity of the sprite manager
  | cellSize | number | Size of cells
- | scene | [Scene](page.php?p=5725) | [Scene](page.php?p=5725) which contain the sprite Manager
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the sprite Manager
 optional | epsilon | number | Epsilon
 ---
 
@@ -27,35 +30,45 @@ optional | epsilon | number | Epsilon
 
 
 
+
 Name of the sprite manager
+
 
 
 ###cellSize : number
 
 
 
+
 Size of cells
 
 
-###sprites : [Sprite](page.php?p=5864)[]
+
+###sprites : [Sprite](/classes/Sprite)[]
+
 
 
 
 Sprites contains in the manager
 
 
+
 ###renderingGroupId : number
+
 
 
 
 The rendering group ID
 
 
+
 ###onDispose : () =&gt; void
 
 
 
+
 Called on dispose
+
 
 
 
@@ -66,10 +79,17 @@ Called on dispose
 
 
 
+
+
+
+
+
 ##Methods
 
 ###render() &rarr; void
 Render this sprite manager
+
+
 
 
 

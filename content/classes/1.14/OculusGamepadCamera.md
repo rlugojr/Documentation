@@ -1,20 +1,20 @@
 ---
-ID_PAGE: 3261
+ID_PAGE: 24469
 PG_TITLE: OculusGamepadCamera
 PG_VERSION: 1.14
 ---
-##new [OculusGamepadCamera](page.php?p=3261)(name, position, scene)
+##new [OculusGamepadCamera](/classes/OculusGamepadCamera)(name, position, scene)
 
-Create a new [OculusGamepadCamera](page.php?p=3261)
+Create a new [OculusGamepadCamera](/classes/OculusGamepadCamera)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | Name of the [OculusGamepadCamera](page.php?p=3261)
- | position | [Vector3](page.php?p=3327) | Position of the [OculusGamepadCamera](page.php?p=3261)
- | scene | [Scene](page.php?p=3274) | [Scene](page.php?p=3274) which contain the [OculusGamepadCamera](page.php?p=3261)
+ | name | string | Name of the [OculusGamepadCamera](/classes/OculusGamepadCamera)
+ | position | [Vector3](/classes/Vector3) | Position of the [OculusGamepadCamera](/classes/OculusGamepadCamera)
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the [OculusGamepadCamera](/classes/OculusGamepadCamera)
 ---
 
-##Extends [FreeCamera](page.php?p=3254)
+##Extends [FreeCamera](/classes/FreeCamera)
 ##Members
 
 ###angularSensibility : number

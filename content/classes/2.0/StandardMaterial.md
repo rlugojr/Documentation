@@ -1,111 +1,139 @@
 ---
-ID_PAGE: 5786
+ID_PAGE: 24955
 PG_TITLE: StandardMaterial
 PG_VERSION: 2.0
 ---
-##new [StandardMaterial](page.php?p=5786)(name, scene)
+##new [StandardMaterial](/classes/StandardMaterial)(name, scene)
 
 
-Create a new [StandardMaterial](page.php?p=5786).
-Everything to know about material can be found here : https://github.com/BabylonJS/Babylon.js/wiki/04-Materials
+
+Create a new [StandardMaterial](/classes/StandardMaterial).
+Everything to know about materials can be found here : http://babylondoc.azurewebsites.net/page.php?p=24706
 And here : http://blogs.msdn.com/b/eternalcoding/archive/2013/07/01/babylon-js-unleash-the-standardmaterial-for-your-babylon-js-game.aspx
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | The name of the standardMaterial
- | scene | [Scene](page.php?p=5725) | [Scene](page.php?p=5725) which contain the standardMaterial
+ | name | string | 
+ | scene | [Scene](/classes/Scene) | 
 ---
 
-##Extends [Material](page.php?p=5783)
+##Extends [Material](/classes/Material)
 ##Members
 
-###diffuseTexture : [BaseTexture](page.php?p=5788)
+###diffuseTexture : [BaseTexture](/classes/BaseTexture)
+
 
 
 
 The diffuse texture
 
 
-###ambientTexture : [BaseTexture](page.php?p=5788)
+
+###ambientTexture : [BaseTexture](/classes/BaseTexture)
+
 
 
 
 The ambient texture
 
 
-###opacityTexture : [BaseTexture](page.php?p=5788)
+
+###opacityTexture : [BaseTexture](/classes/BaseTexture)
+
 
 
 
 The opacity texture
 
 
-###reflectionTexture : [BaseTexture](page.php?p=5788)
+
+###reflectionTexture : [BaseTexture](/classes/BaseTexture)
+
 
 
 
 The reflection texture
 
 
-###emissiveTexture : [BaseTexture](page.php?p=5788)
+
+###emissiveTexture : [BaseTexture](/classes/BaseTexture)
+
 
 
 
 The emissive texture
 
 
-###specularTexture : [BaseTexture](page.php?p=5788)
+
+###specularTexture : [BaseTexture](/classes/BaseTexture)
+
 
 
 
 The specular texture
 
 
-###bumpTexture : [BaseTexture](page.php?p=5788)
+
+###bumpTexture : [BaseTexture](/classes/BaseTexture)
+
 
 
 
 The bump texture
 
 
-###ambientColor : [Color3](page.php?p=5805)
+
+###ambientColor : [Color3](/classes/Color3)
+
 
 
 
 The ambient color
 
 
-###diffuseColor : [Color3](page.php?p=5805)
+
+###diffuseColor : [Color3](/classes/Color3)
+
 
 
 
 The diffuse color
 
 
-###specularColor : [Color3](page.php?p=5805)
+
+###specularColor : [Color3](/classes/Color3)
+
 
 
 
 The specular color
 
 
+
 ###specularPower : number
+
 
 
 
 The specular power
 
 
-###emissiveColor : [Color3](page.php?p=5805)
+
+###emissiveColor : [Color3](/classes/Color3)
+
 
 
 
 The emissive color
 
 
+
 ###useAlphaFromDiffuseTexture : boolean
+
 
 
 
@@ -114,45 +142,59 @@ True to use alpha from diffuse texture
 Default value : false
 
 
+
 ###useSpecularOverAlpha : boolean
+
 
 
 
 True to use specular over alpha
 
 
+
 ###fogEnabled : boolean
 
 
-###diffuseFresnelParameters : [FresnelParameters](page.php?p=5787)
+
+
+###diffuseFresnelParameters : [FresnelParameters](/classes/FresnelParameters)
+
 
 
 
 The diffuse Fresnel parameters
 
 
-###opacityFresnelParameters : [FresnelParameters](page.php?p=5787)
+
+###opacityFresnelParameters : [FresnelParameters](/classes/FresnelParameters)
+
 
 
 
 The opacity Fresnel parameters
 
 
-###reflectionFresnelParameters : [FresnelParameters](page.php?p=5787)
+
+###reflectionFresnelParameters : [FresnelParameters](/classes/FresnelParameters)
+
 
 
 
 The reflection Fresnel parameters
 
 
-###emissiveFresnelParameters : [FresnelParameters](page.php?p=5787)
+
+###emissiveFresnelParameters : [FresnelParameters](/classes/FresnelParameters)
+
 
 
 
 The emissive Fresnel parameters
 
 
+
 ###static DiffuseTextureEnabled : boolean
+
 
 
 
@@ -161,7 +203,9 @@ Function to know if diffuse texture is enabled
 @return boolean True if diffuse texture is enabled ; False if not
 
 
+
 ###static AmbientTextureEnabled : boolean
+
 
 
 
@@ -170,7 +214,9 @@ Function to know if ambient texture is enabled
 @return boolean True if ambient texture is enabled ; False if not
 
 
+
 ###static OpacityTextureEnabled : boolean
+
 
 
 
@@ -179,7 +225,9 @@ Function to know if opacity texture is enabled
 @return boolean True if opacity texture is enabled ; False if not
 
 
+
 ###static ReflectionTextureEnabled : boolean
+
 
 
 
@@ -188,7 +236,9 @@ Function to know if reflection texture is enabled
 @return boolean True if reflection texture is enabled ; False if not
 
 
+
 ###static EmissiveTextureEnabled : boolean
+
 
 
 
@@ -197,7 +247,9 @@ Function to know if emissive texture is enabled
 @return boolean True if emissive texture is enabled ; False if not
 
 
+
 ###static SpecularTextureEnabled : boolean
+
 
 
 
@@ -206,7 +258,9 @@ Function to know if specular texture is enabled
 @return boolean True if specular texture is enabled ; False if not
 
 
+
 ###static BumpTextureEnabled : boolean
+
 
 
 
@@ -218,7 +272,13 @@ Function to know if bump texture is enabled
 
 
 
+
 ###static FresnelEnabled : boolean
+
+
+
+
+
 
 
 
@@ -232,6 +292,8 @@ Function to know if standard material need alpha blending
 
 
 
+
+
 ###needAlphaTesting() &rarr; boolean
 Function to know if standard material need alpha testing
 @return boolean True if standard material need alpha testing ; False if not
@@ -239,9 +301,13 @@ Function to know if standard material need alpha testing
 
 
 
-###getAlphaTestTexture() &rarr; [BaseTexture](page.php?p=5788)
+
+
+###getAlphaTestTexture() &rarr; [BaseTexture](/classes/BaseTexture)
 Function to get the alpha test texture
-@return [BaseTexture](page.php?p=5788) The alpha test texture
+@return [BaseTexture](/classes/BaseTexture) The alpha test texture
+
+
 
 
 
@@ -252,10 +318,12 @@ Function to know if standard material is ready
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | mesh | [AbstractMesh](page.php?p=5720) | The mesh to test
+optional | mesh | [AbstractMesh](/classes/AbstractMesh) | The mesh to test
 optional | useInstances | boolean | True to use instances
 ---
 
@@ -265,15 +333,19 @@ Unbind the standard material
 
 
 
+
+
 ###bindOnlyWorldMatrix(world) &rarr; void
 Bind only the world matrix
+
+
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | world | [Matrix](page.php?p=5811) | The world matrix
+ | world | [Matrix](/classes/Matrix) | 
 ---
 
 ###bind(world, mesh) &rarr; void
@@ -281,11 +353,13 @@ Bind the standard material
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | world | [Matrix](page.php?p=5811) | The world matrix
- | mesh | [Mesh](page.php?p=5722) | The mesh to bind
+ | world | [Matrix](/classes/Matrix) | 
+ | mesh | [Mesh](/classes/Mesh) | 
 ---
 
 ###getAnimatables() &rarr; IAnimatable[]
@@ -295,8 +369,12 @@ Get the animatables
 
 
 
+
+
 ###dispose(forceDisposeEffect) &rarr; void
 Destroy the standard material
+
+
 
 
 
@@ -306,10 +384,10 @@ Destroy the standard material
 optional | forceDisposeEffect | boolean | True to force the destroy
 ---
 
-###clone(name) &rarr; [StandardMaterial](page.php?p=5786)
+###clone(name) &rarr; [StandardMaterial](/classes/StandardMaterial)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | The name of the standard material
+ | name | string | 
 ---

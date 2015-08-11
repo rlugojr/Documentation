@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6822
+ID_PAGE: 25310
 PG_TITLE: ImageAssetTask
 PG_VERSION: 2.1
 TAGS:
@@ -7,11 +7,14 @@ TAGS:
 ---
 
 Load task on the given image
-##new [ImageAssetTask](page.php?p=6822)(name, url)
+##new [ImageAssetTask](/classes/ImageAssetTask)(name, url)
 
 
 
-The [ImageAssetTask](page.php?p=6822)
+
+The [ImageAssetTask](/classes/ImageAssetTask)
+
+
 
 
 
@@ -30,7 +33,9 @@ The [ImageAssetTask](page.php?p=6822)
 
 
 
+
 The name
+
 
 
 
@@ -39,7 +44,9 @@ The name
 
 
 
+
 The url to this image
+
 
 
 
@@ -48,7 +55,9 @@ The url to this image
 
 
 
+
 Function call when the mesh is load successfully
+
 
 
 
@@ -57,7 +66,9 @@ Function call when the mesh is load successfully
 
 
 
+
 Function call when the mesh isn't load successfully
+
 
 
 
@@ -66,7 +77,9 @@ Function call when the mesh isn't load successfully
 
 
 
+
 True if is completed, false otherwise.
+
 
 
 
@@ -75,7 +88,12 @@ True if is completed, false otherwise.
 
 
 
+
 The image
+
+
+
+
 
 
 
@@ -94,7 +112,7 @@ The image
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=6662) | the scene where the image is.
+ | scene | [Scene](/classes/Scene) | the scene where the image is.
  | onSuccess | () =&gt; void | Function call when the mesh is load successfully
  | onError | () =&gt; void | Function call when the mesh isn't load successfully
 ---

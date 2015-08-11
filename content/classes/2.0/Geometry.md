@@ -1,24 +1,27 @@
 ---
-ID_PAGE: 5823
+ID_PAGE: 24992
 PG_TITLE: Geometry
 PG_VERSION: 2.0
 ---
 
-The [Geometry](page.php?p=5823) class
-##new [Geometry](page.php?p=5823)(id, scene, vertexData, updatable, mesh)
+The [Geometry](/classes/Geometry) class
+##new [Geometry](/classes/Geometry)(id, scene, vertexData, updatable, mesh)
 
 
-The [Geometry](page.php?p=5823) constructor
+
+The [Geometry](/classes/Geometry) constructor
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | id | string | @param id
- | scene | [Scene](page.php?p=5725) | @param scene
-optional | vertexData | [VertexData](page.php?p=5825) | @param vertexData
+ | scene | [Scene](/classes/Scene) | @param scene
+optional | vertexData | [VertexData](/classes/VertexData) | @param vertexData
 optional | updatable | boolean | @param updatable
-optional | mesh | [Mesh](page.php?p=5722) | @param mesh
+optional | mesh | [Mesh](/classes/Mesh) | @param mesh
 ---
 
 ##Members
@@ -28,7 +31,11 @@ optional | mesh | [Mesh](page.php?p=5722) | @param mesh
 
 
 
+
+
 ###delayLoadState : number
+
+
 
 
 
@@ -43,16 +50,25 @@ optional | mesh | [Mesh](page.php?p=5722) | @param mesh
 
 
 
+
+
+
+
+
 ##Methods
 
-###getScene() &rarr; [Scene](page.php?p=5725)
+###getScene() &rarr; [Scene](/classes/Scene)
 Get the scene
 
 
 
 
-###getEngine() &rarr; [Engine](page.php?p=5700)
+
+
+###getEngine() &rarr; [Engine](/classes/Engine)
 Get the engine
+
+
 
 
 
@@ -63,20 +79,26 @@ True if is ready, false if is not
 
 
 
+
+
 ###setAllVerticesData(vertexData, updatable) &rarr; void
 Set all vertices data
+
+
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vertexData | [VertexData](page.php?p=5825) | send all elements of vertices
+ | vertexData | [VertexData](/classes/VertexData) | send all elements of vertices
 optional | updatable | boolean | @param updatable
 ---
 
 ###setVerticesData(kind, data, updatable, stride) &rarr; void
 Set vertices data
+
+
 
 
 
@@ -94,6 +116,8 @@ Update vertices data directly
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -104,6 +128,8 @@ Update vertices data directly
 
 ###updateVerticesData(kind, data, updateExtends) &rarr; void
 Update vertices data
+
+
 
 
 
@@ -121,8 +147,12 @@ Get total vertices
 
 
 
+
+
 ###getVerticesData(kind) &rarr; number[]
 Get total vertices data
+
+
 
 
 
@@ -132,8 +162,10 @@ Get total vertices data
  | kind | string | @param kind
 ---
 
-###getVertexBuffer(kind) &rarr; [VertexBuffer](page.php?p=5835)
+###getVertexBuffer(kind) &rarr; [VertexBuffer](/classes/VertexBuffer)
 Get vertex buffer for this kind
+
+
 
 
 
@@ -143,14 +175,18 @@ Get vertex buffer for this kind
  | kind | string | Use only one parameters
 ---
 
-###getVertexBuffers() &rarr; [VertexBuffer](page.php?p=5835)[]
+###getVertexBuffers() &rarr; [VertexBuffer](/classes/VertexBuffer)[]
 Get vertex buffers, use all element of vertex buffer
+
+
 
 
 
 
 ###isVerticesDataPresent(kind) &rarr; boolean
 Return true if vertices data are present
+
+
 
 
 
@@ -166,8 +202,12 @@ Get the kinds of vertices data
 
 
 
+
+
 ###setIndices(indices, totalVertices) &rarr; void
 Set indices
+
+
 
 
 
@@ -184,8 +224,12 @@ Get all indices
 
 
 
+
+
 ###getIndices() &rarr; number[]
 Get the last indices
+
+
 
 
 
@@ -196,15 +240,19 @@ Get index buffer
 
 
 
+
+
 ###releaseForMesh(mesh, shouldDispose) &rarr; void
 Release for mesh
+
+
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](page.php?p=5722) | your mesh
+ | mesh | [Mesh](/classes/Mesh) | your mesh
 optional | shouldDispose | boolean | true if mesh is dispose, false if is not.
 ---
 
@@ -213,10 +261,12 @@ Apply to a mesh
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](page.php?p=5722) | the mesh
+ | mesh | [Mesh](/classes/Mesh) | the mesh
 ---
 
 ###load(scene, onLoaded) &rarr; void
@@ -224,10 +274,12 @@ Load function
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=5725) | the platform
+ | scene | [Scene](/classes/Scene) | the platform
 optional | onLoaded | () =&gt; void | @param onLoaded
 ---
 
@@ -237,8 +289,12 @@ Dispose this geometry object
 
 
 
-###copy(id) &rarr; [Geometry](page.php?p=5823)
+
+
+###copy(id) &rarr; [Geometry](/classes/Geometry)
 Copy function
+
+
 
 
 
@@ -248,15 +304,17 @@ Copy function
  | id | string | this geometry object
 ---
 
-###static ExtractFromMesh(mesh, id) &rarr; [Geometry](page.php?p=5823)
-Extract From [Mesh](page.php?p=5722)
+###static ExtractFromMesh(mesh, id) &rarr; [Geometry](/classes/Geometry)
+Extract From [Mesh](/classes/Mesh)
+
+
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](page.php?p=5722) | the mesh
+ | mesh | [Mesh](/classes/Mesh) | the mesh
  | id | string | Given this id to the new geometry object
 ---
 

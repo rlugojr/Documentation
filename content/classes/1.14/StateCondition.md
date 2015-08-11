@@ -1,22 +1,22 @@
 ---
-ID_PAGE: 3292
+ID_PAGE: 24500
 PG_TITLE: StateCondition
 PG_VERSION: 1.14
 ---
 
 This condition checks the state property of an object and compares it to the given value
-##new [StateCondition](page.php?p=3292)(actionManager, target, value)
+##new [StateCondition](/classes/StateCondition)(actionManager, target, value)
 
 The state condition constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | actionManager | [ActionManager](page.php?p=3288) | The action manager
+ | actionManager | [ActionManager](/classes/ActionManager) | The action manager
  | target | any | The target
  | value | string | The given value
 ---
 
-##Extends [Condition](page.php?p=3289)
+##Extends [Condition](/classes/Condition)
 ##Members
 
 ###value : string

@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6662
+ID_PAGE: 25150
 PG_TITLE: Scene
 PG_VERSION: 2.1
 TAGS:
@@ -9,18 +9,19 @@ TAGS:
 Represents a scene to be rendered by the engine.
 
 @see http://doc.babylonjs.com/page.php?p=21911
-##new [Scene](page.php?p=6662)(engine)
+##new [Scene](/classes/Scene)(engine)
 
 @constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | engine | [Engine](page.php?p=6629) | [Engine](page.php?p=6629) The babylon engine
+ | engine | [Engine](/classes/Engine) | [Engine](/classes/Engine) The babylon engine
 ---
 
 ##Members
 
 ###static MinDeltaTime : number
+
 
 
 
@@ -31,7 +32,9 @@ In milliseconds, the minimum delta time between two steps
 
 
 
+
 ###static MaxDeltaTime : number
+
 
 
 
@@ -42,7 +45,9 @@ In milliseconds, the maximum delta time between two steps
 
 
 
+
 ###static FOGMODE_NONE : number
+
 
 
 
@@ -51,7 +56,9 @@ The fog is deactivated
 
 
 
+
 ###static FOGMODE_EXP : number
+
 
 
 
@@ -60,7 +67,9 @@ The fog density is following an exponential function
 
 
 
+
 ###static FOGMODE_EXP2 : number
+
 
 
 
@@ -69,7 +78,9 @@ The fog density is following an exponential function faster than FOGMODE_EXP
 
 
 
+
 ###static FOGMODE_LINEAR : number
+
 
 
 
@@ -78,7 +89,9 @@ The fog density is following a linear function.
 
 
 
+
 ###autoClear : boolean
+
 
 
 
@@ -89,25 +102,30 @@ True to clear the color buffer at each render, false either
 
 
 
+
 ###clearColor : any
 
 
 
 
-default : [Color3](page.php?p=6748)(0.2, 0.2, 0.3)
+
+default : [Color3](/classes/Color3)(0.2, 0.2, 0.3)
 
 The color of the scene when cleared
 
 
 
-###ambientColor : [Color3](page.php?p=6748)
+
+###ambientColor : [Color3](/classes/Color3)
 
 
 
 
-default : [Color3](page.php?p=6748)(0, 0, 0)
+
+default : [Color3](/classes/Color3)(0, 0, 0)
 
 The scene ambiant color
+
 
 
 
@@ -132,7 +150,8 @@ A function to be executed when this scene is disposed.
 
 @type {Function}
 
-###beforeCameraRender : (camera: [Camera](page.php?p=6631)) =&gt; void
+###beforeCameraRender : (camera: [Camera](/classes/Camera)) =&gt; void
+
 
 
 
@@ -141,7 +160,9 @@ Function triggered before the camera is rendered, with the concerned camera pass
 
 
 
-###afterCameraRender : (camera: [Camera](page.php?p=6631)) =&gt; void
+
+###afterCameraRender : (camera: [Camera](/classes/Camera)) =&gt; void
+
 
 
 
@@ -150,7 +171,9 @@ Function triggered after the camera is rendered, with the concerned camera passe
 
 
 
+
 ###forceWireframe : boolean
+
 
 
 
@@ -161,7 +184,10 @@ Forces the wireframe display of meshes
 
 
 
+
 ###forcePointsCloud : boolean
+
+
 
 
 
@@ -171,7 +197,11 @@ Forces the wireframe display of meshes
 
 
 
-###clipPlane : [Plane](page.php?p=6755)
+
+
+###clipPlane : [Plane](/classes/Plane)
+
+
 
 
 
@@ -183,7 +213,10 @@ Forces the wireframe display of meshes
 
 
 
-###onPointerDown : (evt: PointerEvent, pickInfo: [PickingInfo](page.php?p=6712)) =&gt; void
+
+
+###onPointerDown : (evt: PointerEvent, pickInfo: [PickingInfo](/classes/PickingInfo)) =&gt; void
+
 
 
 
@@ -194,15 +227,18 @@ The passed argument are the event and the element concerned with this event
 
 
 
-###onPointerUp : (evt: PointerEvent, pickInfo: [PickingInfo](page.php?p=6712)) =&gt; void
+
+###onPointerUp : (evt: PointerEvent, pickInfo: [PickingInfo](/classes/PickingInfo)) =&gt; void
 
 
-###cameraToUseForPointers : [Camera](page.php?p=6631)
+###cameraToUseForPointers : [Camera](/classes/Camera)
+
 
 
 
 
 The camera used for pointers
+
 
 
 
@@ -218,22 +254,27 @@ is fog enabled on this scene.
 
 
 
-One of the following values : [Scene](page.php?p=6662).FOGMODE_NONE, [Scene](page.php?p=6662).FOGMODE_EXP, [Scene](page.php?p=6662).FOGMODE_EXP2 , [Scene](page.php?p=6662).FOGMODE_LINEAR
 
-
-
-###fogColor : [Color3](page.php?p=6748)
+One of the following values : [Scene](/classes/Scene).FOGMODE_NONE, [Scene](/classes/Scene).FOGMODE_EXP, [Scene](/classes/Scene).FOGMODE_EXP2 , [Scene](/classes/Scene).FOGMODE_LINEAR
 
 
 
 
-default : [Color3](page.php?p=6748)(0.2, 0.2, 0.3)
+###fogColor : [Color3](/classes/Color3)
+
+
+
+
+
+default : [Color3](/classes/Color3)(0.2, 0.2, 0.3)
 
 The fog color
 
 
 
+
 ###fogDensity : number
+
 
 
 
@@ -244,16 +285,19 @@ The fog density
 
 
 
+
 ###fogStart : number
+
 
 
 
 
 default : 0
 
-Used with the [Scene](page.php?p=6662).FOGMODE_LINEAR fogMode
+Used with the [Scene](/classes/Scene).FOGMODE_LINEAR fogMode
 
 Where the fog starts
+
 
 
 
@@ -262,11 +306,13 @@ Where the fog starts
 
 
 
+
 default : 1000.0
 
-Used with the [Scene](page.php?p=6662).FOGMODE_LINEAR fogMode
+Used with the [Scene](/classes/Scene).FOGMODE_LINEAR fogMode
 
 Where the fog ends
+
 
 
 
@@ -284,46 +330,49 @@ is light enabled on this scene.
 
 @type {boolean}
 
-###lights : [Light](page.php?p=6652)[]
+###lights : [Light](/classes/Light)[]
 
 
 All of the lights added to this scene.
 
-@see [BABYLON](page.php?p=6625).Light
+@see [Light](/classes/Light)
 
 @type {BABYLON.Light[]}
 
-###onNewLightAdded : (newLight?: [Light](page.php?p=6652), positionInArray?: number, scene?: [Scene](page.php?p=6662)) =&gt; void
+###onNewLightAdded : (newLight?: [Light](/classes/Light), positionInArray?: number, scene?: [Scene](/classes/Scene)) =&gt; void
 
 
-###onLightRemoved : (removedLight?: [Light](page.php?p=6652)) =&gt; void
+###onLightRemoved : (removedLight?: [Light](/classes/Light)) =&gt; void
 
 
-###cameras : [Camera](page.php?p=6631)[]
+###cameras : [Camera](/classes/Camera)[]
 
 
 All of the cameras added to this scene.
 
-@see [BABYLON](page.php?p=6625).Camera
+@see [Camera](/classes/Camera)
 
 @type {BABYLON.Camera[]}
 
-###onNewCameraAdded : (newCamera?: [Camera](page.php?p=6631), positionInArray?: number, scene?: [Scene](page.php?p=6662)) =&gt; void
+###onNewCameraAdded : (newCamera?: [Camera](/classes/Camera), positionInArray?: number, scene?: [Scene](/classes/Scene)) =&gt; void
 
 
-###onCameraRemoved : (removedCamera?: [Camera](page.php?p=6631)) =&gt; void
+###onCameraRemoved : (removedCamera?: [Camera](/classes/Camera)) =&gt; void
 
 
-###activeCameras : [Camera](page.php?p=6631)[]
-
-
-
-
-The array holding the list of active [Camera](page.php?p=6631) instances
+###activeCameras : [Camera](/classes/Camera)[]
 
 
 
-###activeCamera : [Camera](page.php?p=6631)
+
+
+The array holding the list of active [Camera](/classes/Camera) instances
+
+
+
+
+###activeCamera : [Camera](/classes/Camera)
+
 
 
 
@@ -332,28 +381,30 @@ The active camera for this scene
 
 
 
-###meshes : [AbstractMesh](page.php?p=6657)[]
+
+###meshes : [AbstractMesh](/classes/AbstractMesh)[]
 
 
 All of the (abstract) meshes added to this scene.
 
-@see [BABYLON](page.php?p=6625).AbstractMesh
+@see [AbstractMesh](/classes/AbstractMesh)
 
 @type {BABYLON.AbstractMesh[]}
 
-###onNewMeshAdded : (newMesh?: [AbstractMesh](page.php?p=6657), positionInArray?: number, scene?: [Scene](page.php?p=6662)) =&gt; void
+###onNewMeshAdded : (newMesh?: [AbstractMesh](/classes/AbstractMesh), positionInArray?: number, scene?: [Scene](/classes/Scene)) =&gt; void
 
 
-###onMeshRemoved : (removedMesh?: [AbstractMesh](page.php?p=6657)) =&gt; void
+###onMeshRemoved : (removedMesh?: [AbstractMesh](/classes/AbstractMesh)) =&gt; void
 
 
-###onGeometryAdded : (newGeometry?: [Geometry](page.php?p=6771)) =&gt; void
+###onGeometryAdded : (newGeometry?: [Geometry](/classes/Geometry)) =&gt; void
 
 
-###onGeometryRemoved : (removedGeometry?: [Geometry](page.php?p=6771)) =&gt; void
+###onGeometryRemoved : (removedGeometry?: [Geometry](/classes/Geometry)) =&gt; void
 
 
-###materials : [Material](page.php?p=6726)[]
+###materials : [Material](/classes/Material)[]
+
 
 
 
@@ -362,7 +413,9 @@ The array holding all materials of this scene
 
 
 
-###multiMaterials : [MultiMaterial](page.php?p=6727)[]
+
+###multiMaterials : [MultiMaterial](/classes/MultiMaterial)[]
+
 
 
 
@@ -371,7 +424,9 @@ The array holding all multimaterials of this scene
 
 
 
-###defaultMaterial : [StandardMaterial](page.php?p=6729)
+
+###defaultMaterial : [StandardMaterial](/classes/StandardMaterial)
+
 
 
 
@@ -380,7 +435,9 @@ The default material used on meshes when no material is affected
 
 
 
+
 ###texturesEnabled : boolean
+
 
 
 
@@ -389,7 +446,9 @@ True if texture should be enabled, false otherwise
 
 
 
-###textures : [BaseTexture](page.php?p=6731)[]
+
+###textures : [BaseTexture](/classes/BaseTexture)[]
+
 
 
 
@@ -398,7 +457,9 @@ The array holding all textures used in the scene
 
 
 
+
 ###particlesEnabled : boolean
+
 
 
 
@@ -407,7 +468,9 @@ True if Particles should be enabled, false otherwise
 
 
 
-###particleSystems : [ParticleSystem](page.php?p=6786)[]
+
+###particleSystems : [ParticleSystem](/classes/ParticleSystem)[]
+
 
 
 
@@ -416,10 +479,12 @@ The array holding all particle systems of this scene
 
 
 
+
 ###spritesEnabled : boolean
 
 
-###spriteManagers : [SpriteManager](page.php?p=6818)[]
+###spriteManagers : [SpriteManager](/classes/SpriteManager)[]
+
 
 
 
@@ -428,7 +493,9 @@ The array holding all sprite managers of this scene
 
 
 
-###layers : [Layer](page.php?p=6719)[]
+
+###layers : [Layer](/classes/Layer)[]
+
 
 
 
@@ -437,12 +504,16 @@ The array holding all layers of this scene
 
 
 
+
 ###skeletonsEnabled : boolean
 
 
 
 
-###skeletons : [Skeleton](page.php?p=6703)[]
+
+
+###skeletons : [Skeleton](/classes/Skeleton)[]
+
 
 
 
@@ -451,12 +522,16 @@ The array holding all skeletons of this scene
 
 
 
+
 ###lensFlaresEnabled : boolean
 
 
 
 
-###lensFlareSystems : [LensFlareSystem](page.php?p=6721)[]
+
+
+###lensFlareSystems : [LensFlareSystem](/classes/LensFlareSystem)[]
+
 
 
 
@@ -465,7 +540,9 @@ The array holding all lensflare systems of this scene
 
 
 
+
 ###collisionsEnabled : boolean
+
 
 
 
@@ -474,10 +551,12 @@ True if collisions should be enabled, false otherwise
 
 
 
+
 ###collisionCoordinator : ICollisionCoordinator
 
 
-###gravity : [Vector3](page.php?p=6751)
+###gravity : [Vector3](/classes/Vector3)
+
 
 
 
@@ -486,7 +565,9 @@ Defines the gravity applied to this scene
 
 
 
+
 ###postProcessesEnabled : boolean
+
 
 
 
@@ -495,7 +576,9 @@ True if postProcesses should be enabled, false otherwise
 
 
 
-###postProcessManager : [PostProcessManager](page.php?p=6805)
+
+###postProcessManager : [PostProcessManager](/classes/PostProcessManager)
+
 
 
 
@@ -504,7 +587,9 @@ The post process manager of this scene
 
 
 
-###postProcessRenderPipelineManager : [PostProcessRenderPipelineManager](page.php?p=6811)
+
+###postProcessRenderPipelineManager : [PostProcessRenderPipelineManager](/classes/PostProcessRenderPipelineManager)
+
 
 
 
@@ -513,7 +598,9 @@ The post process render pipeline manager of this scene
 
 
 
+
 ###renderTargetsEnabled : boolean
+
 
 
 
@@ -522,10 +609,12 @@ True if custom render target should be enabled, false otherwise
 
 
 
+
 ###dumpNextRenderTargets : boolean
 
 
-###customRenderTargets : [RenderTargetTexture](page.php?p=6736)[]
+###customRenderTargets : [RenderTargetTexture](/classes/RenderTargetTexture)[]
+
 
 
 
@@ -534,7 +623,9 @@ The array holding all custom render targets of this scene
 
 
 
+
 ###useDelayedTextureLoading : boolean
+
 
 
 
@@ -543,7 +634,9 @@ True if the texture loading should be delayed, false otherwise
 
 
 
+
 ###importedMeshesFiles : String[]
+
 
 
 
@@ -552,7 +645,9 @@ The array holding all imported mesh files
 
 
 
+
 ###database : any
+
 
 
 
@@ -561,7 +656,8 @@ The database this scene is saved into
 
 
 
-###actionManager : [ActionManager](page.php?p=6678)
+
+###actionManager : [ActionManager](/classes/ActionManager)
 
 
 This scene's action manager
@@ -573,20 +669,28 @@ This scene's action manager
 
 
 
-###mainSoundTrack : [SoundTrack](page.php?p=6701)
+
+
+###mainSoundTrack : [SoundTrack](/classes/SoundTrack)
 
 
 
 
-###soundTracks : [SoundTrack](page.php?p=6701)[]
+
+
+###soundTracks : [SoundTrack](/classes/SoundTrack)[]
 
 
 
 
-###simplificationQueue : [SimplificationQueue](page.php?p=6775)
 
 
-###debugLayer : [DebugLayer](page.php?p=6718)
+###simplificationQueue : [SimplificationQueue](/classes/SimplificationQueue)
+
+
+###debugLayer : [DebugLayer](/classes/DebugLayer)
+
+
 
 
 
@@ -594,7 +698,7 @@ This scene's action manager
 ###workerCollisions : boolean
 
 
-###meshUnderPointer : [AbstractMesh](page.php?p=6657)
+###meshUnderPointer : [AbstractMesh](/classes/AbstractMesh)
 
 
 The mesh that is currently under the pointer.
@@ -625,12 +729,14 @@ Current on-screen Y position of the pointer
 
 ##Methods
 
-###getCachedMaterial() &rarr; [Material](page.php?p=6726)
+###getCachedMaterial() &rarr; [Material](/classes/Material)
 
 
 
 
-###getBoundingBoxRenderer() &rarr; [BoundingBoxRenderer](page.php?p=6812)
+
+
+###getBoundingBoxRenderer() &rarr; [BoundingBoxRenderer](/classes/BoundingBoxRenderer)
 Returns the bounding box renderer
 
 
@@ -638,7 +744,9 @@ Returns the bounding box renderer
 
 
 
-###getOutlineRenderer() &rarr; [OutlineRenderer](page.php?p=6814)
+
+
+###getOutlineRenderer() &rarr; [OutlineRenderer](/classes/OutlineRenderer)
 Returns the outline rendrer
 
 
@@ -646,8 +754,12 @@ Returns the outline rendrer
 
 
 
-###getEngine() &rarr; [Engine](page.php?p=6629)
+
+
+###getEngine() &rarr; [Engine](/classes/Engine)
 Returns the engine
+
+
 
 
 
@@ -656,6 +768,8 @@ Returns the engine
 
 ###getTotalVertices() &rarr; number
 Returns all the vertices of this scene
+
+
 
 
 
@@ -673,13 +787,19 @@ Returns all the active particles of this scene
 
 
 
+
+
 ###getActiveBones() &rarr; number
+
+
 
 
 
 
 ###getLastFrameDuration() &rarr; number
 Returns the duration of the last frame in milliseconds
+
+
 
 
 
@@ -694,8 +814,12 @@ Returns the duration of active meshes in milliseconds
 
 
 
+
+
 ###getActiveMeshes() &rarr; SmartArray&lt;Mesh&gt;
 Returns the list of acti meshes of this scene
+
+
 
 
 
@@ -710,8 +834,12 @@ Returns the duration of targets render in milliseconds
 
 
 
+
+
 ###getRenderDuration() &rarr; number
 Returns the duration of the last render in milliseconds
+
+
 
 
 
@@ -726,8 +854,12 @@ Returns the duration of the last particles processing in milliseconds
 
 
 
+
+
 ###getSpritesDuration() &rarr; number
 Returns the duration of the last sprites processing in milliseconds
+
+
 
 
 
@@ -742,8 +874,12 @@ Returns the animation ratio (speed)
 
 
 
+
+
 ###getRenderId() &rarr; number
 Returns the render ID of this scene
+
+
 
 
 
@@ -764,8 +900,12 @@ The canvas registering all controls is the canvas used to create the babylon eng
 
 
 
+
+
 ###detachControl() &rarr; void
 Detaches mouse/keyboard control to this scene
+
+
 
 
 
@@ -780,13 +920,19 @@ Returns true when the scene is ready to be displayed (all meshes are ready and a
 
 
 
+
+
 ###resetCachedMaterial() &rarr; void
+
+
 
 
 
 
 ###registerBeforeRender(func) &rarr; void
 Registers in an array the given function which will be executed before rendering the scene
+
+
 
 
 
@@ -805,6 +951,8 @@ Removes the given function from the beforeRender array
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -815,6 +963,8 @@ Removes the given function from the beforeRender array
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -822,6 +972,8 @@ Removes the given function from the beforeRender array
 ---
 
 ###unregisterAfterRender(func) &rarr; void
+
+
 
 
 
@@ -839,6 +991,8 @@ Returns the length of pending data (not ready yet)
 
 
 
+
+
 ###executeWhenReady(func) &rarr; void
 Registers a function to be executed when the scene is ready.
 
@@ -848,10 +1002,10 @@ Registers a function to be executed when the scene is ready.
  | func | () =&gt; void | The given function to call
 ---
 
-###beginAnimation(target, from, to, loop, speedRatio, onAnimationEnd, animatable) &rarr; [Animatable](page.php?p=6683)
+###beginAnimation(target, from, to, loop, speedRatio, onAnimationEnd, animatable) &rarr; [Animatable](/classes/Animatable)
 Will start the animation sequence of a given target
 @return {BABYLON.Animatable} the animatable object created for this animation
-@see [BABYLON](page.php?p=6625).Animatable
+@see [Animatable](/classes/Animatable)
 @see http://doc.babylonjs.com/page.php?p=22081
 
 ####Parameters
@@ -863,11 +1017,13 @@ Will start the animation sequence of a given target
 optional | loop | boolean | If true, the animation will loop
 optional | speedRatio | number | default : 1. The speed ratio of this animation
 optional | onAnimationEnd | () =&gt; void | The function triggered on the end of the animation
-optional | animatable | [Animatable](page.php?p=6683) | An optional specific animation
+optional | animatable | [Animatable](/classes/Animatable) | An optional specific animation
 ---
 
-###beginDirectAnimation(target, animations, from, to, loop, speedRatio, onAnimationEnd) &rarr; [Animatable](page.php?p=6683)
+###beginDirectAnimation(target, animations, from, to, loop, speedRatio, onAnimationEnd) &rarr; [Animatable](/classes/Animatable)
 Begins a direct animation (no children animations)
+
+
 
 
 
@@ -877,7 +1033,7 @@ Begins a direct animation (no children animations)
  | Name | Type | Description
 ---|---|---|---
  | target | any | The animation target
- | animations | [Animation](page.php?p=6684)[] | An array of animations
+ | animations | [Animation](/classes/Animation)[] | An array of animations
  | from | number | The fps starting frame
  | to | number | The fps ending frame
 optional | loop | boolean | If true, the animation will loop
@@ -885,8 +1041,10 @@ optional | speedRatio | number | default : 1.The speed ratio of this animation
 optional | onAnimationEnd | () =&gt; void | The function triggered on the end of the animation
 ---
 
-###getAnimatableByTarget(target) &rarr; [Animatable](page.php?p=6683)
-Returns the first [Animatable](page.php?p=6683) instance having the given target in the active animatable array
+###getAnimatableByTarget(target) &rarr; [Animatable](/classes/Animatable)
+Returns the first [Animatable](/classes/Animatable) instance having the given target in the active animatable array
+
+
 
 
 
@@ -908,24 +1066,30 @@ Will stop the animation of the given target
  | target | any | - the target
 ---
 
-###getViewMatrix() &rarr; [Matrix](page.php?p=6754)
-Returns the view [Matrix](page.php?p=6754)
+###getViewMatrix() &rarr; [Matrix](/classes/Matrix)
+Returns the view [Matrix](/classes/Matrix)
 
 
 
 
 
 
-###getProjectionMatrix() &rarr; [Matrix](page.php?p=6754)
-Returns the projection [Matrix](page.php?p=6754)
+
+
+###getProjectionMatrix() &rarr; [Matrix](/classes/Matrix)
+Returns the projection [Matrix](/classes/Matrix)
 
 
 
 
 
 
-###getTransformMatrix() &rarr; [Matrix](page.php?p=6754)
-Returns the transform [Matrix](page.php?p=6754)
+
+
+###getTransformMatrix() &rarr; [Matrix](/classes/Matrix)
+Returns the transform [Matrix](/classes/Matrix)
+
+
 
 
 
@@ -933,7 +1097,9 @@ Returns the transform [Matrix](page.php?p=6754)
 
 
 ###setTransformMatrix(view, projection) &rarr; void
-Sets the transform matrix by multiplying the given view [Matrix](page.php?p=6754) by the given projection [Matrix](page.php?p=6754)
+Sets the transform matrix by multiplying the given view [Matrix](/classes/Matrix) by the given projection [Matrix](/classes/Matrix)
+
+
 
 
 
@@ -942,8 +1108,8 @@ Sets the transform matrix by multiplying the given view [Matrix](page.php?p=6754
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | view | [Matrix](page.php?p=6754) | The given view [Matrix](page.php?p=6754)
- | projection | [Matrix](page.php?p=6754) | The given projection [Matrix](page.php?p=6754)
+ | view | [Matrix](/classes/Matrix) | The given view [Matrix](/classes/Matrix)
+ | projection | [Matrix](/classes/Matrix) | The given projection [Matrix](/classes/Matrix)
 ---
 
 ###addMesh(newMesh) &rarr; void
@@ -951,7 +1117,7 @@ Sets the transform matrix by multiplying the given view [Matrix](page.php?p=6754
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newMesh | [AbstractMesh](page.php?p=6657) | 
+ | newMesh | [AbstractMesh](/classes/AbstractMesh) | 
 ---
 
 ###removeMesh(toRemove) &rarr; number
@@ -959,7 +1125,7 @@ Sets the transform matrix by multiplying the given view [Matrix](page.php?p=6754
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | toRemove | [AbstractMesh](page.php?p=6657) | 
+ | toRemove | [AbstractMesh](/classes/AbstractMesh) | 
 ---
 
 ###removeLight(toRemove) &rarr; number
@@ -967,7 +1133,7 @@ Sets the transform matrix by multiplying the given view [Matrix](page.php?p=6754
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | toRemove | [Light](page.php?p=6652) | 
+ | toRemove | [Light](/classes/Light) | 
 ---
 
 ###removeCamera(toRemove) &rarr; number
@@ -975,7 +1141,7 @@ Sets the transform matrix by multiplying the given view [Matrix](page.php?p=6754
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | toRemove | [Camera](page.php?p=6631) | 
+ | toRemove | [Camera](/classes/Camera) | 
 ---
 
 ###addLight(newLight) &rarr; void
@@ -983,7 +1149,7 @@ Sets the transform matrix by multiplying the given view [Matrix](page.php?p=6754
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newLight | [Light](page.php?p=6652) | 
+ | newLight | [Light](/classes/Light) | 
 ---
 
 ###addCamera(newCamera) &rarr; void
@@ -991,10 +1157,10 @@ Sets the transform matrix by multiplying the given view [Matrix](page.php?p=6754
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newCamera | [Camera](page.php?p=6631) | 
+ | newCamera | [Camera](/classes/Camera) | 
 ---
 
-###setActiveCameraByID(id) &rarr; [Camera](page.php?p=6631)
+###setActiveCameraByID(id) &rarr; [Camera](/classes/Camera)
 sets the active camera of the scene using its ID
 @return {BABYLON.Camera|null} the new active camera or null if none found.
 @see activeCamera
@@ -1002,10 +1168,10 @@ sets the active camera of the scene using its ID
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | The given id of the [Camera](page.php?p=6631)
+ | id | string | The given id of the [Camera](/classes/Camera)
 ---
 
-###setActiveCameraByName(name) &rarr; [Camera](page.php?p=6631)
+###setActiveCameraByName(name) &rarr; [Camera](/classes/Camera)
 sets the active camera of the scene using its name
 @return {BABYLON.Camera|null} the new active camera or null if none found.
 @see activeCamera
@@ -1013,10 +1179,10 @@ sets the active camera of the scene using its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | The given name of the [Camera](page.php?p=6631)
+ | name | string | The given name of the [Camera](/classes/Camera)
 ---
 
-###getMaterialByID(id) &rarr; [Material](page.php?p=6726)
+###getMaterialByID(id) &rarr; [Material](/classes/Material)
 get a material using its id
 @return {BABYLON.Material|null} the material or null if none found.
 
@@ -1026,7 +1192,7 @@ get a material using its id
  | id | string | The given id
 ---
 
-###getMaterialByName(name) &rarr; [Material](page.php?p=6726)
+###getMaterialByName(name) &rarr; [Material](/classes/Material)
 get a material using its name
 @return {BABYLON.Material|null} the material or null if none found.
 
@@ -1036,8 +1202,10 @@ get a material using its name
  | name | string | The given name
 ---
 
-###getCameraByID(id) &rarr; [Camera](page.php?p=6631)
-Returns the first [Camera](page.php?p=6631) instance using the given id
+###getCameraByID(id) &rarr; [Camera](/classes/Camera)
+Returns the first [Camera](/classes/Camera) instance using the given id
+
+
 
 
 
@@ -1049,7 +1217,7 @@ Returns the first [Camera](page.php?p=6631) instance using the given id
  | id | string | The given id
 ---
 
-###getCameraByUniqueID(uniqueId) &rarr; [Camera](page.php?p=6631)
+###getCameraByUniqueID(uniqueId) &rarr; [Camera](/classes/Camera)
 
 ####Parameters
  | Name | Type | Description
@@ -1057,7 +1225,7 @@ Returns the first [Camera](page.php?p=6631) instance using the given id
  | uniqueId | number | 
 ---
 
-###getCameraByName(name) &rarr; [Camera](page.php?p=6631)
+###getCameraByName(name) &rarr; [Camera](/classes/Camera)
 get a camera using its name
 @return {BABYLON.Camera|null} the camera or null if none found.
 
@@ -1067,7 +1235,7 @@ get a camera using its name
  | name | string | The given name
 ---
 
-###getLightByName(name) &rarr; [Light](page.php?p=6652)
+###getLightByName(name) &rarr; [Light](/classes/Light)
 get a light node using its name
 @return {BABYLON.Light|null} the light or null if none found.
 
@@ -1077,7 +1245,7 @@ get a light node using its name
  | name | string | The given name
 ---
 
-###getLightByID(id) &rarr; [Light](page.php?p=6652)
+###getLightByID(id) &rarr; [Light](/classes/Light)
 get a light node using its ID
 @return {BABYLON.Light|null} the light or null if none found.
 
@@ -1087,7 +1255,7 @@ get a light node using its ID
  | id | string | The given id
 ---
 
-###getLightByUniqueID(uniqueId) &rarr; [Light](page.php?p=6652)
+###getLightByUniqueID(uniqueId) &rarr; [Light](/classes/Light)
 get a light node using its scene-generated unique ID
 @return {BABYLON.Light|null} the light or null if none found.
 
@@ -1097,7 +1265,7 @@ get a light node using its scene-generated unique ID
  | uniqueId | number | 
 ---
 
-###getGeometryByID(id) &rarr; [Geometry](page.php?p=6771)
+###getGeometryByID(id) &rarr; [Geometry](/classes/Geometry)
 get a geometry using its ID
 @return {BABYLON.Geometry|null} the geometry or null if none found.
 
@@ -1114,7 +1282,7 @@ add a new geometry to this scene.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | geometry | [Geometry](page.php?p=6771) | The given geometry
+ | geometry | [Geometry](/classes/Geometry) | The given geometry
 optional | force | boolean | True to push the geometry even if it is not found in the list of geometries of the scene, false otherwise
 ---
 
@@ -1125,10 +1293,10 @@ Removes an existing geometry
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | geometry | [Geometry](page.php?p=6771) | 
+ | geometry | [Geometry](/classes/Geometry) | 
 ---
 
-###getGeometries() &rarr; [Geometry](page.php?p=6771)[]
+###getGeometries() &rarr; [Geometry](/classes/Geometry)[]
 Returns the list of geometries of this scene
 
 
@@ -1136,7 +1304,9 @@ Returns the list of geometries of this scene
 
 
 
-###getMeshByID(id) &rarr; [AbstractMesh](page.php?p=6657)
+
+
+###getMeshByID(id) &rarr; [AbstractMesh](/classes/AbstractMesh)
 Get the first added mesh found of a given ID
 @return {BABYLON.AbstractMesh|null} the mesh found or null if not found at all.
 
@@ -1146,7 +1316,7 @@ Get the first added mesh found of a given ID
  | id | string | The given id
 ---
 
-###getMeshByUniqueID(uniqueId) &rarr; [AbstractMesh](page.php?p=6657)
+###getMeshByUniqueID(uniqueId) &rarr; [AbstractMesh](/classes/AbstractMesh)
 Get a mesh with its auto-generated unique id
 @return {BABYLON.AbstractMesh|null} the mesh found or null if not found at all.
 
@@ -1156,7 +1326,7 @@ Get a mesh with its auto-generated unique id
  | uniqueId | number | 
 ---
 
-###getLastMeshByID(id) &rarr; [AbstractMesh](page.php?p=6657)
+###getLastMeshByID(id) &rarr; [AbstractMesh](/classes/AbstractMesh)
 Get a the last added mesh found of a given ID
 @return {BABYLON.AbstractMesh|null} the mesh found or null if not found at all.
 
@@ -1166,8 +1336,8 @@ Get a the last added mesh found of a given ID
  | id | string | The given id
 ---
 
-###getLastEntryByID(id) &rarr; [Node](page.php?p=6630)
-Get a the last added node (Mesh, [Camera](page.php?p=6631), [Light](page.php?p=6652)) found of a given ID
+###getLastEntryByID(id) &rarr; [Node](/classes/Node)
+Get a the last added node (Mesh, [Camera](/classes/Camera), [Light](/classes/Light)) found of a given ID
 @return {BABYLON.Node|null} the node found or null if not found at all.
 
 ####Parameters
@@ -1176,7 +1346,7 @@ Get a the last added node (Mesh, [Camera](page.php?p=6631), [Light](page.php?p=6
  | id | string | The given id
 ---
 
-###getNodeByName(name) &rarr; [Node](page.php?p=6630)
+###getNodeByName(name) &rarr; [Node](/classes/Node)
 
 
 
@@ -1186,8 +1356,10 @@ Get a the last added node (Mesh, [Camera](page.php?p=6631), [Light](page.php?p=6
  | name | string | 
 ---
 
-###getMeshByName(name) &rarr; [AbstractMesh](page.php?p=6657)
-Returns the [Mesh](page.php?p=6659) instance having the given name
+###getMeshByName(name) &rarr; [AbstractMesh](/classes/AbstractMesh)
+Returns the [Mesh](/classes/Mesh) instance having the given name
+
+
 
 
 
@@ -1199,7 +1371,7 @@ Returns the [Mesh](page.php?p=6659) instance having the given name
  | name | string | The given name
 ---
 
-###getSoundByName(name) &rarr; [Sound](page.php?p=6700)
+###getSoundByName(name) &rarr; [Sound](/classes/Sound)
 
 
 
@@ -1209,21 +1381,10 @@ Returns the [Mesh](page.php?p=6659) instance having the given name
  | name | string | 
 ---
 
-###getLastSkeletonByID(id) &rarr; [Skeleton](page.php?p=6703)
-Returns the last instance of [Skeleton](page.php?p=6703) using the given id
+###getLastSkeletonByID(id) &rarr; [Skeleton](/classes/Skeleton)
+Returns the last instance of [Skeleton](/classes/Skeleton) using the given id
 
 
-
-
-
-####Parameters
- | Name | Type | Description
----|---|---|---
- | id | string | The given id
----
-
-###getSkeletonById(id) &rarr; [Skeleton](page.php?p=6703)
-Returns the first [Skeleton](page.php?p=6703) instance using the given id
 
 
 
@@ -1235,8 +1396,25 @@ Returns the first [Skeleton](page.php?p=6703) instance using the given id
  | id | string | The given id
 ---
 
-###getSkeletonByName(name) &rarr; [Skeleton](page.php?p=6703)
-Returns the first [Skeleton](page.php?p=6703) instance corresponding to the given name
+###getSkeletonById(id) &rarr; [Skeleton](/classes/Skeleton)
+Returns the first [Skeleton](/classes/Skeleton) instance using the given id
+
+
+
+
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+ | id | string | The given id
+---
+
+###getSkeletonByName(name) &rarr; [Skeleton](/classes/Skeleton)
+Returns the first [Skeleton](/classes/Skeleton) instance corresponding to the given name
+
+
 
 
 
@@ -1255,14 +1433,18 @@ Tests if the given mesh is active or not
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](page.php?p=6659) | The given mesh
+ | mesh | [Mesh](/classes/Mesh) | The given mesh
 ---
 
 ###updateTransformMatrix(force) &rarr; void
 Updates the transform matrix of this scene with the one of the active camera
+
+
 
 
 
@@ -1275,14 +1457,16 @@ optional | force | boolean | True to force the transform matrix update even if t
 ---
 
 ###render() &rarr; void
-Renders this [Scene](page.php?p=6662)
+Renders this [Scene](/classes/Scene)
 
 
 
 
 
 
-###enableDepthRenderer() &rarr; [DepthRenderer](page.php?p=6813)
+
+
+###enableDepthRenderer() &rarr; [DepthRenderer](/classes/DepthRenderer)
 
 
 
@@ -1300,16 +1484,20 @@ Remove of this scene all lights, meshes, cameras, materials, particle systems, s
 
 
 
+
+
 ###disposeSounds() &rarr; void
 
 
-###getWorldExtends() &rarr; {min: [Vector3](page.php?p=6751); max: [Vector3](page.php?p=6751); }; 
+###getWorldExtends() &rarr; {min: [Vector3](/classes/Vector3); max: [Vector3](/classes/Vector3); }; 
 
 
 
 
 ###createOrUpdateSelectionOctree(maxCapacity, maxDepth) &rarr; Octree&lt;AbstractMesh&gt;
 Creates a new octree for this scene or update it if existing.
+
+
 
 
 
@@ -1322,8 +1510,10 @@ optional | maxCapacity | number | default : 64 The maximum capacity of the octre
 optional | maxDepth | number | default : 2 The maximum depth of the octree
 ---
 
-###createPickingRay(x, y, world, camera) &rarr; [Ray](page.php?p=6758)
+###createPickingRay(x, y, world, camera) &rarr; [Ray](/classes/Ray)
 Creates a picking ray in the current view.
+
+
 
 
 
@@ -1334,12 +1524,14 @@ Creates a picking ray in the current view.
 ---|---|---|---
  | x | number | The mouse X coordinate in the render canvas
  | y | number | The mouse Y coordinate in the render canvas
- | world | [Matrix](page.php?p=6754) | The world [Matrix](page.php?p=6754)
- | camera | [Camera](page.php?p=6631) | The given [Camera](page.php?p=6631)
+ | world | [Matrix](/classes/Matrix) | The world [Matrix](/classes/Matrix)
+ | camera | [Camera](/classes/Camera) | The given [Camera](/classes/Camera)
 ---
 
-###pick(x, y, predicate, fastCheck, camera) &rarr; [PickingInfo](page.php?p=6712)
+###pick(x, y, predicate, fastCheck, camera) &rarr; [PickingInfo](/classes/PickingInfo)
 Launch a ray to try to pick a mesh in the scene
+
+
 
 
 
@@ -1350,13 +1542,15 @@ Launch a ray to try to pick a mesh in the scene
 ---|---|---|---
  | x | number | X position on screen
  | y | number | Y position on screen
-optional | predicate | (mesh: [AbstractMesh](page.php?p=6657)) =&gt; boolean | Predicate function used to determine eligible meshes. Can be set to null. In this case, a mesh must be enabled, visible and with isPickable set to true
+optional | predicate | (mesh: [AbstractMesh](/classes/AbstractMesh)) =&gt; boolean | Predicate function used to determine eligible meshes. Can be set to null. In this case, a mesh must be enabled, visible and with isPickable set to true
 optional | fastCheck | boolean | Launch a fast check only using the bounding boxes. Can be set to null.
-optional | camera | [Camera](page.php?p=6631) | [Camera](page.php?p=6631) to use for computing the picking ray. Can be set to null. In this case, the scene.activeCamera will be used
+optional | camera | [Camera](/classes/Camera) | [Camera](/classes/Camera) to use for computing the picking ray. Can be set to null. In this case, the scene.activeCamera will be used
 ---
 
-###pickWithRay(ray, predicate, fastCheck) &rarr; [PickingInfo](page.php?p=6712)
+###pickWithRay(ray, predicate, fastCheck) &rarr; [PickingInfo](/classes/PickingInfo)
 Function used to pick a mesh by giving a ray (instead of a position).
+
+
 
 
 
@@ -1365,8 +1559,8 @@ Function used to pick a mesh by giving a ray (instead of a position).
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](page.php?p=6758) | The given [Ray](page.php?p=6758)
- | predicate | (mesh: [Mesh](page.php?p=6659)) =&gt; boolean | Predicate function used to determine eligible meshes. Can be set to null. In this case, a mesh must be enabled, visible and with isPickable set to true
+ | ray | [Ray](/classes/Ray) | The given [Ray](/classes/Ray)
+ | predicate | (mesh: [Mesh](/classes/Mesh)) =&gt; boolean | Predicate function used to determine eligible meshes. Can be set to null. In this case, a mesh must be enabled, visible and with isPickable set to true
 optional | fastCheck | boolean | Launch a fast check only using the bounding boxes. Can be set to null.
 ---
 
@@ -1377,13 +1571,15 @@ The action OnPointerOutTrigger and OnPointerOverTrigger are triggered for the gi
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](page.php?p=6657) | The given mesh
+ | mesh | [AbstractMesh](/classes/AbstractMesh) | The given mesh
 ---
 
-###getPointerOverMesh() &rarr; [AbstractMesh](page.php?p=6657)
+###getPointerOverMesh() &rarr; [AbstractMesh](/classes/AbstractMesh)
 Returns the pointer over the mesh
 
 
@@ -1391,8 +1587,12 @@ Returns the pointer over the mesh
 
 
 
-###getPhysicsEngine() &rarr; [PhysicsEngine](page.php?p=6787)
+
+
+###getPhysicsEngine() &rarr; [PhysicsEngine](/classes/PhysicsEngine)
 Returns the physic engine used for this scene
+
+
 
 
 
@@ -1406,15 +1606,19 @@ Enable the physic engine in this scene.
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gravity | [Vector3](page.php?p=6751) | default : [Vector3](page.php?p=6751)(0, 0, -9.82). The scene gravity
-optional | plugin | IPhysicsEnginePlugin | default : [OimoJSPlugin](page.php?p=6789). The physics plugin used
+ | gravity | [Vector3](/classes/Vector3) | default : [Vector3](/classes/Vector3)(0, 0, -9.82). The scene gravity
+optional | plugin | IPhysicsEnginePlugin | default : [OimoJSPlugin](/classes/OimoJSPlugin). The physics plugin used
 ---
 
 ###disablePhysicsEngine() &rarr; void
 Delete the physics engine of the scene
+
+
 
 
 
@@ -1429,8 +1633,12 @@ True if a physic engine is defined, false otherwise
 
 
 
+
+
 ###setGravity(gravity) &rarr; void
 Sets the given gracvity to the loaded physic engine
+
+
 
 
 
@@ -1439,7 +1647,7 @@ Sets the given gracvity to the loaded physic engine
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gravity | [Vector3](page.php?p=6751) | The given gravity
+ | gravity | [Vector3](/classes/Vector3) | The given gravity
 ---
 
 ###createCompoundImpostor(parts, options) &rarr; any
@@ -1449,15 +1657,19 @@ Creates an impostor composed of the given parts
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | parts | any | The array of object build this way {mesh: [Mesh](page.php?p=6659), impostor: number}
+ | parts | any | The array of object build this way {mesh: [Mesh](/classes/Mesh), impostor: number}
  | options | PhysicsBodyCreationOptions | An object build this way {mass: number, friction: number, restitution: number}
 ---
 
 ###deleteCompoundImpostor(compound) &rarr; void
 Unregister the compound impostor in the physic engine.
+
+
 
 
 
@@ -1474,53 +1686,59 @@ Unregister the compound impostor in the physic engine.
 
 
 
-###getMeshesByTags(tagsQuery, forEach) &rarr; [Mesh](page.php?p=6659)[]
+###getMeshesByTags(tagsQuery, forEach) &rarr; [Mesh](/classes/Mesh)[]
 Returns the list of meshes corresponding to the tag query given in parameter
 
 
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | tagsQuery | string | The tags query, example : (tag1 &amp;&amp; (tag2 || tag4 || !tag5))
-optional | forEach | (mesh: [AbstractMesh](page.php?p=6657)) =&gt; void | 
+optional | forEach | (mesh: [AbstractMesh](/classes/AbstractMesh)) =&gt; void | 
 ---
 
-###getCamerasByTags(tagsQuery, forEach) &rarr; [Camera](page.php?p=6631)[]
+###getCamerasByTags(tagsQuery, forEach) &rarr; [Camera](/classes/Camera)[]
 Returns the list of cameras corresponding to the tag query given in parameter
 
 
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | tagsQuery | string | The tags query, example : (tag1 &amp;&amp; (tag2 || tag4 || !tag5))
-optional | forEach | (camera: [Camera](page.php?p=6631)) =&gt; void | 
+optional | forEach | (camera: [Camera](/classes/Camera)) =&gt; void | 
 ---
 
-###getLightsByTags(tagsQuery, forEach) &rarr; [Light](page.php?p=6652)[]
+###getLightsByTags(tagsQuery, forEach) &rarr; [Light](/classes/Light)[]
 Returns the list of lights corresponding to the tag query given in parameter
 
 
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | tagsQuery | string | The tags query, example : (tag1 &amp;&amp; (tag2 || tag4 || !tag5))
-optional | forEach | (light: [Light](page.php?p=6652)) =&gt; void | 
+optional | forEach | (light: [Light](/classes/Light)) =&gt; void | 
 ---
 
-###getMaterialByTags(tagsQuery, forEach) &rarr; [Material](page.php?p=6726)[]
+###getMaterialByTags(tagsQuery, forEach) &rarr; [Material](/classes/Material)[]
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | tagsQuery | string | The tags query, example : (tag1 &amp;&amp; (tag2 || tag4 || !tag5))
-optional | forEach | (material: [Material](page.php?p=6726)) =&gt; void | 
+optional | forEach | (material: [Material](/classes/Material)) =&gt; void | 
 ---

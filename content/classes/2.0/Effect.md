@@ -1,12 +1,15 @@
 ---
-ID_PAGE: 5782
+ID_PAGE: 24951
 PG_TITLE: Effect
 PG_VERSION: 2.0
 ---
-##new [Effect](page.php?p=5782)(baseName, attributesNames, uniformsNames, samplers, engine, defines, fallbacks, onCompiled, onError)
+##new [Effect](/classes/Effect)(baseName, attributesNames, uniformsNames, samplers, engine, defines, fallbacks, onCompiled, onError)
 
 
-The [Effect](page.php?p=5782) constructor
+
+The [Effect](/classes/Effect) constructor
+
+
 
 
 ####Parameters
@@ -18,9 +21,9 @@ The [Effect](page.php?p=5782) constructor
  | samplers | string[] | @param samplers
  | engine | any | The given engine
 optional | defines | string | The list of defines used by this effect.
-optional | fallbacks | [EffectFallbacks](page.php?p=5781) | @param fallbacks
-optional | onCompiled | (effect: [Effect](page.php?p=5782)) =&gt; void | Function called when given effect are successfully compiled
-optional | onError | (effect: [Effect](page.php?p=5782), errors: string) =&gt; void | Function called when an error occurs
+optional | fallbacks | [EffectFallbacks](/classes/EffectFallbacks) | @param fallbacks
+optional | onCompiled | (effect: [Effect](/classes/Effect)) =&gt; void | Function called when given effect are successfully compiled
+optional | onError | (effect: [Effect](/classes/Effect), errors: string) =&gt; void | Function called when an error occurs
 ---
 
 ##Members
@@ -29,38 +32,53 @@ optional | onError | (effect: [Effect](page.php?p=5782), errors: string) =&gt; v
 
 
 
+
 The effect name
+
 
 
 ###defines : string
 
 
 
+
 The array of defines used by this effect
 
 
-###onCompiled : (effect: [Effect](page.php?p=5782)) =&gt; void
+
+###onCompiled : (effect: [Effect](/classes/Effect)) =&gt; void
+
 
 
 
 Function called when given effect are successfully compiled
 
 
-###onError : (effect: [Effect](page.php?p=5782), errors: string) =&gt; void
+
+###onError : (effect: [Effect](/classes/Effect), errors: string) =&gt; void
+
 
 
 
 Function called when an error occurs
 
 
-###onBind : (effect: [Effect](page.php?p=5782)) =&gt; void
+
+###onBind : (effect: [Effect](/classes/Effect)) =&gt; void
+
+
 
 
 ###static ShadersStore : {}
 
 
 
+
 Object which contains the list of shaders
+
+
+
+
 
 
 
@@ -76,8 +94,12 @@ Function to know if effect is ready
 
 
 
+
+
 ###getProgram() &rarr; WebGLProgram
 Return the shader program linked to this effect
+
+
 
 
 
@@ -88,8 +110,12 @@ Return attributes names of the effect
 
 
 
+
+
 ###getAttributeLocation(index) &rarr; number
 Return the attribute location at the specified index
+
+
 
 
 
@@ -101,6 +127,8 @@ Return the attribute location at the specified index
 
 ###getAttributeLocationByName(name) &rarr; number
 Return the attribute location at the specified name
+
+
 
 
 
@@ -116,8 +144,12 @@ Return the number of attributes
 
 
 
+
+
 ###getUniformIndex(uniformName) &rarr; number
 Return the index of the searched name
+
+
 
 
 
@@ -129,6 +161,8 @@ Return the index of the searched name
 
 ###getUniform(uniformName) &rarr; WebGLUniformLocation
 Return searched parameter if exist
+
+
 
 
 
@@ -144,8 +178,12 @@ Return samplers
 
 
 
+
+
 ###getCompilationError() &rarr; string
 Return the program compilation error
+
+
 
 
 
@@ -155,11 +193,13 @@ Set the texture to the effect
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | channel | string | @param channel
- | texture | [BaseTexture](page.php?p=5788) | The given texture
+ | texture | [BaseTexture](/classes/BaseTexture) | The given texture
 ---
 
 ###setTextureFromPostProcess(channel, postProcess) &rarr; void
@@ -167,15 +207,19 @@ Set the texture to the effect from post process
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | channel | string | @param channel
- | postProcess | [PostProcess](page.php?p=5841) | The given post process
+ | postProcess | [PostProcess](/classes/PostProcess) | The given post process
 ---
 
-###setArray(uniformName, array) &rarr; [Effect](page.php?p=5782)
+###setArray(uniformName, array) &rarr; [Effect](/classes/Effect)
 Set the array given by its name
+
+
 
 
 
@@ -186,7 +230,7 @@ Set the array given by its name
  | array | number[] | The array
 ---
 
-###setArray2(uniformName, array) &rarr; [Effect](page.php?p=5782)
+###setArray2(uniformName, array) &rarr; [Effect](/classes/Effect)
 
 ####Parameters
  | Name | Type | Description
@@ -195,7 +239,7 @@ Set the array given by its name
  | array | number[] | 
 ---
 
-###setArray3(uniformName, array) &rarr; [Effect](page.php?p=5782)
+###setArray3(uniformName, array) &rarr; [Effect](/classes/Effect)
 
 ####Parameters
  | Name | Type | Description
@@ -204,7 +248,7 @@ Set the array given by its name
  | array | number[] | 
 ---
 
-###setArray4(uniformName, array) &rarr; [Effect](page.php?p=5782)
+###setArray4(uniformName, array) &rarr; [Effect](/classes/Effect)
 
 ####Parameters
  | Name | Type | Description
@@ -213,8 +257,10 @@ Set the array given by its name
  | array | number[] | 
 ---
 
-###setMatrices(uniformName, matrices) &rarr; [Effect](page.php?p=5782)
+###setMatrices(uniformName, matrices) &rarr; [Effect](/classes/Effect)
 Set the matrice given by its name
+
+
 
 
 
@@ -225,8 +271,10 @@ Set the matrice given by its name
  | matrices | Float32Array | The matrices
 ---
 
-###setMatrix(uniformName, matrix) &rarr; [Effect](page.php?p=5782)
+###setMatrix(uniformName, matrix) &rarr; [Effect](/classes/Effect)
 Set the matrix given by its name
+
+
 
 
 
@@ -234,11 +282,13 @@ Set the matrix given by its name
  | Name | Type | Description
 ---|---|---|---
  | uniformName | string | The given uniform name
- | matrix | [Matrix](page.php?p=5811) | the matrix
+ | matrix | [Matrix](/classes/Matrix) | the matrix
 ---
 
-###setFloat(uniformName, value) &rarr; [Effect](page.php?p=5782)
+###setFloat(uniformName, value) &rarr; [Effect](/classes/Effect)
 Set the float given by its name
+
+
 
 
 
@@ -249,8 +299,10 @@ Set the float given by its name
  | value | number | The float
 ---
 
-###setBool(uniformName, bool) &rarr; [Effect](page.php?p=5782)
+###setBool(uniformName, bool) &rarr; [Effect](/classes/Effect)
 Set the boolean given by its name
+
+
 
 
 
@@ -261,8 +313,10 @@ Set the boolean given by its name
  | bool | boolean | The boolean
 ---
 
-###setVector2(uniformName, vector2) &rarr; [Effect](page.php?p=5782)
+###setVector2(uniformName, vector2) &rarr; [Effect](/classes/Effect)
 Set the vector2 given by its name
+
+
 
 
 
@@ -270,11 +324,13 @@ Set the vector2 given by its name
  | Name | Type | Description
 ---|---|---|---
  | uniformName | string | The given uniform name
- | vector2 | [Vector2](page.php?p=5807) | The vector2
+ | vector2 | [Vector2](/classes/Vector2) | The vector2
 ---
 
-###setFloat2(uniformName, x, y) &rarr; [Effect](page.php?p=5782)
+###setFloat2(uniformName, x, y) &rarr; [Effect](/classes/Effect)
 Set the float2 given by its name
+
+
 
 
 
@@ -286,8 +342,10 @@ Set the float2 given by its name
  | y | number | The value on y axis
 ---
 
-###setVector3(uniformName, vector3) &rarr; [Effect](page.php?p=5782)
-Set the [Vector3](page.php?p=5808) given by its name
+###setVector3(uniformName, vector3) &rarr; [Effect](/classes/Effect)
+Set the [Vector3](/classes/Vector3) given by its name
+
+
 
 
 
@@ -295,11 +353,13 @@ Set the [Vector3](page.php?p=5808) given by its name
  | Name | Type | Description
 ---|---|---|---
  | uniformName | string | The given uniform name
- | vector3 | [Vector3](page.php?p=5808) | The vector3
+ | vector3 | [Vector3](/classes/Vector3) | The vector3
 ---
 
-###setFloat3(uniformName, x, y, z) &rarr; [Effect](page.php?p=5782)
+###setFloat3(uniformName, x, y, z) &rarr; [Effect](/classes/Effect)
 Set the float3 given by its name
+
+
 
 
 
@@ -312,8 +372,10 @@ Set the float3 given by its name
  | z | number | The value on z axis
 ---
 
-###setFloat4(uniformName, x, y, z, w) &rarr; [Effect](page.php?p=5782)
+###setFloat4(uniformName, x, y, z, w) &rarr; [Effect](/classes/Effect)
 Set the float4 given by its name
+
+
 
 
 
@@ -327,24 +389,26 @@ Set the float4 given by its name
  | w | number | The rotation
 ---
 
-###setColor3(uniformName, color3) &rarr; [Effect](page.php?p=5782)
+###setColor3(uniformName, color3) &rarr; [Effect](/classes/Effect)
 Set the color3 given by its name
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | uniformName | string | The given uniform name
- | color3 | [Color3](page.php?p=5805) | The color
+ | color3 | [Color3](/classes/Color3) | The color
 ---
 
-###setColor4(uniformName, color3, alpha) &rarr; [Effect](page.php?p=5782)
+###setColor4(uniformName, color3, alpha) &rarr; [Effect](/classes/Effect)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | uniformName | string | The given uniform name
- | color3 | [Color3](page.php?p=5805) | The color
+ | color3 | [Color3](/classes/Color3) | The color
  | alpha | number | Alpha is the transparency between 0 and 1.
 ---

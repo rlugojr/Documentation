@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 25089
 PG_TITLE: Bones influences per vertex
-TAGS:
-    - 3DSMax
 ---
 This is a common error you may have when working with bones:
 

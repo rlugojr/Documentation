@@ -1,11 +1,11 @@
 ---
-ID_PAGE: 3328
+ID_PAGE: 24536
 PG_TITLE: Quaternion
 PG_VERSION: 1.14
 ---
-##new [Quaternion](page.php?p=3328)(x, y, z, w)
+##new [Quaternion](/classes/Quaternion)(x, y, z, w)
 
-Creates a new [Quaternion](page.php?p=3328)
+Creates a new [Quaternion](/classes/Quaternion)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -55,10 +55,10 @@ Tests if two quaternion are identical
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherQuaternion | [Quaternion](page.php?p=3328) | The quaternion to test against
+ | otherQuaternion | [Quaternion](/classes/Quaternion) | The quaternion to test against
 ---
 
-###clone() &rarr; [Quaternion](page.php?p=3328)
+###clone() &rarr; [Quaternion](/classes/Quaternion)
 Returns a clone of the quaternion
 
 
@@ -68,7 +68,7 @@ Copies another quaternion
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Quaternion](page.php?p=3328) | Another quaternion
+ | other | [Quaternion](/classes/Quaternion) | Another quaternion
 ---
 
 ###copyFromFloats(x, y, z, w) &rarr; void
@@ -83,25 +83,25 @@ Copies another queternion from a set of floats
  | w | number | The W coordinate of another vector
 ---
 
-###add(other) &rarr; [Quaternion](page.php?p=3328)
+###add(other) &rarr; [Quaternion](/classes/Quaternion)
 Adds in another quaternion
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Quaternion](page.php?p=3328) | Another quaternion
+ | other | [Quaternion](/classes/Quaternion) | Another quaternion
 ---
 
-###subtract(other) &rarr; [Quaternion](page.php?p=3328)
+###subtract(other) &rarr; [Quaternion](/classes/Quaternion)
 Substracts another quaternion
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Quaternion](page.php?p=3328) | Another quaternion
+ | other | [Quaternion](/classes/Quaternion) | Another quaternion
 ---
 
-###scale(value) &rarr; [Quaternion](page.php?p=3328)
+###scale(value) &rarr; [Quaternion](/classes/Quaternion)
 Scales a quaternion
 
 ####Parameters
@@ -110,13 +110,13 @@ Scales a quaternion
  | value | number | @param value
 ---
 
-###multiply(q1) &rarr; [Quaternion](page.php?p=3328)
+###multiply(q1) &rarr; [Quaternion](/classes/Quaternion)
 Multiplies by another quaternion
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | q1 | [Quaternion](page.php?p=3328) | Another quaternion
+ | q1 | [Quaternion](/classes/Quaternion) | Another quaternion
 ---
 
 ###multiplyToRef(q1, result) &rarr; void
@@ -125,8 +125,8 @@ Multiplies another quaternion into a third target quaternion
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | q1 | [Quaternion](page.php?p=3328) | Another quaternion
- | result | [Quaternion](page.php?p=3328) | The target quaternion
+ | q1 | [Quaternion](/classes/Quaternion) | Another quaternion
+ | result | [Quaternion](/classes/Quaternion) | The target quaternion
 ---
 
 ###length() &rarr; number
@@ -137,26 +137,26 @@ The length of the quaternion
 Normalizes the quaternion
 
 
-###toEulerAngles() &rarr; [Vector3](page.php?p=3327)
-Converts the quaternion into a [Vector3](page.php?p=3327) Euler angle and returns it
+###toEulerAngles() &rarr; [Vector3](/classes/Vector3)
+Converts the quaternion into a [Vector3](/classes/Vector3) Euler angle and returns it
 
 
 ###toEulerAnglesToRef(result) &rarr; void
-Converts the quaternion into a target [Vector3](page.php?p=3327)
+Converts the quaternion into a target [Vector3](/classes/Vector3)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | result | [Vector3](page.php?p=3327) | The target [Vector3](page.php?p=3327)
+ | result | [Vector3](/classes/Vector3) | The target [Vector3](/classes/Vector3)
 ---
 
 ###toRotationMatrix(result) &rarr; void
-Converts the quaternion into a target rotation [Matrix](page.php?p=3329) object
+Converts the quaternion into a target rotation [Matrix](/classes/Matrix) object
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | result | [Matrix](page.php?p=3329) | The target [Matrix](page.php?p=3329)
+ | result | [Matrix](/classes/Matrix) | The target [Matrix](/classes/Matrix)
 ---
 
 ###fromRotationMatrix(matrix) &rarr; void
@@ -165,29 +165,29 @@ Imports a source matrix into the current quaternion
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [Matrix](page.php?p=3329) | The source [Matrix](page.php?p=3329)
+ | matrix | [Matrix](/classes/Matrix) | The source [Matrix](/classes/Matrix)
 ---
 
-###static Inverse(q) &rarr; [Quaternion](page.php?p=3328)
+###static Inverse(q) &rarr; [Quaternion](/classes/Quaternion)
 Returns the passed quaternion's inverse
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | q | [Quaternion](page.php?p=3328) | The quaternion to inverse
+ | q | [Quaternion](/classes/Quaternion) | The quaternion to inverse
 ---
 
-###static RotationAxis(axis, angle) &rarr; [Quaternion](page.php?p=3328)
+###static RotationAxis(axis, angle) &rarr; [Quaternion](/classes/Quaternion)
 Creates a quaternion using an axis and an angle
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | axis | [Vector3](page.php?p=3327) | The rotation axis
+ | axis | [Vector3](/classes/Vector3) | The rotation axis
  | angle | number | Some angle
 ---
 
-###static FromArray(array, offset) &rarr; [Quaternion](page.php?p=3328)
+###static FromArray(array, offset) &rarr; [Quaternion](/classes/Quaternion)
 Creates a quaterion from agiven array
 
 ####Parameters
@@ -197,7 +197,7 @@ Creates a quaterion from agiven array
 optional | offset | number | The first index of the array to look at
 ---
 
-###static RotationYawPitchRoll(yaw, pitch, roll) &rarr; [Quaternion](page.php?p=3328)
+###static RotationYawPitchRoll(yaw, pitch, roll) &rarr; [Quaternion](/classes/Quaternion)
 Creates a quaternion from yaw, pitch and roll values
 
 ####Parameters
@@ -217,16 +217,16 @@ Creates a quaternion from yaw, pitch and roll values and put it in the target qu
  | yaw | number | The yaw rotation
  | pitch | number | The pitch rotation
  | roll | number | The roll rotation
- | result | [Quaternion](page.php?p=3328) | The target quaternion
+ | result | [Quaternion](/classes/Quaternion) | The target quaternion
 ---
 
-###static Slerp(left, right, amount) &rarr; [Quaternion](page.php?p=3328)
+###static Slerp(left, right, amount) &rarr; [Quaternion](/classes/Quaternion)
 Performs a spherical linear interpolation between two quaternions
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | left | [Quaternion](page.php?p=3328) | interpolation start quaternion
- | right | [Quaternion](page.php?p=3328) | interpolation end quaternion
+ | left | [Quaternion](/classes/Quaternion) | interpolation start quaternion
+ | right | [Quaternion](/classes/Quaternion) | interpolation end quaternion
  | amount | number | Weighting factor
 ---

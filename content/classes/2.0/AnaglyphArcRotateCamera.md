@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 5704
+ID_PAGE: 24873
 PG_TITLE: AnaglyphArcRotateCamera
 PG_VERSION: 2.0
 ---
-##new [AnaglyphArcRotateCamera](page.php?p=5704)(name, alpha, beta, radius, target, eyeSpace, scene)
+##new [AnaglyphArcRotateCamera](/classes/AnaglyphArcRotateCamera)(name, alpha, beta, radius, target, eyeSpace, scene)
 
 ####Parameters
  | Name | Type | Description
@@ -17,7 +17,7 @@ PG_VERSION: 2.0
  | scene | any | The scene which contain the camera
 ---
 
-##Extends [ArcRotateCamera](page.php?p=5703)
+##Extends [ArcRotateCamera](/classes/ArcRotateCamera)
 
 
 ##Methods

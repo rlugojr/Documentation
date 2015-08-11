@@ -1,13 +1,16 @@
 ---
-ID_PAGE: 5794
+ID_PAGE: 24963
 PG_TITLE: MirrorTexture
 PG_VERSION: 2.0
 ---
-##new [MirrorTexture](page.php?p=5794)(name, size, scene, generateMipMaps)
+##new [MirrorTexture](/classes/MirrorTexture)(name, size, scene, generateMipMaps)
 
 
-Create a new [MirrorTexture](page.php?p=5794).
+
+Create a new [MirrorTexture](/classes/MirrorTexture).
 A tutorial about advanced texturing can be found here : https://github.com/BabylonJS/Babylon.js/wiki/14-Advanced-Texturing
+
+
 
 
 ####Parameters
@@ -15,14 +18,15 @@ A tutorial about advanced texturing can be found here : https://github.com/Babyl
 ---|---|---|---
  | name | string | Name of the texture
  | size | number | Size of the texture
- | scene | [Scene](page.php?p=5725) | [Scene](page.php?p=5725) which contain the texture
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the texture
 optional | generateMipMaps | boolean | True to generate the mip map ; Fals otherwise
 ---
 
-##Extends [RenderTargetTexture](page.php?p=5793)
+##Extends [RenderTargetTexture](/classes/RenderTargetTexture)
 ##Members
 
-###mirrorPlane : [Plane](page.php?p=5812)
+###mirrorPlane : [Plane](/classes/Plane)
+
 
 
 
@@ -34,7 +38,11 @@ The plane to apply the mirror texture
 
 
 
+
+
+
+
 ##Methods
 
-###clone() &rarr; [MirrorTexture](page.php?p=5794)
+###clone() &rarr; [MirrorTexture](/classes/MirrorTexture)
 

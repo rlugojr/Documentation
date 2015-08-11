@@ -1,25 +1,37 @@
 ---
-ID_PAGE: 5775
+ID_PAGE: 24944
 PG_TITLE: DebugLayer
 PG_VERSION: 2.0
 ---
-##new [DebugLayer](page.php?p=5775)(scene)
+##new [DebugLayer](/classes/DebugLayer)(scene)
+
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=5725) | 
+ | scene | [Scene](/classes/Scene) | 
 ---
 
 ##Members
 
-###shouldDisplayLabel : (node: [Node](page.php?p=5701)) =&gt; boolean
+###shouldDisplayLabel : (node: [Node](/classes/Node)) =&gt; boolean
 
 
-###shouldDisplayAxis : (mesh: [Mesh](page.php?p=5722)) =&gt; boolean
+
+
+###shouldDisplayAxis : (mesh: [Mesh](/classes/Mesh)) =&gt; boolean
+
+
 
 
 ###axisRatio : number
+
+
+
+
+
 
 
 ###accentColor : string
@@ -35,7 +47,11 @@ PG_VERSION: 2.0
 ###isVisible() &rarr; boolean
 
 
+
+
 ###hide() &rarr; void
+
+
 
 
 ###show(showUI) &rarr; void

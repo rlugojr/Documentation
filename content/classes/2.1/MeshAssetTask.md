@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6819
+ID_PAGE: 25307
 PG_TITLE: MeshAssetTask
 PG_VERSION: 2.1
 TAGS:
@@ -7,12 +7,15 @@ TAGS:
     - Assets
 ---
 
-Load the task on the given [Mesh](page.php?p=6659)
-##new [MeshAssetTask](page.php?p=6819)(name, meshesNames, rootUrl, sceneFilename)
+Load the task on the given [Mesh](/classes/Mesh)
+##new [MeshAssetTask](/classes/MeshAssetTask)(name, meshesNames, rootUrl, sceneFilename)
 
 
 
-The [MeshAssetTask](page.php?p=6819) constructor
+
+The [MeshAssetTask](/classes/MeshAssetTask) constructor
+
+
 
 
 
@@ -33,7 +36,9 @@ The [MeshAssetTask](page.php?p=6819) constructor
 
 
 
+
 The task name
+
 
 
 
@@ -42,7 +47,9 @@ The task name
 
 
 
+
 The meshes names to load
+
 
 
 
@@ -51,7 +58,9 @@ The meshes names to load
 
 
 
+
 The root url for this mesh
+
 
 
 
@@ -60,7 +69,9 @@ The root url for this mesh
 
 
 
+
 The babylon file name
+
 
 
 
@@ -69,7 +80,9 @@ The babylon file name
 
 
 
+
 The loaded meshes
+
 
 
 
@@ -78,7 +91,9 @@ The loaded meshes
 
 
 
+
 The loaded Particule system linked to this mesh
+
 
 
 
@@ -87,7 +102,9 @@ The loaded Particule system linked to this mesh
 
 
 
+
 The loaded Skeletons linked to this mesh
+
 
 
 
@@ -96,7 +113,9 @@ The loaded Skeletons linked to this mesh
 
 
 
+
 Function call when the mesh is load successfully
+
 
 
 
@@ -105,7 +124,9 @@ Function call when the mesh is load successfully
 
 
 
+
 Function call when the mesh isn't load successfully
+
 
 
 
@@ -114,7 +135,12 @@ Function call when the mesh isn't load successfully
 
 
 
+
 True if is completed, false otherwise.
+
+
+
+
 
 
 
@@ -133,7 +159,7 @@ True if is completed, false otherwise.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=6662) | The scene where mesh is.
+ | scene | [Scene](/classes/Scene) | The scene where mesh is.
  | onSuccess | () =&gt; void | Function call when the mesh is load successfully
  | onError | () =&gt; void | Function call when the mesh isn't load successfully
 ---

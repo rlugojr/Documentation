@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 6763
+ID_PAGE: 25251
 PG_TITLE: PathCursor
 PG_VERSION: 2.1
 ---
-##new [PathCursor](page.php?p=6763)(path)
+##new [PathCursor](/classes/PathCursor)(path)
 
 
 
@@ -11,7 +11,7 @@ PG_VERSION: 2.1
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | path | [Path2](page.php?p=6764) | 
+ | path | [Path2](/classes/Path2) | 
 ---
 
 ##Members
@@ -21,7 +21,7 @@ PG_VERSION: 2.1
 
 
 
-###animations : [Animation](page.php?p=6684)[]
+###animations : [Animation](/classes/Animation)[]
 
 
 
@@ -33,22 +33,12 @@ PG_VERSION: 2.1
 
 ##Methods
 
-###getPoint() &rarr; [Vector3](page.php?p=6751)
+###getPoint() &rarr; [Vector3](/classes/Vector3)
 
 
 
 
-###moveAhead(step) &rarr; [PathCursor](page.php?p=6763)
-
-
-
-####Parameters
- | Name | Type | Description
----|---|---|---
-optional | step | number | 
----
-
-###moveBack(step) &rarr; [PathCursor](page.php?p=6763)
+###moveAhead(step) &rarr; [PathCursor](/classes/PathCursor)
 
 
 
@@ -58,7 +48,17 @@ optional | step | number |
 optional | step | number | 
 ---
 
-###move(step) &rarr; [PathCursor](page.php?p=6763)
+###moveBack(step) &rarr; [PathCursor](/classes/PathCursor)
+
+
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+optional | step | number | 
+---
+
+###move(step) &rarr; [PathCursor](/classes/PathCursor)
 
 
 
@@ -68,10 +68,10 @@ optional | step | number |
  | step | number | 
 ---
 
-###onchange(f) &rarr; [PathCursor](page.php?p=6763)
+###onchange(f) &rarr; [PathCursor](/classes/PathCursor)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | f | (cursor: [PathCursor](page.php?p=6763)) =&gt; void | 
+ | f | (cursor: [PathCursor](/classes/PathCursor)) =&gt; void | 
 ---

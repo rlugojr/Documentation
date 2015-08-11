@@ -1,11 +1,12 @@
 ---
-ID_PAGE: 6671
+ID_PAGE: 25159
 PG_TITLE: CombineAction
 PG_VERSION: 2.1
 TAGS:
     - Action
 ---
-##new [CombineAction](page.php?p=6671)(triggerOptions, children, condition)
+##new [CombineAction](/classes/CombineAction)(triggerOptions, children, condition)
+
 
 
 
@@ -14,24 +15,31 @@ This action is a container. You can use it to execute many actions simultaneousl
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | triggerOptions | any | The trigger options
- | children | [Action](page.php?p=6663)[] | The childrens actions
-optional | condition | [Condition](page.php?p=6679) | The condition to do the action
+ | children | [Action](/classes/Action)[] | The childrens actions
+optional | condition | [Condition](/classes/Condition) | The condition to do the action
 ---
 
 ##Extends
- [Action](page.php?p=6663)
+ [Action](/classes/Action)
 ##Members
 
-###children : [Action](page.php?p=6663)[]
+###children : [Action](/classes/Action)[]
+
 
 
 
 
 The childrens actions
+
+
+
+
 
 
 
@@ -50,5 +58,5 @@ The childrens actions
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | evt | [ActionEvent](page.php?p=6677) | The event to trigger
+ | evt | [ActionEvent](/classes/ActionEvent) | The event to trigger
 ---

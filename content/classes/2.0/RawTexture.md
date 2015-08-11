@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 5792
+ID_PAGE: 24961
 PG_TITLE: RawTexture
 PG_VERSION: 2.0
 ---
-##new [RawTexture](page.php?p=5792)(data, width, height, format, scene, generateMipMaps, invertY, samplingMode)
+##new [RawTexture](/classes/RawTexture)(data, width, height, format, scene, generateMipMaps, invertY, samplingMode)
 
 ####Parameters
  | Name | Type | Description
@@ -12,18 +12,18 @@ PG_VERSION: 2.0
  | width | number | 
  | height | number | 
  | format | number | 
- | scene | [Scene](page.php?p=5725) | 
+ | scene | [Scene](/classes/Scene) | 
 optional | generateMipMaps | boolean | 
 optional | invertY | boolean | 
 optional | samplingMode | number | 
 ---
 
-##Extends [Texture](page.php?p=5790)
+##Extends [Texture](/classes/Texture)
 
 
 ##Methods
 
-###static CreateLuminanceTexture(data, width, height, scene, generateMipMaps, invertY, samplingMode) &rarr; [RawTexture](page.php?p=5792)
+###static CreateLuminanceTexture(data, width, height, scene, generateMipMaps, invertY, samplingMode) &rarr; [RawTexture](/classes/RawTexture)
 
 ####Parameters
  | Name | Type | Description
@@ -31,13 +31,13 @@ optional | samplingMode | number |
  | data | ArrayBufferView | 
  | width | number | 
  | height | number | 
- | scene | [Scene](page.php?p=5725) | 
+ | scene | [Scene](/classes/Scene) | 
 optional | generateMipMaps | boolean | 
 optional | invertY | boolean | 
 optional | samplingMode | number | 
 ---
 
-###static CreateLuminanceAlphaTexture(data, width, height, scene, generateMipMaps, invertY, samplingMode) &rarr; [RawTexture](page.php?p=5792)
+###static CreateLuminanceAlphaTexture(data, width, height, scene, generateMipMaps, invertY, samplingMode) &rarr; [RawTexture](/classes/RawTexture)
 
 ####Parameters
  | Name | Type | Description
@@ -45,13 +45,13 @@ optional | samplingMode | number |
  | data | ArrayBufferView | 
  | width | number | 
  | height | number | 
- | scene | [Scene](page.php?p=5725) | 
+ | scene | [Scene](/classes/Scene) | 
 optional | generateMipMaps | boolean | 
 optional | invertY | boolean | 
 optional | samplingMode | number | 
 ---
 
-###static CreateAlphaTexture(data, width, height, scene, generateMipMaps, invertY, samplingMode) &rarr; [RawTexture](page.php?p=5792)
+###static CreateAlphaTexture(data, width, height, scene, generateMipMaps, invertY, samplingMode) &rarr; [RawTexture](/classes/RawTexture)
 
 ####Parameters
  | Name | Type | Description
@@ -59,13 +59,13 @@ optional | samplingMode | number |
  | data | ArrayBufferView | 
  | width | number | 
  | height | number | 
- | scene | [Scene](page.php?p=5725) | 
+ | scene | [Scene](/classes/Scene) | 
 optional | generateMipMaps | boolean | 
 optional | invertY | boolean | 
 optional | samplingMode | number | 
 ---
 
-###static CreateRGBTexture(data, width, height, scene, generateMipMaps, invertY, samplingMode) &rarr; [RawTexture](page.php?p=5792)
+###static CreateRGBTexture(data, width, height, scene, generateMipMaps, invertY, samplingMode) &rarr; [RawTexture](/classes/RawTexture)
 
 ####Parameters
  | Name | Type | Description
@@ -73,13 +73,13 @@ optional | samplingMode | number |
  | data | ArrayBufferView | 
  | width | number | 
  | height | number | 
- | scene | [Scene](page.php?p=5725) | 
+ | scene | [Scene](/classes/Scene) | 
 optional | generateMipMaps | boolean | 
 optional | invertY | boolean | 
 optional | samplingMode | number | 
 ---
 
-###static CreateRGBATexture(data, width, height, scene, generateMipMaps, invertY, samplingMode) &rarr; [RawTexture](page.php?p=5792)
+###static CreateRGBATexture(data, width, height, scene, generateMipMaps, invertY, samplingMode) &rarr; [RawTexture](/classes/RawTexture)
 
 ####Parameters
  | Name | Type | Description
@@ -87,7 +87,7 @@ optional | samplingMode | number |
  | data | ArrayBufferView | 
  | width | number | 
  | height | number | 
- | scene | [Scene](page.php?p=5725) | 
+ | scene | [Scene](/classes/Scene) | 
 optional | generateMipMaps | boolean | 
 optional | invertY | boolean | 
 optional | samplingMode | number | 

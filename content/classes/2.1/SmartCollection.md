@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 6845
+ID_PAGE: 25333
 PG_TITLE: SmartCollection
 PG_VERSION: 2.1
 ---
-##new [SmartCollection](page.php?p=6845)(capacity)
+##new [SmartCollection](/classes/SmartCollection)(capacity)
 
 ####Parameters
  | Name | Type | Description

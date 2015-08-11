@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6661
+ID_PAGE: 25149
 PG_TITLE: LinesMesh
 PG_VERSION: 2.1
 TAGS:
@@ -7,12 +7,15 @@ TAGS:
     - Mesh
 ---
 
-The [LinesMesh](page.php?p=6661) class
-##new [LinesMesh](page.php?p=6661)(name, scene, updatable)
+The [LinesMesh](/classes/LinesMesh) class
+##new [LinesMesh](/classes/LinesMesh)(name, scene, updatable)
 
 
 
-The [LinesMesh](page.php?p=6661) constructor
+
+The [LinesMesh](/classes/LinesMesh) constructor
+
+
 
 
 
@@ -21,20 +24,22 @@ The [LinesMesh](page.php?p=6661) constructor
  | Name | Type | Description
 ---|---|---|---
  | name | string | @param name
- | scene | [Scene](page.php?p=6662) | The scene where the [LinesMesh](page.php?p=6661) is
+ | scene | [Scene](/classes/Scene) | The scene where the [LinesMesh](/classes/LinesMesh) is
 optional | updatable | boolean | @param updatable
 ---
 
 ##Extends
- [Mesh](page.php?p=6659)
+ [Mesh](/classes/Mesh)
 ##Members
 
-###color : [Color3](page.php?p=6748)
+###color : [Color3](/classes/Color3)
 
 
 
 
-The color of the lines [Mesh](page.php?p=6659)
+
+The color of the lines [Mesh](/classes/Mesh)
+
 
 
 
@@ -43,16 +48,20 @@ The color of the lines [Mesh](page.php?p=6659)
 
 
 
+
 The alpha
 
 
 
-###material : [Material](page.php?p=6726)
+
+###material : [Material](/classes/Material)
 
 
 
 
-The material of the Lines [Mesh](page.php?p=6659)
+
+The material of the Lines [Mesh](/classes/Mesh)
+
 
 
 
@@ -61,7 +70,9 @@ The material of the Lines [Mesh](page.php?p=6659)
 
 
 
+
 true if is Packable, false otherwise
+
 
 
 
@@ -70,7 +81,12 @@ true if is Packable, false otherwise
 
 
 
+
 True if the mesh has collision, false otherwise
+
+
+
+
 
 
 
@@ -92,10 +108,12 @@ if false, infinite ray !
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](page.php?p=6758) | The ray
+ | ray | [Ray](/classes/Ray) | The ray
 optional | fastCheck | boolean | if true, stop at the first result
 ---
 

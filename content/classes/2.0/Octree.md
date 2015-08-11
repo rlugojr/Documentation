@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 5773
+ID_PAGE: 24942
 PG_TITLE: Octree<T>
 PG_VERSION: 2.0
 ---
@@ -8,7 +8,10 @@ Data structure class based on space coordinates
 ##new Octree&lt;T&gt;(creationFunc, maxBlockCapacity, maxDepth)
 
 
+
 The Octree constructor
+
+
 
 
 ####Parameters
@@ -25,35 +28,48 @@ optional | maxDepth | number | @param maxDepth
 
 
 
+
 The maxDepth
+
 
 
 ###blocks : Array&lt;OctreeBlock&lt;T&gt;&gt;
 
 
 
+
 The blocks
+
 
 
 ###dynamicContent : T[]
 
 
 
+
 The dynamic content
 
 
-###static CreationFuncForMeshes : (entry: [AbstractMesh](page.php?p=5720), block: OctreeBlock&lt;AbstractMesh&gt;) =&gt; void
+
+###static CreationFuncForMeshes : (entry: [AbstractMesh](/classes/AbstractMesh), block: OctreeBlock&lt;AbstractMesh&gt;) =&gt; void
+
 
 
 
 Create function for Meshes
 
 
-###static CreationFuncForSubMeshes : (entry: [SubMesh](page.php?p=5834), block: OctreeBlock&lt;SubMesh&gt;) =&gt; void
+
+###static CreationFuncForSubMeshes : (entry: [SubMesh](/classes/SubMesh), block: OctreeBlock&lt;SubMesh&gt;) =&gt; void
+
 
 
 
 Create function for SubMeshes
+
+
+
+
 
 
 
@@ -68,16 +84,20 @@ Update this octree
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | worldMin | [Vector3](page.php?p=5808) | the minimum world
- | worldMax | [Vector3](page.php?p=5808) | the maximum world
+ | worldMin | [Vector3](/classes/Vector3) | the minimum world
+ | worldMax | [Vector3](/classes/Vector3) | the maximum world
  | entries | T[] | @param entries
 ---
 
 ###addMesh(entry) &rarr; void
 Add a mesh to this octree
+
+
 
 
 
@@ -92,10 +112,12 @@ Select octree
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](page.php?p=5812)[] | [Frustum](page.php?p=5814) plan of the mesh
+ | frustumPlanes | [Plane](/classes/Plane)[] | [Frustum](/classes/Frustum) plan of the mesh
 optional | allowDuplicate | boolean | True if you want to duplicate it, false otherwise.
 ---
 
@@ -104,10 +126,12 @@ Intersects
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | sphereCenter | [Vector3](page.php?p=5808) | The sphere center
+ | sphereCenter | [Vector3](/classes/Vector3) | The sphere center
  | sphereRadius | number | The sphere radius
 optional | allowDuplicate | boolean | True if you want to duplicate it, false otherwise.
 ---
@@ -117,5 +141,5 @@ optional | allowDuplicate | boolean | True if you want to duplicate it, false ot
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](page.php?p=5815) | @param ray
+ | ray | [Ray](/classes/Ray) | @param ray
 ---

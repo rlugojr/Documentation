@@ -1,15 +1,18 @@
 ---
-ID_PAGE: 6702
+ID_PAGE: 25190
 PG_TITLE: Bone
 PG_VERSION: 2.1
 ---
-##new [Bone](page.php?p=6702)(name, skeleton, parentBone, matrix)
+##new [Bone](/classes/Bone)(name, skeleton, parentBone, matrix)
 
 
 
-Create a new [Bone](page.php?p=6702)
+
+Create a new [Bone](/classes/Bone)
 A skeleton (BABYLON.Skeleton) contains a hierarchy of bones (BABYLON.Bone). A bone is defined by a name, a parent (can be null) and a transformation matrix.
 A tutorial about Bones and Skeletons ban be found [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-bones-and-skeletons)
+
+
 
 
 
@@ -18,9 +21,9 @@ A tutorial about Bones and Skeletons ban be found [here](https://github.com/Baby
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the bone
- | skeleton | [Skeleton](page.php?p=6703) | The skeleton the bone belongs to
- | parentBone | [Bone](page.php?p=6702) | The parent bone of this bone
- | matrix | [Matrix](page.php?p=6754) | @param matrix
+ | skeleton | [Skeleton](/classes/Skeleton) | The skeleton the bone belongs to
+ | parentBone | [Bone](/classes/Bone) | The parent bone of this bone
+ | matrix | [Matrix](/classes/Matrix) | @param matrix
 ---
 
 ##Members
@@ -30,11 +33,14 @@ A tutorial about Bones and Skeletons ban be found [here](https://github.com/Baby
 
 
 
+
 The bone name
 
 
 
-###children : [Bone](page.php?p=6702)[]
+
+###children : [Bone](/classes/Bone)[]
+
 
 
 
@@ -43,7 +49,9 @@ Children bones array
 
 
 
-###animations : [Animation](page.php?p=6684)[]
+
+###animations : [Animation](/classes/Animation)[]
+
 
 
 
@@ -60,9 +68,13 @@ Animations of this bone
 
 
 
+
+
+
+
 ##Methods
 
-###getParent() &rarr; [Bone](page.php?p=6702)
+###getParent() &rarr; [Bone](/classes/Bone)
 Get the parent bone
 
 
@@ -70,7 +82,9 @@ Get the parent bone
 
 
 
-###getLocalMatrix() &rarr; [Matrix](page.php?p=6754)
+
+
+###getLocalMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the local matrix
 
 
@@ -78,7 +92,9 @@ Get the local matrix
 
 
 
-###getBaseMatrix() &rarr; [Matrix](page.php?p=6754)
+
+
+###getBaseMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the base matrix
 
 
@@ -86,7 +102,9 @@ Get the base matrix
 
 
 
-###getWorldMatrix() &rarr; [Matrix](page.php?p=6754)
+
+
+###getWorldMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the world matrix
 
 
@@ -94,7 +112,9 @@ Get the world matrix
 
 
 
-###getInvertedAbsoluteTransform() &rarr; [Matrix](page.php?p=6754)
+
+
+###getInvertedAbsoluteTransform() &rarr; [Matrix](/classes/Matrix)
 Get the inverted absolute transform
 
 
@@ -102,8 +122,12 @@ Get the inverted absolute transform
 
 
 
-###getAbsoluteMatrix() &rarr; [Matrix](page.php?p=6754)
+
+
+###getAbsoluteMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the absolute matrix
+
+
 
 
 
@@ -117,10 +141,12 @@ Update the bone matrix
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [Matrix](page.php?p=6754) | The update matrix
+ | matrix | [Matrix](/classes/Matrix) | The update matrix
 ---
 
 ###markAsDirty() &rarr; void

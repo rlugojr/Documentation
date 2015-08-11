@@ -1,60 +1,76 @@
 ---
-ID_PAGE: 5724
+ID_PAGE: 24893
 PG_TITLE: LinesMesh
 PG_VERSION: 2.0
 ---
 
-The [LinesMesh](page.php?p=5724) class
-##new [LinesMesh](page.php?p=5724)(name, scene, updatable)
+The [LinesMesh](/classes/LinesMesh) class
+##new [LinesMesh](/classes/LinesMesh)(name, scene, updatable)
 
 
-The [LinesMesh](page.php?p=5724) constructor
+
+The [LinesMesh](/classes/LinesMesh) constructor
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | @param name
- | scene | [Scene](page.php?p=5725) | The scene where the [LinesMesh](page.php?p=5724) is
+ | scene | [Scene](/classes/Scene) | The scene where the [LinesMesh](/classes/LinesMesh) is
 optional | updatable | boolean | @param updatable
 ---
 
-##Extends [Mesh](page.php?p=5722)
+##Extends [Mesh](/classes/Mesh)
 ##Members
 
-###color : [Color3](page.php?p=5805)
+###color : [Color3](/classes/Color3)
 
 
 
-The color of the lines [Mesh](page.php?p=5722)
+
+The color of the lines [Mesh](/classes/Mesh)
+
 
 
 ###alpha : number
 
 
 
+
 The alpha
 
 
-###material : [Material](page.php?p=5783)
+
+###material : [Material](/classes/Material)
 
 
 
-The material of the Lines [Mesh](page.php?p=5722)
+
+The material of the Lines [Mesh](/classes/Mesh)
+
 
 
 ###isPickable : boolean
 
 
 
+
 true if is Packable, false otherwise
+
 
 
 ###checkCollisions : boolean
 
 
 
+
 True if the mesh has collision, false otherwise
+
+
+
+
 
 
 
@@ -70,10 +86,12 @@ if false, infinite ray !
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](page.php?p=5815) | The ray
+ | ray | [Ray](/classes/Ray) | The ray
 optional | fastCheck | boolean | if true, stop at the first result
 ---
 

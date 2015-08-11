@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6739
+ID_PAGE: 25227
 PG_TITLE: ProceduralTexture
 PG_VERSION: 2.1
 TAGS:
@@ -7,7 +7,10 @@ TAGS:
     - Texture
     - ProceduralTexture
 ---
-##new [ProceduralTexture](page.php?p=6739)(name, size, fragment, scene, fallbackTexture, generateMipMaps)
+##new [ProceduralTexture](/classes/ProceduralTexture)(name, size, fragment, scene, fallbackTexture, generateMipMaps)
+
+
+
 
 
 
@@ -18,16 +21,21 @@ TAGS:
  | name | string | 
  | size | any | 
  | fragment | any | 
- | scene | [Scene](page.php?p=6662) | 
-optional | fallbackTexture | [Texture](page.php?p=6733) | 
+ | scene | [Scene](/classes/Scene) | 
+optional | fallbackTexture | [Texture](/classes/Texture) | 
 optional | generateMipMaps | boolean | 
 ---
 
 ##Extends
- [Texture](page.php?p=6733)
+ [Texture](/classes/Texture)
 ##Members
 
 ###refreshRate : number
+
+
+
+
+
 
 
 
@@ -44,7 +52,11 @@ optional | generateMipMaps | boolean |
 
 
 
+
+
 ###isReady() &rarr; boolean
+
+
 
 
 
@@ -54,7 +66,11 @@ optional | generateMipMaps | boolean |
 
 
 
+
+
 ###setFragment(fragment) &rarr; void
+
+
 
 
 
@@ -69,7 +85,11 @@ optional | generateMipMaps | boolean |
 
 
 
+
+
 ###resize(size, generateMipMaps) &rarr; void
+
+
 
 
 
@@ -80,7 +100,9 @@ optional | generateMipMaps | boolean |
  | generateMipMaps | any | 
 ---
 
-###setTexture(name, texture) &rarr; [ProceduralTexture](page.php?p=6739)
+###setTexture(name, texture) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 
 
@@ -88,10 +110,12 @@ optional | generateMipMaps | boolean |
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | texture | [Texture](page.php?p=6733) | 
+ | texture | [Texture](/classes/Texture) | 
 ---
 
-###setFloat(name, value) &rarr; [ProceduralTexture](page.php?p=6739)
+###setFloat(name, value) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 
 
@@ -102,7 +126,9 @@ optional | generateMipMaps | boolean |
  | value | number | 
 ---
 
-###setFloats(name, value) &rarr; [ProceduralTexture](page.php?p=6739)
+###setFloats(name, value) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 
 
@@ -113,7 +139,9 @@ optional | generateMipMaps | boolean |
  | value | number[] | 
 ---
 
-###setColor3(name, value) &rarr; [ProceduralTexture](page.php?p=6739)
+###setColor3(name, value) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 
 
@@ -121,10 +149,12 @@ optional | generateMipMaps | boolean |
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | value | [Color3](page.php?p=6748) | 
+ | value | [Color3](/classes/Color3) | 
 ---
 
-###setColor4(name, value) &rarr; [ProceduralTexture](page.php?p=6739)
+###setColor4(name, value) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 
 
@@ -132,10 +162,12 @@ optional | generateMipMaps | boolean |
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | value | [Color4](page.php?p=6749) | 
+ | value | [Color4](/classes/Color4) | 
 ---
 
-###setVector2(name, value) &rarr; [ProceduralTexture](page.php?p=6739)
+###setVector2(name, value) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 
 
@@ -143,10 +175,12 @@ optional | generateMipMaps | boolean |
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | value | [Vector2](page.php?p=6750) | 
+ | value | [Vector2](/classes/Vector2) | 
 ---
 
-###setVector3(name, value) &rarr; [ProceduralTexture](page.php?p=6739)
+###setVector3(name, value) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 
 
@@ -154,10 +188,12 @@ optional | generateMipMaps | boolean |
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | value | [Vector3](page.php?p=6751) | 
+ | value | [Vector3](/classes/Vector3) | 
 ---
 
-###setMatrix(name, value) &rarr; [ProceduralTexture](page.php?p=6739)
+###setMatrix(name, value) &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 
 
@@ -165,10 +201,12 @@ optional | generateMipMaps | boolean |
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | value | [Matrix](page.php?p=6754) | 
+ | value | [Matrix](/classes/Matrix) | 
 ---
 
 ###render(useCameraPostProcess) &rarr; void
+
+
 
 
 
@@ -178,7 +216,9 @@ optional | generateMipMaps | boolean |
 optional | useCameraPostProcess | boolean | 
 ---
 
-###clone() &rarr; [ProceduralTexture](page.php?p=6739)
+###clone() &rarr; [ProceduralTexture](/classes/ProceduralTexture)
+
+
 
 
 

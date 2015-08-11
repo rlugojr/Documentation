@@ -1,15 +1,18 @@
 ---
-ID_PAGE: 6830
+ID_PAGE: 25318
 PG_TITLE: GenericPad
 PG_VERSION: 2.1
 TAGS:
     - Gamepad
 ---
-##new [GenericPad](page.php?p=6830)(id, index, gamepad)
+##new [GenericPad](/classes/GenericPad)(id, index, gamepad)
 
 
 
-Builds a [Gamepad](page.php?p=6829) object
+
+Builds a [Gamepad](/classes/Gamepad) object
+
+
 
 
 
@@ -23,10 +26,11 @@ Builds a [Gamepad](page.php?p=6829) object
 ---
 
 ##Extends
- [Gamepad](page.php?p=6829)
+ [Gamepad](/classes/Gamepad)
 ##Members
 
 ###id : string
+
 
 
 
@@ -35,7 +39,9 @@ The gamepad id
 
 
 
+
 ###index : number
+
 
 
 
@@ -44,12 +50,18 @@ The gamepad index
 
 
 
+
 ###gamepad : any
 
 
 
 
+
 The gamepad object access this way : gamepad.buttons[]
+
+
+
+
 
 
 
@@ -70,6 +82,8 @@ Binds an action to the button pressed, recognized by the button's index in the a
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -78,6 +92,8 @@ Binds an action to the button pressed, recognized by the button's index in the a
 
 ###onbuttonup(callback) &rarr; void
 Binds an action to the button released, recognized by the button's index in the array
+
+
 
 
 

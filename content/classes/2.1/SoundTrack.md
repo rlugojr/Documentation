@@ -1,11 +1,14 @@
 ---
-ID_PAGE: 6701
+ID_PAGE: 25189
 PG_TITLE: SoundTrack
 PG_VERSION: 2.1
 TAGS:
     - Audio
 ---
-##new [SoundTrack](page.php?p=6701)(scene, options)
+##new [SoundTrack](/classes/SoundTrack)(scene, options)
+
+
+
 
 
 
@@ -13,7 +16,7 @@ TAGS:
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=6662) | 
+ | scene | [Scene](/classes/Scene) | 
 optional | options | any | 
 ---
 
@@ -24,7 +27,14 @@ optional | options | any |
 
 
 
+
+
 ###soundCollection : Array&lt;Sound&gt;
+
+
+
+
+
 
 
 
@@ -45,20 +55,24 @@ optional | options | any |
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | sound | [Sound](page.php?p=6700) | 
+ | sound | [Sound](/classes/Sound) | 
 ---
 
 ###RemoveSound(sound) &rarr; void
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | sound | [Sound](page.php?p=6700) | 
+ | sound | [Sound](/classes/Sound) | 
 ---
 
 ###setVolume(newVolume) &rarr; void
@@ -82,5 +96,5 @@ optional | options | any |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | analyser | [Analyser](page.php?p=6698) | 
+ | analyser | [Analyser](/classes/Analyser) | 
 ---

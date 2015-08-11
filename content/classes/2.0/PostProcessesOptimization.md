@@ -1,13 +1,15 @@
 ---
-ID_PAGE: 5883
+ID_PAGE: 25052
 PG_TITLE: PostProcessesOptimization
 PG_VERSION: 2.0
 ---
 
-##Extends [SceneOptimization](page.php?p=5879)
+
+
+##Extends [SceneOptimization](/classes/SceneOptimization)
 ##Members
 
-###apply : (scene: [Scene](page.php?p=5725)) =&gt; boolean
+###apply : (scene: [Scene](/classes/Scene)) =&gt; boolean
 
 
 

@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 3343
+ID_PAGE: 24551
 PG_TITLE: PhysicsEngine
 PG_VERSION: 1.14
 ---
-##new [PhysicsEngine](page.php?p=3343)(plugin)
+##new [PhysicsEngine](/classes/PhysicsEngine)(plugin)
 
 The physics engine loader
 ####Parameters
@@ -14,7 +14,7 @@ optional | plugin | IPhysicsEnginePlugin | default : [oimoJs](http://lo-th.githu
 
 ##Members
 
-###gravity : [Vector3](page.php?p=3327)
+###gravity : [Vector3](/classes/Vector3)
 
 
 The gravity value applied by the engine

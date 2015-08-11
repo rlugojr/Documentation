@@ -1,112 +1,142 @@
 ---
-ID_PAGE: 5767
+ID_PAGE: 24936
 PG_TITLE: Collider
 PG_VERSION: 2.0
 ---
 
 
 
+
+
 ##Members
 
-###radius : [Vector3](page.php?p=5808)
+###radius : [Vector3](/classes/Vector3)
+
 
 
 
 Radius of the collider
 
 
+
 ###retry : number
+
 
 
 
 Retry value
 
 
-###velocity : [Vector3](page.php?p=5808)
+
+###velocity : [Vector3](/classes/Vector3)
+
 
 
 
 The velocity of the collider
 
 
-###basePoint : [Vector3](page.php?p=5808)
+
+###basePoint : [Vector3](/classes/Vector3)
+
 
 
 
 The base point of the collider
 
 
+
 ###epsilon : number
+
 
 
 
 Epsilon
 
 
+
 ###collisionFound : boolean
+
 
 
 
 True : Collision found ; False otherwise
 
 
+
 ###velocityWorldLength : number
+
 
 
 
 Length of the velocity
 
 
-###basePointWorld : [Vector3](page.php?p=5808)
+
+###basePointWorld : [Vector3](/classes/Vector3)
+
 
 
 
 The base point of the collider in world
 
 
-###velocityWorld : [Vector3](page.php?p=5808)
+
+###velocityWorld : [Vector3](/classes/Vector3)
+
 
 
 
 The velocity of the collider in world
 
 
-###normalizedVelocity : [Vector3](page.php?p=5808)
+
+###normalizedVelocity : [Vector3](/classes/Vector3)
+
 
 
 
 The normalized velocity of the collider
 
 
-###initialVelocity : [Vector3](page.php?p=5808)
+
+###initialVelocity : [Vector3](/classes/Vector3)
+
 
 
 
 The initial velocity of the collider
 
 
-###initialPosition : [Vector3](page.php?p=5808)
+
+###initialPosition : [Vector3](/classes/Vector3)
+
 
 
 
 The initial position of the collider
 
 
+
 ###nearestDistance : number
+
 
 
 
 The nearest distance to a collision point
 
 
-###intersectionPoint : [Vector3](page.php?p=5808)
+
+###intersectionPoint : [Vector3](/classes/Vector3)
+
 
 
 
 The point of the intersection
 
 
-###collidedMesh : [AbstractMesh](page.php?p=5720)
+
+###collidedMesh : [AbstractMesh](/classes/AbstractMesh)
 
 
 

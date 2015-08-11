@@ -1,10 +1,12 @@
 ---
-ID_PAGE: 5759
+ID_PAGE: 24928
 PG_TITLE: SineEase
 PG_VERSION: 2.0
 ---
 
-##Extends [EasingFunction](page.php?p=5748)
+
+
+##Extends [EasingFunction](/classes/EasingFunction)
 
 
 ##Methods

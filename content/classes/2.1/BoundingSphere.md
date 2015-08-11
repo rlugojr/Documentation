@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6715
+ID_PAGE: 25203
 PG_TITLE: BoundingSphere
 PG_VERSION: 2.1
 TAGS:
@@ -8,11 +8,14 @@ TAGS:
 ---
 
 Create a bounding sphere for the given mesh
-##new [BoundingSphere](page.php?p=6715)(minimum, maximum)
+##new [BoundingSphere](/classes/BoundingSphere)(minimum, maximum)
 
 
 
-The [BoundingSphere](page.php?p=6715) constructor
+
+The [BoundingSphere](/classes/BoundingSphere) constructor
+
+
 
 
 
@@ -20,13 +23,14 @@ The [BoundingSphere](page.php?p=6715) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | minimum | [Vector3](page.php?p=6751) | The minimum of the sphere
- | maximum | [Vector3](page.php?p=6751) | The maximum of the sphere
+ | minimum | [Vector3](/classes/Vector3) | The minimum of the sphere
+ | maximum | [Vector3](/classes/Vector3) | The maximum of the sphere
 ---
 
 ##Members
 
-###minimum : [Vector3](page.php?p=6751)
+###minimum : [Vector3](/classes/Vector3)
+
 
 
 
@@ -35,7 +39,9 @@ The minimum size of the bounding sphere
 
 
 
-###maximum : [Vector3](page.php?p=6751)
+
+###maximum : [Vector3](/classes/Vector3)
+
 
 
 
@@ -44,7 +50,9 @@ The minimum of the bounding sphere
 
 
 
-###center : [Vector3](page.php?p=6751)
+
+###center : [Vector3](/classes/Vector3)
+
 
 
 
@@ -53,7 +61,9 @@ The center of the bounding sphere
 
 
 
+
 ###radius : number
+
 
 
 
@@ -62,7 +72,10 @@ The radius of the bounding sphere
 
 
 
-###centerWorld : [Vector3](page.php?p=6751)
+
+###centerWorld : [Vector3](/classes/Vector3)
+
+
 
 
 
@@ -70,6 +83,11 @@ The radius of the bounding sphere
 
 
 ###radiusWorld : number
+
+
+
+
+
 
 
 
@@ -93,10 +111,12 @@ Check if the boundingSphere is in frustum
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](page.php?p=6755)[] | the frustum planes
+ | frustumPlanes | [Plane](/classes/Plane)[] | the frustum planes
 ---
 
 ###intersectsPoint(point) &rarr; boolean
@@ -106,10 +126,12 @@ Check if this bounding sphere intersect the point given in parameter
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | point | [Vector3](page.php?p=6751) | The point
+ | point | [Vector3](/classes/Vector3) | The point
 ---
 
 ###static Intersects(sphere0, sphere1) &rarr; boolean
@@ -117,6 +139,6 @@ Check if this bounding sphere intersect the point given in parameter
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | sphere0 | [BoundingSphere](page.php?p=6715) | The first sphere
- | sphere1 | [BoundingSphere](page.php?p=6715) | The second sphere
+ | sphere0 | [BoundingSphere](/classes/BoundingSphere) | The first sphere
+ | sphere1 | [BoundingSphere](/classes/BoundingSphere) | The second sphere
 ---

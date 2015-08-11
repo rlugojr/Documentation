@@ -1,16 +1,19 @@
 ---
-ID_PAGE: 6817
+ID_PAGE: 25305
 PG_TITLE: Sprite
 PG_VERSION: 2.1
 TAGS:
     - Sprite
 ---
-##new [Sprite](page.php?p=6817)(name, manager)
+##new [Sprite](/classes/Sprite)(name, manager)
 
 
 
-Create a new [Sprite](page.php?p=6817).
+
+Create a new [Sprite](/classes/Sprite).
 A tutorial about sprites can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/08-Sprites)
+
+
 
 
 
@@ -19,7 +22,7 @@ A tutorial about sprites can be found [here](https://github.com/BabylonJS/Babylo
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the sprite
- | manager | [SpriteManager](page.php?p=6818) | The sprite manager
+ | manager | [SpriteManager](/classes/SpriteManager) | The sprite manager
 ---
 
 ##Members
@@ -29,11 +32,14 @@ A tutorial about sprites can be found [here](https://github.com/BabylonJS/Babylo
 
 
 
+
 The sprite name
 
 
 
-###position : [Vector3](page.php?p=6751)
+
+###position : [Vector3](/classes/Vector3)
+
 
 
 
@@ -42,12 +48,15 @@ The sprite position
 
 
 
-###color : [Color4](page.php?p=6749)
+
+###color : [Color4](/classes/Color4)
+
 
 
 
 
 The sprite color
+
 
 
 
@@ -62,7 +71,9 @@ The sprite color
 
 
 
+
 The sprite angle
+
 
 
 
@@ -71,7 +82,9 @@ The sprite angle
 
 
 
+
 The index of the cell
+
 
 
 
@@ -80,7 +93,9 @@ The index of the cell
 
 
 
+
 True if invert in U axis ; False otherwise
+
 
 
 
@@ -89,7 +104,9 @@ True if invert in U axis ; False otherwise
 
 
 
+
 True if invert in V axis ; False otherwise
+
 
 
 
@@ -98,11 +115,14 @@ True if invert in V axis ; False otherwise
 
 
 
+
 True if dispose when finished animating ; False otherwise
 
 
 
-###animations : [Animation](page.php?p=6684)[]
+
+###animations : [Animation](/classes/Animation)[]
+
 
 
 
@@ -117,7 +137,12 @@ Animations array
 
 
 
+
+
+
+
 ###size : number
+
 
 
 
@@ -128,10 +153,13 @@ The sprite size
 
 
 
+
 ##Methods
 
 ###playAnimation(from, to, loop, delay) &rarr; void
 Function to play the sprite animation
+
+
 
 
 
@@ -148,6 +176,8 @@ Function to play the sprite animation
 
 ###stopAnimation() &rarr; void
 Function to stop the sprite animation
+
+
 
 
 

@@ -1,11 +1,14 @@
 ---
-ID_PAGE: 6826
+ID_PAGE: 25314
 PG_TITLE: FilesInput
 PG_VERSION: 2.1
 TAGS:
     - Files
 ---
-##new [FilesInput](page.php?p=6826)(p_engine, p_scene, p_canvas, p_sceneLoadedCallback, p_progressCallback, p_additionnalRenderLoopLogicCallback, p_textureLoadingCallback, p_startingProcessingFilesCallback)
+##new [FilesInput](/classes/FilesInput)(p_engine, p_scene, p_canvas, p_sceneLoadedCallback, p_progressCallback, p_additionnalRenderLoopLogicCallback, p_textureLoadingCallback, p_startingProcessingFilesCallback)
+
+
+
 
 
 
@@ -16,8 +19,8 @@ TAGS:
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | p_engine | [Engine](page.php?p=6629) | @param p_engine
- | p_scene | [Scene](page.php?p=6662) | @param p_scene
+ | p_engine | [Engine](/classes/Engine) | @param p_engine
+ | p_scene | [Scene](/classes/Scene) | @param p_scene
  | p_canvas | HTMLCanvasElement | @param p_canvas
  | p_sceneLoadedCallback | any | @param p_sceneLoadedCallback
  | p_progressCallback | any | @param p_progressCallback
@@ -33,7 +36,9 @@ TAGS:
 
 
 
+
 The array that holds the png textures to load
+
 
 
 
@@ -42,7 +47,12 @@ The array that holds the png textures to load
 
 
 
+
 The array that holds the vnd.ms-dds files to load
+
+
+
+
 
 
 

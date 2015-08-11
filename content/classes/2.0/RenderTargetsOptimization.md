@@ -1,13 +1,15 @@
 ---
-ID_PAGE: 5886
+ID_PAGE: 25055
 PG_TITLE: RenderTargetsOptimization
 PG_VERSION: 2.0
 ---
 
-##Extends [SceneOptimization](page.php?p=5879)
+
+
+##Extends [SceneOptimization](/classes/SceneOptimization)
 ##Members
 
-###apply : (scene: [Scene](page.php?p=5725)) =&gt; boolean
+###apply : (scene: [Scene](/classes/Scene)) =&gt; boolean
 
 
 

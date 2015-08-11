@@ -1,11 +1,13 @@
 ---
-ID_PAGE: 5900
+ID_PAGE: 25069
 PG_TITLE: Xbox360Dpad
 PG_VERSION: 2.0
 ---
 #Enumeration
 
 Associates values to xbox 360 controller sticks
+
+
 
 
 

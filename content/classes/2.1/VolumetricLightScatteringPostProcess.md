@@ -1,11 +1,11 @@
 ---
-ID_PAGE: 6803
+ID_PAGE: 25291
 PG_TITLE: VolumetricLightScatteringPostProcess
 PG_VERSION: 2.1
 TAGS:
     - PostProcess
 ---
-##new [VolumetricLightScatteringPostProcess](page.php?p=6803)(name, ratio, camera, mesh, samples, samplingMode, engine, reusable)
+##new [VolumetricLightScatteringPostProcess](/classes/VolumetricLightScatteringPostProcess)(name, ratio, camera, mesh, samples, samplingMode, engine, reusable)
 
 @constructor
 ####Parameters
@@ -13,16 +13,16 @@ TAGS:
 ---|---|---|---
  | name | string | 
  | ratio | any | 
- | camera | [Camera](page.php?p=6631) | 
-optional | mesh | [Mesh](page.php?p=6659) | 
+ | camera | [Camera](/classes/Camera) | 
+optional | mesh | [Mesh](/classes/Mesh) | 
 optional | samples | number | 
 optional | samplingMode | number | 
-optional | engine | [Engine](page.php?p=6629) | 
+optional | engine | [Engine](/classes/Engine) | 
 optional | reusable | boolean | 
 ---
 
 ##Extends
- [PostProcess](page.php?p=6790)
+ [PostProcess](/classes/PostProcess)
 ##Members
 
 ###useCustomMeshPosition : boolean
@@ -39,7 +39,7 @@ If the post-process should inverse the light scattering direction
 
 @type {boolean}
 
-###mesh : [Mesh](page.php?p=6659)
+###mesh : [Mesh](/classes/Mesh)
 
 
 The internal mesh used by the post-process
@@ -53,7 +53,7 @@ Set to true to use the diffuseColor instead of the diffuseTexture
 
 @type {boolean}
 
-###excludedMeshes : [AbstractMesh](page.php?p=6657)[]
+###excludedMeshes : [AbstractMesh](/classes/AbstractMesh)[]
 
 
 Array containing the excluded meshes not rendered in the internal pass
@@ -61,23 +61,24 @@ Array containing the excluded meshes not rendered in the internal pass
 ###exposure : number
 
 
+Controls the overall intensity of the post-process
 
 
 ###decay : number
 
 
+Dissipates each sample's contribution in range [0, 1]
 
 
 ###weight : number
 
 
+Controls the overall intensity of each sample
 
 
 ###density : number
 
-
-
-
+Controls the density of each sample
 
 
 
@@ -92,7 +93,7 @@ Array containing the excluded meshes not rendered in the internal pass
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | subMesh | [SubMesh](page.php?p=6783) | 
+ | subMesh | [SubMesh](/classes/SubMesh) | 
  | useInstances | boolean | 
 ---
 
@@ -102,10 +103,10 @@ Sets the new light position for light scattering effect
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | position | [Vector3](page.php?p=6751) | 
+ | position | [Vector3](/classes/Vector3) | 
 ---
 
-###getCustomMeshPosition() &rarr; [Vector3](page.php?p=6751)
+###getCustomMeshPosition() &rarr; [Vector3](/classes/Vector3)
 Returns the light position for light scattering effect
 @return {BABYLON.Vector3} The custom light position
 
@@ -116,21 +117,21 @@ Disposes the internal assets and detaches the post-process from the camera
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | camera | [Camera](page.php?p=6631) | 
+ | camera | [Camera](/classes/Camera) | 
 ---
 
-###getPass() &rarr; [RenderTargetTexture](page.php?p=6736)
+###getPass() &rarr; [RenderTargetTexture](/classes/RenderTargetTexture)
 Returns the render target texture used by the post-process
 @return {BABYLON.RenderTargetTexture} The render target texture used by the post-process
 
 
-###static CreateDefaultMesh(name, scene) &rarr; [Mesh](page.php?p=6659)
-Creates a default mesh for the Volumeric [Light](page.php?p=6652) Scattering post-process
+###static CreateDefaultMesh(name, scene) &rarr; [Mesh](/classes/Mesh)
+Creates a default mesh for the Volumeric [Light](/classes/Light) Scattering post-process
 @return {BABYLON.Mesh} the default mesh
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | scene | [Scene](page.php?p=6662) | 
+ | scene | [Scene](/classes/Scene) | 
 ---

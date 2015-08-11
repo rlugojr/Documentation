@@ -1,38 +1,48 @@
 ---
-ID_PAGE: 5723
+ID_PAGE: 24892
 PG_TITLE: GroundMesh
 PG_VERSION: 2.0
 ---
 
-The [GroundMesh](page.php?p=5723) Class extends [Mesh](page.php?p=5722)
-##new [GroundMesh](page.php?p=5723)(name, scene)
+The [GroundMesh](/classes/GroundMesh) Class extends [Mesh](/classes/Mesh)
+##new [GroundMesh](/classes/GroundMesh)(name, scene)
 
 
-The [GroundMesh](page.php?p=5723) constructor
+
+The [GroundMesh](/classes/GroundMesh) constructor
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | @param name
- | scene | [Scene](page.php?p=5725) | @param scene
+ | scene | [Scene](/classes/Scene) | @param scene
 ---
 
-##Extends [Mesh](page.php?p=5722)
+##Extends [Mesh](/classes/Mesh)
 ##Members
 
 ###generateOctree : boolean
 
 
 
+
 true if this is generated, false if is not
+
 
 
 ###subdivisions : number
 
 
 
-The subdivision of the [GroundMesh](page.php?p=5723)
+
+The subdivision of the [GroundMesh](/classes/GroundMesh)
+
+
+
+
 
 
 
@@ -44,6 +54,8 @@ The subdivision of the [GroundMesh](page.php?p=5723)
 
 ###optimize(chunksCount) &rarr; void
 Optimize function
+
+
 
 
 

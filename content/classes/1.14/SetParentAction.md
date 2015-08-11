@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 3285
+ID_PAGE: 24493
 PG_TITLE: SetParentAction
 PG_VERSION: 1.14
 ---
-##new [SetParentAction](page.php?p=3285)(triggerOptions, target, parent, condition)
+##new [SetParentAction](/classes/SetParentAction)(triggerOptions, target, parent, condition)
 
 Used to define the parent of a node (camera, light, mesh)
 ####Parameters
@@ -12,10 +12,10 @@ Used to define the parent of a node (camera, light, mesh)
  | triggerOptions | any | The trigger options
  | target | any | The target of the action
  | parent | any | The object parent
-optional | condition | [Condition](page.php?p=3289) | The condition to do the action
+optional | condition | [Condition](/classes/Condition) | The condition to do the action
 ---
 
-##Extends [Action](page.php?p=3275)
+##Extends [Action](/classes/Action)
 
 
 ##Methods

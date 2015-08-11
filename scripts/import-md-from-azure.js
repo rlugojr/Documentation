@@ -3,8 +3,9 @@ var r           = require('request');
 var path        = require('path');
 var marked      = require('meta-marked');
 var mdBuilder   = require('./helpers/builder/mdBuilder');
-
-var url         = 'http://babylondoc-val.azurewebsites.net/private/export-md-pages.php';
+var appRoot     = require('app-root-path').path;
+var logger      = require(path.join(appRoot, 'config/logger'));
+var url         = 'http://babylondoc.azurewebsites.net/private/export-md-pages.php';
 var __DIRNAME__ = 'content/classes/';
 
 /**
@@ -17,19 +18,31 @@ r(url, function (error, response, body) {
     var pages = JSON.parse(body);
     var formattedData = [];
 
+    //exclude private items
     var regexp = new RegExp('/^_/');
 
-    pages.map(function(page, index, newPage){
-        if(!page['PG_TITLE'].match(regexp)){
+    //custom excluding array with id pages to exclude
+    var exclude = [
+        24451, 24450, 24864, 25112,
+        24604, 24606, 24608, 24610, 24605, 24609, 24607, 24611,
+        25078, 25080, 25082, 25084, 25079, 25083, 25081, 25085,
+        25354, 25356, 25358, 25360, 25353, 25355, 25359, 25357, 25361
+    ];
+
+    pages.map(function(page){
+        if(!page['PG_TITLE'].match(regexp) && exclude.indexOf(page['ID_PAGE']-0) == -1){
+
             this.push({
                 id     : page['ID_PAGE'],
                 title  : page['PG_TITLE'],
                 version: page['PG_VERSION'],
                 content: page['PG_CONTENT']
+                    // transforms [BABYLON](page.php?p=5696).AbstractMesh.BILLBOARDMODE_NONE to [AbstractMesh](/classes/AbstractMesh).BILLBOARDMODE_NONE
+                    .replace(/\[BABYLON\]\(page\.php\?p=\d+\)\.(\w*)/gi, '[$1](/classes/$1)')
+                    // transforms '[Node](page.php?p=5701)' to [Node](/classes/Node)
+                    .replace(/\[([^\]]*)\](\(page\.php\?p=\d+\))/g, '[$1](/classes/$1)')
             });
         }
-
-
     }, formattedData);
 
     cleanMDDir(formattedData, mdBuilder.buildMDDir);

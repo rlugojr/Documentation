@@ -1,23 +1,23 @@
 ---
-ID_PAGE: 3313
+ID_PAGE: 24521
 PG_TITLE: MultiMaterial
 PG_VERSION: 1.14
 ---
-##new [MultiMaterial](page.php?p=3313)(name, scene)
+##new [MultiMaterial](/classes/MultiMaterial)(name, scene)
 
-Create a new [MultiMaterial](page.php?p=3313).
+Create a new [MultiMaterial](/classes/MultiMaterial).
 A tutorial about multi materials can be found here : http://blogs.msdn.com/b/eternalcoding/archive/2013/07/10/babylon-js-using-multi-materials.aspx
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the multimaterial
- | scene | [Scene](page.php?p=3274) | [Scene](page.php?p=3274) which contain the [MultiMaterial](page.php?p=3313)
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the [MultiMaterial](/classes/MultiMaterial)
 ---
 
-##Extends [Material](page.php?p=3312)
+##Extends [Material](/classes/Material)
 ##Members
 
-###subMaterials : [Material](page.php?p=3312)[]
+###subMaterials : [Material](/classes/Material)[]
 
 
 Array of sub materials
@@ -26,7 +26,7 @@ Array of sub materials
 
 ##Methods
 
-###getSubMaterial(index) &rarr; [Material](page.php?p=3312)
+###getSubMaterial(index) &rarr; [Material](/classes/Material)
 Get a sub material
 
 ####Parameters
@@ -41,5 +41,5 @@ Function to know if multi material is ready
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | mesh | [AbstractMesh](page.php?p=3269) | The mesh with the multi material
+optional | mesh | [AbstractMesh](/classes/AbstractMesh) | The mesh with the multi material
 ---

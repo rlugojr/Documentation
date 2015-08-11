@@ -1,19 +1,19 @@
 ---
-ID_PAGE: 5737
+ID_PAGE: 24906
 PG_TITLE: PlaySoundAction
 PG_VERSION: 2.0
 ---
-##new [PlaySoundAction](page.php?p=5737)(triggerOptions, sound, condition)
+##new [PlaySoundAction](/classes/PlaySoundAction)(triggerOptions, sound, condition)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | triggerOptions | any | 
- | sound | [Sound](page.php?p=5763) | 
-optional | condition | [Condition](page.php?p=5742) | 
+ | sound | [Sound](/classes/Sound) | 
+optional | condition | [Condition](/classes/Condition) | 
 ---
 
-##Extends [Action](page.php?p=5726)
+##Extends [Action](/classes/Action)
 
 
 ##Methods

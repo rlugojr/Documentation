@@ -1,26 +1,26 @@
 ---
-ID_PAGE: 3321
+ID_PAGE: 24529
 PG_TITLE: RenderTargetTexture
 PG_VERSION: 1.14
 ---
-##new [RenderTargetTexture](page.php?p=3321)(name, size, scene, generateMipMaps, doNotChangeAspectRatio)
+##new [RenderTargetTexture](/classes/RenderTargetTexture)(name, size, scene, generateMipMaps, doNotChangeAspectRatio)
 
-Create a new [MirrorTexture](page.php?p=3322).
+Create a new [MirrorTexture](/classes/MirrorTexture).
 A tutorial about advanced texturing can be found here : https://github.com/BabylonJS/Babylon.js/wiki/14-Advanced-Texturing
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the texture
  | size | any | Size of the texture
- | scene | [Scene](page.php?p=3274) | [Scene](page.php?p=3274) which contain the texture
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the texture
 optional | generateMipMaps | boolean | True to generate a mipmap
 optional | doNotChangeAspectRatio | boolean | 
 ---
 
-##Extends [Texture](page.php?p=3319)
+##Extends [Texture](/classes/Texture)
 ##Members
 
-###renderList : [AbstractMesh](page.php?p=3269)[]
+###renderList : [AbstractMesh](/classes/AbstractMesh)[]
 
 
 The render list
@@ -50,7 +50,7 @@ Callback function before render
 
 Callback function after render
 
-###activeCamera : [Camera](page.php?p=3249)
+###activeCamera : [Camera](/classes/Camera)
 
 
 The active camera
@@ -105,7 +105,7 @@ Render the mirror texture
 optional | useCameraPostProcess | boolean | True to use the camera post process
 ---
 
-###clone() &rarr; [RenderTargetTexture](page.php?p=3321)
+###clone() &rarr; [RenderTargetTexture](/classes/RenderTargetTexture)
 Clone the mirror texture
-@return [RenderTargetTexture](page.php?p=3321) A clone of the mirror texture
+@return [RenderTargetTexture](/classes/RenderTargetTexture) A clone of the mirror texture
 

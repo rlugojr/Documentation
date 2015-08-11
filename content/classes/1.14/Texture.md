@@ -1,11 +1,11 @@
 ---
-ID_PAGE: 3319
+ID_PAGE: 24527
 PG_TITLE: Texture
 PG_VERSION: 1.14
 ---
-##new [Texture](page.php?p=3319)(url, scene, noMipmap, invertY, samplingMode, onLoad, onError, buffer, deleteBuffer)
+##new [Texture](/classes/Texture)(url, scene, noMipmap, invertY, samplingMode, onLoad, onError, buffer, deleteBuffer)
 
-Create a new [Texture](page.php?p=3319).
+Create a new [Texture](/classes/Texture).
 You can apply a texture on every material, by giving an image path.
 Don't forgot to check the right path of your image (relative or absolute path). About image format support, it can be JPG, PNG, JPEG, BMP, (every image format available on your browser)
 A tutorial about materials and texture can be found here : https://github.com/BabylonJS/Babylon.js/wiki/04-Materials
@@ -13,7 +13,7 @@ A tutorial about materials and texture can be found here : https://github.com/Ba
  | Name | Type | Description
 ---|---|---|---
  | url | string | Link of the texture
- | scene | [Scene](page.php?p=3274) | [Scene](page.php?p=3274) which contain the texture
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the texture
 optional | noMipmap | boolean | True to not generate mipmaps
 optional | invertY | boolean | True to invert the texture on Y axis
 optional | samplingMode | number | 
@@ -23,7 +23,7 @@ optional | buffer | any |
 optional | deleteBuffer | boolean | 
 ---
 
-##Extends [BaseTexture](page.php?p=3317)
+##Extends [BaseTexture](/classes/BaseTexture)
 ##Members
 
 ###static NEAREST_SAMPLINGMODE : number
@@ -134,17 +134,17 @@ W angle of the texture
 Proxy method to delay the texture loading
 
 
-###getTextureMatrix() &rarr; [Matrix](page.php?p=3329)
+###getTextureMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the texture matrix
-@return [Matrix](page.php?p=3329) The texture matrix
+@return [Matrix](/classes/Matrix) The texture matrix
 
 
-###getReflectionTextureMatrix() &rarr; [Matrix](page.php?p=3329)
+###getReflectionTextureMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the reflection texture matrix
-@return [Matrix](page.php?p=3329) The reflection texture matrix
+@return [Matrix](/classes/Matrix) The reflection texture matrix
 
 
-###clone() &rarr; [Texture](page.php?p=3319)
+###clone() &rarr; [Texture](/classes/Texture)
 Clone the actual texture
-@return [Texture](page.php?p=3319) A clone of the texture
+@return [Texture](/classes/Texture) A clone of the texture
 

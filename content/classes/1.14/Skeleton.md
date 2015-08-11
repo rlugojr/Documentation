@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 3296
+ID_PAGE: 24504
 PG_TITLE: Skeleton
 PG_VERSION: 1.14
 ---
-##new [Skeleton](page.php?p=3296)(name, id, scene)
+##new [Skeleton](/classes/Skeleton)(name, id, scene)
 
 A skeleton (BABYLON.Skeleton) contains a hierarchy of bones (BABYLON.Bone).
 All bones can be found into the skeleton.bones array.
@@ -13,7 +13,7 @@ A tutorial about Bones and Skeletons ban be found [here](https://github.com/Baby
 ---|---|---|---
  | name | string | Name of the skeleton
  | id | string | ID of the skeleton
- | scene | [Scene](page.php?p=3274) | The scene where the skeleton is
+ | scene | [Scene](/classes/Scene) | The scene where the skeleton is
 ---
 
 ##Members
@@ -28,7 +28,7 @@ Name of the skeleton
 
 Name of the skeleton
 
-###bones : [Bone](page.php?p=3295)[]
+###bones : [Bone](/classes/Bone)[]
 
 
 Array of bones composing the skeleton
@@ -49,7 +49,7 @@ Prepare bones' skeleton
 Get the animatables of the skeleton
 
 
-###clone(name, id) &rarr; [Skeleton](page.php?p=3296)
+###clone(name, id) &rarr; [Skeleton](/classes/Skeleton)
 Clone this skeleton
 
 ####Parameters

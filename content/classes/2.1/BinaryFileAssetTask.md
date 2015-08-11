@@ -1,15 +1,18 @@
 ---
-ID_PAGE: 6821
+ID_PAGE: 25309
 PG_TITLE: BinaryFileAssetTask
 PG_VERSION: 2.1
 ---
 
 Load task on the given binary file
-##new [BinaryFileAssetTask](page.php?p=6821)(name, url)
+##new [BinaryFileAssetTask](/classes/BinaryFileAssetTask)(name, url)
 
 
 
-The [BinaryFileAssetTask](page.php?p=6821)
+
+The [BinaryFileAssetTask](/classes/BinaryFileAssetTask)
+
+
 
 
 
@@ -28,7 +31,9 @@ The [BinaryFileAssetTask](page.php?p=6821)
 
 
 
+
 The name
+
 
 
 
@@ -37,7 +42,9 @@ The name
 
 
 
+
 The url for this binary file
+
 
 
 
@@ -46,7 +53,9 @@ The url for this binary file
 
 
 
+
 Function call when the mesh is load successfully
+
 
 
 
@@ -55,7 +64,9 @@ Function call when the mesh is load successfully
 
 
 
+
 Function call when the mesh isn't load successfully
+
 
 
 
@@ -64,7 +75,9 @@ Function call when the mesh isn't load successfully
 
 
 
+
 True if is completed, false otherwise.
+
 
 
 
@@ -73,7 +86,12 @@ True if is completed, false otherwise.
 
 
 
+
 The data
+
+
+
+
 
 
 
@@ -92,7 +110,7 @@ The data
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=6662) | The scene where this binary file is.
+ | scene | [Scene](/classes/Scene) | The scene where this binary file is.
  | onSuccess | () =&gt; void | Function call when the mesh is load successfully
  | onError | () =&gt; void | Function call when the mesh is load successfully
 ---

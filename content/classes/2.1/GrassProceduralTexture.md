@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6744
+ID_PAGE: 25232
 PG_TITLE: GrassProceduralTexture
 PG_VERSION: 2.1
 TAGS:
@@ -7,7 +7,10 @@ TAGS:
     - Texture
     - ProceduralTexture
 ---
-##new [GrassProceduralTexture](page.php?p=6744)(name, size, scene, fallbackTexture, generateMipMaps)
+##new [GrassProceduralTexture](/classes/GrassProceduralTexture)(name, size, scene, fallbackTexture, generateMipMaps)
+
+
+
 
 
 
@@ -17,21 +20,28 @@ TAGS:
 ---|---|---|---
  | name | string | 
  | size | number | 
- | scene | [Scene](page.php?p=6662) | 
-optional | fallbackTexture | [Texture](page.php?p=6733) | 
+ | scene | [Scene](/classes/Scene) | 
+optional | fallbackTexture | [Texture](/classes/Texture) | 
 optional | generateMipMaps | boolean | 
 ---
 
 ##Extends
- [ProceduralTexture](page.php?p=6739)
+ [ProceduralTexture](/classes/ProceduralTexture)
 ##Members
 
-###grassColors : [Color3](page.php?p=6748)[]
+###grassColors : [Color3](/classes/Color3)[]
 
 
 
 
-###groundColor : [Color3](page.php?p=6748)
+
+
+###groundColor : [Color3](/classes/Color3)
+
+
+
+
+
 
 
 

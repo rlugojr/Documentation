@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 6698
+ID_PAGE: 25186
 PG_TITLE: Analyser
 PG_VERSION: 2.1
 ---
-##new [Analyser](page.php?p=6698)(scene)
+##new [Analyser](/classes/Analyser)(scene)
 
 
 
@@ -11,7 +11,7 @@ PG_VERSION: 2.1
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=6662) | 
+ | scene | [Scene](/classes/Scene) | 
 ---
 
 ##Members

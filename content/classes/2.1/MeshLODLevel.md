@@ -1,11 +1,14 @@
 ---
-ID_PAGE: 6859
+ID_PAGE: 25347
 PG_TITLE: MeshLODLevel
 PG_VERSION: 2.1
 TAGS:
     - Mesh
 ---
-##new [MeshLODLevel](page.php?p=6859)(distance, mesh)
+##new [MeshLODLevel](/classes/MeshLODLevel)(distance, mesh)
+
+
+
 
 
 
@@ -14,7 +17,7 @@ TAGS:
  | Name | Type | Description
 ---|---|---|---
  | distance | number | 
- | mesh | [Mesh](page.php?p=6659) | 
+ | mesh | [Mesh](/classes/Mesh) | 
 ---
 
 ##Members
@@ -24,7 +27,9 @@ TAGS:
 
 
 
-###mesh : [Mesh](page.php?p=6659)
+
+
+###mesh : [Mesh](/classes/Mesh)
 
 
 

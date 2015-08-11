@@ -1,29 +1,29 @@
 ---
-ID_PAGE: 3270
+ID_PAGE: 24478
 PG_TITLE: InstancedMesh
 PG_VERSION: 1.14
 ---
 
-the [InstancedMesh](page.php?p=3270) Class extends [AbstractMesh](page.php?p=3269)
-##new [InstancedMesh](page.php?p=3270)(name, source)
+the [InstancedMesh](/classes/InstancedMesh) Class extends [AbstractMesh](/classes/AbstractMesh)
+##new [InstancedMesh](/classes/InstancedMesh)(name, source)
 
-The [InstancedMesh](page.php?p=3270) constructor
+The [InstancedMesh](/classes/InstancedMesh) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | @param name
- | source | [Mesh](page.php?p=3271) | @param source
+ | source | [Mesh](/classes/Mesh) | @param source
 ---
 
-##Extends [AbstractMesh](page.php?p=3269)
+##Extends [AbstractMesh](/classes/AbstractMesh)
 ##Members
 
 ###receiveShadows : boolean
 
 
-True if the Instanced [Mesh](page.php?p=3271) got shadows, false if is not
+True if the Instanced [Mesh](/classes/Mesh) got shadows, false if is not
 
-###material : [Material](page.php?p=3312)
+###material : [Material](/classes/Material)
 
 
 The material
@@ -31,14 +31,14 @@ The material
 ###visibility : number
 
 
-The visibility of the Instanced [Mesh](page.php?p=3271)
+The visibility of the Instanced [Mesh](/classes/Mesh)
 
-###skeleton : [Skeleton](page.php?p=3296)
+###skeleton : [Skeleton](/classes/Skeleton)
 
 
 The skeleton
 
-###sourceMesh : [Mesh](page.php?p=3271)
+###sourceMesh : [Mesh](/classes/Mesh)
 
 
 The sourceMesh
@@ -48,7 +48,7 @@ The sourceMesh
 ##Methods
 
 ###getTotalVertices() &rarr; number
-Get the total vertices of the Instanced [Mesh](page.php?p=3271)
+Get the total vertices of the Instanced [Mesh](/classes/Mesh)
 
 
 ###getVerticesData(kind) &rarr; number[]
@@ -74,17 +74,17 @@ Get Indices
 
 
 ###refreshBoundingInfo() &rarr; void
-Refresh Bounding Info of the Instanced [Mesh](page.php?p=3271)
+Refresh Bounding Info of the Instanced [Mesh](/classes/Mesh)
 
 
-###clone(name, newParent, doNotCloneChildren) &rarr; [InstancedMesh](page.php?p=3270)
-Clone this instanced [Mesh](page.php?p=3271)
+###clone(name, newParent, doNotCloneChildren) &rarr; [InstancedMesh](/classes/InstancedMesh)
+Clone this instanced [Mesh](/classes/Mesh)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | The given name
- | newParent | [Node](page.php?p=3248) | The parent
+ | newParent | [Node](/classes/Node) | The parent
 optional | doNotCloneChildren | boolean | True if you want to clone children, false if you don't want to.
 ---
 

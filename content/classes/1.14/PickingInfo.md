@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 3299
+ID_PAGE: 24507
 PG_TITLE: PickingInfo
 PG_VERSION: 1.14
 ---
@@ -18,12 +18,12 @@ True if you touch something, false otherwise.
 
 Represents the distance between the screen the click on the mesh
 
-###pickedPoint : [Vector3](page.php?p=3327)
+###pickedPoint : [Vector3](/classes/Vector3)
 
 
 The picked point
 
-###pickedMesh : [AbstractMesh](page.php?p=3269)
+###pickedMesh : [AbstractMesh](/classes/AbstractMesh)
 
 
 The picked abstractMesh
@@ -47,10 +47,10 @@ The faceId of the mesh
 
 ##Methods
 
-###getNormal() &rarr; [Vector3](page.php?p=3327)
+###getNormal() &rarr; [Vector3](/classes/Vector3)
 Get the normal
 
 
-###getTextureCoordinates() &rarr; [Vector2](page.php?p=3326)
+###getTextureCoordinates() &rarr; [Vector2](/classes/Vector2)
 Get the texture coordinates
 

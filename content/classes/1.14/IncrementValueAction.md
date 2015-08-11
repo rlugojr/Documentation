@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 3279
+ID_PAGE: 24487
 PG_TITLE: IncrementValueAction
 PG_VERSION: 1.14
 ---
-##new [IncrementValueAction](page.php?p=3279)(triggerOptions, target, propertyPath, value, condition)
+##new [IncrementValueAction](/classes/IncrementValueAction)(triggerOptions, target, propertyPath, value, condition)
 
 Create a new increment value action
 ####Parameters
@@ -13,10 +13,10 @@ Create a new increment value action
  | target | any | The action target
  | propertyPath | string | 
  | value | any | The action value
-optional | condition | [Condition](page.php?p=3289) | The condition to trigger the action
+optional | condition | [Condition](/classes/Condition) | The condition to trigger the action
 ---
 
-##Extends [Action](page.php?p=3275)
+##Extends [Action](/classes/Action)
 ##Members
 
 ###propertyPath : string

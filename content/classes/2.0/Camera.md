@@ -1,31 +1,36 @@
 ---
-ID_PAGE: 5702
+ID_PAGE: 24871
 PG_TITLE: Camera
 PG_VERSION: 2.0
 ---
-##new [Camera](page.php?p=5702)(name, position, scene)
+##new [Camera](/classes/Camera)(name, position, scene)
 
 
-Creates a new [Camera](page.php?p=5702).
-A tutorial about [ArcRotateCamera](page.php?p=5703) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+
+Creates a new [Camera](/classes/Camera).
+A tutorial about [ArcRotateCamera](/classes/ArcRotateCamera) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | The camera name
- | position | [Vector3](page.php?p=5808) | The camera position
- | scene | [Scene](page.php?p=5725) | The scene linked to this camera
+ | position | [Vector3](/classes/Vector3) | The camera position
+ | scene | [Scene](/classes/Scene) | The scene linked to this camera
 ---
 
-##Extends [Node](page.php?p=5701)
+##Extends [Node](/classes/Node)
 ##Members
 
-###position : [Vector3](page.php?p=5808)
+###position : [Vector3](/classes/Vector3)
+
 
 
 
 Position of the camera
+
 
 
 ###static PERSPECTIVE_CAMERA : number
@@ -33,7 +38,11 @@ Position of the camera
 
 
 
+
+
 ###static ORTHOGRAPHIC_CAMERA : number
+
+
 
 
 
@@ -44,69 +53,88 @@ Position of the camera
 ###static FOVMODE_HORIZONTAL_FIXED : number
 
 
-###upVector : [Vector3](page.php?p=5808)
+###upVector : [Vector3](/classes/Vector3)
 
 
- [Camera](page.php?p=5702) up
+
+ [Camera](/classes/Camera) up
+
 
 
 ###orthoLeft : any
 
 
 
+
 For orthographic camera, it's the left side of point of view
+
 
 
 ###orthoRight : any
 
 
 
+
 For orthographic camera, it's the right side of point of view
+
 
 
 ###orthoBottom : any
 
 
 
+
 For orthegraphic camera, it's the bottom side of point of view
+
 
 
 ###orthoTop : any
 
 
 
+
 For orthographic camera, it's the top side of point of view
+
 
 
 ###fov : number
 
 
 
+
 Field of view of the camera
+
 
 
 ###minZ : number
 
 
 
+
 Minimum distance of view
+
 
 
 ###maxZ : number
 
 
 
+
 Maximum distance of view
+
 
 
 ###inertia : number
 
 
 
+
 Inertia of the camera
 
 
+
 ###mode : number
+
 
 
 
@@ -115,32 +143,44 @@ Inertia of the camera
 1 = ORTHOGRAPHIC
 
 
+
 ###isIntermediate : boolean
+
 
 
 
 True if this camera is a subcamera, false otherwise
 
 
-###viewport : [Viewport](page.php?p=5813)
+
+###viewport : [Viewport](/classes/Viewport)
+
 
 
 
 The viewport
 
 
+
 ###subCameras : any[]
+
 
 
 
 The list of subcameras of this camera
 
 
+
 ###layerMask : number
 
 
 
+
 The layerMask
+
+
+
+
 
 
 
@@ -158,6 +198,8 @@ Attach the control and display of the camera to the element
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -166,6 +208,8 @@ Attach the control and display of the camera to the element
 
 ###detachControl(element) &rarr; void
 Detach the control and display of the camera from the element
+
+
 
 
 
@@ -180,10 +224,12 @@ Attaches a given post process
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | postProcess | [PostProcess](page.php?p=5841) | @param postProcess
+ | postProcess | [PostProcess](/classes/PostProcess) | @param postProcess
 optional | insertAt | number | Index of postProcess to add
 ---
 
@@ -192,27 +238,35 @@ Detach a fiven post process
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | postProcess | [PostProcess](page.php?p=5841) | @param postProcess
+ | postProcess | [PostProcess](/classes/PostProcess) | @param postProcess
 optional | atIndices | any | Index of postProcess to detach
 ---
 
-###getWorldMatrix() &rarr; [Matrix](page.php?p=5811)
+###getWorldMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the worldMatrix
 
 
 
 
-###getViewMatrix() &rarr; [Matrix](page.php?p=5811)
+
+
+###getViewMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the viewMatrix
 
 
 
 
-###getProjectionMatrix(force) &rarr; [Matrix](page.php?p=5811)
+
+
+###getProjectionMatrix(force) &rarr; [Matrix](/classes/Matrix)
 Get the projectionMatrix
+
+
 
 
 

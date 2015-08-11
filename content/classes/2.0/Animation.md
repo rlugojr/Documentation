@@ -1,15 +1,18 @@
 ---
-ID_PAGE: 5747
+ID_PAGE: 24916
 PG_TITLE: Animation
 PG_VERSION: 2.0
 ---
 
-The animation is based on objects called [Animation](page.php?p=5747).
+The animation is based on objects called [Animation](/classes/Animation).
 
-An [Animation](page.php?p=5747) is defined by various properties and a collection of keys
+An [Animation](/classes/Animation) is defined by various properties and a collection of keys
 
 A tutorial about Animations ban be found [here](https://github.com/BabylonJS/Babylon.js/wiki/07-Animation)
-##new [Animation](page.php?p=5747)(name, targetProperty, framePerSecond, dataType, loopMode)
+##new [Animation](/classes/Animation)(name, targetProperty, framePerSecond, dataType, loopMode)
+
+
+
 
 
 
@@ -30,104 +33,135 @@ optional | loopMode | number |
 
 
 
+
 Name of the animation
+
 
 
 ###targetProperty : string
 
 
 
-The property to change, for example rotate a [Mesh](page.php?p=5722) : &quot;rotation.x&quot;
+
+The property to change, for example rotate a [Mesh](/classes/Mesh) : &quot;rotation.x&quot;
+
 
 
 ###framePerSecond : number
 
 
 
+
 The number of animation frames per second
+
 
 
 ###dataType : number
 
 
 
+
 The kind of value affected by the animation : ANIMATIONTYPE_FLOAT, ANIMATIONTYPE_VECTOR3, ANIMATIONTYPE_QUATERNION, ANIMATIONTYPE_MATRIX, ANIMATIONTYPE_COLOR3
+
 
 
 ###loopMode : number
 
 
 
+
 The loop mode : ANIMATIONLOOPMODE_RELATIVE, NIMATIONLOOPMODE_CYCLE, ANIMATIONLOOPMODE_CONSTANT
+
 
 
 ###targetPropertyPath : string[]
 
 
 
+
 An array of properties
+
 
 
 ###currentFrame : number
 
 
 
+
 The current animation key
+
 
 
 ###static ANIMATIONTYPE_FLOAT : number
 
 
 
+
 The value affected by the animation is a float
+
 
 
 ###static ANIMATIONTYPE_VECTOR3 : number
 
 
 
-The value affected by the animation is a [Vector3](page.php?p=5808)
+
+The value affected by the animation is a [Vector3](/classes/Vector3)
+
 
 
 ###static ANIMATIONTYPE_VECTOR2 : number
+
+
 
 
 ###static ANIMATIONTYPE_QUATERNION : number
 
 
 
-The value affected by the animation is a [Quaternion](page.php?p=5810)
+
+The value affected by the animation is a [Quaternion](/classes/Quaternion)
+
 
 
 ###static ANIMATIONTYPE_MATRIX : number
 
 
 
-The value affected by the animation is a [Matrix](page.php?p=5811)
+
+The value affected by the animation is a [Matrix](/classes/Matrix)
+
 
 
 ###static ANIMATIONTYPE_COLOR3 : number
 
 
 
-The value affected by the animation is a [Color3](page.php?p=5805)
+
+The value affected by the animation is a [Color3](/classes/Color3)
+
 
 
 ###static ANIMATIONLOOPMODE_RELATIVE : number
 
 
 
+
 The animation loops but doesn't reset values and continues animation with values of the previous ending animation
+
 
 
 ###static ANIMATIONLOOPMODE_CYCLE : number
 
 
 
+
 The animation restarts with the inital values
 
 
+
 ###static ANIMATIONLOOPMODE_CONSTANT : number
+
 
 
 
@@ -139,15 +173,22 @@ The animation keeps its final value i.e stopped
 
 
 
+
+
+
+
 ##Methods
 
 ###static CreateAndStartAnimation(name, mesh, tartgetProperty, framePerSecond, totalFrame, from, to, loopMode) &rarr; void
+Create and start an animation for a given mesh (can be a camera).
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | mesh | [AbstractMesh](page.php?p=5720) | 
+ | mesh | [AbstractMesh](/classes/AbstractMesh) | 
  | tartgetProperty | string | 
  | framePerSecond | number | 
  | totalFrame | number | 
@@ -162,9 +203,13 @@ Tests if the animation is stopped
 
 
 
+
+
 ###getKeys() &rarr; any[]
 Returns the animation keys.
-Every key represents the value of the [Animation](page.php?p=5747) at that key's given time.
+Every key represents the value of the [Animation](/classes/Animation) at that key's given time.
+
+
 
 
 
@@ -172,16 +217,22 @@ Every key represents the value of the [Animation](page.php?p=5747) at that key's
 ###getEasingFunction() &rarr; IEasingFunction
 
 
+
+
 ###setEasingFunction(easingFunction) &rarr; void
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | easingFunction | [EasingFunction](page.php?p=5748) | 
+ | easingFunction | [EasingFunction](/classes/EasingFunction) | 
 ---
 
 ###floatInterpolateFunction(startValue, endValue, gradient) &rarr; number
 Used to interpolate (perform the transition ) between float keys
+
+
 
 
 
@@ -193,73 +244,85 @@ Used to interpolate (perform the transition ) between float keys
  | gradient | number | The balance of the interpolation
 ---
 
-###quaternionInterpolateFunction(startValue, endValue, gradient) &rarr; [Quaternion](page.php?p=5810)
-Used to interpolate (perform the transition ) between [Quaternion](page.php?p=5810) keys
+###quaternionInterpolateFunction(startValue, endValue, gradient) &rarr; [Quaternion](/classes/Quaternion)
+Used to interpolate (perform the transition ) between [Quaternion](/classes/Quaternion) keys
+
+
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | startValue | [Quaternion](page.php?p=5810) | The start value to interpolate
- | endValue | [Quaternion](page.php?p=5810) | The end value to interpolate
+ | startValue | [Quaternion](/classes/Quaternion) | The start value to interpolate
+ | endValue | [Quaternion](/classes/Quaternion) | The end value to interpolate
  | gradient | number | The balance of the interpolation
 ---
 
-###vector3InterpolateFunction(startValue, endValue, gradient) &rarr; [Vector3](page.php?p=5808)
-Used to interpolate (perform the transition ) between [Vector3](page.php?p=5808) keys
+###vector3InterpolateFunction(startValue, endValue, gradient) &rarr; [Vector3](/classes/Vector3)
+Used to interpolate (perform the transition ) between [Vector3](/classes/Vector3) keys
+
+
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | startValue | [Vector3](page.php?p=5808) | The start value to interpolate
- | endValue | [Vector3](page.php?p=5808) | The end value to interpolate
+ | startValue | [Vector3](/classes/Vector3) | The start value to interpolate
+ | endValue | [Vector3](/classes/Vector3) | The end value to interpolate
  | gradient | number | The balance of the interpolation
 ---
 
-###vector2InterpolateFunction(startValue, endValue, gradient) &rarr; [Vector2](page.php?p=5807)
+###vector2InterpolateFunction(startValue, endValue, gradient) &rarr; [Vector2](/classes/Vector2)
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | startValue | [Vector2](page.php?p=5807) | 
- | endValue | [Vector2](page.php?p=5807) | 
+ | startValue | [Vector2](/classes/Vector2) | 
+ | endValue | [Vector2](/classes/Vector2) | 
  | gradient | number | 
 ---
 
-###color3InterpolateFunction(startValue, endValue, gradient) &rarr; [Color3](page.php?p=5805)
-Used to interpolate (perform the transition ) between [Color3](page.php?p=5805) keys
+###color3InterpolateFunction(startValue, endValue, gradient) &rarr; [Color3](/classes/Color3)
+Used to interpolate (perform the transition ) between [Color3](/classes/Color3) keys
+
+
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | startValue | [Color3](page.php?p=5805) | The start value to interpolate
- | endValue | [Color3](page.php?p=5805) | The end value to interpolate
+ | startValue | [Color3](/classes/Color3) | The start value to interpolate
+ | endValue | [Color3](/classes/Color3) | The end value to interpolate
  | gradient | number | The balance of the interpolation
 ---
 
-###matrixInterpolateFunction(startValue, endValue, gradient) &rarr; [Matrix](page.php?p=5811)
+###matrixInterpolateFunction(startValue, endValue, gradient) &rarr; [Matrix](/classes/Matrix)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | startValue | [Matrix](page.php?p=5811) | 
- | endValue | [Matrix](page.php?p=5811) | 
+ | startValue | [Matrix](/classes/Matrix) | 
+ | endValue | [Matrix](/classes/Matrix) | 
  | gradient | number | 
 ---
 
-###clone() &rarr; [Animation](page.php?p=5747)
+###clone() &rarr; [Animation](/classes/Animation)
 Clones this animation object
 
 
 
 
+
+
 ###setKeys(values) &rarr; void
-Adds the keys array to this [Animation](page.php?p=5747) object
+Adds the keys array to this [Animation](/classes/Animation) object
+
+
 
 
 

@@ -1,38 +1,38 @@
 ---
-ID_PAGE: 3273
+ID_PAGE: 24481
 PG_TITLE: LinesMesh
 PG_VERSION: 1.14
 ---
 
-The [LinesMesh](page.php?p=3273) class
-##new [LinesMesh](page.php?p=3273)(name, scene, updatable)
+The [LinesMesh](/classes/LinesMesh) class
+##new [LinesMesh](/classes/LinesMesh)(name, scene, updatable)
 
-The [LinesMesh](page.php?p=3273) constructor
+The [LinesMesh](/classes/LinesMesh) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | @param name
- | scene | [Scene](page.php?p=3274) | The scene where the [LinesMesh](page.php?p=3273) is
+ | scene | [Scene](/classes/Scene) | The scene where the [LinesMesh](/classes/LinesMesh) is
 optional | updatable | boolean | @param updatable
 ---
 
-##Extends [Mesh](page.php?p=3271)
+##Extends [Mesh](/classes/Mesh)
 ##Members
 
-###color : [Color3](page.php?p=3324)
+###color : [Color3](/classes/Color3)
 
 
-The color of the lines [Mesh](page.php?p=3271)
+The color of the lines [Mesh](/classes/Mesh)
 
 ###alpha : number
 
 
 The alpha
 
-###material : [Material](page.php?p=3312)
+###material : [Material](/classes/Material)
 
 
-The material of the Lines [Mesh](page.php?p=3271)
+The material of the Lines [Mesh](/classes/Mesh)
 
 ###isPickable : boolean
 
@@ -55,12 +55,12 @@ if false, infinite ray !
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](page.php?p=3333) | The ray
+ | ray | [Ray](/classes/Ray) | The ray
 optional | fastCheck | boolean | if true, stop at the first result
 ---
 
 ###dispose(doNotRecurse) &rarr; void
-Dispose the [LinesMesh](page.php?p=3273)
+Dispose the [LinesMesh](/classes/LinesMesh)
 
 ####Parameters
  | Name | Type | Description

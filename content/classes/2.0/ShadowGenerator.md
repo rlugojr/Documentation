@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 5779
+ID_PAGE: 24948
 PG_TITLE: ShadowGenerator
 PG_VERSION: 2.0
 ---
@@ -7,10 +7,13 @@ PG_VERSION: 2.0
 Shadows are dynamic, they are dynamically generated depending upon a Directionallight.
 
 A tutorial about shadows can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/15-Shadows)
-##new [ShadowGenerator](page.php?p=5779)(mapSize, light)
+##new [ShadowGenerator](/classes/ShadowGenerator)(mapSize, light)
 
 
-Creates a new [ShadowGenerator](page.php?p=5779) object
+
+Creates a new [ShadowGenerator](/classes/ShadowGenerator) object
+
+
 
 
 ####Parameters
@@ -26,42 +29,57 @@ Creates a new [ShadowGenerator](page.php?p=5779) object
 
 
 
+
 No filter will be used for this shadow
+
 
 
 ###static FILTER_VARIANCESHADOWMAP : number
 
 
 
+
 The variance shadowmap will be used for this shadow
+
 
 
 ###static FILTER_POISSONSAMPLING : number
 
 
 
+
 The poisson sampling filter will be used
+
 
 
 ###filter : number
 
 
 
+
 One of the following values : FILTER_NONE, FILTER_VARIANCESHADOWMAP, FILTER_POISSONSAMPLING
+
 
 
 ###useVarianceShadowMap : boolean
 
 
 
+
 True by default, defines the realtime shadowing algorithm, using the light's point of view
+
 
 
 ###usePoissonSampling : boolean
 
 
 
+
 Disables the useVarianceShadowMap and activates poisson sampling to soften shadows
+
+
+
+
 
 
 
@@ -75,27 +93,35 @@ Disables the useVarianceShadowMap and activates poisson sampling to soften shado
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | subMesh | [SubMesh](page.php?p=5834) | @param subMesh
+ | subMesh | [SubMesh](/classes/SubMesh) | @param subMesh
  | useInstances | boolean | @param useInstances
 ---
 
-###getShadowMap() &rarr; [RenderTargetTexture](page.php?p=5793)
+###getShadowMap() &rarr; [RenderTargetTexture](/classes/RenderTargetTexture)
 Defines which shadow will be rendered
 
 
 
 
+
+
 ###getLight() &rarr; IShadowLight
-Returns the [DirectionalLight](page.php?p=5716) of this [ShadowGenerator](page.php?p=5779)
+Returns the [DirectionalLight](/classes/DirectionalLight) of this [ShadowGenerator](/classes/ShadowGenerator)
 
 
 
 
-###getTransformMatrix() &rarr; [Matrix](page.php?p=5811)
-Returns the transform matrix of this [ShadowGenerator](page.php?p=5779)
+
+
+###getTransformMatrix() &rarr; [Matrix](/classes/Matrix)
+Returns the transform matrix of this [ShadowGenerator](/classes/ShadowGenerator)
+
+
 
 
 
@@ -106,8 +132,12 @@ Returns the darkness
 
 
 
+
+
 ###setDarkness(darkness) &rarr; void
 Sets the darkness with the given float between 0.0 to 1.0
+
+
 
 
 
@@ -119,6 +149,8 @@ Sets the darkness with the given float between 0.0 to 1.0
 
 ###setTransparencyShadow(hasShadow) &rarr; void
 Defines if the light goes through the object's holes and non opaque surfaces
+
+
 
 
 

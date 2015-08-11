@@ -1,24 +1,32 @@
 ---
-ID_PAGE: 5862
+ID_PAGE: 25031
 PG_TITLE: RenderingGroup
 PG_VERSION: 2.0
 ---
-##new [RenderingGroup](page.php?p=5862)(index, scene)
+##new [RenderingGroup](/classes/RenderingGroup)(index, scene)
+
 
 
 Creates a new rendering group
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | index | number | @param index
- | scene | [Scene](page.php?p=5725) | @param scene
+ | scene | [Scene](/classes/Scene) | @param scene
 ---
 
 ##Members
 
 ###index : number
+
+
+
+
+
 
 
 
@@ -34,6 +42,8 @@ Creates a new rendering group
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -45,10 +55,12 @@ Creates a new rendering group
 
 
 
+
+
 ###dispatch(subMesh) &rarr; void
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | subMesh | [SubMesh](page.php?p=5834) | @param subMesh
+ | subMesh | [SubMesh](/classes/SubMesh) | @param subMesh
 ---

@@ -1,10 +1,12 @@
 ---
-ID_PAGE: 6712
+ID_PAGE: 25200
 PG_TITLE: PickingInfo
 PG_VERSION: 2.1
 ---
 
 Get information of picking element by click
+
+
 
 
 
@@ -17,7 +19,9 @@ Get information of picking element by click
 
 
 
+
 True if you touch something, false otherwise.
+
 
 
 
@@ -26,11 +30,14 @@ True if you touch something, false otherwise.
 
 
 
+
 Represents the distance between the screen the click on the mesh
 
 
 
-###pickedPoint : [Vector3](page.php?p=6751)
+
+###pickedPoint : [Vector3](/classes/Vector3)
+
 
 
 
@@ -39,7 +46,9 @@ The picked point
 
 
 
-###pickedMesh : [AbstractMesh](page.php?p=6657)
+
+###pickedMesh : [AbstractMesh](/classes/AbstractMesh)
+
 
 
 
@@ -48,7 +57,9 @@ The picked abstractMesh
 
 
 
+
 ###bu : number
+
 
 
 
@@ -57,7 +68,9 @@ Coordinates texture of the mesh represents the x axis
 
 
 
+
 ###bv : number
+
 
 
 
@@ -66,12 +79,18 @@ Coordinates texture of the mesh represents the y axis
 
 
 
+
 ###faceId : number
 
 
 
 
+
 The faceId of the mesh
+
+
+
+
 
 
 
@@ -88,8 +107,10 @@ The faceId of the mesh
 
 ##Methods
 
-###getNormal(useWorldCoordinates) &rarr; [Vector3](page.php?p=6751)
+###getNormal(useWorldCoordinates) &rarr; [Vector3](/classes/Vector3)
 Get the normal
+
+
 
 
 
@@ -101,5 +122,5 @@ Get the normal
 optional | useWorldCoordinates | boolean | 
 ---
 
-###getTextureCoordinates() &rarr; [Vector2](page.php?p=6750)
+###getTextureCoordinates() &rarr; [Vector2](/classes/Vector2)
 

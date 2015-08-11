@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6686
+ID_PAGE: 25174
 PG_TITLE: CircleEase
 PG_VERSION: 2.1
 TAGS:
@@ -8,8 +8,10 @@ TAGS:
 
 
 
+
+
 ##Extends
- [EasingFunction](page.php?p=6685)
+ [EasingFunction](/classes/EasingFunction)
 
 
 ##Methods

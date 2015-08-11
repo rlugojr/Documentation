@@ -1,11 +1,12 @@
 ---
-ID_PAGE: 6805
+ID_PAGE: 25293
 PG_TITLE: PostProcessManager
 PG_VERSION: 2.1
 TAGS:
     - PostProcess
 ---
-##new [PostProcessManager](page.php?p=6805)(scene)
+##new [PostProcessManager](/classes/PostProcessManager)(scene)
+
 
 
 
@@ -19,10 +20,14 @@ A tutorial about post process can be found [here](https://github.com/BabylonJS/B
 
 
 
+
+
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=6662) | The scene linked to this postprocess
+ | scene | [Scene](/classes/Scene) | The scene linked to this postprocess
 ---
 
 
@@ -34,7 +39,7 @@ A tutorial about post process can be found [here](https://github.com/BabylonJS/B
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | postProcesses | [PostProcess](page.php?p=6790)[] | 
+ | postProcesses | [PostProcess](/classes/PostProcess)[] | 
 optional | targetTexture | WebGLTexture | 
 ---
 

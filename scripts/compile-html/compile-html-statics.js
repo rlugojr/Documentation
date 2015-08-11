@@ -47,6 +47,7 @@ module.exports = function(done){
     var staticCategories = [
         "exporters",
         "extensions",
+        "generals",
         "tutorials"
     ];
 
@@ -159,7 +160,7 @@ var createStaticPages = function(staticsContents, category, cb){
                 staticContent['category'] = category;
                 var staticPage = jade.renderFile(path.join(__JADE_STATIC__), {staticContent: staticContent, currentUrl: '/' + category});
 
-                logger.info('Page ' + category + '/' + staticContent.staticFileName + '.html about to be compiled.');
+                //logger.info('Page ' + category + '/' + staticContent.staticFileName + '.html about to be compiled.');
                 fs.writeFile(filename, staticPage, function(writeErr){
                     if (writeErr) throw writeErr;
                     callback();

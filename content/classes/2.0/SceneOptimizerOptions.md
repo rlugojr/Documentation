@@ -1,9 +1,12 @@
 ---
-ID_PAGE: 5888
+ID_PAGE: 25057
 PG_TITLE: SceneOptimizerOptions
 PG_VERSION: 2.0
 ---
-##new [SceneOptimizerOptions](page.php?p=5888)(targetFrameRate, trackerDuration)
+##new [SceneOptimizerOptions](/classes/SceneOptimizerOptions)(targetFrameRate, trackerDuration)
+
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -17,17 +20,28 @@ optional | trackerDuration | number |
 ###targetFrameRate : number
 
 
+
+
 ###trackerDuration : number
 
 
-###optimizations : [SceneOptimization](page.php?p=5879)[]
+
+
+###optimizations : [SceneOptimization](/classes/SceneOptimization)[]
+
+
+
+
+
 
 
 
 
 ##Methods
 
-###static LowDegradationAllowed(targetFrameRate) &rarr; [SceneOptimizerOptions](page.php?p=5888)
+###static LowDegradationAllowed(targetFrameRate) &rarr; [SceneOptimizerOptions](/classes/SceneOptimizerOptions)
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -35,7 +49,9 @@ optional | trackerDuration | number |
 optional | targetFrameRate | number | 
 ---
 
-###static ModerateDegradationAllowed(targetFrameRate) &rarr; [SceneOptimizerOptions](page.php?p=5888)
+###static ModerateDegradationAllowed(targetFrameRate) &rarr; [SceneOptimizerOptions](/classes/SceneOptimizerOptions)
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -43,7 +59,7 @@ optional | targetFrameRate | number |
 optional | targetFrameRate | number | 
 ---
 
-###static HighDegradationAllowed(targetFrameRate) &rarr; [SceneOptimizerOptions](page.php?p=5888)
+###static HighDegradationAllowed(targetFrameRate) &rarr; [SceneOptimizerOptions](/classes/SceneOptimizerOptions)
 
 ####Parameters
  | Name | Type | Description

@@ -1,17 +1,17 @@
 ---
-ID_PAGE: 3373
+ID_PAGE: 24581
 PG_TITLE: AssetsManager
 PG_VERSION: 1.14
 ---
 
 This class can be used to import meshes into a scene or load text and binary files.
-##new [AssetsManager](page.php?p=3373)(scene)
+##new [AssetsManager](/classes/AssetsManager)(scene)
 
-The [AssetsManager](page.php?p=3373) constructor
+The [AssetsManager](/classes/AssetsManager) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=3274) | The current scene
+ | scene | [Scene](/classes/Scene) | The current scene
 ---
 
 ##Members
@@ -41,7 +41,7 @@ Default value is true, you can set false if you don't want to see the loading sc
 ##Methods
 
 ###addMeshTask(taskName, meshesNames, rootUrl, sceneFilename) &rarr; IAssetTask
-Add and return the new [MeshAssetTask](page.php?p=3368)
+Add and return the new [MeshAssetTask](/classes/MeshAssetTask)
 
 ####Parameters
  | Name | Type | Description
@@ -53,7 +53,7 @@ Add and return the new [MeshAssetTask](page.php?p=3368)
 ---
 
 ###addTextFileTask(taskName, url) &rarr; IAssetTask
-Add and return the new [TextFileAssetTask](page.php?p=3369)
+Add and return the new [TextFileAssetTask](/classes/TextFileAssetTask)
 
 ####Parameters
  | Name | Type | Description
@@ -63,7 +63,7 @@ Add and return the new [TextFileAssetTask](page.php?p=3369)
 ---
 
 ###addBinaryFileTask(taskName, url) &rarr; IAssetTask
-Add and return the new [BinaryFileAssetTask](page.php?p=3370)
+Add and return the new [BinaryFileAssetTask](/classes/BinaryFileAssetTask)
 
 ####Parameters
  | Name | Type | Description
@@ -73,7 +73,7 @@ Add and return the new [BinaryFileAssetTask](page.php?p=3370)
 ---
 
 ###addImageTask(taskName, url) &rarr; IAssetTask
-Add and return the new [TextFileAssetTask](page.php?p=3369)
+Add and return the new [TextFileAssetTask](/classes/TextFileAssetTask)
 
 ####Parameters
  | Name | Type | Description
@@ -83,7 +83,7 @@ Add and return the new [TextFileAssetTask](page.php?p=3369)
 ---
 
 ###addTextureTask(taskName, url, noMipmap, invertY, samplingMode) &rarr; IAssetTask
-Add and return the new [TextFileAssetTask](page.php?p=3369)
+Add and return the new [TextFileAssetTask](/classes/TextFileAssetTask)
 
 ####Parameters
  | Name | Type | Description
@@ -95,11 +95,11 @@ optional | invertY | boolean | Invert the y axis
 optional | samplingMode | number | The sampling mode
 ---
 
-###reset() &rarr; [AssetsManager](page.php?p=3373)
+###reset() &rarr; [AssetsManager](/classes/AssetsManager)
 Reset all tasks
 
 
-###load() &rarr; [AssetsManager](page.php?p=3373)
+###load() &rarr; [AssetsManager](/classes/AssetsManager)
 Load all tasks
 Display the loading screen
 Run all tasks

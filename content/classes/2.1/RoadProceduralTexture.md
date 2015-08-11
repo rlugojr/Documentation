@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6745
+ID_PAGE: 25233
 PG_TITLE: RoadProceduralTexture
 PG_VERSION: 2.1
 TAGS:
@@ -7,7 +7,10 @@ TAGS:
     - Texture
     - ProceduralTexture
 ---
-##new [RoadProceduralTexture](page.php?p=6745)(name, size, scene, fallbackTexture, generateMipMaps)
+##new [RoadProceduralTexture](/classes/RoadProceduralTexture)(name, size, scene, fallbackTexture, generateMipMaps)
+
+
+
 
 
 
@@ -17,16 +20,21 @@ TAGS:
 ---|---|---|---
  | name | string | 
  | size | number | 
- | scene | [Scene](page.php?p=6662) | 
-optional | fallbackTexture | [Texture](page.php?p=6733) | 
+ | scene | [Scene](/classes/Scene) | 
+optional | fallbackTexture | [Texture](/classes/Texture) | 
 optional | generateMipMaps | boolean | 
 ---
 
 ##Extends
- [ProceduralTexture](page.php?p=6739)
+ [ProceduralTexture](/classes/ProceduralTexture)
 ##Members
 
-###roadColor : [Color3](page.php?p=6748)
+###roadColor : [Color3](/classes/Color3)
+
+
+
+
+
 
 
 

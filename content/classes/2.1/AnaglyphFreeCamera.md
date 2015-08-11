@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6639
+ID_PAGE: 25127
 PG_TITLE: AnaglyphFreeCamera
 PG_VERSION: 2.1
 TAGS:
@@ -8,19 +8,19 @@ TAGS:
     - TargetCamera
     - FreeCamera
 ---
-##new [AnaglyphFreeCamera](page.php?p=6639)(name, position, interaxialDistance, scene)
+##new [AnaglyphFreeCamera](/classes/AnaglyphFreeCamera)(name, position, interaxialDistance, scene)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | The camera name
- | position | [Vector3](page.php?p=6751) | The camera position
+ | position | [Vector3](/classes/Vector3) | The camera position
  | interaxialDistance | number | 
- | scene | [Scene](page.php?p=6662) | The scene which contain the camera
+ | scene | [Scene](/classes/Scene) | The scene which contain the camera
 ---
 
 ##Extends
- [FreeCamera](page.php?p=6638)
+ [FreeCamera](/classes/FreeCamera)
 
 
 ##Methods

@@ -1,9 +1,12 @@
 ---
-ID_PAGE: 5754
+ID_PAGE: 24923
 PG_TITLE: ExponentialEase
 PG_VERSION: 2.0
 ---
-##new [ExponentialEase](page.php?p=5754)(exponent)
+##new [ExponentialEase](/classes/ExponentialEase)(exponent)
+
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -11,10 +14,15 @@ PG_VERSION: 2.0
 optional | exponent | number | 
 ---
 
-##Extends [EasingFunction](page.php?p=5748)
+##Extends [EasingFunction](/classes/EasingFunction)
 ##Members
 
 ###exponent : number
+
+
+
+
+
 
 
 

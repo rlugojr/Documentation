@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6651
+ID_PAGE: 25139
 PG_TITLE: WebVRFreeCamera
 PG_VERSION: 2.1
 TAGS:
@@ -8,19 +8,19 @@ TAGS:
     - TargetCamera
     - FreeCamera
 ---
-##new [WebVRFreeCamera](page.php?p=6651)(name, position, scene, compensateDistorsion)
+##new [WebVRFreeCamera](/classes/WebVRFreeCamera)(name, position, scene, compensateDistorsion)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | position | [Vector3](page.php?p=6751) | 
- | scene | [Scene](page.php?p=6662) | 
+ | position | [Vector3](/classes/Vector3) | 
+ | scene | [Scene](/classes/Scene) | 
 optional | compensateDistorsion | boolean | 
 ---
 
 ##Extends
- [FreeCamera](page.php?p=6638)
+ [FreeCamera](/classes/FreeCamera)
 
 
 ##Methods

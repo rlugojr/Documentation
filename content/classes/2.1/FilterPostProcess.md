@@ -1,11 +1,14 @@
 ---
-ID_PAGE: 6797
+ID_PAGE: 25285
 PG_TITLE: FilterPostProcess
 PG_VERSION: 2.1
 TAGS:
     - PostProcess
 ---
-##new [FilterPostProcess](page.php?p=6797)(name, kernelMatrix, ratio, camera, samplingMode, engine, reusable)
+##new [FilterPostProcess](/classes/FilterPostProcess)(name, kernelMatrix, ratio, camera, samplingMode, engine, reusable)
+
+
+
 
 
 
@@ -17,19 +20,19 @@ TAGS:
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | kernelMatrix | [Matrix](page.php?p=6754) | 
+ | kernelMatrix | [Matrix](/classes/Matrix) | 
  | ratio | number | 
-optional | camera | [Camera](page.php?p=6631) | 
+optional | camera | [Camera](/classes/Camera) | 
 optional | samplingMode | number | 
-optional | engine | [Engine](page.php?p=6629) | 
+optional | engine | [Engine](/classes/Engine) | 
 optional | reusable | boolean | 
 ---
 
 ##Extends
- [PostProcess](page.php?p=6790)
+ [PostProcess](/classes/PostProcess)
 ##Members
 
-###kernelMatrix : [Matrix](page.php?p=6754)
+###kernelMatrix : [Matrix](/classes/Matrix)
 
 
 

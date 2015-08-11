@@ -1,14 +1,16 @@
 ---
-ID_PAGE: 5840
+ID_PAGE: 25009
 PG_TITLE: OimoJSPlugin
 PG_VERSION: 2.0
 ---
 
 
 
+
+
 ##Members
 
-###updateBodyPosition : (mesh: [AbstractMesh](page.php?p=5720)) =&gt; void
+###updateBodyPosition : (mesh: [AbstractMesh](/classes/AbstractMesh)) =&gt; void
 
 
 Update the body position according to the mesh position
@@ -24,6 +26,8 @@ Initializes the OIMO engine
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -35,10 +39,12 @@ Sets the gravity
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gravity | [Vector3](page.php?p=5808) | The given gravity
+ | gravity | [Vector3](/classes/Vector3) | The given gravity
 ---
 
 ###registerMesh(mesh, impostor, options) &rarr; any
@@ -46,10 +52,12 @@ Registers a mesh
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](page.php?p=5720) | The given mesh to register
+ | mesh | [AbstractMesh](/classes/AbstractMesh) | The given mesh to register
  | impostor | number | The corresponding impostor
  | options | PhysicsBodyCreationOptions | An object build this way {mass: number, friction: number, restitution: number}
 ---
@@ -59,10 +67,12 @@ Register meshes as compound
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | parts | PhysicsCompoundBodyPart[] | The array of object build this way {mesh: [Mesh](page.php?p=5722), impostor: number}
+ | parts | PhysicsCompoundBodyPart[] | The array of object build this way {mesh: [Mesh](/classes/Mesh), impostor: number}
  | options | PhysicsBodyCreationOptions | An object build this way {mass: number, friction: number, restitution: number}
 ---
 
@@ -71,10 +81,12 @@ Removes the mesh from the world
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](page.php?p=5720) | The given mesh to remove
+ | mesh | [AbstractMesh](/classes/AbstractMesh) | The given mesh to remove
 ---
 
 ###applyImpulse(mesh, force, contactPoint) &rarr; void
@@ -82,12 +94,14 @@ Applies a force to the mesh at a contact point
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](page.php?p=5720) | The given mesh
- | force | [Vector3](page.php?p=5808) | The force to apply to the mesh
- | contactPoint | [Vector3](page.php?p=5808) | The point of the mesh where the force has to be applied
+ | mesh | [AbstractMesh](/classes/AbstractMesh) | The given mesh
+ | force | [Vector3](/classes/Vector3) | The force to apply to the mesh
+ | contactPoint | [Vector3](/classes/Vector3) | The point of the mesh where the force has to be applied
 ---
 
 ###createLink(mesh1, mesh2, pivot1, pivot2, options) &rarr; boolean
@@ -95,13 +109,15 @@ Creates a physical link between two meshes
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh1 | [AbstractMesh](page.php?p=5720) | The first mesh to link
- | mesh2 | [AbstractMesh](page.php?p=5720) | The second mesh to link
- | pivot1 | [Vector3](page.php?p=5808) | The relative position of the first mesh where the link has to be applied
- | pivot2 | [Vector3](page.php?p=5808) | The relative position of the second mesh where the link has to be applied
+ | mesh1 | [AbstractMesh](/classes/AbstractMesh) | The first mesh to link
+ | mesh2 | [AbstractMesh](/classes/AbstractMesh) | The second mesh to link
+ | pivot1 | [Vector3](/classes/Vector3) | The relative position of the first mesh where the link has to be applied
+ | pivot2 | [Vector3](/classes/Vector3) | The relative position of the second mesh where the link has to be applied
 optional | options | any | @param options
 ---
 
@@ -111,8 +127,12 @@ Destroys the engine object
 
 
 
+
+
 ###isSupported() &rarr; boolean
 Tests if the plugin is usable in the current environement
+
+
 
 
 

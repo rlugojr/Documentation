@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 25106
 PG_TITLE: GUIGroup
-TAGS:
-    - bGUI
 ---
 ##new [GUIGroup](http://doc.babylonjs.com/page.php?p=25106)(name, guiSystem)
 

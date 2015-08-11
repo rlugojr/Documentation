@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6682
+ID_PAGE: 25170
 PG_TITLE: StateCondition
 PG_VERSION: 2.1
 TAGS:
@@ -7,7 +7,8 @@ TAGS:
 ---
 
 This condition checks the state property of an object and compares it to the given value
-##new [StateCondition](page.php?p=6682)(actionManager, target, value)
+##new [StateCondition](/classes/StateCondition)(actionManager, target, value)
+
 
 
 
@@ -16,16 +17,18 @@ The state condition constructor
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | actionManager | [ActionManager](page.php?p=6678) | The action manager
+ | actionManager | [ActionManager](/classes/ActionManager) | The action manager
  | target | any | The target
  | value | string | The given value
 ---
 
 ##Extends
- [Condition](page.php?p=6679)
+ [Condition](/classes/Condition)
 ##Members
 
 ###value : string
@@ -33,7 +36,12 @@ The state condition constructor
 
 
 
+
 The value of the stateCondition
+
+
+
+
 
 
 

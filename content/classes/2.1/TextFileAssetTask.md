@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6820
+ID_PAGE: 25308
 PG_TITLE: TextFileAssetTask
 PG_VERSION: 2.1
 TAGS:
@@ -7,11 +7,14 @@ TAGS:
 ---
 
 Load task on the given text file
-##new [TextFileAssetTask](page.php?p=6820)(name, url)
+##new [TextFileAssetTask](/classes/TextFileAssetTask)(name, url)
 
 
 
-The [TextFileAssetTask](page.php?p=6820) constructor
+
+The [TextFileAssetTask](/classes/TextFileAssetTask) constructor
+
+
 
 
 
@@ -30,7 +33,9 @@ The [TextFileAssetTask](page.php?p=6820) constructor
 
 
 
+
 The name
+
 
 
 
@@ -39,7 +44,9 @@ The name
 
 
 
+
 The url to this text file
+
 
 
 
@@ -48,7 +55,9 @@ The url to this text file
 
 
 
+
 Function call when the mesh is load successfully
+
 
 
 
@@ -57,7 +66,9 @@ Function call when the mesh is load successfully
 
 
 
+
 Function call when the mesh isn't load successfully
+
 
 
 
@@ -66,7 +77,9 @@ Function call when the mesh isn't load successfully
 
 
 
+
 True if is completed, false otherwise.
+
 
 
 
@@ -75,7 +88,12 @@ True if is completed, false otherwise.
 
 
 
+
 The text
+
+
+
+
 
 
 
@@ -94,7 +112,7 @@ The text
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=6662) | The scene where the text file is.
+ | scene | [Scene](/classes/Scene) | The scene where the text file is.
  | onSuccess | () =&gt; void | Function call when the mesh is load successfully
  | onError | () =&gt; void | Function call when the mesh isn't load successfully
 ---

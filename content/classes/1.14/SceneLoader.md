@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 3309
+ID_PAGE: 24517
 PG_TITLE: SceneLoader
 PG_VERSION: 1.14
 ---
@@ -40,10 +40,10 @@ Imports meshes using the given url and names
  | meshesNames | any | The meshes names to import. Set &quot;&quot; to select all meshes
  | rootUrl | string | The babylon file path
  | sceneFilename | string | The babylon file name
- | scene | [Scene](page.php?p=3274) | The scene where selected meshes will be imported
-optional | onsuccess | (meshes: [AbstractMesh](page.php?p=3269)[], particleSystems: [ParticleSystem](page.php?p=3342)[], skeletons: [Skeleton](page.php?p=3296)[]) =&gt; void | The function triggered when all selected meshes are imported. Called with parameters meshes, particleSystems, skeletons
+ | scene | [Scene](/classes/Scene) | The scene where selected meshes will be imported
+optional | onsuccess | (meshes: [AbstractMesh](/classes/AbstractMesh)[], particleSystems: [ParticleSystem](/classes/ParticleSystem)[], skeletons: [Skeleton](/classes/Skeleton)[]) =&gt; void | The function triggered when all selected meshes are imported. Called with parameters meshes, particleSystems, skeletons
 optional | progressCallBack | () =&gt; void | The function returning the import progress
-optional | onerror | (scene: [Scene](page.php?p=3274)) =&gt; void | The callback function triggered if an error occurs during the meshes loading
+optional | onerror | (scene: [Scene](/classes/Scene)) =&gt; void | The callback function triggered if an error occurs during the meshes loading
 ---
 
 ###static Load(rootUrl, sceneFilename, engine, onsuccess, progressCallBack, onerror) &rarr; void
@@ -54,22 +54,22 @@ Loads a scene from the given url with the given engine. If the engine already lo
 ---|---|---|---
  | rootUrl | string | a string that defines the root url for scene and resources
  | sceneFilename | any | a string that defines the name of the scene file. can start with &quot;data:&quot; following by the stringified version of the scene
- | engine | [Engine](page.php?p=3247) | The instance of [Engine](page.php?p=3247) to use to create the scene
-optional | onsuccess | (scene: [Scene](page.php?p=3274)) =&gt; void | The callback function triggered when the given file is correctly loaded
+ | engine | [Engine](/classes/Engine) | The instance of [Engine](/classes/Engine) to use to create the scene
+optional | onsuccess | (scene: [Scene](/classes/Scene)) =&gt; void | The callback function triggered when the given file is correctly loaded
 optional | progressCallBack | any | The function returning the import progress
-optional | onerror | (scene: [Scene](page.php?p=3274)) =&gt; void | The callback function triggered if an error occurs during the given file loading
+optional | onerror | (scene: [Scene](/classes/Scene)) =&gt; void | The callback function triggered if an error occurs during the given file loading
 ---
 
 ###static Append(rootUrl, sceneFilename, scene, onsuccess, progressCallBack, onerror) &rarr; void
-Append a scene from the given url, to the given [Scene](page.php?p=3274) instance
+Append a scene from the given url, to the given [Scene](/classes/Scene) instance
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | rootUrl | string | a string that defines the root url for scene and resources
  | sceneFilename | any | a string that defines the name of the scene file. can start with &quot;data:&quot; following by the stringified version of the scene
- | scene | [Scene](page.php?p=3274) | is the instance of [Scene](page.php?p=3274) to append to
-optional | onsuccess | (scene: [Scene](page.php?p=3274)) =&gt; void | The callback function called when the given file is correctly loaded
+ | scene | [Scene](/classes/Scene) | is the instance of [Scene](/classes/Scene) to append to
+optional | onsuccess | (scene: [Scene](/classes/Scene)) =&gt; void | The callback function called when the given file is correctly loaded
 optional | progressCallBack | any | The function returning the import progress
-optional | onerror | (scene: [Scene](page.php?p=3274)) =&gt; void | The callback function triggered if an error occurs during the given file loading
+optional | onerror | (scene: [Scene](/classes/Scene)) =&gt; void | The callback function triggered if an error occurs during the given file loading
 ---

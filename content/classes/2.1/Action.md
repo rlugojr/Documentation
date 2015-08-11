@@ -1,11 +1,12 @@
 ---
-ID_PAGE: 6663
+ID_PAGE: 25151
 PG_TITLE: Action
 PG_VERSION: 2.1
 TAGS:
     - Action
 ---
-##new [Action](page.php?p=6663)(triggerOptions, condition)
+##new [Action](/classes/Action)(triggerOptions, condition)
+
 
 
 
@@ -15,11 +16,13 @@ See more [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-Actions)
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | triggerOptions | any | Options of the trigger
-optional | condition | [Condition](page.php?p=6679) | [Condition](page.php?p=6679) to trigger the action
+optional | condition | [Condition](/classes/Condition) | [Condition](/classes/Condition) to trigger the action
 ---
 
 ##Members
@@ -29,7 +32,9 @@ optional | condition | [Condition](page.php?p=6679) | [Condition](page.php?p=667
 
 
 
+
 The trigger options
+
 
 
 
@@ -38,7 +43,12 @@ The trigger options
 
 
 
+
 Number of the trigger
+
+
+
+
 
 
 
@@ -60,6 +70,8 @@ Get the trigger parameter
 
 
 
+
+
 ###execute(evt) &rarr; void
 Execute the trigger
 
@@ -67,16 +79,18 @@ Execute the trigger
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | evt | [ActionEvent](page.php?p=6677) | An event to trigger
+ | evt | [ActionEvent](/classes/ActionEvent) | An event to trigger
 ---
 
-###then(action) &rarr; [Action](page.php?p=6663)
+###then(action) &rarr; [Action](/classes/Action)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | action | [Action](page.php?p=6663) | The action to do
+ | action | [Action](/classes/Action) | The action to do
 ---

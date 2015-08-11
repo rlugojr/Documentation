@@ -1,8 +1,10 @@
 ---
-ID_PAGE: 6730
+ID_PAGE: 25218
 PG_TITLE: FresnelParameters
 PG_VERSION: 2.1
 ---
+
+
 
 
 
@@ -15,11 +17,14 @@ PG_VERSION: 2.1
 
 
 
+
 True if Fresnel parameters is enabled
 
 
 
-###leftColor : [Color3](page.php?p=6748)
+
+###leftColor : [Color3](/classes/Color3)
+
 
 
 
@@ -28,7 +33,9 @@ Left color of the Fresnel parameters
 
 
 
-###rightColor : [Color3](page.php?p=6748)
+
+###rightColor : [Color3](/classes/Color3)
+
 
 
 
@@ -37,12 +44,15 @@ RightColor of the Fresnel parameters
 
 
 
+
 ###bias : number
 
 
 
 
+
 Bias of the Fresnel parameters
+
 
 
 

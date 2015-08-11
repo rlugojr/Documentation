@@ -1,12 +1,15 @@
 ---
-ID_PAGE: 5875
+ID_PAGE: 25044
 PG_TITLE: StickValues
 PG_VERSION: 2.0
 ---
-##new [StickValues](page.php?p=5875)(x, y)
+##new [StickValues](/classes/StickValues)(x, y)
 
 
-Builds a [StickValues](page.php?p=5875) object
+
+Builds a [StickValues](/classes/StickValues) object
+
+
 
 
 ####Parameters
@@ -22,7 +25,9 @@ Builds a [StickValues](page.php?p=5875) object
 
 
 
+
 The stick associated x object
+
 
 
 ###y : any

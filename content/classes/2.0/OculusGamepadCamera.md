@@ -1,37 +1,47 @@
 ---
-ID_PAGE: 5714
+ID_PAGE: 24883
 PG_TITLE: OculusGamepadCamera
 PG_VERSION: 2.0
 ---
-##new [OculusGamepadCamera](page.php?p=5714)(name, position, scene)
+##new [OculusGamepadCamera](/classes/OculusGamepadCamera)(name, position, scene)
 
 
-Create a new [OculusGamepadCamera](page.php?p=5714)
+
+Create a new [OculusGamepadCamera](/classes/OculusGamepadCamera)
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | Name of the [OculusGamepadCamera](page.php?p=5714)
- | position | [Vector3](page.php?p=5808) | Position of the [OculusGamepadCamera](page.php?p=5714)
- | scene | [Scene](page.php?p=5725) | [Scene](page.php?p=5725) which contain the [OculusGamepadCamera](page.php?p=5714)
+ | name | string | Name of the [OculusGamepadCamera](/classes/OculusGamepadCamera)
+ | position | [Vector3](/classes/Vector3) | Position of the [OculusGamepadCamera](/classes/OculusGamepadCamera)
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the [OculusGamepadCamera](/classes/OculusGamepadCamera)
 ---
 
-##Extends [FreeCamera](page.php?p=5707)
+##Extends [FreeCamera](/classes/FreeCamera)
 ##Members
 
 ###angularSensibility : number
 
 
 
+
 Angular sensibility of the camera
+
 
 
 ###moveSensibility : number
 
 
 
+
 Move sensibility of the camera
+
+
+
+
 
 
 
@@ -46,6 +56,8 @@ Attach the camera controls and display to an element
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -55,6 +67,8 @@ optional | noPreventDefault | boolean | Prevent the default
 
 ###detachControl(element) &rarr; void
 Detach the camera controls and display from an element
+
+
 
 
 

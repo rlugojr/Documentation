@@ -1,12 +1,15 @@
 ---
-ID_PAGE: 5728
+ID_PAGE: 24897
 PG_TITLE: SetStateAction
 PG_VERSION: 2.0
 ---
-##new [SetStateAction](page.php?p=5728)(triggerOptions, target, value, condition)
+##new [SetStateAction](/classes/SetStateAction)(triggerOptions, target, value, condition)
+
 
 
 Create a new set state action
+
+
 
 
 ####Parameters
@@ -15,17 +18,22 @@ Create a new set state action
  | triggerOptions | any | The trigger option
  | target | any | The action target
  | value | string | The action value
-optional | condition | [Condition](page.php?p=5742) | The condition to trigger the action
+optional | condition | [Condition](/classes/Condition) | The condition to trigger the action
 ---
 
-##Extends [Action](page.php?p=5726)
+##Extends [Action](/classes/Action)
 ##Members
 
 ###value : string
 
 
 
+
 The action value
+
+
+
+
 
 
 

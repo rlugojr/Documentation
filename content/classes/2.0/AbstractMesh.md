@@ -1,122 +1,146 @@
 ---
-ID_PAGE: 5720
+ID_PAGE: 24889
 PG_TITLE: AbstractMesh
 PG_VERSION: 2.0
 ---
 
-The [AbstractMesh](page.php?p=5720) Class extends [Node](page.php?p=5701)
+The [AbstractMesh](/classes/AbstractMesh) Class extends [Node](/classes/Node)
 
 This class represents a mesh which can't be instantiated
-##new [AbstractMesh](page.php?p=5720)(name, scene)
+##new [AbstractMesh](/classes/AbstractMesh)(name, scene)
 
 
-The [AbstractMesh](page.php?p=5720) constructor
+
+The [AbstractMesh](/classes/AbstractMesh) constructor
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | The name of the mesh
- | scene | [Scene](page.php?p=5725) | The scene where the mesh is.
+ | scene | [Scene](/classes/Scene) | The scene where the mesh is.
 ---
 
-##Extends [Node](page.php?p=5701)
+##Extends [Node](/classes/Node)
 ##Members
 
 ###static BILLBOARDMODE_NONE : number
 
 
 
+
 The billboard Mode None, the object is normal by default
 
-@default [BABYLON](page.php?p=5696).AbstractMesh.BILLBOARDMODE_NONE
+@default [AbstractMesh](/classes/AbstractMesh).BILLBOARDMODE_NONE
+
 
 
 ###static BILLBOARDMODE_X : number
 
 
 
+
 The billboard Mode X
 
-@default [BABYLON](page.php?p=5696).AbstractMesh.BILLBOARDMODE_X
+@default [AbstractMesh](/classes/AbstractMesh).BILLBOARDMODE_X
+
 
 
 ###static BILLBOARDMODE_Y : number
 
 
 
+
 The billboard Mode Y
 
-@default [BABYLON](page.php?p=5696).AbstractMesh.BILLBOARDMODE_Y
+@default [AbstractMesh](/classes/AbstractMesh).BILLBOARDMODE_Y
+
 
 
 ###static BILLBOARDMODE_Z : number
 
 
 
+
 The billboard Mode Z
 
-@default [BABYLON](page.php?p=5696).AbstractMesh.BILLBOARDMODE_Z
+@default [AbstractMesh](/classes/AbstractMesh).BILLBOARDMODE_Z
+
 
 
 ###static BILLBOARDMODE_ALL : number
 
 
 
+
 The billboard Mode
 
-@default [BABYLON](page.php?p=5696).AbstractMesh.BILLBOARDMODE_ALL
+@default [AbstractMesh](/classes/AbstractMesh).BILLBOARDMODE_ALL
+
 
 
 ###definedFacingForward : boolean
 
 
-###position : [Vector3](page.php?p=5808)
+###position : [Vector3](/classes/Vector3)
+
 
 
 
 The mesh position
 
-@default [BABYLON](page.php?p=5696).Vector3(0, 0, 0)
+@default [Vector3](/classes/Vector3)(0, 0, 0)
 
 
-###rotation : [Vector3](page.php?p=5808)
+
+###rotation : [Vector3](/classes/Vector3)
+
 
 
 
 The mesh rotation
 
-@default [BABYLON](page.php?p=5696).Vector3(0, 0, 0)
-
-
-###rotationQuaternion : [Quaternion](page.php?p=5810)
+@default [Vector3](/classes/Vector3)(0, 0, 0)
 
 
 
-The mesh rotation [Quaternion](page.php?p=5810)
-
-@default [BABYLON](page.php?p=5696).Quaternion(x, y, z, w)
+###rotationQuaternion : [Quaternion](/classes/Quaternion)
 
 
-###scaling : [Vector3](page.php?p=5808)
+
+
+The mesh rotation [Quaternion](/classes/Quaternion)
+
+@default [Quaternion](/classes/Quaternion)(x, y, z, w)
+
+
+
+###scaling : [Vector3](/classes/Vector3)
+
 
 
 
 The mesh scaling
 
-@default [BABYLON](page.php?p=5696).Vector3(1,1,1)
+@default [Vector3](/classes/Vector3)(1,1,1)
+
 
 
 ###billboardMode : number
 
 
 
+
 The mesh billboardMode
 
-@default [BABYLON](page.php?p=5696).AbstractMesh.BILLBOARDMODE_NONE
+@default [AbstractMesh](/classes/AbstractMesh).BILLBOARDMODE_NONE
+
 
 
 ###visibility : number
+
 
 
 
@@ -125,10 +149,14 @@ The mesh visibility
 @default 1.0
 
 
+
 ###alphaIndex : number
 
 
+
+
 ###infiniteDistance : boolean
+
 
 
 
@@ -137,7 +165,9 @@ Is infinite distance
 @default false
 
 
+
 ###isVisible : boolean
+
 
 
 
@@ -146,7 +176,9 @@ Is visible
 @default true
 
 
+
 ###isPickable : boolean
+
 
 
 
@@ -155,7 +187,9 @@ Is pickable
 @default true
 
 
+
 ###showBoundingBox : boolean
+
 
 
 
@@ -164,7 +198,9 @@ Show bounding box
 @default false
 
 
+
 ###showSubMeshesBoundingBox : boolean
+
 
 
 
@@ -173,7 +209,9 @@ Show submeshes Bounding box
 @default false
 
 
+
 ###onDispose : any
+
 
 
 
@@ -182,7 +220,9 @@ On dispose
 @default null
 
 
+
 ###checkCollisions : boolean
+
 
 
 
@@ -191,7 +231,9 @@ Is check collisions
 @default false
 
 
+
 ###isBlocker : boolean
+
 
 
 
@@ -200,14 +242,18 @@ Is blocker
 @default false
 
 
-###skeleton : [Skeleton](page.php?p=5766)
+
+###skeleton : [Skeleton](/classes/Skeleton)
+
 
 
 
 The skeleton
 
 
+
 ###renderingGroupId : number
+
 
 
 
@@ -216,14 +262,18 @@ The rendering group ID
 @default 0
 
 
-###material : [Material](page.php?p=5783)
+
+###material : [Material](/classes/Material)
+
 
 
 
 The material
 
 
+
 ###receiveShadows : boolean
+
 
 
 
@@ -232,53 +282,75 @@ Receive shadows
 @default false
 
 
-###actionManager : [ActionManager](page.php?p=5741)
+
+###actionManager : [ActionManager](/classes/ActionManager)
+
 
 
 
 The action manager
 
 
+
 ###renderOutline : boolean
+
 
 
 
 Render Outline
 
 
-###outlineColor : [Color3](page.php?p=5805)
+
+###outlineColor : [Color3](/classes/Color3)
+
 
 
 
 outline color
 
 
+
 ###outlineWidth : number
+
 
 
 
 outline Width
 
 
+
 ###renderOverlay : boolean
 
 
-###overlayColor : [Color3](page.php?p=5805)
+
+
+###overlayColor : [Color3](/classes/Color3)
+
+
 
 
 ###overlayAlpha : number
 
 
+
+
 ###hasVertexAlpha : boolean
+
+
 
 
 ###useVertexColors : boolean
 
 
+
+
 ###applyFog : boolean
 
 
+
+
 ###useOctreeForRenderingSelection : boolean
+
 
 
 
@@ -287,7 +359,9 @@ Is use octree for rendering selection
 @default true
 
 
+
 ###useOctreeForPicking : boolean
+
 
 
 
@@ -296,7 +370,9 @@ Is use octree for picking
 @default true
 
 
+
 ###useOctreeForCollisions : boolean
+
 
 
 
@@ -305,7 +381,9 @@ Is use octree for collisions
 @default true
 
 
+
 ###layerMask : number
+
 
 
 
@@ -314,41 +392,53 @@ The layer mask
 @default 0xFFFFFFFF
 
 
-###ellipsoid : [Vector3](page.php?p=5808)
+
+###ellipsoid : [Vector3](/classes/Vector3)
+
 
 
 
 Ellipsoid
 
 
-###ellipsoidOffset : [Vector3](page.php?p=5808)
+
+###ellipsoidOffset : [Vector3](/classes/Vector3)
+
 
 
 
 Ellipsoid offset
 
 
-###subMeshes : [SubMesh](page.php?p=5834)[]
+
+###subMeshes : [SubMesh](/classes/SubMesh)[]
+
 
 
 
 subMeshes
 
 
+
 ###isBlocked : boolean
+
+
 
 
 ###useBones : boolean
 
 
-###worldMatrixFromCache : [Matrix](page.php?p=5811)
+###worldMatrixFromCache : [Matrix](/classes/Matrix)
 
 
 
-World [Matrix](page.php?p=5811) from cache
+
+World [Matrix](/classes/Matrix) from cache
 
 
-###absolutePosition : [Vector3](page.php?p=5808)
+
+###absolutePosition : [Vector3](/classes/Vector3)
+
 
 
 
@@ -360,18 +450,26 @@ Absolute Position
 
 
 
+
+
+
+
 ##Methods
 
-###getLOD(camera) &rarr; [AbstractMesh](page.php?p=5720)
+###getLOD(camera) &rarr; [AbstractMesh](/classes/AbstractMesh)
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | camera | [Camera](page.php?p=5702) | 
+ | camera | [Camera](/classes/Camera) | 
 ---
 
 ###getTotalVertices() &rarr; number
 Get the total vertices
+
+
 
 
 
@@ -382,8 +480,12 @@ To access the mesh vertices data
 
 
 
+
+
 ###getVerticesData(kind) &rarr; number[]
 To access the mesh vertices data
+
+
 
 
 
@@ -398,20 +500,26 @@ Is vertices data present
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | kind | string | @param kind
 ---
 
-###getBoundingInfo() &rarr; [BoundingInfo](page.php?p=5771)
+###getBoundingInfo() &rarr; [BoundingInfo](/classes/BoundingInfo)
 Get the bounding info
 
 
 
 
-###getWorldMatrix() &rarr; [Matrix](page.php?p=5811)
+
+
+###getWorldMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the world matrix
+
+
 
 
 
@@ -421,12 +529,14 @@ Rotate this mesh with the given axis and the given angle in the mesh's space
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | axis | [Vector3](page.php?p=5808) | the rotation axis
+ | axis | [Vector3](/classes/Vector3) | the rotation axis
  | amount | number | the rotation angle
- | space | [Space](page.php?p=5896) | local or global
+ | space | [Space](/classes/Space) | local or global
 ---
 
 ###translate(axis, distance, space) &rarr; void
@@ -434,16 +544,20 @@ Translate the mesh with the given axis, with the given distance
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | axis | [Vector3](page.php?p=5808) | the rotation axis
+ | axis | [Vector3](/classes/Vector3) | the rotation axis
  | distance | number | the distance from the origin to the next position
- | space | [Space](page.php?p=5896) | local or global
+ | space | [Space](/classes/Space) | local or global
 ---
 
-###getAbsolutePosition() &rarr; [Vector3](page.php?p=5808)
+###getAbsolutePosition() &rarr; [Vector3](/classes/Vector3)
 Returns the absolute position
+
+
 
 
 
@@ -453,10 +567,12 @@ Set the absolute position
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | absolutePosition | [Vector3](page.php?p=5808) | @param absolutePosition
+ | absolutePosition | [Vector3](/classes/Vector3) | @param absolutePosition
 ---
 
 ###movePOV(amountRight, amountUp, amountForward) &rarr; void
@@ -472,7 +588,7 @@ Supports definition of mesh facing forward or backward.
  | amountForward | number | 
 ---
 
-###calcMovePOV(amountRight, amountUp, amountForward) &rarr; [BABYLON](page.php?p=5696).Vector3
+###calcMovePOV(amountRight, amountUp, amountForward) &rarr; [Vector3](/classes/Vector3)
 Calculate relative position change from the point of view of behind the front of the mesh.
 This is performed taking into account the meshes current rotation, so you do not have to care.
 Supports definition of mesh facing forward or backward.
@@ -497,7 +613,7 @@ Supports definition of mesh facing forward or backward.
  | tiltRight | number | 
 ---
 
-###calcRotatePOV(flipBack, twirlClockwise, tiltRight) &rarr; [BABYLON](page.php?p=5696).Vector3
+###calcRotatePOV(flipBack, twirlClockwise, tiltRight) &rarr; [Vector3](/classes/Vector3)
 Calculate relative rotation change from the point of view of behind the front of the mesh.
 Supports definition of mesh facing forward or backward.
 
@@ -514,19 +630,25 @@ Set the pivot matrix
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [Matrix](page.php?p=5811) | @param matrix
+ | matrix | [Matrix](/classes/Matrix) | @param matrix
 ---
 
-###getPivotMatrix() &rarr; [Matrix](page.php?p=5811)
+###getPivotMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the pivot matrix
 
 
 
 
+
+
 ###markAsDirty(property) &rarr; void
+
+
 
 
 
@@ -536,9 +658,11 @@ Get the pivot matrix
  | property | string | @param property
 ---
 
-###computeWorldMatrix(force) &rarr; [Matrix](page.php?p=5811)
+###computeWorldMatrix(force) &rarr; [Matrix](/classes/Matrix)
 Compute the world matrix, recalculate the world matrix
 @default false
+
+
 
 
 
@@ -554,15 +678,17 @@ If you'd like to be callbacked after the mesh position, rotation or scaling has 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | func | (mesh: [BABYLON](page.php?p=5696).AbstractMesh) =&gt; void | 
+ | func | (mesh: [AbstractMesh](/classes/AbstractMesh)) =&gt; void | 
 ---
 
 ###unregisterAfterWorldMatrixUpdate(func) &rarr; void
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | func | (mesh: [BABYLON](page.php?p=5696).AbstractMesh) =&gt; void | 
+ | func | (mesh: [AbstractMesh](/classes/AbstractMesh)) =&gt; void | 
 ---
 
 ###setPositionWithLocalVector(vector3) &rarr; void
@@ -570,14 +696,18 @@ Set the position with a local vector
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vector3 | [Vector3](page.php?p=5808) | @param vector3
+ | vector3 | [Vector3](/classes/Vector3) | @param vector3
 ---
 
-###getPositionExpressedInLocalSpace() &rarr; [Vector3](page.php?p=5808)
+###getPositionExpressedInLocalSpace() &rarr; [Vector3](/classes/Vector3)
 Get the position in local space
+
+
 
 
 
@@ -587,21 +717,25 @@ Translate mesh in local space
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vector3 | [Vector3](page.php?p=5808) | the translation contact information
+ | vector3 | [Vector3](/classes/Vector3) | the translation contact information
 ---
 
 ###lookAt(targetPoint, yawCor, pitchCor, rollCor) &rarr; void
-Orients a mesh towards a target point. [Mesh](page.php?p=5722) must be drawn facing user.
+Orients a mesh towards a target point. [Mesh](/classes/Mesh) must be drawn facing user.
+
+
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | targetPoint | [Vector3](page.php?p=5808) | The position (must be in same space as current mesh) to look at
+ | targetPoint | [Vector3](/classes/Vector3) | The position (must be in same space as current mesh) to look at
  | yawCor | number | optional yaw (y-axis) correction in radians
  | pitchCor | number | optional pitch (x-axis) correction in radians
  | rollCor | number | optional roll (z-axis) correction in radians
@@ -612,30 +746,36 @@ Is in frustum
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](page.php?p=5812)[] | is between near frustum plan and far frustum plan view
+ | frustumPlanes | [Plane](/classes/Plane)[] | is between near frustum plan and far frustum plan view
 ---
 
 ###isCompletelyInFrustum(camera) &rarr; boolean
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | camera | [Camera](page.php?p=5702) | 
+optional | camera | [Camera](/classes/Camera) | 
 ---
 
 ###intersectsMesh(mesh, precise) &rarr; boolean
-Intersects [Mesh](page.php?p=5722)
+Intersects [Mesh](/classes/Mesh)
 For precise : default value is false
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](page.php?p=5720) | The mesh
+ | mesh | [AbstractMesh](/classes/AbstractMesh) | The mesh
 optional | precise | boolean | If true, the abstractMesh is closer to the mesh,
 ---
 
@@ -644,10 +784,12 @@ Intersects Point
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | point | [Vector3](page.php?p=5808) | the intersect point
+ | point | [Vector3](/classes/Vector3) | the intersect point
 ---
 
 ###setPhysicsState(impostor, options) &rarr; any
@@ -655,15 +797,19 @@ Set physics state to mesh
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | impostor | any | The physics impostor [Sphere](page.php?p=5910)/Box/Plane
+optional | impostor | any | The physics impostor [Sphere](/classes/Sphere)/Box/Plane
 optional | options | PhysicsBodyCreationOptions | Is this object should move ? If yes, set it to true.
 ---
 
 ###getPhysicsImpostor() &rarr; number
 Get a physics impostor
+
+
 
 
 
@@ -674,8 +820,12 @@ Get the physics mass
 
 
 
+
+
 ###getPhysicsFriction() &rarr; number
 Get the physics friction
+
+
 
 
 
@@ -686,20 +836,26 @@ Get the physics restitution
 
 
 
-###getPositionInCameraSpace(camera) &rarr; [Vector3](page.php?p=5808)
+
+
+###getPositionInCameraSpace(camera) &rarr; [Vector3](/classes/Vector3)
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | camera | [Camera](page.php?p=5702) | 
+optional | camera | [Camera](/classes/Camera) | 
 ---
 
 ###getDistanceToCamera(camera) &rarr; number
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | camera | [Camera](page.php?p=5702) | 
+optional | camera | [Camera](/classes/Camera) | 
 ---
 
 ###applyImpulse(force, contactPoint) &rarr; void
@@ -707,11 +863,13 @@ Apply a force
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | force | [Vector3](page.php?p=5808) | the force direction
- | contactPoint | [Vector3](page.php?p=5808) | the contact point
+ | force | [Vector3](/classes/Vector3) | the force direction
+ | contactPoint | [Vector3](/classes/Vector3) | the contact point
 ---
 
 ###setPhysicsLinkWith(otherMesh, pivot1, pivot2, options) &rarr; void
@@ -719,12 +877,14 @@ Link the impostor in order to keep meshes linked
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherMesh | [Mesh](page.php?p=5722) | the impostor
- | pivot1 | [Vector3](page.php?p=5808) | link the impostor with this mesh
- | pivot2 | [Vector3](page.php?p=5808) | link the impostor with this mesh
+ | otherMesh | [Mesh](/classes/Mesh) | the impostor
+ | pivot1 | [Vector3](/classes/Vector3) | link the impostor with this mesh
+ | pivot2 | [Vector3](/classes/Vector3) | link the impostor with this mesh
 optional | options | any | @param options
 ---
 
@@ -734,15 +894,19 @@ Update physics body position
 
 
 
+
+
 ###moveWithCollisions(velocity) &rarr; void
 Move a mesh
+
+
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | velocity | [Vector3](page.php?p=5808) | change the velocity
+ | velocity | [Vector3](/classes/Vector3) | change the velocity
 ---
 
 ###createOrUpdateSubmeshesOctree(maxCapacity, maxDepth) &rarr; Octree&lt;SubMesh&gt;
@@ -756,21 +920,25 @@ optional | maxCapacity | number | @param maxCapacity
 optional | maxDepth | number | @param maxDepth
 ---
 
-###intersects(ray, fastCheck) &rarr; [PickingInfo](page.php?p=5769)
+###intersects(ray, fastCheck) &rarr; [PickingInfo](/classes/PickingInfo)
 Intersects
 if false, infinite ray !
+
+
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](page.php?p=5815) | The ray
+ | ray | [Ray](/classes/Ray) | The ray
 optional | fastCheck | boolean | if true, stop at the first result
 ---
 
-###clone(name, newParent, doNotCloneChildren) &rarr; [AbstractMesh](page.php?p=5720)
+###clone(name, newParent, doNotCloneChildren) &rarr; [AbstractMesh](/classes/AbstractMesh)
 Clone this abstract mesh
+
+
 
 
 
@@ -778,12 +946,14 @@ Clone this abstract mesh
  | Name | Type | Description
 ---|---|---|---
  | name | string | The new name
- | newParent | [Node](page.php?p=5701) | @param newParent
+ | newParent | [Node](/classes/Node) | @param newParent
 optional | doNotCloneChildren | boolean | Set true if you want to clone children, false otherwise
 ---
 
 ###releaseSubMeshes() &rarr; void
 Release submeshes
+
+
 
 
 

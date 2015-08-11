@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6824
+ID_PAGE: 25312
 PG_TITLE: AssetsManager
 PG_VERSION: 2.1
 TAGS:
@@ -7,11 +7,14 @@ TAGS:
 ---
 
 This class can be used to import meshes into a scene or load text and binary files.
-##new [AssetsManager](page.php?p=6824)(scene)
+##new [AssetsManager](/classes/AssetsManager)(scene)
 
 
 
-The [AssetsManager](page.php?p=6824) constructor
+
+The [AssetsManager](/classes/AssetsManager) constructor
+
+
 
 
 
@@ -19,7 +22,7 @@ The [AssetsManager](page.php?p=6824) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=6662) | The current scene
+ | scene | [Scene](/classes/Scene) | The current scene
 ---
 
 ##Members
@@ -29,7 +32,9 @@ The [AssetsManager](page.php?p=6824) constructor
 
 
 
+
 The callback
+
 
 
 
@@ -38,7 +43,9 @@ The callback
 
 
 
+
 The callback
+
 
 
 
@@ -47,11 +54,14 @@ The callback
 
 
 
+
 Function call when the element
 
 
 
+
 ###useDefaultLoadingScreen : boolean
+
 
 
 
@@ -68,10 +78,16 @@ Default value is true, you can set false if you don't want to see the loading sc
 
 
 
+
+
+
+
 ##Methods
 
 ###addMeshTask(taskName, meshesNames, rootUrl, sceneFilename) &rarr; IAssetTask
-Add and return the new [MeshAssetTask](page.php?p=6819)
+Add and return the new [MeshAssetTask](/classes/MeshAssetTask)
+
+
 
 
 
@@ -87,7 +103,9 @@ Add and return the new [MeshAssetTask](page.php?p=6819)
 ---
 
 ###addTextFileTask(taskName, url) &rarr; IAssetTask
-Add and return the new [TextFileAssetTask](page.php?p=6820)
+Add and return the new [TextFileAssetTask](/classes/TextFileAssetTask)
+
+
 
 
 
@@ -101,7 +119,9 @@ Add and return the new [TextFileAssetTask](page.php?p=6820)
 ---
 
 ###addBinaryFileTask(taskName, url) &rarr; IAssetTask
-Add and return the new [BinaryFileAssetTask](page.php?p=6821)
+Add and return the new [BinaryFileAssetTask](/classes/BinaryFileAssetTask)
+
+
 
 
 
@@ -115,7 +135,9 @@ Add and return the new [BinaryFileAssetTask](page.php?p=6821)
 ---
 
 ###addImageTask(taskName, url) &rarr; IAssetTask
-Add and return the new [TextFileAssetTask](page.php?p=6820)
+Add and return the new [TextFileAssetTask](/classes/TextFileAssetTask)
+
+
 
 
 
@@ -129,7 +151,9 @@ Add and return the new [TextFileAssetTask](page.php?p=6820)
 ---
 
 ###addTextureTask(taskName, url, noMipmap, invertY, samplingMode) &rarr; IAssetTask
-Add and return the new [TextFileAssetTask](page.php?p=6820)
+Add and return the new [TextFileAssetTask](/classes/TextFileAssetTask)
+
+
 
 
 
@@ -145,7 +169,7 @@ optional | invertY | boolean | Invert the y axis
 optional | samplingMode | number | The sampling mode
 ---
 
-###reset() &rarr; [AssetsManager](page.php?p=6824)
+###reset() &rarr; [AssetsManager](/classes/AssetsManager)
 Reset all tasks
 
 
@@ -153,5 +177,7 @@ Reset all tasks
 
 
 
-###load() &rarr; [AssetsManager](page.php?p=6824)
+
+
+###load() &rarr; [AssetsManager](/classes/AssetsManager)
 

@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 6774
+ID_PAGE: 25262
 PG_TITLE: SimplificationSettings
 PG_VERSION: 2.1
 ---
-##new [SimplificationSettings](page.php?p=6774)(quality, distance, optimizeMesh)
+##new [SimplificationSettings](/classes/SimplificationSettings)(quality, distance, optimizeMesh)
 
 
 

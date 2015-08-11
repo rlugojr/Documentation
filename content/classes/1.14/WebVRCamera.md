@@ -1,20 +1,20 @@
 ---
-ID_PAGE: 3260
+ID_PAGE: 24468
 PG_TITLE: WebVRCamera
 PG_VERSION: 1.14
 ---
-##new [WebVRCamera](page.php?p=3260)(name, position, scene)
+##new [WebVRCamera](/classes/WebVRCamera)(name, position, scene)
 
-Create a new [WebVRCamera](page.php?p=3260)
+Create a new [WebVRCamera](/classes/WebVRCamera)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the camera
- | position | [Vector3](page.php?p=3327) | Begin position of the camera
- | scene | [Scene](page.php?p=3274) | The scene which contain the camera
+ | position | [Vector3](/classes/Vector3) | Begin position of the camera
+ | scene | [Scene](/classes/Scene) | The scene which contain the camera
 ---
 
-##Extends [OculusCamera](page.php?p=3258)
+##Extends [OculusCamera](/classes/OculusCamera)
 
 
 ##Methods

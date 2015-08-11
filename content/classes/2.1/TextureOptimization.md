@@ -1,12 +1,15 @@
 ---
-ID_PAGE: 6833
+ID_PAGE: 25321
 PG_TITLE: TextureOptimization
 PG_VERSION: 2.1
 TAGS:
     - Scene
     - SceneOptimization
 ---
-##new [TextureOptimization](page.php?p=6833)(priority, maximumSize)
+##new [TextureOptimization](/classes/TextureOptimization)(priority, maximumSize)
+
+
+
 
 
 
@@ -19,10 +22,12 @@ optional | maximumSize | number |
 ---
 
 ##Extends
- [SceneOptimization](page.php?p=6832)
+ [SceneOptimization](/classes/SceneOptimization)
 ##Members
 
 ###priority : number
+
+
 
 
 
@@ -32,7 +37,9 @@ optional | maximumSize | number |
 
 
 
-###apply : (scene: [Scene](page.php?p=6662)) =&gt; boolean
+
+
+###apply : (scene: [Scene](/classes/Scene)) =&gt; boolean
 
 
 

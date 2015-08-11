@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6646
+ID_PAGE: 25134
 PG_TITLE: StereoscopicFreeCamera
 PG_VERSION: 2.1
 TAGS:
@@ -8,20 +8,20 @@ TAGS:
     - TargetCamera
     - FreeCamera
 ---
-##new [StereoscopicFreeCamera](page.php?p=6646)(name, position, interaxialDistance, isSideBySide, scene)
+##new [StereoscopicFreeCamera](/classes/StereoscopicFreeCamera)(name, position, interaxialDistance, isSideBySide, scene)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | position | [Vector3](page.php?p=6751) | 
+ | position | [Vector3](/classes/Vector3) | 
  | interaxialDistance | number | 
  | isSideBySide | boolean | 
- | scene | [Scene](page.php?p=6662) | 
+ | scene | [Scene](/classes/Scene) | 
 ---
 
 ##Extends
- [FreeCamera](page.php?p=6638)
+ [FreeCamera](/classes/FreeCamera)
 
 
 ##Methods

@@ -1,8 +1,6 @@
 ---
 ID_PAGE: 24821
 PG_TITLE: Installing  the Babylon Exporter
-TAGS:
-    - Blender
 ---
 ### Loading Babylon Exporter addon into Blender ###
 

@@ -1,13 +1,13 @@
 ---
-ID_PAGE: 3247
+ID_PAGE: 24455
 PG_TITLE: Engine
 PG_VERSION: 1.14
 ---
 
-Builds a Babylon [Engine](page.php?p=3247) from an HTML canvas.
-##new [Engine](page.php?p=3247)(canvas, antialias, options)
+Builds a Babylon [Engine](/classes/Engine) from an HTML canvas.
+##new [Engine](/classes/Engine)(canvas, antialias, options)
 
-Builds a Babylon [Engine](page.php?p=3247) from an HTML canvas.
+Builds a Babylon [Engine](/classes/Engine) from an HTML canvas.
 This constructor should be called once all HTML elements have been created.
 ####Parameters
  | Name | Type | Description
@@ -60,21 +60,21 @@ The delay
 ###static Epsilon : number
 
 
-This member is static : use [BABYLON](page.php?p=3243).Engine.Epsilon
+This member is static : use [Engine](/classes/Engine).Epsilon
 
 Default value : 0.001
 
 ###static CollisionsEpsilon : number
 
 
-This member is static : use [BABYLON](page.php?p=3243).Engine.CollisionsEpsilon
+This member is static : use [Engine](/classes/Engine).CollisionsEpsilon
 
 Default value : 0.001
 
 ###static ShadersRepository : string
 
 
-This member is static : use [BABYLON](page.php?p=3243).Engine.ShadersRepository
+This member is static : use [Engine](/classes/Engine).ShadersRepository
 
 Default value : &quot;Babylon/Shaders/&quot;
 
@@ -101,10 +101,10 @@ If true, force global wireframe for all meshes
 
 If true, the engine will compute all frames even if the app is in background
 
-###scenes : [Scene](page.php?p=3274)[]
+###scenes : [Scene](/classes/Scene)[]
 
 
-An array of [BABYLON](page.php?p=3243).Scene
+An array of [Scene](/classes/Scene)
 
 ###loadingUIText : string
 
@@ -126,7 +126,7 @@ Returns the screen aspect ratio
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | camera | [Camera](page.php?p=3249) | @param camera
+ | camera | [Camera](/classes/Camera) | @param camera
 ---
 
 ###getRenderWidth() &rarr; number
@@ -162,7 +162,7 @@ Returns the hardware scaling level
 Returns all loaded textures from the caches
 
 
-###getCaps() &rarr; [EngineCapabilities](page.php?p=3246)
+###getCaps() &rarr; [EngineCapabilities](/classes/EngineCapabilities)
 Returns the engine capabilities
 
 
@@ -221,7 +221,7 @@ Set the viewport of this engine. The aspect ratio is computed automatically.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | viewport | [Viewport](page.php?p=3331) | @param viewport
+ | viewport | [Viewport](/classes/Viewport) | @param viewport
 optional | requiredWidth | number | The required width of the viewport. By defaults, equals to the rendering canvas width
 optional | requiredHeight | number | The required height of the viewport. By defaults, equals to the rendering canvas height
 ---
@@ -324,7 +324,7 @@ Bind buffer with the given vertexBuffer, indexBuffer, vertexDeclaration vertexSt
  | indexBuffer | WebGLBuffer | The given index buffer
  | vertexDeclaration | number[] | The given vertex declaration
  | vertexStrideSize | number | The given vertex
- | effect | [Effect](page.php?p=3311) | @param effect
+ | effect | [Effect](/classes/Effect) | @param effect
 ---
 
 ###bindMultiBuffers(vertexBuffers, indexBuffer, effect) &rarr; void
@@ -333,9 +333,9 @@ Bind some buffers with the given vertexBuffer, indexBuffer and effect
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vertexBuffers | [VertexBuffer](page.php?p=3340)[] | The given vextex buffer
+ | vertexBuffers | [VertexBuffer](/classes/VertexBuffer)[] | The given vextex buffer
  | indexBuffer | WebGLBuffer | The given index buffer
- | effect | [Effect](page.php?p=3311) | @param effect
+ | effect | [Effect](/classes/Effect) | @param effect
 ---
 
 ###createInstancesBuffer(capacity) &rarr; WebGLBuffer
@@ -392,7 +392,7 @@ Draw
 optional | instancesCount | number | If true, uses the engine capabilities.
 ---
 
-###createEffect(baseName, attributesNames, uniformsNames, samplers, defines, fallbacks, onCompiled, onError) &rarr; [Effect](page.php?p=3311)
+###createEffect(baseName, attributesNames, uniformsNames, samplers, defines, fallbacks, onCompiled, onError) &rarr; [Effect](/classes/Effect)
 Compiled/linked your shaders into a simple object.
 
 ####Parameters
@@ -403,12 +403,12 @@ Compiled/linked your shaders into a simple object.
  | uniformsNames | string[] | An array of uniforms (the external variables) defined by the shaders
  | samplers | string[] | An array of samplers (the objects used to read textures)
  | defines | string | A define string
-optional | fallbacks | [EffectFallbacks](page.php?p=3310) | @param fallbacks
-optional | onCompiled | (effect: [Effect](page.php?p=3311)) =&gt; void | Function launched when the effect is compiled
-optional | onError | (effect: [Effect](page.php?p=3311), errors: string) =&gt; void | Function launched when an error occurs
+optional | fallbacks | [EffectFallbacks](/classes/EffectFallbacks) | @param fallbacks
+optional | onCompiled | (effect: [Effect](/classes/Effect)) =&gt; void | Function launched when the effect is compiled
+optional | onError | (effect: [Effect](/classes/Effect), errors: string) =&gt; void | Function launched when an error occurs
 ---
 
-###createEffectForParticles(fragmentName, uniformsNames, samplers, defines, fallbacks, onCompiled, onError) &rarr; [Effect](page.php?p=3311)
+###createEffectForParticles(fragmentName, uniformsNames, samplers, defines, fallbacks, onCompiled, onError) &rarr; [Effect](/classes/Effect)
 Compiled/linked your shaders into a simple object.
 
 ####Parameters
@@ -418,9 +418,9 @@ Compiled/linked your shaders into a simple object.
 optional | uniformsNames | string[] | An array of uniforms (the external variables) defined by the shaders
 optional | samplers | string[] | An array of samplers (the objects used to read textures)
 optional | defines | string | A define string
-optional | fallbacks | [EffectFallbacks](page.php?p=3310) | @param fallbacks
-optional | onCompiled | (effect: [Effect](page.php?p=3311)) =&gt; void | Function launched when the effect is compiled
-optional | onError | (effect: [Effect](page.php?p=3311), errors: string) =&gt; void | Function launched when an error occurs
+optional | fallbacks | [EffectFallbacks](/classes/EffectFallbacks) | @param fallbacks
+optional | onCompiled | (effect: [Effect](/classes/Effect)) =&gt; void | Function launched when the effect is compiled
+optional | onError | (effect: [Effect](/classes/Effect), errors: string) =&gt; void | Function launched when an error occurs
 ---
 
 ###createShaderProgram(vertexCode, fragmentCode, defines) &rarr; WebGLProgram
@@ -460,7 +460,7 @@ Enable effect
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | effect | [Effect](page.php?p=3311) | @param effect
+ | effect | [Effect](/classes/Effect) | @param effect
 ---
 
 ###setArray(uniform, array) &rarr; void
@@ -490,7 +490,7 @@ Set matrix for a given shader
  | Name | Type | Description
 ---|---|---|---
  | uniform | WebGLUniformLocation | The uniforms of the shader
- | matrix | [Matrix](page.php?p=3329) | @param matrix
+ | matrix | [Matrix](/classes/Matrix) | @param matrix
 ---
 
 ###setFloat(uniform, value) &rarr; void
@@ -551,7 +551,7 @@ Set bool for this given shader
  | Name | Type | Description
 ---|---|---|---
  | uniform | WebGLUniformLocation | The uniforms of the shader
- | color3 | [Color3](page.php?p=3324) | The color of the shader
+ | color3 | [Color3](/classes/Color3) | The color of the shader
 ---
 
 ###setColor4(uniform, color3, alpha) &rarr; void
@@ -560,7 +560,7 @@ Set bool for this given shader
  | Name | Type | Description
 ---|---|---|---
  | uniform | WebGLUniformLocation | The uniforms of the shader
- | color3 | [Color3](page.php?p=3324) | The color of the shader
+ | color3 | [Color3](/classes/Color3) | The color of the shader
  | alpha | number | The alpha of the shader
 ---
 
@@ -650,7 +650,7 @@ Create a new texture
  | url | string | The texture url
  | noMipmap | boolean | True if you want to activate the Mipmap, false otherwise.
  | invertY | boolean | @param invertY
- | scene | [Scene](page.php?p=3274) | The scene where the shader is.
+ | scene | [Scene](/classes/Scene) | The scene where the shader is.
 optional | samplingMode | number | The sampling mode
 optional | onLoad | () =&gt; void | Function when load.
 optional | onError | () =&gt; void | Function when error occurs.
@@ -711,7 +711,7 @@ Create a new cube texture
  | Name | Type | Description
 ---|---|---|---
  | rootUrl | string | @param rootUrl
- | scene | [Scene](page.php?p=3274) | The scene where the cube texture
+ | scene | [Scene](/classes/Scene) | The scene where the cube texture
  | extensions | string[] | Contains the image extensions in string format
 optional | noMipmap | boolean | Set true if you want to activate Mipmap, false otherwise.
 ---
@@ -722,7 +722,7 @@ Bind the given effect to samplers
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | effect | [Effect](page.php?p=3311) | @param effect
+ | effect | [Effect](/classes/Effect) | @param effect
 ---
 
 ###setTextureFromPostProcess(channel, postProcess) &rarr; void
@@ -732,7 +732,7 @@ Set texture from post process
  | Name | Type | Description
 ---|---|---|---
  | channel | number | The index in the array _activeTexturesCache
- | postProcess | [PostProcess](page.php?p=3346) | @param postProcess
+ | postProcess | [PostProcess](/classes/PostProcess) | @param postProcess
 ---
 
 ###setTexture(channel, texture) &rarr; void
@@ -742,7 +742,7 @@ The index in the array _activeTexturesCache
  | Name | Type | Description
 ---|---|---|---
  | channel | number | The index in the array _activeTexturesCache
- | texture | [BaseTexture](page.php?p=3317) | @param texture
+ | texture | [BaseTexture](/classes/BaseTexture) | @param texture
 ---
 
 ###readPixels(x, y, width, height) &rarr; Uint8Array
@@ -770,6 +770,6 @@ Hide the loading state to the User Interface
 
 
 ###static isSupported() &rarr; boolean
-This function is static. Use [BABYLON](page.php?p=3243).Engine.isSupported().
+This function is static. Use [Engine](/classes/Engine).isSupported().
 Returns true if webgl is supported on this browser
 

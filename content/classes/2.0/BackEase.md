@@ -1,9 +1,12 @@
 ---
-ID_PAGE: 5750
+ID_PAGE: 24919
 PG_TITLE: BackEase
 PG_VERSION: 2.0
 ---
-##new [BackEase](page.php?p=5750)(amplitude)
+##new [BackEase](/classes/BackEase)(amplitude)
+
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -11,10 +14,15 @@ PG_VERSION: 2.0
 optional | amplitude | number | 
 ---
 
-##Extends [EasingFunction](page.php?p=5748)
+##Extends [EasingFunction](/classes/EasingFunction)
 ##Members
 
 ###amplitude : number
+
+
+
+
+
 
 
 

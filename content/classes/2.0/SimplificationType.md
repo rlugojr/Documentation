@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 5898
+ID_PAGE: 25067
 PG_TITLE: SimplificationType
 PG_VERSION: 2.0
 ---

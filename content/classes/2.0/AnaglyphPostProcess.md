@@ -1,22 +1,22 @@
 ---
-ID_PAGE: 5842
+ID_PAGE: 25011
 PG_TITLE: AnaglyphPostProcess
 PG_VERSION: 2.0
 ---
-##new [AnaglyphPostProcess](page.php?p=5842)(name, ratio, camera, samplingMode, engine, reusable)
+##new [AnaglyphPostProcess](/classes/AnaglyphPostProcess)(name, ratio, camera, samplingMode, engine, reusable)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
  | ratio | number | 
- | camera | [Camera](page.php?p=5702) | 
+ | camera | [Camera](/classes/Camera) | 
 optional | samplingMode | number | 
-optional | engine | [Engine](page.php?p=5700) | 
+optional | engine | [Engine](/classes/Engine) | 
 optional | reusable | boolean | 
 ---
 
-##Extends [PostProcess](page.php?p=5841)
+##Extends [PostProcess](/classes/PostProcess)
 
 
 ##Methods

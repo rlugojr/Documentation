@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6856
+ID_PAGE: 25344
 PG_TITLE: Xbox360Dpad
 PG_VERSION: 2.1
 TAGS:
@@ -8,6 +8,8 @@ TAGS:
 #Enumeration
 
 Associates values to xbox 360 controller sticks
+
+
 
 
 

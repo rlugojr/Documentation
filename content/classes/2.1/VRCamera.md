@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6649
+ID_PAGE: 25137
 PG_TITLE: VRCamera
 PG_VERSION: 2.1
 TAGS:
@@ -8,19 +8,19 @@ TAGS:
     - TargetCamera
     - FreeCamera
 ---
-##new [VRCamera](page.php?p=6649)(name, position, scene, compensateDistorsion)
+##new [VRCamera](/classes/VRCamera)(name, position, scene, compensateDistorsion)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | position | [Vector3](page.php?p=6751) | 
- | scene | [Scene](page.php?p=6662) | 
+ | position | [Vector3](/classes/Vector3) | 
+ | scene | [Scene](/classes/Scene) | 
 optional | compensateDistorsion | boolean | 
 ---
 
 ##Extends
- [FreeCamera](page.php?p=6638)
+ [FreeCamera](/classes/FreeCamera)
 
 
 ##Methods

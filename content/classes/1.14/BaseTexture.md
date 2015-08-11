@@ -1,16 +1,16 @@
 ---
-ID_PAGE: 3317
+ID_PAGE: 24525
 PG_TITLE: BaseTexture
 PG_VERSION: 1.14
 ---
-##new [BaseTexture](page.php?p=3317)(scene)
+##new [BaseTexture](/classes/BaseTexture)(scene)
 
-Create a new [BaseTexture](page.php?p=3317);
+Create a new [BaseTexture](/classes/BaseTexture);
 A tutorial about materials and textures can be found here : https://github.com/BabylonJS/Babylon.js/wiki/04-Materials
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=3274) | The scene which will contains the new base texture
+ | scene | [Scene](/classes/Scene) | The scene which will contains the new base texture
 ---
 
 ##Members
@@ -62,7 +62,7 @@ True if this is a render target ; False otherwise
 
 By default : false
 
-###animations : [Animation](page.php?p=3294)[]
+###animations : [Animation](/classes/Animation)[]
 
 
 The animations of the base texture
@@ -107,17 +107,17 @@ By default : 4
 
 ##Methods
 
-###getScene() &rarr; [Scene](page.php?p=3274)
+###getScene() &rarr; [Scene](/classes/Scene)
 Get the scene which contains the base texture
 @return The scene
 
 
-###getTextureMatrix() &rarr; [Matrix](page.php?p=3329)
+###getTextureMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the texture matrix - return null
 @return null
 
 
-###getReflectionTextureMatrix() &rarr; [Matrix](page.php?p=3329)
+###getReflectionTextureMatrix() &rarr; [Matrix](/classes/Matrix)
 Get the reflection texture matrix - return null
 @return null
 
@@ -149,7 +149,7 @@ Do the load delay
 Release the internal texture
 
 
-###clone() &rarr; [BaseTexture](page.php?p=3317)
+###clone() &rarr; [BaseTexture](/classes/BaseTexture)
 Clone the base texture
 
 

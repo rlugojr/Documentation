@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6823
+ID_PAGE: 25311
 PG_TITLE: TextureAssetTask
 PG_VERSION: 2.1
 TAGS:
@@ -7,11 +7,14 @@ TAGS:
 ---
 
 Load task on the given texture
-##new [TextureAssetTask](page.php?p=6823)(name, url, noMipmap, invertY, samplingMode)
+##new [TextureAssetTask](/classes/TextureAssetTask)(name, url, noMipmap, invertY, samplingMode)
 
 
 
-The [TextureAssetTask](page.php?p=6823) constructor
+
+The [TextureAssetTask](/classes/TextureAssetTask) constructor
+
+
 
 
 
@@ -33,7 +36,9 @@ optional | samplingMode | number | The sampling mode
 
 
 
+
 The name
+
 
 
 
@@ -42,7 +47,9 @@ The name
 
 
 
+
 The url for this texture
+
 
 
 
@@ -51,7 +58,9 @@ The url for this texture
 
 
 
+
 Set true if you want to activate Mipmap, false otherwise.
+
 
 
 
@@ -60,7 +69,9 @@ Set true if you want to activate Mipmap, false otherwise.
 
 
 
+
 Invert the y axis
+
 
 
 
@@ -69,7 +80,9 @@ Invert the y axis
 
 
 
+
 The sampling mode
+
 
 
 
@@ -78,7 +91,9 @@ The sampling mode
 
 
 
+
 Function call when the mesh is load successfully
+
 
 
 
@@ -87,7 +102,9 @@ Function call when the mesh is load successfully
 
 
 
+
 Function call when the mesh isn't load successfully
+
 
 
 
@@ -96,16 +113,23 @@ Function call when the mesh isn't load successfully
 
 
 
+
 True if is completed, false otherwise.
 
 
 
-###texture : [Texture](page.php?p=6733)
+
+###texture : [Texture](/classes/Texture)
+
 
 
 
 
 The texture
+
+
+
+
 
 
 
@@ -124,7 +148,7 @@ The texture
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](page.php?p=6662) | The scene where this texture is.
+ | scene | [Scene](/classes/Scene) | The scene where this texture is.
  | onSuccess | () =&gt; void | Function call when the mesh is load successfully
  | onError | () =&gt; void | Function call when the mesh isn't load successfully
 ---

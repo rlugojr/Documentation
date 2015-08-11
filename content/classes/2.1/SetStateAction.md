@@ -1,15 +1,18 @@
 ---
-ID_PAGE: 6665
+ID_PAGE: 25153
 PG_TITLE: SetStateAction
 PG_VERSION: 2.1
 TAGS:
     - Action
 ---
-##new [SetStateAction](page.php?p=6665)(triggerOptions, target, value, condition)
+##new [SetStateAction](/classes/SetStateAction)(triggerOptions, target, value, condition)
+
 
 
 
 Create a new set state action
+
+
 
 
 
@@ -20,11 +23,11 @@ Create a new set state action
  | triggerOptions | any | The trigger option
  | target | any | The action target
  | value | string | The action value
-optional | condition | [Condition](page.php?p=6679) | The condition to trigger the action
+optional | condition | [Condition](/classes/Condition) | The condition to trigger the action
 ---
 
 ##Extends
- [Action](page.php?p=6663)
+ [Action](/classes/Action)
 ##Members
 
 ###value : string
@@ -32,7 +35,12 @@ optional | condition | [Condition](page.php?p=6679) | The condition to trigger t
 
 
 
+
 The action value
+
+
+
+
 
 
 

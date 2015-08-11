@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6704
+ID_PAGE: 25192
 PG_TITLE: VRCameraMetrics
 PG_VERSION: 2.1
 ---
@@ -51,21 +51,21 @@ PG_VERSION: 2.1
 ###aspectRatioFov : number
 
 
-###leftHMatrix : [Matrix](page.php?p=6754)
+###leftHMatrix : [Matrix](/classes/Matrix)
 
 
-###rightHMatrix : [Matrix](page.php?p=6754)
+###rightHMatrix : [Matrix](/classes/Matrix)
 
 
-###leftPreViewMatrix : [Matrix](page.php?p=6754)
+###leftPreViewMatrix : [Matrix](/classes/Matrix)
 
 
-###rightPreViewMatrix : [Matrix](page.php?p=6754)
+###rightPreViewMatrix : [Matrix](/classes/Matrix)
 
 
 
 
 ##Methods
 
-###static GetDefault() &rarr; [VRCameraMetrics](page.php?p=6704)
+###static GetDefault() &rarr; [VRCameraMetrics](/classes/VRCameraMetrics)
 

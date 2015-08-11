@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 3384
+ID_PAGE: 24592
 PG_TITLE: Tools
 PG_VERSION: 1.14
 ---
@@ -79,7 +79,7 @@ Converts an angle in degrees to radian
  | angle | number | The angle to convert
 ---
 
-###static ExtractMinAndMaxIndexed(positions, indices, indexStart, indexCount) &rarr; {minimum: [Vector3](page.php?p=3327); maximum: [Vector3](page.php?p=3327); }; 
+###static ExtractMinAndMaxIndexed(positions, indices, indexStart, indexCount) &rarr; {minimum: [Vector3](/classes/Vector3); maximum: [Vector3](/classes/Vector3); }; 
 Extracts the minimum and the maximum indexed of the positions given in parameters
 
 ####Parameters
@@ -91,7 +91,7 @@ Extracts the minimum and the maximum indexed of the positions given in parameter
  | indexCount | number | The number of position to browse.
 ---
 
-###static ExtractMinAndMax(positions, start, count) &rarr; {minimum: [Vector3](page.php?p=3327); maximum: [Vector3](page.php?p=3327); }; 
+###static ExtractMinAndMax(positions, start, count) &rarr; {minimum: [Vector3](/classes/Vector3); maximum: [Vector3](/classes/Vector3); }; 
 Extracts the minimum and the maximum of the positions given in parameters
 
 ####Parameters
@@ -202,9 +202,9 @@ Check extends
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | v | [Vector3](page.php?p=3327) | @param v
- | min | [Vector3](page.php?p=3327) | @param min
- | max | [Vector3](page.php?p=3327) | @param max
+ | v | [Vector3](/classes/Vector3) | @param v
+ | min | [Vector3](/classes/Vector3) | @param min
+ | max | [Vector3](/classes/Vector3) | @param max
 ---
 
 ###static WithinEpsilon(a, b) &rarr; boolean
@@ -268,8 +268,8 @@ Take a screenshot
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | engine | [Engine](page.php?p=3247) | The engine
- | camera | [Camera](page.php?p=3249) | The camera
+ | engine | [Engine](/classes/Engine) | The engine
+ | camera | [Camera](/classes/Camera) | The camera
  | size | any | The size of the screenshot
 ---
 

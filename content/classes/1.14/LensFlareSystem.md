@@ -1,11 +1,11 @@
 ---
-ID_PAGE: 3307
+ID_PAGE: 24515
 PG_TITLE: LensFlareSystem
 PG_VERSION: 1.14
 ---
 
 Create a lens Flare system
-##new [LensFlareSystem](page.php?p=3307)(name, emitter, scene)
+##new [LensFlareSystem](/classes/LensFlareSystem)(name, emitter, scene)
 
 The lens Flare system
 ####Parameters
@@ -13,7 +13,7 @@ The lens Flare system
 ---|---|---|---
  | name | string | The name of the lens flare system
  | emitter | any | The Emitter of the lens flare system : it can be a camera, a light or a mesh.
- | scene | [Scene](page.php?p=3274) | [Scene](page.php?p=3274) where the lens flare system is.
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) where the lens flare system is.
 ---
 
 ##Members
@@ -23,7 +23,7 @@ The lens Flare system
 
 The name of the lens Flare system
 
-###lensFlares : [LensFlare](page.php?p=3306)[]
+###lensFlares : [LensFlare](/classes/LensFlare)[]
 
 
 Lens flares array containing all lens flares
@@ -33,7 +33,7 @@ Lens flares array containing all lens flares
 
 Lens flare system border limit.
 
-###meshesSelectionPredicate : (mesh: [Mesh](page.php?p=3271)) =&gt; boolean
+###meshesSelectionPredicate : (mesh: [Mesh](/classes/Mesh)) =&gt; boolean
 
 
 Verify that a mesh can receive lens flares.
@@ -47,7 +47,7 @@ Lens flare system is enabled
 
 ##Methods
 
-###getScene() &rarr; [Scene](page.php?p=3274)
+###getScene() &rarr; [Scene](/classes/Scene)
 Get the scene where the lens flare system is.
 
 
@@ -55,7 +55,7 @@ Get the scene where the lens flare system is.
 Get the emitter
 
 
-###getEmitterPosition() &rarr; [Vector3](page.php?p=3327)
+###getEmitterPosition() &rarr; [Vector3](/classes/Vector3)
 Get the emitter position. Returns its absolute position if the emitter has an absolute position.
 
 
@@ -65,7 +65,7 @@ Compute the effective position
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | globalViewport | [Viewport](page.php?p=3331) | The global viewport
+ | globalViewport | [Viewport](/classes/Viewport) | The global viewport
 ---
 
 ###render() &rarr; boolean

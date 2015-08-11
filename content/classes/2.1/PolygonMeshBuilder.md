@@ -1,9 +1,9 @@
 ---
-ID_PAGE: 6782
+ID_PAGE: 25270
 PG_TITLE: PolygonMeshBuilder
 PG_VERSION: 2.1
 ---
-##new [PolygonMeshBuilder](page.php?p=6782)(name, contours, scene)
+##new [PolygonMeshBuilder](/classes/PolygonMeshBuilder)(name, contours, scene)
 
 
 
@@ -14,25 +14,25 @@ PG_VERSION: 2.1
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | contours | [Vector2](page.php?p=6750)[] | 
- | scene | [Scene](page.php?p=6662) | 
+ | contours | [Vector2](/classes/Vector2)[] | 
+ | scene | [Scene](/classes/Scene) | 
 ---
 
 
 
 ##Methods
 
-###addHole(hole) &rarr; [PolygonMeshBuilder](page.php?p=6782)
+###addHole(hole) &rarr; [PolygonMeshBuilder](/classes/PolygonMeshBuilder)
 
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | hole | [Vector2](page.php?p=6750)[] | 
+ | hole | [Vector2](/classes/Vector2)[] | 
 ---
 
-###build(updatable, depth) &rarr; [Mesh](page.php?p=6659)
+###build(updatable, depth) &rarr; [Mesh](/classes/Mesh)
 
 ####Parameters
  | Name | Type | Description

@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6641
+ID_PAGE: 25129
 PG_TITLE: GamepadCamera
 PG_VERSION: 2.1
 TAGS:
@@ -9,11 +9,14 @@ TAGS:
     - FreeCamera
     - GamepadCamera
 ---
-##new [GamepadCamera](page.php?p=6641)(name, position, scene)
+##new [GamepadCamera](/classes/GamepadCamera)(name, position, scene)
 
 
 
-Create a new [GamepadCamera](page.php?p=6641)
+
+Create a new [GamepadCamera](/classes/GamepadCamera)
+
+
 
 
 
@@ -22,15 +25,16 @@ Create a new [GamepadCamera](page.php?p=6641)
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the camera
- | position | [Vector3](page.php?p=6751) | Starting position of the camera
- | scene | [Scene](page.php?p=6662) | [Scene](page.php?p=6662) which contain the camera
+ | position | [Vector3](/classes/Vector3) | Starting position of the camera
+ | scene | [Scene](/classes/Scene) | [Scene](/classes/Scene) which contain the camera
 ---
 
 ##Extends
- [FreeCamera](page.php?p=6638)
+ [FreeCamera](/classes/FreeCamera)
 ##Members
 
 ###angularSensibility : number
+
 
 
 
@@ -39,12 +43,18 @@ The angular sensibility of the gamepad
 
 
 
+
 ###moveSensibility : number
 
 
 
 
+
 The move sensibility of the gamepad
+
+
+
+
 
 
 

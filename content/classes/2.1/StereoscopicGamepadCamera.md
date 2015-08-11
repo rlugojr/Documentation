@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6644
+ID_PAGE: 25132
 PG_TITLE: StereoscopicGamepadCamera
 PG_VERSION: 2.1
 TAGS:
@@ -9,20 +9,20 @@ TAGS:
     - FreeCamera
     - GamepadCamera
 ---
-##new [StereoscopicGamepadCamera](page.php?p=6644)(name, position, interaxialDistance, isSideBySide, scene)
+##new [StereoscopicGamepadCamera](/classes/StereoscopicGamepadCamera)(name, position, interaxialDistance, isSideBySide, scene)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
- | position | [Vector3](page.php?p=6751) | 
+ | position | [Vector3](/classes/Vector3) | 
  | interaxialDistance | number | 
  | isSideBySide | boolean | 
- | scene | [Scene](page.php?p=6662) | 
+ | scene | [Scene](/classes/Scene) | 
 ---
 
 ##Extends
- [GamepadCamera](page.php?p=6641)
+ [GamepadCamera](/classes/GamepadCamera)
 
 
 ##Methods

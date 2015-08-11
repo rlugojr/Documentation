@@ -1,9 +1,12 @@
 ---
-ID_PAGE: 5755
+ID_PAGE: 24924
 PG_TITLE: PowerEase
 PG_VERSION: 2.0
 ---
-##new [PowerEase](page.php?p=5755)(power)
+##new [PowerEase](/classes/PowerEase)(power)
+
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -11,10 +14,15 @@ PG_VERSION: 2.0
 optional | power | number | 
 ---
 
-##Extends [EasingFunction](page.php?p=5748)
+##Extends [EasingFunction](/classes/EasingFunction)
 ##Members
 
 ###power : number
+
+
+
+
+
 
 
 

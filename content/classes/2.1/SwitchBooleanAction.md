@@ -1,15 +1,18 @@
 ---
-ID_PAGE: 6664
+ID_PAGE: 25152
 PG_TITLE: SwitchBooleanAction
 PG_VERSION: 2.1
 TAGS:
     - Action
 ---
-##new [SwitchBooleanAction](page.php?p=6664)(triggerOptions, target, propertyPath, condition)
+##new [SwitchBooleanAction](/classes/SwitchBooleanAction)(triggerOptions, target, propertyPath, condition)
+
 
 
 
 Create a new switch boolean action
+
+
 
 
 
@@ -20,11 +23,11 @@ Create a new switch boolean action
  | triggerOptions | any | 
  | target | any | The target of the action
  | propertyPath | string | This string defines the path to the property to affect with the action
-optional | condition | [Condition](page.php?p=6679) | The condition to trigger the action
+optional | condition | [Condition](/classes/Condition) | The condition to trigger the action
 ---
 
 ##Extends
- [Action](page.php?p=6663)
+ [Action](/classes/Action)
 ##Members
 
 ###propertyPath : string
@@ -32,7 +35,12 @@ optional | condition | [Condition](page.php?p=6679) | The condition to trigger t
 
 
 
+
 Defines the path to the property to affect with the action
+
+
+
+
 
 
 

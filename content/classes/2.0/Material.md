@@ -1,21 +1,24 @@
 ---
-ID_PAGE: 5783
+ID_PAGE: 24952
 PG_TITLE: Material
 PG_VERSION: 2.0
 ---
-##new [Material](page.php?p=5783)(name, scene, doNotAdd)
+##new [Material](/classes/Material)(name, scene, doNotAdd)
 
 
-Create a new [Material](page.php?p=5783).
+
+Create a new [Material](/classes/Material).
 Everything to know about material can be found here : https://github.com/BabylonJS/Babylon.js/wiki/04-Materials
 And here : http://blogs.msdn.com/b/eternalcoding/archive/2013/07/01/babylon-js-unleash-the-standardmaterial-for-your-babylon-js-game.aspx
+
+
 
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | Name of the material
- | scene | [Scene](page.php?p=5725) | 
+ | scene | [Scene](/classes/Scene) | 
 optional | doNotAdd | boolean | Not add the material
 ---
 
@@ -25,54 +28,73 @@ optional | doNotAdd | boolean | Not add the material
 
 
 
+
 Name of the material
+
 
 
 ###static TriangleFillMode : number
 
 
+
+
 ###static WireFrameFillMode : number
 
 
+
+
 ###static PointFillMode : number
+
+
 
 
 ###id : string
 
 
 
+
 ID of the material
+
 
 
 ###checkReadyOnEveryCall : boolean
 
 
 
+
 True to check if the material is ready on every call
+
 
 
 ###checkReadyOnlyOnce : boolean
 
 
 
+
 True to check if the material is ready only once
+
 
 
 ###state : string
 
 
 
+
 State of the material
+
 
 
 ###alpha : number
 
 
 
+
 Alpha of the material
 
 
+
 ###backFaceCulling : boolean
+
 
 
 
@@ -81,31 +103,41 @@ True to not render material on back face
 Default value : true
 
 
-###onCompiled : (effect: [Effect](page.php?p=5782)) =&gt; void
+
+###onCompiled : (effect: [Effect](/classes/Effect)) =&gt; void
+
 
 
 
 Callback function on compiled
 
 
-###onError : (effect: [Effect](page.php?p=5782), errors: string) =&gt; void
+
+###onError : (effect: [Effect](/classes/Effect), errors: string) =&gt; void
+
 
 
 
 Callback function on error
 
 
+
 ###onDispose : () =&gt; void
+
 
 
 
 Callback function on dispose
 
 
-###onBind : (material: [Material](page.php?p=5783)) =&gt; void
+
+###onBind : (material: [Material](/classes/Material)) =&gt; void
+
+
 
 
 ###getRenderTargetTextures : () =&gt; SmartArray&lt;RenderTargetTexture&gt;
+
 
 
 
@@ -115,10 +147,14 @@ Get the render target textures
 
 
 
+
 ###pointSize : number
 
 
+
+
 ###wireframe : boolean
+
 
 
 
@@ -127,10 +163,18 @@ True if this material should be rendered in wireframe ; False otherwise
 Default value : False
 
 
+
 ###pointsCloud : boolean
 
 
+
+
 ###fillMode : number
+
+
+
+
+
 
 
 
@@ -143,23 +187,29 @@ Function to know if material is ready
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | mesh | [AbstractMesh](page.php?p=5720) | The mesh to test
+optional | mesh | [AbstractMesh](/classes/AbstractMesh) | The mesh to test
 optional | useInstances | boolean | 
 ---
 
-###getEffect() &rarr; [Effect](page.php?p=5782)
+###getEffect() &rarr; [Effect](/classes/Effect)
 Get effect of the material
-@return [Effect](page.php?p=5782) The effect
+@return [Effect](/classes/Effect) The effect
 
 
 
 
-###getScene() &rarr; [Scene](page.php?p=5725)
+
+
+###getScene() &rarr; [Scene](/classes/Scene)
 Get the scene which contain the material
-@return [Scene](page.php?p=5725) The scene which contain the material
+@return [Scene](/classes/Scene) The scene which contain the material
+
+
 
 
 
@@ -171,15 +221,21 @@ Function to know if alpha is necessary (1.0 = no transparency)
 
 
 
+
+
 ###needAlphaTesting() &rarr; boolean
 Function to know if alpha testing is necessary
 
 
 
 
-###getAlphaTestTexture() &rarr; [BaseTexture](page.php?p=5788)
+
+
+###getAlphaTestTexture() &rarr; [BaseTexture](/classes/BaseTexture)
 Function to get the alpha test texture
-@return [BaseTexture](page.php?p=5788) The alpha test texture
+@return [BaseTexture](/classes/BaseTexture) The alpha test texture
+
+
 
 
 
@@ -189,11 +245,13 @@ Track the creation
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | onCompiled | (effect: [Effect](page.php?p=5782)) =&gt; void | Callback function called on compiled (effect on compiled)
- | onError | (effect: [Effect](page.php?p=5782), errors: string) =&gt; void | Callback function called on error (effect on error, error string)
+ | onCompiled | (effect: [Effect](/classes/Effect)) =&gt; void | Callback function called on compiled (effect on compiled)
+ | onError | (effect: [Effect](/classes/Effect), errors: string) =&gt; void | Callback function called on error (effect on error, error string)
 ---
 
 ###bind(world, mesh) &rarr; void
@@ -201,11 +259,13 @@ Function to bind the material
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | world | [Matrix](page.php?p=5811) | The world matrix
- | mesh | [Mesh](page.php?p=5722) | The mesh to bind
+ | world | [Matrix](/classes/Matrix) | The world matrix
+ | mesh | [Mesh](/classes/Mesh) | The mesh to bind
 ---
 
 ###bindOnlyWorldMatrix(world) &rarr; void
@@ -213,14 +273,18 @@ Function to bind only the world matrix
 
 
 
+
+
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | world | [Matrix](page.php?p=5811) | The world matrix
+ | world | [Matrix](/classes/Matrix) | The world matrix
 ---
 
 ###unbind() &rarr; void
 Function to unbind
+
+
 
 
 

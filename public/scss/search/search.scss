@@ -13,6 +13,12 @@
     }
   }
 
+  .errorMessage{
+    font-style: italic;
+    text-align: center;
+
+  }
+
   .pageChangeWrapper {
     display: flex;
     flex-flow: row wrap;

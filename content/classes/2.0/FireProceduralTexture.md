@@ -1,45 +1,64 @@
 ---
-ID_PAGE: 5799
+ID_PAGE: 24968
 PG_TITLE: FireProceduralTexture
 PG_VERSION: 2.0
 ---
-##new [FireProceduralTexture](page.php?p=5799)(name, size, scene, fallbackTexture, generateMipMaps)
+##new [FireProceduralTexture](/classes/FireProceduralTexture)(name, size, scene, fallbackTexture, generateMipMaps)
+
+
+
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
  | name | string | 
  | size | number | 
- | scene | [Scene](page.php?p=5725) | 
-optional | fallbackTexture | [Texture](page.php?p=5790) | 
+ | scene | [Scene](/classes/Scene) | 
+optional | fallbackTexture | [Texture](/classes/Texture) | 
 optional | generateMipMaps | boolean | 
 ---
 
-##Extends [ProceduralTexture](page.php?p=5796)
+##Extends [ProceduralTexture](/classes/ProceduralTexture)
 ##Members
 
-###static PurpleFireColors : [Color3](page.php?p=5805)[]
+###static PurpleFireColors : [Color3](/classes/Color3)[]
 
 
-###static GreenFireColors : [Color3](page.php?p=5805)[]
 
 
-###static RedFireColors : [Color3](page.php?p=5805)[]
+###static GreenFireColors : [Color3](/classes/Color3)[]
 
 
-###static BlueFireColors : [Color3](page.php?p=5805)[]
 
 
-###fireColors : [Color3](page.php?p=5805)[]
+###static RedFireColors : [Color3](/classes/Color3)[]
+
+
+
+
+###static BlueFireColors : [Color3](/classes/Color3)[]
+
+
+
+
+###fireColors : [Color3](/classes/Color3)[]
+
+
 
 
 ###time : number
 
 
-###speed : [Vector2](page.php?p=5807)
+
+
+###speed : [Vector2](/classes/Vector2)
+
+
 
 
 ###shift : number
+
+
 
 
 ###alphaThreshold : number
@@ -47,9 +66,16 @@ optional | generateMipMaps | boolean |
 
 
 
+
+
+
+
+
 ##Methods
 
 ###updateShaderUniforms() &rarr; void
+
+
 
 
 ###render(useCameraPostProcess) &rarr; void

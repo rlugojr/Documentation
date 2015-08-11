@@ -1,9 +1,12 @@
 ---
-ID_PAGE: 5797
+ID_PAGE: 24966
 PG_TITLE: CustomProceduralTexture
 PG_VERSION: 2.0
 ---
-##new [CustomProceduralTexture](page.php?p=5797)(name, texturePath, size, scene, fallbackTexture, generateMipMaps)
+##new [CustomProceduralTexture](/classes/CustomProceduralTexture)(name, texturePath, size, scene, fallbackTexture, generateMipMaps)
+
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -11,15 +14,20 @@ PG_VERSION: 2.0
  | name | string | 
  | texturePath | any | 
  | size | number | 
- | scene | [Scene](page.php?p=5725) | 
-optional | fallbackTexture | [Texture](page.php?p=5790) | 
+ | scene | [Scene](/classes/Scene) | 
+optional | fallbackTexture | [Texture](/classes/Texture) | 
 optional | generateMipMaps | boolean | 
 ---
 
-##Extends [ProceduralTexture](page.php?p=5796)
+##Extends [ProceduralTexture](/classes/ProceduralTexture)
 ##Members
 
 ###animate : boolean
+
+
+
+
+
 
 
 
@@ -29,7 +37,11 @@ optional | generateMipMaps | boolean |
 ###isReady() &rarr; boolean
 
 
+
+
 ###render(useCameraPostProcess) &rarr; void
+
+
 
 ####Parameters
  | Name | Type | Description
@@ -38,6 +50,8 @@ optional | useCameraPostProcess | boolean |
 ---
 
 ###updateTextures() &rarr; void
+
+
 
 
 ###updateShaderUniforms() &rarr; void

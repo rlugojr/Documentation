@@ -1,9 +1,12 @@
 ---
-ID_PAGE: 5837
+ID_PAGE: 25006
 PG_TITLE: ParticleSystem
 PG_VERSION: 2.0
 ---
-##new [ParticleSystem](page.php?p=5837)(name, capacity, scene, customEffect)
+##new [ParticleSystem](/classes/ParticleSystem)(name, capacity, scene, customEffect)
+
+
+
 
 
 
@@ -13,8 +16,8 @@ PG_VERSION: 2.0
 ---|---|---|---
  | name | string | name of the particle system
  | capacity | number | The total number of particles contained into the particle system
- | scene | [Scene](page.php?p=5725) | The scene of the particle system
-optional | customEffect | [Effect](page.php?p=5782) | The reference to a shader effect for the particles, overriding the default shader
+ | scene | [Scene](/classes/Scene) | The scene of the particle system
+optional | customEffect | [Effect](/classes/Effect) | The reference to a shader effect for the particles, overriding the default shader
 ---
 
 ##Members
@@ -23,235 +26,308 @@ optional | customEffect | [Effect](page.php?p=5782) | The reference to a shader 
 
 
 
+
 The particle system name
+
 
 
 ###static BLENDMODE_ONEONE : number
 
 
 
+
 The source color is added to the destination color without alpha affecting the result
+
 
 
 ###static BLENDMODE_STANDARD : number
 
 
 
+
 Blend current color and particle color using particle&rsquo;s alpha
+
 
 
 ###id : string
 
 
 
+
 The particle system id
+
 
 
 ###renderingGroupId : number
 
 
 
+
 The rendering group ID. default : 0
+
 
 
 ###emitter : any
 
 
 
+
 The particle emitter, where the particle comes from
+
 
 
 ###emitRate : number
 
 
 
+
 The particle emit rate. default : 10
+
 
 
 ###manualEmitCount : number
 
 
 
+
 Emit only a specific number of particles at once, in a &quot;one shot&quot;
+
 
 
 ###updateSpeed : number
 
 
 
+
 The overall motion speed default : 0.01
+
 
 
 ###targetStopDuration : number
 
 
 
+
 The amount of time the particle system is running
+
 
 
 ###disposeOnStop : boolean
 
 
 
+
 Disposes (or not) the particle system on stop
+
 
 
 ###minEmitPower : number
 
 
 
+
 Minimum power of emitting particles
+
 
 
 ###maxEmitPower : number
 
 
 
+
 Maximum power of emitting particles
+
 
 
 ###minLifeTime : number
 
 
 
+
 Minimum life time of particle
+
 
 
 ###maxLifeTime : number
 
 
 
+
 Maximum life time of particle
+
 
 
 ###minSize : number
 
 
 
+
 Minimum size of particle
+
 
 
 ###maxSize : number
 
 
 
+
 Maximum size of particle
+
 
 
 ###minAngularSpeed : number
 
 
 
+
 Minimum angular speed of particle in radian
+
 
 
 ###maxAngularSpeed : number
 
 
 
+
 Maximum angular speed of particle in radian
 
 
-###particleTexture : [Texture](page.php?p=5790)
+
+###particleTexture : [Texture](/classes/Texture)
+
 
 
 
 The particle texture
 
 
+
 ###onDispose : () =&gt; void
+
 
 
 
 The action to perform on dispose
 
 
-###updateFunction : (particles: [Particle](page.php?p=5836)[]) =&gt; void
+
+###updateFunction : (particles: [Particle](/classes/Particle)[]) =&gt; void
+
+
 
 
 ###blendMode : number
 
 
 
+
 The selected mode for particles : BLENDMODE_ONEONE or BLENDMODE_STANDARD
+
 
 
 ###forceDepthWrite : boolean
 
 
 
+
 default : false
 
 
-###gravity : [Vector3](page.php?p=5808)
+
+###gravity : [Vector3](/classes/Vector3)
+
 
 
 
 The gravity of the particle to give an orientation to the particle
 
 
-###direction1 : [Vector3](page.php?p=5808)
 
+###direction1 : [Vector3](/classes/Vector3)
 
-
-Random direction of each particle emitted between direction1 and direction2
-
-
-###direction2 : [Vector3](page.php?p=5808)
 
 
 
 Random direction of each particle emitted between direction1 and direction2
 
 
-###minEmitBox : [Vector3](page.php?p=5808)
+
+###direction2 : [Vector3](/classes/Vector3)
+
+
+
+
+Random direction of each particle emitted between direction1 and direction2
+
+
+
+###minEmitBox : [Vector3](/classes/Vector3)
+
 
 
 
 Begining of the box emitting the particles
 
 
-###maxEmitBox : [Vector3](page.php?p=5808)
+
+###maxEmitBox : [Vector3](/classes/Vector3)
+
 
 
 
 Ending of the box emitting the particles
 
 
-###color1 : [Color4](page.php?p=5806)
+
+###color1 : [Color4](/classes/Color4)
+
 
 
 
 First color to be combined to produce the particle color
 
 
-###color2 : [Color4](page.php?p=5806)
+
+###color2 : [Color4](/classes/Color4)
+
 
 
 
 Second color to be combined to produce the particle color
 
 
-###colorDead : [Color4](page.php?p=5806)
+
+###colorDead : [Color4](/classes/Color4)
+
 
 
 
 Color taken by the particle just before it disappears
 
 
-###textureMask : [Color4](page.php?p=5806)
+
+###textureMask : [Color4](/classes/Color4)
+
 
 
 
 Mask used to filter a texture color
 
 
-###startDirectionFunction : (emitPower: number, worldMatrix: [Matrix](page.php?p=5811), directionToUpdate: [Vector3](page.php?p=5808)) =&gt; void
+
+###startDirectionFunction : (emitPower: number, worldMatrix: [Matrix](/classes/Matrix), directionToUpdate: [Vector3](/classes/Vector3)) =&gt; void
 
 
 
 
-###startPositionFunction : (worldMatrix: [Matrix](page.php?p=5811), positionToUpdate: [Vector3](page.php?p=5808)) =&gt; void
+
+
+###startPositionFunction : (worldMatrix: [Matrix](/classes/Matrix), positionToUpdate: [Vector3](/classes/Vector3)) =&gt; void
+
+
+
+
+
 
 
 
@@ -268,11 +344,13 @@ Mask used to filter a texture color
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | particle | [Particle](page.php?p=5836) | 
+ | particle | [Particle](/classes/Particle) | 
 ---
 
 ###getCapacity() &rarr; number
 Returns the capacity of the particle system
+
+
 
 
 
@@ -283,8 +361,12 @@ Returns if the particle system is alive
 
 
 
+
+
 ###isStarted() &rarr; boolean
 Returns if the particle system is started
+
+
 
 
 
@@ -295,8 +377,12 @@ Starts the particle system
 
 
 
+
+
 ###stop() &rarr; void
 Stops the particle system
+
+
 
 
 
@@ -307,7 +393,11 @@ Animates the particle system
 
 
 
+
+
 ###render() &rarr; number
+
+
 
 
 
@@ -318,11 +408,13 @@ Destroyes this particle system
 
 
 
-###clone(name, newEmitter) &rarr; [ParticleSystem](page.php?p=5837)
+
+
+###clone(name, newEmitter) &rarr; [ParticleSystem](/classes/ParticleSystem)
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | The name of the cloned [ParticleSystem](page.php?p=5837)
+ | name | string | The name of the cloned [ParticleSystem](/classes/ParticleSystem)
  | newEmitter | any | The given new emitter
 ---

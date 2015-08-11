@@ -12,6 +12,8 @@ include includes/banner.jade
             .searchHeader
                 h2
                     | Sorry, we found nothing for "#{searchTerm}"
+            if(message)
+                .errorMessage= message
         else
             .searchHeader
                 h2
@@ -26,14 +28,12 @@ include includes/banner.jade
                 a(class="pageChangeLink", href="/search?q=#{searchTerm}&page=#{ page*1 + 1 }")
                     | Next Page
 
-        each result in results
-            .result
-                .resultTitle
-                    a(href=result.src)
-                        | #{result.version} : #{result.name}
-                    //.resultText= result.text
-
-
+        if(results)
+            each result in results
+                .result
+                    .resultTitle
+                        a(href=result.src)
+                            | #{result.version} : #{result.name}
 
         .pageChangeWrapper
             if(page - 1 > 0)

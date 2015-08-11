@@ -1,5 +1,5 @@
 ---
-ID_PAGE: 6720
+ID_PAGE: 25208
 PG_TITLE: LensFlare
 PG_VERSION: 2.1
 ---
@@ -7,11 +7,14 @@ PG_VERSION: 2.1
 Create a lens Flare to be integrated in a lens flare system.
 
 A tutorial about using lens flare can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-lens-flares)
-##new [LensFlare](page.php?p=6720)(size, position, color, imgUrl, system)
+##new [LensFlare](/classes/LensFlare)(size, position, color, imgUrl, system)
 
 
 
-The [LensFlare](page.php?p=6720) class
+
+The [LensFlare](/classes/LensFlare) class
+
+
 
 
 
@@ -23,7 +26,7 @@ The [LensFlare](page.php?p=6720) class
  | position | number | The lens flare position
  | color | any | The lens flare color
  | imgUrl | string | The image used for this lens flare
- | system | [LensFlareSystem](page.php?p=6721) | The lens flare system
+ | system | [LensFlareSystem](/classes/LensFlareSystem) | The lens flare system
 ---
 
 ##Members
@@ -33,7 +36,9 @@ The [LensFlare](page.php?p=6720) class
 
 
 
+
 The lens Flare size
+
 
 
 
@@ -42,11 +47,14 @@ The lens Flare size
 
 
 
+
 The lens Flare position
 
 
 
-###color : [Color3](page.php?p=6748)
+
+###color : [Color3](/classes/Color3)
+
 
 
 
@@ -55,12 +63,15 @@ The lens Flare color
 
 
 
-###texture : [Texture](page.php?p=6733)
+
+###texture : [Texture](/classes/Texture)
+
 
 
 
 
 The lens Flare texture
+
 
 
 

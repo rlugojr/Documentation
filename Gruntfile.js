@@ -31,10 +31,6 @@ module.exports = function (grunt) {
                     interrupt: true
                 }
             },
-            design : {
-                files: ['public/scss/**/*.scss'],
-                tasks: ['sass:dev']
-            },
             //watches code related changes
             express: {
                 files  : ['server.js', 'app.js', 'scripts/router/**/*.js', '!**/node_modules/**', '!Gruntfile.js'],
@@ -148,7 +144,6 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('serve', 'Start working', [
-        'sass:dev',
         'express:dev',
         'open:local',
         'watch'

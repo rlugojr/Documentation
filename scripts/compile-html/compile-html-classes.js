@@ -297,7 +297,7 @@ var compileClassPages = function(versions, version, classesList, tagsList, callb
                     //toc             : processedToc
                 };
 
-                logger.info('public/html/class_' + version + '/' + className + '.html is about to be compiled...');
+                //logger.info('public/html/class_' + version + '/' + className + '.html is about to be compiled...');
                 fs.writeFile(htmlClassFilePath, jade.renderFile(jadeViewForClass, optionsClass), function(err){
                     if (err) {
                         throw err;

@@ -11,9 +11,11 @@ module.exports = function (grunt) {
             options: {
                 livereload: true
             },
+            files:[],
             //watches content related changes
             content: {
-                files  : ['views/**/*.jade', 'content/**/*.md', 'data/statics.json'],
+                files  : ['content/**/*.md', 'data/statics.json', '!data/search/**'],
+                //files  : ['views/**/*.jade', 'content/**/*.md', 'data/statics.json'],
                 //recompiles everything but doesn't reindex the search
                 tasks  : [
                     'clean:json',
@@ -27,18 +29,19 @@ module.exports = function (grunt) {
                 ],
                 //As a very heavy task, put a little debounce of two seconds
                 options: {
-                    debounceDelay: 2000,
+                    //debounceDelay: 2000
+                    interval: 5007,
                     interrupt: true
                 }
-            },
-            //watches code related changes
-            express: {
-                files  : ['server.js', 'app.js', 'scripts/router/**/*.js', '!**/node_modules/**', '!Gruntfile.js'],
-                tasks  : ['express:dev'],
-                options: {
-                    nospawn: true // Without this option specified express won't be reloaded
-                }
             }
+            //watches code related changes
+            //express: {
+            //    files  : ['server.js', 'app.js', 'scripts/router/**/*.js', '!**/node_modules/**', '!Gruntfile.js'],
+            //    tasks  : ['express:dev'],
+            //    options: {
+            //        nospawn: true // Without this option specified express won't be reloaded
+            //    }
+            //}
         },
         // Open Config
         open: {
@@ -85,7 +88,7 @@ module.exports = function (grunt) {
                     '!public/html'
                 ]
             },
-            index: {
+            indexes: {
                 src: [
                     'data/search/**/*'
                 ]
@@ -158,7 +161,7 @@ module.exports = function (grunt) {
         'execute:compileHtmlClasses',
         'execute:compileHtmlStatics',
         'execute:forwarder',
-        'clean:index',
+        'clean:indexes',
         'execute:indexer',
         'clean:tmp'
     ]);

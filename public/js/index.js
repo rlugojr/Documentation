@@ -57,6 +57,11 @@
                     html: '<i class="fa fa-github"></i>Github'
                 }),
                 $('<a>', {
+                    href: 'https://github.com/BabylonJS/Documentation',
+                    target: '_blank',
+                    html: '<i class="fa fa-code-fork"></i>Contribute'
+                }),
+                $('<a>', {
                     href: 'http://www.html5gamedevs.com/forum/16-babylonjs',
                     target: '_blank',
                     html: '<i class="fa fa-html5"></i>Forum'

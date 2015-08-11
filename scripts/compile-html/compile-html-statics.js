@@ -47,6 +47,7 @@ module.exports = function(done){
     var staticCategories = [
         "exporters",
         "extensions",
+        "generals",
         "tutorials"
     ];
 

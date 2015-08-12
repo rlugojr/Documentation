@@ -8,7 +8,7 @@ Welcome on the repository of the official documentation of [Babylon.js](http://w
 Before beginning, please be sure to have these packages installed :
 
  * [Nodejs](https://nodejs.org/)
- * [grunt-cli](https://www.npmjs.com/package/grunt-cli)
+ * [grunt-cli](https://www.npmjs.com/package/grunt-cli) : just use ```npm install -g grunt-cli```
 
 
 ## Run a local copy of the documentation

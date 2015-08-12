@@ -47,9 +47,21 @@ module.exports = {
         var paramRegexp = /(?:\*\s\@param\s+)(\w*)(.*)/gm;
 
         for (var index in funParameters) {
-            var parameter = funParameters[index],
-                parameterName = parameter.identifier.text(),
-                parameterType = parameter.typeAnnotation.type;
+            var parameter = funParameters[index];
+            var parameterName = TypeManager.getParameterString(parameter.identifier, true);
+            //var parameterName = parameter.identifier.text();
+            var parameterType = parameter.typeAnnotation ? parameter.typeAnnotation.type : null;
+
+            //FIXME
+            /**
+             * This line handles the following case
+             * constructor(n: number | any)
+             * The ast considers the any keyword as a new parameter which is wrong
+             * That's why the new parameter has no type
+             * Finally the "any" keyword is ignored
+             */
+            if(!parameterType) continue;
+
             //optional parameter
             parameter.questionToken ? parametersDescription += 'optional | ' : parametersDescription += ' | ';
 

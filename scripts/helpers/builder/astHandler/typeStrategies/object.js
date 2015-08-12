@@ -13,11 +13,15 @@ module.exports = {
 };
 
 function objectToString(object) {
+    var TypeManager = require('../typeManager');
+
     var objectTypeDescription = '{';
     for (var index in object.typeMembers.members) {
         var member = object.typeMembers.members[index];
-        objectTypeDescription += ' ' + member.propertyName.text();
-        objectTypeDescription += ': ' + member.typeAnnotation.type._text;
+        objectTypeDescription += ' ' + TypeManager.getParameterString(member, true);
+        //objectTypeDescription += ' ' + TypeManager.getParameterString(member.propertyName, true);
+        //objectTypeDescription += ' ' + member.propertyName.text();
+        objectTypeDescription += ': ' + TypeManager.getReturnString(member);
         if (index != object.typeMembers.members.length - 1) objectTypeDescription += ', ';
     }
     objectTypeDescription += ' }';

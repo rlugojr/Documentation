@@ -10,6 +10,8 @@ var functionType = require('./typeStrategies/function');
 var objectType = require('./typeStrategies/object');
 var arrayType = require('./typeStrategies/array');
 var callSignatureType = require('./typeStrategies/callSignature');
+var indexSignatureType = require('./typeStrategies/indexSignature');
+var propertySignatureType = require('./typeStrategies/propertySignature');
 var genericType = require('./typeStrategies/generic');
 
 var typeManager = {
@@ -30,7 +32,7 @@ typeManager.setAstType = function (ast, alreadyType) {
     if(!alreadyType) var astType = ast.typeAnnotation.type;
     else var astType = ast;
 
-    //console.log('My kind is', TypeScript.SyntaxKind[astType.kind()]);
+    console.log('My kind is', TypeScript.SyntaxKind[astType.kind()]);
 
     switch (astType.kind()) {
         case TypeScript.SyntaxKind.VoidKeyword:
@@ -39,6 +41,7 @@ typeManager.setAstType = function (ast, alreadyType) {
         case TypeScript.SyntaxKind.BooleanKeyword:
         case TypeScript.SyntaxKind.StringKeyword:
         case TypeScript.SyntaxKind.IdentifierName:
+        case TypeScript.SyntaxKind.Identifier:
             this.setTypeManager(plainTypes);
             break;
         case TypeScript.SyntaxKind.CallSignature:
@@ -55,6 +58,12 @@ typeManager.setAstType = function (ast, alreadyType) {
             break;
         case TypeScript.SyntaxKind.GenericType:
             this.setTypeManager(genericType);
+            break;
+        case TypeScript.SyntaxKind.IndexSignature:
+            this.setTypeManager(indexSignatureType);
+            break;
+        case TypeScript.SyntaxKind.PropertySignature:
+            this.setTypeManager(propertySignatureType);
             break;
         default:
             break;

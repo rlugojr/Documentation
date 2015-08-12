@@ -40,9 +40,11 @@ module.exports = function () {
 
     // Create a json file for all classes versions.
     fs.readdirSync(CLASSES_FOLDER).map(function(dir){
-        logger.info(dir);
         createJson(dir);
+        logger.info(dir);
     });
+
+    logger.info(TAGS);
 
     //The resulting file
     var myTagFile = TAG_FILENAME;
@@ -67,15 +69,17 @@ function createJson(version) {
     fs.readdirSync(myClassesFolder)
         // Read each file from the class folder
         .map(function (f) {
-            //logger.info(f);
+            logger.info(version+' '+path.basename(f));
             return {file: f, md: fs.readFileSync(path.join(myClassesFolder, f)).toString()};
         })
         // Read tags in the markdown
         .map(function (obj) {
+
             // MD filename
             var filename = path.basename(obj.file);
             filename = filename.replace('.md', '');
 
+            logger.info(version+' '+filename);
             // MD tags
             var tags = marked(obj.md).meta.TAGS;
 

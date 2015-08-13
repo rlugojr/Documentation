@@ -44,8 +44,6 @@ module.exports = function () {
         logger.info(dir);
     });
 
-    logger.info(TAGS);
-
     //The resulting file
     var myTagFile = TAG_FILENAME;
     // Creat dir if not existing

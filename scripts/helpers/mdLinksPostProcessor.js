@@ -54,7 +54,7 @@ function applyRegexp(msg, cb) {
     var newData = msg.flash.readData;
 
     //save metas
-    var beginMetasToken = '---\n';
+    var beginMetasToken = '---';
     var endMetasToken = '\n---';
     var endOfMetasIndex = newData.indexOf(endMetasToken, newData.indexOf(beginMetasToken)) + endMetasToken.length;
     var oldMetas = newData.substring(0, endOfMetasIndex);

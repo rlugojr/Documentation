@@ -69,7 +69,6 @@ function createJson(version) {
     fs.readdirSync(myClassesFolder)
         // Read each file from the class folder
         .map(function (f) {
-            logger.info(version+' '+path.basename(f));
             return {file: f, md: fs.readFileSync(path.join(myClassesFolder, f)).toString()};
         })
         // Read tags in the markdown

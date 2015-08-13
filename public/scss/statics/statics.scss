@@ -78,6 +78,8 @@
 
     //box-shadow: 12px 15px 22px -10px #EEE;
 
+    counter-reset: files;
+
     .emptyList {
       text-align: center;
       //display: none;
@@ -96,6 +98,11 @@
         color: $red;
         margin-right: 15px;
         font-weight: bold;
+
+        &:before{
+          counter-increment: files;
+          content: counter(files);
+        }
       }
 
       a {
@@ -136,7 +143,6 @@
             background-color: whitesmoke;
             color: $red;
           }
-
         }
       }
 

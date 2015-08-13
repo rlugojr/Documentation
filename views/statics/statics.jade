@@ -21,7 +21,7 @@ include ../includes/header
                     if(folder.files)
                         for file, index in folder.files
                             .fileTitle(class=folder.name class='All')
-                                .fileNumber=(index + 1)
+                                .fileNumber
 
                                 a(href='./' + dataObj.category + '/'+file.filename)
                                     =file.title

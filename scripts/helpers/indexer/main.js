@@ -66,7 +66,7 @@ module.exports = function index(done) {
                                 search.add({
                                     //src is the link in the website
                                     src: src,
-                                    name: path.basename(fileInfo.name, '.md'),
+                                    name: path.basename(fileInfo.name, '.md').replace(/_/g, ' '),
                                     text: line
                                 });
                                 lr.resume();

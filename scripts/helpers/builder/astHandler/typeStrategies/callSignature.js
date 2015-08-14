@@ -52,15 +52,14 @@ module.exports = {
             //var parameterName = parameter.identifier.text();
             var parameterType = parameter.typeAnnotation ? parameter.typeAnnotation.type : null;
 
-            //FIXME
             /**
-             * This line handles the following case
+             * This section handles the following case
              * constructor(n: number | any)
-             * The ast considers the any keyword as a new parameter which is wrong
-             * That's why the new parameter has no type
-             * Finally the "any" keyword is ignored
              */
-            if(!parameterType) continue;
+            if(!parameterType) {
+                parametersDescription = [parametersDescription.slice(0, parametersDescription.length - 3), 'or ' + parameterName + ' ', parametersDescription.slice(parametersDescription.length - 3)].join('');
+                continue;
+            }
 
             //optional parameter
             parameter.questionToken ? parametersDescription += 'optional | ' : parametersDescription += ' | ';

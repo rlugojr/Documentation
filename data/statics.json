@@ -435,6 +435,10 @@
         {
           "title": "STL",
           "filename": "STL"
+        },
+        {
+          "title": "OBJ",
+          "filename": "OBJ"
         }
       ]
     },

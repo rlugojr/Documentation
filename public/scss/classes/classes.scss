@@ -10,10 +10,10 @@
     font-size: 1.4em;
     color: $red;
     margin: 5px 10px;
-    font-weight:400;
+    font-weight: 400;
   }
 
-  a{
+  a {
     margin: 0 5px;
   }
 }
@@ -21,8 +21,7 @@
 //All classes sort by tag
 #classes_classesListByTag {
 
-  width: 80%;
-  margin: auto;
+  @include outer-container(80%);
 
   // The red banner with the tag name
   .category {
@@ -75,20 +74,29 @@
 }
 
 // All classes sort alphabetically
-#classes_classesListByAlpha{
-  width: 80%;
-  margin: auto;
+#classes_classesListByAlpha {
+  @include outer-container(80%);
 
-  a{
-    color: $black;
-    text-decoration:none;
-    display : block;
-    padding:3px;
+  //display:flex;
+  //flex-flow: row wrap;
 
-    &:hover{
-      color: white;
+  @include column-count(4);
+
+
+  a {
+    color:$black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 3px;
+    margin: 5px 4px;
+    width:100%;
+
+
+    &:hover {
       text-decoration: underline;
+      color: white;
       background-color: $red;
+
     }
   }
 }

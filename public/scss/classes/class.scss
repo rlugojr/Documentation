@@ -233,10 +233,10 @@ $sidebar_width: 300px;
 }
 
 #classes_classesListByAlpha.sideClassesListByAlpha {
+  @include column-count(1);
+
   a {
-    margin-right: 65px;
-
-
+    margin: 2px 65px 2px 0px;
   }
   .selected{
      background-color: $red;

@@ -72,7 +72,7 @@ code {
 
 // Hide an element
 .hidden {
-  display : none;
+  display : none !important;
 }
 
 // Horizontal separator

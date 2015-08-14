@@ -7,6 +7,7 @@
 
 $medium-screen: new-breakpoint(max-width 1280px 6);
 $small-screen: new-breakpoint(max-width 960px 6);
+$x-small-screen: new-breakpoint(max-width 610px 6);
 
 /** SCSS FILES **/
 @import "common/banner";

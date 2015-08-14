@@ -1,10 +1,10 @@
-(function() {
+(function () {
 
     //FIXME: the so-called "perfect scrollbar" was preventing the user to scroll the document vertically
     // it is disabled for the moment. DO NOT UNCOMMENT LINES RELATED TO THIS.
 
     // For mobile style
-    var onResize = function() {
+    var onResize = function () {
         var windowWidth = $(window).width();
         if (windowWidth <= 960) {
             $(".classContent").appendTo($("#wrapper"));
@@ -21,13 +21,13 @@
     var MAX = 900;
 
     // Stop the event propagation
-    var pauseEvent = function(e){
-        if(e.stopPropagation) e.stopPropagation();
-        if(e.preventDefault) e.preventDefault();
+    var pauseEvent = function (e) {
+        if (e.stopPropagation) e.stopPropagation();
+        if (e.preventDefault) e.preventDefault();
         return false;
     };
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         // For mobile style
         onResize();
 
@@ -79,39 +79,38 @@
         //});
 
         // handles the permalinks
-        $.each($("#classMd h3, #classMd h2"), function(i, title){
-            if(title){
+        $.each($("#classMd h3, #classMd h2"), function (i, title) {
+            if (title) {
                 handlePermalink(title);
             }
         });
 
         // check if an anchor is specified in the page url, goes to
         // specified anchor if true
-        if(window.location.toString().lastIndexOf('#') != -1){
+        if (window.location.toString().lastIndexOf('#') != -1) {
             // gets the anchor name
             var anchorName = window.location.toString().split('#');
             anchorName = anchorName[1];
 
-             // if anchor exists, jumps to it
-            if($('#'+anchorName)){
-                var $title = $("#"+anchorName);
+            // if anchor exists, jumps to it
+            if ($('#' + anchorName)) {
+                var $title = $("#" + anchorName);
                 var title = document.getElementById(anchorName);
                 $title.addClass('highlighted');
                 title.scrollIntoView(true);
             }
         }
 
-        var selectedClass = $('#classes_classesListByAlpha').find('> a.class[data-name='+$('#classTitle > h1').text()+']');
+        var selectedClass = $('#classes_classesListByAlpha').find('> a.class[data-name=' + $('#classTitle > h1').text() + ']');
 
         selectedClass.addClass('selected');
-        $('.classBar').scrollTop(selectedClass.offset().top - 100 );
-
+        $('.classBar').scrollTop(selectedClass.offset().top - 100);
 
 
         /* when user clicks on a class name in the class list by tag, redirect
          * to the "classes" page, with the correct class list by tag open */
-        $.each($('.categoryList'), function(i, classList){
-            $(classList).children().on('click', function(evt){
+        $.each($('.categoryList'), function (i, classList) {
+            $(classList).children().on('click', function (evt) {
                 // to do this, save the selected tag in window.localStorage
                 window.localStorage.selectedTag = $(classList).parent('div.category').attr('id');
             });
@@ -119,14 +118,13 @@
 
         /* when user clicks on the name of a tag, redirect to the "classes" page
          * with the correct class list by tag open */
-        $.each($('.classTag'), function(i, tag){
-            $(tag).on('click', function(evt){
+        $.each($('.classTag'), function (i, tag) {
+            $(tag).on('click', function (evt) {
                 window.localStorage.orderClassesby = 'tags';
                 window.localStorage.selectedTag = $(tag).attr('id');
             });
         });
 
-        // select#methodsList -> need to populate the select list
         $.each($('.classContent h2, .classContent h3'), function(i, title){
             if($(title)[0].tagName === 'H2'){
                 if($(title).text() === 'Methods' || $(title).text() === 'Members'){
@@ -145,7 +143,7 @@
         });
 
         // select#methodsList -> action on change of selected value
-        $('#methodsList').on('change', function(){
+        $('#methodsList').on('change', function () {
             var id = $(this).val(),
                 $selectedElement = $('#' + id);
 
@@ -161,7 +159,7 @@
             $('.classContent').scrollTop($selectedElement.offset().top - 50);
         });
 
-     });
+    });
 
     /**
      * Changes the current page url when clicked (give the possibility to the user to
@@ -169,19 +167,19 @@
      * Just like in Github ;-)
      * @param title
      */
-    var handlePermalink = function(title){
+    var handlePermalink = function (title) {
         // show the anchors only when you pass the mouse over the name of the linked method/attribute
-        $(title).on('mouseover', function(evt){
-            if($(title).children("a:first").hasClass('permalink')){
+        $(title).on('mouseover', function (evt) {
+            if ($(title).children("a:first").hasClass('permalink')) {
                 $(title).children("a:first").removeClass('invisible');
             }
-        }).on('mouseout', function(evt){
-            if($(title).children("a:first").hasClass('permalink')){
+        }).on('mouseout', function (evt) {
+            if ($(title).children("a:first").hasClass('permalink')) {
                 $(title).children("a:first").addClass('invisible');
             }
         });
 
-        $(title).children("a:first").on('click', function(evt){
+        $(title).children("a:first").on('click', function (evt) {
             evt.preventDefault();
             $('.highlighted').removeClass('highlighted');
             $(title).addClass('highlighted');

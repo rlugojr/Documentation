@@ -5,7 +5,7 @@
 var file = {
     classesLocation: 'content/classes/',
     location       : './scripts/helpers/builder/sources/',
-    version        : '2.2',
+    version        : '2.2-alpha',
     previousVersion: '2.1',
     init: function(){
         this.name = 'babylon.' + this.version + '.d.ts';

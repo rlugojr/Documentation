@@ -1,0 +1,25 @@
+---
+ID_PAGE: 25257
+PG_TITLE: SIMDHelper
+PG_VERSION: 2.1
+---
+##Description
+
+class [SIMDHelper](/classes/2.2-alpha/SIMDHelper)
+
+
+
+##Members
+
+###static IsEnabled : boolean
+
+
+
+##Functions
+
+###static DisableSIMD() &rarr; void
+
+
+###static EnableSIMD() &rarr; void
+
+

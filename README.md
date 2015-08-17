@@ -96,3 +96,23 @@ Here is how the object is structured.
         "exporters": [],                       // Mandatory
         "extensions": []                       // Mandatory
     }
+
+### Build documentation for your own version of BabylonJs
+
+This can be done very easily by following these steps:
+    * Get a local copy of the documentation
+    * Head to scripts\helpers\builder\sources
+    * Add your typescript description file in the current folder
+    * Make sure your file name is like 'babylon.<version>.d.ts'
+    * Head to scripts\helpers\builder
+    * Open the config.js file
+    * Change the ```version``` and the ```previousVersion``` properties
+    * Head to content\classes
+    * Make sure there is no folder named like the version you want to build
+    * Open your command shell and run ```npm run build```
+    * Rebuild the doc : ```grunt build```
+    
+NB : For safety, you need to delete yourself the version of classes in content\classes in order to rebuild the same version. 
+
+####Still doesn't work ?
+Please leave us an issue with a link to your .d.ts and your config file. 

@@ -3,9 +3,23 @@
  */
 
 var file = {
+    //Folder target for the new classes
     classesLocation: 'content/classes/',
+
+    //Folder path containing the typescript description file
     location       : './scripts/helpers/builder/sources/',
+
+    /**
+     * The version number to import
+     * Note that the file must be name this way :
+     * babylon.<your-new-version>.d.ts
+     */
     version        : '2.2-alpha',
+
+    /**
+     * The previous version, from which you want to import comments
+     * This must match a directory name in the classesLocation
+     */
     previousVersion: '2.1',
     init: function(){
         this.name = 'babylon.' + this.version + '.d.ts';

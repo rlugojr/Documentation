@@ -29,7 +29,7 @@ The predicate condition constructor
 
 The predicate
 
-##Functions
+##Methods
 
 ###isValid() &rarr; boolean
 

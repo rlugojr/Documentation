@@ -33,7 +33,7 @@ optional | offset | number |  starting offset.
 
 
 
-##Functions
+##Methods
 
 ###executeNext() &rarr; void
 

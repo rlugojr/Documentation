@@ -55,7 +55,7 @@ Called on dispose
 
 
 
-##Functions
+##Methods
 
 ###render() &rarr; void
 

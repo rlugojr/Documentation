@@ -47,7 +47,7 @@ The min point
 
 The max point
 
-##Functions
+##Methods
 
 ###addEntry(entry) &rarr; void
 

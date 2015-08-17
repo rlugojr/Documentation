@@ -28,7 +28,7 @@ optional | power | number |
 
 
 
-##Functions
+##Methods
 
 ###easeInCore(gradient) &rarr; number
 

@@ -34,7 +34,7 @@ optional | samplingMode | number |
 
 
 
-##Functions
+##Methods
 
 ###scale(ratio) &rarr; void
 

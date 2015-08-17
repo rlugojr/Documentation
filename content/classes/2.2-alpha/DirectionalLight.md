@@ -43,7 +43,7 @@ The position of the light, used to calculate shadows
 
 
 
-##Functions
+##Methods
 
 ###getAbsolutePosition() &rarr; [Vector3](/classes/2.2-alpha/Vector3)
 

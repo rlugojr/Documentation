@@ -40,7 +40,7 @@ Function call when the element
 
 Default value is true, you can set false if you don't want to see the loading screen
 
-##Functions
+##Methods
 
 ###addMeshTask(taskName, meshesNames, rootUrl, sceneFilename) &rarr; IAssetTask
 

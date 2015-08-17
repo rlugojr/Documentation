@@ -80,7 +80,7 @@ The rate of refresh
 
 
 
-##Functions
+##Methods
 
 ###resetRefreshCounter() &rarr; void
 

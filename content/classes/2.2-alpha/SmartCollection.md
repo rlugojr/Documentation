@@ -30,7 +30,7 @@ optional | capacity | number |
 
 
 
-##Functions
+##Methods
 
 ###add(key, item) &rarr; number
 

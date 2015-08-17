@@ -39,7 +39,7 @@ The array that holds the png textures to load
 
 The array that holds the vnd.ms-dds files to load
 
-##Functions
+##Methods
 
 ###monitorElementForDragNDrop(p_elementToMonitor) &rarr; void
 

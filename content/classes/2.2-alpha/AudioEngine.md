@@ -34,7 +34,7 @@ class [AudioEngine](/classes/2.2-alpha/AudioEngine)
 
 
 
-##Functions
+##Methods
 
 ###dispose() &rarr; void
 

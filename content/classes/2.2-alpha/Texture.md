@@ -116,7 +116,7 @@ V angle of the texture
 
 W angle of the texture
 
-##Functions
+##Methods
 
 ###delayLoad() &rarr; void
 

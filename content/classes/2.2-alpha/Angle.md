@@ -32,7 +32,7 @@ class [Angle](/classes/2.2-alpha/Angle)
 
 
 
-##Functions
+##Methods
 
 ###static BetweenTwoPoints(a, b) &rarr; [Angle](/classes/2.2-alpha/Angle)
 

@@ -30,7 +30,7 @@ The state condition constructor
 
 The value of the stateCondition
 
-##Functions
+##Methods
 
 ###isValid() &rarr; boolean
 

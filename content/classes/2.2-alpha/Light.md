@@ -58,7 +58,7 @@ Holds the meshes non affected by this light
 
 
 
-##Functions
+##Methods
 
 ###getShadowGenerator() &rarr; [ShadowGenerator](/classes/2.2-alpha/ShadowGenerator)
 

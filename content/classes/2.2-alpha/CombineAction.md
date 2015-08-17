@@ -30,7 +30,7 @@ optional | condition | [Condition](/classes/2.2-alpha/Condition) |
 
 The childrens actions
 
-##Functions
+##Methods
 
 ###execute(evt) &rarr; void
 

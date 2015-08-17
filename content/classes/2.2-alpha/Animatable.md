@@ -59,7 +59,7 @@ Function to execute on animation end
 
 Tests if the animation is in started state
 
-##Functions
+##Methods
 
 ###appendAnimations(target, animations) &rarr; void
 

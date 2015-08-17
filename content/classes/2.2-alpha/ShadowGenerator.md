@@ -67,7 +67,7 @@ Disables the useVarianceShadowMap and activates poisson sampling to soften shado
 
 
 
-##Functions
+##Methods
 
 ###isReady(subMesh, useInstances) &rarr; boolean
 

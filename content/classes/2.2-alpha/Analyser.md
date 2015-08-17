@@ -42,7 +42,7 @@ class [Analyser](/classes/2.2-alpha/Analyser)
 
 
 
-##Functions
+##Methods
 
 ###getFrequencyBinCount() &rarr; number
 

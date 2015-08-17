@@ -43,7 +43,7 @@ default : true
 
 This renderer render list
 
-##Functions
+##Methods
 
 ###reset() &rarr; void
 

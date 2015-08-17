@@ -52,7 +52,7 @@ True : No rotation constraint ; False : Have rotation constraint
 
 The camera locked target
 
-##Functions
+##Methods
 
 ###setTarget(target) &rarr; void
 

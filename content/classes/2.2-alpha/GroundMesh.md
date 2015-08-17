@@ -34,7 +34,7 @@ true if this is generated, false if is not
 
 The subdivision of the [GroundMesh](/classes/2.2-alpha/GroundMesh)
 
-##Functions
+##Methods
 
 ###optimize(chunksCount, octreeBlocksSize) &rarr; void
 

@@ -11,7 +11,7 @@ class [SineEase](/classes/2.2-alpha/SineEase) extends [EasingFunction](/classes/
 
 
 
-##Functions
+##Methods
 
 ###easeInCore(gradient) &rarr; number
 

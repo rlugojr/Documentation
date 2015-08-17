@@ -167,7 +167,7 @@ Mask used to filter a texture color
 
 
 
-##Functions
+##Methods
 
 ###recycleParticle(particle) &rarr; void
 

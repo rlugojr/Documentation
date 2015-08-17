@@ -35,7 +35,7 @@ optional | samplingMode | number |
 
 The video element
 
-##Functions
+##Methods
 
 ###update() &rarr; boolean
 

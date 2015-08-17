@@ -138,7 +138,7 @@ The layerMask
 
 
 
-##Functions
+##Methods
 
 ###getActiveMeshes() &rarr; [SmartArray](/classes/2.2-alpha/SmartArray)&lt;[Mesh](/classes/2.2-alpha/Mesh)&gt;
 

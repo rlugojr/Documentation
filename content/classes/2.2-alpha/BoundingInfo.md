@@ -42,7 +42,7 @@ The bounding box of the bounding info
 
 The bounding sphere of the bounding info
 
-##Functions
+##Methods
 
 ###isInFrustum(frustumPlanes) &rarr; boolean
 

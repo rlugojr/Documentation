@@ -28,7 +28,7 @@ A tutorial abouth ShaderMaterials can be found here : http://blogs.msdn.com/b/et
  | shaderPath | any | 
  | options | any | 
 
-##Functions
+##Methods
 
 ###needAlphaBlending() &rarr; boolean
 

@@ -56,7 +56,7 @@ isGreater of value condition
 
 isLesser of value condition
 
-##Functions
+##Methods
 
 ###isValid() &rarr; boolean
 

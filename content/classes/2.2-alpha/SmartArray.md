@@ -30,7 +30,7 @@ Array
 
 The length of the smart array
 
-##Functions
+##Methods
 
 ###push(value) &rarr; void
 

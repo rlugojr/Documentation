@@ -19,7 +19,7 @@ Update the body position according to the mesh position
 
 @param mesh
 
-##Functions
+##Methods
 
 ###initialize(iterations) &rarr; void
 

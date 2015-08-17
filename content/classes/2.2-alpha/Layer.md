@@ -46,7 +46,7 @@ The color of this layer
 
 Dispose
 
-##Functions
+##Methods
 
 ###render() &rarr; void
 

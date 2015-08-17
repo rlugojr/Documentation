@@ -34,7 +34,7 @@ The trigger options
 
 Number of the trigger
 
-##Functions
+##Methods
 
 ###getTriggerParameter() &rarr; any
 

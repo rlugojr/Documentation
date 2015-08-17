@@ -43,7 +43,7 @@ The blue value
 
 The alpha value
 
-##Functions
+##Methods
 
 ###addInPlace(right) &rarr; [Color4](/classes/2.2-alpha/Color4)
 

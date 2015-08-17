@@ -28,7 +28,7 @@ class [VRDeviceOrientationFreeCamera](/classes/2.2-alpha/VRDeviceOrientationFree
  | scene | [Scene](/classes/2.2-alpha/Scene) | 
 optional | compensateDistorsion | boolean | 
 
-##Functions
+##Methods
 
 ###attachControl(element, noPreventDefault) &rarr; void
 

@@ -46,7 +46,7 @@ The skeleton
 
 The sourceMesh
 
-##Functions
+##Methods
 
 ###getTotalVertices() &rarr; number
 

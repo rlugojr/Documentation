@@ -17,7 +17,7 @@ class [EffectFallbacks](/classes/2.2-alpha/EffectFallbacks)
 
 Returns true if the current rank value is lower than or equal to the max rank value, false otherwise
 
-##Functions
+##Methods
 
 ###addFallback(rank, define) &rarr; void
 

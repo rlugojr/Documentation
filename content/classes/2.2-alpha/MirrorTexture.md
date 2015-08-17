@@ -34,7 +34,7 @@ optional | generateMipMaps | boolean |
 
 The plane to apply the mirror texture
 
-##Functions
+##Methods
 
 ###clone() &rarr; [MirrorTexture](/classes/2.2-alpha/MirrorTexture)
 

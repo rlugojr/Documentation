@@ -47,7 +47,7 @@ true if is Packable, false otherwise
 
 True if the mesh has collision, false otherwise
 
-##Functions
+##Methods
 
 ###intersects(ray, fastCheck) &rarr; any
 

@@ -36,7 +36,7 @@ The texture URL
 
 The coordinates mode
 
-##Functions
+##Methods
 
 ###clone() &rarr; [CubeTexture](/classes/2.2-alpha/CubeTexture)
 

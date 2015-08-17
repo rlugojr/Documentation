@@ -44,7 +44,7 @@ Verify that a mesh can receive lens flares.
 
 Lens flare system is enabled
 
-##Functions
+##Methods
 
 ###getScene() &rarr; [Scene](/classes/2.2-alpha/Scene)
 

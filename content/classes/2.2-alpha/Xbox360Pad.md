@@ -77,7 +77,7 @@ Contains a value of the [Xbox360Dpad](/classes/2.2-alpha/Xbox360Dpad) enum refer
 
 
 
-##Functions
+##Methods
 
 ###onlefttriggerchanged(callback) &rarr; void
 

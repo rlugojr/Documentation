@@ -46,7 +46,7 @@ The duration for the given interpolation
 
 Set true to stop other animation, false otherwise.
 
-##Functions
+##Methods
 
 ###execute() &rarr; void
 

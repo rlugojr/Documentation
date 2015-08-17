@@ -9,7 +9,7 @@ class [AndOrNotEvaluator](/classes/2.2-alpha/AndOrNotEvaluator)
 
 
 
-##Functions
+##Methods
 
 ###static Eval(query, evaluateCallback) &rarr; boolean
 

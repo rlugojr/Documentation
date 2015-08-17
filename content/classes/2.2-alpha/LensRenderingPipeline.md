@@ -81,7 +81,7 @@ The depth-of-field [PostProcess](/classes/2.2-alpha/PostProcess) id in the pipel
 
 @type {string}
 
-##Functions
+##Methods
 
 ###setEdgeBlur(amount) &rarr; void
 

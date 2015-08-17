@@ -56,7 +56,7 @@ Function called when an error occurs
 
 
 
-##Functions
+##Methods
 
 ###isReady() &rarr; boolean
 

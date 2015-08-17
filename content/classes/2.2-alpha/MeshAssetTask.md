@@ -68,7 +68,7 @@ Function call when the mesh isn't load successfully
 
 True if is completed, false otherwise.
 
-##Functions
+##Methods
 
 ###run(scene, onSuccess, onError) &rarr; void
 

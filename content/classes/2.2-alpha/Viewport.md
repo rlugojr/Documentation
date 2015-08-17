@@ -41,7 +41,7 @@ The width of the viewport on the render-target surface in pixels
 
 The height of the  viewport on the render-target surface in pixels
 
-##Functions
+##Methods
 
 ###toGlobal(engine) &rarr; [Viewport](/classes/2.2-alpha/Viewport)
 

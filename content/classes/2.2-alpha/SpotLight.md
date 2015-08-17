@@ -50,7 +50,7 @@ The speed of the decay of the light with distance
 
 
 
-##Functions
+##Methods
 
 ###getAbsolutePosition() &rarr; [Vector3](/classes/2.2-alpha/Vector3)
 

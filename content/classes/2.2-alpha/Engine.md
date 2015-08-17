@@ -176,7 +176,7 @@ Sets the innerHTML for the loading UI created in to displayLoadingUI : void
 
 Get/Set the background color for the loading UI created in to displayLoadingUI : void
 
-##Functions
+##Methods
 
 ###getGlInfo() &rarr; { vendor: string,  renderer: string,  version: string }
 

@@ -11,7 +11,7 @@ class [QuinticEase](/classes/2.2-alpha/QuinticEase) extends [EasingFunction](/cl
 
 
 
-##Functions
+##Methods
 
 ###easeInCore(gradient) &rarr; number
 

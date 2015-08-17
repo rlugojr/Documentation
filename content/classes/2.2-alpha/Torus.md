@@ -44,7 +44,7 @@ optional | side | number |
 
 
 
-##Functions
+##Methods
 
 ###copy(id) &rarr; [Geometry](/classes/2.2-alpha/Geometry)
 

@@ -80,7 +80,7 @@ optional | options | any |  Objects to provide with the current available option
 
 
 
-##Functions
+##Methods
 
 ###dispose() &rarr; void
 

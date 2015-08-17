@@ -28,7 +28,7 @@ class [WebVRFreeCamera](/classes/2.2-alpha/WebVRFreeCamera) extends [FreeCamera]
  | scene | [Scene](/classes/2.2-alpha/Scene) | 
 optional | compensateDistorsion | boolean | 
 
-##Functions
+##Methods
 
 ###attachControl(element, noPreventDefault) &rarr; void
 

@@ -94,7 +94,7 @@ Does this action manager has pick triggers
 
 @return {boolean} whether or not it has pick triggers
 
-##Functions
+##Methods
 
 ###dispose() &rarr; void
 

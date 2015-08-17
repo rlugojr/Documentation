@@ -11,7 +11,7 @@ class [SceneSerializer](/classes/2.2-alpha/SceneSerializer)
 
 
 
-##Functions
+##Methods
 
 ###static Serialize(scene) &rarr; any
 

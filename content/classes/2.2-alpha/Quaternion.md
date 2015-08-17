@@ -41,7 +41,7 @@ The third coordinate
 
 The fourth coordinate
 
-##Functions
+##Methods
 
 ###toString() &rarr; string
 

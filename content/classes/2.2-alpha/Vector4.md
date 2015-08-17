@@ -43,7 +43,7 @@ class [Vector4](/classes/2.2-alpha/Vector4)
 
 
 
-##Functions
+##Methods
 
 ###toString() &rarr; string
 

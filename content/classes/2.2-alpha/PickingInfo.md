@@ -43,7 +43,7 @@ The faceId of the mesh
 
 
 
-##Functions
+##Methods
 
 ###getNormal(useWorldCoordinates, useVerticesNormals) &rarr; [Vector3](/classes/2.2-alpha/Vector3)
 

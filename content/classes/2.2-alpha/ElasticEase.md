@@ -33,7 +33,7 @@ optional | springiness | number |
 
 
 
-##Functions
+##Methods
 
 ###easeInCore(gradient) &rarr; number
 

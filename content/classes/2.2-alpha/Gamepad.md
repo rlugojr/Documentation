@@ -46,7 +46,7 @@ The left stick values
 
 The right stick values
 
-##Functions
+##Methods
 
 ###onleftstickchanged(callback) &rarr; void
 

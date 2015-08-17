@@ -21,7 +21,7 @@ Tests if the given value is under the epsilon value
 
 Updates the position of the body using the given mesh rotation
 
-##Functions
+##Methods
 
 ###initialize(iterations) &rarr; void
 

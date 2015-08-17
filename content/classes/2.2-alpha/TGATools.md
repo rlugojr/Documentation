@@ -9,7 +9,7 @@ class [TGATools](/classes/2.2-alpha/TGATools)
 
 
 
-##Functions
+##Methods
 
 ###static GetTGAHeader(data) &rarr; any
 

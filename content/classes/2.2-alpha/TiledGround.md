@@ -54,7 +54,7 @@ optional | mesh | [Mesh](/classes/2.2-alpha/Mesh) |
 
 
 
-##Functions
+##Methods
 
 ###copy(id) &rarr; [Geometry](/classes/2.2-alpha/Geometry)
 

@@ -49,7 +49,7 @@ This particle angle
 
 
 
-##Functions
+##Methods
 
 ###copyTo(other) &rarr; void
 

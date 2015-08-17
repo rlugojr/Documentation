@@ -84,7 +84,7 @@ Controls the density of each sample
 
 @type {number}
 
-##Functions
+##Methods
 
 ###isReady(subMesh, useInstances) &rarr; boolean
 

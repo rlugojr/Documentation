@@ -31,7 +31,7 @@ optional | normal | [Vector3](/classes/2.2-alpha/Vector3) |
 
 
 
-##Functions
+##Methods
 
 ###clone() &rarr; [PositionNormalVertex](/classes/2.2-alpha/PositionNormalVertex)
 

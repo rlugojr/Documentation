@@ -50,7 +50,7 @@ The radius of the bounding sphere
 
 
 
-##Functions
+##Methods
 
 ###isInFrustum(frustumPlanes) &rarr; boolean
 

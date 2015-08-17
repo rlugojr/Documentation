@@ -35,7 +35,7 @@ The direction of the light
 
 The ground color
 
-##Functions
+##Methods
 
 ###setDirectionToTarget(target) &rarr; [Vector3](/classes/2.2-alpha/Vector3)
 

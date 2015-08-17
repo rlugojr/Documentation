@@ -34,7 +34,7 @@ class [CollisionCoordinatorWorker](/classes/2.2-alpha/CollisionCoordinatorWorker
 
 
 
-##Functions
+##Methods
 
 ###getNewPosition(position, velocity, collider, maximumRetry, excludedMesh, onNewPosition, collisionIndex) &rarr; void
 

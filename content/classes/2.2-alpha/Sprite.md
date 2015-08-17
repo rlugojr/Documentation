@@ -74,7 +74,7 @@ Animations array
 
 The sprite size
 
-##Functions
+##Methods
 
 ###playAnimation(from, to, loop, delay) &rarr; void
 

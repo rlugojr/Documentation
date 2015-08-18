@@ -93,7 +93,7 @@ class [Tools](/classes/2.2-alpha/Tools)
 
 
 
-##Functions
+##Methods
 
 ###static ToHex(i) &rarr; string
 

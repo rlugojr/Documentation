@@ -120,7 +120,7 @@ Default value : False
 
 
 
-##Functions
+##Methods
 
 ###isReady(mesh, useInstances) &rarr; boolean
 

@@ -28,7 +28,7 @@ The max rendering groups
 
 default : 4
 
-##Functions
+##Methods
 
 ###render(customRenderFunction, activeMeshes, renderParticles, renderSprites) &rarr; void
 

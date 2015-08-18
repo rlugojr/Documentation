@@ -101,7 +101,7 @@ Delay load mesh file
 
 
 
-##Functions
+##Methods
 
 ###addLODLevel(distance, mesh) &rarr; [Mesh](/classes/2.2-alpha/Mesh)
 

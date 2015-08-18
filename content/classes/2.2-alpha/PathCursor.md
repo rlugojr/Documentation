@@ -30,7 +30,7 @@ class [PathCursor](/classes/2.2-alpha/PathCursor)
 
 
 
-##Functions
+##Methods
 
 ###getPoint() &rarr; [Vector3](/classes/2.2-alpha/Vector3)
 

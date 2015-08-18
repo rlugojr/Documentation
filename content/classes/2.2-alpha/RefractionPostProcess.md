@@ -45,7 +45,7 @@ The simulated refraction
 
 The coefficient of the base color (0 to remove base color tainting)
 
-##Functions
+##Methods
 
 ###dispose(camera) &rarr; void
 

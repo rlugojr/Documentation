@@ -16,7 +16,7 @@ class [PostProcessRenderPipelineManager](/classes/2.2-alpha/PostProcessRenderPip
 ##new [PostProcessRenderPipelineManager](/classes/2.2-alpha/PostProcessRenderPipelineManager)()
 
 Builds a [PostProcessRenderPipelineManager](/classes/2.2-alpha/PostProcessRenderPipelineManager) object
-##Functions
+##Methods
 
 ###addPipeline(renderPipeline) &rarr; void
 

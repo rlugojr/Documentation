@@ -153,7 +153,7 @@ CheckCollisions
 
 CollisionsRadius
 
-##Functions
+##Methods
 
 ###attachControl(element, noPreventDefault, useCtrlForPanning) &rarr; void
 

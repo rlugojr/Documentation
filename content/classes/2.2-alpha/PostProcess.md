@@ -76,7 +76,7 @@ Other possible values : [Texture](/classes/2.2-alpha/Texture).BILINEAR_SAMPLINGM
 
 
 
-##Functions
+##Methods
 
 ###isReusable() &rarr; boolean
 

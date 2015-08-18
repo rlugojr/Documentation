@@ -27,7 +27,7 @@ Creates a new rendering group
 
 
 
-##Functions
+##Methods
 
 ###render(customRenderFunction) &rarr; boolean
 

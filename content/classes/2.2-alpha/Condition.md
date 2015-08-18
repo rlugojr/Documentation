@@ -22,7 +22,7 @@ The condition constructor
 ---|---|---|---
  | actionManager | [ActionManager](/classes/2.2-alpha/ActionManager) | 
 
-##Functions
+##Methods
 
 ###isValid() &rarr; boolean
 

@@ -23,7 +23,7 @@ Do nothing
 optional | triggerOptions | any | 
 optional | condition | [Condition](/classes/2.2-alpha/Condition) | 
 
-##Functions
+##Methods
 
 ###execute() &rarr; void
 

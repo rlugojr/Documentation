@@ -15,7 +15,7 @@ class [SIMDHelper](/classes/2.2-alpha/SIMDHelper)
 
 
 
-##Functions
+##Methods
 
 ###static DisableSIMD() &rarr; void
 

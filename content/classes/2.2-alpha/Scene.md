@@ -412,7 +412,7 @@ Current on-screen Y position of the pointer
 
 
 
-##Functions
+##Methods
 
 ###getCachedMaterial() &rarr; [Material](/classes/2.2-alpha/Material)
 

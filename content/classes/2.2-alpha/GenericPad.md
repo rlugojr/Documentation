@@ -38,7 +38,7 @@ The gamepad index
 
 The gamepad object access this way : gamepad.buttons[]
 
-##Functions
+##Methods
 
 ###onbuttondown(callback) &rarr; void
 

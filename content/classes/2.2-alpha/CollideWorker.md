@@ -30,7 +30,7 @@ class [CollideWorker](/classes/2.2-alpha/CollideWorker)
 
 
 
-##Functions
+##Methods
 
 ###collideWithWorld(position, velocity, maximumRetry, excludedMeshUniqueId) &rarr; void
 

@@ -24,7 +24,7 @@ Builds a [PostProcessRenderPipeline](/classes/2.2-alpha/PostProcessRenderPipelin
  | engine | [Engine](/classes/2.2-alpha/Engine) | 
  | name | string | 
 
-##Functions
+##Methods
 
 ###addEffect(renderEffect) &rarr; void
 

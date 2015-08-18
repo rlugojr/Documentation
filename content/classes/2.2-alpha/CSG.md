@@ -31,7 +31,7 @@ The rotation
 
 The scaling
 
-##Functions
+##Methods
 
 ###static FromMesh(mesh) &rarr; [CSG](/classes/2.2-alpha/CSG)
 

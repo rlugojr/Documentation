@@ -25,7 +25,7 @@ class [EasingFunction](/classes/2.2-alpha/EasingFunction)
 
 
 
-##Functions
+##Methods
 
 ###setEasingMode(easingMode) &rarr; void
 

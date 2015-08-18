@@ -38,7 +38,7 @@ green value
 
 blue value
 
-##Functions
+##Methods
 
 ###toString() &rarr; string
 

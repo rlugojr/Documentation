@@ -9,7 +9,7 @@ class [Polygon](/classes/2.2-alpha/Polygon)
 
 
 
-##Functions
+##Methods
 
 ###static Rectangle(xmin, ymin, xmax, ymax) &rarr; [Vector2](/classes/2.2-alpha/Vector2)[]
 

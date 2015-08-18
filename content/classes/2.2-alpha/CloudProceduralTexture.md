@@ -38,7 +38,7 @@ optional | generateMipMaps | boolean |
 
 
 
-##Functions
+##Methods
 
 ###updateShaderUniforms() &rarr; void
 

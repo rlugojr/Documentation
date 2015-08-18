@@ -42,7 +42,7 @@ Default value : [Vector3](/classes/2.2-alpha/Vector3).Zero
 
 True is [VirtualJoystick](/classes/2.2-alpha/VirtualJoystick) is pressed, false otherwise.
 
-##Functions
+##Methods
 
 ###setJoystickSensibility(newJoystickSensibility) &rarr; void
 

@@ -11,7 +11,7 @@ class [CollisionDetectorTransferable](/classes/2.2-alpha/CollisionDetectorTransf
 
 
 
-##Functions
+##Methods
 
 ###onInit(payload) &rarr; void
 

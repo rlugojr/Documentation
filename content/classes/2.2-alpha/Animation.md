@@ -92,7 +92,7 @@ The animation restarts with the inital values
 
 The animation keeps its final value i.e stopped
 
-##Functions
+##Methods
 
 ###static CreateAndStartAnimation(name, mesh, targetProperty, framePerSecond, totalFrame, from, to, loopMode, easingFunction) &rarr; [Animatable](/classes/2.2-alpha/Animatable)
 

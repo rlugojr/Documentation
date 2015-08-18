@@ -11,7 +11,7 @@ class [CollisionCache](/classes/2.2-alpha/CollisionCache)
 
 
 
-##Functions
+##Methods
 
 ###getMeshes() &rarr; { [n: number]: SerializedMesh }
 

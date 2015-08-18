@@ -38,7 +38,7 @@ The second coordinate
 
 The third coordinate
 
-##Functions
+##Methods
 
 ###toString() &rarr; string
 

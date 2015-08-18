@@ -31,7 +31,7 @@ optional | singleInstance | boolean |
 
 Applies given postProcess object to the rendrer effect
 
-##Functions
+##Methods
 
 ###addPass(renderPass) &rarr; void
 

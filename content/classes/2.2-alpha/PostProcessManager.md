@@ -23,7 +23,7 @@ A tutorial about post process can be found here
 ---|---|---|---
  | scene | [Scene](/classes/2.2-alpha/Scene) | 
 
-##Functions
+##Methods
 
 ###directRender(postProcesses, targetTexture) &rarr; void
 

@@ -33,7 +33,7 @@ class [PolygonMeshBuilder](/classes/2.2-alpha/PolygonMeshBuilder)
  | contours | [Vector2](/classes/2.2-alpha/Vector2)[] | 
  | scene | [Scene](/classes/2.2-alpha/Scene) | 
 
-##Functions
+##Methods
 
 ###addHole(hole) &rarr; [PolygonMeshBuilder](/classes/2.2-alpha/PolygonMeshBuilder)
 

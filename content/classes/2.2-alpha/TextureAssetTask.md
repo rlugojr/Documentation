@@ -64,7 +64,7 @@ True if is completed, false otherwise.
 
 The texture
 
-##Functions
+##Methods
 
 ###run(scene, onSuccess, onError) &rarr; void
 

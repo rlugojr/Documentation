@@ -49,7 +49,7 @@ True if is completed, false otherwise.
 
 The image
 
-##Functions
+##Methods
 
 ###run(scene, onSuccess, onError) &rarr; void
 

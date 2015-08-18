@@ -21,7 +21,7 @@ class [DepthRenderer](/classes/2.2-alpha/DepthRenderer)
  | scene | [Scene](/classes/2.2-alpha/Scene) | 
 optional | type | number | 
 
-##Functions
+##Methods
 
 ###isReady(subMesh, useInstances) &rarr; boolean
 

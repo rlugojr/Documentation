@@ -48,7 +48,7 @@ The mesh under the pointer position
 
 The source of the event
 
-##Functions
+##Methods
 
 ###static CreateNew(source, evt) &rarr; [ActionEvent](/classes/2.2-alpha/ActionEvent)
 

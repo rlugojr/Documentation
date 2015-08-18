@@ -11,7 +11,7 @@ class [CubicEase](/classes/2.2-alpha/CubicEase) extends [EasingFunction](/classe
 
 
 
-##Functions
+##Methods
 
 ###easeInCore(gradient) &rarr; number
 

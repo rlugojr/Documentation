@@ -85,7 +85,7 @@ Minimum luminance needed to compute HDR
 
 
 
-##Functions
+##Methods
 
 ###update() &rarr; void
 

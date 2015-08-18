@@ -53,7 +53,7 @@ The animations of the node
 
 Called when node is ready
 
-##Functions
+##Methods
 
 ###getScene() &rarr; [Scene](/classes/2.2-alpha/Scene)
 

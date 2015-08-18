@@ -71,7 +71,7 @@ The matrice indice kind
 
 The matrice weight kind
 
-##Functions
+##Methods
 
 ###isUpdatable() &rarr; boolean
 

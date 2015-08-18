@@ -47,7 +47,7 @@ True if is completed, false otherwise.
 
 The data
 
-##Functions
+##Methods
 
 ###run(scene, onSuccess, onError) &rarr; void
 

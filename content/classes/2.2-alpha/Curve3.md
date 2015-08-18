@@ -22,7 +22,7 @@ class [Curve3](/classes/2.2-alpha/Curve3)
 ---|---|---|---
  | points | [Vector3](/classes/2.2-alpha/Vector3)[] | 
 
-##Functions
+##Methods
 
 ###static CreateQuadraticBezier(v0, v1, v2, nbPoints) &rarr; [Curve3](/classes/2.2-alpha/Curve3)
 

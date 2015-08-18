@@ -11,7 +11,7 @@ class [SceneOptimizer](/classes/2.2-alpha/SceneOptimizer)
 
 
 
-##Functions
+##Methods
 
 ###static OptimizeAsync(scene, options, onSuccess, onFailure) &rarr; void
 

@@ -44,7 +44,7 @@ class [DebugLayer](/classes/2.2-alpha/DebugLayer)
 
 
 
-##Functions
+##Methods
 
 ###isVisible() &rarr; boolean
 

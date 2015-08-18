@@ -21,7 +21,7 @@ True to force the full loading of the scene, also to prevent from delaying the t
 
 True to show the loading screen, false otherwise
 
-##Functions
+##Methods
 
 ###static RegisterPlugin(plugin) &rarr; void
 

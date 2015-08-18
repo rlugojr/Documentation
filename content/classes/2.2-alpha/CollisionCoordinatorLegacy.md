@@ -11,7 +11,7 @@ class [CollisionCoordinatorLegacy](/classes/2.2-alpha/CollisionCoordinatorLegacy
 
 
 
-##Functions
+##Methods
 
 ###getNewPosition(position, velocity, collider, maximumRetry, excludedMesh, onNewPosition, collisionIndex) &rarr; void
 

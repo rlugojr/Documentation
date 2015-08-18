@@ -41,7 +41,7 @@ optional | y2 | number |
 
 
 
-##Functions
+##Methods
 
 ###easeInCore(gradient) &rarr; number
 

@@ -62,7 +62,7 @@ The minimum world of the boundingBox
 
 The maximum world of the boundingBox
 
-##Functions
+##Methods
 
 ###getWorldMatrix() &rarr; [Matrix](/classes/2.2-alpha/Matrix)
 

@@ -39,7 +39,7 @@ Children bones array
 
 Animations of this bone
 
-##Functions
+##Methods
 
 ###getParent() &rarr; [Bone](/classes/2.2-alpha/Bone)
 

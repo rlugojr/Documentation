@@ -30,7 +30,7 @@ A tutorial about multi materials can be found here : http://blogs.msdn.com/b/ete
 
 Array of sub materials
 
-##Functions
+##Methods
 
 ###getSubMaterial(index) &rarr; [Material](/classes/2.2-alpha/Material)
 

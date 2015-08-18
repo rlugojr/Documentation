@@ -33,7 +33,7 @@ The first coordinate
 
 The second coordinate
 
-##Functions
+##Methods
 
 ###toString() &rarr; string
 

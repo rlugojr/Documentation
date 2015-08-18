@@ -38,7 +38,7 @@ The angular sensibility of the gamepad
 
 The move sensibility of the gamepad
 
-##Functions
+##Methods
 
 ###dispose() &rarr; void
 

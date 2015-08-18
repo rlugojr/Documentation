@@ -20,7 +20,7 @@ class [SimplificationQueue](/classes/2.2-alpha/SimplificationQueue)
 
 
 
-##Functions
+##Methods
 
 ###addTask(task) &rarr; void
 

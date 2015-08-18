@@ -36,7 +36,7 @@ The vector describing the direction of the [Ray](/classes/2.2-alpha/Ray)
 
 
 
-##Functions
+##Methods
 
 ###intersectsBoxMinMax(minimum, maximum) &rarr; boolean
 

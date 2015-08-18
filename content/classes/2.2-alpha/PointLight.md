@@ -31,7 +31,7 @@ Creates a new [PointLight](/classes/2.2-alpha/PointLight) object
 
 The position of the emitting point
 
-##Functions
+##Methods
 
 ###getAbsolutePosition() &rarr; [Vector3](/classes/2.2-alpha/Vector3)
 

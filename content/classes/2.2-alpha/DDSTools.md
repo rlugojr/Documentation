@@ -11,7 +11,7 @@ class [DDSTools](/classes/2.2-alpha/DDSTools)
 
 
 
-##Functions
+##Methods
 
 ###static GetDDSInfo(arrayBuffer) &rarr; DDSInfo
 

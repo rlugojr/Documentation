@@ -67,7 +67,7 @@ The angular sensibility of the camera
 
 The function called when this camera collides with the world
 
-##Functions
+##Methods
 
 ###attachControl(element, noPreventDefault) &rarr; void
 

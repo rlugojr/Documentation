@@ -276,7 +276,7 @@ Is check collisions
 
 @default false
 
-##Functions
+##Methods
 
 ###getLOD(camera) &rarr; [AbstractMesh](/classes/2.2-alpha/AbstractMesh)
 

@@ -36,7 +36,7 @@ The action property path
 
 The action value
 
-##Functions
+##Methods
 
 ###execute() &rarr; void
 

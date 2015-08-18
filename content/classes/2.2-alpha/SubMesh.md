@@ -55,7 +55,7 @@ The index Count
 
 The lines Index Count
 
-##Functions
+##Methods
 
 ###getBoundingInfo() &rarr; [BoundingInfo](/classes/2.2-alpha/BoundingInfo)
 

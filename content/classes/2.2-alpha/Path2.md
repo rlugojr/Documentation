@@ -27,7 +27,7 @@ class [Path2](/classes/2.2-alpha/Path2)
 
 
 
-##Functions
+##Methods
 
 ###addLineTo(x, y) &rarr; [Path2](/classes/2.2-alpha/Path2)
 

@@ -11,7 +11,7 @@ class [QuarticEase](/classes/2.2-alpha/QuarticEase) extends [EasingFunction](/cl
 
 
 
-##Functions
+##Methods
 
 ###easeInCore(gradient) &rarr; number
 

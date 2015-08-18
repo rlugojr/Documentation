@@ -35,7 +35,7 @@ optional | generateMipMaps | boolean |
 
 
 
-##Functions
+##Methods
 
 ###isReady() &rarr; boolean
 

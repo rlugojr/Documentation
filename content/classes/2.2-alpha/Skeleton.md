@@ -38,7 +38,7 @@ Name of the skeleton
 
 Array of bones composing the skeleton
 
-##Functions
+##Methods
 
 ###getTransformMatrices() &rarr; Float32Array
 

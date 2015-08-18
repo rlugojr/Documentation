@@ -36,7 +36,7 @@ optional | samplingMode | number |
 
 
 
-##Functions
+##Methods
 
 ###update(data) &rarr; void
 

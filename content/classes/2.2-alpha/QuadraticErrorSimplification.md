@@ -44,7 +44,7 @@ Ported mostly from QSlim and http://voxels.blogspot.de/2014/05/quadric-mesh-simp
 
 
 
-##Functions
+##Methods
 
 ###simplify(settings, successCallback) &rarr; void
 

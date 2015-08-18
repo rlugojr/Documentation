@@ -59,7 +59,7 @@ The [VertexData](/classes/2.2-alpha/VertexData) matricesWeights
 
 The [VertexData](/classes/2.2-alpha/VertexData) indices
 
-##Functions
+##Methods
 
 ###set(data, kind) &rarr; void
 

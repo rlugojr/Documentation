@@ -11,7 +11,7 @@ class [CircleEase](/classes/2.2-alpha/CircleEase) extends [EasingFunction](/clas
 
 
 
-##Functions
+##Methods
 
 ###easeInCore(gradient) &rarr; number
 

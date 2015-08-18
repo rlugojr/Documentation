@@ -46,7 +46,7 @@ Returns the full location string
 
 @param url The url location to complete
 
-##Functions
+##Methods
 
 ###checkManifestFile() &rarr; void
 

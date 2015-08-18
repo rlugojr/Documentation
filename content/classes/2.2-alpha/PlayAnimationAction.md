@@ -41,7 +41,7 @@ The ending frame index
 
 [Animation](/classes/2.2-alpha/Animation) loop or not
 
-##Functions
+##Methods
 
 ###execute() &rarr; void
 

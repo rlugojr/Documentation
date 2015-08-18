@@ -30,7 +30,7 @@ optional | condition | [Condition](/classes/2.2-alpha/Condition) |
 
 Func
 
-##Functions
+##Methods
 
 ###execute(evt) &rarr; void
 

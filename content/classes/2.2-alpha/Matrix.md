@@ -15,7 +15,7 @@ class [Matrix](/classes/2.2-alpha/Matrix)
 
 The matrix, which is an array
 
-##Functions
+##Methods
 
 ###isIdentity() &rarr; boolean
 

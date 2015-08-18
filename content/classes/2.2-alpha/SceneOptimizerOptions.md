@@ -37,7 +37,7 @@ optional | trackerDuration | number |
 
 
 
-##Functions
+##Methods
 
 ###static LowDegradationAllowed(targetFrameRate) &rarr; [SceneOptimizerOptions](/classes/2.2-alpha/SceneOptimizerOptions)
 

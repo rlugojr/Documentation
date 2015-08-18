@@ -68,7 +68,7 @@ The value used for a convex hull impostor
 
 Returns epsilon value : 0.001, used for approximations
 
-##Functions
+##Methods
 
 ###dispose() &rarr; void
 

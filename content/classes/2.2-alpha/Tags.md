@@ -9,7 +9,7 @@ class [Tags](/classes/2.2-alpha/Tags)
 
 
 
-##Functions
+##Methods
 
 ###static EnableFor(obj) &rarr; void
 

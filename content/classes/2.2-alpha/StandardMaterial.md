@@ -155,7 +155,7 @@ Function to know if bump texture is enabled
 
 
 
-##Functions
+##Methods
 
 ###needAlphaBlending() &rarr; boolean
 

@@ -90,7 +90,7 @@ Default value is 0.0002
 
 @type {number}
 
-##Functions
+##Methods
 
 ###getBlurHPostProcess() &rarr; [BlurPostProcess](/classes/2.2-alpha/BlurPostProcess)
 

@@ -20,7 +20,7 @@ Builds an [OutlineRenderer](/classes/2.2-alpha/OutlineRenderer) object
 ---|---|---|---
  | scene | [Scene](/classes/2.2-alpha/Scene) | 
 
-##Functions
+##Methods
 
 ###render(subMesh, batch, useOverlay) &rarr; void
 

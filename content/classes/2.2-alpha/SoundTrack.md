@@ -33,7 +33,7 @@ optional | options | any |
 
 
 
-##Functions
+##Methods
 
 ###dispose() &rarr; void
 

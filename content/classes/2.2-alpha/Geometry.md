@@ -44,7 +44,7 @@ optional | mesh | [Mesh](/classes/2.2-alpha/Mesh) |
 
 
 
-##Functions
+##Methods
 
 ###getScene() &rarr; [Scene](/classes/2.2-alpha/Scene)
 

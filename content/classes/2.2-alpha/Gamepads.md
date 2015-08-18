@@ -22,7 +22,7 @@ Builds a [Gamepads](/classes/2.2-alpha/Gamepads) object
 ---|---|---|---
  | ongamedpadconnected | (gamepad: [Gamepad](/classes/2.2-alpha/Gamepad)) =&gt; void | 
 
-##Functions
+##Methods
 
 ###dispose() &rarr; void
 

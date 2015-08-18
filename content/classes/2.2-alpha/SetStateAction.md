@@ -31,7 +31,7 @@ optional | condition | [Condition](/classes/2.2-alpha/Condition) |
 
 The action value
 
-##Functions
+##Methods
 
 ###execute() &rarr; void
 

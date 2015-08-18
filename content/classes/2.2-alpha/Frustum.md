@@ -9,7 +9,7 @@ class [Frustum](/classes/2.2-alpha/Frustum)
 
 
 
-##Functions
+##Methods
 
 ###static GetPlanes(transform) &rarr; [Plane](/classes/2.2-alpha/Plane)[]
 

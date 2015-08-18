@@ -24,7 +24,7 @@ class [StopSoundAction](/classes/2.2-alpha/StopSoundAction) extends [Action](/cl
  | sound | [Sound](/classes/2.2-alpha/Sound) | 
 optional | condition | [Condition](/classes/2.2-alpha/Condition) | 
 
-##Functions
+##Methods
 
 ###execute() &rarr; void
 

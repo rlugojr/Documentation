@@ -103,7 +103,7 @@ By default : 4
 
 
 
-##Functions
+##Methods
 
 ###getScene() &rarr; [Scene](/classes/2.2-alpha/Scene)
 

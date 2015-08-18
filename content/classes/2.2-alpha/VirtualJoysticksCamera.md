@@ -27,7 +27,7 @@ Creates a new [VirtualJoysticksCamera](/classes/2.2-alpha/VirtualJoysticksCamera
  | position | [Vector3](/classes/2.2-alpha/Vector3) | 
  | scene | [Scene](/classes/2.2-alpha/Scene) | 
 
-##Functions
+##Methods
 
 ###getLeftJoystick() &rarr; [VirtualJoystick](/classes/2.2-alpha/VirtualJoystick)
 

@@ -44,7 +44,7 @@ Create function for Meshes
 
 Create function for SubMeshes
 
-##Functions
+##Methods
 
 ###update(worldMin, worldMax, entries) &rarr; void
 

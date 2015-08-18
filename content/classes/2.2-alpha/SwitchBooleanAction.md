@@ -31,7 +31,7 @@ optional | condition | [Condition](/classes/2.2-alpha/Condition) |
 
 Defines the path to the property to affect with the action
 
-##Functions
+##Methods
 
 ###execute() &rarr; void
 

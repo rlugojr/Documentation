@@ -27,7 +27,7 @@ Builds a new [PostProcessRenderPass](/classes/2.2-alpha/PostProcessRenderPass) o
  | beforeRender | () =&gt; void | 
  | afterRender | () =&gt; void | 
 
-##Functions
+##Methods
 
 ###setRenderList(renderList) &rarr; void
 

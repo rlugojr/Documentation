@@ -33,7 +33,7 @@ optional | bounciness | number |
 
 
 
-##Functions
+##Methods
 
 ###easeInCore(gradient) &rarr; number
 

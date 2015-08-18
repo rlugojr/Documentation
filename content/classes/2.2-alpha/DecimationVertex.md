@@ -51,7 +51,7 @@ class [DecimationVertex](/classes/2.2-alpha/DecimationVertex)
 
 
 
-##Functions
+##Methods
 
 ###updatePosition(newPosition) &rarr; void
 

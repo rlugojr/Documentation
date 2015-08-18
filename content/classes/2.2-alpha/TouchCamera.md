@@ -38,7 +38,7 @@ The angular sensibility of the camera
 
 The move sensibility of the camera
 
-##Functions
+##Methods
 
 ###attachControl(canvas, noPreventDefault) &rarr; void
 

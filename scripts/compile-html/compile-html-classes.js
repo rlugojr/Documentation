@@ -322,7 +322,9 @@ var processTocString = function(tocString){
         if(tocString.match(/>Members</)){
             return '<option value="members" class="cat">Members</option>';
         } else if(tocString.match(/>Methods</)){
-            return '<option value="members" class="cat">Methods</option>';
+            return '<option value="methods" class="cat">Methods</option>';
+        } else if(tocString.match(/>Functions</)){
+            return '<option value="functions" class="cat">Functions</option>';
         } else {
             return false;
         }

@@ -125,20 +125,38 @@
             });
         });
 
-        $.each($('.classContent h2, .classContent h3'), function(i, title){
-            if($(title)[0].tagName === 'H2'){
-                if($(title).text() === 'Methods' || $(title).text() === 'Members'){
-                    $('#methodsList').append($('<option>', {
-                        class: 'cat',
-                        value: $(title).attr('id'),
-                        html: $(title).text()
-                    }));
-                }
-            } else {
+        /** Populates the select list with two "options groups":
+          * - members
+          * - methods/functions.
+          * The options groups are sorted. Note that not <optgroup> element
+          * is inserted, only <option>.
+          **/
+        $.each($('.classContent h2'), function(i, h2Title){
+            if($(h2Title).text() === 'Methods' || $(h2Title).text() === 'Members' || $(h2Title).text() === 'Functions'){
+                // collect all h3 concerned by the h2 title
+                var h3Elements = $(h2Title).nextUntil("h2", "h3");
+
                 $('#methodsList').append($('<option>', {
-                    value: $(title).attr('id'),
-                    html: $(title).text()
+                    class: 'cat',
+                    value: $(h2Title).attr('id'),
+                    html: $(h2Title).text()
                 }));
+
+                // sort the h3 titles (alpha)
+                var h3IDs = [];
+
+                $.each(h3Elements, function(i, h3title){
+                    h3IDs.push($(h3title).attr('id'));
+                });
+
+                h3IDs = h3IDs.sort();
+
+                $.each(h3IDs, function(i, titleId){
+                    $('#methodsList').append($('<option>', {
+                        value: titleId,
+                        html: $('#'+titleId).text()
+                    }));
+                });
             }
         });
 

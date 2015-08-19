@@ -439,6 +439,10 @@
         {
           "title": "OBJ",
           "filename": "OBJ"
+        },
+        {
+          "title": "glTF",
+          "filename": "glTF"
         }
       ]
     },

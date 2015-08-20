@@ -25,7 +25,7 @@ include includes/header.jade
                         | Next Page
 
             .filters
-                if(availableFilters.length != 0)
+                if(availableFilters && availableFilters.length != 0)
                     if(availableFilters.every(function(f, i){ return f.enabled === false}))
                         #all.basicFilter.enabled
                             span all

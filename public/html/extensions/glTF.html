@@ -1,0 +1,69 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><a href="/">Babylon.js | DOCUMENTATION</a></div><div id="whatsnew" class="item"><a href="/whats-new">What's new</a></div><div id="general" class="item"><a href="/generals">General</a></div><div id="tutorials" class="item"><a href="/tutorials">Tutorials</a></div><div id="exporters" class="item"><a href="/exporters">Exporters</a></div><div id="extensions" class="item active"><a href="/extensions">Extensions</a></div><div id="classes" class="item"><a href="/classes">Classes</a></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>extensions</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>glTF</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
+<li><a href="#demohttpbabylonjs-extrasazurewebsitesnetgltfhtml"><a href="http://babylonjs-extras.azurewebsites.net/glTF.html">Demo</a></a></li>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#supported-features">Supported features</a></li>
+<li><a href="#unsupported-features">Unsupported features</a></li>
+<li><a href="#to-improve">To improve</a></li>
+</ul>
+</li>
+</ul>
+</div></div><div id="staticContent"><h1><a name="babylonjs-gltf-file-loader" class="anchor" href="#babylonjs-gltf-file-loader"></a>Babylon.js glTF File Loader</h1><h1><a name="a-hrefhttpbabylonjs-extrasazurewebsitesnetgltfhtmldemoa" class="anchor" href="#a-hrefhttpbabylonjs-extrasazurewebsitesnetgltfhtmldemoa"></a><a href="http://babylonjs-extras.azurewebsites.net/glTF.html">Demo</a></h1><h1><a name="usage" class="anchor" href="#usage"></a>Usage</h1><p>The glTF file loader is a SceneLoader plugin.
+Just reference the loader in your HTML file:</p>
+<pre><code>&lt;script src=&quot;babylon.2.1.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;babylon.glTFFileLoader.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>And then, call the scene loader:</p>
+<pre><code>BABYLON.SceneLoader.Load(&quot;./&quot;, &quot;duck.gltf&quot;, engine, function (scene) { 
+   // do somethings with the scene
+});
+</code></pre><h2><a name="supported-features" class="anchor" href="#supported-features"></a>Supported features</h2><ul>
+<li>Load scenes (SceneLoader.Load)</li>
+<li>Import geometries<ul>
+<li>From binary files</li>
+<li>From base64 buffers</li>
+</ul>
+</li>
+<li>Import lights</li>
+<li>Import cameras</li>
+<li>Import and set custom shaders (if no shaders, the Babylon.js default material is applied)<ul>
+<li>Automatically bind attributes</li>
+<li>Automatically bind matrices</li>
+<li>Set uniforms</li>
+</ul>
+</li>
+<li>Import and set animations</li>
+</ul>
+<h2><a name="unsupported-features" class="anchor" href="#unsupported-features"></a>Unsupported features</h2><ul>
+<li>ImportMesh function</li>
+<li>Skinning<ul>
+<li>Skeletons</li>
+<li>Bones</li>
+<li>Hardware skinning (shaders support)</li>
+</ul>
+</li>
+<li>Shaders<ul>
+<li>Set uniforms with types MAT2 and MAT3</li>
+</ul>
+</li>
+<li>Handle dummy nodes (empty nodes)</li>
+</ul>
+<h2><a name="to-improve" class="anchor" href="#to-improve"></a>To improve</h2><ul>
+<li>Y is UP</li>
+<li>Test on more animations</li>
+</ul>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>    Github</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Documentation" target="_blank"><i class="fa fa-code-fork"></i>    Contribute</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><script>(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            };
+    i[r].l = 1 * new Date();
+    a = s.createElement(o);
+    m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-66146410-1', 'auto');
+ga('send', 'pageview');</script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
+    $(this).text($(this).text().replace(/&nbsp;/gi, ''));
+});
+hljs.initHighlightingOnLoad();</script></body></html>

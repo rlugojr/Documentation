@@ -16,57 +16,58 @@
 <h2><a name="how-can-i-do-this" class="anchor" href="#how-can-i-do-this"></a>How can I do this ?</h2><p>An easy way to get started using basic elements... is by visiting <a href="http://babylonjs-playground.azurewebsites.net/?2"><strong>Playground Demo Scene 02</strong></a>.&nbsp; You might wish to use the &#39;Get .zip&#39; choice on its top menu.&nbsp; The index.html that you will receive in that zip... contains everything you will need to start making basic elements.&nbsp; Remember that link, as we will talk more about it.</p>
 <p>I&#39;m sure you have already read the&nbsp; <a href="http://doc.babylonjs.com/page.php?p=22621"><strong>Babylon.js Primer</strong></a> and the&nbsp; <a href="http://doc.babylonjs.com/page.php?p=21911"><strong>previous tutorial</strong></a>, and thus you know how to format scene files.&nbsp; So, we won&#39;t talk about that, here.&nbsp; We are going to go step by step through <a href="http://babylonjs-playground.azurewebsites.net/?2"><strong>Playground Demo Scene 02</strong></a>.&nbsp; Open that link in a new tab or window, and then come back here, and we&#39;ll get started.</p>
 <p>Let&#39;s look at the createScene function used in Playground Demo 2:</p>
-<pre><code class="lang-javascript">var createScene = function () {
-&amp;nbsp;&amp;nbsp; &amp;nbsp;var scene = new BABYLON.Scene(engine);
+<pre><code class="lang-javascript">
+    var createScene = function () {
+        var scene = new BABYLON.Scene(engine);
 
-&amp;nbsp;&amp;nbsp; &amp;nbsp;var camera = new BABYLON.ArcRotateCamera(&quot;Camera&quot;, 3 * Math.PI / 2, Math.PI / 8, 50, BABYLON.Vector3.Zero(), scene);
+        var camera = new BABYLON.ArcRotateCamera(&quot;Camera&quot;, 3 * Math.PI / 2, Math.PI / 8, 50, BABYLON.Vector3.Zero(), scene);
 
-&amp;nbsp;&amp;nbsp; &amp;nbsp;camera.attachControl(canvas, false);
+        camera.attachControl(canvas, false);
 
-&amp;nbsp;&amp;nbsp; &amp;nbsp;var light = new BABYLON.HemisphericLight(&quot;hemi&quot;, new BABYLON.Vector3(0, 1, 0), scene);
+        var light = new BABYLON.HemisphericLight(&quot;hemi&quot;, new BABYLON.Vector3(0, 1, 0), scene);
 
-&amp;nbsp;&amp;nbsp; &amp;nbsp;//Creation of a box
-&amp;nbsp;&amp;nbsp; &amp;nbsp;//(name of the box, size, scene)
-&amp;nbsp;&amp;nbsp; &amp;nbsp;var box = BABYLON.Mesh.CreateBox(&quot;box&quot;, 6.0, scene);
+        //Creation of a box
+        //(name of the box, size, scene)
+        var box = BABYLON.Mesh.CreateBox(&quot;box&quot;, 6.0, scene);
 
-&amp;nbsp;&amp;nbsp; &amp;nbsp;//Creation of a sphere 
-&amp;nbsp;&amp;nbsp; &amp;nbsp;//(name of the sphere, segments, diameter, scene) 
-&amp;nbsp;&amp;nbsp; &amp;nbsp;var sphere = BABYLON.Mesh.CreateSphere(&quot;sphere&quot;, 10.0, 10.0, scene);
+        //Creation of a sphere 
+        //(name of the sphere, segments, diameter, scene) 
+        var sphere = BABYLON.Mesh.CreateSphere(&quot;sphere&quot;, 10.0, 10.0, scene);
 
-&amp;nbsp;&amp;nbsp; &amp;nbsp;//Creation of a plane
-&amp;nbsp;&amp;nbsp; &amp;nbsp;//(name of the plane, size, scene)
-&amp;nbsp;&amp;nbsp; &amp;nbsp;var plane = BABYLON.Mesh.CreatePlane(&quot;plane&quot;, 10.0, scene);
+        //Creation of a plane
+        //(name of the plane, size, scene)
+        var plane = BABYLON.Mesh.CreatePlane(&quot;plane&quot;, 10.0, scene);
 
-&amp;nbsp;&amp;nbsp; &amp;nbsp;//Creation of a cylinder
-&amp;nbsp;&amp;nbsp; &amp;nbsp;//(name, height, diamTop, diamBottom, tessellation, [optional height subdivs], scene, updatable)
-&amp;nbsp;&amp;nbsp; &amp;nbsp;var cylinder = BABYLON.Mesh.CreateCylinder(&quot;cylinder&quot;, 3, 3, 3, 6, 1, scene, false);
+        //Creation of a cylinder
+        //(name, height, diamTop, diamBottom, tessellation, [optional height subdivs], scene, updatable)
+        var cylinder = BABYLON.Mesh.CreateCylinder(&quot;cylinder&quot;, 3, 3, 3, 6, 1, scene, false);
 
-&amp;nbsp;&amp;nbsp; &amp;nbsp;// Creation of a torus
-&amp;nbsp;&amp;nbsp; &amp;nbsp;// (name, diameter, thickness, tessellation, scene, updatable)
-&amp;nbsp;&amp;nbsp; &amp;nbsp;var torus = BABYLON.Mesh.CreateTorus(&quot;torus&quot;, 5, 1, 10, scene, false);
+        // Creation of a torus
+        // (name, diameter, thickness, tessellation, scene, updatable)
+        var torus = BABYLON.Mesh.CreateTorus(&quot;torus&quot;, 5, 1, 10, scene, false);
 
-&amp;nbsp;&amp;nbsp; &amp;nbsp;// Creation of a knot
-&amp;nbsp;&amp;nbsp; &amp;nbsp;// (name, radius, tube, radialSegments, tubularSegments, p, q, scene, updatable)
-&amp;nbsp;&amp;nbsp; &amp;nbsp;var knot = BABYLON.Mesh.CreateTorusKnot(&quot;knot&quot;, 2, 0.5, 128, 64, 2, 3, scene);
+        // Creation of a knot
+        // (name, radius, tube, radialSegments, tubularSegments, p, q, scene, updatable)
+        var knot = BABYLON.Mesh.CreateTorusKnot(&quot;knot&quot;, 2, 0.5, 128, 64, 2, 3, scene);
 
-&amp;nbsp;&amp;nbsp; &amp;nbsp;// Creation of a lines mesh
-&amp;nbsp;&amp;nbsp; &amp;nbsp;var lines = BABYLON.Mesh.CreateLines(&quot;lines&quot;, [
-&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; new BABYLON.Vector3(-10, 0, 0),
-&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; new BABYLON.Vector3(10, 0, 0),
-&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; new BABYLON.Vector3(0, 0, -10),
-&amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; new BABYLON.Vector3(0, 0, 10)
-&amp;nbsp;&amp;nbsp; &amp;nbsp;], scene);
+        // Creation of a lines mesh
+        var lines = BABYLON.Mesh.CreateLines(&quot;lines&quot;, [
+            new BABYLON.Vector3(-10, 0, 0),
+            new BABYLON.Vector3(10, 0, 0),
+            new BABYLON.Vector3(0, 0, -10),
+            new BABYLON.Vector3(0, 0, 10)
+        ], scene);
 
-&amp;nbsp;&amp;nbsp; &amp;nbsp;// Moving elements
-&amp;nbsp;&amp;nbsp; &amp;nbsp;box.position = new BABYLON.Vector3(-10, 0, 0);&amp;nbsp; &amp;nbsp;// Using a vector
-&amp;nbsp;&amp;nbsp; &amp;nbsp;sphere.position = new BABYLON.Vector3(0, 10, 0); // Using a vector
-&amp;nbsp;&amp;nbsp; &amp;nbsp;plane.position.z = 10;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp;&amp;nbsp; &amp;nbsp; // Using a single coordinate component
-&amp;nbsp;&amp;nbsp; &amp;nbsp;cylinder.position.z = -10;
-&amp;nbsp;&amp;nbsp; &amp;nbsp;torus.position.x = 10;
-&amp;nbsp;&amp;nbsp; &amp;nbsp;knot.position.y = -10;
+        // Moving elements
+        box.position = new BABYLON.Vector3(-10, 0, 0);&amp;nbsp; &amp;nbsp;// Using a vector
+        sphere.position = new BABYLON.Vector3(0, 10, 0); // Using a vector
+        plane.position.z = 10;&amp;nbsp;    &amp;nbsp;  &amp;nbsp;  &amp;nbsp;  &amp;nbsp; &amp;nbsp; // Using a single coordinate component
+        cylinder.position.z = -10;
+        torus.position.x = 10;
+        knot.position.y = -10;
 
-&amp;nbsp;&amp;nbsp; &amp;nbsp;return scene;
-}
+        return scene;
+    }
 </code></pre>
 <p>Starting with the box, we create 7 different basic elements, and then position them at the end of the function (to keep them from being atop one another).&nbsp; It&#39;s really quite easy, isn&#39;t it?&nbsp; Again, starting with the creation of the box, let&#39;s talk about each of the 7 shapes/meshes.&nbsp; </p>
 <ul>
@@ -136,10 +137,10 @@
 <li><strong>Creation of a Lines Mesh</strong></li>
 </ul>
 <pre><code class="lang-javascript">var lines = BABYLON.Mesh.CreateLines(&quot;lines&quot;, [
-&amp;nbsp;&amp;nbsp; &amp;nbsp;new BABYLON.Vector3(-10, 0, 0),
-&amp;nbsp;&amp;nbsp; &amp;nbsp;new BABYLON.Vector3(10, 0, 0),
-&amp;nbsp;&amp;nbsp; &amp;nbsp;new BABYLON.Vector3(0, 0, -10),
-&amp;nbsp;&amp;nbsp; &amp;nbsp;new BABYLON.Vector3(0, 0, 10)
+    new BABYLON.Vector3(-10, 0, 0),
+    new BABYLON.Vector3(10, 0, 0),
+    new BABYLON.Vector3(0, 0, -10),
+    new BABYLON.Vector3(0, 0, 10)
 ], scene);
 </code></pre>
 <p>Parameters are: name, [array of comma-separated vectors], scene. </p>
@@ -245,12 +246,12 @@ Because this value creates twice more vertices than the mesh needs to be rendere
 <p>Thanks to forum user Kostar111 for this handy Tiled Ground constructor. Here is the basic code needed to create a tiled ground.</p>
 <pre><code class="lang-javascript">
 var precision = {
-&amp;nbsp;&amp;nbsp; &amp;nbsp;&quot;w&quot; : 2,
-&amp;nbsp;&amp;nbsp; &amp;nbsp;&quot;h&quot; : 2
+    &quot;w&quot; : 2,
+    &quot;h&quot; : 2
 };
 var subdivisions = {
-&amp;nbsp;&amp;nbsp; &amp;nbsp;&#39;h&#39; : 8,
-&amp;nbsp;&amp;nbsp; &amp;nbsp;&#39;w&#39; : 8
+    &#39;h&#39; : 8,
+    &#39;w&#39; : 8
 };
 var tiledGround = BABYLON.Mesh.CreateTiledGround(&quot;Tiled Ground&quot;, -3, -3, 3, 3, subdivisions, precision, scene, false);
 </code></pre>

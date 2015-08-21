@@ -47,7 +47,6 @@
 
     var reloadPage = function(){
         var enabledFilters = recoltFilters();
-        console.log(enabledFilters);
 
         var bf = (enabledFilters && enabledFilters.length > 0) ? '&bf=' + enabledFilters.join('+') : '&bf=all';
 

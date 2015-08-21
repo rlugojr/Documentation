@@ -14,7 +14,7 @@ router.get('/', function (req, res) {
     // request's params:
     var searchTerm = req.query.q + '',
         basicFilters = (req.query.bf + '' || 'all'),
-        // advancedFilter = (req.query.af + '' || 'non-strict'),
+    // advancedFilter = (req.query.af + '' || 'non-strict'),
         page = (req.query.page || 1 ) - 1,
         resultMax = (req.query.max || 25),
         offset = page * resultMax,
@@ -220,14 +220,14 @@ var uniquify = function(searchResult){
  * @returns {Array}
  * Returns array with this kind of structure (example with search = collisions):
  [
-     { category: 'tutorials', occurrences: 10 },
-     { category: '1.14', occurrences: 6 },
-     { category: '2.0', occurrences: 6 },
-     { category: '2.1', occurrences: 6 },
-     { category: '2.2-alpha', occurrences: 6 },
-     { category: 'exporters', occurrences: 3 },
-     { category: 'generals', occurrences: 3 },
-     { category: 'what\'s new', occurrences: 1 }
+ { category: 'tutorials', occurrences: 10 },
+ { category: '1.14', occurrences: 6 },
+ { category: '2.0', occurrences: 6 },
+ { category: '2.1', occurrences: 6 },
+ { category: '2.2-alpha', occurrences: 6 },
+ { category: 'exporters', occurrences: 3 },
+ { category: 'generals', occurrences: 3 },
+ { category: 'what\'s new', occurrences: 1 }
  ]
  */
 var buildCatArray = function(searchResult){

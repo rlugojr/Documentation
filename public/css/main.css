@@ -853,6 +853,7 @@ p {
     flex-wrap: wrap;
     justify-content: center; }
     .search-content .filters .basicFilter {
+      cursor: pointer;
       padding: 3px 7px;
       border-radius: 3px;
       font-size: 0.9em;

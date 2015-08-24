@@ -17,16 +17,11 @@ var fs      = require('fs'),
     toc     = require('marked-toc');
 
 
-renderer.heading = function(text, level){
+renderer.heading = function(text, level, raw){
     var escapedText = slugify(text, {allowedChars: '-'});
-    //var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-').replace(/-$/, '');
+    var escapedRaw = slugify(raw, {allowedChars: '-'});
 
-    return '<h' + level + '><a name="' +
-        escapedText +
-        '" class="anchor" href="#' +
-        escapedText +
-        '"></a>' +
-        text + '</h' + level + '>';
+    return '<h' + level + '><a name="' + escapedText + '" class="anchor" href="#' + escapedRaw + '"></a>' + text + '</h' + level + '>';
 };
 
 marked.setOptions({
@@ -122,18 +117,9 @@ var getStaticPagesContent = function(dataObj, category, cb){
                         var markedContent = marked(content),
                             tableOfContent = marked(toc(content, { omit:['PG_TITLE'], clean: ['a', 'href'] })).html;
 
-                        //if(markedContent.meta['PG_TITLE'] =='GUIGroup') {
-                        //    //var $ = cheerio.load(markedContent.html);
-                        //    console.log($('a.anchor', markedContent.html));
-                        //    //console.log(markedContent.html);
-                        //}
-
-
                         staticsContents.push({
                             "staticName": file.title,
                             "staticFileName": file.filename,
-                            //"staticFileName": markedContent.meta['PG_TITLE'].replace(/\s/g, "_"),
-                            //"staticMeta": markedContent.meta,
                             "staticContent": markedContent.html,
                             "toc":tableOfContent
                         });

@@ -2,19 +2,18 @@
 ID_PAGE: 25106
 PG_TITLE: GUIGroup
 ---
-##new [GUIGroup](http://doc.babylonjs.com/page.php?p=25106)(name, guiSystem)
+new [GUIGroup](http://doc.babylonjs.com/page.php?p=25106)(name, guiSystem)
 
 Represents a group of GUIObject. Can be used to easily retrieve GUIObjects grouped by functionality.
 
-####Parameters
+##Parameters
  | Name | Type | Description
----|---|---|---
+ | ---  | ---  | ---
  | name | string | The name of the group
  | guiSystem | GUISystem | The GUI system
----
 
 ##Members
-###guiSystem : [GUISystem](http://doc.babylonjs.com/page.php?p=25103)
+guiSystem : [GUISystem](http://doc.babylonjs.com/page.php?p=25103)
 The GUI system
 ###name : string
 The group name

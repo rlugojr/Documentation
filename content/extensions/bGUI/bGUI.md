@@ -2,23 +2,23 @@
 ID_PAGE: 25102
 PG_TITLE: bGUI
 ---
-# ![](https://raw.githubusercontent.com/Temechon/bGUI/master/logo_sd.png) v1.0
+![](https://raw.githubusercontent.com/Temechon/bGUI/master/logo_sd.png) v1.0
 
 **A Babylon.js extension to create a beautiful GUI**
 
-# What ?
+# What?
 bGUI is an extension for the 3D engine [Babylon.js](www.babylonjs.com) providing a set of tools and class to display a game GUI directly into your Babylon 3D game, without any HTML/CSS.
 
 
-# Why ? I can use HTML/CSS to do that !
+# Why? I can use HTML/CSS to do that!
 The only solution (for now) to deploy a babylon.js game on mobile platforms (Android/iOS - Windows Phone supports Webgl application natively) 
 is to use [Cocoon.js](https://www.ludei.com/cocoonjs/) provided by Ludei, with the technology Canvas+ (Webview+ is not so great in term of performance for 3D scenes).
 However, Canvas+ does not support DOM elements, such as div, img, ... The only solution is to create the GUI directly in the HTML canvas.
-That's what bGUI do !
+That's what bGUI do!
 
 This library can also fit to some people who want to control the game GUI in javascript without the need of jQuery or manipulating DOM objects.
  
-# How does it work ?
+# How does it work?
 bGUI adds automatically to your game an orthographic camera correctly configured (according to the canvas size and the device pixel ratio), 
 and gives you several classes to create your game GUI.
 A **GUIObject** is the root class of bGUI, and represents a 3D object (sphere, plane, cube, custom object, ...) translated into the GUI world, and removed from your game world.
@@ -28,7 +28,7 @@ bGUI gives you 2 specific classes in order to create HUD easily :
 * GUIPanel : extends **GUIObject** => it's a plane composed of an image texture.
 * GUIText : extends **GUIPanel** => its image texture is actually a dynamic texture where the specified text is written.
 
-# Is it easy to use ?
+# Is it easy to use?
 Of course ! First, you have to create a **GUISystem**, which represents your GUI world.
 It takes 3 parameters: the Babylon scene where the GUI will be created, and the width and the height of your GUI (in pixels).
 
@@ -59,14 +59,14 @@ You can also use a direct reference to the BABYLON mesh used for any GUIObject. 
 Babylon animations to update your panel for example. 
 
 
-# Any dependencies ?
+# Any dependencies?
 bGUI depends on [babylon.js (from v2.1-beta)](http://www.babylonjs.com), and [hand.js](https://handjs.codeplex.com/) for touch events.
  
-# Is a demo available somewhere ?
+# Is a demo available somewhere?
 Yes : [http://temechon.github.io/bGUI/](http://temechon.github.io/bGUI/)
 Try to click on the images :)
 
-# Copyright ?
+# Copyright?
 [WTFPL](http://www.wtfpl.net/about/)
 
 

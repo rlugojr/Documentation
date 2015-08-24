@@ -2,7 +2,8 @@
 ID_PAGE: 22621
 PG_TITLE: A Babylon.js Primer
 ---
-### Welcome to the... ###
+Welcome to the...
+
 ## Babylon.js WebGL Game Creation System!##
 
 Hi! Welcome to The Babylon.js Primer, an introduction to some of the things you will need to know in order to get the most out of this useful Javascript-based WebGL framework.
@@ -70,7 +71,7 @@ Inside the createScene() function (the purple section)... we will be doing the a
 ## A Visit to The Playground ##
 We have worked hard and learned much, so we deserve some playground time, at the Babylon.js Playground web site.&nbsp; Here is a scene that I once created and then saved... at the playground:
 
-## [BabylonJS Playground](http://babylonjs-playground.azurewebsites.net/#QKQHS) ##
+## BabylonJS Playground ##
 
 You might want to open that playground scene in a new window or new tab, so you can switch back and forth between here and there.
 
@@ -78,11 +79,11 @@ See the 'createScene' function in the left-side code editing window?&nbsp; Does 
 
 Let's pretend that you have been working on a scene file at home, and after many tries, you just cannot get it to work properly.&nbsp; You could copy your home createScene function, then visit the playground, press its **CLEAR** button to empty its editor window, and then paste YOUR createScene function into the editor. Press the playground's **RUN** button and see if it works.&nbsp; If it does not work, you can do some changes in the editor window, and hit **RUN** again... and again, and again.&nbsp; Experiment with it there, and if you still cannot get it to work, you can press the **SAVE** button.&nbsp; When you do that, the playground will give your scene a unique URL.&nbsp; It will look something like this:
 
-### http://babylonjs-playground.azurewebsites.net/#QKQHS ###
+http://babylonjs-playground.azurewebsites.net/#QKQHS
 
 Now you can bookmark that unique URL, and then visit the Babylon.js forum at:
 
-### http://www.html5gamedevs.com/forum/16-babylonjs/ ###
+http://www.html5gamedevs.com/forum/16-babylonjs/
 
 There, you can start a new topic, tell everyone the URL to your broken playground createScene function, and ask others if they will please visit your playground scene and help you get it working correctly.&nbsp; 
 
@@ -91,7 +92,7 @@ This is called white-boarding.&nbsp; It is an easy way to allow many people to w
 ## More About The Playground ##
 Once again let's visit the saved playground scene that I sent you to, above.
 
-### http://babylonjs-playground.azurewebsites.net/#QKQHS ###
+http://babylonjs-playground.azurewebsites.net/#QKQHS
 
 This time, I would like you to press the **Get .zip** button.&nbsp; The playground will open a small panel allowing you to download this scene.&nbsp; Save the zip file in some new empty folder on your home computer.&nbsp; Now use an UNZIP utility program to unzip it.&nbsp; Notice that there is one file in the folder, called index.html.&nbsp; Please load that file into a text editor or programming editor.&nbsp; Does it look like the big picture above?&nbsp; Sure it does.&nbsp; ANY scene from the Babylon.js playground, including its pre-installed demo scenes, can be brought to your home with the **Get .zip** button.&nbsp; Most of them will look very similar to the big picture, above.
 
@@ -105,7 +106,7 @@ You are becoming a Babylon.js TOOLS expert.&nbsp; When I say 'tools', I mean... 
 &nbsp;
 I would like you to visit the Babylon.js Playground once again (open in a new window or new tab, if possible), but this time we will visit its base URL at:
 
-### http://babylonjs-playground.azurewebsites.net ###
+http://babylonjs-playground.azurewebsites.net
 
 Notice the button that is currently labeled **Basic Scene**.&nbsp; (It is actually called the Scene Selector button, but it is currently LABELED 'Basic Scene')
 
@@ -313,7 +314,7 @@ As you toured the Babylon.js Playground demo scenes, you surely saw some .positi
 
 **POSITION** - Also called translation, every mesh is POSITIONED in a scene using X, Y, and Z settings.&nbsp; You can think of the .position property... as the mesh's LOCATION.&nbsp; The link below... is a saved playground scene that illustrates using a mesh's .position property.&nbsp; Try to open it in a new window or new tab, so you can jump back and forth between this tutorial... and the playground scene:
 
-### http://babylonjs-playground.azurewebsites.net/#35CPC ###
+http://babylonjs-playground.azurewebsites.net/#35CPC
 
 In the yellow text at the top of the scene, you will see the Babylon.js one-line way to set mybox.position (using our friend... the Vector3 value object).
 
@@ -325,19 +326,20 @@ Watch this positioning demo scene for some time, if you please.&nbsp; It will no
 
 Let's take a look at a playground scene that I once created and saved.&nbsp; In this demo, I made those invisible rods... be visible:
 
-### http://babylonjs-playground.azurewebsites.net/#YIT1S ###
+http://babylonjs-playground.azurewebsites.net/#YIT1S
 
 Take some time to carefully watch that scene.&nbsp; Like the last demo scene, the yellow text shows a Vector3 being used to set the .rotation property with some computer-generated values.&nbsp; The box is shown doing positive and negative rotations around each of the 3 axes.&nbsp; Under the yellow text... you again see the green text...&nbsp; showing the 3 'discrete' ways to set the box's .rotation property with values.&nbsp; I bet you understand this completely, don't you?&nbsp; Easy.
 
 **SCALING** - Scaling... is stretching or shrinking... along any of the 3 scene axes.&nbsp; Let's jump right into a saved playground scene that demonstrates scaling:
 
-### http://babylonjs-playground.azurewebsites.net/#1VMQNH ###
+http://babylonjs-playground.azurewebsites.net/#1VMQNH
 
 Again, take some time to watch the scene.&nbsp; And once more, the yellow text shows the one-line Vector3 way of setting a mesh's .scaling, or you can use one or more of the discrete ways of setting scaling... shown in the green text. You may have noticed that scaling values are never negative.&nbsp; It would be illogical to use a negative scaling value, and if you decide to use some negative values, unexpected results may occur.
 
 I would like you to take note... that scaling is **for mesh only**.&nbsp; For example, you can POSITION a mesh, camera, or light.&nbsp; You can often ROTATE a mesh, camera, or light.&nbsp; But SCALING... is for mesh.&nbsp; If you stretch or shrink (scale) a camera or light, you will break its electrical parts.&nbsp; (It's a joke, ok?)&nbsp; &nbsp;There is no reason to set scaling for a camera or light.&nbsp; They are invisible scene items.
 
 ## Quick Downloading 'The Big 4' Externals ##
+
 Remember 'The Big Picture' far above?&nbsp; In that section, I introduced you to 'The Big 4' external include files...&nbsp; hand.js, cannon.js, oimo.js, and babylon.js.&nbsp; Many people use GitHub version-management systems to download those files from the Babylon.js GitHub source code repository.&nbsp; Some people make their own 'minified' versions of Babylon.js... using the absolute latest source code files.&nbsp; Others like to be able to grab reasonably fresh versions of The Big 4... in simpler ways.
 
 When you click Get .zip at the Babylon.js playground, you get a zip that contains a file called index.html.&nbsp; If you examine index.html in a text editor, you will see a file that looks very much like The Big Picture far above.&nbsp; Look at the external includes section... the first four HTML SCRIPT elements/tags.&nbsp; The .src attribute within each of those SCRIPT elements... point to URL's located at the Babylon.js web site.

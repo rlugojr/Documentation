@@ -2,7 +2,8 @@
 ID_PAGE: 22631
 PG_TITLE: The Playground Tutorial
 ---
-## Introducing...
+Introducing...
+
 # The BabylonJS Playground!
 
 ![](http://urbanproductions.com/wingy/babylon/misc/playground02.jpg)

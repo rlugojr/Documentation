@@ -1,6 +1,6 @@
 # Babylon.js glTF File Loader
 
-#[Demo](http://babylonjs-extras.azurewebsites.net/glTF.html)
+[Demo](http://babylonjs-extras.azurewebsites.net/glTF.html)
 
 # Usage
 The glTF file loader is a SceneLoader plugin.

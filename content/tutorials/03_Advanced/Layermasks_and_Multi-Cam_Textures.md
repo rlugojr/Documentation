@@ -113,4 +113,3 @@ function addGunSight(scene){
 &nbsp;&nbsp; &nbsp;gunSight.material = mat;
 }
 ```
-[ end of doc ]

@@ -2,6 +2,8 @@
 ID_PAGE: 24847
 PG_TITLE: Parametric Shapes
 ---
+## Introduction
+
 The basic meshes you've seen up until now have an expected shape : when you create a sphere mesh, you expect to see a spherical shape. The same goes for a box mesh, a torus, a cylinder, etc.
 
 There is another kind of mesh whose final shapes aren't fixed. Their final shape depends upon some parameters. So we call these meshes "Parametric Shapes".

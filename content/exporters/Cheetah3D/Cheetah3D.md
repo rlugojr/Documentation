@@ -22,17 +22,17 @@ PG_TITLE: Cheetah3D
 
 More info on [my blog](http://cubeslam.net/).
 
-### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/Cheetah3d#install)Install
+### Install
 
 Put js script in this folder :
 
 /Users/YOUR_USER/Library/Application Support/Cheetah3D/Scripts/Macro/
 
-### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/Cheetah3d#usage)Usage
+### Usage
 
 Just load your scene and go to Tools/Scripts/Macro/Babylon file export. Choose a destination, and load your scene inside Babylon.JS!
 
-### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/Cheetah3d#license)License
+### License
 
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION

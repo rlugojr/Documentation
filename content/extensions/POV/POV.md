@@ -3,7 +3,7 @@ ID_PAGE: 24842
 PG_TITLE: POV
 ---
 #Point of View Movement and Rotation
-## Movement: ##
+## Movement ##
 ![](https://raw.githubusercontent.com/BabylonJS/Extensions/master/POV/doc-assist/POV-Movement.png)
 
 `AbstractMesh` has a pair of functions which allow you to move it relative to the mesh's current position, but without regard to its current rotation. Amounts are expressed in terms so as to provide the point of view of: behind the front of the mesh.
@@ -40,7 +40,7 @@ Also consider that most things in the real world move in the "Forward" direction
 
 It is believed that most meshes are defined with their "front side" facing the viewer, much the same way they are defined with their "bottom" below their "top". However, there is a switch in `AbstractMesh`, `definedFacingForward`, which can be set to false. Doing so implies it is defined facing backwards instead. 
 
-## Rotation: ##
+## Rotation ##
 *to do: make an image for rotation*
 
 There are also similar functions for rotation. Rotation does not have as strong a relationship with Point-of-View as positioning, but they do take into account `definedFacingForward`. Their argument terminology is also less "alien" than that of either pilot (yaw-pitch-roll) or mathematics (alpha-beta-gamma). This is even more helpful if rotating in multiple axis's.

@@ -35,4 +35,4 @@ Using 3DS Max, you can create instances of a mesh by just creating a clone insta
 ![](http://www.html5gamedevs.com/uploads/monthly_11_2014/post-5292-0-54659600-1415793353.jpg)
 
 ## Demo
-### http://www.babylonjs.com/?INSTANCES
+http://www.babylonjs.com/?INSTANCES

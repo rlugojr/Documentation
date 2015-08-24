@@ -8,7 +8,7 @@ Note: Careful, when you merge cloned mesh, you need to update the world matrix o
 
 **Note: This article covers the internal merging process. You can also use ```BABYLON.VertexData``` object and its ```merge()``` function for a simpler solution.**
 
-```Javascript
+```javascript
 var mergeMeshes = function (meshName, arrayObj, scene) {
     var arrayPos = [];
     var arrayNormal = [];

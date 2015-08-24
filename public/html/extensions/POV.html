@@ -1,7 +1,7 @@
 <!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><a href="/">Babylon.js | DOCUMENTATION</a></div><div id="whatsnew" class="item"><a href="/whats-new">What's new</a></div><div id="general" class="item"><a href="/generals">General</a></div><div id="tutorials" class="item"><a href="/tutorials">Tutorials</a></div><div id="exporters" class="item"><a href="/exporters">Exporters</a></div><div id="extensions" class="item active"><a href="/extensions">Extensions</a></div><div id="classes" class="item"><a href="/classes">Classes</a></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>extensions</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>POV</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
 <li><a href="#point-of-view-movement-and-rotation">Point of View Movement and Rotation</a><ul>
-<li><a href="#movement">Movement:</a></li>
-<li><a href="#rotation">Rotation:</a></li>
+<li><a href="#movement">Movement</a></li>
+<li><a href="#rotation">Rotation</a></li>
 </ul>
 </li>
 <li><a href="#pov-before-render-extension">POV Before Render Extension</a><ul>
@@ -22,7 +22,7 @@
 </ul>
 </li>
 </ul>
-</div></div><div id="staticContent"><h1><a name="point-of-view-movement-and-rotation" class="anchor" href="#point-of-view-movement-and-rotation"></a>Point of View Movement and Rotation</h1><h2><a name="movement" class="anchor" href="#movement"></a>Movement:</h2><p><img src="https://raw.githubusercontent.com/BabylonJS/Extensions/master/POV/doc-assist/POV-Movement.png" alt=""></p>
+</div></div><div id="staticContent"><h1><a name="point-of-view-movement-and-rotation" class="anchor" href="#point-of-view-movement-and-rotation"></a>Point of View Movement and Rotation</h1><h2><a name="movement" class="anchor" href="#movement"></a>Movement</h2><p><img src="https://raw.githubusercontent.com/BabylonJS/Extensions/master/POV/doc-assist/POV-Movement.png" alt=""></p>
 <p><code>AbstractMesh</code> has a pair of functions which allow you to move it relative to the mesh&#39;s current position, but without regard to its current rotation. Amounts are expressed in terms so as to provide the point of view of: behind the front of the mesh.</p>
 <p>Here are their function definitions:</p>
 <pre><code class="lang-typescript">/**
@@ -48,7 +48,7 @@ calcMovePOV(amountRight: number, amountUp: number, amountForward: number): BABYL
 <p>Moving a mesh without having to take into account current rotation, frees application code from doing so at the time, and facilitates more reusable application code.</p>
 <p>Also consider that most things in the real world move in the &quot;Forward&quot; direction the vast majority of the time. This is true even of the airplane you just shot down in your FPS shooter. Maybe it was even spiraling as well, but all you coded was &quot;Forward&quot;.</p>
 <p>It is believed that most meshes are defined with their &quot;front side&quot; facing the viewer, much the same way they are defined with their &quot;bottom&quot; below their &quot;top&quot;. However, there is a switch in <code>AbstractMesh</code>, <code>definedFacingForward</code>, which can be set to false. Doing so implies it is defined facing backwards instead. </p>
-<h2><a name="rotation" class="anchor" href="#rotation"></a>Rotation:</h2><p><em>to do: make an image for rotation</em></p>
+<h2><a name="rotation" class="anchor" href="#rotation"></a>Rotation</h2><p><em>to do: make an image for rotation</em></p>
 <p>There are also similar functions for rotation. Rotation does not have as strong a relationship with Point-of-View as positioning, but they do take into account <code>definedFacingForward</code>. Their argument terminology is also less &quot;alien&quot; than that of either pilot (yaw-pitch-roll) or mathematics (alpha-beta-gamma). This is even more helpful if rotating in multiple axis&#39;s.</p>
 <pre><code class="lang-typescript">/**
  * Perform relative rotation change from the point of view of behind the front of the mesh.

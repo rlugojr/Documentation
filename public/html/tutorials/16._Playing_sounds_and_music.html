@@ -1,52 +1,18 @@
 <!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><a href="/">Babylon.js | DOCUMENTATION</a></div><div id="whatsnew" class="item"><a href="/whats-new">What's new</a></div><div id="general" class="item"><a href="/generals">General</a></div><div id="tutorials" class="item active"><a href="/tutorials">Tutorials</a></div><div id="exporters" class="item"><a href="/exporters">Exporters</a></div><div id="extensions" class="item"><a href="/extensions">Extensions</a></div><div id="classes" class="item"><a href="/classes">Classes</a></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>Playing sounds and music</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
-<li><a href="#creating-an-ambient-sound-or-music">Creating an ambient sound or music</a><ul>
-<li><a href="#httpwwwbabylonjs-playgroundcompcy1j">http://www.babylonjs-playground.com/#PCY1J</a></li>
-</ul>
-</li>
-<li><a href="#handling-the-ready-to-play-callback-function">Handling the &#39;ready to play&#39; callback function</a><ul>
-<li><a href="#httpwwwbabylonjs-playgroundcompcy1j1">http://www.babylonjs-playground.com/#PCY1J#1</a></li>
-</ul>
-</li>
-<li><a href="#playing-a-sound-on-mouse-click-or-keydown">Playing a sound on mouse click or keydown</a><ul>
-<li><a href="#httpwwwbabylonjs-playgroundcompcy1j4">http://www.babylonjs-playground.com/#PCY1J#4</a></li>
-</ul>
-</li>
+<li><a href="#creating-an-ambient-sound-or-music">Creating an ambient sound or music</a></li>
+<li><a href="#handling-the-ready-to-play-callback-function">Handling the &#39;ready to play&#39; callback function</a></li>
+<li><a href="#playing-a-sound-on-mouse-click-or-keydown">Playing a sound on mouse click or keydown</a></li>
 <li><a href="#some-basic-properties">Some basic properties</a></li>
-<li><a href="#playing-several-sounds-simultaneously-and-synchronized">Playing several sounds simultaneously and synchronized</a><ul>
-<li><a href="#httpwwwbabylonjs-playgroundcompcy1j6">http://www.babylonjs-playground.com/#PCY1J#6</a></li>
-</ul>
-</li>
-<li><a href="#loading-a-sound-from-an-arraybuffer">Loading a sound from an ArrayBuffer</a><ul>
-<li><a href="#httpwwwbabylonjs-playgroundcompcy1j2">http://www.babylonjs-playground.com/#PCY1J#2</a></li>
-</ul>
-</li>
-<li><a href="#loading-a-sound-using-the-assets-manager">Loading a sound using the Assets Manager</a><ul>
-<li><a href="#httpwwwbabylonjs-playgroundcompcy1j8">http://www.babylonjs-playground.com/#PCY1J#8</a></li>
-</ul>
-</li>
-<li><a href="#creating-a-spatial-3d-sound">Creating a spatial 3D sound</a><ul>
-<li><a href="#httpwwwbabylonjs-playgroundcom2ah4yh">http://www.babylonjs-playground.com/#2AH4YH</a></li>
-</ul>
-</li>
-<li><a href="#attaching-a-sound-to-a-mesh">Attaching a sound to a mesh</a><ul>
-<li><a href="#httpwwwbabylonjs-playgroundcomindexhtml23">http://www.babylonjs-playground.com/index.html?23</a></li>
-</ul>
-</li>
-<li><a href="#creating-a-spatial-directional-3d-sound">Creating a spatial directional 3D sound</a><ul>
-<li><a href="#httpwwwbabylonjs-playgroundcom1bo0ys">http://www.babylonjs-playground.com/#1BO0YS</a></li>
-</ul>
-</li>
-<li><a href="#creating-your-own-custom-attenuation-function">Creating your own custom attenuation function</a><ul>
-<li><a href="#httpwwwbabylonjs-playgroundcom1yixeo">http://www.babylonjs-playground.com/#1YIXEO</a></li>
-<li><a href="#httpwwwbabylonjs-playgroundcom2ah4yh2">http://www.babylonjs-playground.com/#2AH4YH#2</a></li>
-</ul>
-</li>
+<li><a href="#playing-several-sounds-simultaneously-and-synchronized">Playing several sounds simultaneously and synchronized</a></li>
+<li><a href="#loading-a-sound-from-an-arraybuffer">Loading a sound from an ArrayBuffer</a></li>
+<li><a href="#loading-a-sound-using-the-assets-manager">Loading a sound using the Assets Manager</a></li>
+<li><a href="#creating-a-spatial-3d-sound">Creating a spatial 3D sound</a></li>
+<li><a href="#attaching-a-sound-to-a-mesh">Attaching a sound to a mesh</a></li>
+<li><a href="#creating-a-spatial-directional-3d-sound">Creating a spatial directional 3D sound</a></li>
+<li><a href="#creating-your-own-custom-attenuation-function">Creating your own custom attenuation function</a></li>
 <li><a href="#manipulating-sound-loaded-from-a-babylon-file">Manipulating sound loaded from a .babylon file</a></li>
 <li><a href="#using-sound-tracks">Using Sound Tracks</a></li>
-<li><a href="#using-the-analyser">Using the Analyser</a><ul>
-<li><a href="#httpwwwbabylonjs-playgroundcomptv7w1">http://www.babylonjs-playground.com/#PTV7W#1</a></li>
-</ul>
-</li>
+<li><a href="#using-the-analyser">Using the Analyser</a></li>
 </ul>
 </div></div><div id="staticContent"><p>Babylon.js sound engine is based on the <a href="http://webaudio.github.io/web-audio-api/"><strong>Web Audio specification</strong></a>. We decided not to offer a fallback on the audio tag or other mechanism. So, to use our sound engine, you need to use a Web Audio compatible browser. Still, if you’re using it on not compatible browser, it won’t break the rest of our engine, it will simply play no sound.
 The sound engine offers <strong>ambient</strong> sound, <strong>spatialized</strong> sound and <strong>directional</strong> sound. It can be created by code or by loading a .babylon file. It follows the simple &amp; powerful philosophy of the rest of the engine as you’re going to see. 
@@ -64,7 +30,8 @@ var music = new BABYLON.Sound(&quot;Music&quot;, &quot;music.wav&quot;, scene, n
 <li>5th parameter: a <strong>JSON object</strong> providing various options we’ll see in details. But you can already understand the goal of the 2 options provided.</li>
 </ul>
 <p>You can test this first sample into our playground: </p>
-<h3><a name="a-hrefhttpwwwbabylonjs-playgroundcompcy1jhttpwwwbabylonjs-playgroundcompcy1ja" class="anchor" href="#a-hrefhttpwwwbabylonjs-playgroundcompcy1jhttpwwwbabylonjs-playgroundcompcy1ja"></a><a href="http://www.babylonjs-playground.com/#PCY1J">http://www.babylonjs-playground.com/#PCY1J</a></h3><h2><a name="handling-the-39ready-to-play39-callback-function" class="anchor" href="#handling-the-39ready-to-play39-callback-function"></a>Handling the &#39;ready to play&#39; callback function</h2><p>Calling the <em>BABYLON.Sound()</em> constructor with an URL generates 2 phases:</p>
+<p><a href="http://www.babylonjs-playground.com/#PCY1J">http://www.babylonjs-playground.com/#PCY1J</a></p>
+<h2><a name="handling-the-39ready-to-play39-callback-function" class="anchor" href="#handling-the-ready-to-play-callback-function"></a>Handling the &#39;ready to play&#39; callback function</h2><p>Calling the <em>BABYLON.Sound()</em> constructor with an URL generates 2 phases:</p>
 <ol>
 <li>the .wav or .mp3 file is loaded from your webserver using an async XHR</li>
 <li>once loaded, the sound is being async decoded by web audio. If it succeeds, it raises the callback function you’ve provided.</li>
@@ -79,7 +46,8 @@ var music = new BABYLON.Sound(&quot;Music&quot;, &quot;music.wav&quot;, scene, n
 </code></pre>
 <p>This code loads the “<em>music.wav</em>” file from the web server, decode it and play it in the callback function only once using the <em>play()</em> function. The play function plays the sound immediately if no parameter is passed. You can provide a parameter of type number to play the sound after x seconds. </p>
 <p>Test it on our playground: </p>
-<h3><a name="a-hrefhttpwwwbabylonjs-playgroundcompcy1j1httpwwwbabylonjs-playgroundcompcy1j1a" class="anchor" href="#a-hrefhttpwwwbabylonjs-playgroundcompcy1j1httpwwwbabylonjs-playgroundcompcy1j1a"></a><a href="http://www.babylonjs-playground.com/#PCY1J#1">http://www.babylonjs-playground.com/#PCY1J#1</a></h3><h2><a name="playing-a-sound-on-mouse-click-or-keydown" class="anchor" href="#playing-a-sound-on-mouse-click-or-keydown"></a>Playing a sound on mouse click or keydown</h2><p>This sample code play a gunshot sound if you’re left-clicking or pressing the spacebar:</p>
+<p><a href="http://www.babylonjs-playground.com/#PCY1J#1">http://www.babylonjs-playground.com/#PCY1J#1</a></p>
+<h2><a name="playing-a-sound-on-mouse-click-or-keydown" class="anchor" href="#playing-a-sound-on-mouse-click-or-keydown"></a>Playing a sound on mouse click or keydown</h2><p>This sample code play a gunshot sound if you’re left-clicking or pressing the spacebar:</p>
 <pre><code class="lang-javascript">var gunshot = new BABYLON.Sound(&quot;gunshot&quot;, &quot;sounds/gunshot.wav&quot;, scene);
 
 window.addEventListener(&quot;mousedown&quot;, function (evt) {
@@ -97,7 +65,8 @@ window.addEventListener(&quot;keydown&quot;, function (evt) {
 });
 </code></pre>
 <p>Test it on our playground: </p>
-<h3><a name="a-hrefhttpwwwbabylonjs-playgroundcompcy1j4httpwwwbabylonjs-playgroundcompcy1j4a" class="anchor" href="#a-hrefhttpwwwbabylonjs-playgroundcompcy1j4httpwwwbabylonjs-playgroundcompcy1j4a"></a><a href="http://www.babylonjs-playground.com/#PCY1J#4">http://www.babylonjs-playground.com/#PCY1J#4</a></h3><h2><a name="some-basic-properties" class="anchor" href="#some-basic-properties"></a>Some basic properties</h2><p>You can set the volume of a sound via the options object or via the <em>setVolume()</em> function. You can set the play rate in the same manner.</p>
+<p><a href="http://www.babylonjs-playground.com/#PCY1J#4">http://www.babylonjs-playground.com/#PCY1J#4</a></p>
+<h2><a name="some-basic-properties" class="anchor" href="#some-basic-properties"></a>Some basic properties</h2><p>You can set the volume of a sound via the options object or via the <em>setVolume()</em> function. You can set the play rate in the same manner.</p>
 <p>You can also be notified when the sound has finished playing by registering yourself into the onended event.</p>
 <p>Here is a simple sample code mixing all that:</p>
 <pre><code class="lang-javascript">var volume = 0.1;
@@ -137,7 +106,8 @@ function soundReady() {
 }
 </code></pre>
 <p>Test it on our playground: </p>
-<h3><a name="a-hrefhttpwwwbabylonjs-playgroundcompcy1j6httpwwwbabylonjs-playgroundcompcy1j6a" class="anchor" href="#a-hrefhttpwwwbabylonjs-playgroundcompcy1j6httpwwwbabylonjs-playgroundcompcy1j6a"></a><a href="http://www.babylonjs-playground.com/#PCY1J#6">http://www.babylonjs-playground.com/#PCY1J#6</a></h3><h2><a name="loading-a-sound-from-an-arraybuffer" class="anchor" href="#loading-a-sound-from-an-arraybuffer"></a>Loading a sound from an ArrayBuffer</h2><p>You can bypass the first phase (the embedded XHR request) if you’re calling the constructor with your own provided <em>ArrayBuffer</em>.</p>
+<p><a href="http://www.babylonjs-playground.com/#PCY1J#6">http://www.babylonjs-playground.com/#PCY1J#6</a></p>
+<h2><a name="loading-a-sound-from-an-arraybuffer" class="anchor" href="#loading-a-sound-from-an-arraybuffer"></a>Loading a sound from an ArrayBuffer</h2><p>You can bypass the first phase (the embedded XHR request) if you’re calling the constructor with your own provided <em>ArrayBuffer</em>.</p>
 <p>Here is a sample code demonstrating it:</p>
 <pre><code class="lang-javascript">var gunshotFromAB;
 loadArrayBufferFromURL(&quot;sounds/gunshot.wav&quot;);
@@ -161,7 +131,8 @@ function soundReadyToBePlayed() {
 }
 </code></pre>
 <p>Test it on our playground: </p>
-<h3><a name="a-hrefhttpwwwbabylonjs-playgroundcompcy1j2httpwwwbabylonjs-playgroundcompcy1j2a" class="anchor" href="#a-hrefhttpwwwbabylonjs-playgroundcompcy1j2httpwwwbabylonjs-playgroundcompcy1j2a"></a><a href="http://www.babylonjs-playground.com/#PCY1J#2">http://www.babylonjs-playground.com/#PCY1J#2</a></h3><h2><a name="loading-a-sound-using-the-assets-manager" class="anchor" href="#loading-a-sound-using-the-assets-manager"></a>Loading a sound using the Assets Manager</h2><p>The assets manager is pretty useful as it handles for you some great features such as a loading screen. </p>
+<p><a href="http://www.babylonjs-playground.com/#PCY1J#2">http://www.babylonjs-playground.com/#PCY1J#2</a></p>
+<h2><a name="loading-a-sound-using-the-assets-manager" class="anchor" href="#loading-a-sound-using-the-assets-manager"></a>Loading a sound using the Assets Manager</h2><p>The assets manager is pretty useful as it handles for you some great features such as a loading screen. </p>
 <pre><code class="lang-javascript">var music1, music2, music3;
 
 // Assets manager
@@ -196,7 +167,8 @@ function soundReady() {
 assetsManager.load();
 </code></pre>
 <p>Test it on our playground: </p>
-<h3><a name="a-hrefhttpwwwbabylonjs-playgroundcompcy1j8httpwwwbabylonjs-playgroundcompcy1j8a" class="anchor" href="#a-hrefhttpwwwbabylonjs-playgroundcompcy1j8httpwwwbabylonjs-playgroundcompcy1j8a"></a><a href="http://www.babylonjs-playground.com/#PCY1J#8">http://www.babylonjs-playground.com/#PCY1J#8</a></h3><h2><a name="creating-a-spatial-3d-sound" class="anchor" href="#creating-a-spatial-3d-sound"></a>Creating a spatial 3D sound</h2><p>To transform a sound into a spatial sound, you need to specify that via the options:</p>
+<p><a href="http://www.babylonjs-playground.com/#PCY1J#8">http://www.babylonjs-playground.com/#PCY1J#8</a></p>
+<h2><a name="creating-a-spatial-3d-sound" class="anchor" href="#creating-a-spatial-3d-sound"></a>Creating a spatial 3D sound</h2><p>To transform a sound into a spatial sound, you need to specify that via the options:</p>
 <pre><code class="lang-javascript">var music = new BABYLON.Sound(&quot;music&quot;, &quot;music.wav&quot;,
     scene, null, { loop: true, autoplay: true, spatialSound: true });
 </code></pre>
@@ -218,7 +190,8 @@ assetsManager.load();
 <pre><code class="lang-javascript">music.setPosition(new BABYLON.Vector3(100, 0, 0));
 </code></pre>
 <p>To have a better understanding, please have a look to this sample into our playground: </p>
-<h3><a name="a-hrefhttpwwwbabylonjs-playgroundcom2ah4yhhttpwwwbabylonjs-playgroundcom2ah4yha" class="anchor" href="#a-hrefhttpwwwbabylonjs-playgroundcom2ah4yhhttpwwwbabylonjs-playgroundcom2ah4yha"></a><a href="http://www.babylonjs-playground.com/#2AH4YH">http://www.babylonjs-playground.com/#2AH4YH</a></h3><p>Move into the scene using keyboard &amp; mouse. Each sound is represented by a purple sphere. When you’re entering a sphere, you’ll start hearing one the music. The sound is louder at the center of the sphere and fall down to 0 when leaving the sphere.</p>
+<p><a href="http://www.babylonjs-playground.com/#2AH4YH">http://www.babylonjs-playground.com/#2AH4YH</a></p>
+<p>Move into the scene using keyboard &amp; mouse. Each sound is represented by a purple sphere. When you’re entering a sphere, you’ll start hearing one the music. The sound is louder at the center of the sphere and fall down to 0 when leaving the sphere.</p>
 <h2><a name="attaching-a-sound-to-a-mesh" class="anchor" href="#attaching-a-sound-to-a-mesh"></a>Attaching a sound to a mesh</h2><p>This is probably the simplest way to handle 3D sounds in your scene. Simply create a <em>BABYLON.Sound</em>, attach it to an existing mesh and you’re done! If the mesh is moving, the sound will move with it. You have nothing to do. </p>
 <p>Here’s the code to use:</p>
 <pre><code class="lang-javascript">var music = new BABYLON.Sound(&quot;Violons&quot;, &quot;sounds/violons11.wav&quot;, scene, null, { loop: true, autoplay: true });
@@ -228,7 +201,8 @@ music.attachToMesh(box);
 </code></pre>
 <p>Calling the <em>attachToMesh()</em> function on a sound will transform it automatically into a spatial 3D sound. Using the above code, you’ll fall into default Babylon.js values: a <em>linear</em> attenuation with a <em>maxDistance</em> of 100 and a panning model of type “<em>HRTF</em>”.</p>
 <p>Put your headphone and launch this sample into our playground:</p>
-<h3><a name="a-hrefhttpwwwbabylonjs-playgroundcomindexhtml23httpwwwbabylonjs-playgroundcomindexhtml23a" class="anchor" href="#a-hrefhttpwwwbabylonjs-playgroundcomindexhtml23httpwwwbabylonjs-playgroundcomindexhtml23a"></a><a href="http://www.babylonjs-playground.com/index.html?23">http://www.babylonjs-playground.com/index.html?23</a></h3><h2><a name="creating-a-spatial-directional-3d-sound" class="anchor" href="#creating-a-spatial-directional-3d-sound"></a>Creating a spatial directional 3D sound</h2><p>By default, spatial sounds are omnidirectional. But you can have directional sounds if you’d like to.</p>
+<p><a href="http://www.babylonjs-playground.com/index.html?23">http://www.babylonjs-playground.com/index.html?23</a></p>
+<h2><a name="creating-a-spatial-directional-3d-sound" class="anchor" href="#creating-a-spatial-directional-3d-sound"></a>Creating a spatial directional 3D sound</h2><p>By default, spatial sounds are omnidirectional. But you can have directional sounds if you’d like to.</p>
 <p><strong>Note:</strong> directional sounds only work for spatial sounds attached to a mesh. </p>
 <p>Here is the code to use:</p>
 <pre><code class="lang-javascript">var music = new BABYLON.Sound(&quot;Violons&quot;, &quot;violons11.wav&quot;, scene, null, { loop: true, autoplay: true });
@@ -245,7 +219,8 @@ music.attachToMesh(box);
 <p>Outer angle of the cone must be superior or equal to the inner angle, otherwise an error will be logged and the directional sound won’t work. </p>
 <p><em>setLocalDirectionToMesh()</em> is simply the orientation of the cone related to the mesh you’re attached to. By default, it’s <em>(1,0,0)</em>.</p>
 <p>You can play with this sample from our playground to better understand the output: </p>
-<h3><a name="a-hrefhttpwwwbabylonjs-playgroundcom1bo0yshttpwwwbabylonjs-playgroundcom1bo0ysa" class="anchor" href="#a-hrefhttpwwwbabylonjs-playgroundcom1bo0yshttpwwwbabylonjs-playgroundcom1bo0ysa"></a><a href="http://www.babylonjs-playground.com/#1BO0YS">http://www.babylonjs-playground.com/#1BO0YS</a></h3><p>Move into the 3D scene. If you’re inside the space defined by the grey cone, you should hear the music, if not you’ll not hear it as the <strong>coneOuterGain</strong> is set to 0. </p>
+<p><a href="http://www.babylonjs-playground.com/#1BO0YS">http://www.babylonjs-playground.com/#1BO0YS</a></p>
+<p>Move into the 3D scene. If you’re inside the space defined by the grey cone, you should hear the music, if not you’ll not hear it as the <strong>coneOuterGain</strong> is set to 0. </p>
 <h2><a name="creating-your-own-custom-attenuation-function" class="anchor" href="#creating-your-own-custom-attenuation-function"></a>Creating your own custom attenuation function</h2><p>If you want to manage the attenuation (or distance model in Web Audio) using a specific algorithm, you can by-pass the native Web Audio attenuation using Babylon.js custom attenuation function.</p>
 <p><strong>Note:</strong> Web Audio is “<em>hardware accelerated</em>”. It means it’s mainly handled by a dedicated audio chip on your device via native code (the browser). This then almost costs nothing on the performance side for 3D real-time rendering. Switching to custom attenuation will use Babylon.js distance computation based on JavaScript and will be slower. </p>
 <p>Moreover, the custom attenuation will only works on spatial sounds (obviously) but also on sound connected to a Babylon.js mesh. That said, let’s now view the code to do that. First, you must specify it in the options:</p>
@@ -263,9 +238,11 @@ music.setAttenuationFunction(function (currentVolume, currentDistance, maxDistan
 <p>You can play with these 5 parameters and do whatever you’d like with it. Simply return a number that will be the volume applied to the sound.</p>
 <p>In this example, the logic is a bit weird as the volume is louder the farther you are from the mesh. ;-)</p>
 <p>Play with it in our Playground: </p>
-<h3><a name="a-hrefhttpwwwbabylonjs-playgroundcom1yixeohttpwwwbabylonjs-playgroundcom1yixeoa" class="anchor" href="#a-hrefhttpwwwbabylonjs-playgroundcom1yixeohttpwwwbabylonjs-playgroundcom1yixeoa"></a><a href="http://www.babylonjs-playground.com/#1YIXEO">http://www.babylonjs-playground.com/#1YIXEO</a></h3><p>Moreover, Firefox has currently a bug in their Web Audio implementation in handling properly linear attenuation. This can be fixed by using the Babylon.js default linear custom attenuation.</p>
+<p><a href="http://www.babylonjs-playground.com/#1YIXEO">http://www.babylonjs-playground.com/#1YIXEO</a></p>
+<p>Moreover, Firefox has currently a bug in their Web Audio implementation in handling properly linear attenuation. This can be fixed by using the Babylon.js default linear custom attenuation.</p>
 <p>Here’s a previous sample code that now works properly in Firefox: </p>
-<h3><a name="a-hrefhttpwwwbabylonjs-playgroundcom2ah4yh2httpwwwbabylonjs-playgroundcom2ah4yh2a" class="anchor" href="#a-hrefhttpwwwbabylonjs-playgroundcom2ah4yh2httpwwwbabylonjs-playgroundcom2ah4yh2a"></a><a href="http://www.babylonjs-playground.com/#2AH4YH#2">http://www.babylonjs-playground.com/#2AH4YH#2</a></h3><h2><a name="manipulating-sound-loaded-from-a-babylon-file" class="anchor" href="#manipulating-sound-loaded-from-a-babylon-file"></a>Manipulating sound loaded from a .babylon file</h2><p>Our <em>.babylon</em> file format can describe the sounds to load. It’s documented here: <a href="http://doc.babylonjs.com/page.php?p=22661">http://doc.babylonjs.com/page.php?p=22661</a> </p>
+<p><a href="http://www.babylonjs-playground.com/#2AH4YH#2">http://www.babylonjs-playground.com/#2AH4YH#2</a></p>
+<h2><a name="manipulating-sound-loaded-from-a-babylon-file" class="anchor" href="#manipulating-sound-loaded-from-a-babylon-file"></a>Manipulating sound loaded from a .babylon file</h2><p>Our <em>.babylon</em> file format can describe the sounds to load. It’s documented here: <a href="http://doc.babylonjs.com/page.php?p=22661">http://doc.babylonjs.com/page.php?p=22661</a> </p>
 <p>Currently only our 3DS Max exporter can export sounds directly to <em>.babylon</em>. </p>
 <p>To access to a sound loaded by the Babylon.js <em>.babylon</em> fileloader, you need to use the <em>getSoundByName()</em> function on the scene object. </p>
 <p>Here is a simple sample loading a <em>.babylon</em> scene file embedding some sounds:</p>
@@ -326,7 +303,8 @@ myAnalyser.drawDebugCanvas();
 </code></pre>
 <p>You can also call yourself the analyser functions to create your own usage of it. </p>
 <p>Here is a full sample: </p>
-<h3><a name="a-hrefhttpwwwbabylonjs-playgroundcomptv7w1httpwwwbabylonjs-playgroundcomptv7w1a" class="anchor" href="#a-hrefhttpwwwbabylonjs-playgroundcomptv7w1httpwwwbabylonjs-playgroundcomptv7w1a"></a><a href="http://www.babylonjs-playground.com/#PTV7W#1">http://www.babylonjs-playground.com/#PTV7W#1</a></h3><p><img src="http://az612410.vo.msecnd.net/wwwbabylonjs/doc/3Danalyser.png" alt="Image Analyser Debug Canvas"></p>
+<p><a href="http://www.babylonjs-playground.com/#PTV7W#1">http://www.babylonjs-playground.com/#PTV7W#1</a></p>
+<p><img src="http://az612410.vo.msecnd.net/wwwbabylonjs/doc/3Danalyser.png" alt="Image Analyser Debug Canvas"></p>
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>    Github</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Documentation" target="_blank"><i class="fa fa-code-fork"></i>    Contribute</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><script>(function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
     i[r] = i[r] || function () {

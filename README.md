@@ -4,11 +4,11 @@
 
 Welcome on the repository of the official documentation of [Babylon.js](http://www.babylonjs.com).
 
-## Prequisites
-Before beginning, please be sure to have these packages installed :
+## Prerequisites
+Before beginning, please be sure to have these packages installed:
 
  * [Nodejs](https://nodejs.org/)
- * [grunt-cli](https://www.npmjs.com/package/grunt-cli) : just use ```npm install -g grunt-cli```
+ * [grunt-cli](https://www.npmjs.com/package/grunt-cli): just use ```npm install -g grunt-cli```
 
 
 ## Run a local copy of the documentation
@@ -18,30 +18,30 @@ Before beginning, please be sure to have these packages installed :
 
 ## Useful command
 
-You don't need to edit html yourself: edit markdown files and use :
+You don't need to edit html yourself: edit markdown files and use:
  
 ```grunt build``` to rebuild html from markdown and index the search.
 
 If you want to edit some styles or see your changes without repeating ```grunt build```, then use ```grunt serve```.
 
 
-```grunt serve``` features :
+```grunt serve``` features:
  * Opens automatically the browser at ```localhost:3000```
  * Watcher on markdown
- * Recompiles everything on detected change
+ * Recompile everything on detected change
 
  
-## How to contribute ?
+## How to contribute?
 
 ### Update content
 If you want to add/update a tutorial, an extension or a class, you have to follow these steps:
 
 1. Head to content folder. All markdowns files are located in this folder.
-2. Edit markdown acording to your need
+2. Edit markdown according to your need
 3. Use ```grunt build```
 4. Pull request :)
 
-NB : Sections like : 
+NB: Sections like:
 
     ---
     ID_PAGE: 24441       // Id of the page in the old doc, use to forward links
@@ -54,12 +54,12 @@ Are YAML meta description for files, this is used to make some link between the 
 Wherever you find these, please don't touch them :)
 
 ### Add a new content
-Categories classify the content, it is implemented and can be seen in :
+Categories classify the content, it is implemented and can be seen in:
     * [tutorials](http://doc.babylonjs.com/tutorials)
     * [exporters](http://doc.babylonjs.com/exporters)
     * [extensions](http://doc.babylonjs.com/extensions)
     
-If you want to add your own :
+If you want to add your own:
 
 1. Head to the root of exporters or extensions or tutorials
 2. Create a new folder (or use an existing one)
@@ -74,7 +74,7 @@ If you want to add your own :
 
 The three root arrays are mandatory, when displayed, object's order is kept.
 
-Here is how the object is structured.
+Here is how the object is structured:
 
     {
         "tutorials": [                         // Mandatory
@@ -110,9 +110,48 @@ This can be done very easily by following these steps:
     * Head to content\classes
     * Make sure there is no folder named like the version you want to build
     * Open your command shell and run ```npm run build```
-    * Rebuild the doc : ```grunt build```
-    
-NB : For safety, you need to delete yourself the version of classes in content\classes in order to rebuild the same version. 
+    * Rebuild the doc: ```grunt build```
 
-####Still doesn't work ?
+### How to structure your document to get a functional Table Of Content (TOC)
+
+A TOC is automatically generated on the compilation of the general, tutorials, exporters and extensions md files into HTML.
+In order to get a functional TOC, you need to follow two very simple rules:
+    * every markdown lines beginning by a series "#" will be included in the TOC
+    * DO NOT put a link inside of your heading
+
+If you do put a link, like this:
+
+	## [](https://awesomewebsite.com/somethingInteresting.html)Animations
+
+... or like this:
+
+    ## [Animations](https://awesomewebsite.com/somethingEvenMoreInteresting.html)
+
+... it will be included in the TOC, but **won't be clickable** (meaning, user's browser won't jump to the selected content)
+
+Also, the TOC is automatically nested. It means that if you write something like this:
+
+	# Main title
+    <insert content here>
+    ## Secondary title 1
+    <insert content here>
+    ### Third title
+    <insert content here>
+    ## Secondary title 2
+    <insert content here>
+    ## Secondary title 3
+    <insert content here>
+
+You will get the following TOC:
+
+	1. Main title
+		1. Secondary title 1
+			1. Third title
+		2. Secondary title 2
+		3. Secondary title 3
+
+    
+NB: For safety, you need to delete yourself the version of classes in content\classes in order to rebuild the same version.
+
+####Still doesn't work?
 Please leave us an issue with a link to your .d.ts and your config file. 

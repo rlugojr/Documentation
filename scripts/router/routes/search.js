@@ -14,12 +14,14 @@ router.get('/', function (req, res) {
     // request's params:
     var searchTerm = req.query.q + '',
         basicFilters = (req.query.bf + '' || 'all'),
-    // advancedFilter = (req.query.af + '' || 'non-strict'),
         page = (req.query.page || 1 ) - 1,
         resultMax = (req.query.max || 25),
-        offset = page * resultMax,
         keywords = [];
 
+    resultMax = parseInt(resultMax);
+    page      = parseInt(page);
+
+    var offset = page * resultMax;
 
     if(searchTerm.trim().indexOf(' ') != -1){
         // store every word of the search string that is strictly longer than 1 character
@@ -138,6 +140,7 @@ router.get('/', function (req, res) {
             var end = (offset + resultMax > filteredCount) ? filteredCount : offset + resultMax;
 
             searchResult = searchResult.slice(begin, end);
+
             res.render('search', {
                 searchTerm  : searchTerm,
                 resultsCount: totalCount,

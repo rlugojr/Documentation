@@ -12,7 +12,7 @@ If you right click on the scene, on a light, on a camera or on a mesh you fill h
 
 To export you can use the [Babylon] menu in the main menu bar.
 
-### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#exported-features)Exported features
+### Exported features
 
 - _Scene_
     - Clear color
@@ -75,23 +75,23 @@ To export you can use the [Babylon] menu in the main menu bar.
 
 (*): Through custom UI
 
-### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#animations)Animations
+### Animations
 
 Cameras, lights and meshes have custom properties (Right-click and select "Babylon properties" menu) to automatically launch animations at startup.
 
 Animations are exported by sampling keyframes which can generate a lot of data. To reduce file size, you can opt to use linear interpolation instead of bezier or TCB.
 
-### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#consideration-about-bones)Consideration about bones
+### Consideration about bones
 
 To ensure that bones are correctly exported, you have to use the Skin modifier. Skin should be positioned at origin.
 
-### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#apache-license-20-apache)Apache License 2.0 (Apache)
+### Apache License 2.0 (Apache)
 
 Apache License Version 2.0, January 2004 [http://www.apache.org/licenses/](http://www.apache.org/licenses/)
 
 TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 
-#### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#definitions)Definitions.
+#### Definitions.
 
 "License" shall mean the terms and conditions for use, reproduction, and distribution as defined by Sections 1 through 9 of this document.
 
@@ -113,15 +113,15 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 
 "Contributor" shall mean Licensor and any individual or Legal Entity on behalf of whom a Contribution has been received by Licensor and subsequently incorporated within the Work.
 
-#### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#grant-of-copyright-license)Grant of Copyright License.
+#### Grant of Copyright License.
 
 Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare Derivative Works of, publicly display, publicly perform, sublicense, and distribute the Work and such Derivative Works in Source or Object form.
 
-#### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#grant-of-patent-license)Grant of Patent License.
+#### Grant of Patent License.
 
 Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Work, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Work to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Work or a Contribution incorporated within the Work constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for that Work shall terminate as of the date such litigation is filed.
 
-#### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#redistribution)Redistribution.
+#### Redistribution.
 
 You may reproduce and distribute copies of the Work or Derivative Works thereof in any medium, with or without modifications, and in Source or Object form, provided that You meet the following conditions:
 
@@ -132,26 +132,26 @@ You may reproduce and distribute copies of the Work or Derivative Works thereof 
 
 You may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions for use, reproduction, or distribution of Your modifications, or for any such Derivative Works as a whole, provided Your use, reproduction, and distribution of the Work otherwise complies with the conditions stated in this License.
 
-#### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#submission-of-contributions)Submission of Contributions.
+#### Submission of Contributions.
 
 Unless You explicitly state otherwise, any Contribution intentionally submitted for inclusion in the Work by You to the Licensor shall be under the terms and conditions of this License, without any additional terms or conditions. Notwithstanding the above, nothing herein shall supersede or modify the terms of any separate license agreement you may have executed with Licensor regarding such Contributions.
 
-#### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#trademarks)Trademarks.
+#### Trademarks.
 
 This License does not grant permission to use the trade names, trademarks, service marks, or product names of the Licensor, except as required for reasonable and customary use in describing the origin of the Work and reproducing the content of the NOTICE file.
 
-#### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#disclaimer-of-warranty)Disclaimer of Warranty.
+#### Disclaimer of Warranty.
 
 Unless required by applicable law or agreed to in writing, Licensor provides the Work (and each Contributor provides its Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Work and assume any risks associated with Your exercise of permissions under this License.
 
-#### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#limitation-of-liability)Limitation of Liability.
+#### Limitation of Liability.
 
 In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Work (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages.
 
-#### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#accepting-warranty-or-additional-liability)Accepting Warranty or Additional Liability.
+#### Accepting Warranty or Additional Liability.
 
 While redistributing the Work or Derivative Works thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.
 
-### [](https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/3ds%20Max#external-dependencies)External dependencies
+### External dependencies
 
 - hand.js: [http://handjs.codeplex.com](http://handjs.codeplex.com/)

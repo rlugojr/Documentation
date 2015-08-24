@@ -4,7 +4,7 @@ PG_TITLE: A Babylon.js Primer
 ---
 ### Welcome to the... ###
 ## Babylon.js WebGL Game Creation System!##
-??
+
 Hi! Welcome to The Babylon.js Primer, an introduction to some of the things you will need to know in order to get the most out of this useful Javascript-based WebGL framework.
 What is a framework, you ask?&nbsp; You can think of a framework as scaffolding for a building, allowing you to build around it without worrying about the foundation. It makes a complicated system, (WebGL,) much easier to use.
 

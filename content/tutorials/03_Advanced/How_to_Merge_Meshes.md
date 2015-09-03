@@ -2,7 +2,25 @@
 ID_PAGE: 22451
 PG_TITLE: How to Merge Meshes
 ---
-If you want to merge meshes into a new one, you can use the following code:
+
+##Native Babylon.js function
+
+To easily merge a number of meshes to a single mesh use the static `MergeMeshes` of the `Mesh` class:
+
+```javascript
+var newMesh = BABYLON.Mesh.MergeMeshes(arrayOfMeshes[, disposeSource, allow32BitsIndices, meshSubclass]);
+```
+
+|variable| description|
+|----------|-----------|
+|arrayOfMeshes| An array of Meshes.  They should all be of the same material.|
+|disposeSource (optional)| When true (default), the source meshes will be disposed upon completion.|
+|allow32BitsIndices (optional)| When the sum of the vertices > 64k, this must be set to true.|
+|meshSubclass (optional)| When set, vertices inserted into this Mesh.  Meshes can then be merged into a Mesh sub-class.|
+
+##Use your own merge function
+
+If you want to merge meshes into a new one using a self implemented function, you can use the following code as basis and improve it to your needs:
 
 Note: Careful, when you merge cloned mesh, you need to update the world matrix of the mesh with computeWorldMatrix before calling the function.
 

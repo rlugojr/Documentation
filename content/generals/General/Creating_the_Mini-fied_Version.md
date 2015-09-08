@@ -136,6 +136,7 @@ But you may want to work with all basic files. In this case, please download the
     <script src="Babylon/PostProcess/babylon.stereoscopicInterlacePostProcess.js"></script>
     <script src="Babylon/Cameras/babylon.stereoscopicCameras.js"></script>
     <script src="Babylon/PostProcess/babylon.hdrRenderingPipeline.js"></script>
+    <script src="Babylon/Rendering/babylon.edgesRenderer.js"></script>
 ```
 
 When working with all files, you can provide the following information to the engine:

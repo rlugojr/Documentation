@@ -12,7 +12,6 @@ var fs      = require('fs'),
     marked  = require('meta-marked'),
     renderer= new marked.Renderer(),
     slugify = require('uslug'),
-    $       = require('cheerio'),
     rimraf  = require('rimraf'),
     toc     = require('marked-toc');
 

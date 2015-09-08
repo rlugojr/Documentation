@@ -14,8 +14,8 @@
 </div></div><div id="staticContent"><h2><a name="introduction" class="anchor" href="#introduction"></a>Introduction</h2><p>In this tutorial, we are going to learn how to create basic elements using Babylon.js, such as boxes, spheres, and planes.</p>
 <p><img src="http://urbanproductions.com/wingy/babylon/misc/tut02pic.jpg" alt="Elements"></p>
 <p><a href="http://babylonjs-playground.azurewebsites.net/?2"><strong>Playground Demo Scene 2 - Seven basic shapes/mesh</strong></a></p>
-<h2><a name="how-can-i-do-this" class="anchor" href="#how-can-i-do-this"></a>How can I do this ?</h2><p>An easy way to get started using basic elements... is by visiting <a href="http://babylonjs-playground.azurewebsites.net/?2"><strong>Playground Demo Scene 02</strong></a>.&nbsp; You might wish to use the &#39;Get .zip&#39; choice on its top menu.&nbsp; The index.html that you will receive in that zip... contains everything you will need to start making basic elements.&nbsp; Remember that link, as we will talk more about it.</p>
-<p>I&#39;m sure you have already read the&nbsp; <a href="http://doc.babylonjs.com/page.php?p=22621"><strong>Babylon.js Primer</strong></a> and the&nbsp; <a href="http://doc.babylonjs.com/page.php?p=21911"><strong>previous tutorial</strong></a>, and thus you know how to format scene files.&nbsp; So, we won&#39;t talk about that, here.&nbsp; We are going to go step by step through <a href="http://babylonjs-playground.azurewebsites.net/?2"><strong>Playground Demo Scene 02</strong></a>.&nbsp; Open that link in a new tab or window, and then come back here, and we&#39;ll get started.</p>
+<h2><a name="how-can-i-do-this" class="anchor" href="#how-can-i-do-this"></a>How can I do this ?</h2><p>An easy way to get started using basic elements... is by visiting <a href="http://babylonjs-playground.azurewebsites.net/?2"><strong>Playground Demo Scene 02</strong></a>.  You might wish to use the &#39;Get .zip&#39; choice on its top menu.  The index.html that you will receive in that zip... contains everything you will need to start making basic elements.  Remember that link, as we will talk more about it.</p>
+<p>I&#39;m sure you have already read the  <a href="http://doc.babylonjs.com/page.php?p=22621"><strong>Babylon.js Primer</strong></a> and the  <a href="http://doc.babylonjs.com/page.php?p=21911"><strong>previous tutorial</strong></a>, and thus you know how to format scene files.  So, we won&#39;t talk about that, here.  We are going to go step by step through <a href="http://babylonjs-playground.azurewebsites.net/?2"><strong>Playground Demo Scene 02</strong></a>.  Open that link in a new tab or window, and then come back here, and we&#39;ll get started.</p>
 <p>Let&#39;s look at the createScene function used in Playground Demo 2:</p>
 <pre><code class="lang-javascript">
     var createScene = function () {
@@ -60,9 +60,9 @@
         ], scene);
 
         // Moving elements
-        box.position = new BABYLON.Vector3(-10, 0, 0);&amp;nbsp; &amp;nbsp;// Using a vector
+        box.position = new BABYLON.Vector3(-10, 0, 0);   // Using a vector
         sphere.position = new BABYLON.Vector3(0, 10, 0); // Using a vector
-        plane.position.z = 10;&amp;nbsp;    &amp;nbsp;  &amp;nbsp;  &amp;nbsp;  &amp;nbsp; &amp;nbsp; // Using a single coordinate component
+        plane.position.z = 10;                  // Using a single coordinate component
         cylinder.position.z = -10;
         torus.position.x = 10;
         knot.position.y = -10;
@@ -70,7 +70,7 @@
         return scene;
     }
 </code></pre>
-<p>Starting with the box, we create 7 different basic elements, and then position them at the end of the function (to keep them from being atop one another).&nbsp; It&#39;s really quite easy, isn&#39;t it?&nbsp; Again, starting with the creation of the box, let&#39;s talk about each of the 7 shapes/meshes.&nbsp; </p>
+<p>Starting with the box, we create 7 different basic elements, and then position them at the end of the function (to keep them from being atop one another).  It&#39;s really quite easy, isn&#39;t it?  Again, starting with the creation of the box, let&#39;s talk about each of the 7 shapes/meshes.  </p>
 <ul>
 <li><p><strong>Creation of a Box</strong></p>
 <pre><code class="lang-javascript">var box = BABYLON.Mesh.CreateBox(&quot;box&quot;, 6.0, scene, false, BABYLON.Mesh.DEFAULTSIDE);
@@ -80,7 +80,7 @@
 </code></pre>
 </li>
 <li><p><strong>Creation of a Sphere</strong></p>
-<pre><code class="lang-javascript">var sphere = BABYLON.Mesh.CreateSphere(&quot;sphere&quot;, 10.0, 10.0, scene, false,&amp;nbsp; BABYLON.Mesh.DEFAULTSIDE);
+<pre><code class="lang-javascript">var sphere = BABYLON.Mesh.CreateSphere(&quot;sphere&quot;, 10.0, 10.0, scene, false,  BABYLON.Mesh.DEFAULTSIDE);
 </code></pre>
 <p>Parameters are: name, number of segments (highly detailed or not), size, scene to attach the mesh, updatable? (if the mesh must be modified later) and the optional side orientation (see below). These two last parameters can be omitted if you just need the default behavior :</p>
 <pre><code class="lang-javascript">var sphere = BABYLON.Mesh.CreateSphere(&quot;sphere&quot;, 10.0, 10.0, scene);
@@ -102,11 +102,7 @@
 <p>Parameters are: name, radius, tessellation, scene, updatable and the optional side orientation (see below). These two last parameters can be omitted if you just need the default behavior :</p>
 <pre><code class="lang-javascript">var disc = BABYLON.Mesh.CreateDisc(&quot;disc&quot;, 5, 30, scene);
 </code></pre>
-<p>With the&nbsp; <em>tessellation</em> value, you can get a regular polygon :&nbsp; 
-3 gives a triangle,&nbsp; 
-4 a square,&nbsp; 
-5 a pentagon,&nbsp; 
-6 a hexagon, 7 a heptagon, 8 an octogon, and so on.</p>
+<p>With the  <em>tessellation</em> value, you can get a regular polygon :<br>3 gives a triangle,<br>4 a square,<br>5 a pentagon,<br>6 a hexagon, 7 a heptagon, 8 an octogon, and so on.</p>
 </li>
 <li><p><strong>Creation of a Cylinder</strong></p>
 </li>
@@ -145,37 +141,31 @@
 ], scene);
 </code></pre>
 <p>Parameters are: name, [array of comma-separated vectors], scene. </p>
-<p>I could explain how the Lines Mesh constructor works, but I think you can see how it works just by looking at the demo code above.&nbsp; Notice the [ and ].&nbsp; Those are the enclosing tokens for an array, yet another kind of Javascript value.&nbsp; The first vector3 of the array is the starting location for drawing lines.&nbsp; After that, a comma, and then the next vector3 location... indicating where the line is drawing-to next.&nbsp; Then, another comma, and another vector3 to a new location.&nbsp; You can add as many vectors as you wish, but notice that the LAST vector3 does not have a comma following it.&nbsp; Please make your array of vectors be formatted similarly.&nbsp; &nbsp;&nbsp;</p>
+<p>I could explain how the Lines Mesh constructor works, but I think you can see how it works just by looking at the demo code above.  Notice the [ and ].  Those are the enclosing tokens for an array, yet another kind of Javascript value.  The first vector3 of the array is the starting location for drawing lines.  After that, a comma, and then the next vector3 location... indicating where the line is drawing-to next.  Then, another comma, and another vector3 to a new location.  You can add as many vectors as you wish, but notice that the LAST vector3 does not have a comma following it.  Please make your array of vectors be formatted similarly.    </p>
 <ul>
 <li><strong>Creation of DashedLines Mesh</strong></li>
 </ul>
 <pre><code class="lang-javascript">var dashedlines = BABYLON.Mesh.CreateDashedLines(&quot;dashedLines&quot;, [v1, v2, ... vn], dashSize, gapSize, dashNb, scene);
 </code></pre>
-<p>Parameters are : name, [array of Vectors3], dashSize, gapSize, dashNumber, scene.&nbsp; &nbsp;&nbsp;
-As for Lines, a line along the vectors3 will be displayed in space. It will try to set <em>dashNumber</em> strokes on this line depending on the length of each segment between two successive vectors3.&nbsp; &nbsp;&nbsp;
-<em>dashSize</em> and <em>gapSize</em> are relative to each other dash and gap sizes within these strokes.&nbsp; &nbsp;</p>
+<p>Parameters are : name, [array of Vectors3], dashSize, gapSize, dashNumber, scene.<br>As for Lines, a line along the vectors3 will be displayed in space. It will try to set <em>dashNumber</em> strokes on this line depending on the length of each segment between two successive vectors3.<br><em>dashSize</em> and <em>gapSize</em> are relative to each other dash and gap sizes within these strokes.   </p>
 <ul>
 <li><strong>Creation of a Ribbon</strong></li>
 </ul>
-<p>What is a ribbon ?&nbsp; 
-Imagine a first series of successive points defining a path.&nbsp; 
-Now get another series of successive points, so another path.&nbsp; 
-If you construct then triangular faces by joining alternately each point of the first and the second path like when you lace shoes, you get a ribbon.&nbsp; 
-Your paths don&#39;t need to be parallel. They don&#39;t even need to be straight lines or in the same plane.&nbsp; 
-They are, well, what you want. The ribbon will just follow your paths.&nbsp; </p>
-<p>Now, imagine, instead of having only two paths, you&#39;ve got many successive different paths.&nbsp; 
-The full ribbon will then be the continuous surface joining all these inbetween pair of paths surface.</p>
+<p>What is a ribbon ?<br>Imagine a first series of successive points defining a path.<br>Now get another series of successive points, so another path.<br>If you construct then triangular faces by joining alternately each point of the first and the second path like when you lace shoes, you get a ribbon.<br>Your paths don&#39;t need to be parallel. They don&#39;t even need to be straight lines or in the same plane.<br>They are, well, what you want. The ribbon will just follow your paths.  </p>
+<p>Now, imagine, instead of having only two paths, you&#39;ve got many successive different paths.<br>The full ribbon will then be the continuous surface joining all these inbetween pair of paths surface.</p>
 <pre><code class="lang-javascript">var ribbon = BABYLON.Mesh.CreateRibbon(&quot;ribbon&quot;, [path1, path2, ..., pathn], false, false, 0, scene, false, BABYLON.Mesh.DEFAULTSIDE);
 </code></pre>
-<p>Parameters are: name, pathArray, closeArray, closePath, offset, scene, updatable? (if the mesh must be modified later)&nbsp; and the optional side orientation (see below).</p>
-<p>&nbsp; <em> name : a string, the name you want to give to your shape,
-&nbsp; </em> pathArray : an array populated with paths. Paths are also arrays, populated with series of successive <em>Vector3</em>. You need at least one path to construct a ribbon and each path must contain at least four <em>Vector3</em>,
-&nbsp; <em> closeArray : boolean, if true an extra set of triangles is constructed between the last path and the first path of <em>pathArray</em>,
-&nbsp; </em> closePath : boolean, if true the last point of each path of <em>pathArray</em> is joined to the first point of this path,
-&nbsp; <em> offset : integer (default half the <em>path</em> size) mandatory only if the <em>pathArray</em> contents only one path. The ribbon will be constructed joining each i-th point of the single path to the i+offset-th point. It is ignored if <em>pathArray</em> has got more than one path,
-&nbsp; </em> scene : the current scene,
-&nbsp; <em> updatable : if the ribbon should updated later
-&nbsp; </em> sideOrientation : the wanted side orientation (front, back or double side).</p>
+<p>Parameters are: name, pathArray, closeArray, closePath, offset, scene, updatable? (if the mesh must be modified later)  and the optional side orientation (see below).</p>
+<ul>
+<li>name : a string, the name you want to give to your shape,</li>
+<li>pathArray : an array populated with paths. Paths are also arrays, populated with series of successive <em>Vector3</em>. You need at least one path to construct a ribbon and each path must contain at least four <em>Vector3</em>,</li>
+<li>closeArray : boolean, if true an extra set of triangles is constructed between the last path and the first path of <em>pathArray</em>,</li>
+<li>closePath : boolean, if true the last point of each path of <em>pathArray</em> is joined to the first point of this path,</li>
+<li>offset : integer (default half the <em>path</em> size) mandatory only if the <em>pathArray</em> contents only one path. The ribbon will be constructed joining each i-th point of the single path to the i+offset-th point. It is ignored if <em>pathArray</em> has got more than one path,</li>
+<li>scene : the current scene,</li>
+<li>updatable : if the ribbon should updated later</li>
+<li>sideOrientation : the wanted side orientation (front, back or double side).</li>
+</ul>
 <p>These two last parameters can be omitted if you just need the default behavior :</p>
 <pre><code class="lang-javascript">var ribbon = BABYLON.Mesh.CreateRibbon(&quot;ribbon&quot;, [path1, path2, ..., pathn], false, false, 0, scene);
 </code></pre>
@@ -186,47 +176,34 @@ The full ribbon will then be the continuous surface joining all these inbetween 
 <pre><code class="lang-javascript">var tube = BABYLON.Mesh.CreateTube(&quot;tube&quot;, [V1, V2, ..., Vn], radius, tesselation, radiusFunction, cap, scene, false, BABYLON.Mesh.DEFAULTSIDE);
 </code></pre>
 <p>Parameters are : name, path, radius, tesselation, optional radiusFunction, cap, scene, updatable, sideOrientation.</p>
-<p>&nbsp; <em> name : string, the name of the tube mesh,
-&nbsp; </em> path : an array of successive Vector3, at least two Vector3,
-&nbsp; <em> radius : the tube radius, taken into account when <em>radiusFunction</em> parameter set to <em>null</em>,
-&nbsp; </em> tesselation : the number of radial segments,
-&nbsp; <em> radiusFunction : <em>optional</em>, a javascript function returning a radius value, can be let to <em>null</em>,
-&nbsp; </em> cap : BABYLON.Mesh.NO_CAP, BABYLON.Mesh.CAP_START, BABYLON.Mesh.CAP_END, BABYLON.Mesh.CAP_ALL,&nbsp; 
-&nbsp; <em> updatable : if the tube could be updated later,
-&nbsp; </em> sideOrientation : the wanted side orientation (front, back or double side).</p>
+<ul>
+<li>name : string, the name of the tube mesh,</li>
+<li>path : an array of successive Vector3, at least two Vector3,</li>
+<li>radius : the tube radius, taken into account when <em>radiusFunction</em> parameter set to <em>null</em>,</li>
+<li>tesselation : the number of radial segments,</li>
+<li>radiusFunction : <em>optional</em>, a javascript function returning a radius value, can be let to <em>null</em>,</li>
+<li>cap : BABYLON.Mesh.NO_CAP, BABYLON.Mesh.CAP_START, BABYLON.Mesh.CAP_END, BABYLON.Mesh.CAP_ALL,  </li>
+<li>updatable : if the tube could be updated later,</li>
+<li>sideOrientation : the wanted side orientation (front, back or double side).</li>
+</ul>
 <p>These two last parameters can be omitted if you just need the default behavior :</p>
 <pre><code class="lang-javascript">var tube = BABYLON.Mesh.CreateTube(&quot;tube&quot;, [V1, V2, ..., Vn], radius, tesselation, radiusFunction, cap, scene);
 </code></pre>
 <p>The tube can be used also as a <a href=""><strong>Parametric Shapes</strong></a> by setting a radius function.</p>
-<h4><a name="updatable" class="anchor" href="#updatable"></a>Updatable</h4><p>This parameter present in each mesh creation method tells if the mesh could be updated once it is created.&nbsp; 
-If false (default value), the mesh data are passed only once to the GPU.&nbsp; 
-If true, the mesh data may be recomputed and passed to the GPU at each frame refresh.&nbsp; </p>
-<h4><a name="side-orientation" class="anchor" href="#side-orientation"></a>Side Orientation</h4><p>When a mesh is created, a side orientation is given to it.&nbsp; 
-The side orientation is used to give visibility and/or light reflection to each side of the mesh.&nbsp; 
-There are four possible values for this parameter :&nbsp; </p>
-<p>&nbsp; <em> BABYLON.Mesh.FRONTSIDE,
-&nbsp; </em> BABYLON.Mesh.BACKSIDE,
-&nbsp; <em> BABYLON.Mesh.DOUBLESIDE,
-&nbsp; </em> BABYLON.Mesh.DEFAULT which is the default value and equals FRONTSIDE currently.</p>
-<p>This parameter is optional. If not given, the DEFAULT value is set.&nbsp; </p>
-<p><em>(We assume the backFaceCulling is enabled by default)</em>&nbsp; </p>
-<p>For instance, imagine you create a basic shape like a box, a sphere or a plane and you don&#39;t give it a material.&nbsp; &nbsp;
-If you go behind the plane or inside the box or the sphere, you can check that the faces aren&#39;t visible any longer : this meshes are constructed with the default side orientation <em>FRONTSIDE</em>. This means each side is only a front view.&nbsp; 
-test it : <a href="http://www.babylonjs-playground.com/#14RNAU#4&amp;nbsp">http://www.babylonjs-playground.com/#14RNAU#4&amp;nbsp</a>; 
-If you give your former mesh a material and light it up, you can then check the back (or internal) face is now visible, but it doesn&#39;t reflect the light. Same reason : the default side orientation is still <em>FRONTSIDE</em>.&nbsp; 
-<em>(you can disable <em>backFaceCulling</em> with this <em>sideOrientation</em> value)</em></p>
-<p>Now just change the <em>sideOrientation</em> parameter to <em>BABYLON.Mesh.BACKSIDE</em>.&nbsp; &nbsp;
-As you can then check, you can now only see either the back of the plane or the inside of the box or the sphere.&nbsp; 
-test it : <a href="http://www.babylonjs-playground.com/#14RNAU#5&amp;nbsp">http://www.babylonjs-playground.com/#14RNAU#5&amp;nbsp</a>; 
-If you give your mesh some material, you can then check the light now only reflects on the back face (plane) or only inside (box, sphere, etc).&nbsp; 
-<em>(you can disable <em>backFaceCulling</em> with this <em>sideOrientation</em> value)</em></p>
-<p>At last, change the <em>sideOrientation</em> parameter to <em>BABYLON.Mesh.DOUBLESIDE</em>.&nbsp; 
-As you guess, now the mesh faces are visible both sides. And if you give it a material, the light then reflects both sides too.&nbsp; 
-test it : <a href="http://www.babylonjs-playground.com/#14RNAU#6&amp;nbsp">http://www.babylonjs-playground.com/#14RNAU#6&amp;nbsp</a>; &nbsp;
-So why not always use <em>BABYLON.Mesh.DOUBLESIDE</em> by default ?&nbsp; 
-Because this value creates twice more vertices than the mesh needs to be rendered with only one side. In other terms, your mesh will be twice heavier.&nbsp; 
-<em>(you shouldn&#39;t disable <em>backFaceCulling</em> with <em>BABYLON.Mesh.DOUBLESIDE</em> value)</em></p>
-<h3><a name="more-basic-elements-grounds" class="anchor" href="#more-basic-elements-grounds"></a>More Basic Elements - Grounds</h3><p>Up to this point, we have been talking about basic elements from our <a href="http://babylonjs-playground.azurewebsites.net/?2"><strong>Playground Demo Scene 02</strong></a>, but three important mesh shapes (basic elements) are not included in that demo scene.&nbsp; They are each ways of making &#39;ground&#39; in Babylon.js.&nbsp; Let&#39;s take a look: </p>
+<h4><a name="updatable" class="anchor" href="#updatable"></a>Updatable</h4><p>This parameter present in each mesh creation method tells if the mesh could be updated once it is created.<br>If false (default value), the mesh data are passed only once to the GPU.<br>If true, the mesh data may be recomputed and passed to the GPU at each frame refresh.  </p>
+<h4><a name="side-orientation" class="anchor" href="#side-orientation"></a>Side Orientation</h4><p>When a mesh is created, a side orientation is given to it.<br>The side orientation is used to give visibility and/or light reflection to each side of the mesh.<br>There are four possible values for this parameter :  </p>
+<ul>
+<li>BABYLON.Mesh.FRONTSIDE,</li>
+<li>BABYLON.Mesh.BACKSIDE,</li>
+<li>BABYLON.Mesh.DOUBLESIDE,</li>
+<li>BABYLON.Mesh.DEFAULT which is the default value and equals FRONTSIDE currently.</li>
+</ul>
+<p>This parameter is optional. If not given, the DEFAULT value is set.  </p>
+<p><em>(We assume the backFaceCulling is enabled by default)</em>  </p>
+<p>For instance, imagine you create a basic shape like a box, a sphere or a plane and you don&#39;t give it a material.<br>If you go behind the plane or inside the box or the sphere, you can check that the faces aren&#39;t visible any longer : this meshes are constructed with the default side orientation <em>FRONTSIDE</em>. This means each side is only a front view.<br>test it : <a href="http://www.babylonjs-playground.com/#14RNAU#4">http://www.babylonjs-playground.com/#14RNAU#4</a><br>If you give your former mesh a material and light it up, you can then check the back (or internal) face is now visible, but it doesn&#39;t reflect the light. Same reason : the default side orientation is still <em>FRONTSIDE</em>.<br><em>(you can disable <em>backFaceCulling</em> with this <em>sideOrientation</em> value)</em></p>
+<p>Now just change the <em>sideOrientation</em> parameter to <em>BABYLON.Mesh.BACKSIDE</em>.<br>As you can then check, you can now only see either the back of the plane or the inside of the box or the sphere.<br>test it : <a href="http://www.babylonjs-playground.com/#14RNAU#5">http://www.babylonjs-playground.com/#14RNAU#5</a><br>If you give your mesh some material, you can then check the light now only reflects on the back face (plane) or only inside (box, sphere, etc).<br><em>(you can disable <em>backFaceCulling</em> with this <em>sideOrientation</em> value)</em></p>
+<p>At last, change the <em>sideOrientation</em> parameter to <em>BABYLON.Mesh.DOUBLESIDE</em>.<br>As you guess, now the mesh faces are visible both sides. And if you give it a material, the light then reflects both sides too.<br>test it : <a href="http://www.babylonjs-playground.com/#14RNAU#6">http://www.babylonjs-playground.com/#14RNAU#6</a><br>So why not always use <em>BABYLON.Mesh.DOUBLESIDE</em> by default ?<br>Because this value creates twice more vertices than the mesh needs to be rendered with only one side. In other terms, your mesh will be twice heavier.<br><em>(you shouldn&#39;t disable <em>backFaceCulling</em> with <em>BABYLON.Mesh.DOUBLESIDE</em> value)</em></p>
+<h3><a name="more-basic-elements-grounds" class="anchor" href="#more-basic-elements-grounds"></a>More Basic Elements - Grounds</h3><p>Up to this point, we have been talking about basic elements from our <a href="http://babylonjs-playground.azurewebsites.net/?2"><strong>Playground Demo Scene 02</strong></a>, but three important mesh shapes (basic elements) are not included in that demo scene.  They are each ways of making &#39;ground&#39; in Babylon.js.  Let&#39;s take a look: </p>
 <ul>
 <li><strong>Creation of a Ground</strong></li>
 </ul>

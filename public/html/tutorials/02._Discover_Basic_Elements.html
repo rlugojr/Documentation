@@ -212,17 +212,17 @@ There are four possible values for this parameter :&nbsp; </p>
 <p><em>(We assume the backFaceCulling is enabled by default)</em>&nbsp; </p>
 <p>For instance, imagine you create a basic shape like a box, a sphere or a plane and you don&#39;t give it a material.&nbsp; &nbsp;
 If you go behind the plane or inside the box or the sphere, you can check that the faces aren&#39;t visible any longer : this meshes are constructed with the default side orientation <em>FRONTSIDE</em>. This means each side is only a front view.&nbsp; 
-test it : <a href="http://www.babylonjs-playground.com/#14RNAU#4&amp;nbsp">http://www.babylonjs-playground.com/#14RNAU#4&amp;nbsp</a>; 
+test it : <a href="http://www.babylonjs-playground.com/#14RNAU#4">http://www.babylonjs-playground.com/#14RNAU#4</a> 
 If you give your former mesh a material and light it up, you can then check the back (or internal) face is now visible, but it doesn&#39;t reflect the light. Same reason : the default side orientation is still <em>FRONTSIDE</em>.&nbsp; 
 <em>(you can disable <em>backFaceCulling</em> with this <em>sideOrientation</em> value)</em></p>
 <p>Now just change the <em>sideOrientation</em> parameter to <em>BABYLON.Mesh.BACKSIDE</em>.&nbsp; &nbsp;
 As you can then check, you can now only see either the back of the plane or the inside of the box or the sphere.&nbsp; 
-test it : <a href="http://www.babylonjs-playground.com/#14RNAU#5&amp;nbsp">http://www.babylonjs-playground.com/#14RNAU#5&amp;nbsp</a>; 
+test it : <a href="http://www.babylonjs-playground.com/#14RNAU#5">http://www.babylonjs-playground.com/#14RNAU#5</a>
 If you give your mesh some material, you can then check the light now only reflects on the back face (plane) or only inside (box, sphere, etc).&nbsp; 
 <em>(you can disable <em>backFaceCulling</em> with this <em>sideOrientation</em> value)</em></p>
 <p>At last, change the <em>sideOrientation</em> parameter to <em>BABYLON.Mesh.DOUBLESIDE</em>.&nbsp; 
 As you guess, now the mesh faces are visible both sides. And if you give it a material, the light then reflects both sides too.&nbsp; 
-test it : <a href="http://www.babylonjs-playground.com/#14RNAU#6&amp;nbsp">http://www.babylonjs-playground.com/#14RNAU#6&amp;nbsp</a>; &nbsp;
+test it : <a href="http://www.babylonjs-playground.com/#14RNAU#6">http://www.babylonjs-playground.com/#14RNAU#6</a>
 So why not always use <em>BABYLON.Mesh.DOUBLESIDE</em> by default ?&nbsp; 
 Because this value creates twice more vertices than the mesh needs to be rendered with only one side. In other terms, your mesh will be twice heavier.&nbsp; 
 <em>(you shouldn&#39;t disable <em>backFaceCulling</em> with <em>BABYLON.Mesh.DOUBLESIDE</em> value)</em></p>

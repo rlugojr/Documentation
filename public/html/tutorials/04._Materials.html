@@ -63,6 +63,7 @@ materialSphere1.diffuseTexture.vScale = 5.0;
 <p>And if your texture has some alpha, you will need to specify it:</p>
 <pre><code class="lang-javascript">materialSphere1.diffuseTexture.hasAlpha = true;
 </code></pre>
+<p>In this case, alpha is used for alpha testing. But you may want to use it for alpha blending. To do so, just set <code>materialSphere1.useAlphaFromDiffuseTexture</code></p>
 <p>All of these texture settings apply to the other StandardMaterial properties as well. (.emissiveTexture, .ambientTexture, .specularTexture)  I will remind you.  Now let&#39;s continue talking about the other StandardMaterial properties.</p>
 <ul>
 <li><strong>Emissive</strong></li>
@@ -93,7 +94,8 @@ materialSphere1.diffuseTexture.vScale = 5.0;
 <p>Or, you can use a texture:</p>
 <pre><code class="lang-javascript">materialSphere1.specularTexture = new BABYLON.Texture(&quot;grass.png&quot;, scene);
 </code></pre>
-<p>When using a texture you can set materialSphere1.useGlossinessFromSpecularMapAlpha to true to use specular map alpha as glossiness level.</p>
+<p>When using a texture you can set <code>materialSphere1.useGlossinessFromSpecularMapAlpha</code> to true to use specular map alpha as glossiness level.</p>
+<p>You can also control how specular behaves with alpha. By default, specular does not interact with alpha, but you can set <code>materialSphere1.useSpecularOverAlpha</code> to true to have alpha inversely proportional to specular value.</p>
 <p>Again, see the <strong>More About Textures</strong> section far above.  Change occurrences of &#39;diffuse&#39; to &#39;specular&#39;, of course.</p>
 <p>The specular property has one more setting.  The size/intensity of the specular reflection can be set using the <code>specularPower</code> property:</p>
 <pre><code class="lang-javascript">materialSphere1.specularPower = 32;

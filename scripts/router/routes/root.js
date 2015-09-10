@@ -5,7 +5,9 @@ var express = require('express'),
     router = express.Router(),
     fs = require('fs'),
     path = require('path'),
-    marked_github = require('meta-marked');
+    marked_github = require('meta-marked'),
+    appRoot = require('app-root-path').path,
+    logger = require(path.join(appRoot, 'config/logger'));
 
 
 marked_github.setOptions({

@@ -347,7 +347,12 @@
         {
           "title": "Video courses",
           "filename": "Video_courses"
+        },
+        {
+          "title": "3D Programming with WebGL and Babylon.js for Beginners",
+          "filename": "Zenva_course"
         }
+
       ]
     }
   ],

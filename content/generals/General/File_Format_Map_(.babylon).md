@@ -121,6 +121,8 @@ A material is defined by the following JSON:
     "specularTexture": Texture (see below),
     "bumpTexture": Texture (see below),
     "checkReadyOnlyOnce": boolean
+    "useReflectionFresnelFromSpecular": boolean (can be omitted),
+    "useEmissiveAsIllumination": boolean (can be omitted)
 }
 ```
 

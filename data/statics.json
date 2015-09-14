@@ -299,6 +299,10 @@
         {
           "title": "Using the Volumetric LightScattering post-process",
           "filename": "Using_the_Volumetric_LightScattering_post-process"
+        },
+        {
+          "title": "How to use EdgesRenderer",
+          "filename": "How_to_use_EdgesRenderer"
         }
       ]
     },
@@ -343,7 +347,12 @@
         {
           "title": "Video courses",
           "filename": "Video_courses"
+        },
+        {
+          "title": "3D Programming with WebGL and Babylon.js for Beginners",
+          "filename": "Zenva_course"
         }
+
       ]
     }
   ],

@@ -20,6 +20,13 @@ var fileSplitter = require('../fileSplitter');
 
 module.exports = function index(done) {
 
+    // create data/search directory if non-existent
+    fs.stat(path.join(appRoot, 'data/search'), function(err, statsObj){
+        if(err){
+            fs.mkdirSync(path.join(appRoot, 'data/search'));
+        }
+    });
+
     readdirp(
         {
             root      : path.join(appRoot, 'content/'),

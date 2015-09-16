@@ -43,7 +43,7 @@ module.exports = function index(done) {
                 delete element.stat;
 
                 //Ignore directory classes
-                if (element.name !== 'classes')  indexes[element.name] = new fulltextsearch({minimum_chars: 2});
+                if (element.name !== 'classes')  indexes[element.name] = new fulltextsearch({index_amount:8, minimum_chars: 2});
             });
 
             async.each(allFiles.files,

@@ -9,10 +9,10 @@ Here are the next updates we will *probably* add to babylon.js:
 
 **vNext++:**
 
-&nbsp;* Reflection probe
-&nbsp;* Global illumination light
-&nbsp;* Generate incremental format from 3dsmax
-&nbsp;* Morph targets
-&nbsp;* Sprites collisions
-&nbsp;* Continuous update of octrees using webworkers
+* Reflection probe
+* Global illumination light
+* Generate incremental format from 3dsmax
+* Morph targets
+* Sprites collisions
+* Continuous update of octrees using webworkers
 

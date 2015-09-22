@@ -1,5 +1,76 @@
 <!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><a href="/">Babylon.js | DOCUMENTATION</a></div><div id="whatsnew" class="item active"><a href="/whats-new">What's new</a></div><div id="general" class="item"><a href="/generals">General</a></div><div id="tutorials" class="item"><a href="/tutorials">Tutorials</a></div><div id="exporters" class="item"><a href="/exporters">Exporters</a></div><div id="extensions" class="item"><a href="/extensions">Extensions</a></div><div id="classes" class="item"><a href="/classes">Classes</a></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="whats-new-banner"><h1>What's New?</h1></div><div class="horizontal-separator"></div><div id="whats-new"><h1 id="changes-list">Changes list</h1>
 <ul>
+<li><p>2.2.0:</p>
+<ul>
+<li><strong>Major updates</strong><ul>
+<li>Blender can now bake Procedural textures &amp; Cycles materials.  Plus more. See <a href="https://github.com/BabylonJS/Babylon.js/tree/master/Exporters/Blender">documentation here</a> (<a href="https://github.com/Palmer-JC">Palmer-JC</a>)</li>
+<li>Meshes can now be attached to bones. See <a href="http://babylondoc.azurewebsites.net/page.php?p=22421">documentation here</a> and <a href="http://www.babylonjs-playground.com/#11BH6Z#18">sample here</a> (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>HDR Rendering pipeline. See <a href="http://www.babylonjs-playground.com/#2EGN4U#2">demo here</a> (<a href="https://github.com/julien-moreau">julien-moreau</a>)</li>
+<li>New rewored StandardMaterial.isReady for better memory usage and performance (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Revamping of FBX exporter. Now supports animations and bones (<a href="http://www.github.com/simonferquel">simonferquel</a>, <a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>StandardMaterial.useGlossinessFromSpecularMapAlpha to use specular map alpha as glossiness level (<a href="https://github.com/deltakosh">deltakosh</a>)    </li>
+<li>Added support for StandardMaterial.roughness. See <a href="http://www.babylonjs-playground.com/#RNBKQ#8">demo here</a> (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>OBJ loader. See <a href="http://www.babylonjs-playground.com/#28YUR5">demo here</a> (<a href="https://github.com/Temechon">Temechon</a>)</li>
+<li>EdgesRenderer. See <a href="http://www.babylonjs-playground.com/#TYAHX#10">demo here</a> (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Actions Builder tool for 3dsmax exporter. More info <a href="https://medium.com/babylon-js/actions-builder-b05e72aa541a">here</a> (<a href="https://github.com/julien-moreau">julien-moreau</a>)</li>
+</ul>
+</li>
+<li><strong>Updates</strong><ul>
+<li>Adding layerMask to lensFlareSystem, spritesManager, particleSystem (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Adding emissiveAsIllumination and reflectionFresnelFromSpecular for StandardMaterial (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Adding isEnabled for ProceduralTexture (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Compression supported for raw textures (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>New TonemapPostProcess. See <a href="http://www.babylonjs-playground.com/#ELTGD">demo here</a> (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>New options parameters for Box, Sphere, Plane and Ground. See <a href="http://www.html5gamedevs.com/topic/17044-evolution-for-out-of-the-box-meshes-creation/">demo here</a> (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Added per face UV and Colors options for <code>CreateBox</code> (<a href="https://github.com/jbousquie">jerome</a>)</li>
+<li>Added darkness support for soft shadows (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Added scene.getLensFlareSystemByName() (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Added LensFlareSystem.setEmitter() (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Added Color3.FromHexString() and Color3.toHexString() (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Added Color4.FromHexString() and Color4.toHexString() (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Added mesh.computeBonesUsingShaders to allow developers to disable HW skinning for low end devices (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Added material.disableDepthWrite (default is off) (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Added material.alphaMode (default is BABYLON.Engine.ALPHA_COMBINE, can be set to BABYLON.Engine.ALPHA_ADD, <em>_SUBTRACT, </em>_MULTIPLY or *_MAXIMIZED ) (<a href="https://github.com/deltakosh">deltakosh</a>, <a href="https://github.com/jahow">jahow</a>)</li>
+<li>Added Animatable.reset() function (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>New parameter for ArcRotateCamera.zoomOn to preserve maxZ (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>PickingInfo.getNormal can now use either vertices normals or vertices positions (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Meshes can now support uv2, uv4, uv5 and uv6 for ShaderMaterials (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Panning support for ArcRotateCamera (<a href="https://github.com/julien-moreau">julien-moreau</a>)</li>
+<li>Vertex color and diffuse color can now be mixed (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Depth-of-field improvements <a href="https://github.com/BabylonJS/Babylon.js/pull/567">PR</a> (<a href="https://github.com/jahow">jahow</a>)</li>
+<li>Engine now initialize WebGL with preserveDrawingBuffer = false by default (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>withEpsilon with a user defined epsilon <a href="https://github.com/BabylonJS/Babylon.js/pull/573">PR</a> (<a href="https://github.com/RaananW">RaananW</a>)</li>
+<li>Adding onAfterRender function in BABYLON.PostProcess <a href="https://github.com/BabylonJS/Babylon.js/pull/572">PR</a> (<a href="https://github.com/julien-moreau">julien-moreau</a>)</li>
+<li>Improved shaders optimizer to remove specular code when not needed (<a href="https://github.com/deltakosh">deltakosh</a>)    </li>
+<li>Added some utility functions to Vector2/3/4 <a href="https://github.com/BabylonJS/Babylon.js/pull/578">PR</a> (<a href="https://github.com/jahow">jahow</a>)</li>
+<li>Added split angularSensibiliy into X and Y for arcRotateCamera <a href="https://github.com/BabylonJS/Babylon.js/pull/683">PR</a> (<a href="https://github.com/Remwrath">Remwrath</a>)</li>
+<li>Added function getFrontPosition(distance) for Camera <a href="https://github.com/BabylonJS/Babylon.js/pull/681">PR</a> (<a href="https://github.com/dad72">dad72</a>)</li>
+<li>New rawTexture.update function (<a href="https://github.com/robgdl">robgdl</a>)</li>
+<li>Changes to meshes transform baking and added flipFaces <a href="https://github.com/BabylonJS/Babylon.js/pull/579">PR</a> (<a href="https://github.com/jahow">jahow</a>)</li>
+<li>SerializeMesh serializes a mesh or array of meshes to be imported with the loader&#39;s ImportMesh optionally including their children and/or parents. <a href="https://github.com/BabylonJS/Babylon.js/pull/583">PR</a> <a href="https://github.com/BabylonJS/Babylon.js/pull/609">PR2</a> (<a href="https://github.com/RaananW">RaananW</a>)</li>
+<li>onCollide callback for meshes calling moveWithCollisions. <a href="https://github.com/BabylonJS/Babylon.js/pull/585">PR</a> (<a href="https://github.com/RaananW">RaananW</a>)</li>
+<li>Unity Exporter now uses game object name as the Babylon.js mesh name, instead of mesh name which is not unique when dealing with primitive objects (cubes, spheres, planes, etc..) (<a href="https://github.com/punkoffice">ozRocker</a>)</li>
+<li>Path3D construction : new <em>raw</em> parameter, if true returns a non-normalized Path3D object (<a href="https://github.com/jbousquie">jerome</a>)</li>
+<li>Added <code>Vector3.RotationFromAxisToRef()</code> :  same as <code>RotationFromAxis()</code> but assigns a reference (<a href="https://github.com/jbousquie">jerome</a>)</li>
+<li><code>ComputeNormals</code> optimization : less object allocation and normal array initialization (<a href="https://github.com/jbousquie">jerome</a>)</li>
+<li>Ribbon : <em>closePath</em> parameter now creates a smooth seam (<a href="https://github.com/jbousquie">jerome</a>)</li>
+</ul>
+</li>
+<li><strong>Bug fixes</strong><ul>
+<li>Fixing bug with rig cameras positioning (<a href="https://github.com/deltakosh">deltakosh</a>)</li>
+<li>Instance meshes&#39; geometry ID is now serialized correctly. <a href="https://github.com/BabylonJS/Babylon.js/pull/607">PR</a> (<a href="https://github.com/RaananW">RaananW</a>)</li>
+<li>Bug fix at set numberOfBricksWidth <a href="https://github.com/BabylonJS/Babylon.js/pull/684">PR</a> (<a href="https://github.com/Polatouche">Polatouche</a>)</li>
+</ul>
+</li>
+<li><strong>Breaking changes</strong><ul>
+<li>In LensRenderingPipeline: parameter <code>dof_focus_depth</code> (range 0..1) is deprecated, use <code>dof_focus_distance</code> (range 0..infinity) instead (<a href="https://github.com/jahow">jahow</a>)</li>
+<li>Cylinder Mesh complete reimplementation for better normals (<a href="https://github.com/jbousquie">jerome</a>)</li>
+<li><code>RotationFromAxis()</code> : fixed the dot product case outside the range [-1, 1] (<a href="https://github.com/jbousquie">jerome</a>)</li>
+<li>Path3D : fix wrong normal/binormal due to normalization approximations (<a href="https://github.com/jbousquie">jerome</a>)</li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p>2.1.0:</p>
 <ul>
 <li><strong>Major updates</strong><ul>

@@ -79,7 +79,11 @@
         {
           "title": "Supporting fog with ShaderMaterial",
           "filename": "Supporting_fog_with_ShaderMaterial"
-        }
+        },
+        {
+          "title": "CreateBox per face colors and textures tutorial",
+          "filename": "CreateBox_Per_Face_Textures_And_Colors"
+        }        
       ]
     },
     {

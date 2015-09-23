@@ -1,10 +1,9 @@
+##CreateBox per face textures and colors
+
+In this tutorial, you will learn how to use the _faceUV_ and _faceColors_ parameters of the _CreateBox_ method in order to set a different texture or color per box face.
 
 
-
-
-
-
-##Textures
+###Textures
 
 
 Imagine that you have such an image file : http://jerome.bousquie.fr/BJS/images/spriteAtlas.png
@@ -119,7 +118,7 @@ Two lines of code only and that's all : http://www.babylonjs-playground.com/#1V3
 
 
 
-##Colors
+###Colors
 
 
 Let's go back to our initial rectangular box : http://www.babylonjs-playground.com/#1V3CAT

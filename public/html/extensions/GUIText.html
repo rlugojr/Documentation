@@ -1,18 +1,19 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><a href="/">Babylon.js | DOCUMENTATION</a></div><div id="whatsnew" class="item"><a href="/whats-new">What's new</a></div><div id="general" class="item"><a href="/generals">General</a></div><div id="tutorials" class="item"><a href="/tutorials">Tutorials</a></div><div id="exporters" class="item"><a href="/exporters">Exporters</a></div><div id="extensions" class="item active"><a href="/extensions">Extensions</a></div><div id="classes" class="item"><a href="/classes">Classes</a></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>extensions</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>GUIText</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
-<li><a href="#new-guitexthttpdocbabylonjscompagephpp25105name-width-height-options-guisystem-extends-guipanelhttpdocbabylonjscompagephpp25107">new <a href="http://doc.babylonjs.com/page.php?p=25105">GUIText</a>(name, width, height, options, guiSystem) - extends <a href="http://doc.babylonjs.com/page.php?p=25107">GUIPanel</a></a><ul>
-<li><a href="#parameters">Parameters</a></li>
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><a href="/">Babylon.js | DOCUMENTATION</a></div><div id="whatsnew" class="item"><a href="/whats-new">What's new</a></div><div id="general" class="item"><a href="/generals">General</a></div><div id="tutorials" class="item"><a href="/tutorials">Tutorials</a></div><div id="exporters" class="item"><a href="/exporters">Exporters</a></div><div id="extensions" class="item active"><a href="/extensions">Extensions</a></div><div id="classes" class="item"><a href="/classes">Classes</a></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>extensions</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>GUIText</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><pre><code>* [Parameters](#parameters)
+</code></pre><ul>
+<li><a href="#options">Options</a></li>
+<li><a href="#methods">Methods</a><ul>
+<li><a href="#updatetextstringtext-void">updateText(string:text) → void</a></li>
+<li><a href="#gettextwidthstringtext-stringfont-void-static">getTextWidth(string:text, string:font) → void : static</a></li>
+<li><a href="#setvisiblebool-fad-void">setVisible(bool, fad) → void</a></li>
+<li><a href="#isvisiblee-void">isVisible(e) → void</a></li>
+<li><a href="#dispose-void">dispose() → void</a></li>
 </ul>
 </li>
-<li><a href="#members">Members</a><ul>
-<li><a href="#updatestring-void">update(string) → void</a></li>
 </ul>
-</li>
-</ul>
-</div></div><div id="staticContent"><h2><a name="new-a-hrefhttpdocbabylonjscompagephpp25105guitextaname-width-height-options-guisystem-extends-a-hrefhttpdocbabylonjscompagephpp25107guipanela" class="anchor" href="#new-guitexthttpdocbabylonjscompagephpp25105name-width-height-options-guisystem-extends-guipanelhttpdocbabylonjscompagephpp25107"></a>new <a href="http://doc.babylonjs.com/page.php?p=25105">GUIText</a>(name, width, height, options, guiSystem) - extends <a href="http://doc.babylonjs.com/page.php?p=25107">GUIPanel</a></h2><p>Creates a new GUIText. Extends from a GUIPanel with a dynamic texture.</p>
+</div></div><div id="staticContent"><h2><a name="new-a-hrefguitextaid-options-guimanager-append" class="anchor" href="#new-guitextid-options-guimanager-append"></a>new <a href="#">GUIText</a>(id, options, guimanager, append)</h2><p>Creates a new GUIText</p>
 <h4><a name="parameters" class="anchor" href="#parameters"></a>Parameters</h4><table>
 <thead>
 <tr>
-<th></th>
 <th>Name</th>
 <th>Type</th>
 <th>Description</th>
@@ -20,84 +21,46 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td>name</td>
+<td><strong>id</strong></td>
 <td>string</td>
-<td>The name of the panel</td>
+<td>The id and name element</td>
 </tr>
 <tr>
-<td></td>
-<td>width</td>
-<td>number</td>
-<td>The width of the texture. If not power-of-two, will be updated to the nearest greater power-of-two number</td>
+<td><strong>options</strong></td>
+<td>json</td>
+<td>Options of element</td>
 </tr>
 <tr>
-<td></td>
-<td>height</td>
-<td>number</td>
-<td>The height of the texture. If not power-of-two, will be updated to the nearest greater power-of-two number</td>
+<td><strong>guimanager</strong></td>
+<td>GUIManager</td>
+<td>The gui manager</td>
 </tr>
 <tr>
-<td></td>
-<td>options</td>
-<td>Object</td>
-<td>Object containing all options linked to the text. Described below</td>
-</tr>
-<tr>
-<td></td>
-<td>guiSystem</td>
-<td><a href="http://doc.babylonjs.com/page.php?p=25103">GUISystem</a></td>
-<td>The GUI system</td>
+<td><strong>append</strong></td>
+<td>bool</td>
+<td>is added to the &lt;body&gt;. =&gt; True by default (optional)</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<p>The text is drawn on a canvas2D context, as described <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text">here</a>
-The <em>options</em> parameter can be composed of following attributes : </p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>font</td>
-<td>string</td>
-<td>the text font. No default value.</td>
-</tr>
-<tr>
-<td></td>
-<td>textBaseline</td>
-<td>string</td>
-<td>Baseline alignment setting. Possible values: top, hanging, middle, alphabetic, ideographic, bottom. Default value : middle</td>
-</tr>
-<tr>
-<td></td>
-<td>textAlign</td>
-<td>string</td>
-<td>Text alignment setting. Possible values: start, end, left, right or center. Default value is start.</td>
-</tr>
-<tr>
-<td></td>
-<td>direction</td>
-<td>string</td>
-<td>Directionality. Possible values: ltr, rtl, inherit.. Default value is inherit.</td>
-</tr>
-<tr>
-<td></td>
-<td>fillStyle</td>
-<td>string</td>
-<td>Text color (hexadecimal value). Default value #ffffff</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2><a name="members" class="anchor" href="#members"></a>Members</h2><h3><a name="updatestring-void" class="anchor" href="#updatestring-void"></a>update(string) → void</h3><p>Update the text displayed.</p>
+<h2><a name="options" class="anchor" href="#options"></a>Options</h2><ul>
+<li><strong>x</strong>: position left of text (in pixel)</li>
+<li><strong>y</strong>: position top of text (in pixel)</li>
+<li><strong>size</strong>: size the text (int) =&gt; 30 by default (optional)</li>
+<li><strong>color</strong>: color the text (string) =&gt; &quot;white&quot; by default (optional)</li>
+<li><strong>police</strong>: police font of text (string) =&gt; &quot;Segoe UI&quot; by default (optional) </li>
+<li><strong>text</strong>: value text label (string) =&gt; &quot;CastorGUI&quot; by default</li>
+<li><strong>bold</strong>: text bold or no =&gt; &quot;none&quot; by default else &quot;bold&quot;</li>
+<li><strong>italic</strong>: text italic or no =&gt; &quot;none&quot; by default else &quot;italic&quot;</li>
+<li><strong>centerVertical</strong>: text align center vertical (string) =&gt; &quot;false&quot; by default (optional) </li>
+<li><strong>centerHorizontal</strong>: text align center horizontal (string) =&gt; &quot;false&quot; by default (optional) </li>
+<li><strong>zIndex</strong>: depth of the element (int) =&gt; 1 by default</li>
+</ul>
+<h2><a name="methods" class="anchor" href="#methods"></a>Methods</h2><h3><a name="updatetextstringtext-void" class="anchor" href="#updatetextstringtext-void"></a>updateText(string:text) → void</h3><p>Updates the text of the GUI element</p>
+<h3><a name="gettextwidthstringtext-stringfont-void-static" class="anchor" href="#gettextwidthstringtext-stringfont-void-static"></a>getTextWidth(string:text, string:font) → void : static</h3><p>Get size the text of the GUI element</p>
+<h3><a name="setvisiblebool-fad-void" class="anchor" href="#setvisiblebool-fad-void"></a>setVisible(bool, fad) → void</h3><p>Set this GUI element to visible or invisible</p>
+<h3><a name="isvisiblee-void" class="anchor" href="#isvisiblee-void"></a>isVisible(e) → void</h3><p>Returns element if is visible or no</p>
+<h3><a name="dispose-void" class="anchor" href="#dispose-void"></a>dispose() → void</h3><p>Dispose the GUIText Manager, and delete element.</p>
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>    Github</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Documentation" target="_blank"><i class="fa fa-code-fork"></i>    Contribute</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><script>(function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
     i[r] = i[r] || function () {

@@ -1,0 +1,75 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><a href="/">Babylon.js | DOCUMENTATION</a></div><div id="whatsnew" class="item"><a href="/whats-new">What's new</a></div><div id="general" class="item"><a href="/generals">General</a></div><div id="tutorials" class="item"><a href="/tutorials">Tutorials</a></div><div id="exporters" class="item"><a href="/exporters">Exporters</a></div><div id="extensions" class="item active"><a href="/extensions">Extensions</a></div><div id="classes" class="item"><a href="/classes">Classes</a></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>extensions</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>GUIRadio</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><pre><code>* [Parameters](#parameters)
+</code></pre><ul>
+<li><a href="#options">Options</a></li>
+<li><a href="#methods">Methods</a><ul>
+<li><a href="#setvisiblebool-fade-void">setVisible(bool, fade) → void</a></li>
+<li><a href="#isvisible-void">isVisible() → void</a></li>
+<li><a href="#dispose-void">dispose() → void</a></li>
+</ul>
+</li>
+</ul>
+</div></div><div id="staticContent"><h2><a name="new-a-hrefguiradioaid-options-guimanager-callback-append" class="anchor" href="#new-guiradioid-options-guimanager-callback-append"></a>new <a href="#">GUIRadio</a>(id, options, guimanager, callback, append)</h2><p>Creates a new GUIRadio</p>
+<h4><a name="parameters" class="anchor" href="#parameters"></a>Parameters</h4><table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td>string</td>
+<td>The id and name element</td>
+</tr>
+<tr>
+<td><strong>options</strong></td>
+<td>json</td>
+<td>Options of element</td>
+</tr>
+<tr>
+<td><strong>guimanager</strong></td>
+<td>GUIManager</td>
+<td>The gui manager</td>
+</tr>
+<tr>
+<td><strong>callback</strong></td>
+<td>function</td>
+<td>Trigger function by click (optional)</td>
+</tr>
+<tr>
+<td><strong>append</strong></td>
+<td>bool</td>
+<td>is added to the &lt;body&gt;. =&gt; True by default (optional)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2><a name="options" class="anchor" href="#options"></a>Options</h2><ul>
+<li><strong>x</strong>: position left of radio button (in pixel)</li>
+<li><strong>y</strong>: position top of radio button (in pixel)</li>
+<li><strong>size</strong>: size of radio button (float) =&gt; &quot;1.0&quot; by default</li>
+<li><strong>zIndex</strong>: depth of the element (int) =&gt; 1 by default</li>
+<li><strong>className</strong>: css class to customize the element =&gt; null by default</li>
+</ul>
+<h2><a name="methods" class="anchor" href="#methods"></a>Methods</h2><h3><a name="setvisiblebool-fade-void" class="anchor" href="#setvisiblebool-fade-void"></a>setVisible(bool, fade) → void</h3><p>Set this GUI element to visible or invisible</p>
+<h3><a name="isvisible-void" class="anchor" href="#isvisible-void"></a>isVisible() → void</h3><p>Returns element if is visible or no</p>
+<h3><a name="dispose-void" class="anchor" href="#dispose-void"></a>dispose() → void</h3><p>Dispose the GUIRadio, and delete element.</p>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>    Github</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Documentation" target="_blank"><i class="fa fa-code-fork"></i>    Contribute</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><script>(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            };
+    i[r].l = 1 * new Date();
+    a = s.createElement(o);
+    m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-66146410-1', 'auto');
+ga('send', 'pageview');</script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
+    $(this).text($(this).text().replace(/&nbsp;/gi, ''));
+});
+hljs.initHighlightingOnLoad();</script></body></html>

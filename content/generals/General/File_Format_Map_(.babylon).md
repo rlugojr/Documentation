@@ -120,6 +120,8 @@ A material is defined by the following JSON:
     "emissiveTexture": Texture (see below),
     "specularTexture": Texture (see below),
     "bumpTexture": Texture (see below),
+    "lightmapTexture": Texture (see below),
+    "lightmapThreshold": float (default value is 0.5), 
     "checkReadyOnlyOnce": boolean
     "useReflectionFresnelFromSpecular": boolean (can be omitted),
     "useEmissiveAsIllumination": boolean (can be omitted)

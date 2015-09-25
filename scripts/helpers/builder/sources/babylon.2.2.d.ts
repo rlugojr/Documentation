@@ -268,8 +268,8 @@ declare module BABYLON {
         wipeCaches(): void;
         setSamplingMode(texture: WebGLTexture, samplingMode: number): void;
         createTexture(url: string, noMipmap: boolean, invertY: boolean, scene: Scene, samplingMode?: number, onLoad?: () => void, onError?: () => void, buffer?: any): WebGLTexture;
-        updateRawTexture(texture: WebGLTexture, data: ArrayBufferView, format: number, invertY: boolean): void;
-        createRawTexture(data: ArrayBufferView, width: number, height: number, format: number, generateMipMaps: boolean, invertY: boolean, samplingMode: number): WebGLTexture;
+        updateRawTexture(texture: WebGLTexture, data: ArrayBufferView, format: number, invertY: boolean, compression?: string): void;
+        createRawTexture(data: ArrayBufferView, width: number, height: number, format: number, generateMipMaps: boolean, invertY: boolean, samplingMode: number, compression?: string): WebGLTexture;
         createDynamicTexture(width: number, height: number, generateMipMaps: boolean, samplingMode: number, forceExponantOfTwo?: boolean): WebGLTexture;
         updateTextureSamplingMode(samplingMode: number, texture: WebGLTexture): void;
         updateDynamicTexture(texture: WebGLTexture, canvas: HTMLCanvasElement, invertY: boolean): void;
@@ -304,7 +304,6 @@ interface Window {
     IDBKeyRange(func: any): any;
     webkitIDBKeyRange(func: any): any;
     msIDBKeyRange(func: any): any;
-    URL: HTMLURL;
     webkitURL: HTMLURL;
     webkitRequestAnimationFrame(func: any): any;
     mozRequestAnimationFrame(func: any): any;
@@ -641,6 +640,7 @@ declare module BABYLON {
         _activeAnimatables: Animatable[];
         private _transformMatrix;
         private _pickWithRayInverseMatrix;
+        private _edgesRenderers;
         private _boundingBoxRenderer;
         private _outlineRenderer;
         private _viewMatrix;
@@ -840,6 +840,7 @@ declare module BABYLON {
          * @return {BABYLON.Node|null} the node found or null if not found at all.
          */
         getLastEntryByID(id: string): Node;
+        getNodeByID(id: string): Node;
         getNodeByName(name: string): Node;
         getMeshByName(name: string): AbstractMesh;
         getSoundByName(name: string): Sound;
@@ -923,6 +924,7 @@ declare module BABYLON {
         pointerY: number;
         meshUnderPointer: AbstractMesh;
         sourceEvent: any;
+        additionalData: any;
         /**
          * @constructor
          * @param source The mesh that triggered the action.
@@ -931,13 +933,13 @@ declare module BABYLON {
          * @param meshUnderPointer The mesh that is currently pointed at (can be null)
          * @param sourceEvent the original (browser) event that triggered the ActionEvent
          */
-        constructor(source: AbstractMesh, pointerX: number, pointerY: number, meshUnderPointer: AbstractMesh, sourceEvent?: any);
+        constructor(source: AbstractMesh, pointerX: number, pointerY: number, meshUnderPointer: AbstractMesh, sourceEvent?: any, additionalData?: any);
         /**
          * Helper function to auto-create an ActionEvent from a source mesh.
          * @param source the source mesh that triggered the event
          * @param evt {Event} The original (browser) event
          */
-        static CreateNew(source: AbstractMesh, evt?: Event): ActionEvent;
+        static CreateNew(source: AbstractMesh, evt?: Event, additionalData?: any): ActionEvent;
         /**
          * Helper function to auto-create an ActionEvent from a scene. If triggered by a mesh use ActionEvent.CreateNew
          * @param scene the scene where the event occurred
@@ -1201,6 +1203,7 @@ declare module BABYLON {
         private _easingFunction;
         targetPropertyPath: string[];
         currentFrame: number;
+        allowMatricesInterpolation: boolean;
         static CreateAndStartAnimation(name: string, mesh: AbstractMesh, targetProperty: string, framePerSecond: number, totalFrame: number, from: any, to: any, loopMode?: number, easingFunction?: EasingFunction): Animatable;
         constructor(name: string, targetProperty: string, framePerSecond: number, dataType: number, loopMode?: number);
         reset(): void;
@@ -1403,6 +1406,7 @@ declare module BABYLON {
         private _connectedMesh;
         private _customAttenuationFunction;
         private _registerFunc;
+        private _isOutputConnected;
         /**
         * Create a sound and attach it to a scene
         * @param name Name of your sound
@@ -1535,7 +1539,8 @@ declare module BABYLON {
         upperBetaLimit: number;
         lowerRadiusLimit: any;
         upperRadiusLimit: any;
-        angularSensibility: number;
+        angularSensibilityX: number;
+        angularSensibilityY: number;
         wheelPrecision: number;
         pinchPrecision: number;
         panningSensibility: number;
@@ -1580,6 +1585,7 @@ declare module BABYLON {
         private _previousBeta;
         private _previousRadius;
         private _collisionTriggered;
+        angularSensibility: number;
         constructor(name: string, alpha: number, beta: number, radius: number, target: any, scene: Scene);
         _getTargetPosition(): Vector3;
         _initCache(): void;
@@ -1590,6 +1596,7 @@ declare module BABYLON {
         _checkInputs(): void;
         private _checkLimits();
         setPosition(position: Vector3): void;
+        setTarget(target: Vector3): void;
         _getViewMatrix(): Matrix;
         private _onCollisionPositionChange;
         zoomOn(meshes?: AbstractMesh[], doNotUpdateMaxZ?: boolean): void;
@@ -1850,6 +1857,7 @@ declare module BABYLON {
         _reset: () => void;
         _waitingLockedTargetId: string;
         constructor(name: string, position: Vector3, scene: Scene);
+        getFrontPosition(distance: number): Vector3;
         _getLockedTargetPosition(): Vector3;
         _initCache(): void;
         _updateCache(ignoreParentClass?: boolean): void;
@@ -2298,6 +2306,7 @@ declare module BABYLON {
         lensFlares: LensFlare[];
         borderLimit: number;
         meshesSelectionPredicate: (mesh: Mesh) => boolean;
+        layerMask: number;
         private _scene;
         private _emitter;
         private _vertexDeclaration;
@@ -2646,8 +2655,11 @@ declare module BABYLON {
         specularPower: number;
         emissiveColor: Color3;
         useAlphaFromDiffuseTexture: boolean;
+        useEmissiveAsIllumination: boolean;
+        useReflectionFresnelFromSpecular: boolean;
         useSpecularOverAlpha: boolean;
         fogEnabled: boolean;
+        roughness: number;
         diffuseFresnelParameters: FresnelParameters;
         opacityFresnelParameters: FresnelParameters;
         reflectionFresnelParameters: FresnelParameters;
@@ -2867,6 +2879,10 @@ declare module BABYLON {
          * to something in order to rotate it from its local system to the given target system.
          */
         static RotationFromAxis(axis1: Vector3, axis2: Vector3, axis3: Vector3): Vector3;
+        /**
+         * The same than RotationFromAxis but updates the passed ref Vector3 parameter.
+         */
+        static RotationFromAxisToRef(axis1: Vector3, axis2: Vector3, axis3: Vector3, ref: Vector3): void;
     }
     class Vector4 {
         x: number;
@@ -3146,7 +3162,14 @@ declare module BABYLON {
         private _tangents;
         private _normals;
         private _binormals;
-        constructor(path: Vector3[], firstNormal?: Vector3);
+        private _raw;
+        /**
+        * new Path3D(path, normal, raw)
+        * path : an array of Vector3, the curve axis of the Path3D
+        * normal (optional) : Vector3, the first wanted normal to the curve. Ex (0, 1, 0) for a vertical normal.
+        * raw (optional, default false) : boolean, if true the returned Path3D isn't normalized. Useful to depict path acceleration or speed.
+        */
+        constructor(path: Vector3[], firstNormal?: Vector3, raw?: boolean);
         getCurve(): Vector3[];
         getTangents(): Vector3[];
         getNormals(): Vector3[];
@@ -3251,6 +3274,9 @@ declare module BABYLON {
         private _newPositionForCollisions;
         onCollide: (collidedMesh: AbstractMesh) => void;
         private _meshToBoneReferal;
+        edgesWidth: number;
+        edgesColor: Color4;
+        _edgesRenderer: EdgesRenderer;
         private _localScaling;
         private _localRotation;
         private _localTranslation;
@@ -3279,6 +3305,8 @@ declare module BABYLON {
         _waitingActions: any;
         _waitingFreezeWorldMatrix: boolean;
         constructor(name: string, scene: Scene);
+        disableEdgesRendering(): void;
+        enableEdgesRendering(epsilon?: number, checkVerticesInsteadOfIndices?: boolean): void;
         isBlocked: boolean;
         getLOD(camera: Camera): AbstractMesh;
         getTotalVertices(): number;
@@ -3615,10 +3643,7 @@ declare module BABYLON {
         color: Color3;
         alpha: number;
         private _colorShader;
-        private _ib;
-        private _indicesLength;
-        private _indices;
-        constructor(name: string, scene: Scene, updatable?: boolean);
+        constructor(name: string, scene: Scene, parent?: Node, source?: Mesh, doNotCloneChildren?: boolean);
         material: Material;
         isPickable: boolean;
         checkCollisions: boolean;
@@ -3626,6 +3651,7 @@ declare module BABYLON {
         _draw(subMesh: SubMesh, fillMode: number, instancesCount?: number): void;
         intersects(ray: Ray, fastCheck?: boolean): any;
         dispose(doNotRecurse?: boolean): void;
+        clone(name: string, newParent?: Node, doNotCloneChildren?: boolean): LinesMesh;
     }
 }
 
@@ -3779,7 +3805,24 @@ declare module BABYLON {
         static CreateRibbon(name: string, pathArray: Vector3[][], closeArray: boolean, closePath: boolean, offset: number, scene: Scene, updatable?: boolean, sideOrientation?: number, ribbonInstance?: Mesh): Mesh;
         static CreateDisc(name: string, radius: number, tessellation: number, scene: Scene, updatable?: boolean, sideOrientation?: number): Mesh;
         static CreateBox(name: string, size: number, scene: Scene, updatable?: boolean, sideOrientation?: number): Mesh;
-        static CreateSphere(name: string, segments: number, diameter: number, scene: Scene, updatable?: boolean, sideOrientation?: number): Mesh;
+        static CreateBox(name: string, options: {
+            width?: number;
+            height?: number;
+            depth?: number;
+            faceUV?: Vector4[];
+            faceColors?: Color4[];
+            sideOrientation?: number;
+            updatable?: boolean;
+        }, scene: Scene): Mesh;
+        static CreateSphere(name: string, segments: number, diameter: number, scene?: Scene, updatable?: boolean, sideOrientation?: number): Mesh;
+        static CreateSphere(name: string, options: {
+            segments?: number;
+            diameterX?: number;
+            diameterY?: number;
+            diameterZ?: number;
+            sideOrientation?: number;
+            updatable?: boolean;
+        }, scene: any): Mesh;
         static CreateCylinder(name: string, height: number, diameterTop: number, diameterBottom: number, tessellation: number, subdivisions: any, scene: Scene, updatable?: any, sideOrientation?: number): Mesh;
         static CreateTorus(name: string, diameter: number, thickness: number, tessellation: number, scene: Scene, updatable?: boolean, sideOrientation?: number): Mesh;
         static CreateTorusKnot(name: string, radius: number, tube: number, radialSegments: number, tubularSegments: number, p: number, q: number, scene: Scene, updatable?: boolean, sideOrientation?: number): Mesh;
@@ -3790,7 +3833,20 @@ declare module BABYLON {
         private static _ExtrudeShapeGeneric(name, shape, curve, scale, rotation, scaleFunction, rotateFunction, rbCA, rbCP, cap, custom, scene, updtbl, side, instance);
         static CreateLathe(name: string, shape: Vector3[], radius: number, tessellation: number, scene: Scene, updatable?: boolean, sideOrientation?: number): Mesh;
         static CreatePlane(name: string, size: number, scene: Scene, updatable?: boolean, sideOrientation?: number): Mesh;
+        static CreatePlane(name: string, options: {
+            width?: number;
+            height?: number;
+            sideOrientation?: number;
+            updatable?: boolean;
+        }, scene: Scene): Mesh;
         static CreateGround(name: string, width: number, height: number, subdivisions: number, scene: Scene, updatable?: boolean): Mesh;
+        static CreateGround(name: string, options: {
+            width?: number;
+            height?: number;
+            subdivisions?: number;
+            sideOrientation?: number;
+            updatable?: boolean;
+        }, scene: any): Mesh;
         static CreateTiledGround(name: string, xmin: number, zmin: number, xmax: number, zmax: number, subdivisions: {
             w: number;
             h: number;
@@ -3859,13 +3915,34 @@ declare module BABYLON {
         static ExtractFromGeometry(geometry: Geometry, copyWhenShared?: boolean): VertexData;
         private static _ExtractFrom(meshOrGeometry, copyWhenShared?);
         static CreateRibbon(pathArray: Vector3[][], closeArray: boolean, closePath: boolean, offset: number, sideOrientation?: number): VertexData;
+        static CreateBox(options: {
+            width?: number;
+            height?: number;
+            depth?: number;
+            faceUV?: Vector4[];
+            faceColors?: Color4[];
+            sideOrientation?: number;
+        }): VertexData;
         static CreateBox(size: number, sideOrientation?: number): VertexData;
-        static CreateSphere(segments: number, diameter: number, sideOrientation?: number): VertexData;
+        static CreateSphere(options: {
+            segments?: number;
+            diameterX?: number;
+            diameterY?: number;
+            diameterZ?: number;
+            sideOrientation?: number;
+        }): VertexData;
+        static CreateSphere(segments: number, diameter?: number, sideOrientation?: number): VertexData;
         static CreateCylinder(height: number, diameterTop: number, diameterBottom: number, tessellation: number, subdivisions?: number, sideOrientation?: number): VertexData;
         static CreateTorus(diameter: any, thickness: any, tessellation: any, sideOrientation?: number): VertexData;
         static CreateLines(points: Vector3[]): VertexData;
         static CreateDashedLines(points: Vector3[], dashSize: number, gapSize: number, dashNb: number): VertexData;
-        static CreateGround(width: number, height: number, subdivisions: number): VertexData;
+        static CreateGround(options: {
+            width?: number;
+            height?: number;
+            subdivisions?: number;
+            sideOrientation?: number;
+        }): VertexData;
+        static CreateGround(width: number, height: number, subdivisions?: number): VertexData;
         static CreateTiledGround(xmin: number, zmin: number, xmax: number, zmax: number, subdivisions?: {
             w: number;
             h: number;
@@ -3874,6 +3951,11 @@ declare module BABYLON {
             h: number;
         }): VertexData;
         static CreateGroundFromHeightMap(width: number, height: number, subdivisions: number, minHeight: number, maxHeight: number, buffer: Uint8Array, bufferWidth: number, bufferHeight: number): VertexData;
+        static CreatePlane(options: {
+            width?: number;
+            height?: number;
+            sideOrientation?: number;
+        }): VertexData;
         static CreatePlane(size: number, sideOrientation?: number): VertexData;
         static CreateDisc(radius: number, tessellation: number, sideOrientation?: number): VertexData;
         static CreateTorusKnot(radius: number, tube: number, radialSegments: number, tubularSegments: number, p: number, q: number, sideOrientation?: number): VertexData;
@@ -4158,6 +4240,7 @@ declare module BABYLON {
         minAngularSpeed: number;
         maxAngularSpeed: number;
         particleTexture: Texture;
+        layerMask: number;
         onDispose: () => void;
         updateFunction: (particles: Particle[]) => void;
         blendMode: number;
@@ -4261,6 +4344,108 @@ declare module BABYLON {
         static CylinderImpostor: number;
         static ConvexHullImpostor: number;
         static Epsilon: number;
+    }
+}
+
+declare module BABYLON {
+    class BoundingBoxRenderer {
+        frontColor: Color3;
+        backColor: Color3;
+        showBackLines: boolean;
+        renderList: SmartArray<BoundingBox>;
+        private _scene;
+        private _colorShader;
+        private _vb;
+        private _ib;
+        constructor(scene: Scene);
+        private _prepareRessources();
+        reset(): void;
+        render(): void;
+        dispose(): void;
+    }
+}
+
+declare module BABYLON {
+    class DepthRenderer {
+        private _scene;
+        private _depthMap;
+        private _effect;
+        private _viewMatrix;
+        private _projectionMatrix;
+        private _transformMatrix;
+        private _worldViewProjection;
+        private _cachedDefines;
+        constructor(scene: Scene, type?: number);
+        isReady(subMesh: SubMesh, useInstances: boolean): boolean;
+        getDepthMap(): RenderTargetTexture;
+        dispose(): void;
+    }
+}
+
+declare module BABYLON {
+    class EdgesRenderer {
+        private _source;
+        private _linesPositions;
+        private _linesNormals;
+        private _linesIndices;
+        private _epsilon;
+        private _indicesCount;
+        private _lineShader;
+        private _vb0;
+        private _vb1;
+        private _ib;
+        private _buffers;
+        private _checkVerticesInsteadOfIndices;
+        constructor(source: AbstractMesh, epsilon?: number, checkVerticesInsteadOfIndices?: boolean);
+        private _prepareRessources();
+        dispose(): void;
+        private _processEdgeForAdjacencies(pa, pb, p0, p1, p2);
+        private _processEdgeForAdjacenciesWithVertices(pa, pb, p0, p1, p2);
+        private _checkEdge(faceIndex, edge, faceNormals, p0, p1);
+        _generateEdgesLines(): void;
+        render(): void;
+    }
+}
+
+declare module BABYLON {
+    class OutlineRenderer {
+        private _scene;
+        private _effect;
+        private _cachedDefines;
+        constructor(scene: Scene);
+        render(subMesh: SubMesh, batch: _InstancesBatch, useOverlay?: boolean): void;
+        isReady(subMesh: SubMesh, useInstances: boolean): boolean;
+    }
+}
+
+declare module BABYLON {
+    class RenderingGroup {
+        index: number;
+        private _scene;
+        private _opaqueSubMeshes;
+        private _transparentSubMeshes;
+        private _alphaTestSubMeshes;
+        private _activeVertices;
+        constructor(index: number, scene: Scene);
+        render(customRenderFunction: (opaqueSubMeshes: SmartArray<SubMesh>, transparentSubMeshes: SmartArray<SubMesh>, alphaTestSubMeshes: SmartArray<SubMesh>) => void): boolean;
+        prepare(): void;
+        dispatch(subMesh: SubMesh): void;
+    }
+}
+
+declare module BABYLON {
+    class RenderingManager {
+        static MAX_RENDERINGGROUPS: number;
+        private _scene;
+        private _renderingGroups;
+        private _depthBufferAlreadyCleaned;
+        constructor(scene: Scene);
+        private _renderParticles(index, activeMeshes);
+        private _renderSprites(index);
+        private _clearDepthBuffer();
+        render(customRenderFunction: (opaqueSubMeshes: SmartArray<SubMesh>, transparentSubMeshes: SmartArray<SubMesh>, alphaTestSubMeshes: SmartArray<SubMesh>) => void, activeMeshes: AbstractMesh[], renderParticles: boolean, renderSprites: boolean): void;
+        reset(): void;
+        dispatch(subMesh: SubMesh): void;
     }
 }
 
@@ -4692,6 +4877,20 @@ declare module BABYLON {
 }
 
 declare module BABYLON {
+    enum TonemappingOperator {
+        Hable = 0,
+        Reinhard = 1,
+        HejiDawson = 2,
+        Photographic = 3,
+    }
+    class TonemapPostProcess extends PostProcess {
+        private _operator;
+        private _exposureAdjustment;
+        constructor(name: string, operator: TonemappingOperator, exposureAdjustment: number, camera: Camera, samplingMode?: number, engine?: Engine, textureFormat?: number);
+    }
+}
+
+declare module BABYLON {
     class VolumetricLightScatteringPostProcess extends PostProcess {
         private _volumetricLightScatteringPass;
         private _volumetricLightScatteringRTT;
@@ -4804,83 +5003,6 @@ declare module BABYLON {
 }
 
 declare module BABYLON {
-    class BoundingBoxRenderer {
-        frontColor: Color3;
-        backColor: Color3;
-        showBackLines: boolean;
-        renderList: SmartArray<BoundingBox>;
-        private _scene;
-        private _colorShader;
-        private _vb;
-        private _ib;
-        constructor(scene: Scene);
-        private _prepareRessources();
-        reset(): void;
-        render(): void;
-        dispose(): void;
-    }
-}
-
-declare module BABYLON {
-    class DepthRenderer {
-        private _scene;
-        private _depthMap;
-        private _effect;
-        private _viewMatrix;
-        private _projectionMatrix;
-        private _transformMatrix;
-        private _worldViewProjection;
-        private _cachedDefines;
-        constructor(scene: Scene, type?: number);
-        isReady(subMesh: SubMesh, useInstances: boolean): boolean;
-        getDepthMap(): RenderTargetTexture;
-        dispose(): void;
-    }
-}
-
-declare module BABYLON {
-    class OutlineRenderer {
-        private _scene;
-        private _effect;
-        private _cachedDefines;
-        constructor(scene: Scene);
-        render(subMesh: SubMesh, batch: _InstancesBatch, useOverlay?: boolean): void;
-        isReady(subMesh: SubMesh, useInstances: boolean): boolean;
-    }
-}
-
-declare module BABYLON {
-    class RenderingGroup {
-        index: number;
-        private _scene;
-        private _opaqueSubMeshes;
-        private _transparentSubMeshes;
-        private _alphaTestSubMeshes;
-        private _activeVertices;
-        constructor(index: number, scene: Scene);
-        render(customRenderFunction: (opaqueSubMeshes: SmartArray<SubMesh>, transparentSubMeshes: SmartArray<SubMesh>, alphaTestSubMeshes: SmartArray<SubMesh>) => void): boolean;
-        prepare(): void;
-        dispatch(subMesh: SubMesh): void;
-    }
-}
-
-declare module BABYLON {
-    class RenderingManager {
-        static MAX_RENDERINGGROUPS: number;
-        private _scene;
-        private _renderingGroups;
-        private _depthBufferAlreadyCleaned;
-        constructor(scene: Scene);
-        private _renderParticles(index, activeMeshes);
-        private _renderSprites(index);
-        private _clearDepthBuffer();
-        render(customRenderFunction: (opaqueSubMeshes: SmartArray<SubMesh>, transparentSubMeshes: SmartArray<SubMesh>, alphaTestSubMeshes: SmartArray<SubMesh>) => void, activeMeshes: AbstractMesh[], renderParticles: boolean, renderSprites: boolean): void;
-        reset(): void;
-        dispatch(subMesh: SubMesh): void;
-    }
-}
-
-declare module BABYLON {
     class Sprite {
         name: string;
         position: Vector3;
@@ -4917,6 +5039,7 @@ declare module BABYLON {
         cellSize: number;
         sprites: Sprite[];
         renderingGroupId: number;
+        layerMask: number;
         onDispose: () => void;
         fogEnabled: boolean;
         private _capacity;
@@ -5426,8 +5549,8 @@ declare module BABYLON {
             name: string;
             handler: EventListener;
         }[]): void;
-        static DumpFramebuffer(width: number, height: number, engine: Engine): void;
-        static CreateScreenshot(engine: Engine, camera: Camera, size: any): void;
+        static DumpFramebuffer(width: number, height: number, engine: Engine, successCallback?: (data: String) => void): void;
+        static CreateScreenshot(engine: Engine, camera: Camera, size: any, successCallback?: (data: String) => void): void;
         static ValidateXHRData(xhr: XMLHttpRequest, dataType?: number): boolean;
         private static _NoneLogLevel;
         private static _MessageLogLevel;
@@ -6070,6 +6193,7 @@ declare module BABYLON {
     class ProceduralTexture extends Texture {
         private _size;
         _generateMipMaps: boolean;
+        isEnabled: boolean;
         private _doNotChangeAspectRatio;
         private _currentRefreshId;
         private _refreshRate;

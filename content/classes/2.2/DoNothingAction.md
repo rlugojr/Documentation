@@ -1,0 +1,30 @@
+---
+ID_PAGE: 25158
+PG_TITLE: DoNothingAction
+PG_VERSION: 2.1
+TAGS:
+    - Action
+---
+##Description
+
+class [DoNothingAction](/classes/2.2/DoNothingAction) extends [Action](/classes/2.2/Action)
+
+
+
+##Constructor
+
+##new [DoNothingAction](/classes/2.2/DoNothingAction)(triggerOptions, condition)
+
+Do nothing
+
+####Parameters
+ | Name | Type | Description
+---|---|---|---
+optional | triggerOptions | any | 
+optional | condition | [Condition](/classes/2.2/Condition) | 
+
+##Methods
+
+###execute() &rarr; void
+
+

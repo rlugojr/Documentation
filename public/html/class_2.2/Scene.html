@@ -1,0 +1,1638 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><a href="/classes/2.2"><i id="goBackToClassList" class="fa fa-arrow-left"></i></a><div class="banner"><div class="menu"><div id="home" class="do-not-hover homeClassMobile"><a href="/">Babylon.js | DOCUMENTATION</a></div><div id="whatsnew" class="item"><a href="/whats-new">What's new</a></div><div id="general" class="item"><a href="/generals">General</a></div><div id="tutorials" class="item"><a href="/tutorials">Tutorials</a></div><div id="exporters" class="item"><a href="/exporters">Exporters</a></div><div id="extensions" class="item"><a href="/extensions">Extensions</a></div><div id="classes" class="item active"><a href="/classes">Classes</a></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div class="classBar"><div class="classesTitle">CLASSES</div><div class="sorts"><span id="orderByTags" class="order">Tags</span><span id="orderByAlpha" class="order selectedOrder">A - Z</span></div><div id="classes_classesListByTag" class="hidden sidemenu"><div id="Node" class="category"><div class="categoryTitle"><h3>Node</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/AbstractMesh" class="className">AbstractMesh</a></li><li><a href="/classes/2.2/AnaglyphArcRotateCamera" class="className">AnaglyphArcRotateCamera</a></li><li><a href="/classes/2.2/AnaglyphFreeCamera" class="className">AnaglyphFreeCamera</a></li><li><a href="/classes/2.2/AnaglyphGamepadCamera" class="className">AnaglyphGamepadCamera</a></li><li><a href="/classes/2.2/ArcRotateCamera" class="className">ArcRotateCamera</a></li><li><a href="/classes/2.2/Camera" class="className">Camera</a></li><li><a href="/classes/2.2/DeviceOrientationCamera" class="className">DeviceOrientationCamera</a></li><li><a href="/classes/2.2/DirectionalLight" class="className">DirectionalLight</a></li><li><a href="/classes/2.2/FollowCamera" class="className">FollowCamera</a></li><li><a href="/classes/2.2/FreeCamera" class="className">FreeCamera</a></li><li><a href="/classes/2.2/GamepadCamera" class="className">GamepadCamera</a></li><li><a href="/classes/2.2/GroundMesh" class="className">GroundMesh</a></li><li><a href="/classes/2.2/HemisphericLight" class="className">HemisphericLight</a></li><li><a href="/classes/2.2/InstancedMesh" class="className">InstancedMesh</a></li><li><a href="/classes/2.2/Light" class="className">Light</a></li><li><a href="/classes/2.2/LinesMesh" class="className">LinesMesh</a></li><li><a href="/classes/2.2/Mesh" class="className">Mesh</a></li><li><a href="/classes/2.2/Node" class="className">Node</a></li><li><a href="/classes/2.2/PointLight" class="className">PointLight</a></li><li><a href="/classes/2.2/SpotLight" class="className">SpotLight</a></li><li><a href="/classes/2.2/StereoscopicArcRotateCamera" class="className">StereoscopicArcRotateCamera</a></li><li><a href="/classes/2.2/StereoscopicFreeCamera" class="className">StereoscopicFreeCamera</a></li><li><a href="/classes/2.2/StereoscopicGamepadCamera" class="className">StereoscopicGamepadCamera</a></li><li><a href="/classes/2.2/TargetCamera" class="className">TargetCamera</a></li><li><a href="/classes/2.2/TouchCamera" class="className">TouchCamera</a></li><li><a href="/classes/2.2/VirtualJoysticksCamera" class="className">VirtualJoysticksCamera</a></li><li><a href="/classes/2.2/VRDeviceOrientationFreeCamera" class="className">VRDeviceOrientationFreeCamera</a></li><li><a href="/classes/2.2/WebVRFreeCamera" class="className">WebVRFreeCamera</a></li></div></div><div id="Mesh" class="category"><div class="categoryTitle"><h3>Mesh</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/AbstractMesh" class="className">AbstractMesh</a></li><li><a href="/classes/2.2/BoundingBox" class="className">BoundingBox</a></li><li><a href="/classes/2.2/BoundingBoxRenderer" class="className">BoundingBoxRenderer</a></li><li><a href="/classes/2.2/BoundingInfo" class="className">BoundingInfo</a></li><li><a href="/classes/2.2/BoundingSphere" class="className">BoundingSphere</a></li><li><a href="/classes/2.2/GroundMesh" class="className">GroundMesh</a></li><li><a href="/classes/2.2/InstancedMesh" class="className">InstancedMesh</a></li><li><a href="/classes/2.2/LinesMesh" class="className">LinesMesh</a></li><li><a href="/classes/2.2/Mesh" class="className">Mesh</a></li><li><a href="/classes/2.2/MeshAssetTask" class="className">MeshAssetTask</a></li><li><a href="/classes/2.2/MeshLODLevel" class="className">MeshLODLevel</a></li><li><a href="/classes/2.2/SubMesh" class="className">SubMesh</a></li></div></div><div id="Action" class="category"><div class="categoryTitle"><h3>Action</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/Action" class="className">Action</a></li><li><a href="/classes/2.2/ActionEvent" class="className">ActionEvent</a></li><li><a href="/classes/2.2/ActionManager" class="className">ActionManager</a></li><li><a href="/classes/2.2/CombineAction" class="className">CombineAction</a></li><li><a href="/classes/2.2/DoNothingAction" class="className">DoNothingAction</a></li><li><a href="/classes/2.2/ExecuteCodeAction" class="className">ExecuteCodeAction</a></li><li><a href="/classes/2.2/IncrementValueAction" class="className">IncrementValueAction</a></li><li><a href="/classes/2.2/InterpolateValueAction" class="className">InterpolateValueAction</a></li><li><a href="/classes/2.2/PlayAnimationAction" class="className">PlayAnimationAction</a></li><li><a href="/classes/2.2/PlaySoundAction" class="className">PlaySoundAction</a></li><li><a href="/classes/2.2/SetParentAction" class="className">SetParentAction</a></li><li><a href="/classes/2.2/SetStateAction" class="className">SetStateAction</a></li><li><a href="/classes/2.2/SetValueAction" class="className">SetValueAction</a></li><li><a href="/classes/2.2/StopAnimationAction" class="className">StopAnimationAction</a></li><li><a href="/classes/2.2/StopSoundAction" class="className">StopSoundAction</a></li><li><a href="/classes/2.2/SwitchBooleanAction" class="className">SwitchBooleanAction</a></li></div></div><div id="Camera" class="category"><div class="categoryTitle"><h3>Camera</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/AnaglyphArcRotateCamera" class="className">AnaglyphArcRotateCamera</a></li><li><a href="/classes/2.2/AnaglyphFreeCamera" class="className">AnaglyphFreeCamera</a></li><li><a href="/classes/2.2/AnaglyphGamepadCamera" class="className">AnaglyphGamepadCamera</a></li><li><a href="/classes/2.2/ArcRotateCamera" class="className">ArcRotateCamera</a></li><li><a href="/classes/2.2/Camera" class="className">Camera</a></li><li><a href="/classes/2.2/DeviceOrientationCamera" class="className">DeviceOrientationCamera</a></li><li><a href="/classes/2.2/FollowCamera" class="className">FollowCamera</a></li><li><a href="/classes/2.2/FreeCamera" class="className">FreeCamera</a></li><li><a href="/classes/2.2/GamepadCamera" class="className">GamepadCamera</a></li><li><a href="/classes/2.2/StereoscopicArcRotateCamera" class="className">StereoscopicArcRotateCamera</a></li><li><a href="/classes/2.2/StereoscopicFreeCamera" class="className">StereoscopicFreeCamera</a></li><li><a href="/classes/2.2/StereoscopicGamepadCamera" class="className">StereoscopicGamepadCamera</a></li><li><a href="/classes/2.2/TargetCamera" class="className">TargetCamera</a></li><li><a href="/classes/2.2/TouchCamera" class="className">TouchCamera</a></li><li><a href="/classes/2.2/VirtualJoysticksCamera" class="className">VirtualJoysticksCamera</a></li><li><a href="/classes/2.2/VRDeviceOrientationFreeCamera" class="className">VRDeviceOrientationFreeCamera</a></li><li><a href="/classes/2.2/WebVRFreeCamera" class="className">WebVRFreeCamera</a></li></div></div><div id="ArcRotateCamera" class="category"><div class="categoryTitle"><h3>ArcRotateCamera</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/AnaglyphArcRotateCamera" class="className">AnaglyphArcRotateCamera</a></li><li><a href="/classes/2.2/ArcRotateCamera" class="className">ArcRotateCamera</a></li><li><a href="/classes/2.2/StereoscopicArcRotateCamera" class="className">StereoscopicArcRotateCamera</a></li></div></div><div id="TargetCamera" class="category"><div class="categoryTitle"><h3>TargetCamera</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/AnaglyphFreeCamera" class="className">AnaglyphFreeCamera</a></li><li><a href="/classes/2.2/AnaglyphGamepadCamera" class="className">AnaglyphGamepadCamera</a></li><li><a href="/classes/2.2/DeviceOrientationCamera" class="className">DeviceOrientationCamera</a></li><li><a href="/classes/2.2/FollowCamera" class="className">FollowCamera</a></li><li><a href="/classes/2.2/FreeCamera" class="className">FreeCamera</a></li><li><a href="/classes/2.2/GamepadCamera" class="className">GamepadCamera</a></li><li><a href="/classes/2.2/StereoscopicFreeCamera" class="className">StereoscopicFreeCamera</a></li><li><a href="/classes/2.2/StereoscopicGamepadCamera" class="className">StereoscopicGamepadCamera</a></li><li><a href="/classes/2.2/TargetCamera" class="className">TargetCamera</a></li><li><a href="/classes/2.2/TouchCamera" class="className">TouchCamera</a></li><li><a href="/classes/2.2/VirtualJoysticksCamera" class="className">VirtualJoysticksCamera</a></li><li><a href="/classes/2.2/VRDeviceOrientationFreeCamera" class="className">VRDeviceOrientationFreeCamera</a></li><li><a href="/classes/2.2/WebVRFreeCamera" class="className">WebVRFreeCamera</a></li></div></div><div id="FreeCamera" class="category"><div class="categoryTitle"><h3>FreeCamera</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/AnaglyphFreeCamera" class="className">AnaglyphFreeCamera</a></li><li><a href="/classes/2.2/AnaglyphGamepadCamera" class="className">AnaglyphGamepadCamera</a></li><li><a href="/classes/2.2/DeviceOrientationCamera" class="className">DeviceOrientationCamera</a></li><li><a href="/classes/2.2/FreeCamera" class="className">FreeCamera</a></li><li><a href="/classes/2.2/GamepadCamera" class="className">GamepadCamera</a></li><li><a href="/classes/2.2/StereoscopicFreeCamera" class="className">StereoscopicFreeCamera</a></li><li><a href="/classes/2.2/StereoscopicGamepadCamera" class="className">StereoscopicGamepadCamera</a></li><li><a href="/classes/2.2/TouchCamera" class="className">TouchCamera</a></li><li><a href="/classes/2.2/VirtualJoysticksCamera" class="className">VirtualJoysticksCamera</a></li><li><a href="/classes/2.2/VRDeviceOrientationFreeCamera" class="className">VRDeviceOrientationFreeCamera</a></li><li><a href="/classes/2.2/WebVRFreeCamera" class="className">WebVRFreeCamera</a></li></div></div><div id="GamepadCamera" class="category"><div class="categoryTitle"><h3>GamepadCamera</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/AnaglyphGamepadCamera" class="className">AnaglyphGamepadCamera</a></li><li><a href="/classes/2.2/GamepadCamera" class="className">GamepadCamera</a></li><li><a href="/classes/2.2/StereoscopicGamepadCamera" class="className">StereoscopicGamepadCamera</a></li></div></div><div id="PostProcess" class="category"><div class="categoryTitle"><h3>PostProcess</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/AnaglyphPostProcess" class="className">AnaglyphPostProcess</a></li><li><a href="/classes/2.2/BlackAndWhitePostProcess" class="className">BlackAndWhitePostProcess</a></li><li><a href="/classes/2.2/BlurPostProcess" class="className">BlurPostProcess</a></li><li><a href="/classes/2.2/ColorCorrectionPostProcess" class="className">ColorCorrectionPostProcess</a></li><li><a href="/classes/2.2/ConvolutionPostProcess" class="className">ConvolutionPostProcess</a></li><li><a href="/classes/2.2/DisplayPassPostProcess" class="className">DisplayPassPostProcess</a></li><li><a href="/classes/2.2/FilterPostProcess" class="className">FilterPostProcess</a></li><li><a href="/classes/2.2/FxaaPostProcess" class="className">FxaaPostProcess</a></li><li><a href="/classes/2.2/LensRenderingPipeline" class="className">LensRenderingPipeline</a></li><li><a href="/classes/2.2/PassPostProcess" class="className">PassPostProcess</a></li><li><a href="/classes/2.2/PostProcess" class="className">PostProcess</a></li><li><a href="/classes/2.2/PostProcessesOptimization" class="className">PostProcessesOptimization</a></li><li><a href="/classes/2.2/PostProcessManager" class="className">PostProcessManager</a></li><li><a href="/classes/2.2/PostProcessRenderEffect" class="className">PostProcessRenderEffect</a></li><li><a href="/classes/2.2/PostProcessRenderPass" class="className">PostProcessRenderPass</a></li><li><a href="/classes/2.2/PostProcessRenderPipeline" class="className">PostProcessRenderPipeline</a></li><li><a href="/classes/2.2/PostProcessRenderPipelineManager" class="className">PostProcessRenderPipelineManager</a></li><li><a href="/classes/2.2/RefractionPostProcess" class="className">RefractionPostProcess</a></li><li><a href="/classes/2.2/SSAORenderingPipeline" class="className">SSAORenderingPipeline</a></li><li><a href="/classes/2.2/StereoscopicInterlacePostProcess" class="className">StereoscopicInterlacePostProcess</a></li><li><a href="/classes/2.2/TonemappingOperator" class="className">TonemappingOperator</a></li><li><a href="/classes/2.2/VolumetricLightScatteringPostProcess" class="className">VolumetricLightScatteringPostProcess</a></li><li><a href="/classes/2.2/VRDistortionCorrectionPostProcess" class="className">VRDistortionCorrectionPostProcess</a></li></div></div><div id="Math" class="category"><div class="categoryTitle"><h3>Math</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/Angle" class="className">Angle</a></li><li><a href="/classes/2.2/Arc2" class="className">Arc2</a></li><li><a href="/classes/2.2/Axis" class="className">Axis</a></li></div></div><div id="Animation" class="category"><div class="categoryTitle"><h3>Animation</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/Animatable" class="className">Animatable</a></li><li><a href="/classes/2.2/Animation" class="className">Animation</a></li></div></div><div id="Assets" class="category"><div class="categoryTitle"><h3>Assets</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/AssetsManager" class="className">AssetsManager</a></li><li><a href="/classes/2.2/ImageAssetTask" class="className">ImageAssetTask</a></li><li><a href="/classes/2.2/MeshAssetTask" class="className">MeshAssetTask</a></li><li><a href="/classes/2.2/TextFileAssetTask" class="className">TextFileAssetTask</a></li><li><a href="/classes/2.2/TextureAssetTask" class="className">TextureAssetTask</a></li></div></div><div id="Audio" class="category"><div class="categoryTitle"><h3>Audio</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/AudioEngine" class="className">AudioEngine</a></li><li><a href="/classes/2.2/Sound" class="className">Sound</a></li><li><a href="/classes/2.2/SoundTrack" class="className">SoundTrack</a></li></div></div><div id="EasingFunction" class="category"><div class="categoryTitle"><h3>EasingFunction</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/BackEase" class="className">BackEase</a></li><li><a href="/classes/2.2/BounceEase" class="className">BounceEase</a></li><li><a href="/classes/2.2/CircleEase" class="className">CircleEase</a></li><li><a href="/classes/2.2/CubicEase" class="className">CubicEase</a></li><li><a href="/classes/2.2/EasingFunction" class="className">EasingFunction</a></li><li><a href="/classes/2.2/ElasticEase" class="className">ElasticEase</a></li><li><a href="/classes/2.2/ExponentialEase" class="className">ExponentialEase</a></li><li><a href="/classes/2.2/PowerEase" class="className">PowerEase</a></li><li><a href="/classes/2.2/QuadraticEase" class="className">QuadraticEase</a></li><li><a href="/classes/2.2/QuarticEase" class="className">QuarticEase</a></li><li><a href="/classes/2.2/QuinticEase" class="className">QuinticEase</a></li><li><a href="/classes/2.2/SineEase" class="className">SineEase</a></li></div></div><div id="BaseTexture" class="category"><div class="categoryTitle"><h3>BaseTexture</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/BaseTexture" class="className">BaseTexture</a></li><li><a href="/classes/2.2/BrickProceduralTexture" class="className">BrickProceduralTexture</a></li><li><a href="/classes/2.2/CloudProceduralTexture" class="className">CloudProceduralTexture</a></li><li><a href="/classes/2.2/CubeTexture" class="className">CubeTexture</a></li><li><a href="/classes/2.2/CustomProceduralTexture" class="className">CustomProceduralTexture</a></li><li><a href="/classes/2.2/DynamicTexture" class="className">DynamicTexture</a></li><li><a href="/classes/2.2/FireProceduralTexture" class="className">FireProceduralTexture</a></li><li><a href="/classes/2.2/GrassProceduralTexture" class="className">GrassProceduralTexture</a></li><li><a href="/classes/2.2/MarbleProceduralTexture" class="className">MarbleProceduralTexture</a></li><li><a href="/classes/2.2/MirrorTexture" class="className">MirrorTexture</a></li><li><a href="/classes/2.2/ProceduralTexture" class="className">ProceduralTexture</a></li><li><a href="/classes/2.2/RawTexture" class="className">RawTexture</a></li><li><a href="/classes/2.2/RenderTargetTexture" class="className">RenderTargetTexture</a></li><li><a href="/classes/2.2/RoadProceduralTexture" class="className">RoadProceduralTexture</a></li><li><a href="/classes/2.2/Texture" class="className">Texture</a></li><li><a href="/classes/2.2/VideoTexture" class="className">VideoTexture</a></li><li><a href="/classes/2.2/WoodProceduralTexture" class="className">WoodProceduralTexture</a></li></div></div><div id="Bounding" class="category"><div class="categoryTitle"><h3>Bounding</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/BoundingBox" class="className">BoundingBox</a></li><li><a href="/classes/2.2/BoundingBoxRenderer" class="className">BoundingBoxRenderer</a></li><li><a href="/classes/2.2/BoundingInfo" class="className">BoundingInfo</a></li><li><a href="/classes/2.2/BoundingSphere" class="className">BoundingSphere</a></li></div></div><div id="Texture" class="category"><div class="categoryTitle"><h3>Texture</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/BrickProceduralTexture" class="className">BrickProceduralTexture</a></li><li><a href="/classes/2.2/CloudProceduralTexture" class="className">CloudProceduralTexture</a></li><li><a href="/classes/2.2/CustomProceduralTexture" class="className">CustomProceduralTexture</a></li><li><a href="/classes/2.2/DynamicTexture" class="className">DynamicTexture</a></li><li><a href="/classes/2.2/FireProceduralTexture" class="className">FireProceduralTexture</a></li><li><a href="/classes/2.2/GrassProceduralTexture" class="className">GrassProceduralTexture</a></li><li><a href="/classes/2.2/MarbleProceduralTexture" class="className">MarbleProceduralTexture</a></li><li><a href="/classes/2.2/MirrorTexture" class="className">MirrorTexture</a></li><li><a href="/classes/2.2/ProceduralTexture" class="className">ProceduralTexture</a></li><li><a href="/classes/2.2/RawTexture" class="className">RawTexture</a></li><li><a href="/classes/2.2/RenderTargetTexture" class="className">RenderTargetTexture</a></li><li><a href="/classes/2.2/RoadProceduralTexture" class="className">RoadProceduralTexture</a></li><li><a href="/classes/2.2/Texture" class="className">Texture</a></li><li><a href="/classes/2.2/VideoTexture" class="className">VideoTexture</a></li><li><a href="/classes/2.2/WoodProceduralTexture" class="className">WoodProceduralTexture</a></li></div></div><div id="ProceduralTexture" class="category"><div class="categoryTitle"><h3>ProceduralTexture</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/BrickProceduralTexture" class="className">BrickProceduralTexture</a></li><li><a href="/classes/2.2/CloudProceduralTexture" class="className">CloudProceduralTexture</a></li><li><a href="/classes/2.2/CustomProceduralTexture" class="className">CustomProceduralTexture</a></li><li><a href="/classes/2.2/FireProceduralTexture" class="className">FireProceduralTexture</a></li><li><a href="/classes/2.2/GrassProceduralTexture" class="className">GrassProceduralTexture</a></li><li><a href="/classes/2.2/MarbleProceduralTexture" class="className">MarbleProceduralTexture</a></li><li><a href="/classes/2.2/ProceduralTexture" class="className">ProceduralTexture</a></li><li><a href="/classes/2.2/RoadProceduralTexture" class="className">RoadProceduralTexture</a></li><li><a href="/classes/2.2/WoodProceduralTexture" class="className">WoodProceduralTexture</a></li></div></div><div id="Plugins" class="category"><div class="categoryTitle"><h3>Plugins</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/CannonJSPlugin" class="className">CannonJSPlugin</a></li><li><a href="/classes/2.2/OimoJSPlugin" class="className">OimoJSPlugin</a></li></div></div><div id="Collision" class="category"><div class="categoryTitle"><h3>Collision</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/Collider" class="className">Collider</a></li><li><a href="/classes/2.2/CollideWorker" class="className">CollideWorker</a></li><li><a href="/classes/2.2/CollisionCache" class="className">CollisionCache</a></li><li><a href="/classes/2.2/CollisionCoordinatorLegacy" class="className">CollisionCoordinatorLegacy</a></li><li><a href="/classes/2.2/CollisionCoordinatorWorker" class="className">CollisionCoordinatorWorker</a></li><li><a href="/classes/2.2/CollisionDetectorTransferable" class="className">CollisionDetectorTransferable</a></li><li><a href="/classes/2.2/WorkerReplyType" class="className">WorkerReplyType</a></li><li><a href="/classes/2.2/WorkerTaskType" class="className">WorkerTaskType</a></li></div></div><div id="Objects" class="category"><div class="categoryTitle"><h3>Objects</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/Color3" class="className">Color3</a></li><li><a href="/classes/2.2/Color4" class="className">Color4</a></li><li><a href="/classes/2.2/Curve3" class="className">Curve3</a></li><li><a href="/classes/2.2/Vector2" class="className">Vector2</a></li><li><a href="/classes/2.2/Vector3" class="className">Vector3</a></li><li><a href="/classes/2.2/Vector4" class="className">Vector4</a></li></div></div><div id="Condition" class="category"><div class="categoryTitle"><h3>Condition</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/Condition" class="className">Condition</a></li><li><a href="/classes/2.2/PredicateCondition" class="className">PredicateCondition</a></li><li><a href="/classes/2.2/StateCondition" class="className">StateCondition</a></li><li><a href="/classes/2.2/ValueCondition" class="className">ValueCondition</a></li></div></div><div id="Database" class="category"><div class="categoryTitle"><h3>Database</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/Database" class="className">Database</a></li></div></div><div id="Tools" class="category"><div class="categoryTitle"><h3>Tools</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/DDSTools" class="className">DDSTools</a></li><li><a href="/classes/2.2/DebugLayer" class="className">DebugLayer</a></li><li><a href="/classes/2.2/Tools" class="className">Tools</a></li></div></div><div id="Light" class="category"><div class="categoryTitle"><h3>Light</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/DirectionalLight" class="className">DirectionalLight</a></li><li><a href="/classes/2.2/HemisphericLight" class="className">HemisphericLight</a></li><li><a href="/classes/2.2/Light" class="className">Light</a></li><li><a href="/classes/2.2/PointLight" class="className">PointLight</a></li><li><a href="/classes/2.2/SpotLight" class="className">SpotLight</a></li></div></div><div id="Effect" class="category"><div class="categoryTitle"><h3>Effect</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/Effect" class="className">Effect</a></li><li><a href="/classes/2.2/EffectFallbacks" class="className">EffectFallbacks</a></li></div></div><div id="Engine" class="category"><div class="categoryTitle"><h3>Engine</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/Engine" class="className">Engine</a></li><li><a href="/classes/2.2/EngineCapabilities" class="className">EngineCapabilities</a></li><li><a href="/classes/2.2/PhysicsEngine" class="className">PhysicsEngine</a></li></div></div><div id="Files" class="category"><div class="categoryTitle"><h3>Files</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/FilesInput" class="className">FilesInput</a></li></div></div><div id="Gamepad" class="category"><div class="categoryTitle"><h3>Gamepad</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/Gamepad" class="className">Gamepad</a></li><li><a href="/classes/2.2/Gamepads" class="className">Gamepads</a></li><li><a href="/classes/2.2/GenericPad" class="className">GenericPad</a></li><li><a href="/classes/2.2/Xbox360Button" class="className">Xbox360Button</a></li><li><a href="/classes/2.2/Xbox360Dpad" class="className">Xbox360Dpad</a></li><li><a href="/classes/2.2/Xbox360Pad" class="className">Xbox360Pad</a></li></div></div><div id="Geometry" class="category"><div class="categoryTitle"><h3>Geometry</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/Geometry" class="className">Geometry</a></li><li><a href="/classes/2.2/Plane" class="className">Plane</a></li></div></div><div id="Scene" class="category"><div class="categoryTitle"><h3>Scene</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/HardwareScalingOptimization" class="className">HardwareScalingOptimization</a></li><li><a href="/classes/2.2/LensFlaresOptimization" class="className">LensFlaresOptimization</a></li><li><a href="/classes/2.2/MergeMeshesOptimization" class="className">MergeMeshesOptimization</a></li><li><a href="/classes/2.2/ParticlesOptimization" class="className">ParticlesOptimization</a></li><li><a href="/classes/2.2/PostProcessesOptimization" class="className">PostProcessesOptimization</a></li><li><a href="/classes/2.2/RenderTargetsOptimization" class="className">RenderTargetsOptimization</a></li><li><a href="/classes/2.2/Scene" class="className">Scene</a></li><li><a href="/classes/2.2/SceneLoader" class="className">SceneLoader</a></li><li><a href="/classes/2.2/SceneOptimization" class="className">SceneOptimization</a></li><li><a href="/classes/2.2/SceneOptimizer" class="className">SceneOptimizer</a></li><li><a href="/classes/2.2/SceneOptimizerOptions" class="className">SceneOptimizerOptions</a></li><li><a href="/classes/2.2/SceneSerializer" class="className">SceneSerializer</a></li><li><a href="/classes/2.2/ShadowsOptimization" class="className">ShadowsOptimization</a></li><li><a href="/classes/2.2/TextureOptimization" class="className">TextureOptimization</a></li></div></div><div id="SceneOptimization" class="category"><div class="categoryTitle"><h3>SceneOptimization</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/HardwareScalingOptimization" class="className">HardwareScalingOptimization</a></li><li><a href="/classes/2.2/LensFlaresOptimization" class="className">LensFlaresOptimization</a></li><li><a href="/classes/2.2/MergeMeshesOptimization" class="className">MergeMeshesOptimization</a></li><li><a href="/classes/2.2/ParticlesOptimization" class="className">ParticlesOptimization</a></li><li><a href="/classes/2.2/PostProcessesOptimization" class="className">PostProcessesOptimization</a></li><li><a href="/classes/2.2/RenderTargetsOptimization" class="className">RenderTargetsOptimization</a></li><li><a href="/classes/2.2/SceneOptimization" class="className">SceneOptimization</a></li><li><a href="/classes/2.2/ShadowsOptimization" class="className">ShadowsOptimization</a></li><li><a href="/classes/2.2/TextureOptimization" class="className">TextureOptimization</a></li></div></div><div id="PostProcessRenderPipeline" class="category"><div class="categoryTitle"><h3>PostProcessRenderPipeline</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/LensRenderingPipeline" class="className">LensRenderingPipeline</a></li><li><a href="/classes/2.2/PostProcessRenderPipeline" class="className">PostProcessRenderPipeline</a></li><li><a href="/classes/2.2/SSAORenderingPipeline" class="className">SSAORenderingPipeline</a></li></div></div><div id="Material" class="category"><div class="categoryTitle"><h3>Material</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/Material" class="className">Material</a></li><li><a href="/classes/2.2/MultiMaterial" class="className">MultiMaterial</a></li><li><a href="/classes/2.2/ShaderMaterial" class="className">ShaderMaterial</a></li><li><a href="/classes/2.2/StandardMaterial" class="className">StandardMaterial</a></li></div></div><div id="TargetTexture" class="category"><div class="categoryTitle"><h3>TargetTexture</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/MirrorTexture" class="className">MirrorTexture</a></li><li><a href="/classes/2.2/RenderTargetTexture" class="className">RenderTargetTexture</a></li></div></div><div id="Particle" class="category"><div class="categoryTitle"><h3>Particle</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/Particle" class="className">Particle</a></li><li><a href="/classes/2.2/ParticlesOptimization" class="className">ParticlesOptimization</a></li><li><a href="/classes/2.2/ParticleSystem" class="className">ParticleSystem</a></li></div></div><div id="Sprite" class="category"><div class="categoryTitle"><h3>Sprite</h3></div><div class="categoryList"><!--List the classes of a category--><li><a href="/classes/2.2/Sprite" class="className">Sprite</a></li><li><a href="/classes/2.2/SpriteManager" class="className">SpriteManager</a></li></div></div></div><div id="classes_classesListByAlpha" class="sideClassesListByAlpha"><a href="./AbstractMesh" data-name="AbstractMesh" class="class">AbstractMesh</a><a href="./Action" data-name="Action" class="class">Action</a><a href="./ActionEvent" data-name="ActionEvent" class="class">ActionEvent</a><a href="./ActionManager" data-name="ActionManager" class="class">ActionManager</a><a href="./AnaglyphArcRotateCamera" data-name="AnaglyphArcRotateCamera" class="class">AnaglyphArcRotateCamera</a><a href="./AnaglyphFreeCamera" data-name="AnaglyphFreeCamera" class="class">AnaglyphFreeCamera</a><a href="./AnaglyphGamepadCamera" data-name="AnaglyphGamepadCamera" class="class">AnaglyphGamepadCamera</a><a href="./AnaglyphPostProcess" data-name="AnaglyphPostProcess" class="class">AnaglyphPostProcess</a><a href="./Analyser" data-name="Analyser" class="class">Analyser</a><a href="./AndOrNotEvaluator" data-name="AndOrNotEvaluator" class="class">AndOrNotEvaluator</a><a href="./Angle" data-name="Angle" class="class">Angle</a><a href="./Animatable" data-name="Animatable" class="class">Animatable</a><a href="./Animation" data-name="Animation" class="class">Animation</a><a href="./Arc2" data-name="Arc2" class="class">Arc2</a><a href="./ArcFollowCamera" data-name="ArcFollowCamera" class="class">ArcFollowCamera</a><a href="./ArcRotateCamera" data-name="ArcRotateCamera" class="class">ArcRotateCamera</a><a href="./AssetsManager" data-name="AssetsManager" class="class">AssetsManager</a><a href="./AsyncLoop" data-name="AsyncLoop" class="class">AsyncLoop</a><a href="./AudioEngine" data-name="AudioEngine" class="class">AudioEngine</a><a href="./Axis" data-name="Axis" class="class">Axis</a><a href="./BackEase" data-name="BackEase" class="class">BackEase</a><a href="./BaseTexture" data-name="BaseTexture" class="class">BaseTexture</a><a href="./BezierCurve" data-name="BezierCurve" class="class">BezierCurve</a><a href="./BezierCurveEase" data-name="BezierCurveEase" class="class">BezierCurveEase</a><a href="./BinaryFileAssetTask" data-name="BinaryFileAssetTask" class="class">BinaryFileAssetTask</a><a href="./BlackAndWhitePostProcess" data-name="BlackAndWhitePostProcess" class="class">BlackAndWhitePostProcess</a><a href="./BlurPostProcess" data-name="BlurPostProcess" class="class">BlurPostProcess</a><a href="./Bone" data-name="Bone" class="class">Bone</a><a href="./BounceEase" data-name="BounceEase" class="class">BounceEase</a><a href="./BoundingBox" data-name="BoundingBox" class="class">BoundingBox</a><a href="./BoundingBoxRenderer" data-name="BoundingBoxRenderer" class="class">BoundingBoxRenderer</a><a href="./BoundingInfo" data-name="BoundingInfo" class="class">BoundingInfo</a><a href="./BoundingSphere" data-name="BoundingSphere" class="class">BoundingSphere</a><a href="./Box" data-name="Box" class="class">Box</a><a href="./BrickProceduralTexture" data-name="BrickProceduralTexture" class="class">BrickProceduralTexture</a><a href="./Camera" data-name="Camera" class="class">Camera</a><a href="./CannonJSPlugin" data-name="CannonJSPlugin" class="class">CannonJSPlugin</a><a href="./CircleEase" data-name="CircleEase" class="class">CircleEase</a><a href="./CloudProceduralTexture" data-name="CloudProceduralTexture" class="class">CloudProceduralTexture</a><a href="./Collider" data-name="Collider" class="class">Collider</a><a href="./CollideWorker" data-name="CollideWorker" class="class">CollideWorker</a><a href="./CollisionCache" data-name="CollisionCache" class="class">CollisionCache</a><a href="./CollisionCoordinatorLegacy" data-name="CollisionCoordinatorLegacy" class="class">CollisionCoordinatorLegacy</a><a href="./CollisionCoordinatorWorker" data-name="CollisionCoordinatorWorker" class="class">CollisionCoordinatorWorker</a><a href="./CollisionDetectorTransferable" data-name="CollisionDetectorTransferable" class="class">CollisionDetectorTransferable</a><a href="./Color3" data-name="Color3" class="class">Color3</a><a href="./Color4" data-name="Color4" class="class">Color4</a><a href="./ColorCorrectionPostProcess" data-name="ColorCorrectionPostProcess" class="class">ColorCorrectionPostProcess</a><a href="./CombineAction" data-name="CombineAction" class="class">CombineAction</a><a href="./Condition" data-name="Condition" class="class">Condition</a><a href="./ConvolutionPostProcess" data-name="ConvolutionPostProcess" class="class">ConvolutionPostProcess</a><a href="./CSG" data-name="CSG" class="class">CSG</a><a href="./CubeTexture" data-name="CubeTexture" class="class">CubeTexture</a><a href="./CubicEase" data-name="CubicEase" class="class">CubicEase</a><a href="./Curve3" data-name="Curve3" class="class">Curve3</a><a href="./CustomProceduralTexture" data-name="CustomProceduralTexture" class="class">CustomProceduralTexture</a><a href="./Cylinder" data-name="Cylinder" class="class">Cylinder</a><a href="./Database" data-name="Database" class="class">Database</a><a href="./DDSTools" data-name="DDSTools" class="class">DDSTools</a><a href="./DebugLayer" data-name="DebugLayer" class="class">DebugLayer</a><a href="./DecimationTriangle" data-name="DecimationTriangle" class="class">DecimationTriangle</a><a href="./DecimationVertex" data-name="DecimationVertex" class="class">DecimationVertex</a><a href="./DepthRenderer" data-name="DepthRenderer" class="class">DepthRenderer</a><a href="./DeviceOrientationCamera" data-name="DeviceOrientationCamera" class="class">DeviceOrientationCamera</a><a href="./DirectionalLight" data-name="DirectionalLight" class="class">DirectionalLight</a><a href="./DisplayPassPostProcess" data-name="DisplayPassPostProcess" class="class">DisplayPassPostProcess</a><a href="./DoNothingAction" data-name="DoNothingAction" class="class">DoNothingAction</a><a href="./DynamicTexture" data-name="DynamicTexture" class="class">DynamicTexture</a><a href="./EasingFunction" data-name="EasingFunction" class="class">EasingFunction</a><a href="./EdgesRenderer" data-name="EdgesRenderer" class="class">EdgesRenderer</a><a href="./Effect" data-name="Effect" class="class">Effect</a><a href="./EffectFallbacks" data-name="EffectFallbacks" class="class">EffectFallbacks</a><a href="./ElasticEase" data-name="ElasticEase" class="class">ElasticEase</a><a href="./Engine" data-name="Engine" class="class">Engine</a><a href="./EngineCapabilities" data-name="EngineCapabilities" class="class">EngineCapabilities</a><a href="./ExecuteCodeAction" data-name="ExecuteCodeAction" class="class">ExecuteCodeAction</a><a href="./ExponentialEase" data-name="ExponentialEase" class="class">ExponentialEase</a><a href="./FilesInput" data-name="FilesInput" class="class">FilesInput</a><a href="./FilterPostProcess" data-name="FilterPostProcess" class="class">FilterPostProcess</a><a href="./FireProceduralTexture" data-name="FireProceduralTexture" class="class">FireProceduralTexture</a><a href="./FollowCamera" data-name="FollowCamera" class="class">FollowCamera</a><a href="./FreeCamera" data-name="FreeCamera" class="class">FreeCamera</a><a href="./FresnelParameters" data-name="FresnelParameters" class="class">FresnelParameters</a><a href="./Frustum" data-name="Frustum" class="class">Frustum</a><a href="./FxaaPostProcess" data-name="FxaaPostProcess" class="class">FxaaPostProcess</a><a href="./Gamepad" data-name="Gamepad" class="class">Gamepad</a><a href="./GamepadCamera" data-name="GamepadCamera" class="class">GamepadCamera</a><a href="./Gamepads" data-name="Gamepads" class="class">Gamepads</a><a href="./GenericPad" data-name="GenericPad" class="class">GenericPad</a><a href="./Geometry" data-name="Geometry" class="class">Geometry</a><a href="./GrassProceduralTexture" data-name="GrassProceduralTexture" class="class">GrassProceduralTexture</a><a href="./Ground" data-name="Ground" class="class">Ground</a><a href="./GroundMesh" data-name="GroundMesh" class="class">GroundMesh</a><a href="./HardwareScalingOptimization" data-name="HardwareScalingOptimization" class="class">HardwareScalingOptimization</a><a href="./HDRRenderingPipeline" data-name="HDRRenderingPipeline" class="class">HDRRenderingPipeline</a><a href="./HemisphericLight" data-name="HemisphericLight" class="class">HemisphericLight</a><a href="./ImageAssetTask" data-name="ImageAssetTask" class="class">ImageAssetTask</a><a href="./IncrementValueAction" data-name="IncrementValueAction" class="class">IncrementValueAction</a><a href="./InstancedMesh" data-name="InstancedMesh" class="class">InstancedMesh</a><a href="./InterpolateValueAction" data-name="InterpolateValueAction" class="class">InterpolateValueAction</a><a href="./IntersectionInfo" data-name="IntersectionInfo" class="class">IntersectionInfo</a><a href="./JoystickAxis" data-name="JoystickAxis" class="class">JoystickAxis</a><a href="./Layer" data-name="Layer" class="class">Layer</a><a href="./LensFlare" data-name="LensFlare" class="class">LensFlare</a><a href="./LensFlaresOptimization" data-name="LensFlaresOptimization" class="class">LensFlaresOptimization</a><a href="./LensFlareSystem" data-name="LensFlareSystem" class="class">LensFlareSystem</a><a href="./LensRenderingPipeline" data-name="LensRenderingPipeline" class="class">LensRenderingPipeline</a><a href="./Light" data-name="Light" class="class">Light</a><a href="./LinesMesh" data-name="LinesMesh" class="class">LinesMesh</a><a href="./MarbleProceduralTexture" data-name="MarbleProceduralTexture" class="class">MarbleProceduralTexture</a><a href="./Material" data-name="Material" class="class">Material</a><a href="./Matrix" data-name="Matrix" class="class">Matrix</a><a href="./MergeMeshesOptimization" data-name="MergeMeshesOptimization" class="class">MergeMeshesOptimization</a><a href="./Mesh" data-name="Mesh" class="class">Mesh</a><a href="./MeshAssetTask" data-name="MeshAssetTask" class="class">MeshAssetTask</a><a href="./MeshLODLevel" data-name="MeshLODLevel" class="class">MeshLODLevel</a><a href="./MirrorTexture" data-name="MirrorTexture" class="class">MirrorTexture</a><a href="./MultiMaterial" data-name="MultiMaterial" class="class">MultiMaterial</a><a href="./Node" data-name="Node" class="class">Node</a><a href="./Octree" data-name="Octree" class="class">Octree</a><a href="./OctreeBlock" data-name="OctreeBlock" class="class">OctreeBlock</a><a href="./OimoJSPlugin" data-name="OimoJSPlugin" class="class">OimoJSPlugin</a><a href="./Orientation" data-name="Orientation" class="class">Orientation</a><a href="./OutlineRenderer" data-name="OutlineRenderer" class="class">OutlineRenderer</a><a href="./Particle" data-name="Particle" class="class">Particle</a><a href="./ParticlesOptimization" data-name="ParticlesOptimization" class="class">ParticlesOptimization</a><a href="./ParticleSystem" data-name="ParticleSystem" class="class">ParticleSystem</a><a href="./PassPostProcess" data-name="PassPostProcess" class="class">PassPostProcess</a><a href="./Path2" data-name="Path2" class="class">Path2</a><a href="./Path3D" data-name="Path3D" class="class">Path3D</a><a href="./PathCursor" data-name="PathCursor" class="class">PathCursor</a><a href="./PhysicsEngine" data-name="PhysicsEngine" class="class">PhysicsEngine</a><a href="./PickingInfo" data-name="PickingInfo" class="class">PickingInfo</a><a href="./Plane" data-name="Plane" class="class">Plane</a><a href="./PlayAnimationAction" data-name="PlayAnimationAction" class="class">PlayAnimationAction</a><a href="./PlaySoundAction" data-name="PlaySoundAction" class="class">PlaySoundAction</a><a href="./PointLight" data-name="PointLight" class="class">PointLight</a><a href="./Polygon" data-name="Polygon" class="class">Polygon</a><a href="./PolygonMeshBuilder" data-name="PolygonMeshBuilder" class="class">PolygonMeshBuilder</a><a href="./PositionNormalTextureVertex" data-name="PositionNormalTextureVertex" class="class">PositionNormalTextureVertex</a><a href="./PositionNormalVertex" data-name="PositionNormalVertex" class="class">PositionNormalVertex</a><a href="./PostProcess" data-name="PostProcess" class="class">PostProcess</a><a href="./PostProcessesOptimization" data-name="PostProcessesOptimization" class="class">PostProcessesOptimization</a><a href="./PostProcessManager" data-name="PostProcessManager" class="class">PostProcessManager</a><a href="./PostProcessRenderEffect" data-name="PostProcessRenderEffect" class="class">PostProcessRenderEffect</a><a href="./PostProcessRenderPass" data-name="PostProcessRenderPass" class="class">PostProcessRenderPass</a><a href="./PostProcessRenderPipeline" data-name="PostProcessRenderPipeline" class="class">PostProcessRenderPipeline</a><a href="./PostProcessRenderPipelineManager" data-name="PostProcessRenderPipelineManager" class="class">PostProcessRenderPipelineManager</a><a href="./PowerEase" data-name="PowerEase" class="class">PowerEase</a><a href="./PredicateCondition" data-name="PredicateCondition" class="class">PredicateCondition</a><a href="./ProceduralTexture" data-name="ProceduralTexture" class="class">ProceduralTexture</a><a href="./QuadraticEase" data-name="QuadraticEase" class="class">QuadraticEase</a><a href="./QuadraticErrorSimplification" data-name="QuadraticErrorSimplification" class="class">QuadraticErrorSimplification</a><a href="./QuadraticMatrix" data-name="QuadraticMatrix" class="class">QuadraticMatrix</a><a href="./QuarticEase" data-name="QuarticEase" class="class">QuarticEase</a><a href="./Quaternion" data-name="Quaternion" class="class">Quaternion</a><a href="./QuinticEase" data-name="QuinticEase" class="class">QuinticEase</a><a href="./RawTexture" data-name="RawTexture" class="class">RawTexture</a><a href="./Ray" data-name="Ray" class="class">Ray</a><a href="./Reference" data-name="Reference" class="class">Reference</a><a href="./RefractionPostProcess" data-name="RefractionPostProcess" class="class">RefractionPostProcess</a><a href="./RenderingGroup" data-name="RenderingGroup" class="class">RenderingGroup</a><a href="./RenderingManager" data-name="RenderingManager" class="class">RenderingManager</a><a href="./RenderTargetsOptimization" data-name="RenderTargetsOptimization" class="class">RenderTargetsOptimization</a><a href="./RenderTargetTexture" data-name="RenderTargetTexture" class="class">RenderTargetTexture</a><a href="./Ribbon" data-name="Ribbon" class="class">Ribbon</a><a href="./RoadProceduralTexture" data-name="RoadProceduralTexture" class="class">RoadProceduralTexture</a><a href="./Scene" data-name="Scene" class="class">Scene</a><a href="./SceneLoader" data-name="SceneLoader" class="class">SceneLoader</a><a href="./SceneOptimization" data-name="SceneOptimization" class="class">SceneOptimization</a><a href="./SceneOptimizer" data-name="SceneOptimizer" class="class">SceneOptimizer</a><a href="./SceneOptimizerOptions" data-name="SceneOptimizerOptions" class="class">SceneOptimizerOptions</a><a href="./SceneSerializer" data-name="SceneSerializer" class="class">SceneSerializer</a><a href="./SetParentAction" data-name="SetParentAction" class="class">SetParentAction</a><a href="./SetStateAction" data-name="SetStateAction" class="class">SetStateAction</a><a href="./SetValueAction" data-name="SetValueAction" class="class">SetValueAction</a><a href="./ShaderMaterial" data-name="ShaderMaterial" class="class">ShaderMaterial</a><a href="./ShadowGenerator" data-name="ShadowGenerator" class="class">ShadowGenerator</a><a href="./ShadowsOptimization" data-name="ShadowsOptimization" class="class">ShadowsOptimization</a><a href="./SIMDHelper" data-name="SIMDHelper" class="class">SIMDHelper</a><a href="./SimplificationQueue" data-name="SimplificationQueue" class="class">SimplificationQueue</a><a href="./SimplificationSettings" data-name="SimplificationSettings" class="class">SimplificationSettings</a><a href="./SimplificationType" data-name="SimplificationType" class="class">SimplificationType</a><a href="./SineEase" data-name="SineEase" class="class">SineEase</a><a href="./Skeleton" data-name="Skeleton" class="class">Skeleton</a><a href="./SmartArray" data-name="SmartArray" class="class">SmartArray</a><a href="./SmartCollection" data-name="SmartCollection" class="class">SmartCollection</a><a href="./Sound" data-name="Sound" class="class">Sound</a><a href="./SoundTrack" data-name="SoundTrack" class="class">SoundTrack</a><a href="./Space" data-name="Space" class="class">Space</a><a href="./Sphere" data-name="Sphere" class="class">Sphere</a><a href="./SpotLight" data-name="SpotLight" class="class">SpotLight</a><a href="./Sprite" data-name="Sprite" class="class">Sprite</a><a href="./SpriteManager" data-name="SpriteManager" class="class">SpriteManager</a><a href="./SSAORenderingPipeline" data-name="SSAORenderingPipeline" class="class">SSAORenderingPipeline</a><a href="./StandardMaterial" data-name="StandardMaterial" class="class">StandardMaterial</a><a href="./StateCondition" data-name="StateCondition" class="class">StateCondition</a><a href="./StereoscopicArcRotateCamera" data-name="StereoscopicArcRotateCamera" class="class">StereoscopicArcRotateCamera</a><a href="./StereoscopicFreeCamera" data-name="StereoscopicFreeCamera" class="class">StereoscopicFreeCamera</a><a href="./StereoscopicGamepadCamera" data-name="StereoscopicGamepadCamera" class="class">StereoscopicGamepadCamera</a><a href="./StereoscopicInterlacePostProcess" data-name="StereoscopicInterlacePostProcess" class="class">StereoscopicInterlacePostProcess</a><a href="./StickValues" data-name="StickValues" class="class">StickValues</a><a href="./StopAnimationAction" data-name="StopAnimationAction" class="class">StopAnimationAction</a><a href="./StopSoundAction" data-name="StopSoundAction" class="class">StopSoundAction</a><a href="./SubMesh" data-name="SubMesh" class="class">SubMesh</a><a href="./SwitchBooleanAction" data-name="SwitchBooleanAction" class="class">SwitchBooleanAction</a><a href="./Tags" data-name="Tags" class="class">Tags</a><a href="./TargetCamera" data-name="TargetCamera" class="class">TargetCamera</a><a href="./TextFileAssetTask" data-name="TextFileAssetTask" class="class">TextFileAssetTask</a><a href="./Texture" data-name="Texture" class="class">Texture</a><a href="./TextureAssetTask" data-name="TextureAssetTask" class="class">TextureAssetTask</a><a href="./TextureOptimization" data-name="TextureOptimization" class="class">TextureOptimization</a><a href="./TGATools" data-name="TGATools" class="class">TGATools</a><a href="./TiledGround" data-name="TiledGround" class="class">TiledGround</a><a href="./TonemappingOperator" data-name="TonemappingOperator" class="class">TonemappingOperator</a><a href="./TonemapPostProcess" data-name="TonemapPostProcess" class="class">TonemapPostProcess</a><a href="./Tools" data-name="Tools" class="class">Tools</a><a href="./Torus" data-name="Torus" class="class">Torus</a><a href="./TorusKnot" data-name="TorusKnot" class="class">TorusKnot</a><a href="./TouchCamera" data-name="TouchCamera" class="class">TouchCamera</a><a href="./ValueCondition" data-name="ValueCondition" class="class">ValueCondition</a><a href="./Vector2" data-name="Vector2" class="class">Vector2</a><a href="./Vector3" data-name="Vector3" class="class">Vector3</a><a href="./Vector4" data-name="Vector4" class="class">Vector4</a><a href="./VertexBuffer" data-name="VertexBuffer" class="class">VertexBuffer</a><a href="./VertexData" data-name="VertexData" class="class">VertexData</a><a href="./VideoTexture" data-name="VideoTexture" class="class">VideoTexture</a><a href="./Viewport" data-name="Viewport" class="class">Viewport</a><a href="./VirtualJoystick" data-name="VirtualJoystick" class="class">VirtualJoystick</a><a href="./VirtualJoysticksCamera" data-name="VirtualJoysticksCamera" class="class">VirtualJoysticksCamera</a><a href="./VolumetricLightScatteringPostProcess" data-name="VolumetricLightScatteringPostProcess" class="class">VolumetricLightScatteringPostProcess</a><a href="./VRCameraMetrics" data-name="VRCameraMetrics" class="class">VRCameraMetrics</a><a href="./VRDeviceOrientationFreeCamera" data-name="VRDeviceOrientationFreeCamera" class="class">VRDeviceOrientationFreeCamera</a><a href="./VRDistortionCorrectionPostProcess" data-name="VRDistortionCorrectionPostProcess" class="class">VRDistortionCorrectionPostProcess</a><a href="./WebVRFreeCamera" data-name="WebVRFreeCamera" class="class">WebVRFreeCamera</a><a href="./WoodProceduralTexture" data-name="WoodProceduralTexture" class="class">WoodProceduralTexture</a><a href="./WorkerReplyType" data-name="WorkerReplyType" class="class">WorkerReplyType</a><a href="./WorkerTaskType" data-name="WorkerTaskType" class="class">WorkerTaskType</a><a href="./Xbox360Button" data-name="Xbox360Button" class="class">Xbox360Button</a><a href="./Xbox360Dpad" data-name="Xbox360Dpad" class="class">Xbox360Dpad</a><a href="./Xbox360Pad" data-name="Xbox360Pad" class="class">Xbox360Pad</a></div></div><!-- Element to resize the sidebar--><div id="resizeBar" draggable class="classBarResize"></div><!-- Content of the selected class--><div class="classContent"><div id="classTitle"><h1>Scene</h1><div id="selectList"><select id="methodsList"><!--for tocElement in toc--><!--    if(tocElement.depth === "")--><!--        option(value=tocElement.url, class="cat")= tocElement.heading--><!--    else--><!--        option(value=tocElement.url)= tocElement.heading--></select></div></div><div id="classTags"><a href="/classes/2.2" id="Scene" class="classTag">Scene</a></div><div id="classMd"><h2 id="description"><a href="#description" class="invisible permalink"><i class="fa fa-link"></i></a>Description</h2>
+<p>class <a href="/classes/2.2/Scene">Scene</a></p>
+<p>Represents a scene to be rendered by the engine.</p>
+<p>@see <a href="http://doc.babylonjs.com/page.php?p=21911">http://doc.babylonjs.com/page.php?p=21911</a></p>
+<h2 id="constructor"><a href="#constructor" class="invisible permalink"><i class="fa fa-link"></i></a>Constructor</h2>
+<h2 id="new-scene-classes-2-2-scene-engine-"><a href="#new-scene-classes-2-2-scene-engine-" class="invisible permalink"><i class="fa fa-link"></i></a>new <a href="/classes/2.2/Scene">Scene</a>(engine)</h2>
+<p>@constructor</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>engine</td>
+<td><a href="/classes/2.2/Engine">Engine</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="members"><a href="#members" class="invisible permalink"><i class="fa fa-link"></i></a>Members</h2>
+<h3 id="static-mindeltatime-number"><a href="#static-mindeltatime-number" class="invisible permalink"><i class="fa fa-link"></i></a>static MinDeltaTime : number</h3>
+<p>default : 1.0</p>
+<p>In milliseconds, the minimum delta time between two steps</p>
+<h3 id="static-maxdeltatime-number"><a href="#static-maxdeltatime-number" class="invisible permalink"><i class="fa fa-link"></i></a>static MaxDeltaTime : number</h3>
+<p>default : 1000.0</p>
+<p>In milliseconds, the maximum delta time between two steps</p>
+<h3 id="static-fogmode_none-number"><a href="#static-fogmode_none-number" class="invisible permalink"><i class="fa fa-link"></i></a>static FOGMODE_NONE : number</h3>
+<p>The fog is deactivated</p>
+<h3 id="static-fogmode_exp-number"><a href="#static-fogmode_exp-number" class="invisible permalink"><i class="fa fa-link"></i></a>static FOGMODE_EXP : number</h3>
+<p>The fog density is following an exponential function</p>
+<h3 id="static-fogmode_exp2-number"><a href="#static-fogmode_exp2-number" class="invisible permalink"><i class="fa fa-link"></i></a>static FOGMODE_EXP2 : number</h3>
+<p>The fog density is following an exponential function faster than FOGMODE_EXP</p>
+<h3 id="static-fogmode_linear-number"><a href="#static-fogmode_linear-number" class="invisible permalink"><i class="fa fa-link"></i></a>static FOGMODE_LINEAR : number</h3>
+<p>The fog density is following a linear function.</p>
+<h3 id="autoclear-boolean"><a href="#autoclear-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>autoClear : boolean</h3>
+<p>default : true</p>
+<p>True to clear the color buffer at each render, false either</p>
+<h3 id="clearcolor-any"><a href="#clearcolor-any" class="invisible permalink"><i class="fa fa-link"></i></a>clearColor : any</h3>
+<p>default : <a href="/classes/2.2/Color3">Color3</a>(0.2, 0.2, 0.3)</p>
+<p>The color of the scene when cleared</p>
+<h3 id="ambientcolor-color3-classes-2-2-color3-"><a href="#ambientcolor-color3-classes-2-2-color3-" class="invisible permalink"><i class="fa fa-link"></i></a>ambientColor : <a href="/classes/2.2/Color3">Color3</a></h3>
+<p>default : <a href="/classes/2.2/Color3">Color3</a>(0, 0, 0)</p>
+<p>The scene ambiant color</p>
+<h3 id="beforerender-gt-void"><a href="#beforerender-gt-void" class="invisible permalink"><i class="fa fa-link"></i></a>beforeRender : () =&gt; void</h3>
+<p>A function to be executed before rendering this scene</p>
+<p>@type {Function}</p>
+<h3 id="afterrender-gt-void"><a href="#afterrender-gt-void" class="invisible permalink"><i class="fa fa-link"></i></a>afterRender : () =&gt; void</h3>
+<p>A function to be executed after rendering this scene</p>
+<p>@type {Function}</p>
+<h3 id="ondispose-gt-void"><a href="#ondispose-gt-void" class="invisible permalink"><i class="fa fa-link"></i></a>onDispose : () =&gt; void</h3>
+<p>A function to be executed when this scene is disposed.</p>
+<p>@type {Function}</p>
+<h3 id="beforecamerarender-camera-camera-classes-2-2-camera-gt-void"><a href="#beforecamerarender-camera-camera-classes-2-2-camera-gt-void" class="invisible permalink"><i class="fa fa-link"></i></a>beforeCameraRender : (camera: <a href="/classes/2.2/Camera">Camera</a>) =&gt; void</h3>
+<p>Function triggered before the camera is rendered, with the concerned camera passed in argument</p>
+<h3 id="aftercamerarender-camera-camera-classes-2-2-camera-gt-void"><a href="#aftercamerarender-camera-camera-classes-2-2-camera-gt-void" class="invisible permalink"><i class="fa fa-link"></i></a>afterCameraRender : (camera: <a href="/classes/2.2/Camera">Camera</a>) =&gt; void</h3>
+<p>Function triggered after the camera is rendered, with the concerned camera passed in argument</p>
+<h3 id="forcewireframe-boolean"><a href="#forcewireframe-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>forceWireframe : boolean</h3>
+<p>default : false</p>
+<p>Forces the wireframe display of meshes</p>
+<h3 id="forcepointscloud-boolean"><a href="#forcepointscloud-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>forcePointsCloud : boolean</h3>
+<h3 id="forceshowboundingboxes-boolean"><a href="#forceshowboundingboxes-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>forceShowBoundingBoxes : boolean</h3>
+<h3 id="clipplane-plane-classes-2-2-plane-"><a href="#clipplane-plane-classes-2-2-plane-" class="invisible permalink"><i class="fa fa-link"></i></a>clipPlane : <a href="/classes/2.2/Plane">Plane</a></h3>
+<h3 id="animationsenabled-boolean"><a href="#animationsenabled-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>animationsEnabled : boolean</h3>
+<h3 id="onpointerdown-evt-pointerevent-pickinfo-pickinginfo-classes-2-2-pickinginfo-gt-void"><a href="#onpointerdown-evt-pointerevent-pickinfo-pickinginfo-classes-2-2-pickinginfo-gt-void" class="invisible permalink"><i class="fa fa-link"></i></a>onPointerDown : (evt: PointerEvent, pickInfo: <a href="/classes/2.2/PickingInfo">PickingInfo</a>) =&gt; void</h3>
+<p>Function triggered when the pointer interacts with the scene</p>
+<p>The passed argument are the event and the element concerned with this event</p>
+<h3 id="onpointerup-evt-pointerevent-pickinfo-pickinginfo-classes-2-2-pickinginfo-gt-void"><a href="#onpointerup-evt-pointerevent-pickinfo-pickinginfo-classes-2-2-pickinginfo-gt-void" class="invisible permalink"><i class="fa fa-link"></i></a>onPointerUp : (evt: PointerEvent, pickInfo: <a href="/classes/2.2/PickingInfo">PickingInfo</a>) =&gt; void</h3>
+<h3 id="cameratouseforpointers-camera-classes-2-2-camera-"><a href="#cameratouseforpointers-camera-classes-2-2-camera-" class="invisible permalink"><i class="fa fa-link"></i></a>cameraToUseForPointers : <a href="/classes/2.2/Camera">Camera</a></h3>
+<p>The camera used for pointers</p>
+<h3 id="fogenabled-boolean"><a href="#fogenabled-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>fogEnabled : boolean</h3>
+<p>is fog enabled on this scene.</p>
+<p>@type {boolean}</p>
+<h3 id="fogmode-number"><a href="#fogmode-number" class="invisible permalink"><i class="fa fa-link"></i></a>fogMode : number</h3>
+<p>One of the following values : <a href="/classes/2.2/Scene">Scene</a>.FOGMODE_NONE, <a href="/classes/2.2/Scene">Scene</a>.FOGMODE_EXP, <a href="/classes/2.2/Scene">Scene</a>.FOGMODE_EXP2 , <a href="/classes/2.2/Scene">Scene</a>.FOGMODE_LINEAR</p>
+<h3 id="fogcolor-color3-classes-2-2-color3-"><a href="#fogcolor-color3-classes-2-2-color3-" class="invisible permalink"><i class="fa fa-link"></i></a>fogColor : <a href="/classes/2.2/Color3">Color3</a></h3>
+<p>default : <a href="/classes/2.2/Color3">Color3</a>(0.2, 0.2, 0.3)</p>
+<p>The fog color</p>
+<h3 id="fogdensity-number"><a href="#fogdensity-number" class="invisible permalink"><i class="fa fa-link"></i></a>fogDensity : number</h3>
+<p>default : 0.1</p>
+<p>The fog density</p>
+<h3 id="fogstart-number"><a href="#fogstart-number" class="invisible permalink"><i class="fa fa-link"></i></a>fogStart : number</h3>
+<p>default : 0</p>
+<p>Used with the <a href="/classes/2.2/Scene">Scene</a>.FOGMODE_LINEAR fogMode</p>
+<p>Where the fog starts</p>
+<h3 id="fogend-number"><a href="#fogend-number" class="invisible permalink"><i class="fa fa-link"></i></a>fogEnd : number</h3>
+<p>default : 1000.0</p>
+<p>Used with the <a href="/classes/2.2/Scene">Scene</a>.FOGMODE_LINEAR fogMode</p>
+<p>Where the fog ends</p>
+<h3 id="shadowsenabled-boolean"><a href="#shadowsenabled-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>shadowsEnabled : boolean</h3>
+<p>is shadow enabled on this scene.</p>
+<p>@type {boolean}</p>
+<h3 id="lightsenabled-boolean"><a href="#lightsenabled-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>lightsEnabled : boolean</h3>
+<p>is light enabled on this scene.</p>
+<p>@type {boolean}</p>
+<h3 id="lights-light-classes-2-2-light-"><a href="#lights-light-classes-2-2-light-" class="invisible permalink"><i class="fa fa-link"></i></a>lights : <a href="/classes/2.2/Light">Light</a>[]</h3>
+<p>All of the lights added to this scene.</p>
+<p>@see BABYLON.<a href="/classes/2.2/Light">Light</a></p>
+<p>@type {BABYLON.<a href="/classes/2.2/Light">Light</a>[]}</p>
+<h3 id="onnewlightadded-newlight-light-classes-2-2-light-positioninarray-number-scene-scene-classes-2-2-scene-gt-void"><a href="#onnewlightadded-newlight-light-classes-2-2-light-positioninarray-number-scene-scene-classes-2-2-scene-gt-void" class="invisible permalink"><i class="fa fa-link"></i></a>onNewLightAdded : (newLight: <a href="/classes/2.2/Light">Light</a>, positionInArray: number, scene: <a href="/classes/2.2/Scene">Scene</a>) =&gt; void</h3>
+<h3 id="onlightremoved-removedlight-light-classes-2-2-light-gt-void"><a href="#onlightremoved-removedlight-light-classes-2-2-light-gt-void" class="invisible permalink"><i class="fa fa-link"></i></a>onLightRemoved : (removedLight: <a href="/classes/2.2/Light">Light</a>) =&gt; void</h3>
+<h3 id="cameras-camera-classes-2-2-camera-"><a href="#cameras-camera-classes-2-2-camera-" class="invisible permalink"><i class="fa fa-link"></i></a>cameras : <a href="/classes/2.2/Camera">Camera</a>[]</h3>
+<p>All of the cameras added to this scene.</p>
+<p>@see BABYLON.<a href="/classes/2.2/Camera">Camera</a></p>
+<p>@type {BABYLON.<a href="/classes/2.2/Camera">Camera</a>[]}</p>
+<h3 id="onnewcameraadded-newcamera-camera-classes-2-2-camera-positioninarray-number-scene-scene-classes-2-2-scene-gt-void"><a href="#onnewcameraadded-newcamera-camera-classes-2-2-camera-positioninarray-number-scene-scene-classes-2-2-scene-gt-void" class="invisible permalink"><i class="fa fa-link"></i></a>onNewCameraAdded : (newCamera: <a href="/classes/2.2/Camera">Camera</a>, positionInArray: number, scene: <a href="/classes/2.2/Scene">Scene</a>) =&gt; void</h3>
+<h3 id="oncameraremoved-removedcamera-camera-classes-2-2-camera-gt-void"><a href="#oncameraremoved-removedcamera-camera-classes-2-2-camera-gt-void" class="invisible permalink"><i class="fa fa-link"></i></a>onCameraRemoved : (removedCamera: <a href="/classes/2.2/Camera">Camera</a>) =&gt; void</h3>
+<h3 id="activecameras-camera-classes-2-2-camera-"><a href="#activecameras-camera-classes-2-2-camera-" class="invisible permalink"><i class="fa fa-link"></i></a>activeCameras : <a href="/classes/2.2/Camera">Camera</a>[]</h3>
+<p>The array holding the list of active <a href="/classes/2.2/Camera">Camera</a> instances</p>
+<h3 id="activecamera-camera-classes-2-2-camera-"><a href="#activecamera-camera-classes-2-2-camera-" class="invisible permalink"><i class="fa fa-link"></i></a>activeCamera : <a href="/classes/2.2/Camera">Camera</a></h3>
+<p>The active camera for this scene</p>
+<h3 id="meshes-abstractmesh-classes-2-2-abstractmesh-"><a href="#meshes-abstractmesh-classes-2-2-abstractmesh-" class="invisible permalink"><i class="fa fa-link"></i></a>meshes : <a href="/classes/2.2/AbstractMesh">AbstractMesh</a>[]</h3>
+<p>All of the (abstract) meshes added to this scene.</p>
+<p>@see BABYLON.<a href="/classes/2.2/AbstractMesh">AbstractMesh</a></p>
+<p>@type {BABYLON.<a href="/classes/2.2/AbstractMesh">AbstractMesh</a>[]}</p>
+<h3 id="onnewmeshadded-newmesh-abstractmesh-classes-2-2-abstractmesh-positioninarray-number-scene-scene-classes-2-2-scene-gt-void"><a href="#onnewmeshadded-newmesh-abstractmesh-classes-2-2-abstractmesh-positioninarray-number-scene-scene-classes-2-2-scene-gt-void" class="invisible permalink"><i class="fa fa-link"></i></a>onNewMeshAdded : (newMesh: <a href="/classes/2.2/AbstractMesh">AbstractMesh</a>, positionInArray: number, scene: <a href="/classes/2.2/Scene">Scene</a>) =&gt; void</h3>
+<h3 id="onmeshremoved-removedmesh-abstractmesh-classes-2-2-abstractmesh-gt-void"><a href="#onmeshremoved-removedmesh-abstractmesh-classes-2-2-abstractmesh-gt-void" class="invisible permalink"><i class="fa fa-link"></i></a>onMeshRemoved : (removedMesh: <a href="/classes/2.2/AbstractMesh">AbstractMesh</a>) =&gt; void</h3>
+<h3 id="ongeometryadded-newgeometry-geometry-classes-2-2-geometry-gt-void"><a href="#ongeometryadded-newgeometry-geometry-classes-2-2-geometry-gt-void" class="invisible permalink"><i class="fa fa-link"></i></a>onGeometryAdded : (newGeometry: <a href="/classes/2.2/Geometry">Geometry</a>) =&gt; void</h3>
+<h3 id="ongeometryremoved-removedgeometry-geometry-classes-2-2-geometry-gt-void"><a href="#ongeometryremoved-removedgeometry-geometry-classes-2-2-geometry-gt-void" class="invisible permalink"><i class="fa fa-link"></i></a>onGeometryRemoved : (removedGeometry: <a href="/classes/2.2/Geometry">Geometry</a>) =&gt; void</h3>
+<h3 id="materials-material-classes-2-2-material-"><a href="#materials-material-classes-2-2-material-" class="invisible permalink"><i class="fa fa-link"></i></a>materials : <a href="/classes/2.2/Material">Material</a>[]</h3>
+<p>The array holding all materials of this scene</p>
+<h3 id="multimaterials-multimaterial-classes-2-2-multimaterial-"><a href="#multimaterials-multimaterial-classes-2-2-multimaterial-" class="invisible permalink"><i class="fa fa-link"></i></a>multiMaterials : <a href="/classes/2.2/MultiMaterial">MultiMaterial</a>[]</h3>
+<p>The array holding all multimaterials of this scene</p>
+<h3 id="defaultmaterial-standardmaterial-classes-2-2-standardmaterial-"><a href="#defaultmaterial-standardmaterial-classes-2-2-standardmaterial-" class="invisible permalink"><i class="fa fa-link"></i></a>defaultMaterial : <a href="/classes/2.2/StandardMaterial">StandardMaterial</a></h3>
+<p>The default material used on meshes when no material is affected</p>
+<h3 id="texturesenabled-boolean"><a href="#texturesenabled-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>texturesEnabled : boolean</h3>
+<p>True if texture should be enabled, false otherwise</p>
+<h3 id="textures-basetexture-classes-2-2-basetexture-"><a href="#textures-basetexture-classes-2-2-basetexture-" class="invisible permalink"><i class="fa fa-link"></i></a>textures : <a href="/classes/2.2/BaseTexture">BaseTexture</a>[]</h3>
+<p>The array holding all textures used in the scene</p>
+<h3 id="particlesenabled-boolean"><a href="#particlesenabled-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>particlesEnabled : boolean</h3>
+<p>True if Particles should be enabled, false otherwise</p>
+<h3 id="particlesystems-particlesystem-classes-2-2-particlesystem-"><a href="#particlesystems-particlesystem-classes-2-2-particlesystem-" class="invisible permalink"><i class="fa fa-link"></i></a>particleSystems : <a href="/classes/2.2/ParticleSystem">ParticleSystem</a>[]</h3>
+<p>The array holding all particle systems of this scene</p>
+<h3 id="spritesenabled-boolean"><a href="#spritesenabled-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>spritesEnabled : boolean</h3>
+<h3 id="spritemanagers-spritemanager-classes-2-2-spritemanager-"><a href="#spritemanagers-spritemanager-classes-2-2-spritemanager-" class="invisible permalink"><i class="fa fa-link"></i></a>spriteManagers : <a href="/classes/2.2/SpriteManager">SpriteManager</a>[]</h3>
+<p>The array holding all sprite managers of this scene</p>
+<h3 id="layers-layer-classes-2-2-layer-"><a href="#layers-layer-classes-2-2-layer-" class="invisible permalink"><i class="fa fa-link"></i></a>layers : <a href="/classes/2.2/Layer">Layer</a>[]</h3>
+<p>The array holding all layers of this scene</p>
+<h3 id="skeletonsenabled-boolean"><a href="#skeletonsenabled-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>skeletonsEnabled : boolean</h3>
+<h3 id="skeletons-skeleton-classes-2-2-skeleton-"><a href="#skeletons-skeleton-classes-2-2-skeleton-" class="invisible permalink"><i class="fa fa-link"></i></a>skeletons : <a href="/classes/2.2/Skeleton">Skeleton</a>[]</h3>
+<p>The array holding all skeletons of this scene</p>
+<h3 id="lensflaresenabled-boolean"><a href="#lensflaresenabled-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>lensFlaresEnabled : boolean</h3>
+<h3 id="lensflaresystems-lensflaresystem-classes-2-2-lensflaresystem-"><a href="#lensflaresystems-lensflaresystem-classes-2-2-lensflaresystem-" class="invisible permalink"><i class="fa fa-link"></i></a>lensFlareSystems : <a href="/classes/2.2/LensFlareSystem">LensFlareSystem</a>[]</h3>
+<p>The array holding all lensflare systems of this scene</p>
+<h3 id="collisionsenabled-boolean"><a href="#collisionsenabled-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>collisionsEnabled : boolean</h3>
+<p>True if collisions should be enabled, false otherwise</p>
+<h3 id="collisioncoordinator-icollisioncoordinator"><a href="#collisioncoordinator-icollisioncoordinator" class="invisible permalink"><i class="fa fa-link"></i></a>collisionCoordinator : ICollisionCoordinator</h3>
+<h3 id="gravity-vector3-classes-2-2-vector3-"><a href="#gravity-vector3-classes-2-2-vector3-" class="invisible permalink"><i class="fa fa-link"></i></a>gravity : <a href="/classes/2.2/Vector3">Vector3</a></h3>
+<p>Defines the gravity applied to this scene</p>
+<h3 id="postprocessesenabled-boolean"><a href="#postprocessesenabled-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>postProcessesEnabled : boolean</h3>
+<p>True if postProcesses should be enabled, false otherwise</p>
+<h3 id="postprocessmanager-postprocessmanager-classes-2-2-postprocessmanager-"><a href="#postprocessmanager-postprocessmanager-classes-2-2-postprocessmanager-" class="invisible permalink"><i class="fa fa-link"></i></a>postProcessManager : <a href="/classes/2.2/PostProcessManager">PostProcessManager</a></h3>
+<p>The post process manager of this scene</p>
+<h3 id="postprocessrenderpipelinemanager-postprocessrenderpipelinemanager-classes-2-2-postprocessrenderpipelinemanager-"><a href="#postprocessrenderpipelinemanager-postprocessrenderpipelinemanager-classes-2-2-postprocessrenderpipelinemanager-" class="invisible permalink"><i class="fa fa-link"></i></a>postProcessRenderPipelineManager : <a href="/classes/2.2/PostProcessRenderPipelineManager">PostProcessRenderPipelineManager</a></h3>
+<p>The post process render pipeline manager of this scene</p>
+<h3 id="rendertargetsenabled-boolean"><a href="#rendertargetsenabled-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>renderTargetsEnabled : boolean</h3>
+<p>True if custom render target should be enabled, false otherwise</p>
+<h3 id="dumpnextrendertargets-boolean"><a href="#dumpnextrendertargets-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>dumpNextRenderTargets : boolean</h3>
+<h3 id="customrendertargets-rendertargettexture-classes-2-2-rendertargettexture-"><a href="#customrendertargets-rendertargettexture-classes-2-2-rendertargettexture-" class="invisible permalink"><i class="fa fa-link"></i></a>customRenderTargets : <a href="/classes/2.2/RenderTargetTexture">RenderTargetTexture</a>[]</h3>
+<p>The array holding all custom render targets of this scene</p>
+<h3 id="usedelayedtextureloading-boolean"><a href="#usedelayedtextureloading-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>useDelayedTextureLoading : boolean</h3>
+<p>True if the texture loading should be delayed, false otherwise</p>
+<h3 id="importedmeshesfiles-string-"><a href="#importedmeshesfiles-string-" class="invisible permalink"><i class="fa fa-link"></i></a>importedMeshesFiles : String[]</h3>
+<p>The array holding all imported mesh files</p>
+<h3 id="database-any"><a href="#database-any" class="invisible permalink"><i class="fa fa-link"></i></a>database : any</h3>
+<p>The database this scene is saved into</p>
+<h3 id="actionmanager-actionmanager-classes-2-2-actionmanager-"><a href="#actionmanager-actionmanager-classes-2-2-actionmanager-" class="invisible permalink"><i class="fa fa-link"></i></a>actionManager : <a href="/classes/2.2/ActionManager">ActionManager</a></h3>
+<p>This scene&#39;s action manager</p>
+<p>@type {BABYLON.<a href="/classes/2.2/ActionManager">ActionManager</a>}</p>
+<h3 id="proceduraltexturesenabled-boolean"><a href="#proceduraltexturesenabled-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>proceduralTexturesEnabled : boolean</h3>
+<h3 id="mainsoundtrack-soundtrack-classes-2-2-soundtrack-"><a href="#mainsoundtrack-soundtrack-classes-2-2-soundtrack-" class="invisible permalink"><i class="fa fa-link"></i></a>mainSoundTrack : <a href="/classes/2.2/SoundTrack">SoundTrack</a></h3>
+<h3 id="soundtracks-soundtrack-classes-2-2-soundtrack-"><a href="#soundtracks-soundtrack-classes-2-2-soundtrack-" class="invisible permalink"><i class="fa fa-link"></i></a>soundTracks : <a href="/classes/2.2/SoundTrack">SoundTrack</a>[]</h3>
+<h3 id="simplificationqueue-simplificationqueue-classes-2-2-simplificationqueue-"><a href="#simplificationqueue-simplificationqueue-classes-2-2-simplificationqueue-" class="invisible permalink"><i class="fa fa-link"></i></a>simplificationQueue : <a href="/classes/2.2/SimplificationQueue">SimplificationQueue</a></h3>
+<h3 id="debuglayer-debuglayer-classes-2-2-debuglayer-"><a href="#debuglayer-debuglayer-classes-2-2-debuglayer-" class="invisible permalink"><i class="fa fa-link"></i></a>debugLayer : <a href="/classes/2.2/DebugLayer">DebugLayer</a></h3>
+<h3 id="workercollisions-boolean"><a href="#workercollisions-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>workerCollisions : boolean</h3>
+<h3 id="selectionoctree-octree-classes-2-2-octree-lt-abstractmesh-classes-2-2-abstractmesh-gt-"><a href="#selectionoctree-octree-classes-2-2-octree-lt-abstractmesh-classes-2-2-abstractmesh-gt-" class="invisible permalink"><i class="fa fa-link"></i></a>SelectionOctree : <a href="/classes/2.2/Octree">Octree</a>&lt;<a href="/classes/2.2/AbstractMesh">AbstractMesh</a>&gt;</h3>
+<h3 id="meshunderpointer-abstractmesh-classes-2-2-abstractmesh-"><a href="#meshunderpointer-abstractmesh-classes-2-2-abstractmesh-" class="invisible permalink"><i class="fa fa-link"></i></a>meshUnderPointer : <a href="/classes/2.2/AbstractMesh">AbstractMesh</a></h3>
+<p>The mesh that is currently under the pointer.</p>
+<p>@return {BABYLON.<a href="/classes/2.2/AbstractMesh">AbstractMesh</a>} mesh under the pointer/mouse cursor or null if none.</p>
+<h3 id="pointerx-number"><a href="#pointerx-number" class="invisible permalink"><i class="fa fa-link"></i></a>pointerX : number</h3>
+<p>Current on-screen X position of the pointer</p>
+<p>@return {number} X position of the pointer</p>
+<h3 id="pointery-number"><a href="#pointery-number" class="invisible permalink"><i class="fa fa-link"></i></a>pointerY : number</h3>
+<p>Current on-screen Y position of the pointer</p>
+<p>@return {number} Y position of the pointer</p>
+<h3 id="audioenabled-boolean"><a href="#audioenabled-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>audioEnabled : boolean</h3>
+<h3 id="headphone-boolean"><a href="#headphone-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>headphone : boolean</h3>
+<h2 id="methods"><a href="#methods" class="invisible permalink"><i class="fa fa-link"></i></a>Methods</h2>
+<h3 id="getcachedmaterial-rarr-material-classes-2-2-material-"><a href="#getcachedmaterial-rarr-material-classes-2-2-material-" class="invisible permalink"><i class="fa fa-link"></i></a>getCachedMaterial() &rarr; <a href="/classes/2.2/Material">Material</a></h3>
+<h3 id="getboundingboxrenderer-rarr-boundingboxrenderer-classes-2-2-boundingboxrenderer-"><a href="#getboundingboxrenderer-rarr-boundingboxrenderer-classes-2-2-boundingboxrenderer-" class="invisible permalink"><i class="fa fa-link"></i></a>getBoundingBoxRenderer() &rarr; <a href="/classes/2.2/BoundingBoxRenderer">BoundingBoxRenderer</a></h3>
+<p>Returns the bounding box renderer</p>
+<h3 id="getoutlinerenderer-rarr-outlinerenderer-classes-2-2-outlinerenderer-"><a href="#getoutlinerenderer-rarr-outlinerenderer-classes-2-2-outlinerenderer-" class="invisible permalink"><i class="fa fa-link"></i></a>getOutlineRenderer() &rarr; <a href="/classes/2.2/OutlineRenderer">OutlineRenderer</a></h3>
+<p>Returns the outline rendrer</p>
+<h3 id="getengine-rarr-engine-classes-2-2-engine-"><a href="#getengine-rarr-engine-classes-2-2-engine-" class="invisible permalink"><i class="fa fa-link"></i></a>getEngine() &rarr; <a href="/classes/2.2/Engine">Engine</a></h3>
+<p>Returns the engine</p>
+<h3 id="gettotalvertices-rarr-number"><a href="#gettotalvertices-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>getTotalVertices() &rarr; number</h3>
+<p>Returns all the vertices of this scene</p>
+<h3 id="getactiveindices-rarr-number"><a href="#getactiveindices-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>getActiveIndices() &rarr; number</h3>
+<h3 id="getactiveparticles-rarr-number"><a href="#getactiveparticles-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>getActiveParticles() &rarr; number</h3>
+<p>Returns all the active particles of this scene</p>
+<h3 id="getactivebones-rarr-number"><a href="#getactivebones-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>getActiveBones() &rarr; number</h3>
+<h3 id="getlastframeduration-rarr-number"><a href="#getlastframeduration-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>getLastFrameDuration() &rarr; number</h3>
+<p>Returns the duration of the last frame in milliseconds</p>
+<h3 id="getevaluateactivemeshesduration-rarr-number"><a href="#getevaluateactivemeshesduration-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>getEvaluateActiveMeshesDuration() &rarr; number</h3>
+<p>Returns the duration of active meshes in milliseconds</p>
+<h3 id="getactivemeshes-rarr-smartarray-classes-2-2-smartarray-lt-mesh-classes-2-2-mesh-gt-"><a href="#getactivemeshes-rarr-smartarray-classes-2-2-smartarray-lt-mesh-classes-2-2-mesh-gt-" class="invisible permalink"><i class="fa fa-link"></i></a>getActiveMeshes() &rarr; <a href="/classes/2.2/SmartArray">SmartArray</a>&lt;<a href="/classes/2.2/Mesh">Mesh</a>&gt;</h3>
+<p>Returns the list of acti meshes of this scene</p>
+<h3 id="getrendertargetsduration-rarr-number"><a href="#getrendertargetsduration-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>getRenderTargetsDuration() &rarr; number</h3>
+<p>Returns the duration of targets render in milliseconds</p>
+<h3 id="getrenderduration-rarr-number"><a href="#getrenderduration-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>getRenderDuration() &rarr; number</h3>
+<p>Returns the duration of the last render in milliseconds</p>
+<h3 id="getparticlesduration-rarr-number"><a href="#getparticlesduration-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>getParticlesDuration() &rarr; number</h3>
+<p>Returns the duration of the last particles processing in milliseconds</p>
+<h3 id="getspritesduration-rarr-number"><a href="#getspritesduration-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>getSpritesDuration() &rarr; number</h3>
+<p>Returns the duration of the last sprites processing in milliseconds</p>
+<h3 id="getanimationratio-rarr-number"><a href="#getanimationratio-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>getAnimationRatio() &rarr; number</h3>
+<p>Returns the animation ratio (speed)</p>
+<h3 id="getrenderid-rarr-number"><a href="#getrenderid-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>getRenderId() &rarr; number</h3>
+<p>Returns the render ID of this scene</p>
+<h3 id="incrementrenderid-rarr-void"><a href="#incrementrenderid-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>incrementRenderId() &rarr; void</h3>
+<h3 id="attachcontrol-rarr-void"><a href="#attachcontrol-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>attachControl() &rarr; void</h3>
+<p>Attaches mouse/keyboard control to this scene.
+The canvas registering all controls is the canvas used to create the babylon engine.</p>
+<h3 id="detachcontrol-rarr-void"><a href="#detachcontrol-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>detachControl() &rarr; void</h3>
+<p>Detaches mouse/keyboard control to this scene</p>
+<h3 id="isready-rarr-boolean"><a href="#isready-rarr-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>isReady() &rarr; boolean</h3>
+<p>Returns true when the scene is ready to be displayed (all meshes are ready and all materials are ready)</p>
+<h3 id="resetcachedmaterial-rarr-void"><a href="#resetcachedmaterial-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>resetCachedMaterial() &rarr; void</h3>
+<h3 id="registerbeforerender-func-rarr-void"><a href="#registerbeforerender-func-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>registerBeforeRender(func) &rarr; void</h3>
+<p>Registers in an array the given function which will be executed before rendering the scene</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>func</td>
+<td>() =&gt; void</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="unregisterbeforerender-func-rarr-void"><a href="#unregisterbeforerender-func-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>unregisterBeforeRender(func) &rarr; void</h3>
+<p>Removes the given function from the beforeRender array</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>func</td>
+<td>() =&gt; void</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="registerafterrender-func-rarr-void"><a href="#registerafterrender-func-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>registerAfterRender(func) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>func</td>
+<td>() =&gt; void</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="unregisterafterrender-func-rarr-void"><a href="#unregisterafterrender-func-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>unregisterAfterRender(func) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>func</td>
+<td>() =&gt; void</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getwaitingitemscount-rarr-number"><a href="#getwaitingitemscount-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>getWaitingItemsCount() &rarr; number</h3>
+<p>Returns the length of pending data (not ready yet)</p>
+<h3 id="executewhenready-func-rarr-void"><a href="#executewhenready-func-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>executeWhenReady(func) &rarr; void</h3>
+<p>Registers a function to be executed when the scene is ready.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>func</td>
+<td>() =&gt; void</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="beginanimation-target-from-to-loop-speedratio-onanimationend-animatable-rarr-animatable-classes-2-2-animatable-"><a href="#beginanimation-target-from-to-loop-speedratio-onanimationend-animatable-rarr-animatable-classes-2-2-animatable-" class="invisible permalink"><i class="fa fa-link"></i></a>beginAnimation(target, from, to, loop, speedRatio, onAnimationEnd, animatable) &rarr; <a href="/classes/2.2/Animatable">Animatable</a></h3>
+<p>Will start the animation sequence of a given target</p>
+<p>@return {BABYLON.<a href="/classes/2.2/Animatable">Animatable</a>} the animatable object created for this animation</p>
+<p>@see BABYLON.<a href="/classes/2.2/Animatable">Animatable</a></p>
+<p>@see <a href="http://doc.babylonjs.com/page.php?p=22081">http://doc.babylonjs.com/page.php?p=22081</a></p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>target</td>
+<td>any</td>
+<td>- the target</td>
+</tr>
+<tr>
+<td></td>
+<td>from</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>to</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>loop</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>speedRatio</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>onAnimationEnd</td>
+<td>() =&gt; void</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>animatable</td>
+<td><a href="/classes/2.2/Animatable">Animatable</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="begindirectanimation-target-animations-from-to-loop-speedratio-onanimationend-rarr-animatable-classes-2-2-animatable-"><a href="#begindirectanimation-target-animations-from-to-loop-speedratio-onanimationend-rarr-animatable-classes-2-2-animatable-" class="invisible permalink"><i class="fa fa-link"></i></a>beginDirectAnimation(target, animations, from, to, loop, speedRatio, onAnimationEnd) &rarr; <a href="/classes/2.2/Animatable">Animatable</a></h3>
+<p>Begins a direct animation (no children animations)</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>target</td>
+<td>any</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>animations</td>
+<td><a href="/classes/2.2/Animation">Animation</a>[]</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>from</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>to</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>loop</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>speedRatio</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>onAnimationEnd</td>
+<td>() =&gt; void</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getanimatablebytarget-target-rarr-animatable-classes-2-2-animatable-"><a href="#getanimatablebytarget-target-rarr-animatable-classes-2-2-animatable-" class="invisible permalink"><i class="fa fa-link"></i></a>getAnimatableByTarget(target) &rarr; <a href="/classes/2.2/Animatable">Animatable</a></h3>
+<p>Returns the first <a href="/classes/2.2/Animatable">Animatable</a> instance having the given target in the active animatable array</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>target</td>
+<td>any</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="stopanimation-target-rarr-void"><a href="#stopanimation-target-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>stopAnimation(target) &rarr; void</h3>
+<p>Will stop the animation of the given target</p>
+<p>@see beginAnimation</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>target</td>
+<td>any</td>
+<td>- the target</td>
+</tr>
+</tbody>
+</table>
+<h3 id="getviewmatrix-rarr-matrix-classes-2-2-matrix-"><a href="#getviewmatrix-rarr-matrix-classes-2-2-matrix-" class="invisible permalink"><i class="fa fa-link"></i></a>getViewMatrix() &rarr; <a href="/classes/2.2/Matrix">Matrix</a></h3>
+<p>Returns the view <a href="/classes/2.2/Matrix">Matrix</a></p>
+<h3 id="getprojectionmatrix-rarr-matrix-classes-2-2-matrix-"><a href="#getprojectionmatrix-rarr-matrix-classes-2-2-matrix-" class="invisible permalink"><i class="fa fa-link"></i></a>getProjectionMatrix() &rarr; <a href="/classes/2.2/Matrix">Matrix</a></h3>
+<p>Returns the projection <a href="/classes/2.2/Matrix">Matrix</a></p>
+<h3 id="gettransformmatrix-rarr-matrix-classes-2-2-matrix-"><a href="#gettransformmatrix-rarr-matrix-classes-2-2-matrix-" class="invisible permalink"><i class="fa fa-link"></i></a>getTransformMatrix() &rarr; <a href="/classes/2.2/Matrix">Matrix</a></h3>
+<p>Returns the transform <a href="/classes/2.2/Matrix">Matrix</a></p>
+<h3 id="settransformmatrix-view-projection-rarr-void"><a href="#settransformmatrix-view-projection-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>setTransformMatrix(view, projection) &rarr; void</h3>
+<p>Sets the transform matrix by multiplying the given view <a href="/classes/2.2/Matrix">Matrix</a> by the given projection <a href="/classes/2.2/Matrix">Matrix</a></p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>view</td>
+<td><a href="/classes/2.2/Matrix">Matrix</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>projection</td>
+<td><a href="/classes/2.2/Matrix">Matrix</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="addmesh-newmesh-rarr-void"><a href="#addmesh-newmesh-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>addMesh(newMesh) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>newMesh</td>
+<td><a href="/classes/2.2/AbstractMesh">AbstractMesh</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="removemesh-toremove-rarr-number"><a href="#removemesh-toremove-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>removeMesh(toRemove) &rarr; number</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>toRemove</td>
+<td><a href="/classes/2.2/AbstractMesh">AbstractMesh</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="removelight-toremove-rarr-number"><a href="#removelight-toremove-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>removeLight(toRemove) &rarr; number</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>toRemove</td>
+<td><a href="/classes/2.2/Light">Light</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="removecamera-toremove-rarr-number"><a href="#removecamera-toremove-rarr-number" class="invisible permalink"><i class="fa fa-link"></i></a>removeCamera(toRemove) &rarr; number</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>toRemove</td>
+<td><a href="/classes/2.2/Camera">Camera</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="addlight-newlight-rarr-void"><a href="#addlight-newlight-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>addLight(newLight) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>newLight</td>
+<td><a href="/classes/2.2/Light">Light</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="addcamera-newcamera-rarr-void"><a href="#addcamera-newcamera-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>addCamera(newCamera) &rarr; void</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>newCamera</td>
+<td><a href="/classes/2.2/Camera">Camera</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="setactivecamerabyid-id-rarr-camera-classes-2-2-camera-"><a href="#setactivecamerabyid-id-rarr-camera-classes-2-2-camera-" class="invisible permalink"><i class="fa fa-link"></i></a>setActiveCameraByID(id) &rarr; <a href="/classes/2.2/Camera">Camera</a></h3>
+<p>sets the active camera of the scene using its ID</p>
+<p>@return {BABYLON.<a href="/classes/2.2/Camera">Camera</a>|null} the new active camera or null if none found.</p>
+<p>@see activeCamera</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>id</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="setactivecamerabyname-name-rarr-camera-classes-2-2-camera-"><a href="#setactivecamerabyname-name-rarr-camera-classes-2-2-camera-" class="invisible permalink"><i class="fa fa-link"></i></a>setActiveCameraByName(name) &rarr; <a href="/classes/2.2/Camera">Camera</a></h3>
+<p>sets the active camera of the scene using its name</p>
+<p>@return {BABYLON.<a href="/classes/2.2/Camera">Camera</a>|null} the new active camera or null if none found.</p>
+<p>@see activeCamera</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>name</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getmaterialbyid-id-rarr-material-classes-2-2-material-"><a href="#getmaterialbyid-id-rarr-material-classes-2-2-material-" class="invisible permalink"><i class="fa fa-link"></i></a>getMaterialByID(id) &rarr; <a href="/classes/2.2/Material">Material</a></h3>
+<p>get a material using its id</p>
+<p>@return {BABYLON.<a href="/classes/2.2/Material">Material</a>|null} the material or null if none found.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>id</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getmaterialbyname-name-rarr-material-classes-2-2-material-"><a href="#getmaterialbyname-name-rarr-material-classes-2-2-material-" class="invisible permalink"><i class="fa fa-link"></i></a>getMaterialByName(name) &rarr; <a href="/classes/2.2/Material">Material</a></h3>
+<p>get a material using its name</p>
+<p>@return {BABYLON.<a href="/classes/2.2/Material">Material</a>|null} the material or null if none found.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>name</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getlensflaresystembyname-name-rarr-lensflaresystem-classes-2-2-lensflaresystem-"><a href="#getlensflaresystembyname-name-rarr-lensflaresystem-classes-2-2-lensflaresystem-" class="invisible permalink"><i class="fa fa-link"></i></a>getLensFlareSystemByName(name) &rarr; <a href="/classes/2.2/LensFlareSystem">LensFlareSystem</a></h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>name</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getcamerabyid-id-rarr-camera-classes-2-2-camera-"><a href="#getcamerabyid-id-rarr-camera-classes-2-2-camera-" class="invisible permalink"><i class="fa fa-link"></i></a>getCameraByID(id) &rarr; <a href="/classes/2.2/Camera">Camera</a></h3>
+<p>Returns the first <a href="/classes/2.2/Camera">Camera</a> instance using the given id</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>id</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getcamerabyuniqueid-uniqueid-rarr-camera-classes-2-2-camera-"><a href="#getcamerabyuniqueid-uniqueid-rarr-camera-classes-2-2-camera-" class="invisible permalink"><i class="fa fa-link"></i></a>getCameraByUniqueID(uniqueId) &rarr; <a href="/classes/2.2/Camera">Camera</a></h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniqueId</td>
+<td>number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getcamerabyname-name-rarr-camera-classes-2-2-camera-"><a href="#getcamerabyname-name-rarr-camera-classes-2-2-camera-" class="invisible permalink"><i class="fa fa-link"></i></a>getCameraByName(name) &rarr; <a href="/classes/2.2/Camera">Camera</a></h3>
+<p>get a camera using its name</p>
+<p>@return {BABYLON.<a href="/classes/2.2/Camera">Camera</a>|null} the camera or null if none found.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>name</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getlightbyname-name-rarr-light-classes-2-2-light-"><a href="#getlightbyname-name-rarr-light-classes-2-2-light-" class="invisible permalink"><i class="fa fa-link"></i></a>getLightByName(name) &rarr; <a href="/classes/2.2/Light">Light</a></h3>
+<p>get a light node using its name</p>
+<p>@return {BABYLON.<a href="/classes/2.2/Light">Light</a>|null} the light or null if none found.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>name</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getlightbyid-id-rarr-light-classes-2-2-light-"><a href="#getlightbyid-id-rarr-light-classes-2-2-light-" class="invisible permalink"><i class="fa fa-link"></i></a>getLightByID(id) &rarr; <a href="/classes/2.2/Light">Light</a></h3>
+<p>get a light node using its ID</p>
+<p>@return {BABYLON.<a href="/classes/2.2/Light">Light</a>|null} the light or null if none found.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>id</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getlightbyuniqueid-uniqueid-rarr-light-classes-2-2-light-"><a href="#getlightbyuniqueid-uniqueid-rarr-light-classes-2-2-light-" class="invisible permalink"><i class="fa fa-link"></i></a>getLightByUniqueID(uniqueId) &rarr; <a href="/classes/2.2/Light">Light</a></h3>
+<p>get a light node using its scene-generated unique ID</p>
+<p>@return {BABYLON.<a href="/classes/2.2/Light">Light</a>|null} the light or null if none found.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniqueId</td>
+<td>number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getgeometrybyid-id-rarr-geometry-classes-2-2-geometry-"><a href="#getgeometrybyid-id-rarr-geometry-classes-2-2-geometry-" class="invisible permalink"><i class="fa fa-link"></i></a>getGeometryByID(id) &rarr; <a href="/classes/2.2/Geometry">Geometry</a></h3>
+<p>get a geometry using its ID</p>
+<p>@return {BABYLON.<a href="/classes/2.2/Geometry">Geometry</a>|null} the geometry or null if none found.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>id</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pushgeometry-geometry-force-rarr-boolean"><a href="#pushgeometry-geometry-force-rarr-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>pushGeometry(geometry, force) &rarr; boolean</h3>
+<p>add a new geometry to this scene.</p>
+<p>@return {boolean} was the geometry added or not</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>geometry</td>
+<td><a href="/classes/2.2/Geometry">Geometry</a></td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>force</td>
+<td>boolean</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="removegeometry-geometry-rarr-boolean"><a href="#removegeometry-geometry-rarr-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>removeGeometry(geometry) &rarr; boolean</h3>
+<p>Removes an existing geometry</p>
+<p>@return {boolean} was the geometry removed or not</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>geometry</td>
+<td><a href="/classes/2.2/Geometry">Geometry</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getgeometries-rarr-geometry-classes-2-2-geometry-"><a href="#getgeometries-rarr-geometry-classes-2-2-geometry-" class="invisible permalink"><i class="fa fa-link"></i></a>getGeometries() &rarr; <a href="/classes/2.2/Geometry">Geometry</a>[]</h3>
+<p>Returns the list of geometries of this scene</p>
+<h3 id="getmeshbyid-id-rarr-abstractmesh-classes-2-2-abstractmesh-"><a href="#getmeshbyid-id-rarr-abstractmesh-classes-2-2-abstractmesh-" class="invisible permalink"><i class="fa fa-link"></i></a>getMeshByID(id) &rarr; <a href="/classes/2.2/AbstractMesh">AbstractMesh</a></h3>
+<p>Get the first added mesh found of a given ID</p>
+<p>@return {BABYLON.<a href="/classes/2.2/AbstractMesh">AbstractMesh</a>|null} the mesh found or null if not found at all.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>id</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getmeshbyuniqueid-uniqueid-rarr-abstractmesh-classes-2-2-abstractmesh-"><a href="#getmeshbyuniqueid-uniqueid-rarr-abstractmesh-classes-2-2-abstractmesh-" class="invisible permalink"><i class="fa fa-link"></i></a>getMeshByUniqueID(uniqueId) &rarr; <a href="/classes/2.2/AbstractMesh">AbstractMesh</a></h3>
+<p>Get a mesh with its auto-generated unique id</p>
+<p>@return {BABYLON.<a href="/classes/2.2/AbstractMesh">AbstractMesh</a>|null} the mesh found or null if not found at all.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uniqueId</td>
+<td>number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getlastmeshbyid-id-rarr-abstractmesh-classes-2-2-abstractmesh-"><a href="#getlastmeshbyid-id-rarr-abstractmesh-classes-2-2-abstractmesh-" class="invisible permalink"><i class="fa fa-link"></i></a>getLastMeshByID(id) &rarr; <a href="/classes/2.2/AbstractMesh">AbstractMesh</a></h3>
+<p>Get a the last added mesh found of a given ID</p>
+<p>@return {BABYLON.<a href="/classes/2.2/AbstractMesh">AbstractMesh</a>|null} the mesh found or null if not found at all.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>id</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getlastentrybyid-id-rarr-node-classes-2-2-node-"><a href="#getlastentrybyid-id-rarr-node-classes-2-2-node-" class="invisible permalink"><i class="fa fa-link"></i></a>getLastEntryByID(id) &rarr; <a href="/classes/2.2/Node">Node</a></h3>
+<p>Get a the last added node (<a href="/classes/2.2/Mesh">Mesh</a>, <a href="/classes/2.2/Camera">Camera</a>, <a href="/classes/2.2/Light">Light</a>) found of a given ID</p>
+<p>@return {BABYLON.<a href="/classes/2.2/Node">Node</a>|null} the node found or null if not found at all.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>id</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getnodebyid-id-rarr-node-classes-2-2-node-"><a href="#getnodebyid-id-rarr-node-classes-2-2-node-" class="invisible permalink"><i class="fa fa-link"></i></a>getNodeByID(id) &rarr; <a href="/classes/2.2/Node">Node</a></h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>id</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getnodebyname-name-rarr-node-classes-2-2-node-"><a href="#getnodebyname-name-rarr-node-classes-2-2-node-" class="invisible permalink"><i class="fa fa-link"></i></a>getNodeByName(name) &rarr; <a href="/classes/2.2/Node">Node</a></h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>name</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getmeshbyname-name-rarr-abstractmesh-classes-2-2-abstractmesh-"><a href="#getmeshbyname-name-rarr-abstractmesh-classes-2-2-abstractmesh-" class="invisible permalink"><i class="fa fa-link"></i></a>getMeshByName(name) &rarr; <a href="/classes/2.2/AbstractMesh">AbstractMesh</a></h3>
+<p>Returns the <a href="/classes/2.2/Mesh">Mesh</a> instance having the given name</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>name</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getsoundbyname-name-rarr-sound-classes-2-2-sound-"><a href="#getsoundbyname-name-rarr-sound-classes-2-2-sound-" class="invisible permalink"><i class="fa fa-link"></i></a>getSoundByName(name) &rarr; <a href="/classes/2.2/Sound">Sound</a></h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>name</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getlastskeletonbyid-id-rarr-skeleton-classes-2-2-skeleton-"><a href="#getlastskeletonbyid-id-rarr-skeleton-classes-2-2-skeleton-" class="invisible permalink"><i class="fa fa-link"></i></a>getLastSkeletonByID(id) &rarr; <a href="/classes/2.2/Skeleton">Skeleton</a></h3>
+<p>Returns the last instance of <a href="/classes/2.2/Skeleton">Skeleton</a> using the given id</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>id</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getskeletonbyid-id-rarr-skeleton-classes-2-2-skeleton-"><a href="#getskeletonbyid-id-rarr-skeleton-classes-2-2-skeleton-" class="invisible permalink"><i class="fa fa-link"></i></a>getSkeletonById(id) &rarr; <a href="/classes/2.2/Skeleton">Skeleton</a></h3>
+<p>Returns the first <a href="/classes/2.2/Skeleton">Skeleton</a> instance using the given id</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>id</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getskeletonbyname-name-rarr-skeleton-classes-2-2-skeleton-"><a href="#getskeletonbyname-name-rarr-skeleton-classes-2-2-skeleton-" class="invisible permalink"><i class="fa fa-link"></i></a>getSkeletonByName(name) &rarr; <a href="/classes/2.2/Skeleton">Skeleton</a></h3>
+<p>Returns the first <a href="/classes/2.2/Skeleton">Skeleton</a> instance corresponding to the given name</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>name</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="isactivemesh-mesh-rarr-boolean"><a href="#isactivemesh-mesh-rarr-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>isActiveMesh(mesh) &rarr; boolean</h3>
+<p>Tests if the given mesh is active or not</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>mesh</td>
+<td><a href="/classes/2.2/Mesh">Mesh</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="updatetransformmatrix-force-rarr-void"><a href="#updatetransformmatrix-force-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>updateTransformMatrix(force) &rarr; void</h3>
+<p>Updates the transform matrix of this scene with the one of the active camera</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>optional</td>
+<td>force</td>
+<td>boolean</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="render-rarr-void"><a href="#render-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>render() &rarr; void</h3>
+<p>Renders this <a href="/classes/2.2/Scene">Scene</a></p>
+<h3 id="enabledepthrenderer-rarr-depthrenderer-classes-2-2-depthrenderer-"><a href="#enabledepthrenderer-rarr-depthrenderer-classes-2-2-depthrenderer-" class="invisible permalink"><i class="fa fa-link"></i></a>enableDepthRenderer() &rarr; <a href="/classes/2.2/DepthRenderer">DepthRenderer</a></h3>
+<h3 id="disabledepthrenderer-rarr-void"><a href="#disabledepthrenderer-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>disableDepthRenderer() &rarr; void</h3>
+<h3 id="dispose-rarr-void"><a href="#dispose-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>dispose() &rarr; void</h3>
+<p>Remove of this scene all lights, meshes, cameras, materials, particle systems, spritemanagers.</p>
+<h3 id="disposesounds-rarr-void"><a href="#disposesounds-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>disposeSounds() &rarr; void</h3>
+<h3 id="getworldextends-rarr-min-vector3-classes-2-2-vector3-max-vector3-classes-2-2-vector3-"><a href="#getworldextends-rarr-min-vector3-classes-2-2-vector3-max-vector3-classes-2-2-vector3-" class="invisible permalink"><i class="fa fa-link"></i></a>getWorldExtends() &rarr; { min: <a href="/classes/2.2/Vector3">Vector3</a>,  max: <a href="/classes/2.2/Vector3">Vector3</a> }</h3>
+<h3 id="createorupdateselectionoctree-maxcapacity-maxdepth-rarr-octree-classes-2-2-octree-lt-abstractmesh-classes-2-2-abstractmesh-gt-"><a href="#createorupdateselectionoctree-maxcapacity-maxdepth-rarr-octree-classes-2-2-octree-lt-abstractmesh-classes-2-2-abstractmesh-gt-" class="invisible permalink"><i class="fa fa-link"></i></a>createOrUpdateSelectionOctree(maxCapacity, maxDepth) &rarr; <a href="/classes/2.2/Octree">Octree</a>&lt;<a href="/classes/2.2/AbstractMesh">AbstractMesh</a>&gt;</h3>
+<p>Creates a new octree for this scene or update it if existing.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>optional</td>
+<td>maxCapacity</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>maxDepth</td>
+<td>number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="createpickingray-x-y-world-camera-rarr-ray-classes-2-2-ray-"><a href="#createpickingray-x-y-world-camera-rarr-ray-classes-2-2-ray-" class="invisible permalink"><i class="fa fa-link"></i></a>createPickingRay(x, y, world, camera) &rarr; <a href="/classes/2.2/Ray">Ray</a></h3>
+<p>Creates a picking ray in the current view.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>x</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>y</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>world</td>
+<td><a href="/classes/2.2/Matrix">Matrix</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>camera</td>
+<td><a href="/classes/2.2/Camera">Camera</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pick-x-y-predicate-fastcheck-camera-rarr-pickinginfo-classes-2-2-pickinginfo-"><a href="#pick-x-y-predicate-fastcheck-camera-rarr-pickinginfo-classes-2-2-pickinginfo-" class="invisible permalink"><i class="fa fa-link"></i></a>pick(x, y, predicate, fastCheck, camera) &rarr; <a href="/classes/2.2/PickingInfo">PickingInfo</a></h3>
+<p>Launch a ray to try to pick a mesh in the scene</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>x</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>y</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>predicate</td>
+<td>(mesh: <a href="/classes/2.2/AbstractMesh">AbstractMesh</a>) =&gt; boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>fastCheck</td>
+<td>boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>camera</td>
+<td><a href="/classes/2.2/Camera">Camera</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pickwithray-ray-predicate-fastcheck-rarr-pickinginfo-classes-2-2-pickinginfo-"><a href="#pickwithray-ray-predicate-fastcheck-rarr-pickinginfo-classes-2-2-pickinginfo-" class="invisible permalink"><i class="fa fa-link"></i></a>pickWithRay(ray, predicate, fastCheck) &rarr; <a href="/classes/2.2/PickingInfo">PickingInfo</a></h3>
+<p>Function used to pick a mesh by giving a ray (instead of a position).</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>ray</td>
+<td><a href="/classes/2.2/Ray">Ray</a></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>predicate</td>
+<td>(mesh: <a href="/classes/2.2/Mesh">Mesh</a>) =&gt; boolean</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>fastCheck</td>
+<td>boolean</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="setpointerovermesh-mesh-rarr-void"><a href="#setpointerovermesh-mesh-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>setPointerOverMesh(mesh) &rarr; void</h3>
+<p>The action OnPointerOutTrigger and OnPointerOverTrigger are triggered for the given mesh</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>mesh</td>
+<td><a href="/classes/2.2/AbstractMesh">AbstractMesh</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getpointerovermesh-rarr-abstractmesh-classes-2-2-abstractmesh-"><a href="#getpointerovermesh-rarr-abstractmesh-classes-2-2-abstractmesh-" class="invisible permalink"><i class="fa fa-link"></i></a>getPointerOverMesh() &rarr; <a href="/classes/2.2/AbstractMesh">AbstractMesh</a></h3>
+<p>Returns the pointer over the mesh</p>
+<h3 id="getphysicsengine-rarr-physicsengine-classes-2-2-physicsengine-"><a href="#getphysicsengine-rarr-physicsengine-classes-2-2-physicsengine-" class="invisible permalink"><i class="fa fa-link"></i></a>getPhysicsEngine() &rarr; <a href="/classes/2.2/PhysicsEngine">PhysicsEngine</a></h3>
+<p>Returns the physic engine used for this scene</p>
+<h3 id="enablephysics-gravity-plugin-rarr-boolean"><a href="#enablephysics-gravity-plugin-rarr-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>enablePhysics(gravity, plugin) &rarr; boolean</h3>
+<p>Enable the physic engine in this scene.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>gravity</td>
+<td><a href="/classes/2.2/Vector3">Vector3</a></td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>plugin</td>
+<td>IPhysicsEnginePlugin</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="disablephysicsengine-rarr-void"><a href="#disablephysicsengine-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>disablePhysicsEngine() &rarr; void</h3>
+<p>Delete the physics engine of the scene</p>
+<h3 id="isphysicsenabled-rarr-boolean"><a href="#isphysicsenabled-rarr-boolean" class="invisible permalink"><i class="fa fa-link"></i></a>isPhysicsEnabled() &rarr; boolean</h3>
+<p>True if a physic engine is defined, false otherwise</p>
+<h3 id="setgravity-gravity-rarr-void"><a href="#setgravity-gravity-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>setGravity(gravity) &rarr; void</h3>
+<p>Sets the given gracvity to the loaded physic engine</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>gravity</td>
+<td><a href="/classes/2.2/Vector3">Vector3</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="createcompoundimpostor-parts-options-rarr-any"><a href="#createcompoundimpostor-parts-options-rarr-any" class="invisible permalink"><i class="fa fa-link"></i></a>createCompoundImpostor(parts, options) &rarr; any</h3>
+<p>Creates an impostor composed of the given parts</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>parts</td>
+<td>any</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>options</td>
+<td>PhysicsBodyCreationOptions</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="deletecompoundimpostor-compound-rarr-void"><a href="#deletecompoundimpostor-compound-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>deleteCompoundImpostor(compound) &rarr; void</h3>
+<p>Unregister the compound impostor in the physic engine.</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>compound</td>
+<td>any</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="createdefaultcameraorlight-rarr-void"><a href="#createdefaultcameraorlight-rarr-void" class="invisible permalink"><i class="fa fa-link"></i></a>createDefaultCameraOrLight() &rarr; void</h3>
+<h3 id="getmeshesbytags-tagsquery-foreach-rarr-mesh-classes-2-2-mesh-"><a href="#getmeshesbytags-tagsquery-foreach-rarr-mesh-classes-2-2-mesh-" class="invisible permalink"><i class="fa fa-link"></i></a>getMeshesByTags(tagsQuery, forEach) &rarr; <a href="/classes/2.2/Mesh">Mesh</a>[]</h3>
+<p>Returns the list of meshes corresponding to the tag query given in parameter</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>tagsQuery</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>forEach</td>
+<td>(mesh: <a href="/classes/2.2/AbstractMesh">AbstractMesh</a>) =&gt; void</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getcamerasbytags-tagsquery-foreach-rarr-camera-classes-2-2-camera-"><a href="#getcamerasbytags-tagsquery-foreach-rarr-camera-classes-2-2-camera-" class="invisible permalink"><i class="fa fa-link"></i></a>getCamerasByTags(tagsQuery, forEach) &rarr; <a href="/classes/2.2/Camera">Camera</a>[]</h3>
+<p>Returns the list of cameras corresponding to the tag query given in parameter</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>tagsQuery</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>forEach</td>
+<td>(camera: <a href="/classes/2.2/Camera">Camera</a>) =&gt; void</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getlightsbytags-tagsquery-foreach-rarr-light-classes-2-2-light-"><a href="#getlightsbytags-tagsquery-foreach-rarr-light-classes-2-2-light-" class="invisible permalink"><i class="fa fa-link"></i></a>getLightsByTags(tagsQuery, forEach) &rarr; <a href="/classes/2.2/Light">Light</a>[]</h3>
+<p>Returns the list of lights corresponding to the tag query given in parameter</p>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>tagsQuery</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>forEach</td>
+<td>(light: <a href="/classes/2.2/Light">Light</a>) =&gt; void</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="getmaterialbytags-tagsquery-foreach-rarr-material-classes-2-2-material-"><a href="#getmaterialbytags-tagsquery-foreach-rarr-material-classes-2-2-material-" class="invisible permalink"><i class="fa fa-link"></i></a>getMaterialByTags(tagsQuery, forEach) &rarr; <a href="/classes/2.2/Material">Material</a>[]</h3>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>tagsQuery</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>optional</td>
+<td>forEach</td>
+<td>(material: <a href="/classes/2.2/Material">Material</a>) =&gt; void</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div></div><!-- The content wrapper--><div id="wrapper"></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>    Github</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Documentation" target="_blank"><i class="fa fa-code-fork"></i>    Contribute</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><script>(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            };
+    i[r].l = 1 * new Date();
+    a = s.createElement(o);
+    m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-66146410-1', 'auto');
+ga('send', 'pageview');</script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/js/min/perfect-scrollbar.jquery.min.js"></script><script src="/js/classes.js"></script><script src="/js/class.js"></script></body></html>

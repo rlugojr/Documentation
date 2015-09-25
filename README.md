@@ -100,17 +100,18 @@ Here is how the object is structured:
 ### Build documentation for your own version of BabylonJs
 
 This can be done very easily by following these steps:
-    * Get a local copy of the documentation
-    * Head to scripts\helpers\builder\sources
-    * Add your typescript description file in the current folder
-    * Make sure your file name is like 'babylon.<version>.d.ts'
-    * Head to scripts\helpers\builder
-    * Open the config.js file
-    * Change the ```version``` and the ```previousVersion``` properties
-    * Head to content\classes
-    * Make sure there is no folder named like the version you want to build
-    * Open your command shell and run ```npm run build```
-    * Rebuild the doc: ```grunt build```
+
+1. Get a local copy of the documentation
+2. Head to scripts\helpers\builder\sources
+3. Add your typescript description file in the current folder
+4. Make sure your file name is like 'babylon.<version>.d.ts'
+5. Head to scripts\helpers\builder
+6. Open the config.js file
+7. Change the ```version``` and the ```previousVersion``` properties
+8. Head to content\classes
+9. Make sure there is no folder named like the version you want to build
+10. Open your command shell and run ```npm run build```
+10. Rebuild the doc: ```grunt build```
 
 ### How to structure your document to get a functional Table Of Content (TOC)
 

@@ -14,7 +14,7 @@ var file = {
      * Note that the file must be name this way :
      * babylon.<your-new-version>.d.ts
      */
-    version        : '2.2-alpha',
+    version        : '2.2',
 
     /**
      * The previous version, from which you want to import comments

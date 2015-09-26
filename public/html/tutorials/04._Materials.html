@@ -50,6 +50,7 @@
 <p>Or, you can use a texture:</p>
 <pre><code class="lang-javascript">materialSphere1.diffuseTexture = new BABYLON.Texture(&quot;grass.png&quot;, scene);
 </code></pre>
+<p><img src="http://www.babylonjs.com/tutorials/04%20-%20Materials/04-1.png" alt="tof"></p>
 <p><strong>More About Textures:</strong> Be sure to use the correct path to your image (relative or absolute path). Supported image formats include JPG, PNG, JPEG, BMP, GIF… (every image format supported by your browser).</p>
 <p>If you want to translate (offset) your texture on your mesh, you can use the “uOffset” and “vOffset” properties:</p>
 <pre><code class="lang-javascript">materialSphere1.diffuseTexture.uOffset = 1.5;
@@ -59,7 +60,8 @@ materialSphere1.diffuseTexture.vOffset = 0.5;
 <pre><code class="lang-javascript">materialSphere1.diffuseTexture.uScale = 5.0;
 materialSphere1.diffuseTexture.vScale = 5.0;
 </code></pre>
-<p><img src="http://www.babylonjs.com/tutorials/04%20-%20Materials/04-1.png" alt="tof"></p>
+<p>Remember that (u, v) coordinates refer to the following axis:</p>
+<p><img src="/img/tutorials/crate.jpg" alt="tof"></p>
 <p>And if your texture has some alpha, you will need to specify it:</p>
 <pre><code class="lang-javascript">materialSphere1.diffuseTexture.hasAlpha = true;
 </code></pre>

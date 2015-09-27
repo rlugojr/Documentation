@@ -131,13 +131,14 @@
         */
         if(localStorage.orderClassesby) {
             if(window.localStorage.orderClassesby == 'tags') {
-                //listClassesTags.addClass('hidden');
                 showClassesByTags();
             }
             else if(window.localStorage.orderClassesby == 'alpha') {
-                //listClassesAlpha.addClass('hidden');
                 showClassesByAlpha();
             }
+        }  else {
+            // first time on this page for the user - set default list to alpha list
+            showClassesByAlpha();
         }
     });
 })();

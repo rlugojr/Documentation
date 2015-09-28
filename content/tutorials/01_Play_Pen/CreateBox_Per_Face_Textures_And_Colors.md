@@ -83,10 +83,9 @@ To pass then this array to the _CreateBox_ method, just add a parameter called _
 Here's the result : http://www.babylonjs-playground.com/#1V3CAT#2
 
 Quite easy, isn't it ?
-
-
-
-
+  
+  
+  
 Now look at the red haired character on the top face of the box. He has his head on the left, right ?
 
 What if I want to flip only this face ?
@@ -100,10 +99,9 @@ This face is the box face 4 (just make attempts to discover the box geometry). I
 ```
 
 Now, his head in on the right : http://www.babylonjs-playground.com/#1V3CAT#3
-
-
-
-Obviously, you're not obliged to set every box face.
+  
+  
+Obviously, you're not obliged to set every box face.  
 
 Imagine you want to set only the face 4.
 
@@ -115,6 +113,9 @@ Forget about the _for{}_ loop, just initialize your _faceUV_ array and set only 
 
 Two lines of code only and that's all : http://www.babylonjs-playground.com/#1V3CAT#4
 
+You could also want to apply two different images from the same texture file onto two different meshes.  
+Nothing easier : http://www.babylonjs-playground.com/#1V3CAT#9   
+Two boxes, two images, but only one texture !
 
 
 

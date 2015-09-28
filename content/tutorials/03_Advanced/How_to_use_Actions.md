@@ -39,19 +39,22 @@ sphere.actionManager.registerAction(new BABYLON.InterpolateValueAction(BABYLON.A
 In this example, the `camera.alpha` property will be animated to 0 in 500ms when the user clicks the sphere only if the `light1.diffuse` property is equal to red.
 
 # Triggers
-Currently, 10 different triggers are supported:
+Currently, 12 different triggers are supported:
 
 The following list defines triggers associated with meshes:
 
-* `BABYLON.ActionManager.NothingTrigger`: Never raised. Used for sub-actions with `action.then` function
-* `BABYLON.ActionManager.OnPickTrigger`: Raised when the user touches/clicks on a mesh
-* `BABYLON.ActionManager.OnLeftPickTrigger`: Raised when the user touches/clicks on a mesh with left button
-* `BABYLON.ActionManager.OnRightPickTrigger`: Raised when the user touches/clicks on a mesh with right button
-* `BABYLON.ActionManager.OnCenterPickTrigger`: Raised when the user touches/clicks on a mesh with center button
-* `BABYLON.ActionManager.OnPointerOverTrigger`: Raised when the pointer is over a mesh. Raised just once
-* `BABYLON.ActionManager.OnPointerOutTrigger`: Raised when the pointer is no more over a mesh. Raised just once
-* `BABYLON.ActionManager.OnIntersectionEnterTrigger`: Raised when the mesh is in intersection with another mesh. Raised just once
-* `BABYLON.ActionManager.OnIntersectionExitTrigger`: Raised when the mesh is no more in intersection with another mesh. Raised just once
+* `BABYLON.ActionManager.NothingTrigger`: Never raised. Used for sub-actions with `action.then` function.
+* `BABYLON.ActionManager.OnPickTrigger`: Raised when the user touches/clicks on a mesh.
+* `BABYLON.ActionManager.OnPickUpTrigger`: Raised when the user touches/clicks up on a mesh.
+* `BABYLON.ActionManager.OnLeftPickTrigger`: Raised when the user touches/clicks on a mesh with left button.
+* `BABYLON.ActionManager.OnRightPickTrigger`: Raised when the user touches/clicks on a mesh with right button.
+* `BABYLON.ActionManager.OnCenterPickTrigger`: Raised when the user touches/clicks on a mesh with center button.
+* `BABYLON.ActionManager.OnPointerOverTrigger`: Raised when the pointer is over a mesh. Raised just once.
+* `BABYLON.ActionManager.OnPointerOutTrigger`: Raised when the pointer is no more over a mesh. Raised just once.
+* `BABYLON.ActionManager.OnIntersectionEnterTrigger`: Raised when the mesh is in intersection with another mesh. Raised just once.
+* `BABYLON.ActionManager.OnIntersectionExitTrigger`: Raised when the mesh is no more in intersection with another mesh. Raised just once.
+* `BABYLON.ActionManager.OnKeyDownTrigger`: Raised when a key is press.
+* `BABYLON.ActionManager.OnKeyUpTrigger`: Raised when a key is up
 
 For intersection triggers, you have to specify the "other" mesh with the following code:
 

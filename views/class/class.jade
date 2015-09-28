@@ -5,9 +5,11 @@ include ../includes/header
         .sorts
             span#orderByTags.order Tags
             span#orderByAlpha.order.selectedOrder A - Z
-        #classes_classesListByTag.hidden.sidemenu
+        #tagFilter.hidden
+            input(type='text' placeholder='Filter tag name')
+        #classes_classesListByTag.sidemenu.hidden
             each bClasses, category in classListByTag
-                div(id=category).category
+                div(id=category data-name=category).category
                     div.categoryTitle
                         h3= category
                     div.categoryList
@@ -15,9 +17,11 @@ include ../includes/header
                         each bClass in bClasses
                             li
                                 a(href='/classes/'+currentVersion+'/'+bClass).className= bClass
-        #classes_classesListByAlpha.sideClassesListByAlpha
+        #alphaFilter.hidden
+            input(type='text' placeholder='Filter class name')
+        #classes_classesListByAlpha.sideClassesListByAlpha.hidden
             - for className in classListByAlpha
-                a.class(href='./'+className data-name=className )= className.replace('_T_','<T>')
+                a.classLink(href='./'+className data-name=className )= className.replace('_T_','<T>')
 
     // Element to resize the sidebar
     .classBarResize#resizeBar(draggable=true)

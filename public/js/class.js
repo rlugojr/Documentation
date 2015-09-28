@@ -101,7 +101,7 @@
             }
         }
 
-        var selectedClass = $('#classes_classesListByAlpha').find('> a.class[data-name=' + $('#classTitle > h1').text() + ']');
+        var selectedClass = $('#classes_classesListByAlpha').find('> a.classLink[data-name=' + $('#classTitle > h1').text() + ']');
 
         selectedClass.addClass('selected');
         $('.classBar').scrollTop(selectedClass.offset().top - 100);

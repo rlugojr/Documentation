@@ -9,6 +9,11 @@
         var listClassesAlpha        = $("#classes_classesListByAlpha");
         var listClassesTags         = $("#classes_classesListByTag");
 
+        var alphaFilterWrapper      = document.getElementById("alphaFilter");
+        var alphaFilter             = alphaFilterWrapper.firstChild;
+        var tagFilterWrapper        = document.getElementById("tagFilter");
+        var tagFilter               = tagFilterWrapper.firstChild;
+
         var orderByTagButton        = $("#orderByTags");
         var orderByAlphaButton      = $("#orderByAlpha");
 
@@ -17,11 +22,14 @@
          */
         function showClassesByAlpha(evt) {
             if (listClassesAlpha.hasClass('hidden')) {
+                alphaFilterWrapper.className = '';
+                tagFilterWrapper.className = 'hidden';
+
                 listClassesAlpha.removeClass('hidden');
                 listClassesTags.addClass('hidden');
 
-                orderByTagButton.toggleClass('selectedOrder');
-                orderByAlphaButton.toggleClass('selectedOrder');
+                orderByTagButton.removeClass('selectedOrder');
+                orderByAlphaButton.addClass('selectedOrder');
 
                 localStorage.orderClassesby = 'alpha';
             }
@@ -43,11 +51,14 @@
         }
         function showClassesByTags(evt) {
             if (listClassesTags.hasClass('hidden')) {
+                alphaFilterWrapper.className = 'hidden';
+                tagFilterWrapper.className = '';
+
                 listClassesAlpha.addClass('hidden');
                 listClassesTags.removeClass('hidden');
 
-                orderByTagButton.toggleClass('selectedOrder');
-                orderByAlphaButton.toggleClass('selectedOrder');
+                orderByTagButton.addClass('selectedOrder');
+                orderByAlphaButton.removeClass('selectedOrder');
 
                 localStorage.orderClassesby = 'tags';
             }
@@ -68,8 +79,52 @@
             }
         }
 
+        // launched when user types something in the filter input area above the class list
+        function filterAlphaList(search){
+            var reg = new RegExp(search, 'gi');
+            $('.classLink').each(function(i, link){
+                if (!reg.exec(link.attributes['data-name'].nodeValue)) {
+                    link.className = 'classLink hidden';
+                } else {
+                    link.className = 'classLink';
+                }
+            });
+        }
+        // launched when user types something in the filter input area above the tag list
+        function filterTagList(search){
+            var reg = new RegExp(search, 'gi');
+            $('.category').each(function(i, category){
+                if (!reg.exec(category.attributes['data-name'].nodeValue)) {
+                    category.className = 'category hidden';
+                } else {
+                    category.className = 'category';
+                }
+            });
+        }
+
+        // event on key up in the alpha filter
+        alphaFilter.addEventListener('keyup', function(){
+            if(alphaFilter.value.length > 0){
+                filterAlphaList(alphaFilter.value);
+            } else {
+                $('.classLink').each(function(i, link){
+                    link.className = 'classLink';
+                });
+            }
+        });
+        // event on key up in the tag filter
+        tagFilter.addEventListener('keyup', function(){
+            if(tagFilter.value.length > 0){
+                filterTagList(tagFilter.value);
+            } else {
+                $('.category').each(function(i, category){
+                    category.className = 'category';
+                });
+            }
+        });
+
         orderByAlphaButton.click(showClassesByAlpha);
-        orderByTagButton.click (showClassesByTags);
+        orderByTagButton.click(showClassesByTags);
 
         /**
         * Get the older selected order, and apply it
@@ -81,6 +136,9 @@
             else if(window.localStorage.orderClassesby == 'alpha') {
                 showClassesByAlpha();
             }
+        }  else {
+            // first time on this page for the user - set default list to alpha list
+            showClassesByAlpha();
         }
     });
 })();

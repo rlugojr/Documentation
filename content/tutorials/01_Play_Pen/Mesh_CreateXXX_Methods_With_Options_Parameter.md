@@ -1,5 +1,5 @@
 ##Mesh CreateXXX() Methods With Options Parameter
-In this tutorial, you will learn how to use the classical Mesh _CreateXXX()_ methods with the _options_ parameter instead of the full list of parameters.  
+In this tutorial, we will learn how to use the classical Mesh _CreateXXX()_ methods with the _options_ parameter instead of the full list of parameters.  
 Indeed, as for BJS 2.3+, all the _CreateXXX()_ methods can be called either by 
 ```javascript
 var mesh = BABYLON.CreateMesh(name, param1, param2, param3, ..., scene);

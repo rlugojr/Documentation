@@ -7,7 +7,7 @@ PG_VERSION: 1.14
 
 The AnaglyphCamera is a camera package that is a more generic (non-Oculus) stereoscopic 3D camera.
 There are actually two types of AnaglyphCamera. This one is a [AnaglyphFreeCamera](/classes/AnaglyphFreeCamera) : Stereoscopic 3D with two [FreeCamera](/classes/FreeCamera).
-Tutorial [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+Tutorial [here](http://doc.babylonjs.com/tutorials/05._Cameras)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -17,7 +17,8 @@ Tutorial [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
  | scene | [Scene](/classes/Scene) | The scene which contain the camera
 ---
 
-##Extends [FreeCamera](/classes/FreeCamera)
+##Extends
+ [FreeCamera](/classes/FreeCamera)
 
 
 ##Methods

@@ -6,7 +6,7 @@ PG_VERSION: 1.14
 
 Create a lens Flare to be integrated in a lens flare system.
 
-A tutorial about using lens flare can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-lens-flares)
+A tutorial about using lens flare can be found [here](http://doc.babylonjs.com/tutorials/How_to_use_Lens_Flares)
 ##new [LensFlare](/classes/LensFlare)(size, position, color, imgUrl, system)
 
 The [LensFlare](/classes/LensFlare) class

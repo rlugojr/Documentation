@@ -6,7 +6,7 @@ PG_VERSION: 1.14
 ##new [MirrorTexture](/classes/MirrorTexture)(name, size, scene, generateMipMaps)
 
 Create a new [MirrorTexture](/classes/MirrorTexture).
-A tutorial about advanced texturing can be found here : https://github.com/BabylonJS/Babylon.js/wiki/14-Advanced-Texturing
+A tutorial about advanced texturing can be found here : http://doc.babylonjs.com/tutorials/01._Advanced_Texturing
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
@@ -16,7 +16,8 @@ A tutorial about advanced texturing can be found here : https://github.com/Babyl
 optional | generateMipMaps | boolean | True to generate the mip map ; Fals otherwise
 ---
 
-##Extends [RenderTargetTexture](/classes/RenderTargetTexture)
+##Extends
+ [RenderTargetTexture](/classes/RenderTargetTexture)
 ##Members
 
 ###mirrorPlane : [Plane](/classes/Plane)

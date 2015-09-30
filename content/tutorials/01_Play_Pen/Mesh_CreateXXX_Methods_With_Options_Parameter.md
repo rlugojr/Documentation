@@ -29,7 +29,8 @@ Example :
 ```javascript
 var box = BABYLON.Mesh.CreateBox("box", {height: 5, faceColors: myColors}, scene);
 ```
-Options :
+Properties, all optional :
+
 property|value
 --------|-----
 size|_(number)_ size of each box side
@@ -38,10 +39,97 @@ width|_(number)_ width size, overwrites _size_ property
 length|_(number)_ length size,  overwrites _size_ property 
 faceColors|_(Color4[])_ array of 6 _Color4_, one per box face
 faceUV|_(Vector4[])_ array of 6 _Vector4_, one per box face
+sideOrientation|_(number)_ side orientation
 
 ####Sphere
+Example :
+```javascript
+var sphere = BABYLON.Mesh.CreateSphere("sphere", {diameter: 2, diameterX: 3}, scene);
+```
+Properties, all optional :
+
+property|value
+--------|-----
+segments|_(number)_ number of horizontal segments
+diameter|_(number)_ diameter of the sphere
+diameterX|_(number)_ diameter on X axis, overwrites _diameter_ property
+diameterY|_(number)_ diameter on Y axis, overwrites _diameter_ property
+diameterZ|_(number)_ diameter on Z axis, overwrites _diameter_ property
+sideOrientation|_(number)_ side orientation
 
 ####Cylinder
+Example :
+```javascript
+var cylinder = BABYLON.Mesh.CreateCylinder("cyl", {diameterBottom: 0, tessellation: 4}, scene);
+```
+Properties, all optional :
+
+property|value
+--------|-----
+height|_(number)_ height of the cylinder
+diameterTop|_(number)_ diameter of the top cap, can be zero
+diameterBottom|_(number)_ diameter of the bottom cap, can't be zero
+tessellation|_(number)_ number of radial sides
+subdivisions|_(number)_ number of rings
+sideOrientation|_(number)_ side orientation
+
+####Plane
+Example :
+```javascript
+var plane = BABYLON.Mesh.CreatePlane("plane", {width: 5}, scene);
+```
+Properties, all optional :
+
+property|value
+--------|-----
+size|_(number)_ side size of the plane
+width|_(number)_ size of the width
+height|_(number)_ size of the height
+sideOrientation|_(number)_ side orientation
+
+####Ground
+Example :
+```javascript
+var ground = BABYLON.Mesh.CreateGround("gd", {width: 6, subdivsions: 4}, scene);
+```
+Properties, all optional :
+
+property|value
+--------|-----
+width|_(number)_ size of the width
+height|_(number)_ size of the height
+subdivisions|_(number)_ number of square subdivisions
+
+####Torus
+Example :
+```javascript
+var torus = BABYLON.Mesh.CreateTorus("torus", {thickness: 0.2}, scene);
+```
+Properties, all optional :
+
+property|value
+--------|-----
+diameter|_(number)_ diameter of the torus
+thickness|_(number)_ thickness of its tube
+tessellation|_(number)_ number of segments along the circle
+sideOrientation|_(number)_ side orientation
+
+####Torus Knot
+Example :
+```javascript
+var torus = BABYLON.Mesh.CreateTorusKnot("tk", {}, scene);
+```
+Properties, all optional :
+
+property|value
+--------|-----
+radius|_(number)_ radius of the torus knot
+tube|_(number)_ thickness of its tube
+radialSegments|_(number)_ number of radial segments
+tubularSegments|_(number)_ number of tubular segments
+p|_(number)_ number of torsions
+q|_(number)_ number of torsions
+sideOrientation|_(number)_ side orientation
 
 ###Parametric Shapes
 

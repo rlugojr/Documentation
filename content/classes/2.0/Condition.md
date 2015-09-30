@@ -4,7 +4,7 @@ PG_TITLE: Condition
 PG_VERSION: 2.0
 ---
 
-A great tutorial right here : https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-Actions
+A great tutorial right here : http://doc.babylonjs.com/tutorials/How_to_use_Actions
 ##new [Condition](/classes/Condition)(actionManager)
 
 

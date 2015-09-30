@@ -11,7 +11,7 @@ TAGS:
 
 
 Creates a new post process manager.
-A tutorial about post process can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-postprocesses)
+A tutorial about post process can be found [here](http://doc.babylonjs.com/tutorials/How_to_use_PostProcesses)
 
 
 

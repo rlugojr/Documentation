@@ -6,7 +6,7 @@ PG_VERSION: 1.14
 ##new [SpriteManager](/classes/SpriteManager)(name, imgUrl, capacity, cellSize, scene, epsilon)
 
 Create a new [SpriteManager](/classes/SpriteManager)
-A tutorial about sprites can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/08-Sprites)
+A tutorial about sprites can be found [here](http://doc.babylonjs.com/tutorials/08._Sprites)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---

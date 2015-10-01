@@ -100,6 +100,20 @@ width|_(number)_ size of the width
 height|_(number)_ size of the height
 subdivisions|_(number)_ number of square subdivisions
 
+####Disc
+Remembe you can create any kind of regular plane polygon with _CreateDisc()_  
+Example :  
+```javascript
+var disc = BABYLON.Mesh.CreateDisc("disc", {tessellation: 3}, scene); // makes a triangle
+```
+Properties, all optional :
+
+property|value
+--------|-----
+radius|_(number)_ the radius of the disc or polygon
+tessellation|_(number)_ the number of disc/polygon sides
+sideOrientation|_(number)_ side orientation
+
 ####Torus
 Example :
 ```javascript
@@ -132,5 +146,19 @@ q|_(number)_ number of torsions
 sideOrientation|_(number)_ side orientation
 
 ###Parametric Shapes
+####Lines
+You must set at least the _points_ property.  
+
+Example :
+```javascript
+lines = BABYLON.Mesh.CreateLines("lines", {points: myArray, instance: lines}, scene);
+// updates the existing instance of lines
+```
+Properties :
+
+property|value
+--------|-----
+points|_(Vector3[])_  array of Vector3, the path of the line **REQUIRED**  
+instance|_(LineMesh)_ an instance of a line mesh to be updated
 
 _edition in progress_

@@ -141,8 +141,8 @@ radius|_(number)_ radius of the torus knot
 tube|_(number)_ thickness of its tube
 radialSegments|_(number)_ number of radial segments
 tubularSegments|_(number)_ number of tubular segments
-p|_(number)_ number of torsions
-q|_(number)_ number of torsions
+p|_(number)_ number of windings
+q|_(number)_ number of windings
 sideOrientation|_(number)_ side orientation
 
 ###Parametric Shapes

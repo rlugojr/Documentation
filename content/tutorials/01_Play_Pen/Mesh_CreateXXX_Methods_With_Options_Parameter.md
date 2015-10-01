@@ -151,14 +151,32 @@ You must set at least the _points_ property.
 
 Example :
 ```javascript
-lines = BABYLON.Mesh.CreateLines("lines", {points: myArray, instance: lines}, scene);
-// updates the existing instance of lines
+lines = BABYLON.Mesh.CreateLines("lines", {points: myArray, instance: lines});
+// updates the existing instance of lines : doesn't even need the parameter scene
 ```
 Properties :
 
 property|value
 --------|-----
 points|_(Vector3[])_  array of Vector3, the path of the line **REQUIRED**  
+instance|_(LineMesh)_ an instance of a line mesh to be updated
+
+####Dashed Lines
+You must set at least the _points_ property.  
+
+Example :
+```javascript
+dashedLines = BABYLON.Mesh.CreateDashedLines("dl", {points: myArray, instance: dashedLines});
+// updates the existing instance of dashedLines : doesn't even need the parameter scene
+```
+Properties :
+
+property|value
+--------|-----
+points|_(Vector3[])_  array of Vector3, the path of the line **REQUIRED** 
+dashSize|_(number)_  size of the dashes
+gapSize|_(number)_  size of the gaps
+dashBn|_(number)_  intended number of dashes
 instance|_(LineMesh)_ an instance of a line mesh to be updated
 
 _edition in progress_

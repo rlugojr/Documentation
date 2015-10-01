@@ -139,6 +139,7 @@ But you may want to work with all basic files. In this case, please download the
     <script src="Babylon/Rendering/babylon.edgesRenderer.js"></script>
     <script src="Babylon/Tools/babylon.loadingScreen.js"></script>
     <script src="Babylon/Materials/babylon.pbrMaterial.js"></script>
+    <script src="Babylon/Probes/babylon.reflectionProbe.js"></script>
 ```
 
 When working with all files, you can provide the following information to the engine:

@@ -1,35 +1,35 @@
 ##CreateBox per face textures and colors
 
-In this tutorial, you will learn how to use the _faceUV_ and _faceColors_ parameters of the _CreateBox_ method in order to set a different texture or color per box face.
+In this tutorial, we will learn how to use the _faceUV_ and _faceColors_ parameters of the _CreateBox_ method in order to set a different texture or color per box face.
 
 
 ###Textures
 
 
-Imagine that you have such an image file : http://jerome.bousquie.fr/BJS/images/spriteAtlas.png  
-We call it, in video games development,  a sprite atlas because we have 24 different spite images in a single file : 4 rows of 6 sprites, each having the same size.  
+Imagine that we have an image file such as this : http://jerome.bousquie.fr/BJS/images/spriteAtlas.png  
+We call it, in video games development,  a sprite atlas because we have 24 different spite images in a single file : 4 rows of 6 sprites, each having the same size. This is just an example, we could have had 32 rows of 32 images as well.    
 
-Well, I'm about to talk about atlases here, but remember it's only an example to illustrate the per-texture feature. It's not mandatory to use an atlas, you can just use a regular texture file and choose what part of it to display on each (or only some) box face.  
+Well, I'm about to talk about atlases here, but remember it's only an example to illustrate the per-texture feature. It's not mandatory to use an atlas, we can just use a regular texture file and choose what part of it to display on each (or only some) box face.  
 
 Let's start...
 
 We create a rectangular box by using the _options_ parameters line 43 and 50 : http://www.babylonjs-playground.com/#1V3CAT  
-Then we give to its material the texture as usual : http://www.babylonjs-playground.com/#1V3CAT#1  
+Then we set the texture as a value on a material as usual : http://www.babylonjs-playground.com/#1V3CAT#1  
 Nothing new until now, right ?  
 
 Let's go on.
 
-Please have a look from line 27 :  
-Line 30, we define a new array called _faceUV_, sized 6 because our box has 6 faces. This array will content Vector4 elements.  
-Each _Vector4(x, y, z, w)_ will be defined this way :  
+Please let's have a look from line 27 :  
+Line 30, we define a new array called _faceUV_, sized 6 because our box has 6 faces. This array will always content Vector4 elements.  
+Each _Vector4(x, y, z, w)_ will be defined in this way :  
 
 x = Utop  
 y = Vtop  
 z = Ubottom  
 w = Vbottom  
-all in the range [0, 1]
+all are in the range [0, 1]
 
-as _Utop_, _Vtop_ are the 2D coordinates of the top left point where to start to crop the texture file and _Ubottom_, _Vbottom_ the bottom right ones where to stop to crop.  
+as _Utop_, _Vtop_ are the 2D coordinates of the top left point of where the texture crop starts and _Ubottom_, _Vbottom_ the bottom right ones of where the texture crop ends.  
 Not clear ?  
 
 Let's go back to our sprite atlas : we've got 4 rows of 6 sprites.  
@@ -40,7 +40,7 @@ Vtop = 0
 Ubottom = (i+1) / 6
 Vbottom = 1 / 4
 ```
-to each array element, we actually set a different sprite from the the first horizontal row to each box face in the _faceUV_ array.  
+to each array element, we actually set a different sprite from the first horizontal row to each box face in the _faceUV_ array.  
 code :
 ```javascript
   var hSpriteNb =  6;  // 6 sprites per raw
@@ -52,7 +52,7 @@ code :
     faceUV[i] = new BABYLON.Vector4(i/hSpriteNb, 0, (i+1)/hSpriteNb, 1 / vSpriteNb);
   }
 ```
-To pass then this array to the _CreateBox_ method, just add a parameter called _faceUV_, valued with this array, to the options :  
+Then, to pass this array to the _CreateBox_ method, just add a parameter called _faceUV_, valued with this array, to the options :  
 ```javascript
   var options = {
     width: 10,
@@ -68,9 +68,9 @@ Here's the result : http://www.babylonjs-playground.com/#1V3CAT#2
 Quite easy, isn't it ?  
 <br/>
 <br/>
-Now look at the red haired character on the top face of the box. He has his head on the left, right ?  
-What if I want to flip only this face ?  
-This face is the box face 4 (just make attempts to discover the box geometry). I just then need to swap _y_ and _w_ coordinate values :  
+Now let's look at the red haired character on the top face of the box. He has his head on the left, correct ?  
+What if we want to flip only this face ?  
+This face is the box face 4 (just make attempts to discover the box geometry). We just then need to swap _y_ and _w_ coordinate values :  
 ```javascript
   var f = 4;
   var temp = faceUV[f].y;
@@ -80,17 +80,17 @@ This face is the box face 4 (just make attempts to discover the box geometry). I
 And now, his head is in on the right : http://www.babylonjs-playground.com/#1V3CAT#3  
 <br/>
 <br/>
-Obviously, you're not obliged to set every box face.  
-Imagine you want to set only the face 4.  
-Forget about the _for{}_ loop, just initialize your _faceUV_ array and set only _faceUV[4]_ :  
+Obviously, we aren't not required to set every box face.  
+Imagine we want to set only the face 4.  
+Forget about the _for{}_ loop, just initialize our _faceUV_ array and set only _faceUV[4]_ :  
 ```javascript
   var faceUV = new Array(6);
   faceUV[4] = new BABYLON.Vector4(0, 0, 1 / hSpriteNb, 1 / vSpriteNb);
 ```
-Two lines of code only and that's all : http://www.babylonjs-playground.com/#1V3CAT#4  
+Only two lines of code only and that's all : http://www.babylonjs-playground.com/#1V3CAT#4  
 <br/>
 <br/>
-You could also want to apply two different images from the same texture file onto two different meshes.  
+We could also want to apply two different images from the same texture file onto two different meshes.  
 Nothing easier : http://www.babylonjs-playground.com/#1V3CAT#9   
 Two boxes, two images, but only one texture !
 <br/>
@@ -100,14 +100,14 @@ Two boxes, two images, but only one texture !
 
 Let's go back to our initial rectangular box : http://www.babylonjs-playground.com/#1V3CAT  
 We are about to apply the same principle here not with textures, but with colors.  
-Let's define a 6 element array _faceColors_ (as for 6 box faces) and just set the color of the faces we want with _Colors4_  
+Let's define a 6 element array _faceColors_ (6 box faces) and just set the color of the faces we want with _Colors4_.  
 ```javascript
   var faceColors = new Array(6);
 
   faceColors[4] = new BABYLON.Color4(1,0,0,1);   // red top
   faceColors[1] = new BABYLON.Color4(0,1,0,1);   // green front
 ```
-then pass this array to the _CreateBox_ method with the new faceColors parameter of _options_  
+Then pass this array to the _CreateBox_ method with the new faceColors parameter of _options_  
 ```javascript
   var options = {
     width: 10,
@@ -118,13 +118,13 @@ then pass this array to the _CreateBox_ method with the new faceColors parameter
 
   var box = BABYLON.Mesh.CreateBox('box', options, scene);
 ```
-simple, isn't it ?  http://www.babylonjs-playground.com/#1V3CAT#5  
+Simple, isn't it ?  http://www.babylonjs-playground.com/#1V3CAT#5  
 
-Colors are BJS vertex color4, this mean you can give an alpha if you enable the _hasVertexAlpha_ mesh property : http://www.babylonjs-playground.com/#1V3CAT#6  
+These colors are BJS Color4-class values. The Color4 alpha values become active if we set _hasVertexAlpha = true_ : http://www.babylonjs-playground.com/#1V3CAT#6  
 
-You can even combine the vertex colors with a colored material, blue here :  http://www.babylonjs-playground.com/#1V3CAT#7  
+We can even combine the vertex colors with a colored material, blue here :  http://www.babylonjs-playground.com/#1V3CAT#7  
 
-And finally you can of course mix the face colors with the per-face texture feature (and the material color) :  
+And finally we can also mix per-face colors with per-face textures, and/or mix either of those... with the material's standard colors. :  
 ```javascript
   var options = {
     width: 10,
@@ -136,5 +136,5 @@ And finally you can of course mix the face colors with the per-face texture feat
 ```
 Enjoy : http://www.babylonjs-playground.com/#1V3CAT#8  
 
-No need submaterials or submeshes for so simple things !
+No need for submaterials or submeshes, when seeking such simple things as box-side materials.
 

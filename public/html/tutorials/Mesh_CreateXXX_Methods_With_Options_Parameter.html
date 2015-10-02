@@ -1,0 +1,381 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><a href="/">Babylon.js | DOCUMENTATION</a></div><div id="whatsnew" class="item"><a href="/whats-new">What's new</a></div><div id="general" class="item"><a href="/generals">General</a></div><div id="tutorials" class="item active"><a href="/tutorials">Tutorials</a></div><div id="exporters" class="item"><a href="/exporters">Exporters</a></div><div id="extensions" class="item"><a href="/extensions">Extensions</a></div><div id="classes" class="item"><a href="/classes">Classes</a></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>Mesh CreateXXX Methods With Options Parameter</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
+<li><a href="#fixed-shapes">Fixed Shapes</a><ul>
+<li><a href="#box">Box</a></li>
+<li><a href="#sphere">Sphere</a></li>
+<li><a href="#cylinder">Cylinder</a></li>
+<li><a href="#plane">Plane</a></li>
+<li><a href="#ground">Ground</a></li>
+<li><a href="#disc">Disc</a></li>
+<li><a href="#torus">Torus</a></li>
+<li><a href="#torus-knot">Torus Knot</a></li>
+</ul>
+</li>
+<li><a href="#parametric-shapes">Parametric Shapes</a><ul>
+<li><a href="#lines">Lines</a></li>
+<li><a href="#dashed-lines">Dashed Lines</a></li>
+</ul>
+</li>
+</ul>
+</div></div><div id="staticContent"><h2><a name="mesh-createxxx-methods-with-options-parameter" class="anchor" href="#mesh-createxxx-methods-with-options-parameter"></a>Mesh CreateXXX() Methods With Options Parameter</h2><p>In this tutorial, we will learn how to use the classical Mesh <em>CreateXXX()</em> methods with the <em>options</em> parameter instead of the full list of parameters.<br>Indeed, as for BJS 2.3+, all the <em>CreateXXX()</em> methods can be called either by </p>
+<pre><code class="lang-javascript">var mesh = BABYLON.CreateMesh(name, param1, param2, param3, ..., scene);
+</code></pre>
+<p>either by</p>
+<pre><code class="lang-javascript">var mesh = BABYLON.CreateMesh(name, {param1 : val1, param2: val2}, scene);
+</code></pre>
+<p>Why to use then the <em>options</em> parameter if it only does the same as the parameter list ?</p>
+<p>Because it doesn&#39;t do just only the same ...<br>Depending on the shape type, it allows to make some (or all) parameters optional or it provides more features to the created mesh.  </p>
+<h3><a name="fixed-shapes" class="anchor" href="#fixed-shapes"></a>Fixed Shapes</h3><p>We call <em>fixed shapes</em> all the mesh types that are not parametric, it is to say all the mesh types what have an expected final shape.<br>For instance, if we create a <em>Sphere</em> or a <em>Box</em> mesh, we expect to get a spherical or a cubic shape whereas if we create a <em>Ribbon</em> mesh, as it depends upon a data set to be created (the <em>pathArray</em>), we can&#39;t predict its final shape.  </p>
+<p>All fixed shapes can be created by default by using a blank <em>options</em> parameter :</p>
+<pre><code class="lang-javascript">var cylinder = BABYLON.Mesh.CreateCylinder(&quot;cyl&quot;, {}, scene);
+</code></pre>
+<p>This means all the <em>options</em> properties are simply optional.  </p>
+<h4><a name="box" class="anchor" href="#box"></a>Box</h4><p>Example :</p>
+<pre><code class="lang-javascript">var box = BABYLON.Mesh.CreateBox(&quot;box&quot;, {height: 5, faceColors: myColors}, scene);
+</code></pre>
+<p>Properties, all optional :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td><em>(number)</em> size of each box side</td>
+</tr>
+<tr>
+<td>height</td>
+<td><em>(number)</em> height size, overwrites <em>size</em> property</td>
+</tr>
+<tr>
+<td>width</td>
+<td><em>(number)</em> width size, overwrites <em>size</em> property</td>
+</tr>
+<tr>
+<td>length</td>
+<td><em>(number)</em> length size,  overwrites <em>size</em> property </td>
+</tr>
+<tr>
+<td>faceColors</td>
+<td><em>(Color4[])</em> array of 6 <em>Color4</em>, one per box face</td>
+</tr>
+<tr>
+<td>faceUV</td>
+<td><em>(Vector4[])</em> array of 6 <em>Vector4</em>, one per box face</td>
+</tr>
+<tr>
+<td>sideOrientation</td>
+<td><em>(number)</em> side orientation</td>
+</tr>
+</tbody>
+</table>
+<h4><a name="sphere" class="anchor" href="#sphere"></a>Sphere</h4><p>Example :</p>
+<pre><code class="lang-javascript">var sphere = BABYLON.Mesh.CreateSphere(&quot;sphere&quot;, {diameter: 2, diameterX: 3}, scene);
+</code></pre>
+<p>Properties, all optional :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>segments</td>
+<td><em>(number)</em> number of horizontal segments</td>
+</tr>
+<tr>
+<td>diameter</td>
+<td><em>(number)</em> diameter of the sphere</td>
+</tr>
+<tr>
+<td>diameterX</td>
+<td><em>(number)</em> diameter on X axis, overwrites <em>diameter</em> property</td>
+</tr>
+<tr>
+<td>diameterY</td>
+<td><em>(number)</em> diameter on Y axis, overwrites <em>diameter</em> property</td>
+</tr>
+<tr>
+<td>diameterZ</td>
+<td><em>(number)</em> diameter on Z axis, overwrites <em>diameter</em> property</td>
+</tr>
+<tr>
+<td>sideOrientation</td>
+<td><em>(number)</em> side orientation</td>
+</tr>
+</tbody>
+</table>
+<h4><a name="cylinder" class="anchor" href="#cylinder"></a>Cylinder</h4><p>Example :</p>
+<pre><code class="lang-javascript">var cylinder = BABYLON.Mesh.CreateCylinder(&quot;cyl&quot;, {diameterBottom: 0, tessellation: 4}, scene);
+</code></pre>
+<p>Properties, all optional :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>height</td>
+<td><em>(number)</em> height of the cylinder</td>
+</tr>
+<tr>
+<td>diameterTop</td>
+<td><em>(number)</em> diameter of the top cap, can be zero</td>
+</tr>
+<tr>
+<td>diameterBottom</td>
+<td><em>(number)</em> diameter of the bottom cap, can&#39;t be zero</td>
+</tr>
+<tr>
+<td>tessellation</td>
+<td><em>(number)</em> number of radial sides</td>
+</tr>
+<tr>
+<td>subdivisions</td>
+<td><em>(number)</em> number of rings</td>
+</tr>
+<tr>
+<td>sideOrientation</td>
+<td><em>(number)</em> side orientation</td>
+</tr>
+</tbody>
+</table>
+<h4><a name="plane" class="anchor" href="#plane"></a>Plane</h4><p>Example :</p>
+<pre><code class="lang-javascript">var plane = BABYLON.Mesh.CreatePlane(&quot;plane&quot;, {width: 5}, scene);
+</code></pre>
+<p>Properties, all optional :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td><em>(number)</em> side size of the plane</td>
+</tr>
+<tr>
+<td>width</td>
+<td><em>(number)</em> size of the width</td>
+</tr>
+<tr>
+<td>height</td>
+<td><em>(number)</em> size of the height</td>
+</tr>
+<tr>
+<td>sideOrientation</td>
+<td><em>(number)</em> side orientation</td>
+</tr>
+</tbody>
+</table>
+<h4><a name="ground" class="anchor" href="#ground"></a>Ground</h4><p>Example :</p>
+<pre><code class="lang-javascript">var ground = BABYLON.Mesh.CreateGround(&quot;gd&quot;, {width: 6, subdivsions: 4}, scene);
+</code></pre>
+<p>Properties, all optional :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td><em>(number)</em> size of the width</td>
+</tr>
+<tr>
+<td>height</td>
+<td><em>(number)</em> size of the height</td>
+</tr>
+<tr>
+<td>subdivisions</td>
+<td><em>(number)</em> number of square subdivisions</td>
+</tr>
+</tbody>
+</table>
+<h4><a name="disc" class="anchor" href="#disc"></a>Disc</h4><p>Remembe you can create any kind of regular plane polygon with <em>CreateDisc()</em><br>Example :  </p>
+<pre><code class="lang-javascript">var disc = BABYLON.Mesh.CreateDisc(&quot;disc&quot;, {tessellation: 3}, scene); // makes a triangle
+</code></pre>
+<p>Properties, all optional :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>radius</td>
+<td><em>(number)</em> the radius of the disc or polygon</td>
+</tr>
+<tr>
+<td>tessellation</td>
+<td><em>(number)</em> the number of disc/polygon sides</td>
+</tr>
+<tr>
+<td>sideOrientation</td>
+<td><em>(number)</em> side orientation</td>
+</tr>
+</tbody>
+</table>
+<h4><a name="torus" class="anchor" href="#torus"></a>Torus</h4><p>Example :</p>
+<pre><code class="lang-javascript">var torus = BABYLON.Mesh.CreateTorus(&quot;torus&quot;, {thickness: 0.2}, scene);
+</code></pre>
+<p>Properties, all optional :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>diameter</td>
+<td><em>(number)</em> diameter of the torus</td>
+</tr>
+<tr>
+<td>thickness</td>
+<td><em>(number)</em> thickness of its tube</td>
+</tr>
+<tr>
+<td>tessellation</td>
+<td><em>(number)</em> number of segments along the circle</td>
+</tr>
+<tr>
+<td>sideOrientation</td>
+<td><em>(number)</em> side orientation</td>
+</tr>
+</tbody>
+</table>
+<h4><a name="torus-knot" class="anchor" href="#torus-knot"></a>Torus Knot</h4><p>Example :</p>
+<pre><code class="lang-javascript">var torus = BABYLON.Mesh.CreateTorusKnot(&quot;tk&quot;, {}, scene);
+</code></pre>
+<p>Properties, all optional :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>radius</td>
+<td><em>(number)</em> radius of the torus knot</td>
+</tr>
+<tr>
+<td>tube</td>
+<td><em>(number)</em> thickness of its tube</td>
+</tr>
+<tr>
+<td>radialSegments</td>
+<td><em>(number)</em> number of radial segments</td>
+</tr>
+<tr>
+<td>tubularSegments</td>
+<td><em>(number)</em> number of tubular segments</td>
+</tr>
+<tr>
+<td>p</td>
+<td><em>(number)</em> number of windings</td>
+</tr>
+<tr>
+<td>q</td>
+<td><em>(number)</em> number of windings</td>
+</tr>
+<tr>
+<td>sideOrientation</td>
+<td><em>(number)</em> side orientation</td>
+</tr>
+</tbody>
+</table>
+<h3><a name="parametric-shapes" class="anchor" href="#parametric-shapes"></a>Parametric Shapes</h3><h4><a name="lines" class="anchor" href="#lines"></a>Lines</h4><p>You must set at least the <em>points</em> property.  </p>
+<p>Example :</p>
+<pre><code class="lang-javascript">lines = BABYLON.Mesh.CreateLines(&quot;lines&quot;, {points: myArray, instance: lines});
+// updates the existing instance of lines : doesn&#39;t even need the parameter scene
+</code></pre>
+<p>Properties :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>points</td>
+<td><em>(Vector3[])</em>  array of Vector3, the path of the line <strong>REQUIRED</strong>  </td>
+</tr>
+<tr>
+<td>instance</td>
+<td><em>(LineMesh)</em> an instance of a line mesh to be updated</td>
+</tr>
+</tbody>
+</table>
+<h4><a name="dashed-lines" class="anchor" href="#dashed-lines"></a>Dashed Lines</h4><p>You must set at least the <em>points</em> property.  </p>
+<p>Example :</p>
+<pre><code class="lang-javascript">dashedLines = BABYLON.Mesh.CreateDashedLines(&quot;dl&quot;, {points: myArray, instance: dashedLines});
+// updates the existing instance of dashedLines : doesn&#39;t even need the parameter scene
+</code></pre>
+<p>Properties :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>points</td>
+<td><em>(Vector3[])</em>  array of Vector3, the path of the line <strong>REQUIRED</strong> </td>
+</tr>
+<tr>
+<td>dashSize</td>
+<td><em>(number)</em>  size of the dashes</td>
+</tr>
+<tr>
+<td>gapSize</td>
+<td><em>(number)</em>  size of the gaps</td>
+</tr>
+<tr>
+<td>dashBn</td>
+<td><em>(number)</em>  intended number of dashes</td>
+</tr>
+<tr>
+<td>instance</td>
+<td><em>(LineMesh)</em> an instance of a line mesh to be updated</td>
+</tr>
+</tbody>
+</table>
+<p><em>edition in progress</em></p>
+</div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>    Github</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Documentation" target="_blank"><i class="fa fa-code-fork"></i>    Contribute</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><script>(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            };
+    i[r].l = 1 * new Date();
+    a = s.createElement(o);
+    m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+ga('create', 'UA-66146410-1', 'auto');
+ga('send', 'pageview');</script><!-- HIGHLIGHT JS--><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/languages/javascript.min.js"></script><script src="/js/static.js"></script><script>$('code').each(function(){
+    $(this).text($(this).text().replace(/&nbsp;/gi, ''));
+});
+hljs.initHighlightingOnLoad();</script></body></html>

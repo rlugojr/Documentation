@@ -39,6 +39,7 @@ width|_(number)_ width size, overwrites _size_ property
 length|_(number)_ length size,  overwrites _size_ property 
 faceColors|_(Color4[])_ array of 6 _Color4_, one per box face
 faceUV|_(Vector4[])_ array of 6 _Vector4_, one per box face
+updatable|_(boolean)_ true if the mesh is updatable
 sideOrientation|_(number)_ side orientation
 
 ####Sphere
@@ -55,6 +56,7 @@ diameter|_(number)_ diameter of the sphere
 diameterX|_(number)_ diameter on X axis, overwrites _diameter_ property
 diameterY|_(number)_ diameter on Y axis, overwrites _diameter_ property
 diameterZ|_(number)_ diameter on Z axis, overwrites _diameter_ property
+updatable|_(boolean)_ true if the mesh is updatable
 sideOrientation|_(number)_ side orientation
 
 ####Cylinder
@@ -71,6 +73,7 @@ diameterTop|_(number)_ diameter of the top cap, can be zero
 diameterBottom|_(number)_ diameter of the bottom cap, can't be zero
 tessellation|_(number)_ number of radial sides
 subdivisions|_(number)_ number of rings
+updatable|_(boolean)_ true if the mesh is updatable
 sideOrientation|_(number)_ side orientation
 
 ####Plane
@@ -85,6 +88,7 @@ property|value
 size|_(number)_ side size of the plane
 width|_(number)_ size of the width
 height|_(number)_ size of the height
+updatable|_(boolean)_ true if the mesh is updatable
 sideOrientation|_(number)_ side orientation
 
 ####Ground
@@ -98,6 +102,7 @@ property|value
 --------|-----
 width|_(number)_ size of the width
 height|_(number)_ size of the height
+updatable|_(boolean)_ true if the mesh is updatable
 subdivisions|_(number)_ number of square subdivisions
 
 ####Disc
@@ -112,6 +117,7 @@ property|value
 --------|-----
 radius|_(number)_ the radius of the disc or polygon
 tessellation|_(number)_ the number of disc/polygon sides
+updatable|_(boolean)_ true if the mesh is updatable
 sideOrientation|_(number)_ side orientation
 
 ####Torus
@@ -126,6 +132,7 @@ property|value
 diameter|_(number)_ diameter of the torus
 thickness|_(number)_ thickness of its tube
 tessellation|_(number)_ number of segments along the circle
+updatable|_(boolean)_ true if the mesh is updatable
 sideOrientation|_(number)_ side orientation
 
 ####Torus Knot
@@ -143,6 +150,7 @@ radialSegments|_(number)_ number of radial segments
 tubularSegments|_(number)_ number of tubular segments
 p|_(number)_ number of windings
 q|_(number)_ number of windings
+updatable|_(boolean)_ true if the mesh is updatable
 sideOrientation|_(number)_ side orientation
 
 ###Parametric Shapes
@@ -152,13 +160,14 @@ You must set at least the _points_ property.
 Example :
 ```javascript
 lines = BABYLON.Mesh.CreateLines("lines", {points: myArray, instance: lines});
-// updates the existing instance of lines : doesn't even need the parameter scene
+// updates the existing instance of lines : no need for the parameter scene here
 ```
 Properties :
 
 property|value
 --------|-----
-points|_(Vector3[])_  array of Vector3, the path of the line **REQUIRED**  
+points|_(Vector3[])_  array of Vector3, the path of the line **REQUIRED** 
+updatable|_(boolean)_ true if the mesh is updatable
 instance|_(LineMesh)_ an instance of a line mesh to be updated
 
 ####Dashed Lines
@@ -167,7 +176,7 @@ You must set at least the _points_ property.
 Example :
 ```javascript
 dashedLines = BABYLON.Mesh.CreateDashedLines("dl", {points: myArray, instance: dashedLines});
-// updates the existing instance of dashedLines : doesn't even need the parameter scene
+// updates the existing instance of dashedLines : no need for the parameter scene here
 ```
 Properties :
 
@@ -177,6 +186,48 @@ points|_(Vector3[])_  array of Vector3, the path of the line **REQUIRED**
 dashSize|_(number)_  size of the dashes
 gapSize|_(number)_  size of the gaps
 dashBn|_(number)_  intended number of dashes
+updatable|_(boolean)_ true if the mesh is updatable
 instance|_(LineMesh)_ an instance of a line mesh to be updated
+
+####Ribbon
+You must set at least the _pathArray_ property.  
+
+Example :
+```javascript
+ribbon = BABYLON.Mesh.CreateRibbon("ribbon", {pathArray: myPaths, instance: ribbon});
+// updates the existing instance of ribbon : no need for the parameter scene
+```
+Properties :
+
+property|value
+--------|-----
+pathArray|_(Vector3[][])_  array of array of Vector3, the array of paths **REQUIRED** 
+closeArray|_(boolean)_  to force the ribbon to join its last and first paths
+closePath|_(boolean)_  to force each ribbon path to join its last and first points
+offset|_(number)_  used if the pathArray has one path only
+updatable|_(boolean)_ true if the mesh is updatable
+sideOrientation|_(number)_ side orientation
+instance|_(LineMesh)_ an instance of a ribbon to be updated
+
+####Tube
+You must set at least the _path_ property.  
+
+Example :
+```javascript
+tube = BABYLON.Mesh.CreateTube("tube", {path: myPath, instance: tube});
+// updates the existing instance of tube : no need for the parameter scene
+```
+Properties :
+
+property|value
+--------|-----
+path|_(Vector3[])_  array of Vector3, the path of the tube **REQUIRED** 
+radius|_(number)_  the radius of the tube
+tessellation|_(number)_  the number of radial segments
+radiusFunction|_( function(i, distance) )_  a function returning a radius value from _(i, distance)_ parameters
+cap|_(number)_ tube cap : NO_CAP, CAP_START, CAP_END, CAP_ALL
+updatable|_(boolean)_ true if the mesh is updatable
+sideOrientation|_(number)_ side orientation
+instance|_(LineMesh)_ an instance of a ribbon to be updated
 
 _edition in progress_

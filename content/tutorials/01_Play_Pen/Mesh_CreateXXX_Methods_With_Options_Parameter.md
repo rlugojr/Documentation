@@ -31,16 +31,16 @@ var box = BABYLON.Mesh.CreateBox("box", {height: 5, faceColors: myColors}, scene
 ```
 Properties, all optional :
 
-property|value
---------|-----
-size|_(number)_ size of each box side
-height|_(number)_ height size, overwrites _size_ property
-width|_(number)_ width size, overwrites _size_ property
-length|_(number)_ length size,  overwrites _size_ property 
-faceColors|_(Color4[])_ array of 6 _Color4_, one per box face
-faceUV|_(Vector4[])_ array of 6 _Vector4_, one per box face
-updatable|_(boolean)_ true if the mesh is updatable
-sideOrientation|_(number)_ side orientation
+property|value|default value
+--------|-----|------------
+size|_(number)_ size of each box side|1
+height|_(number)_ height size, overwrites _size_ property|size
+width|_(number)_ width size, overwrites _size_ property|size
+length|_(number)_ length size,  overwrites _size_ property|size 
+faceColors|_(Color4[])_ array of 6 _Color4_, one per box face|Color4(1, 1, 1, 1) for each side
+faceUV|_(Vector4[])_ array of 6 _Vector4_, one per box face| UVs(0, 0, 1, 1) for each side
+updatable|_(boolean)_ true if the mesh is updatable|false
+sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
 ####Sphere
 Example :
@@ -49,15 +49,15 @@ var sphere = BABYLON.Mesh.CreateSphere("sphere", {diameter: 2, diameterX: 3}, sc
 ```
 Properties, all optional :
 
-property|value
---------|-----
-segments|_(number)_ number of horizontal segments
-diameter|_(number)_ diameter of the sphere
-diameterX|_(number)_ diameter on X axis, overwrites _diameter_ property
-diameterY|_(number)_ diameter on Y axis, overwrites _diameter_ property
-diameterZ|_(number)_ diameter on Z axis, overwrites _diameter_ property
-updatable|_(boolean)_ true if the mesh is updatable
-sideOrientation|_(number)_ side orientation
+property|value|default value
+--------|-----|-------------
+segments|_(number)_ number of horizontal segments|32
+diameter|_(number)_ diameter of the sphere|1
+diameterX|_(number)_ diameter on X axis, overwrites _diameter_ property|diameter
+diameterY|_(number)_ diameter on Y axis, overwrites _diameter_ property|diameter
+diameterZ|_(number)_ diameter on Z axis, overwrites _diameter_ property|diameter
+updatable|_(boolean)_ true if the mesh is updatable|false
+sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
 ####Cylinder
 Example :
@@ -66,15 +66,15 @@ var cylinder = BABYLON.Mesh.CreateCylinder("cyl", {diameterBottom: 0, tessellati
 ```
 Properties, all optional :
 
-property|value
---------|-----
-height|_(number)_ height of the cylinder
-diameterTop|_(number)_ diameter of the top cap, can be zero
-diameterBottom|_(number)_ diameter of the bottom cap, can't be zero
-tessellation|_(number)_ number of radial sides
-subdivisions|_(number)_ number of rings
-updatable|_(boolean)_ true if the mesh is updatable
-sideOrientation|_(number)_ side orientation
+property|value|default value
+--------|-----|-------------
+height|_(number)_ height of the cylinder|2
+diameterTop|_(number)_ diameter of the top cap, can be zero|1
+diameterBottom|_(number)_ diameter of the bottom cap, can't be zero|1
+tessellation|_(number)_ number of radial sides|24
+subdivisions|_(number)_ number of rings|1
+updatable|_(boolean)_ true if the mesh is updatable|false
+sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
 ####Plane
 Example :
@@ -83,13 +83,13 @@ var plane = BABYLON.Mesh.CreatePlane("plane", {width: 5}, scene);
 ```
 Properties, all optional :
 
-property|value
---------|-----
-size|_(number)_ side size of the plane
-width|_(number)_ size of the width
-height|_(number)_ size of the height
-updatable|_(boolean)_ true if the mesh is updatable
-sideOrientation|_(number)_ side orientation
+property|value|default value
+--------|-----|-------------
+size|_(number)_ side size of the plane|1
+width|_(number)_ size of the width|size
+height|_(number)_ size of the height|size
+updatable|_(boolean)_ true if the mesh is updatable|false
+sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
 ####Ground
 Example :
@@ -98,12 +98,12 @@ var ground = BABYLON.Mesh.CreateGround("gd", {width: 6, subdivsions: 4}, scene);
 ```
 Properties, all optional :
 
-property|value
---------|-----
-width|_(number)_ size of the width
-height|_(number)_ size of the height
-updatable|_(boolean)_ true if the mesh is updatable
-subdivisions|_(number)_ number of square subdivisions
+property|value|default value
+--------|-----|-------------
+width|_(number)_ size of the width|1
+height|_(number)_ size of the height|1
+updatable|_(boolean)_ true if the mesh is updatable|false
+subdivisions|_(number)_ number of square subdivisions|1
 
 ####Disc
 Remembe you can create any kind of regular plane polygon with _CreateDisc()_  
@@ -113,12 +113,12 @@ var disc = BABYLON.Mesh.CreateDisc("disc", {tessellation: 3}, scene); // makes a
 ```
 Properties, all optional :
 
-property|value
---------|-----
-radius|_(number)_ the radius of the disc or polygon
-tessellation|_(number)_ the number of disc/polygon sides
-updatable|_(boolean)_ true if the mesh is updatable
-sideOrientation|_(number)_ side orientation
+property|value|default value
+--------|-----|-------------
+radius|_(number)_ the radius of the disc or polygon|0.5
+tessellation|_(number)_ the number of disc/polygon sides|64
+updatable|_(boolean)_ true if the mesh is updatable|false
+sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
 ####Torus
 Example :
@@ -127,13 +127,13 @@ var torus = BABYLON.Mesh.CreateTorus("torus", {thickness: 0.2}, scene);
 ```
 Properties, all optional :
 
-property|value
---------|-----
-diameter|_(number)_ diameter of the torus
-thickness|_(number)_ thickness of its tube
-tessellation|_(number)_ number of segments along the circle
-updatable|_(boolean)_ true if the mesh is updatable
-sideOrientation|_(number)_ side orientation
+property|value|default value
+--------|-----|-------------
+diameter|_(number)_ diameter of the torus|1
+thickness|_(number)_ thickness of its tube|0.5
+tessellation|_(number)_ number of segments along the circle|16
+updatable|_(boolean)_ true if the mesh is updatable|false
+sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
 ####Torus Knot
 Example :
@@ -142,16 +142,16 @@ var torus = BABYLON.Mesh.CreateTorusKnot("tk", {}, scene);
 ```
 Properties, all optional :
 
-property|value
---------|-----
-radius|_(number)_ radius of the torus knot
-tube|_(number)_ thickness of its tube
-radialSegments|_(number)_ number of radial segments
-tubularSegments|_(number)_ number of tubular segments
-p|_(number)_ number of windings
-q|_(number)_ number of windings
-updatable|_(boolean)_ true if the mesh is updatable
-sideOrientation|_(number)_ side orientation
+property|value|default value
+--------|-----|-------------
+radius|_(number)_ radius of the torus knot|2
+tube|_(number)_ thickness of its tube|0.5
+radialSegments|_(number)_ number of radial segments|32
+tubularSegments|_(number)_ number of tubular segments|32
+p|_(number)_ number of windings|2
+q|_(number)_ number of windings|3
+updatable|_(boolean)_ true if the mesh is updatable|false
+sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
 ###Parametric Shapes
 ####Lines
@@ -164,11 +164,11 @@ lines = BABYLON.Mesh.CreateLines("lines", {points: myArray, instance: lines});
 ```
 Properties :
 
-property|value
---------|-----
+property|value|default value
+--------|-----|-------------
 points|_(Vector3[])_  array of Vector3, the path of the line **REQUIRED** 
-updatable|_(boolean)_ true if the mesh is updatable
-instance|_(LineMesh)_ an instance of a line mesh to be updated
+updatable|_(boolean)_ true if the mesh is updatable|false
+instance|_(LineMesh)_ an instance of a line mesh to be updated|null
 
 ####Dashed Lines
 You must set at least the _points_ property.  
@@ -180,14 +180,14 @@ dashedLines = BABYLON.Mesh.CreateDashedLines("dl", {points: myArray, instance: d
 ```
 Properties :
 
-property|value
---------|-----
-points|_(Vector3[])_  array of Vector3, the path of the line **REQUIRED** 
-dashSize|_(number)_  size of the dashes
-gapSize|_(number)_  size of the gaps
-dashBn|_(number)_  intended number of dashes
-updatable|_(boolean)_ true if the mesh is updatable
-instance|_(LineMesh)_ an instance of a line mesh to be updated
+property|value|default value
+--------|-----|-------------
+points|_(Vector3[])_  array of Vector3, the path of the line **REQUIRED** |
+dashSize|_(number)_  size of the dashes|3
+gapSize|_(number)_  size of the gaps|1
+dashBn|_(number)_  intended number of dashes|200
+updatable|_(boolean)_ true if the mesh is updatable|false
+instance|_(LineMesh)_ an instance of a line mesh to be updated|null
 
 ####Ribbon
 You must set at least the _pathArray_ property.  
@@ -199,15 +199,15 @@ ribbon = BABYLON.Mesh.CreateRibbon("ribbon", {pathArray: myPaths, instance: ribb
 ```
 Properties :
 
-property|value
---------|-----
+property|value|default value
+--------|-----|-------------
 pathArray|_(Vector3[][])_  array of array of Vector3, the array of paths **REQUIRED** 
-closeArray|_(boolean)_  to force the ribbon to join its last and first paths
-closePath|_(boolean)_  to force each ribbon path to join its last and first points
-offset|_(number)_  used if the pathArray has one path only
-updatable|_(boolean)_ true if the mesh is updatable
-sideOrientation|_(number)_ side orientation
-instance|_(LineMesh)_ an instance of a ribbon to be updated
+closeArray|_(boolean)_  to force the ribbon to join its last and first paths|false
+closePath|_(boolean)_  to force each ribbon path to join its last and first points|false
+offset|_(number)_  used if the pathArray has one path only|half the path length
+updatable|_(boolean)_ true if the mesh is updatable|false
+sideOrientation|_(number)_ side orientation|DEFAULTSIDE
+instance|_(LineMesh)_ an instance of a ribbon to be updated|null
 
 ####Tube
 You must set at least the _path_ property.  
@@ -219,15 +219,59 @@ tube = BABYLON.Mesh.CreateTube("tube", {path: myPath, instance: tube});
 ```
 Properties :
 
-property|value
---------|-----
-path|_(Vector3[])_  array of Vector3, the path of the tube **REQUIRED** 
-radius|_(number)_  the radius of the tube
-tessellation|_(number)_  the number of radial segments
-radiusFunction|_( function(i, distance) )_  a function returning a radius value from _(i, distance)_ parameters
-cap|_(number)_ tube cap : NO_CAP, CAP_START, CAP_END, CAP_ALL
-updatable|_(boolean)_ true if the mesh is updatable
-sideOrientation|_(number)_ side orientation
-instance|_(LineMesh)_ an instance of a ribbon to be updated
+property|value|default value
+--------|-----|-------------
+path|_(Vector3[])_  array of Vector3, the path of the tube **REQUIRED** |
+radius|_(number)_  the radius of the tube|1
+tessellation|_(number)_  the number of radial segments|64
+radiusFunction|_( function(i, distance) )_  a function returning a radius value from _(i, distance)_ parameters|null
+cap|_(number)_ tube cap : NO_CAP, CAP_START, CAP_END, CAP_ALL|NO_CAP
+updatable|_(boolean)_ true if the mesh is updatable|false
+sideOrientation|_(number)_ side orientation|DEFAULTSIDE
+instance|_(LineMesh)_ an instance of a tube to be updated|null
+
+####Extruded Shapes
+You must set at least the _shape_ and _path_ properties
+
+Example :
+```javascript
+extruded = BABYLON.Mesh.ExtrudeShape("ext", {shape: myShape, path: myPath, scale: newScale, rotation: newRotation instance: extruded});
+// updates the existing instance of extruded : no need for the parameter scene
+```
+Properties :
+
+property|value|default value
+--------|-----|-------------
+shape|_(Vector3[])_  array of Vector3, the shape you want to extrude **REQUIRED** |
+path|_(Vector3[])_  array of Vector3, the extrusion axis **REQUIRED** |
+scale|_(number)_  the value to scale the shape|1
+rotation|_(number)_  the value to rotate the shape each step along the path|0
+cap|_(number)_ extrusion cap : NO_CAP, CAP_START, CAP_END, CAP_ALL|NO_CAP
+updatable|_(boolean)_ true if the mesh is updatable|false
+sideOrientation|_(number)_ side orientation|DEFAULTSIDE
+instance|_(LineMesh)_ an instance of an extruded shape to be updated|null
+
+####Custom Extruded Shapes
+You must set at least the _shape_ and _path_ properties
+
+Example :
+```javascript
+extruded = BABYLON.Mesh.ExtrudeShapeCustom("ext", {shape: myShape, path: myPath, scaleFunction: myScaleF, rotation: myRotF instance: extruded});
+// updates the existing instance of extruded : no need for the parameter scene
+```
+Properties :
+
+property|value|default value
+--------|-----|-------------
+shape|_(Vector3[])_  array of Vector3, the shape you want to extrude **REQUIRED**| 
+path|_(Vector3[])_  array of Vector3, the extrusion axis **REQUIRED** |
+scaleFunction|_( function(i, distance) )_  a function returning a scale value from _(i, distance)_ parameters|{return 1;}
+rotationFunction|_( function(i, distance) )_  a function returning a rotation value from _(i, distance)_ parameters|{return 0;}
+ribbonClosePath|_(boolean)_ the underlying ribbon _closePath_ parameter value|false
+ribbonCloseArray|_(boolean)_ the underlying ribbon _closeArray_ parameter value|false
+cap|_(number)_ extrusion cap : NO_CAP, CAP_START, CAP_END, CAP_ALL|NO_CAP
+updatable|_(boolean)_ true if the mesh is updatable|false
+sideOrientation|_(number)_ side orientation|DEFAULTSIDE
+instance|_(LineMesh)_ an instance of an extruded shape to be updated|null
 
 _edition in progress_

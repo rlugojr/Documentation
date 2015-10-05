@@ -315,6 +315,10 @@
         {
           "title": "How to use Blend Modes",
           "filename": "How_to_use_Blend_Modes"
+        },
+        {
+          "title": "How to use Reflection Probes",
+          "filename": "How_to_use_Reflection_probes"
         }
       ]
     },

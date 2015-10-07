@@ -18,7 +18,7 @@ class [RenderTargetTexture](/classes/2.2/RenderTargetTexture) extends [Texture](
 ##new [RenderTargetTexture](/classes/2.2/RenderTargetTexture)(name, size, scene, generateMipMaps, doNotChangeAspectRatio, type)
 
 Create a new [MirrorTexture](/classes/2.2/MirrorTexture).
-A tutorial about advanced texturing can be found here : https://github.com/BabylonJS/Babylon.js/wiki/14-Advanced-Texturing
+A tutorial about advanced texturing can be found here : http://doc.babylonjs.com/tutorials/01._Advanced_Texturing
 
 ####Parameters
  | Name | Type | Description

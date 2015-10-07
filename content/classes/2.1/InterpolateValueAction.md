@@ -10,7 +10,7 @@ This action creates an animation to interpolate the current value of a property 
 
 The supported types are: Float, [Color3](/classes/Color3), [Vector3](/classes/Vector3), [Matrix](/classes/Matrix) and [Quaternion](/classes/Quaternion)
 
-https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-Actions
+http://doc.babylonjs.com/tutorials/How_to_use_Actions
 
 http://www.babylonjs-playground.com/?17
 ##new [InterpolateValueAction](/classes/InterpolateValueAction)(triggerOptions, target, propertyPath, value, duration, condition, stopOtherAnimations)

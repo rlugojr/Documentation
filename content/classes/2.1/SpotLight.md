@@ -11,7 +11,7 @@ A spot light is defined by a position, a direction, an angle and an exponent.
 
 These values define a cone of light starting from the position toward the direction.
 
-A tutorial about lights can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/06-Lights)
+A tutorial about lights can be found [here](http://doc.babylonjs.com/tutorials/06._Lights)
 ##new [SpotLight](/classes/SpotLight)(name, position, direction, angle, exponent, scene)
 
 

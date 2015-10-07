@@ -15,7 +15,7 @@ TAGS:
 
 Create a new free camera.
 You can move around the world with mouse and keyboard
-A tutorial about [FreeCamera](/classes/FreeCamera) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+A tutorial about [FreeCamera](/classes/FreeCamera) can be found [here](http://doc.babylonjs.com/tutorials/05._Cameras)
 
 
 

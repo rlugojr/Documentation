@@ -10,7 +10,7 @@ Postprocesses allow you to create 2D effects on top of your scene.
 
 A postprocess is linked to a camera and can be part of a chain of postprocesss where each postprocess use the result of the previous one as input for its own processing.
 
-A tutorial about post process can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-postprocesses)
+A tutorial about post process can be found [here](http://doc.babylonjs.com/tutorials/How_to_use_PostProcesses)
 ##new [PostProcess](/classes/PostProcess)(name, fragmentUrl, parameters, samplers, ratio, camera, samplingMode, engine, reusable, defines)
 
 

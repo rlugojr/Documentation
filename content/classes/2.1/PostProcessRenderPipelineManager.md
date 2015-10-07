@@ -8,7 +8,7 @@ TAGS:
 
 Managing all pipelines, allow you to enable or disable an effect, displaying a pass of post process for debugging.
 
-A tutorial about the render pipeline can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-PostProcessRenderPipeline)
+A tutorial about the render pipeline can be found [here](http://doc.babylonjs.com/tutorials/How_to_use_PostProcessRenderPipeline)
 ##new [PostProcessRenderPipelineManager](/classes/PostProcessRenderPipelineManager)()
 
 

@@ -11,7 +11,7 @@ TAGS:
 
 
 Create a new [CubeTexture](/classes/CubeTexture). Used to create a new skybox.
-A tutorial about cube textures  can be found here : https://github.com/BabylonJS/Babylon.js/wiki/15-Environment
+A tutorial about cube textures  can be found here : http://doc.babylonjs.com/tutorials/13._Environment
 
 
 

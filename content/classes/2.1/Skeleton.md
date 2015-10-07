@@ -10,7 +10,7 @@ PG_VERSION: 2.1
 
 A skeleton (BABYLON.Skeleton) contains a hierarchy of bones (BABYLON.Bone).
 All bones can be found into the skeleton.bones array.
-A tutorial about Bones and Skeletons ban be found [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-bones-and-skeletons)
+A tutorial about Bones and Skeletons ban be found [here](http://doc.babylonjs.com/tutorials/How_to_use_Bones_and_Skeletons)
 
 
 

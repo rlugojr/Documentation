@@ -143,7 +143,7 @@ BABYLON.Tags.MatchesQuery(myJSObj4); // true
 <h3><a name="use-in-babylonjs" class="anchor" href="#use-in-babylonjs"></a>Use in babylon.js</h3><p>Since it&#39;s possible to use tags on any javascript object and since meshes are javascript objects, it&#39;s possible to add tags on them and to retrieve them according to a tags query.</p>
 <pre><code class="lang-javascript">var meshes = myScene.getMeshesByTags(&quot;tag1 &amp;&amp; (tag2 || tag4 || !tag5)) || !(!tag1) &amp;&amp; !!!tag5&quot;);
 </code></pre>
-<p>All tags added to meshes, cameras, lights... are saved to the scene files (see <a href="https://github.com/BabylonJS/Babylon.js/wiki/Babylon.js-file-format">.babylon file format</a>) and reloaded from them.</p>
+<p>All tags added to meshes, cameras, lights... are saved to the scene files (see <a href="http://doc.babylonjs.com/generals/File_Format_Map_(.babylon">.babylon file format</a>)) and reloaded from them.</p>
 <h2><a name="what-to-do-with-them" class="anchor" href="#what-to-do-with-them"></a>What to do with them?</h2><p>It&#39;s up to you!</p>
 <p>You can use them to retrieve all the meshes that should be lighted by the light &quot;light1&quot;:</p>
 <pre><code class="lang-javascript">var meshesToLightByLight1 = myScene.getMeshesByTags(&quot;mustBeLightedByLight1&quot;);

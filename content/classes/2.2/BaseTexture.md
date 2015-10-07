@@ -16,7 +16,7 @@ class [BaseTexture](/classes/2.2/BaseTexture)
 ##new [BaseTexture](/classes/2.2/BaseTexture)(scene)
 
 Create a new [BaseTexture](/classes/2.2/BaseTexture);
-A tutorial about materials and textures can be found here : https://github.com/BabylonJS/Babylon.js/wiki/04-Materials
+A tutorial about materials and textures can be found here : http://doc.babylonjs.com/tutorials/04._Materials
 
 ####Parameters
  | Name | Type | Description

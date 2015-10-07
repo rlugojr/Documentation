@@ -11,7 +11,7 @@ TAGS:
 
 
 Actions are a simple way to add interactions in your scenes. An action is launched when its trigger is fired.
-See more [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-Actions)
+See more [here](http://doc.babylonjs.com/tutorials/How_to_use_Actions)
 
 
 

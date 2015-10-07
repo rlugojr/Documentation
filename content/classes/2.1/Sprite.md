@@ -11,7 +11,7 @@ TAGS:
 
 
 Create a new [Sprite](/classes/Sprite).
-A tutorial about sprites can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/08-Sprites)
+A tutorial about sprites can be found [here](http://doc.babylonjs.com/tutorials/08._Sprites)
 
 
 

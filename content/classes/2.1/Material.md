@@ -11,7 +11,7 @@ TAGS:
 
 
 Create a new [Material](/classes/Material).
-Everything to know about material can be found here : https://github.com/BabylonJS/Babylon.js/wiki/04-Materials
+Everything to know about material can be found here : http://doc.babylonjs.com/tutorials/04._Materialss
 And here : http://blogs.msdn.com/b/eternalcoding/archive/2013/07/01/babylon-js-unleash-the-standardmaterial-for-your-babylon-js-game.aspx
 
 

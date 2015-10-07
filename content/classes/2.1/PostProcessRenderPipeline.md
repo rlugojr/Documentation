@@ -11,7 +11,7 @@ Post Process Renders pipelines allow you to create a chain of post processes and
 
 A render pipeline can be managed by enabling and disabling some effects and displaying a specific pass for debugging.
 
-A tutorial about the render pipeline can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-PostProcessRenderPipeline)
+A tutorial about the render pipeline can be found [here](http://doc.babylonjs.com/tutorials/How_to_use_PostProcessRenderPipeline)
 ##new [PostProcessRenderPipeline](/classes/PostProcessRenderPipeline)(engine, name)
 
 

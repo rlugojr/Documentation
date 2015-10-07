@@ -22,4 +22,4 @@ You have to use **TypeScript** to submit a pull request.
 If you want to add a new file, please do the following as well:
 
 - Update gulp's [config.json](https://github.com/BabylonJS/Babylon.js/blob/master/Tools/Gulp/config.json)
-- Update [documentation](http://doc.babylonjs.com/page.php?p=22641)
+- Update [documentation](http://doc.babylonjs.com/generals/Creating_the_Mini-fied_Version)

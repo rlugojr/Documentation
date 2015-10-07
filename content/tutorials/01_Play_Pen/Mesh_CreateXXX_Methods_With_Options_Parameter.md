@@ -105,6 +105,43 @@ height|_(number)_ size of the height|1
 updatable|_(boolean)_ true if the mesh is updatable|false
 subdivisions|_(number)_ number of square subdivisions|1
 
+####Ground From a Height Map
+Example :
+```javascript
+var ground = BABYLON.Mesh.CreateGroundFromHeightMap("gdhm", url, {width: 6, subdivsions: 4}, scene);
+```
+Don't forget the _url_ parameter.  
+
+Properties, all optional :
+
+property|value|default value
+--------|-----|-------------
+width|_(number)_ size of the map width|10
+height|_(number)_ size of the map height|10
+subdivisions|_(number)_ number of map subdivisions|1
+minHeight|_(number)_ minimum altitude|0
+maxHeigth|_(number)_ maximum altitude|1
+onReady|_(function)_ a callback js function that is called and passed the just built mesh|(mesh) => {return;}
+updatable|_(boolean)_ true if the mesh is updatable|false
+
+####Tiled Ground
+Example :
+```javascript
+var tiledGround = BABYLON.Mesh.CreateTiledGround("tgd", {subdivsions: {w:4, h:6} }, scene);
+```
+Properties, all optional :
+
+property|value|default value
+--------|-----|-------------
+xmin|_(number)_ map min x coordinate value|-1
+zmin|_(number)_ map min z coordinate value|-1
+xmax|_(number)_ map max x coordinate value|1
+zmin|_(number)_ map max z coordinate value|1
+subdivisions|_( {w: number, h: number} )_ number of subdivisions (tiles) on the height and the width of the map|{w: 6, h: 6}
+precision|_( {w: number, h: number} )_ number of subdivisions on the height and the width of each tile|{w: 2, h: 2}
+updatable|_(boolean)_ true if the mesh is updatable|false
+
+
 ####Disc
 Remembe you can create any kind of regular plane polygon with _CreateDisc()_  
 Example :  
@@ -153,6 +190,24 @@ q|_(number)_ number of windings|3
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
+####Decals  
+Example :
+```javascript
+var decal = BABYLON.Mesh.CreateDecal("decal", mesh,  {position: myPos}, scene);
+```
+Don't forget the _mesh_ parameter what is the mesh depicting the decal.
+
+Properties, all optional :
+
+property|value|default value
+--------|-----|-------------
+position|_(Vector3)_ position of the decal (World coordinates) | (0, 0, 0)
+normal|_(Vector3)_  the normal of the mesh where the decal is applied onto (World coordinates)|Vector3.Up
+size|_(Vector3)_  the x, y, z sizes of the decal|(1, 1, 1)
+angle|_(number)_ the angle to rotate the decal|0
+  
+<br/>
+<br/>  
 ###Parametric Shapes
 ####Lines
 You must set at least the _points_ property.  
@@ -274,4 +329,27 @@ updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 instance|_(LineMesh)_ an instance of an extruded shape to be updated|null
 
+####Lathe  
+You must set at least the _shape_ property.
+
+Example :
+```javascript
+var lathe = BABYLON.Mesh.Lathe("lathe", {shape: myShape}, scene);
+```
+Properties :
+
+property|value|default value
+--------|-----|-------------
+shape|_(Vector3[])_  array of Vector3, the shape you want to turn **REQUIRED** |
+radius|_(number)_  the value to radius of the lathe|1
+tessellation|_(number)_  the number of iteration around the lathe|64
+updatable|_(boolean)_ true if the mesh is updatable|false
+sideOrientation|_(number)_ side orientation|DEFAULTSIDE
+
+
+
+
+<br/>
+<br/>
+  
 _edition in progress_

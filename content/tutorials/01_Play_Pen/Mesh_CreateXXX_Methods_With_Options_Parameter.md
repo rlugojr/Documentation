@@ -189,6 +189,22 @@ p|_(number)_ number of windings|2
 q|_(number)_ number of windings|3
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
+
+####Decals  
+Example :
+```javascript
+var decal = BABYLON.Mesh.CreateDecal("decal", mesh,  {position: myPos}, scene);
+```
+Don't forget the _mesh_ parameter what is the mesh depicting the decal.
+
+Properties, all optional :
+
+property|value|default value
+--------|-----|-------------
+position|_(Vector3)_ position of the decal (World coordinates) | (0, 0, 0)
+normal|_(Vector3)_  the normal of the mesh where the decal is applied onto (World coordinates)|Vector3.Up
+size|_(Vector3)_  the x, y, z sizes of the decal|(1, 1, 1)
+angle|_(number)_ the angle to rotate the decal|0
   
 <br/>
 <br/>  
@@ -329,6 +345,9 @@ radius|_(number)_  the value to radius of the lathe|1
 tessellation|_(number)_  the number of iteration around the lathe|64
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
+
+
+
 
 <br/>
 <br/>

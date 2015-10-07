@@ -8,7 +8,7 @@ TAGS:
 
 A render effect is a smart postprocess which can manage its own instances itself.
 
-A tutorial about the render pipeline can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-PostProcessRenderPipeline)
+A tutorial about the render pipeline can be found [here](http://doc.babylonjs.com/tutorials/How_to_use_PostProcessRenderPipeline)
 ##new [PostProcessRenderEffect](/classes/PostProcessRenderEffect)(engine, name, getPostProcess, singleInstance)
 
 

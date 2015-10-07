@@ -11,7 +11,7 @@ TAGS:
 
 
 Create a new [Database](/classes/Database)
-An explanation about how BabylonJs index all its resources can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/Caching-the-resources-in-IndexedDB)
+An explanation about how BabylonJs index all its resources can be found [here](http://doc.babylonjs.com/tutorials/07._Caching_Resources_in_IndexedDB)
 
 
 

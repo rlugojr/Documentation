@@ -14,7 +14,7 @@ A single scene can have many [Action](/classes/Action) Managers to handle predef
 
 
 
-See more about Actions [here](https://github.com/BabylonJS/Babylon.js/wiki/How-to-use-Actions)
+See more about Actions [here](http://doc.babylonjs.com/tutorials/How_to_use_Actions)
 
 
 

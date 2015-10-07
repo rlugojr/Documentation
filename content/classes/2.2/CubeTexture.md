@@ -16,7 +16,7 @@ class [CubeTexture](/classes/2.2/CubeTexture) extends [BaseTexture](/classes/2.2
 ##new [CubeTexture](/classes/2.2/CubeTexture)(rootUrl, scene, extensions, noMipmap)
 
 Create a new [CubeTexture](/classes/2.2/CubeTexture). Used to create a new skybox.
-A tutorial about cube textures  can be found here : https://github.com/BabylonJS/Babylon.js/wiki/15-Environment
+A tutorial about cube textures  can be found here : http://doc.babylonjs.com/tutorials/13._Environment
 
 ####Parameters
  | Name | Type | Description

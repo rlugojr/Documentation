@@ -10,7 +10,7 @@ The animation is based on objects called [Animation](/classes/Animation).
 
 An [Animation](/classes/Animation) is defined by various properties and a collection of keys
 
-A tutorial about Animations ban be found [here](https://github.com/BabylonJS/Babylon.js/wiki/07-Animation)
+A tutorial about Animations ban be found [here](http://doc.babylonjs.com/tutorials/07._Animations)
 ##new [Animation](/classes/Animation)(name, targetProperty, framePerSecond, dataType, loopMode)
 
 

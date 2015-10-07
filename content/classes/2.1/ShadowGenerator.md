@@ -6,7 +6,7 @@ PG_VERSION: 2.1
 
 Shadows are dynamic, they are dynamically generated depending upon a Directionallight.
 
-A tutorial about shadows can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/15-Shadows)
+A tutorial about shadows can be found [here](http://doc.babylonjs.com/tutorials/15._Shadows)
 ##new [ShadowGenerator](/classes/ShadowGenerator)(mapSize, light)
 
 

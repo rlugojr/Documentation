@@ -14,7 +14,7 @@ TAGS:
 
 
 Create a new [TouchCamera](/classes/TouchCamera) (camera controlled by touch with touchscreen)
-A tutorial about [ArcRotateCamera](/classes/ArcRotateCamera) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+A tutorial about [ArcRotateCamera](/classes/ArcRotateCamera) can be found [here](http://doc.babylonjs.com/tutorials/05._Cameras)
 
 
 

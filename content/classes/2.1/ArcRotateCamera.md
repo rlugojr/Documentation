@@ -14,7 +14,7 @@ TAGS:
 
 Create a new [ArcRotateCamera](/classes/ArcRotateCamera).
  [ArcRotateCamera](/classes/ArcRotateCamera) is a camera that rotates around a given pivot. It can be controlled with the mouse or touch events (and it also requires hand.js to work)
-A tutorial about [ArcRotateCamera](/classes/ArcRotateCamera) can be found [here](https://github.com/BabylonJS/Babylon.js/wiki/05-Cameras)
+A tutorial about [ArcRotateCamera](/classes/ArcRotateCamera) can be found [here](http://doc.babylonjs.com/tutorials/05._Cameras)
 
 
 

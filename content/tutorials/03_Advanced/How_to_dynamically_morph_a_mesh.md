@@ -226,7 +226,7 @@ var positionFunction = function(positions) {
 };
 box.updateMeshPositions(positionFunction, true);
 ```
-
+Example : http://www.babylonjs-playground.com/#1UZIZC#6
 
 
 ###More speed : freezeNormals !

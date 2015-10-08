@@ -23,22 +23,22 @@ Please let's have a look from line 27 :
 Line 30, we define a new array called _faceUV_, sized 6 because our box has 6 faces. This array will always content Vector4 elements.  
 Each _Vector4(x, y, z, w)_ will be defined in this way :  
 
-x = Utop  
-y = Vtop  
-z = Ubottom  
-w = Vbottom  
+x = Ubottom  
+y = Vbottom
+z = Utop  
+w = Vtop  
 all are in the range [0, 1]
 
-as _Utop_, _Vtop_ are the 2D coordinates of the top left point of where the texture crop starts and _Ubottom_, _Vbottom_ the bottom right ones of where the texture crop ends.  
+as _Ubottom_, _Vbottom_ are the 2D coordinates of the bottom left point of where the texture crop starts and _Utop_, _Vtop_ the top right ones of where the texture crop ends.  
 Not clear ?  
 
 Let's go back to our sprite atlas : we've got 4 rows of 6 sprites.  
 So if we iterate i from 0 to 5 (so 6 times as 6 box faces) and if we assign  
 ```javascript
-Utop = i / 6
-Vtop = 0
-Ubottom = (i+1) / 6
-Vbottom = 1 / 4
+Ubottom = i / 6
+Vbottom = 0
+Utop = (i+1) / 6
+Vtop = 1 / 4
 ```
 to each array element, we actually set a different sprite from the first horizontal row to each box face in the _faceUV_ array.  
 code :

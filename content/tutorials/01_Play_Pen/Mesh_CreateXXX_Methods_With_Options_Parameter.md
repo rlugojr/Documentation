@@ -56,6 +56,8 @@ diameter|_(number)_ diameter of the sphere|1
 diameterX|_(number)_ diameter on X axis, overwrites _diameter_ property|diameter
 diameterY|_(number)_ diameter on Y axis, overwrites _diameter_ property|diameter
 diameterZ|_(number)_ diameter on Z axis, overwrites _diameter_ property|diameter
+arc|_(number)_ ratio of the circumference (latitude) between 0 and 1|1
+slice|_(number)_ ratio of the height (longitude) between 0 and 1|1
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
@@ -73,6 +75,7 @@ diameterTop|_(number)_ diameter of the top cap, can be zero|1
 diameterBottom|_(number)_ diameter of the bottom cap, can't be zero|1
 tessellation|_(number)_ number of radial sides|24
 subdivisions|_(number)_ number of rings|1
+arc|_(number)_ ratio of the circumference between 0 and 1|1
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
@@ -211,6 +214,7 @@ angle|_(number)_ the angle to rotate the decal|0
 ###Parametric Shapes
 ####Lines
 You must set at least the _points_ property.  
+On update, you must set the _points_ and _instance_ properties.  
 
 Example :
 ```javascript
@@ -227,6 +231,7 @@ instance|_(LineMesh)_ an instance of a line mesh to be updated|null
 
 ####Dashed Lines
 You must set at least the _points_ property.  
+On update, you must set the _points_ and _instance_ properties.  
 
 Example :
 ```javascript
@@ -246,6 +251,7 @@ instance|_(LineMesh)_ an instance of a line mesh to be updated|null
 
 ####Ribbon
 You must set at least the _pathArray_ property.  
+On update, you must set the _pathArray_ and _instance_ properties.  
 
 Example :
 ```javascript
@@ -266,6 +272,7 @@ instance|_(LineMesh)_ an instance of a ribbon to be updated|null
 
 ####Tube
 You must set at least the _path_ property.  
+On update, you must set the _path_ and _instance_ properties and you can set the _radius_, _radiusFunction_ or _arc_ properties.   
 
 Example :
 ```javascript
@@ -281,12 +288,14 @@ radius|_(number)_  the radius of the tube|1
 tessellation|_(number)_  the number of radial segments|64
 radiusFunction|_( function(i, distance) )_  a function returning a radius value from _(i, distance)_ parameters|null
 cap|_(number)_ tube cap : NO_CAP, CAP_START, CAP_END, CAP_ALL|NO_CAP
+arc|_(number)_ ratio of the tube circumference between 0 and 1|1
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 instance|_(LineMesh)_ an instance of a tube to be updated|null
 
 ####Extruded Shapes
-You must set at least the _shape_ and _path_ properties
+You must set at least the _shape_ and _path_ properties.
+On update, you must set the _shape_, _path_ and _instance_ properties and you can set the _scale_ and _rotation_ properties.   
 
 Example :
 ```javascript
@@ -307,11 +316,12 @@ sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 instance|_(LineMesh)_ an instance of an extruded shape to be updated|null
 
 ####Custom Extruded Shapes
-You must set at least the _shape_ and _path_ properties
+You must set at least the _shape_ and _path_ properties.  
+On update, you must set the _shape_, _path_ and _instance_ properties and you can set the _rotationFunction_ or _scaleFunction_ properties.   
 
 Example :
 ```javascript
-extruded = BABYLON.Mesh.ExtrudeShapeCustom("ext", {shape: myShape, path: myPath, scaleFunction: myScaleF, rotation: myRotF instance: extruded});
+extruded = BABYLON.Mesh.ExtrudeShapeCustom("ext", {shape: myShape, path: myPath, scaleFunction: myScaleF, rotationFunction: myRotF instance: extruded});
 // updates the existing instance of extruded : no need for the parameter scene
 ```
 Properties :
@@ -343,6 +353,8 @@ property|value|default value
 shape|_(Vector3[])_  array of Vector3, the shape you want to turn **REQUIRED** |
 radius|_(number)_  the value to radius of the lathe|1
 tessellation|_(number)_  the number of iteration around the lathe|64
+arc|_(number)_ ratio of the circumference between 0 and 1|1
+closed|_(boolean)_ to open/close the lathe, should be set to `false` when used with `arc`|true
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 

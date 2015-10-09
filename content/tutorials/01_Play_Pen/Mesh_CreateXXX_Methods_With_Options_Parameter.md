@@ -75,6 +75,8 @@ diameterTop|_(number)_ diameter of the top cap, can be zero|1
 diameterBottom|_(number)_ diameter of the bottom cap, can't be zero|1
 tessellation|_(number)_ number of radial sides|24
 subdivisions|_(number)_ number of rings|1
+faceColors|_(Color4[])_ array of 3 _Color4_, 0 : bottom cap, 1 : cylinder tube, 2 : top cap|Color4(1, 1, 1, 1) for each face
+faceUV|_(Vector4[])_ array of 3 _Vector4_, 0 : bottom cap, 1 : cylinder tube, 2 : top cap| UVs(0, 0, 1, 1) for each face
 arc|_(number)_ ratio of the circumference between 0 and 1|1
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
@@ -354,7 +356,7 @@ shape|_(Vector3[])_  array of Vector3, the shape you want to turn **REQUIRED** |
 radius|_(number)_  the value to radius of the lathe|1
 tessellation|_(number)_  the number of iteration around the lathe|64
 arc|_(number)_ ratio of the circumference between 0 and 1|1
-closed|_(boolean)_ to open/close the lathe, should be set to `false` when used with `arc`|true
+closed|_(boolean)_ to open/close the lathe circumference, should be set to `false` when used with `arc`|true
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 

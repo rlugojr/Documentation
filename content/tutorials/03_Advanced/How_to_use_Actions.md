@@ -201,7 +201,7 @@ Starting with Babylon.js 2.3, sprites can have an action manager: http://www.bab
 
 Please note that the SpriteManager must turn picking support ON by using `spriteManager.isPickable = true`
 
-Sprites can also control picking with `sprite.isPickable = false / true` (True by default)
+Sprites can also control picking with `sprite.isPickable = false / true` (False by default)
 
 # Playground
 If you want to play with actions, you can try them at our playground:

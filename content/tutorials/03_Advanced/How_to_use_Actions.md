@@ -69,7 +69,6 @@ mesh, "scaling", new BABYLON.Vector3(1.2, 1.2, 1.2)));
 You can as well define if you want to use precise intersections:
 
 ```javascript
-
 mesh.actionManager.registerAction(
 
 new BABYLON.SetValueAction({ trigger: BABYLON.ActionManager.OnIntersectionEnterTrigger, parameter: { mesh:otherMesh, usePreciseIntersection: true} }, 
@@ -104,39 +103,39 @@ Most of the action have a `propertyPath` property. This string defines the path 
 
 * `BABYLON.SwitchBooleanAction`: Used to switch the current value of a boolean property:
 
-`SwitchBooleanAction(trigger, target, propertyPath, condition)`
+    `SwitchBooleanAction(trigger, target, propertyPath, condition)`
 
 * `BABYLON.SetValueAction`: Used to specify a direct value for a property:
 
-`SetValueAction(trigger, target, propertyPath, value, condition)`
+    `SetValueAction(trigger, target, propertyPath, value, condition)`
 
 * `BABYLON.IncrementValueAction`: Add a specified value to a number property:
 
-`IncrementValueAction(trigger, target, propertyPath, value, condition)`
+    `IncrementValueAction(trigger, target, propertyPath, value, condition)`
 
 * `BABYLON.PlayAnimationAction`: Launch an animation on a specified target:
 
-`PlayAnimationAction(trigger, target, from, to, loop, condition)`
+    `PlayAnimationAction(trigger, target, from, to, loop, condition)`
 
 * `BABYLON.StopAnimationAction`: Stop an animation on a specified target:
 
-`StopAnimationAction(trigger, target, condition)`
+    `StopAnimationAction(trigger, target, condition)`
 
 * `BABYLON.DoNothingAction`: Do nothing :)
 
-`DoNothingAction(trigger, condition)`
+    `DoNothingAction(trigger, condition)`
 
 * `BABYLON.CombineAction`: This action is a container. You can use it to execute many actions simultaneously on the same trigger. The children property must be an array of actions:
 
-`CombineAction(trigger, children, condition)`
+    `CombineAction(trigger, children, condition)`
 
 * `BABYLON.ExecuteCodeAction`: Execute your own code when the trigger is raised and the condition is true:
 
-`ExecuteCodeAction(trigger, func, condition)`
+    `ExecuteCodeAction(trigger, func, condition)`
 
 * `BABYLON.SetParentAction`: Used to define the parent of a node (camera, light, mesh):
 
-`SetParentAction(trigger, target, parent, condition)`
+    `SetParentAction(trigger, target, parent, condition)`
 
 * `BABYLON.InterpolateValueAction`: This action creates an animation to interpolate the current value of a property to a given target. The following types are supported:
    * `number`
@@ -144,13 +143,13 @@ Most of the action have a `propertyPath` property. This string defines the path 
    * `BABYLON.Vector3`
    * `BABYLON.Quaternion`
 
-`InterpolateValueAction(trigger, target, propertyPath, value, duration, condition, stopOtherAnimations)`
+    `InterpolateValueAction(trigger, target, propertyPath, value, duration, condition, stopOtherAnimations)`
 
 * `BABYLON.PlaySoundAction` and `BABYLON.StopSoundAction`: The "sound" parameter is the reference of the sound you created using `var sound = new BABYLON.Sound(...)`
 
-`PlaySoundAction(trigger, sound, condition)`
+    `PlaySoundAction(trigger, sound, condition)`
 
-`StopSoundAction(trigger, sound, condition)`
+    `StopSoundAction(trigger, sound, condition)`
 
 # Conditions
 There are three kinds of conditions:
@@ -161,15 +160,15 @@ There are three kinds of conditions:
    * `BABYLON.ValueCondition.IsGreater`
    * `BABYLON.ValueCondition.IsLesser`
 
-`ValueCondition(actionManager, target, propertyPath, value, operator)`
+    `ValueCondition(actionManager, target, propertyPath, value, operator)`
 
 * `BABYLON.PredicateCondition`: This condition uses a predicate to determine its state:
 
-`PredicateCondition(actionManager, predicate)`
+    `PredicateCondition(actionManager, predicate)`
 
 * `BABYLON.StateCondition`: This condition checks the ```state``` property of an object and compares it to given value:
 
-`StateCondition(actionManager, target, value)`
+    `StateCondition(actionManager, target, value)`
 
 # Experimenting actions
 So basically, let's imagine you want to almost hide a mesh when the user touches it.
@@ -196,6 +195,13 @@ You can also chain another action to restore the `mesh.visibility` property to d
 `mesh.actionManager.registerAction(action).then(action2);`
 
 In this case, the first click will hide the button, the following click will restore it, and so on...
+
+# Sprites 
+Starting with Babylon.js 2.3, sprites can have an action manager: http://www.babylonjs-playground.com/#9RUHH#3
+
+Please note that the SpriteManager must turn picking support ON by using `spriteManager.isPickable = true`
+
+Sprites can also control picking with `sprite.isPickable = false / true` (True by default)
 
 # Playground
 If you want to play with actions, you can try them at our playground:

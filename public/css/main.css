@@ -15,6 +15,17 @@ Usable fonts :
 - roboto
 - opensans_regular / opensans_light / opensans_bold
 */
+
+code {  
+  background-color: #F1F1F1;
+  font-family: consolas;
+}
+
+.lang-javascript {
+  background-color: #F1F1F1;
+  font-family: consolas;
+}
+
 h1 {
   font-weight: normal;
   font-family: "Open Sans";
@@ -42,10 +53,7 @@ body {
   font-weight: 300;
   font-family: "Roboto";
   overflow-y: scroll; }
-
-code {
-  font-family: "Inconsolata"; }
-
+  
 .hidden {
   display: none !important; }
 

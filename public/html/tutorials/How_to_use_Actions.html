@@ -4,6 +4,7 @@
 <li><a href="#actions">Actions</a></li>
 <li><a href="#conditions">Conditions</a></li>
 <li><a href="#experimenting-actions">Experimenting actions</a></li>
+<li><a href="#sprites">Sprites</a></li>
 <li><a href="#playground">Playground</a></li>
 </ul>
 </div></div><div id="staticContent"><p>Actions are a simple way to add interactions in your scenes. An action is launched when its trigger is fired.</p>
@@ -50,8 +51,7 @@ new BABYLON.SetValueAction({ trigger: BABYLON.ActionManager.OnIntersectionEnterT
 mesh, &quot;scaling&quot;, new BABYLON.Vector3(1.2, 1.2, 1.2)));
 </code></pre>
 <p>You can as well define if you want to use precise intersections:</p>
-<pre><code class="lang-javascript">
-mesh.actionManager.registerAction(
+<pre><code class="lang-javascript">mesh.actionManager.registerAction(
 
 new BABYLON.SetValueAction({ trigger: BABYLON.ActionManager.OnIntersectionEnterTrigger, parameter: { mesh:otherMesh, usePreciseIntersection: true} }, 
 
@@ -77,75 +77,67 @@ scene.actionManager.registerAction(new BABYLON.ExecuteCodeAction({ trigger: BABY
 </code></pre>
 <h1><a name="actions" class="anchor" href="#actions"></a>Actions</h1><p>Most of the action have a <code>propertyPath</code> property. This string defines the path to the property to affect with the action. You can use direct values like <code>position</code> or <code>diffuse</code>. But you can also provide complex paths like <code>position.x</code></p>
 <ul>
-<li><code>BABYLON.SwitchBooleanAction</code>: Used to switch the current value of a boolean property:</li>
-</ul>
-<p><code>SwitchBooleanAction(trigger, target, propertyPath, condition)</code></p>
+<li><p><code>BABYLON.SwitchBooleanAction</code>: Used to switch the current value of a boolean property:</p>
+<p>  <code>SwitchBooleanAction(trigger, target, propertyPath, condition)</code></p>
+</li>
+<li><p><code>BABYLON.SetValueAction</code>: Used to specify a direct value for a property:</p>
+<p>  <code>SetValueAction(trigger, target, propertyPath, value, condition)</code></p>
+</li>
+<li><p><code>BABYLON.IncrementValueAction</code>: Add a specified value to a number property:</p>
+<p>  <code>IncrementValueAction(trigger, target, propertyPath, value, condition)</code></p>
+</li>
+<li><p><code>BABYLON.PlayAnimationAction</code>: Launch an animation on a specified target:</p>
+<p>  <code>PlayAnimationAction(trigger, target, from, to, loop, condition)</code></p>
+</li>
+<li><p><code>BABYLON.StopAnimationAction</code>: Stop an animation on a specified target:</p>
+<p>  <code>StopAnimationAction(trigger, target, condition)</code></p>
+</li>
+<li><p><code>BABYLON.DoNothingAction</code>: Do nothing :)</p>
+<p>  <code>DoNothingAction(trigger, condition)</code></p>
+</li>
+<li><p><code>BABYLON.CombineAction</code>: This action is a container. You can use it to execute many actions simultaneously on the same trigger. The children property must be an array of actions:</p>
+<p>  <code>CombineAction(trigger, children, condition)</code></p>
+</li>
+<li><p><code>BABYLON.ExecuteCodeAction</code>: Execute your own code when the trigger is raised and the condition is true:</p>
+<p>  <code>ExecuteCodeAction(trigger, func, condition)</code></p>
+</li>
+<li><p><code>BABYLON.SetParentAction</code>: Used to define the parent of a node (camera, light, mesh):</p>
+<p>  <code>SetParentAction(trigger, target, parent, condition)</code></p>
+</li>
+<li><p><code>BABYLON.InterpolateValueAction</code>: This action creates an animation to interpolate the current value of a property to a given target. The following types are supported:</p>
 <ul>
-<li><code>BABYLON.SetValueAction</code>: Used to specify a direct value for a property:</li>
-</ul>
-<p><code>SetValueAction(trigger, target, propertyPath, value, condition)</code></p>
-<ul>
-<li><code>BABYLON.IncrementValueAction</code>: Add a specified value to a number property:</li>
-</ul>
-<p><code>IncrementValueAction(trigger, target, propertyPath, value, condition)</code></p>
-<ul>
-<li><code>BABYLON.PlayAnimationAction</code>: Launch an animation on a specified target:</li>
-</ul>
-<p><code>PlayAnimationAction(trigger, target, from, to, loop, condition)</code></p>
-<ul>
-<li><code>BABYLON.StopAnimationAction</code>: Stop an animation on a specified target:</li>
-</ul>
-<p><code>StopAnimationAction(trigger, target, condition)</code></p>
-<ul>
-<li><code>BABYLON.DoNothingAction</code>: Do nothing :)</li>
-</ul>
-<p><code>DoNothingAction(trigger, condition)</code></p>
-<ul>
-<li><code>BABYLON.CombineAction</code>: This action is a container. You can use it to execute many actions simultaneously on the same trigger. The children property must be an array of actions:</li>
-</ul>
-<p><code>CombineAction(trigger, children, condition)</code></p>
-<ul>
-<li><code>BABYLON.ExecuteCodeAction</code>: Execute your own code when the trigger is raised and the condition is true:</li>
-</ul>
-<p><code>ExecuteCodeAction(trigger, func, condition)</code></p>
-<ul>
-<li><code>BABYLON.SetParentAction</code>: Used to define the parent of a node (camera, light, mesh):</li>
-</ul>
-<p><code>SetParentAction(trigger, target, parent, condition)</code></p>
-<ul>
-<li><code>BABYLON.InterpolateValueAction</code>: This action creates an animation to interpolate the current value of a property to a given target. The following types are supported:<ul>
 <li><code>number</code></li>
 <li><code>BABYLON.Color3</code></li>
 <li><code>BABYLON.Vector3</code></li>
-<li><code>BABYLON.Quaternion</code></li>
-</ul>
+<li><p><code>BABYLON.Quaternion</code></p>
+<p><code>InterpolateValueAction(trigger, target, propertyPath, value, duration, condition, stopOtherAnimations)</code></p>
 </li>
 </ul>
-<p><code>InterpolateValueAction(trigger, target, propertyPath, value, duration, condition, stopOtherAnimations)</code></p>
-<ul>
-<li><code>BABYLON.PlaySoundAction</code> and <code>BABYLON.StopSoundAction</code>: The &quot;sound&quot; parameter is the reference of the sound you created using <code>var sound = new BABYLON.Sound(...)</code></li>
+</li>
+<li><p><code>BABYLON.PlaySoundAction</code> and <code>BABYLON.StopSoundAction</code>: The &quot;sound&quot; parameter is the reference of the sound you created using <code>var sound = new BABYLON.Sound(...)</code></p>
+<p>  <code>PlaySoundAction(trigger, sound, condition)</code></p>
+<p>  <code>StopSoundAction(trigger, sound, condition)</code></p>
+</li>
 </ul>
-<p><code>PlaySoundAction(trigger, sound, condition)</code></p>
-<p><code>StopSoundAction(trigger, sound, condition)</code></p>
 <h1><a name="conditions" class="anchor" href="#conditions"></a>Conditions</h1><p>There are three kinds of conditions:</p>
 <ul>
-<li><code>BABYLON.ValueCondition</code>: This condition is true when a given property is equal / greater / lesser / different from a specific value. The following operands are thus supported:<ul>
+<li><p><code>BABYLON.ValueCondition</code>: This condition is true when a given property is equal / greater / lesser / different from a specific value. The following operands are thus supported:</p>
+<ul>
 <li><code>BABYLON.ValueCondition.IsEqual</code></li>
 <li><code>BABYLON.ValueCondition.IsDifferent</code></li>
 <li><code>BABYLON.ValueCondition.IsGreater</code></li>
-<li><code>BABYLON.ValueCondition.IsLesser</code></li>
-</ul>
+<li><p><code>BABYLON.ValueCondition.IsLesser</code></p>
+<p><code>ValueCondition(actionManager, target, propertyPath, value, operator)</code></p>
 </li>
 </ul>
-<p><code>ValueCondition(actionManager, target, propertyPath, value, operator)</code></p>
-<ul>
-<li><code>BABYLON.PredicateCondition</code>: This condition uses a predicate to determine its state:</li>
+</li>
+<li><p><code>BABYLON.PredicateCondition</code>: This condition uses a predicate to determine its state:</p>
+<p>  <code>PredicateCondition(actionManager, predicate)</code></p>
+</li>
+<li><p><code>BABYLON.StateCondition</code>: This condition checks the <code>state</code> property of an object and compares it to given value:</p>
+<p>  <code>StateCondition(actionManager, target, value)</code></p>
+</li>
 </ul>
-<p><code>PredicateCondition(actionManager, predicate)</code></p>
-<ul>
-<li><code>BABYLON.StateCondition</code>: This condition checks the <code>state</code> property of an object and compares it to given value:</li>
-</ul>
-<p><code>StateCondition(actionManager, target, value)</code></p>
 <h1><a name="experimenting-actions" class="anchor" href="#experimenting-actions"></a>Experimenting actions</h1><p>So basically, let&#39;s imagine you want to almost hide a mesh when the user touches it.
 First of all you have to add a <code>BABYLON.ActionManager</code> on it:</p>
 <p><code>mesh.actionManager = new BABYLON.ActionManager(scene);</code></p>
@@ -159,6 +151,9 @@ First of all you have to add a <code>BABYLON.ActionManager</code> on it:</p>
 <p><code>var action2 = new BABYLON.InterpolateValueAction(BABYLON.ActionManager.OnPickTrigger, mesh, &quot;visibility&quot;, 1.0, 1000);</code></p>
 <p><code>mesh.actionManager.registerAction(action).then(action2);</code></p>
 <p>In this case, the first click will hide the button, the following click will restore it, and so on...</p>
+<h1><a name="sprites" class="anchor" href="#sprites"></a>Sprites</h1><p>Starting with Babylon.js 2.3, sprites can have an action manager: <a href="http://www.babylonjs-playground.com/#9RUHH#3">http://www.babylonjs-playground.com/#9RUHH#3</a></p>
+<p>Please note that the SpriteManager must turn picking support ON by using <code>spriteManager.isPickable = true</code></p>
+<p>Sprites can also control picking with <code>sprite.isPickable = false / true</code> (True by default)</p>
 <h1><a name="playground" class="anchor" href="#playground"></a>Playground</h1><p>If you want to play with actions, you can try them at our playground:
 <a href="http://www.babylonjs.com/playground/?17">http://www.babylonjs.com/playground/?17</a></p>
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>    Github</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Documentation" target="_blank"><i class="fa fa-code-fork"></i>    Contribute</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><script>(function (i, s, o, g, r, a, m) {

@@ -5,9 +5,12 @@
 <li><a href="#cylinder">Cylinder</a></li>
 <li><a href="#plane">Plane</a></li>
 <li><a href="#ground">Ground</a></li>
+<li><a href="#ground-from-a-height-map">Ground From a Height Map</a></li>
+<li><a href="#tiled-ground">Tiled Ground</a></li>
 <li><a href="#disc">Disc</a></li>
 <li><a href="#torus">Torus</a></li>
 <li><a href="#torus-knot">Torus Knot</a></li>
+<li><a href="#decals">Decals</a></li>
 </ul>
 </li>
 <li><a href="#parametric-shapes">Parametric Shapes</a><ul>
@@ -17,6 +20,7 @@
 <li><a href="#tube">Tube</a></li>
 <li><a href="#extruded-shapes">Extruded Shapes</a></li>
 <li><a href="#custom-extruded-shapes">Custom Extruded Shapes</a></li>
+<li><a href="#lathe">Lathe</a></li>
 </ul>
 </li>
 </ul>
@@ -127,6 +131,16 @@
 <td>diameter</td>
 </tr>
 <tr>
+<td>arc</td>
+<td><em>(number)</em> ratio of the circumference (latitude) between 0 and 1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>slice</td>
+<td><em>(number)</em> ratio of the height (longitude) between 0 and 1</td>
+<td>1</td>
+</tr>
+<tr>
 <td>updatable</td>
 <td><em>(boolean)</em> true if the mesh is updatable</td>
 <td>false</td>
@@ -174,6 +188,21 @@
 <tr>
 <td>subdivisions</td>
 <td><em>(number)</em> number of rings</td>
+<td>1</td>
+</tr>
+<tr>
+<td>faceColors</td>
+<td><em>(Color4[])</em> array of 3 <em>Color4</em>, 0 : bottom cap, 1 : cylinder tube, 2 : top cap</td>
+<td>Color4(1, 1, 1, 1) for each face</td>
+</tr>
+<tr>
+<td>faceUV</td>
+<td><em>(Vector4[])</em> array of 3 <em>Vector4</em>, 0 : bottom cap, 1 : cylinder tube, 2 : top cap</td>
+<td>UVs(0, 0, 1, 1) for each face</td>
+</tr>
+<tr>
+<td>arc</td>
+<td><em>(number)</em> ratio of the circumference between 0 and 1</td>
 <td>1</td>
 </tr>
 <tr>
@@ -260,6 +289,107 @@
 <td>subdivisions</td>
 <td><em>(number)</em> number of square subdivisions</td>
 <td>1</td>
+</tr>
+</tbody>
+</table>
+<h4><a name="ground-from-a-height-map" class="anchor" href="#ground-from-a-height-map"></a>Ground From a Height Map</h4><p>Example :</p>
+<pre><code class="lang-javascript">var ground = BABYLON.Mesh.CreateGroundFromHeightMap(&quot;gdhm&quot;, url, {width: 6, subdivsions: 4}, scene);
+</code></pre>
+<p>Don&#39;t forget the <em>url</em> parameter.  </p>
+<p>Properties, all optional :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td><em>(number)</em> size of the map width</td>
+<td>10</td>
+</tr>
+<tr>
+<td>height</td>
+<td><em>(number)</em> size of the map height</td>
+<td>10</td>
+</tr>
+<tr>
+<td>subdivisions</td>
+<td><em>(number)</em> number of map subdivisions</td>
+<td>1</td>
+</tr>
+<tr>
+<td>minHeight</td>
+<td><em>(number)</em> minimum altitude</td>
+<td>0</td>
+</tr>
+<tr>
+<td>maxHeigth</td>
+<td><em>(number)</em> maximum altitude</td>
+<td>1</td>
+</tr>
+<tr>
+<td>onReady</td>
+<td><em>(function)</em> a callback js function that is called and passed the just built mesh</td>
+<td>(mesh) =&gt; {return;}</td>
+</tr>
+<tr>
+<td>updatable</td>
+<td><em>(boolean)</em> true if the mesh is updatable</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<h4><a name="tiled-ground" class="anchor" href="#tiled-ground"></a>Tiled Ground</h4><p>Example :</p>
+<pre><code class="lang-javascript">var tiledGround = BABYLON.Mesh.CreateTiledGround(&quot;tgd&quot;, {subdivsions: {w:4, h:6} }, scene);
+</code></pre>
+<p>Properties, all optional :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>xmin</td>
+<td><em>(number)</em> map min x coordinate value</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>zmin</td>
+<td><em>(number)</em> map min z coordinate value</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>xmax</td>
+<td><em>(number)</em> map max x coordinate value</td>
+<td>1</td>
+</tr>
+<tr>
+<td>zmin</td>
+<td><em>(number)</em> map max z coordinate value</td>
+<td>1</td>
+</tr>
+<tr>
+<td>subdivisions</td>
+<td><em>( {w: number, h: number} )</em> number of subdivisions (tiles) on the height and the width of the map</td>
+<td>{w: 6, h: 6}</td>
+</tr>
+<tr>
+<td>precision</td>
+<td><em>( {w: number, h: number} )</em> number of subdivisions on the height and the width of each tile</td>
+<td>{w: 2, h: 2}</td>
+</tr>
+<tr>
+<td>updatable</td>
+<td><em>(boolean)</em> true if the mesh is updatable</td>
+<td>false</td>
 </tr>
 </tbody>
 </table>
@@ -393,7 +523,45 @@
 </tr>
 </tbody>
 </table>
-<h3><a name="parametric-shapes" class="anchor" href="#parametric-shapes"></a>Parametric Shapes</h3><h4><a name="lines" class="anchor" href="#lines"></a>Lines</h4><p>You must set at least the <em>points</em> property.  </p>
+<h4><a name="decals" class="anchor" href="#decals"></a>Decals</h4><p>Example :</p>
+<pre><code class="lang-javascript">var decal = BABYLON.Mesh.CreateDecal(&quot;decal&quot;, mesh,  {position: myPos}, scene);
+</code></pre>
+<p>Don&#39;t forget the <em>mesh</em> parameter what is the mesh depicting the decal.</p>
+<p>Properties, all optional :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>position</td>
+<td><em>(Vector3)</em> position of the decal (World coordinates)</td>
+<td>(0, 0, 0)</td>
+</tr>
+<tr>
+<td>normal</td>
+<td><em>(Vector3)</em>  the normal of the mesh where the decal is applied onto (World coordinates)</td>
+<td>Vector3.Up</td>
+</tr>
+<tr>
+<td>size</td>
+<td><em>(Vector3)</em>  the x, y, z sizes of the decal</td>
+<td>(1, 1, 1)</td>
+</tr>
+<tr>
+<td>angle</td>
+<td><em>(number)</em> the angle to rotate the decal</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><br/>
+<br/>  </p>
+<h3><a name="parametric-shapes" class="anchor" href="#parametric-shapes"></a>Parametric Shapes</h3><h4><a name="lines" class="anchor" href="#lines"></a>Lines</h4><p>You must set at least the <em>points</em> property.<br>On update, you must set the <em>points</em> and <em>instance</em> properties.  </p>
 <p>Example :</p>
 <pre><code class="lang-javascript">lines = BABYLON.Mesh.CreateLines(&quot;lines&quot;, {points: myArray, instance: lines});
 // updates the existing instance of lines : no need for the parameter scene here
@@ -424,7 +592,7 @@
 </tr>
 </tbody>
 </table>
-<h4><a name="dashed-lines" class="anchor" href="#dashed-lines"></a>Dashed Lines</h4><p>You must set at least the <em>points</em> property.  </p>
+<h4><a name="dashed-lines" class="anchor" href="#dashed-lines"></a>Dashed Lines</h4><p>You must set at least the <em>points</em> property.<br>On update, you must set the <em>points</em> and <em>instance</em> properties.  </p>
 <p>Example :</p>
 <pre><code class="lang-javascript">dashedLines = BABYLON.Mesh.CreateDashedLines(&quot;dl&quot;, {points: myArray, instance: dashedLines});
 // updates the existing instance of dashedLines : no need for the parameter scene here
@@ -471,7 +639,7 @@
 </tr>
 </tbody>
 </table>
-<h4><a name="ribbon" class="anchor" href="#ribbon"></a>Ribbon</h4><p>You must set at least the <em>pathArray</em> property.  </p>
+<h4><a name="ribbon" class="anchor" href="#ribbon"></a>Ribbon</h4><p>You must set at least the <em>pathArray</em> property.<br>On update, you must set the <em>pathArray</em> and <em>instance</em> properties.  </p>
 <p>Example :</p>
 <pre><code class="lang-javascript">ribbon = BABYLON.Mesh.CreateRibbon(&quot;ribbon&quot;, {pathArray: myPaths, instance: ribbon});
 // updates the existing instance of ribbon : no need for the parameter scene
@@ -522,7 +690,7 @@
 </tr>
 </tbody>
 </table>
-<h4><a name="tube" class="anchor" href="#tube"></a>Tube</h4><p>You must set at least the <em>path</em> property.  </p>
+<h4><a name="tube" class="anchor" href="#tube"></a>Tube</h4><p>You must set at least the <em>path</em> property.<br>On update, you must set the <em>path</em> and <em>instance</em> properties and you can set the <em>radius</em>, <em>radiusFunction</em> or <em>arc</em> properties.   </p>
 <p>Example :</p>
 <pre><code class="lang-javascript">tube = BABYLON.Mesh.CreateTube(&quot;tube&quot;, {path: myPath, instance: tube});
 // updates the existing instance of tube : no need for the parameter scene
@@ -563,6 +731,11 @@
 <td>NO_CAP</td>
 </tr>
 <tr>
+<td>arc</td>
+<td><em>(number)</em> ratio of the tube circumference between 0 and 1</td>
+<td>1</td>
+</tr>
+<tr>
 <td>updatable</td>
 <td><em>(boolean)</em> true if the mesh is updatable</td>
 <td>false</td>
@@ -579,7 +752,8 @@
 </tr>
 </tbody>
 </table>
-<h4><a name="extruded-shapes" class="anchor" href="#extruded-shapes"></a>Extruded Shapes</h4><p>You must set at least the <em>shape</em> and <em>path</em> properties</p>
+<h4><a name="extruded-shapes" class="anchor" href="#extruded-shapes"></a>Extruded Shapes</h4><p>You must set at least the <em>shape</em> and <em>path</em> properties.
+On update, you must set the <em>shape</em>, <em>path</em> and <em>instance</em> properties and you can set the <em>scale</em> and <em>rotation</em> properties.   </p>
 <p>Example :</p>
 <pre><code class="lang-javascript">extruded = BABYLON.Mesh.ExtrudeShape(&quot;ext&quot;, {shape: myShape, path: myPath, scale: newScale, rotation: newRotation instance: extruded});
 // updates the existing instance of extruded : no need for the parameter scene
@@ -636,9 +810,9 @@
 </tr>
 </tbody>
 </table>
-<h4><a name="custom-extruded-shapes" class="anchor" href="#custom-extruded-shapes"></a>Custom Extruded Shapes</h4><p>You must set at least the <em>shape</em> and <em>path</em> properties</p>
+<h4><a name="custom-extruded-shapes" class="anchor" href="#custom-extruded-shapes"></a>Custom Extruded Shapes</h4><p>You must set at least the <em>shape</em> and <em>path</em> properties.<br>On update, you must set the <em>shape</em>, <em>path</em> and <em>instance</em> properties and you can set the <em>rotationFunction</em> or <em>scaleFunction</em> properties.   </p>
 <p>Example :</p>
-<pre><code class="lang-javascript">extruded = BABYLON.Mesh.ExtrudeShapeCustom(&quot;ext&quot;, {shape: myShape, path: myPath, scaleFunction: myScaleF, rotation: myRotF instance: extruded});
+<pre><code class="lang-javascript">extruded = BABYLON.Mesh.ExtrudeShapeCustom(&quot;ext&quot;, {shape: myShape, path: myPath, scaleFunction: myScaleF, rotationFunction: myRotF instance: extruded});
 // updates the existing instance of extruded : no need for the parameter scene
 </code></pre>
 <p>Properties :</p>
@@ -703,6 +877,59 @@
 </tr>
 </tbody>
 </table>
+<h4><a name="lathe" class="anchor" href="#lathe"></a>Lathe</h4><p>You must set at least the <em>shape</em> property.</p>
+<p>Example :</p>
+<pre><code class="lang-javascript">var lathe = BABYLON.Mesh.Lathe(&quot;lathe&quot;, {shape: myShape}, scene);
+</code></pre>
+<p>Properties :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shape</td>
+<td><em>(Vector3[])</em>  array of Vector3, the shape you want to turn <strong>REQUIRED</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>radius</td>
+<td><em>(number)</em>  the value to radius of the lathe</td>
+<td>1</td>
+</tr>
+<tr>
+<td>tessellation</td>
+<td><em>(number)</em>  the number of iteration around the lathe</td>
+<td>64</td>
+</tr>
+<tr>
+<td>arc</td>
+<td><em>(number)</em> ratio of the circumference between 0 and 1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>closed</td>
+<td><em>(boolean)</em> to open/close the lathe circumference, should be set to <code>false</code> when used with <code>arc</code></td>
+<td>true</td>
+</tr>
+<tr>
+<td>updatable</td>
+<td><em>(boolean)</em> true if the mesh is updatable</td>
+<td>false</td>
+</tr>
+<tr>
+<td>sideOrientation</td>
+<td><em>(number)</em> side orientation</td>
+<td>DEFAULTSIDE</td>
+</tr>
+</tbody>
+</table>
+<p><br/>
+<br/></p>
 <p><em>edition in progress</em></p>
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>    Github</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Documentation" target="_blank"><i class="fa fa-code-fork"></i>    Contribute</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><script>(function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;

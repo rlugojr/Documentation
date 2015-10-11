@@ -9,7 +9,7 @@ Here are the next updates we will *probably* add to babylon.js:
 
 **vNext++:**
 
-* Reflection probe
+* Reflection probe [v2.3]
 * Global illumination light
 * Generate incremental format from 3dsmax
 * Morph targets

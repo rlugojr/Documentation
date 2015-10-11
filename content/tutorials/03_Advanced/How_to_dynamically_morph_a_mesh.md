@@ -154,9 +154,8 @@ var tube = BABYLON.Mesh.CreateTube("tube", path1, null, 12, radiusFunction1, cap
 tube = BABYLON.Mesh.CreateTube(null, path2, null, null, radiusFunction2, null, null, null, tube);
 ```
 
-example : http://www.babylonjs-playground.com/#ACKC2#1       
-
-PG here with radiusFunction animation + closure explanation 
+Example : http://www.babylonjs-playground.com/#ACKC2#1       
+As you can read at line 53, the _radiusFunction_ is redefined here at each iteration in the _registerBeforeRender_ loop because it uses the value of the incrementing parameter _k_ : the radius changes according to each path point position and according to k varying in the time.  
 
 
 ###Extruded shape 
@@ -203,7 +202,7 @@ var ext = BABYLON.Mesh.ExtrudeShape("ext", shape1, path1, scale1, rotation1, cap
 ext = BABYLON.Mesh.ExtrudeShapeCustom(null, shape2, path2, myScale2, myRotation2, null, null, null, null, null, null, ext);
 ```
 
-PG examples here ...   
+Example : http://www.babylonjs-playground.com/#20IBWW
 
 
 ###Other shapes : updateMeshPositions
@@ -227,9 +226,7 @@ var positionFunction = function(positions) {
 };
 box.updateMeshPositions(positionFunction, true);
 ```
-
-PG examples here ...
-
+Example : http://www.babylonjs-playground.com/#1UZIZC#6
 
 
 ###More speed : freezeNormals !
@@ -284,7 +281,3 @@ scene.registerBeforeRender(function() {
 
 ```
 
-
-
-
-_(edition in progress)_

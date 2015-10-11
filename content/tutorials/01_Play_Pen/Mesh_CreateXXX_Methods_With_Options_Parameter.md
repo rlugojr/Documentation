@@ -56,6 +56,8 @@ diameter|_(number)_ diameter of the sphere|1
 diameterX|_(number)_ diameter on X axis, overwrites _diameter_ property|diameter
 diameterY|_(number)_ diameter on Y axis, overwrites _diameter_ property|diameter
 diameterZ|_(number)_ diameter on Z axis, overwrites _diameter_ property|diameter
+arc|_(number)_ ratio of the circumference (latitude) between 0 and 1|1
+slice|_(number)_ ratio of the height (longitude) between 0 and 1|1
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
@@ -73,6 +75,9 @@ diameterTop|_(number)_ diameter of the top cap, can be zero|1
 diameterBottom|_(number)_ diameter of the bottom cap, can't be zero|1
 tessellation|_(number)_ number of radial sides|24
 subdivisions|_(number)_ number of rings|1
+faceColors|_(Color4[])_ array of 3 _Color4_, 0 : bottom cap, 1 : cylinder tube, 2 : top cap|Color4(1, 1, 1, 1) for each face
+faceUV|_(Vector4[])_ array of 3 _Vector4_, 0 : bottom cap, 1 : cylinder tube, 2 : top cap| UVs(0, 0, 1, 1) for each face
+arc|_(number)_ ratio of the circumference between 0 and 1|1
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
@@ -104,6 +109,43 @@ width|_(number)_ size of the width|1
 height|_(number)_ size of the height|1
 updatable|_(boolean)_ true if the mesh is updatable|false
 subdivisions|_(number)_ number of square subdivisions|1
+
+####Ground From a Height Map
+Example :
+```javascript
+var ground = BABYLON.Mesh.CreateGroundFromHeightMap("gdhm", url, {width: 6, subdivsions: 4}, scene);
+```
+Don't forget the _url_ parameter.  
+
+Properties, all optional :
+
+property|value|default value
+--------|-----|-------------
+width|_(number)_ size of the map width|10
+height|_(number)_ size of the map height|10
+subdivisions|_(number)_ number of map subdivisions|1
+minHeight|_(number)_ minimum altitude|0
+maxHeigth|_(number)_ maximum altitude|1
+onReady|_(function)_ a callback js function that is called and passed the just built mesh|(mesh) => {return;}
+updatable|_(boolean)_ true if the mesh is updatable|false
+
+####Tiled Ground
+Example :
+```javascript
+var tiledGround = BABYLON.Mesh.CreateTiledGround("tgd", {subdivsions: {w:4, h:6} }, scene);
+```
+Properties, all optional :
+
+property|value|default value
+--------|-----|-------------
+xmin|_(number)_ map min x coordinate value|-1
+zmin|_(number)_ map min z coordinate value|-1
+xmax|_(number)_ map max x coordinate value|1
+zmin|_(number)_ map max z coordinate value|1
+subdivisions|_( {w: number, h: number} )_ number of subdivisions (tiles) on the height and the width of the map|{w: 6, h: 6}
+precision|_( {w: number, h: number} )_ number of subdivisions on the height and the width of each tile|{w: 2, h: 2}
+updatable|_(boolean)_ true if the mesh is updatable|false
+
 
 ####Disc
 Remembe you can create any kind of regular plane polygon with _CreateDisc()_  
@@ -153,9 +195,28 @@ q|_(number)_ number of windings|3
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
+####Decals  
+Example :
+```javascript
+var decal = BABYLON.Mesh.CreateDecal("decal", mesh,  {position: myPos}, scene);
+```
+Don't forget the _mesh_ parameter what is the mesh depicting the decal.
+
+Properties, all optional :
+
+property|value|default value
+--------|-----|-------------
+position|_(Vector3)_ position of the decal (World coordinates) | (0, 0, 0)
+normal|_(Vector3)_  the normal of the mesh where the decal is applied onto (World coordinates)|Vector3.Up
+size|_(Vector3)_  the x, y, z sizes of the decal|(1, 1, 1)
+angle|_(number)_ the angle to rotate the decal|0
+  
+<br/>
+<br/>  
 ###Parametric Shapes
 ####Lines
 You must set at least the _points_ property.  
+On update, you must set the _points_ and _instance_ properties.  
 
 Example :
 ```javascript
@@ -172,6 +233,7 @@ instance|_(LineMesh)_ an instance of a line mesh to be updated|null
 
 ####Dashed Lines
 You must set at least the _points_ property.  
+On update, you must set the _points_ and _instance_ properties.  
 
 Example :
 ```javascript
@@ -191,6 +253,7 @@ instance|_(LineMesh)_ an instance of a line mesh to be updated|null
 
 ####Ribbon
 You must set at least the _pathArray_ property.  
+On update, you must set the _pathArray_ and _instance_ properties.  
 
 Example :
 ```javascript
@@ -211,6 +274,7 @@ instance|_(LineMesh)_ an instance of a ribbon to be updated|null
 
 ####Tube
 You must set at least the _path_ property.  
+On update, you must set the _path_ and _instance_ properties and you can set the _radius_, _radiusFunction_ or _arc_ properties.   
 
 Example :
 ```javascript
@@ -226,12 +290,14 @@ radius|_(number)_  the radius of the tube|1
 tessellation|_(number)_  the number of radial segments|64
 radiusFunction|_( function(i, distance) )_  a function returning a radius value from _(i, distance)_ parameters|null
 cap|_(number)_ tube cap : NO_CAP, CAP_START, CAP_END, CAP_ALL|NO_CAP
+arc|_(number)_ ratio of the tube circumference between 0 and 1|1
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 instance|_(LineMesh)_ an instance of a tube to be updated|null
 
 ####Extruded Shapes
-You must set at least the _shape_ and _path_ properties
+You must set at least the _shape_ and _path_ properties.
+On update, you must set the _shape_, _path_ and _instance_ properties and you can set the _scale_ and _rotation_ properties.   
 
 Example :
 ```javascript
@@ -252,11 +318,12 @@ sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 instance|_(LineMesh)_ an instance of an extruded shape to be updated|null
 
 ####Custom Extruded Shapes
-You must set at least the _shape_ and _path_ properties
+You must set at least the _shape_ and _path_ properties.  
+On update, you must set the _shape_, _path_ and _instance_ properties and you can set the _rotationFunction_ or _scaleFunction_ properties.   
 
 Example :
 ```javascript
-extruded = BABYLON.Mesh.ExtrudeShapeCustom("ext", {shape: myShape, path: myPath, scaleFunction: myScaleF, rotation: myRotF instance: extruded});
+extruded = BABYLON.Mesh.ExtrudeShapeCustom("ext", {shape: myShape, path: myPath, scaleFunction: myScaleF, rotationFunction: myRotF instance: extruded});
 // updates the existing instance of extruded : no need for the parameter scene
 ```
 Properties :
@@ -274,4 +341,29 @@ updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 instance|_(LineMesh)_ an instance of an extruded shape to be updated|null
 
+####Lathe  
+You must set at least the _shape_ property.
+
+Example :
+```javascript
+var lathe = BABYLON.Mesh.Lathe("lathe", {shape: myShape}, scene);
+```
+Properties :
+
+property|value|default value
+--------|-----|-------------
+shape|_(Vector3[])_  array of Vector3, the shape you want to turn **REQUIRED** |
+radius|_(number)_  the value to radius of the lathe|1
+tessellation|_(number)_  the number of iteration around the lathe|64
+arc|_(number)_ ratio of the circumference between 0 and 1|1
+closed|_(boolean)_ to open/close the lathe circumference, should be set to `false` when used with `arc`|true
+updatable|_(boolean)_ true if the mesh is updatable|false
+sideOrientation|_(number)_ side orientation|DEFAULTSIDE
+
+
+
+
+<br/>
+<br/>
+  
 _edition in progress_

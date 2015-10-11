@@ -115,8 +115,7 @@ var radiusFunction2 = function(i, distance) { ... };
 var tube = BABYLON.Mesh.CreateTube(&quot;tube&quot;, path1, null, 12, radiusFunction1, cap, scene, true);
 tube = BABYLON.Mesh.CreateTube(null, path2, null, null, radiusFunction2, null, null, null, tube);
 </code></pre>
-<p>example : <a href="http://www.babylonjs-playground.com/#ACKC2#1">http://www.babylonjs-playground.com/#ACKC2#1</a>       </p>
-<p>PG here with radiusFunction animation + closure explanation </p>
+<p>Example : <a href="http://www.babylonjs-playground.com/#ACKC2#1">http://www.babylonjs-playground.com/#ACKC2#1</a><br>As you can read at line 53, the <em>radiusFunction</em> is redefined here at each iteration in the <em>registerBeforeRender</em> loop because it uses the value of the incrementing parameter <em>k</em> : the radius changes according to each path point position and according to k varying in the time.  </p>
 <h3><a name="extruded-shape" class="anchor" href="#extruded-shape"></a>Extruded shape</h3><h5><a name="emextrusion-updatable-parameters-for-extrudeshape-shape-path-scale-rotationem" class="anchor" href="#extrusion-updatable-parameters-for-extrudeshape-shape-path-scale-rotation"></a><em>extrusion updatable parameters for ExtrudeShape(): shape, path, scale, rotation</em></h5><h5><a name="emextrusion-updatable-parameters-for-extrudeshapecustom-shape-path-scalefunction-rotatefunctionem" class="anchor" href="#extrusion-updatable-parameters-for-extrudeshapecustom-shape-path-scalefunction-rotatefunction"></a><em>extrusion updatable parameters for ExtrudeShapeCustom(): shape, path, scaleFunction, rotateFunction</em></h5><p><em>(reminder : only points positions can change in the path, not the number of points. Please see the summary at the bottom of this page for more details)</em>   </p>
 <p>We can see extrusion as some tube generalization : a tube would be a circle <em>shape</em> extruded along a path.<br>So we have here the same update capabilities than for a tube (<em>path</em> or shape <em>scale</em> which would be the equivalent to tube <em>radius</em>) and some extra parameters : the <em>rotation</em> step can be updated and the <em>shape</em> itself also !<br>It is mandatory that the new <em>shape</em> array has the same number of Vector3 than the <em>shape</em> used to build the original instance. A good way to assure this is simply to keep the original <em>shape</em> instance and to modify it instead of creating a new one (or to modify a copy of it).   </p>
 <pre><code class="lang-javascript">var shape1 = [s1, s2, ...sN]; // Vector3 array
@@ -149,7 +148,7 @@ ext = BABYLON.Mesh.ExtrudeShapeCustom(null, shape2, path2, myScale2, myRotation2
 // mesh update
 ext = BABYLON.Mesh.ExtrudeShapeCustom(null, shape2, path2, myScale2, myRotation2, null, null, null, null, null, null, ext);
 </code></pre>
-<p>PG examples here ...   </p>
+<p>Example : <a href="http://www.babylonjs-playground.com/#20IBWW">http://www.babylonjs-playground.com/#20IBWW</a></p>
 <h3><a name="other-shapes-updatemeshpositions" class="anchor" href="#other-shapes-updatemeshpositions"></a>Other shapes : updateMeshPositions</h3><p>For now, we just talked about parametric shapes which can be updated with their own <em>CreateXXX()</em> initial method. 
 But what about the other mesh types : boxes, spheres, cylinders, etc ? </p>
 <p>There is no mean to update them with their initial <em>CreateXXX()</em> because a box remains a box, a sphere remains a sphere whether you change their size, radius, etc. 
@@ -166,7 +165,7 @@ var positionFunction = function(positions) {
 };
 box.updateMeshPositions(positionFunction, true);
 </code></pre>
-<p>PG examples here ...</p>
+<p>Example : <a href="http://www.babylonjs-playground.com/#1UZIZC#6">http://www.babylonjs-playground.com/#1UZIZC#6</a></p>
 <h3><a name="more-speed-freezenormals" class="anchor" href="#more-speed-freezenormals"></a>More speed : freezeNormals !</h3><p>The former <em>CreateXXX()</em> update functions try to be as much optimized as possible to run fast in the render loop.<br>However, you may need some more speed for any reason (huge mesh with dozens of thousands of vertices for instance).<br>So, if your mesh doesn&#39;t need to reflect the light (emissive color only for instance), you can skip the normals re-computation which is a CPU consuming process.<br>Use then the <em>freezeNormals()</em> method just after your mesh is created :   </p>
 <pre><code class="lang-javascript">var tube = BABYLON.Mesh.CreateTube(&quot;tube&quot;, path, 3, 12, null, BABYLON.Mesh.NO_CAP, scene, true);
 tube.freezeNormals();
@@ -206,7 +205,6 @@ scene.registerBeforeRender(function() {
   mesh = CreateXXX(null, path, null, ..., null, mesh);
 });
 </code></pre>
-<p><em>(edition in progress)</em></p>
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>    Github</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Documentation" target="_blank"><i class="fa fa-code-fork"></i>    Contribute</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><script>(function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
     i[r] = i[r] || function () {

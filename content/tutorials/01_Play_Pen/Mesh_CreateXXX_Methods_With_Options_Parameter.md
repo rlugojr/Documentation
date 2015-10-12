@@ -61,18 +61,20 @@ slice|_(number)_ ratio of the height (longitude) between 0 and 1|1
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
-####Cylinder
+####Cylinder or Cone
+If you set _diameterTop_ to zero, you get a cone instead of a cylinder.
 Example :
 ```javascript
-var cylinder = BABYLON.Mesh.CreateCylinder("cyl", {diameterBottom: 0, tessellation: 4}, scene);
+var cone = BABYLON.Mesh.CreateCylinder("cone", {diameterTop: 0, tessellation: 4}, scene);
 ```
 Properties, all optional :
 
 property|value|default value
 --------|-----|-------------
 height|_(number)_ height of the cylinder|2
-diameterTop|_(number)_ diameter of the top cap, can be zero|1
-diameterBottom|_(number)_ diameter of the bottom cap, can't be zero|1
+diameterTop|_(number)_ diameter of the top cap, can be zero to create a cone, overwrites the _diameter_ property|1
+diameterBottom|_(number)_ diameter of the bottom cap, can't be zero, overwrites the _diameter_ property|1
+diameter|_(number)_ diameter of both caps|1
 tessellation|_(number)_ number of radial sides|24
 subdivisions|_(number)_ number of rings|1
 faceColors|_(Color4[])_ array of 3 _Color4_, 0 : bottom cap, 1 : cylinder tube, 2 : top cap|Color4(1, 1, 1, 1) for each face

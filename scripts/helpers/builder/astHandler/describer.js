@@ -146,7 +146,11 @@ Describer.getComments = function (astElement, astFormatted, withParams) {
             var paramOldComments = [];
             var paramOldComment = getOldParams.exec(oldTemp);
             while (paramOldComment != null) {
-                paramOldComments.push(paramOldComment[0].substr(paramOldComment[0].lastIndexOf("|")+1));
+                var start = paramOldComment[0].indexOf("|")+1;
+                var end = paramOldComment[0].substr(paramOldComment[0].indexOf("|")+1).indexOf("|")-1 + start;
+                var name = paramOldComment[0].substring(start, end);
+
+                paramOldComments[name] = (paramOldComment[0].substr(paramOldComment[0].lastIndexOf("|")+1));
                 paramOldComment = getOldParams.exec(oldTemp);
 
             }
@@ -159,6 +163,7 @@ Describer.getComments = function (astElement, astFormatted, withParams) {
         var parametersDescription = '';
 
         parametersDescription += TypeManager.getDescriptionString(astElement.callSignature, serializedComments, true);
+        parametersDescription += "\n";
 
         /**
          * Add the old comments in the new .md
@@ -169,17 +174,28 @@ Describer.getComments = function (astElement, astFormatted, withParams) {
         var searchBreak = parametersDescription.search(/\n/);
 
         while (searchBreak != -1) {
+            var line = parametersDescription.substring(0, searchBreak);
+            var start = line.indexOf("|")+1;
+            var end = line.substr(line.indexOf("|")+1).indexOf("|")-1 + start;
+            var name = line.substring(start, end);
 
-            paramDescLine.push(parametersDescription.substring(0, searchBreak));
+            paramDescLine[name] = line;
             parametersDescription = parametersDescription.slice(searchBreak+1, parametersDescription.length-1);
 
             searchBreak = parametersDescription.search(/\n/);
         }
 
         parametersDescription = "";
-        for(var i = 0; i < paramDescLine.length; i++) {
-            // Merge the comments with the new description
-            parametersDescription += paramDescLine[i] + paramOldComments[i] + "\n";
+        for(var index in paramDescLine) {
+            // If there was description
+            if(paramOldComments && paramOldComments[index]) {
+                // Merge the comments with the new description
+                parametersDescription += paramDescLine[index] + paramOldComments[index] + "\n";
+            }
+            else {
+                // Just add the new one
+                parametersDescription += paramDescLine[index] + "\n";
+            }
         }
 
         if (funParameters.length > 0) {

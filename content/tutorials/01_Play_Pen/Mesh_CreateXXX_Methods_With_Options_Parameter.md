@@ -41,6 +41,7 @@ faceColors|_(Color4[])_ array of 6 _Color4_, one per box face|Color4(1, 1, 1, 1)
 faceUV|_(Vector4[])_ array of 6 _Vector4_, one per box face| UVs(0, 0, 1, 1) for each side
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
+To understand how to set _faceUV_ or _faceColors_, please read this : http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors
 
 ####Sphere
 Example :
@@ -82,6 +83,7 @@ faceUV|_(Vector4[])_ array of 3 _Vector4_, 0 : bottom cap, 1 : cylinder tube, 2 
 arc|_(number)_ ratio of the circumference between 0 and 1|1
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
+To understand how to set _faceUV_ or _faceColors_, please read this by considering 3 faces only : http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors
 
 ####Plane
 Example :
@@ -196,6 +198,58 @@ p|_(number)_ number of windings|2
 q|_(number)_ number of windings|3
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
+
+####Polyhedron
+Example :
+```javascript
+var octahedron = BABYLON.Mesh.CreatePolyhedron("oct", {type: 1, size: 3}, scene);
+```
+Properties, all optional :
+
+property|value|default value
+--------|-----|-------------
+type|_(number)_ polyhedron type in the range [0,14]|0
+size|_(number)_ polyhedron size|1
+sizeX|_(number)_ X polyhedron size, overwrites the _size_ property|1
+sizeY|_(number)_ Y polyhedron size, overwrites the _size_ property|1
+sizeZ|_(number)_ Z polyhedron size, overwrites the _size_ property|1
+custom|_(polygonObjectReference)_ a polyhedron object, overwrites the _type_ property|null
+faceColors|_(Color4[])_ array of _Color4_, one per face|Color4(1, 1, 1, 1) for each side
+faceUV|_(Vector4[])_ array of _Vector4_, one per face| UVs(0, 0, 1, 1) for each side
+updatable|_(boolean)_ true if the mesh is updatable|false
+sideOrientation|_(number)_ side orientation|DEFAULTSIDE
+To understand how to set _faceUV_ or _faceColors_, please read this by considering the right number of faces of your polyhedron, instead of only 6 for the box : http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors
+
+#####Provided polyhedron types :
+
+type|name|side number
+----|----|-----------
+0|Tetrahedron|4
+1|Octahedron|8
+2|Dodecahedron|12
+3|Icosahedron|20
+4|Rhombicuboctahedron|26
+5|Triangular Prism|5
+6|Pentagonal Prism|7
+7|Hexagonal Prism|8
+8|Square Pyramid (J1)|5
+9|Pentagonal Pyramid (J2)|6
+10|Triangular Dipyramid (J12)|6
+11|Pentagonal Dipyramid (J13)|10
+12|Elongated Square Dipyramid (J15)|12
+13|Elongated Pentagonal Dipyramid (J16)|15
+14|Elongated Pentagonal Cupola (J20)|22
+
+If you need to use a custom polyhedron (_URL to the full sample PG here_) instead of the provided ones, you will find the full sample file here : _URL_  
+Just copy/paste the wanted polyhedron object in your code like this :
+
+```javascript
+var heptagonalPrism = { "name":"Heptagonal Prism", "category":["Prism"], "vertex":[[0,0,1.090071],[0.796065,0,0.7446715],[-0.1498633,0.7818315,0.7446715],[-0.7396399,-0.2943675,0.7446715],[0.6462017,0.7818315,0.3992718],[1.049102,-0.2943675,-0.03143449],[-0.8895032,0.487464,0.3992718],[-0.8658909,-0.6614378,-0.03143449],[0.8992386,0.487464,-0.3768342],[0.5685687,-0.6614378,-0.6538232],[-1.015754,0.1203937,-0.3768342],[-0.2836832,-0.8247995,-0.6538232],[0.4187054,0.1203937,-0.9992228],[-0.4335465,-0.042968,-0.9992228]],
+"face":[[0,1,4,2],[0,2,6,3],[1,5,8,4],[3,6,10,7],[5,9,12,8],[7,10,13,11],[9,11,13,12],[0,3,7,11,9,5,1],[2,4,8,12,13,10,6]]};
+
+var mesh = BABYLON.Mesh.CreatePolyhdron("h", {custom: heptagonalPrism}, scene);
+```
+
 
 ####Decals  
 Example :

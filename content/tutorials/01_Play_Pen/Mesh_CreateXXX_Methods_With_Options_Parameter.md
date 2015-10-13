@@ -41,6 +41,7 @@ faceColors|_(Color4[])_ array of 6 _Color4_, one per box face|Color4(1, 1, 1, 1)
 faceUV|_(Vector4[])_ array of 6 _Vector4_, one per box face| UVs(0, 0, 1, 1) for each side
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
+To understand how to set _faceUV_ or _faceColors_, please read this : http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors
 
 ####Sphere
 Example :
@@ -82,6 +83,7 @@ faceUV|_(Vector4[])_ array of 3 _Vector4_, 0 : bottom cap, 1 : cylinder tube, 2 
 arc|_(number)_ ratio of the circumference between 0 and 1|1
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
+To understand how to set _faceUV_ or _faceColors_, please read this by considering 3 faces only : http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors
 
 ####Plane
 Example :

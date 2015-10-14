@@ -240,7 +240,7 @@ type|name|side number
 13|Elongated Pentagonal Dipyramid (J16)|15
 14|Elongated Pentagonal Cupola (J20)|22
 
-If you need to use a custom polyhedron (_URL to the full sample PG here_) instead of the provided ones, you will find the full sample file here : _URL_  
+If you need to use a custom polyhedron (_URL to the full sample PG here_) instead of the provided ones, you will find the full sample file here : https://github.com/BabylonJS/Extensions/tree/master/Polyhedron  
 Just copy/paste the wanted polyhedron object in your code like this :
 
 ```javascript

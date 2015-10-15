@@ -2,7 +2,7 @@
 <li><a href="#fixed-shapes">Fixed Shapes</a><ul>
 <li><a href="#box">Box</a></li>
 <li><a href="#sphere">Sphere</a></li>
-<li><a href="#cylinder">Cylinder</a></li>
+<li><a href="#cylinder-or-cone">Cylinder or Cone</a></li>
 <li><a href="#plane">Plane</a></li>
 <li><a href="#ground">Ground</a></li>
 <li><a href="#ground-from-a-height-map">Ground From a Height Map</a></li>
@@ -10,6 +10,7 @@
 <li><a href="#disc">Disc</a></li>
 <li><a href="#torus">Torus</a></li>
 <li><a href="#torus-knot">Torus Knot</a></li>
+<li><a href="#polyhedron">Polyhedron</a></li>
 <li><a href="#decals">Decals</a></li>
 </ul>
 </li>
@@ -92,6 +93,7 @@
 </tr>
 </tbody>
 </table>
+<p>To understand how to set <em>faceUV</em> or <em>faceColors</em>, please read this : <a href="http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors">http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors</a></p>
 <h4><a name="sphere" class="anchor" href="#sphere"></a>Sphere</h4><p>Example :</p>
 <pre><code class="lang-javascript">var sphere = BABYLON.Mesh.CreateSphere(&quot;sphere&quot;, {diameter: 2, diameterX: 3}, scene);
 </code></pre>
@@ -152,8 +154,9 @@
 </tr>
 </tbody>
 </table>
-<h4><a name="cylinder" class="anchor" href="#cylinder"></a>Cylinder</h4><p>Example :</p>
-<pre><code class="lang-javascript">var cylinder = BABYLON.Mesh.CreateCylinder(&quot;cyl&quot;, {diameterBottom: 0, tessellation: 4}, scene);
+<h4><a name="cylinder-or-cone" class="anchor" href="#cylinder-or-cone"></a>Cylinder or Cone</h4><p>If you set <em>diameterTop</em> to zero, you get a cone instead of a cylinder.
+Example :</p>
+<pre><code class="lang-javascript">var cone = BABYLON.Mesh.CreateCylinder(&quot;cone&quot;, {diameterTop: 0, tessellation: 4}, scene);
 </code></pre>
 <p>Properties, all optional :</p>
 <table>
@@ -172,12 +175,17 @@
 </tr>
 <tr>
 <td>diameterTop</td>
-<td><em>(number)</em> diameter of the top cap, can be zero</td>
+<td><em>(number)</em> diameter of the top cap, can be zero to create a cone, overwrites the <em>diameter</em> property</td>
 <td>1</td>
 </tr>
 <tr>
 <td>diameterBottom</td>
-<td><em>(number)</em> diameter of the bottom cap, can&#39;t be zero</td>
+<td><em>(number)</em> diameter of the bottom cap, can&#39;t be zero, overwrites the <em>diameter</em> property</td>
+<td>1</td>
+</tr>
+<tr>
+<td>diameter</td>
+<td><em>(number)</em> diameter of both caps</td>
 <td>1</td>
 </tr>
 <tr>
@@ -217,6 +225,7 @@
 </tr>
 </tbody>
 </table>
+<p>To understand how to set <em>faceUV</em> or <em>faceColors</em>, please read this by considering 3 faces only : <a href="http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors">http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors</a></p>
 <h4><a name="plane" class="anchor" href="#plane"></a>Plane</h4><p>Example :</p>
 <pre><code class="lang-javascript">var plane = BABYLON.Mesh.CreatePlane(&quot;plane&quot;, {width: 5}, scene);
 </code></pre>
@@ -523,6 +532,164 @@
 </tr>
 </tbody>
 </table>
+<h4><a name="polyhedron" class="anchor" href="#polyhedron"></a>Polyhedron</h4><p>Example :</p>
+<pre><code class="lang-javascript">var octahedron = BABYLON.Mesh.CreatePolyhedron(&quot;oct&quot;, {type: 1, size: 3}, scene);
+</code></pre>
+<p>Properties, all optional :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td><em>(number)</em> polyhedron type in the range [0,14]</td>
+<td>0</td>
+</tr>
+<tr>
+<td>size</td>
+<td><em>(number)</em> polyhedron size</td>
+<td>1</td>
+</tr>
+<tr>
+<td>sizeX</td>
+<td><em>(number)</em> X polyhedron size, overwrites the <em>size</em> property</td>
+<td>1</td>
+</tr>
+<tr>
+<td>sizeY</td>
+<td><em>(number)</em> Y polyhedron size, overwrites the <em>size</em> property</td>
+<td>1</td>
+</tr>
+<tr>
+<td>sizeZ</td>
+<td><em>(number)</em> Z polyhedron size, overwrites the <em>size</em> property</td>
+<td>1</td>
+</tr>
+<tr>
+<td>custom</td>
+<td><em>(polygonObjectReference)</em> a polyhedron object, overwrites the <em>type</em> property</td>
+<td>null</td>
+</tr>
+<tr>
+<td>faceColors</td>
+<td><em>(Color4[])</em> array of <em>Color4</em>, one per face</td>
+<td>Color4(1, 1, 1, 1) for each side</td>
+</tr>
+<tr>
+<td>faceUV</td>
+<td><em>(Vector4[])</em> array of <em>Vector4</em>, one per face</td>
+<td>UVs(0, 0, 1, 1) for each side</td>
+</tr>
+<tr>
+<td>updatable</td>
+<td><em>(boolean)</em> true if the mesh is updatable</td>
+<td>false</td>
+</tr>
+<tr>
+<td>sideOrientation</td>
+<td><em>(number)</em> side orientation</td>
+<td>DEFAULTSIDE</td>
+</tr>
+</tbody>
+</table>
+<p>To understand how to set <em>faceUV</em> or <em>faceColors</em>, please read this by considering the right number of faces of your polyhedron, instead of only 6 for the box : <a href="http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors">http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors</a></p>
+<h5><a name="provided-polyhedron-types" class="anchor" href="#provided-polyhedron-types"></a>Provided polyhedron types :</h5><table>
+<thead>
+<tr>
+<th>type</th>
+<th>name</th>
+<th>side number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Tetrahedron</td>
+<td>4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Octahedron</td>
+<td>8</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Dodecahedron</td>
+<td>12</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Icosahedron</td>
+<td>20</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Rhombicuboctahedron</td>
+<td>26</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Triangular Prism</td>
+<td>5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Pentagonal Prism</td>
+<td>7</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Hexagonal Prism</td>
+<td>8</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Square Pyramid (J1)</td>
+<td>5</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Pentagonal Pyramid (J2)</td>
+<td>6</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Triangular Dipyramid (J12)</td>
+<td>6</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Pentagonal Dipyramid (J13)</td>
+<td>10</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Elongated Square Dipyramid (J15)</td>
+<td>12</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Elongated Pentagonal Dipyramid (J16)</td>
+<td>15</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Elongated Pentagonal Cupola (J20)</td>
+<td>22</td>
+</tr>
+</tbody>
+</table>
+<p>If you need to use a custom polyhedron (<em>URL to the full sample PG here</em>) instead of the provided ones, you will find the full sample file here : <a href="https://github.com/BabylonJS/Extensions/tree/master/Polyhedron">https://github.com/BabylonJS/Extensions/tree/master/Polyhedron</a><br>Just copy/paste the wanted polyhedron object in your code like this :</p>
+<pre><code class="lang-javascript">var heptagonalPrism = { &quot;name&quot;:&quot;Heptagonal Prism&quot;, &quot;category&quot;:[&quot;Prism&quot;], &quot;vertex&quot;:[[0,0,1.090071],[0.796065,0,0.7446715],[-0.1498633,0.7818315,0.7446715],[-0.7396399,-0.2943675,0.7446715],[0.6462017,0.7818315,0.3992718],[1.049102,-0.2943675,-0.03143449],[-0.8895032,0.487464,0.3992718],[-0.8658909,-0.6614378,-0.03143449],[0.8992386,0.487464,-0.3768342],[0.5685687,-0.6614378,-0.6538232],[-1.015754,0.1203937,-0.3768342],[-0.2836832,-0.8247995,-0.6538232],[0.4187054,0.1203937,-0.9992228],[-0.4335465,-0.042968,-0.9992228]],
+&quot;face&quot;:[[0,1,4,2],[0,2,6,3],[1,5,8,4],[3,6,10,7],[5,9,12,8],[7,10,13,11],[9,11,13,12],[0,3,7,11,9,5,1],[2,4,8,12,13,10,6]]};
+
+var mesh = BABYLON.Mesh.CreatePolyhdron(&quot;h&quot;, {custom: heptagonalPrism}, scene);
+</code></pre>
 <h4><a name="decals" class="anchor" href="#decals"></a>Decals</h4><p>Example :</p>
 <pre><code class="lang-javascript">var decal = BABYLON.Mesh.CreateDecal(&quot;decal&quot;, mesh,  {position: myPos}, scene);
 </code></pre>

@@ -38,6 +38,7 @@
 <pre><code class="lang-javascript">var skybox = BABYLON.Mesh.CreateBox(&quot;skyBox&quot;, 100.0, scene);
 var skyboxMaterial = new BABYLON.StandardMaterial(&quot;skyBox&quot;, scene);
 skyboxMaterial.backFaceCulling = false;
+skyboxMaterial.disableLighting = true;
 skybox.material = skyboxMaterial;
 </code></pre>
 <p>Next, we set the <code>infiniteDistance</code> property. This makes the skybox follow our camera&#39;s position.</p>

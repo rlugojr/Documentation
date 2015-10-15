@@ -51,6 +51,12 @@ bumpMaterial.bumpTexture = new BABYLON.Texture(&quot;normalMap.jpg&quot;, scene)
 <p>Even though we are working with advanced texturing techniques, <em>VideoTexture</em> works in conjunction with a StandardMaterial. Simply put, it needs to have some light. As a handy alternative or video illumination assistant, you may want to set an <em>emissiveColor</em> on the base material of the mesh.</p>
 <pre><code class="lang-javascript">ecran.material.emissiveColor = new BABYLON.Color3(1,1,1);
 </code></pre>
+<p>Mobile devices do not auto-play videos. A user interaction (such as a tap) is required to start the video. Until the user taps, the video texture will be black. A simple way of starting the video is this:</p>
+<pre><code class="lang-javascript">scene.onPointerDown = function () { 
+  videoTexture.video.play();
+}
+</code></pre>
+<p>This will start the video on the first tap in the scene. A demo can be found at <a href="http://www.babylonjs-playground.com/#CHQ4T#1">http://www.babylonjs-playground.com/#CHQ4T#1</a></p>
 <ul>
 <li><strong>Multi Materials</strong></li>
 </ul>

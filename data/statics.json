@@ -323,6 +323,10 @@
         {
           "title": "How to use Reflection Probes",
           "filename": "How_to_use_Reflection_probes"
+        },
+        {
+          "title": "Render Scene on a PNG",
+          "filename": "Render_Scene_on_a_PNG"
         }
       ]
     },
@@ -638,14 +642,14 @@
         {
           "title": "Creating the Mini-fied Version",
           "filename": "Creating_the_Mini-fied_Version"
+        },        
+        {
+          "title": "Framework versions",
+          "filename": "Framework_versions"
         },
         {
           "title": "FileFormat Map (.babylon)",
           "filename": "File_Format_Map_(.babylon)"
-        },
-        {
-          "title": "Render Scene on a PNG",
-          "filename": "Render_Scene_on_a_PNG"
         },
         {
           "title": "Roadmap",

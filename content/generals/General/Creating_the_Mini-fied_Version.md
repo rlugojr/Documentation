@@ -70,6 +70,8 @@ But you may want to work with all basic files. In this case, please download the
     <script src="src/Layer/babylon.layer.js"></script>
     <script src="src/Particles/babylon.particle.js"></script>
     <script src="src/Particles/babylon.particleSystem.js"></script>
+    <script src="src/Particles/babylon.solidParticle.js"></script>
+    <script src="src/Particles/babylon.solidParticleSystem.js"></script>
     <script src="src/Animations/babylon.animation.js"></script>
     <script src="src/Animations/babylon.animatable.js"></script>
     <script src="src/Animations/babylon.easing.js"></script>

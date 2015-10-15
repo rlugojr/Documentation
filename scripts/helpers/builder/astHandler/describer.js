@@ -39,13 +39,12 @@ Describer.describe = function (astElement, withParams) {
 /**
  * returns comments of the given element
  * @param astElement AST TypeScript object
- * @param withParams boolean tells if th given object is commented with parameters or not
+ * @param withParams boolean tells if the given object is commented with parameters or not
  * @return string
  */
 Describer.getComments = function (astElement, astFormatted, withParams) {
 
     var serializedComments = '',
-    //Returns Comment[]
         rawComments = astElement.preComments(),
         comments = '';
 
@@ -67,9 +66,10 @@ Describer.getComments = function (astElement, astFormatted, withParams) {
         var oldLineDescription = '';
     }
 
-
     //Serialize the array of comments
-    for (var i in rawComments) serializedComments += rawComments[i].fullText() + '\n';
+    for (var i in rawComments) {
+        serializedComments += rawComments[i].fullText() + '\n';
+    }
 
 
     if (!withParams) {
@@ -139,11 +139,18 @@ Describer.getComments = function (astElement, astFormatted, withParams) {
             getOldParams.exec(oldTemp);
             getOldParams.exec(oldTemp);
 
+            /**
+             * Get the old comments from the arrays
+             * @type {Array}
+             */
             var paramOldComments = [];
             var paramOldComment = getOldParams.exec(oldTemp);
-
             while (paramOldComment != null) {
-                paramOldComments.push(paramOldComment[3]);
+                var start = paramOldComment[0].indexOf("|")+1;
+                var end = paramOldComment[0].substr(paramOldComment[0].indexOf("|")+1).indexOf("|")-1 + start;
+                var name = paramOldComment[0].substring(start, end);
+
+                paramOldComments[name] = (paramOldComment[0].substr(paramOldComment[0].lastIndexOf("|")+1));
                 paramOldComment = getOldParams.exec(oldTemp);
 
             }
@@ -156,6 +163,40 @@ Describer.getComments = function (astElement, astFormatted, withParams) {
         var parametersDescription = '';
 
         parametersDescription += TypeManager.getDescriptionString(astElement.callSignature, serializedComments, true);
+        parametersDescription += "\n";
+
+        /**
+         * Add the old comments in the new .md
+         * In the arrays of ##Params
+          */
+
+        var paramDescLine = [];
+        var searchBreak = parametersDescription.search(/\n/);
+
+        while (searchBreak != -1) {
+            var line = parametersDescription.substring(0, searchBreak);
+            var start = line.indexOf("|")+1;
+            var end = line.substr(line.indexOf("|")+1).indexOf("|")-1 + start;
+            var name = line.substring(start, end);
+
+            paramDescLine[name] = line;
+            parametersDescription = parametersDescription.slice(searchBreak+1, parametersDescription.length-1);
+
+            searchBreak = parametersDescription.search(/\n/);
+        }
+
+        parametersDescription = "";
+        for(var index in paramDescLine) {
+            // If there was description
+            if(paramOldComments && paramOldComments[index]) {
+                // Merge the comments with the new description
+                parametersDescription += paramDescLine[index] + paramOldComments[index] + "\n";
+            }
+            else {
+                // Just add the new one
+                parametersDescription += paramDescLine[index] + "\n";
+            }
+        }
 
         if (funParameters.length > 0) {
             comments += '\n' + parametersHeader + parametersDescription;

@@ -44,7 +44,7 @@ for(var i = -20; i < 20; i++) {
 }
 var mesh = BABYLON.Mesh.CreateRibbon("ribbon", pathArray, false, false, 0, scene, true, sideO);
 ```
-example : http://www.babylonjs-playground.com/#1MSEBT 
+example : http://www.babylonjs-playground.com/#1MSEBT  _(please rotate the cam to see it)_  
 
 The important key to notice is that we set the **_updatable_** parameter to **_true_** in the _CreateRibbon()_ method : the one just between the _scene_ and the _sideO_ parameters.   
 
@@ -73,6 +73,10 @@ mesh = BABYLON.Mesh.CreateRibbon(null, pathArray, null, null, null, null, null, 
 ```
 The other parameters than _pathArray_ and _mesh_ are just ignored when updating, so they can be set to _null_ for better understanding.   
 The _CreateRibbon()_ method thus updates the given ribbon and returns it.   
+You can also use the other call signature :  
+```javascript
+mesh = BABYLON.Mesh.CreateRibbon(null, {pathArray: pathArray, instance: mesh});
+```
 
 example : http://www.babylonjs-playground.com/#1MSEBT#1   
 
@@ -104,6 +108,8 @@ scene.registerBeforeRender(function() {
   }
   // ribbon update
   mesh = BABYLON.Mesh.CreateRibbon(null, pathArray, null, null, null, null, null, null, mesh);
+  // or also :
+  // mesh = BABYLON.Mesh.CreateRibbon(null, {pathArray: pathArray, instance: mesh});
   k += 0.05;
 });
 ```
@@ -126,6 +132,9 @@ var dashedlines = BABYLON.Mesh.CreateDashedLines("lines", points1, dashSize, gap
 var points2 = [u1, u2, ..., uN]; // another vector3 array
 lines = BABYLON.Mesh.CreateLines(null, points2, null, null, lines);
 dashedlines = BABYLON.Mesh.CreateDashedLines(null, points2, null, null, null, null, null, dashedlines);
+// or
+lines = BABYLON.Mesh.CreateLines(null, {points: points2, instance: lines});
+dashedlines = BABYLON.Mesh.CreateDashedLines(null, {points: points2, instance: dashedlines});
 ```
 We can, of course, set the update method within the render loop.   
 
@@ -145,6 +154,8 @@ var path2 = [u1, ..., uN]; // another vector3 array : tube axis2
 var radius2 = 8;
 var tube = BABYLON.Mesh.CreateTube("tube", path1, radius1, 12, null, cap, scene, true);
 tube = BABYLON.Mesh.CreateTube(null, path2, radius2, null, null, null, null, null, tube);
+// or 
+tube = BABYLON.Mesh.CreateTube(null, {path: path2, radius: radius2, instance: tube});
 ```
 Of course, it also works with the _radiusFunction_ parameter :   
 ```javascript
@@ -152,6 +163,8 @@ var radiusFunction1 = function(i, distance) { ... };
 var radiusFunction2 = function(i, distance) { ... };
 var tube = BABYLON.Mesh.CreateTube("tube", path1, null, 12, radiusFunction1, cap, scene, true);
 tube = BABYLON.Mesh.CreateTube(null, path2, null, null, radiusFunction2, null, null, null, tube);
+// or
+tube = BABYLON.Mesh.CreateTube(null, {path: path2, radiusFunction: radiusFunction2, instance: tube});
 ```
 
 Example : http://www.babylonjs-playground.com/#ACKC2#1       
@@ -180,8 +193,10 @@ var rotation2 = 0.2;
 var extruded = BABYLON.Mesh.ExtrudeShape("ext", shape1, path1, scale1, rotation1, cap, scene, true);
 // mesh update
 extruded = BABYLON.Mesh.ExtrudeShape(null, shape2, path2, scale2, rotation2, null, null, null, null, extruded);
+// or
+extruded = BABYLON.Mesh.ExtrudeShape(null, {shape: shape2, path: path2, scale: scale2, rotation: rotation2, instance: extruded});
 ```
-Idem for _ExtrudeShapeCustom()_ accepting _scaleFunction_ and _rotateFunction_ parameters :   
+Idem for _ExtrudeShapeCustom()_ accepting _scaleFunction_ and _rotationFunction_ parameters :   
 ```javascript
 // path and shape var declared before ...
 var myScale1 = function(i, distance) { ... };
@@ -192,6 +207,8 @@ var myRotation2 = function(i, distance) { ... };
 var ext = BABYLON.Mesh.ExtrudeShapeCustom("ext", shape1, path1, myScale1, myRotation1, false, false, cap, scene, true);
 // mesh update
 ext = BABYLON.Mesh.ExtrudeShapeCustom(null, shape2, path2, myScale2, myRotation2, null, null, null, null, null, null, ext);
+// or 
+ext = BABYLON.Mesh.ExtrudeShapeCustom(null,{shape: shape2, path: path2, scaleFunction: myScale2, rotationFunction: myRotation2, instance: ext});
 ```
 Both new functions can be used in the render loop.      
 

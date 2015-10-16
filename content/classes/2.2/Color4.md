@@ -9,7 +9,7 @@ TAGS:
 
 class [Color4](/classes/2.2/Color4)
 
-
+Color defined by Red Green Blue, plus the Alpha.
 
 ##Constructor
 

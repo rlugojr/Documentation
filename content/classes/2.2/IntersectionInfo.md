@@ -7,7 +7,7 @@ PG_VERSION: 2.1
 
 class [IntersectionInfo](/classes/2.2/IntersectionInfo)
 
-
+Get information of Intersection between two meshes
 
 ##Constructor
 

@@ -1,7 +1,6 @@
 ---
 TAGS:
 ---
-
 ##Description
 
 class [EdgesRenderer](/classes/2.2/EdgesRenderer)

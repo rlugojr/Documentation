@@ -9,7 +9,7 @@ TAGS:
 
 class [Animatable](/classes/2.2/Animatable)
 
-
+Used to access to individual animations
 
 ##Constructor
 

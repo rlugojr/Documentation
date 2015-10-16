@@ -9,7 +9,9 @@ TAGS:
 
 class [RefractionPostProcess](/classes/2.2/RefractionPostProcess) extends [PostProcess](/classes/2.2/PostProcess)
 
+Builtin postprocess applying e refraction texture as a postprocess
 
+A tutorial about post process can be found [here](http://doc.babylonjs.com/tutorials/How_to_use_PostProcesses)
 
 ##Constructor
 

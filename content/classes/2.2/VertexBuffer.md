@@ -7,7 +7,7 @@ PG_VERSION: 2.1
 
 class [VertexBuffer](/classes/2.2/VertexBuffer)
 
-
+Creates a new [VertexBuffer](/classes/2.2/VertexBuffer). Methods of [VertexBuffer](/classes/2.2/VertexBuffer) interface are used to manipulate vertex buffer resources
 
 ##Constructor
 

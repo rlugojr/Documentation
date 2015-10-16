@@ -7,7 +7,7 @@ PG_VERSION: 2.1
 
 class [Layer](/classes/2.2/Layer)
 
-
+Create a new 2D layer (used to represents backgrounds and/or foregrounds)
 
 ##Constructor
 

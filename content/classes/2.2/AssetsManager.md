@@ -9,7 +9,7 @@ TAGS:
 
 class [AssetsManager](/classes/2.2/AssetsManager)
 
-
+This class can be used to import meshes into a scene or load text and binary files.
 
 ##Constructor
 

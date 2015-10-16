@@ -10,7 +10,13 @@ TAGS:
 
 class [Light](/classes/2.2/Light) extends [Node](/classes/2.2/Node)
 
+Lights are used to produce the diffuse and specular color received by each pixel.
 
+This color is then used by materials to determine the final color of every pixel.
+
+Babylon.js allows you to create and register as many lights as you want but beware because the [StandardMaterial](http://doc.babylonjs.com/classes/2.2/StandardMaterial) can handle only 4 simultaneous lights (the first four enabled lights of the lights list)
+
+A tutorial about lights can be found [here](http://doc.babylonjs.com/tutorials/06._Lights)
 
 ##Constructor
 

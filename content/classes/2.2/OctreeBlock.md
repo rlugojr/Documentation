@@ -7,7 +7,7 @@ PG_VERSION: 2.1
 
 class [OctreeBlock](/classes/2.2/OctreeBlock)
 
-
+Create a new OctreeBlock
 
 ##Constructor
 

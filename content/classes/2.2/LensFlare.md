@@ -7,7 +7,9 @@ PG_VERSION: 2.1
 
 class [LensFlare](/classes/2.2/LensFlare)
 
+Create a lens Flare to be integrated in a lens flare system.
 
+A tutorial about using lens flare can be found [here](http://doc.babylonjs.com/tutorials/How_to_use_Lens_Flares)
 
 ##Constructor
 

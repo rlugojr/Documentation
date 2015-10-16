@@ -7,7 +7,7 @@ PG_VERSION: 2.1
 
 class [Matrix](/classes/2.2/Matrix)
 
-
+Creates a new 4 by 4 matrix
 
 ##Members
 

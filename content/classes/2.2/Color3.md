@@ -9,7 +9,7 @@ TAGS:
 
 class [Color3](/classes/2.2/Color3)
 
-
+Basic color defined by Red Green Blue.
 
 ##Constructor
 

@@ -1,7 +1,6 @@
 ---
 TAGS:
 ---
-
 ##Description
 
 class [Box](/classes/2.2/Box) extends _Primitive

@@ -9,7 +9,7 @@ TAGS:
 
 class [EngineCapabilities](/classes/2.2/EngineCapabilities)
 
-
+Regroup the different parameters linked to the using browser
 
 ##Members
 

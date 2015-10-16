@@ -10,7 +10,7 @@ TAGS:
 
 class [MeshAssetTask](/classes/2.2/MeshAssetTask)
 
-
+Load the task on the given [Mesh](/classes/2.2/Mesh)
 
 ##Constructor
 

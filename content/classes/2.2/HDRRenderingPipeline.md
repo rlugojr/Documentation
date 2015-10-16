@@ -1,7 +1,6 @@
 ---
 TAGS:
 ---
-
 ##Description
 
 class [HDRRenderingPipeline](/classes/2.2/HDRRenderingPipeline) extends [PostProcessRenderPipeline](/classes/2.2/PostProcessRenderPipeline)

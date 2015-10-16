@@ -7,7 +7,9 @@ PG_VERSION: 2.1
 
 class [ShadowGenerator](/classes/2.2/ShadowGenerator)
 
+Shadows are dynamic, they are dynamically generated depending upon a Directionallight.
 
+A tutorial about shadows can be found [here](http://doc.babylonjs.com/tutorials/15._Shadows)
 
 ##Constructor
 

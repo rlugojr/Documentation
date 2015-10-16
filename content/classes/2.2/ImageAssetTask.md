@@ -9,7 +9,7 @@ TAGS:
 
 class [ImageAssetTask](/classes/2.2/ImageAssetTask)
 
-
+Load task on the given image
 
 ##Constructor
 

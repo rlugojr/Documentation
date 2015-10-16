@@ -7,7 +7,7 @@ PG_VERSION: 2.1
 
 class [SmartArray](/classes/2.2/SmartArray)
 
-
+Create a new smart array
 
 ##Constructor
 

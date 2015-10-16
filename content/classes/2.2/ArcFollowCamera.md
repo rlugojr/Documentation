@@ -1,7 +1,6 @@
 ---
 TAGS:
 ---
-
 ##Description
 
 class [ArcFollowCamera](/classes/2.2/ArcFollowCamera) extends [TargetCamera](/classes/2.2/TargetCamera)

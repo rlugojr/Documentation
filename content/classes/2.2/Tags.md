@@ -7,7 +7,13 @@ PG_VERSION: 2.1
 
 class [Tags](/classes/2.2/Tags)
 
+[Tags](/classes/2.2/Tags) can be added to ANY javascript object (not necessarily reserved to BabylonJS) by calling [Tags.AddTagsTo](http://doc.babylonjs.com/classes/2.1/Tags#static-addtagsto-obj-tagsstring-rarr-void)
 
+[Tags.MatchesQuery](http://doc.babylonjs.com/classes/2.1/Tags#static-matchesquery-obj-tagsquery-rarr-boolean) can be used to check if a javascript object matches a "boolean" query<br/>
+
+The tags 'true' and 'false' are reserved and cannot be used as tags
+
+a tag cannot start with '||', '&&', and '!' it cannot contain whitespaces
 
 ##Methods
 

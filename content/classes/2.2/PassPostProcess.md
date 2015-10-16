@@ -9,7 +9,7 @@ TAGS:
 
 class [PassPostProcess](/classes/2.2/PassPostProcess) extends [PostProcess](/classes/2.2/PostProcess)
 
-
+Builtin postprocess doing nothing. Used to copy the framebuffer into a postprocess for further use
 
 ##Constructor
 

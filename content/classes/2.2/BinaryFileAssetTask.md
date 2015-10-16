@@ -7,7 +7,7 @@ PG_VERSION: 2.1
 
 class [BinaryFileAssetTask](/classes/2.2/BinaryFileAssetTask)
 
-
+Load task on the given binary file
 
 ##Constructor
 

@@ -10,7 +10,6 @@ TAGS:
 class [Vector4](/classes/2.2/Vector4)
 
 
-
 ##Constructor
 
 ##new [Vector4](/classes/2.2/Vector4)(x, y, z, w)

@@ -18,10 +18,9 @@ class [PositionNormalTextureVertex](/classes/2.2/PositionNormalTextureVertex)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | position | [Vector3](/classes/2.2/Vector3) | 
-optional | normal | [Vector3](/classes/2.2/Vector3) | 
-optional | uv | [Vector2](/classes/2.2/Vector2) | 
-
+optional | position | [Vector3](/classes/2.2/Vector3) |  
+optional | normal | [Vector3](/classes/2.2/Vector3) |  
+optional | uv | [Vector2](/classes/2.2/Vector2) |  
 ##Members
 
 ###position : [Vector3](/classes/2.2/Vector3)

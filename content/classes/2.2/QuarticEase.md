@@ -20,5 +20,5 @@ class [QuarticEase](/classes/2.2/QuarticEase) extends [EasingFunction](/classes/
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gradient | number | 
+ | gradient | number |  
 

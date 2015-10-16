@@ -22,12 +22,10 @@ class [FireProceduralTexture](/classes/2.2/FireProceduralTexture) extends [Proce
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | size | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | fallbackTexture | [Texture](/classes/2.2/Texture) | 
-optional | generateMipMaps | boolean | 
-
+ | name | string |  
+ | size | number |  
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | fallbackTexture | [Texture](/classes/2.2/Texture) |  
 ##Members
 
 ###static PurpleFireColors : [Color3](/classes/2.2/Color3)[]
@@ -74,5 +72,5 @@ optional | generateMipMaps | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | useCameraPostProcess | boolean | 
+optional | useCameraPostProcess | boolean |  
 

@@ -18,11 +18,9 @@ class [BezierCurveEase](/classes/2.2/BezierCurveEase) extends [EasingFunction](/
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | x1 | number | 
-optional | y1 | number | 
-optional | x2 | number | 
-optional | y2 | number | 
-
+optional | x1 | number |  
+optional | y1 | number |  
+optional | x2 | number |  
 ##Members
 
 ###x1 : number
@@ -50,5 +48,5 @@ optional | y2 | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gradient | number | 
+ | gradient | number |  
 

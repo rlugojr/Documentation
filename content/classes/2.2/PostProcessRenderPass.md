@@ -20,13 +20,11 @@ Builds a new [PostProcessRenderPass](/classes/2.2/PostProcessRenderPass) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
- | name | string | 
- | size | number | 
- | renderList | [Mesh](/classes/2.2/Mesh)[] | 
- | beforeRender | () =&gt; void | 
- | afterRender | () =&gt; void | 
-
+ | scene | [Scene](/classes/2.2/Scene) |  The scene linked to this renderer
+ | name | string |  The name of the object
+ | size | number |  The size of the renderer in pixels
+ | renderList | [Mesh](/classes/2.2/Mesh)[] |  @param renderList
+ | beforeRender | () =&gt; void |  The function to run before rendering
 ##Methods
 
 ###setRenderList(renderList) &rarr; void
@@ -36,7 +34,7 @@ Updates the render list
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderList | [Mesh](/classes/2.2/Mesh)[] | 
+ | renderList | [Mesh](/classes/2.2/Mesh)[] |  @param renderList
 
 ###getRenderTexture() &rarr; [RenderTargetTexture](/classes/2.2/RenderTargetTexture)
 

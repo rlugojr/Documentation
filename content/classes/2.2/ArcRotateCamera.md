@@ -24,13 +24,11 @@ A tutorial about [ArcRotateCamera](/classes/2.2/ArcRotateCamera) can be found he
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | alpha | number | 
- | beta | number | 
- | radius | number | 
- | target | any | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  
+ | alpha | number |  
+ | beta | number |  
+ | radius | number |  
+ | target | any |  
 ##Members
 
 ###alpha : number
@@ -170,10 +168,9 @@ Angular sensibility
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | element | HTMLElement | 
-optional | noPreventDefault | boolean | 
+ | element | HTMLElement |  Element to detach from the control
+optional | noPreventDefault | boolean |  @param noPreventDefault
 optional | useCtrlForPanning | boolean | 
-
 ###detachControl(element) &rarr; void
 
 Detach camera control and display from the specified canvas
@@ -181,7 +178,7 @@ Detach camera control and display from the specified canvas
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | element | HTMLElement | 
+ | element | HTMLElement |  Element to detach from the control
 
 ###setPosition(position) &rarr; void
 
@@ -190,7 +187,7 @@ Set the position of the [ArcRotateCamera](/classes/2.2/ArcRotateCamera)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | position | [Vector3](/classes/2.2/Vector3) | 
+ | position | [Vector3](/classes/2.2/Vector3) |  The new position of the [ArcRotateCamera](/classes/2.2/ArcRotateCamera)
 
 ###setTarget(target) &rarr; void
 
@@ -199,7 +196,7 @@ Set the position of the [ArcRotateCamera](/classes/2.2/ArcRotateCamera)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | target | [Vector3](/classes/2.2/Vector3) | 
+ | target | [Vector3](/classes/2.2/Vector3) |  
 
 ###zoomOn(meshes, doNotUpdateMaxZ) &rarr; void
 
@@ -208,9 +205,8 @@ Set the position of the [ArcRotateCamera](/classes/2.2/ArcRotateCamera)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | meshes | [AbstractMesh](/classes/2.2/AbstractMesh)[] | 
+optional | meshes | [AbstractMesh](/classes/2.2/AbstractMesh)[] |  Meshes to zoom on
 optional | doNotUpdateMaxZ | boolean | 
-
 ###focusOn(meshesOrMinMaxVectorAndDistance, doNotUpdateMaxZ) &rarr; void
 
 
@@ -218,9 +214,8 @@ optional | doNotUpdateMaxZ | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | meshesOrMinMaxVectorAndDistance | any | 
+ | meshesOrMinMaxVectorAndDistance | any |  @param meshesOrMinMaxVectorAndDistance
 optional | doNotUpdateMaxZ | boolean | 
-
 ###createRigCamera(name, cameraIndex) &rarr; [Camera](/classes/2.2/Camera)
 
 @override
@@ -230,6 +225,5 @@ Override [Camera](/classes/2.2/Camera).createRigCamera
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | cameraIndex | number | 
-
+ | name | string |  
+ | cameraIndex | number |  

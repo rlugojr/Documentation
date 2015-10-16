@@ -21,11 +21,9 @@ A tutorial about cube textures  can be found here : http://doc.babylonjs.com/tut
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | rootUrl | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | extensions | string[] | 
-optional | noMipmap | boolean | 
-
+ | rootUrl | string |  Link of the texture
+ | scene | [Scene](/classes/2.2/Scene) |  [Scene](/classes/2.2/Scene) which contain the texture
+optional | extensions | string[] |  The cube texture extensions. The defaults extensions are : [_px.jpg, _py.jpg, _pz.jpg, _nx.jpg, _ny.jpg, _nz.jpg]
 ##Members
 
 ###url : string

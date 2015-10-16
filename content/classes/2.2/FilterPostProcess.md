@@ -20,14 +20,12 @@ class [FilterPostProcess](/classes/2.2/FilterPostProcess) extends [PostProcess](
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | kernelMatrix | [Matrix](/classes/2.2/Matrix) | 
- | ratio | number | 
-optional | camera | [Camera](/classes/2.2/Camera) | 
-optional | samplingMode | number | 
-optional | engine | [Engine](/classes/2.2/Engine) | 
-optional | reusable | boolean | 
-
+ | name | string |  
+ | kernelMatrix | [Matrix](/classes/2.2/Matrix) |  
+ | ratio | number |  
+optional | camera | [Camera](/classes/2.2/Camera) |  
+optional | samplingMode | number |  
+optional | engine | [Engine](/classes/2.2/Engine) |  
 ##Members
 
 ###kernelMatrix : [Matrix](/classes/2.2/Matrix)

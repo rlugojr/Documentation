@@ -24,8 +24,6 @@ class [AnaglyphGamepadCamera](/classes/2.2/AnaglyphGamepadCamera) extends [Gamep
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | position | [Vector3](/classes/2.2/Vector3) | 
- | interaxialDistance | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  
+ | position | [Vector3](/classes/2.2/Vector3) |  
+ | interaxialDistance | number |  

@@ -18,7 +18,7 @@ class [Frustum](/classes/2.2/Frustum)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | transform | [Matrix](/classes/2.2/Matrix) | 
+ | transform | [Matrix](/classes/2.2/Matrix) |  
 
 ###static GetPlanesToRef(transform, frustumPlanes) &rarr; void
 
@@ -27,6 +27,5 @@ class [Frustum](/classes/2.2/Frustum)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | transform | [Matrix](/classes/2.2/Matrix) | 
- | frustumPlanes | [Plane](/classes/2.2/Plane)[] | 
-
+ | transform | [Matrix](/classes/2.2/Matrix) |  
+ | frustumPlanes | [Plane](/classes/2.2/Plane)[] |  

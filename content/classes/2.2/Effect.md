@@ -20,16 +20,14 @@ The [Effect](/classes/2.2/Effect) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | baseName | any | 
- | attributesNames | string[] | 
- | uniformsNames | string[] | 
- | samplers | string[] | 
- | engine | any | 
-optional | defines | string | 
-optional | fallbacks | [EffectFallbacks](/classes/2.2/EffectFallbacks) | 
-optional | onCompiled | (effect: [Effect](/classes/2.2/Effect)) =&gt; void | 
-optional | onError | (effect: [Effect](/classes/2.2/Effect), errors: string) =&gt; void | 
-
+ | baseName | any |  The base name of the effect (The name of file without .fragment.fx or .vertex.fx)
+ | attributesNames | string[] |  An array containing the list of attributes.
+ | uniformsNames | string[] |  An array containing the list of uniforms names.
+ | samplers | string[] |  @param samplers
+ | engine | any |  The given engine
+optional | defines | string |  The list of defines used by this effect.
+optional | fallbacks | [EffectFallbacks](/classes/2.2/EffectFallbacks) |  @param fallbacks
+optional | onCompiled | (effect: [Effect](/classes/2.2/Effect)) =&gt; void |  Function called when given effect are successfully compiled
 ##Members
 
 ###name : any
@@ -74,7 +72,7 @@ Return the attribute location at the specified index
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | index | number | 
+ | index | number |  The given index
 
 ###getAttributeLocationByName(name) &rarr; number
 
@@ -83,7 +81,7 @@ Return the attribute location at the specified name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
+ | name | string |  The given name
 
 ###getAttributesCount() &rarr; number
 
@@ -95,7 +93,7 @@ Return the index of the searched name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
+ | uniformName | string |  The given uniform name
 
 ###getUniform(uniformName) &rarr; WebGLUniformLocation
 
@@ -104,7 +102,7 @@ Return searched parameter if exist
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
+ | uniformName | string |  The given uniform name
 
 ###getSamplers() &rarr; string[]
 
@@ -119,9 +117,8 @@ Set the texture to the effect
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | channel | string | 
- | texture | [BaseTexture](/classes/2.2/BaseTexture) | 
-
+ | channel | string |  @param channel
+ | texture | [BaseTexture](/classes/2.2/BaseTexture) |  The given texture
 ###setTextureFromPostProcess(channel, postProcess) &rarr; void
 
 Set the texture to the effect from post process
@@ -129,9 +126,8 @@ Set the texture to the effect from post process
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | channel | string | 
- | postProcess | [PostProcess](/classes/2.2/PostProcess) | 
-
+ | channel | string |  @param channel
+ | postProcess | [PostProcess](/classes/2.2/PostProcess) |  The given post process
 ###setArray(uniformName, array) &rarr; [Effect](/classes/2.2/Effect)
 
 Set the array given by its name
@@ -139,9 +135,8 @@ Set the array given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | array | number[] | 
-
+ | uniformName | string |  The given uniform name
+ | array | number[] |  
 ###setArray2(uniformName, array) &rarr; [Effect](/classes/2.2/Effect)
 
 
@@ -149,9 +144,8 @@ Set the array given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | array | number[] | 
-
+ | uniformName | string |  The given uniform name
+ | array | number[] |  
 ###setArray3(uniformName, array) &rarr; [Effect](/classes/2.2/Effect)
 
 
@@ -159,9 +153,8 @@ Set the array given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | array | number[] | 
-
+ | uniformName | string |  The given uniform name
+ | array | number[] |  
 ###setArray4(uniformName, array) &rarr; [Effect](/classes/2.2/Effect)
 
 
@@ -169,9 +162,8 @@ Set the array given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | array | number[] | 
-
+ | uniformName | string |  The given uniform name
+ | array | number[] |  
 ###setMatrices(uniformName, matrices) &rarr; [Effect](/classes/2.2/Effect)
 
 Set the matrice given by its name
@@ -179,9 +171,8 @@ Set the matrice given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | matrices | Float32Array | 
-
+ | uniformName | string |  The given uniform name
+ | matrices | Float32Array |  The matrices
 ###setMatrix(uniformName, matrix) &rarr; [Effect](/classes/2.2/Effect)
 
 Set the matrix given by its name
@@ -189,9 +180,8 @@ Set the matrix given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | matrix | [Matrix](/classes/2.2/Matrix) | 
-
+ | uniformName | string |  The given uniform name
+ | matrix | [Matrix](/classes/2.2/Matrix) |  the matrix
 ###setMatrix3x3(uniformName, matrix) &rarr; [Effect](/classes/2.2/Effect)
 
 
@@ -199,9 +189,8 @@ Set the matrix given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | matrix | Float32Array | 
-
+ | uniformName | string |  The given uniform name
+ | matrix | Float32Array |  the matrix
 ###setMatrix2x2(uniformname, matrix) &rarr; [Effect](/classes/2.2/Effect)
 
 
@@ -210,8 +199,7 @@ Set the matrix given by its name
  | Name | Type | Description
 ---|---|---|---
  | uniformname | string | 
- | matrix | Float32Array | 
-
+ | matrix | Float32Array |  the matrix
 ###setFloat(uniformName, value) &rarr; [Effect](/classes/2.2/Effect)
 
 Set the float given by its name
@@ -219,9 +207,8 @@ Set the float given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | value | number | 
-
+ | uniformName | string |  The given uniform name
+ | value | number |  The float
 ###setBool(uniformName, bool) &rarr; [Effect](/classes/2.2/Effect)
 
 Set the boolean given by its name
@@ -229,9 +216,8 @@ Set the boolean given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | bool | boolean | 
-
+ | uniformName | string |  The given uniform name
+ | bool | boolean |  The boolean
 ###setVector2(uniformName, vector2) &rarr; [Effect](/classes/2.2/Effect)
 
 Set the vector2 given by its name
@@ -239,9 +225,8 @@ Set the vector2 given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | vector2 | [Vector2](/classes/2.2/Vector2) | 
-
+ | uniformName | string |  The given uniform name
+ | vector2 | [Vector2](/classes/2.2/Vector2) |  The vector2
 ###setFloat2(uniformName, x, y) &rarr; [Effect](/classes/2.2/Effect)
 
 Set the float2 given by its name
@@ -249,10 +234,9 @@ Set the float2 given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | x | number | 
- | y | number | 
-
+ | uniformName | string |  The given uniform name
+ | x | number |  The value on x axis
+ | y | number |  The value on y axis
 ###setVector3(uniformName, vector3) &rarr; [Effect](/classes/2.2/Effect)
 
 Set the [Vector3](/classes/2.2/Vector3) given by its name
@@ -260,9 +244,8 @@ Set the [Vector3](/classes/2.2/Vector3) given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | vector3 | [Vector3](/classes/2.2/Vector3) | 
-
+ | uniformName | string |  The given uniform name
+ | vector3 | [Vector3](/classes/2.2/Vector3) |  The vector3
 ###setFloat3(uniformName, x, y, z) &rarr; [Effect](/classes/2.2/Effect)
 
 Set the float3 given by its name
@@ -270,11 +253,9 @@ Set the float3 given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | x | number | 
- | y | number | 
- | z | number | 
-
+ | uniformName | string |  The given uniform name
+ | x | number |  The value on x axis
+ | y | number |  The value on y axis
 ###setVector4(uniformName, vector4) &rarr; [Effect](/classes/2.2/Effect)
 
 
@@ -282,9 +263,8 @@ Set the float3 given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
+ | uniformName | string |  The given uniform name
  | vector4 | [Vector4](/classes/2.2/Vector4) | 
-
 ###setFloat4(uniformName, x, y, z, w) &rarr; [Effect](/classes/2.2/Effect)
 
 Set the float4 given by its name
@@ -292,12 +272,10 @@ Set the float4 given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | x | number | 
- | y | number | 
- | z | number | 
- | w | number | 
-
+ | uniformName | string |  The given uniform name
+ | x | number |  The value on x axis
+ | y | number |  The value on y axis
+ | z | number |  The value on z axis
 ###setColor3(uniformName, color3) &rarr; [Effect](/classes/2.2/Effect)
 
 Set the color3 given by its name
@@ -305,9 +283,8 @@ Set the color3 given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | color3 | [Color3](/classes/2.2/Color3) | 
-
+ | uniformName | string |  The given uniform name
+ | color3 | [Color3](/classes/2.2/Color3) |  The color
 ###setColor4(uniformName, color3, alpha) &rarr; [Effect](/classes/2.2/Effect)
 
 
@@ -315,7 +292,6 @@ Set the color3 given by its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniformName | string | 
- | color3 | [Color3](/classes/2.2/Color3) | 
- | alpha | number | 
-
+ | uniformName | string |  The given uniform name
+ | color3 | [Color3](/classes/2.2/Color3) |  The color
+ | alpha | number |  Alpha is the transparency between 0 and 1.

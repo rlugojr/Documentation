@@ -16,16 +16,15 @@ class [Material](/classes/2.2/Material)
 ##new [Material](/classes/2.2/Material)(name, scene, doNotAdd)
 
 Create a new [Material](/classes/2.2/Material).
-Everything to know about material can be found here : http://doc.babylonjs.com/tutorials/01._Advanced_Texturing
+Everything to know about material can be found here : http://doc.babylonjs.com/tutorials/04._Materialss
 And here : http://blogs.msdn.com/b/eternalcoding/archive/2013/07/01/babylon-js-unleash-the-standardmaterial-for-your-babylon-js-game.aspx
 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | doNotAdd | boolean | 
-
+ | name | string |  Name of the material
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | doNotAdd | boolean |  Not add the material
 ##Members
 
 ###name : string
@@ -130,9 +129,8 @@ Function to know if material is ready
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
-optional | useInstances | boolean | 
-
+optional | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  The mesh to bind
+optional | useInstances | boolean |  
 ###getEffect() &rarr; [Effect](/classes/2.2/Effect)
 
 Get effect of the material
@@ -159,9 +157,8 @@ Track the creation
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | onCompiled | (effect: [Effect](/classes/2.2/Effect)) =&gt; void | 
- | onError | (effect: [Effect](/classes/2.2/Effect), errors: string) =&gt; void | 
-
+ | onCompiled | (effect: [Effect](/classes/2.2/Effect)) =&gt; void |  Callback function called on compiled (effect on compiled)
+ | onError | (effect: [Effect](/classes/2.2/Effect), errors: string) =&gt; void |  Callback function called on error (effect on error, error string)
 ###bind(world, mesh) &rarr; void
 
 Function to bind the material
@@ -169,9 +166,8 @@ Function to bind the material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | world | [Matrix](/classes/2.2/Matrix) | 
-optional | mesh | [Mesh](/classes/2.2/Mesh) | 
-
+ | world | [Matrix](/classes/2.2/Matrix) |  The world matrix
+optional | mesh | [Mesh](/classes/2.2/Mesh) |  The mesh to bind
 ###bindOnlyWorldMatrix(world) &rarr; void
 
 Function to bind only the world matrix
@@ -179,7 +175,7 @@ Function to bind only the world matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | world | [Matrix](/classes/2.2/Matrix) | 
+ | world | [Matrix](/classes/2.2/Matrix) |  The world matrix
 
 ###unbind() &rarr; void
 
@@ -191,7 +187,7 @@ Function to unbind
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
+ | name | string |  Name of the material
 
 ###dispose(forceDisposeEffect) &rarr; void
 
@@ -200,5 +196,5 @@ Function to unbind
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | forceDisposeEffect | boolean | 
+optional | forceDisposeEffect | boolean |  True to force the dispose
 

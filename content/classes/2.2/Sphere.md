@@ -23,8 +23,6 @@ class [Sphere](/classes/2.2/Sphere) extends _Primitive
  | diameter | number | 
 optional | canBeRegenerated | boolean | 
 optional | mesh | [Mesh](/classes/2.2/Mesh) | 
-optional | side | number | 
-
 ##Members
 
 ###segments : number

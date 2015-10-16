@@ -21,7 +21,7 @@ class [SceneOptimization](/classes/2.2/SceneOptimization)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | priority | number | 
+optional | priority | number |  
 
 ##Members
 

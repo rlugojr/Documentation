@@ -18,9 +18,8 @@ class [Reference](/classes/2.2/Reference)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vertexId | number | 
- | triangleId | number | 
-
+ | vertexId | number |  
+ | triangleId | number |  
 ##Members
 
 ###vertexId : number

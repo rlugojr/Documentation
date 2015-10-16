@@ -25,7 +25,7 @@ Adds a pipeline to the pool
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPipeline | [PostProcessRenderPipeline](/classes/2.2/PostProcessRenderPipeline) | 
+ | renderPipeline | [PostProcessRenderPipeline](/classes/2.2/PostProcessRenderPipeline) |  The given pipeline
 
 ###attachCamerasToRenderPipeline(renderPipelineName, cameras, unique) &rarr; any
 
@@ -34,10 +34,9 @@ Attach a render pipeline to a list(or unique) of cameras
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPipelineName | string | 
- | cameras | [Camera](/classes/2.2/Camera) | 
-optional | unique | boolean | 
-
+ | renderPipelineName | string |  The render pipeline name
+ | cameras | [Camera](/classes/2.2/Camera) |  The given camera or an array of cameras
+optional | unique | boolean |  @param unique
 ###attachCamerasToRenderPipeline(renderPipelineName, cameras, unique) &rarr; any
 
 Attach a render pipeline to a list(or unique) of cameras
@@ -45,10 +44,9 @@ Attach a render pipeline to a list(or unique) of cameras
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPipelineName | string | 
- | cameras | [Camera](/classes/2.2/Camera)[] | 
-optional | unique | boolean | 
-
+ | renderPipelineName | string |  The render pipeline name
+ | cameras | [Camera](/classes/2.2/Camera)[] |  The given camera or an array of cameras
+optional | unique | boolean |  @param unique
 ###detachCamerasFromRenderPipeline(renderPipelineName, cameras) &rarr; any
 
 Detach a render pipeline to a list(or unique) of cameras
@@ -56,9 +54,8 @@ Detach a render pipeline to a list(or unique) of cameras
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPipelineName | string | 
- | cameras | [Camera](/classes/2.2/Camera) | 
-
+ | renderPipelineName | string |  The render pipeline name
+ | cameras | [Camera](/classes/2.2/Camera) |  The given camera or an array of cameras
 ###detachCamerasFromRenderPipeline(renderPipelineName, cameras) &rarr; any
 
 Detach a render pipeline to a list(or unique) of cameras
@@ -66,9 +63,8 @@ Detach a render pipeline to a list(or unique) of cameras
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPipelineName | string | 
- | cameras | [Camera](/classes/2.2/Camera)[] | 
-
+ | renderPipelineName | string |  The render pipeline name
+ | cameras | [Camera](/classes/2.2/Camera)[] |  The given camera or an array of cameras
 ###enableEffectInPipeline(renderPipelineName, renderEffectName, cameras) &rarr; any
 
 Enable an effect in a pipeline for a list(or unique) of cameras
@@ -76,10 +72,9 @@ Enable an effect in a pipeline for a list(or unique) of cameras
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPipelineName | string | 
- | renderEffectName | string | 
- | cameras | [Camera](/classes/2.2/Camera) | 
-
+ | renderPipelineName | string |  The render pipeline name
+ | renderEffectName | string |  The render effect name
+ | cameras | [Camera](/classes/2.2/Camera) |  The given camera or an array of cameras
 ###enableEffectInPipeline(renderPipelineName, renderEffectName, cameras) &rarr; any
 
 Enable an effect in a pipeline for a list(or unique) of cameras
@@ -87,10 +82,9 @@ Enable an effect in a pipeline for a list(or unique) of cameras
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPipelineName | string | 
- | renderEffectName | string | 
- | cameras | [Camera](/classes/2.2/Camera)[] | 
-
+ | renderPipelineName | string |  The render pipeline name
+ | renderEffectName | string |  The render effect name
+ | cameras | [Camera](/classes/2.2/Camera)[] |  The given camera or an array of cameras
 ###disableEffectInPipeline(renderPipelineName, renderEffectName, cameras) &rarr; any
 
 Disable an effect in a pipeline for a list(or unique) of cameras
@@ -98,10 +92,9 @@ Disable an effect in a pipeline for a list(or unique) of cameras
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPipelineName | string | 
- | renderEffectName | string | 
- | cameras | [Camera](/classes/2.2/Camera) | 
-
+ | renderPipelineName | string |  The render pipeline name
+ | renderEffectName | string |  The render effect name
+ | cameras | [Camera](/classes/2.2/Camera) |  The given camera or an array of cameras
 ###disableEffectInPipeline(renderPipelineName, renderEffectName, cameras) &rarr; any
 
 Disable an effect in a pipeline for a list(or unique) of cameras
@@ -109,10 +102,9 @@ Disable an effect in a pipeline for a list(or unique) of cameras
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPipelineName | string | 
- | renderEffectName | string | 
- | cameras | [Camera](/classes/2.2/Camera)[] | 
-
+ | renderPipelineName | string |  The render pipeline name
+ | renderEffectName | string |  The render effect name
+ | cameras | [Camera](/classes/2.2/Camera)[] |  The given camera or an array of cameras
 ###enableDisplayOnlyPassInPipeline(renderPipelineName, passName, cameras) &rarr; any
 
 Enable displaying of a specific pass used in a specific render pipeline, for a list(or unique) of cameras
@@ -120,10 +112,9 @@ Enable displaying of a specific pass used in a specific render pipeline, for a l
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPipelineName | string | 
- | passName | string | 
- | cameras | [Camera](/classes/2.2/Camera) | 
-
+ | renderPipelineName | string |  The render pipeline name
+ | passName | string |  The pass name
+ | cameras | [Camera](/classes/2.2/Camera) |  The given camera or an array of cameras
 ###enableDisplayOnlyPassInPipeline(renderPipelineName, passName, cameras) &rarr; any
 
 Enable displaying of a specific pass used in a specific render pipeline, for a list(or unique) of cameras
@@ -131,10 +122,9 @@ Enable displaying of a specific pass used in a specific render pipeline, for a l
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPipelineName | string | 
- | passName | string | 
- | cameras | [Camera](/classes/2.2/Camera)[] | 
-
+ | renderPipelineName | string |  The render pipeline name
+ | passName | string |  The pass name
+ | cameras | [Camera](/classes/2.2/Camera)[] |  The given camera or an array of cameras
 ###disableDisplayOnlyPassInPipeline(renderPipelineName, cameras) &rarr; any
 
 Disable displaying of a specific pass used in a specific render pipeline, for a list(or unique) of cameras
@@ -142,9 +132,8 @@ Disable displaying of a specific pass used in a specific render pipeline, for a 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPipelineName | string | 
- | cameras | [Camera](/classes/2.2/Camera) | 
-
+ | renderPipelineName | string |  The render pipeline name
+ | cameras | [Camera](/classes/2.2/Camera) |  The given camera or an array of cameras
 ###disableDisplayOnlyPassInPipeline(renderPipelineName, cameras) &rarr; any
 
 Disable displaying of a specific pass used in a specific render pipeline, for a list(or unique) of cameras
@@ -152,9 +141,8 @@ Disable displaying of a specific pass used in a specific render pipeline, for a 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPipelineName | string | 
- | cameras | [Camera](/classes/2.2/Camera)[] | 
-
+ | renderPipelineName | string |  The render pipeline name
+ | cameras | [Camera](/classes/2.2/Camera)[] |  The given camera or an array of cameras
 ###update() &rarr; void
 
 

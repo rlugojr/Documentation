@@ -20,9 +20,8 @@ class [MeshLODLevel](/classes/2.2/MeshLODLevel)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | distance | number | 
- | mesh | [Mesh](/classes/2.2/Mesh) | 
-
+ | distance | number |  
+ | mesh | [Mesh](/classes/2.2/Mesh) |  
 ##Members
 
 ###distance : number

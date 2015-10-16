@@ -21,9 +21,8 @@ A tutorial about multi materials can be found here : http://blogs.msdn.com/b/ete
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  
+ | scene | [Scene](/classes/2.2/Scene) |  [Scene](/classes/2.2/Scene) which contain the [MultiMaterial](/classes/2.2/MultiMaterial)
 ##Members
 
 ###subMaterials : [Material](/classes/2.2/Material)[]
@@ -39,7 +38,7 @@ Get a sub material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | index | any | 
+ | index | any |  Index of the submaterial
 
 ###isReady(mesh) &rarr; boolean
 
@@ -48,7 +47,7 @@ Get a sub material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
+optional | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  The mesh with the multi material
 
 ###clone(name) &rarr; [MultiMaterial](/classes/2.2/MultiMaterial)
 
@@ -57,5 +56,5 @@ optional | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
+ | name | string |  
 

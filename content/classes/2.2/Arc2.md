@@ -20,10 +20,9 @@ class [Arc2](/classes/2.2/Arc2)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | startPoint | [Vector2](/classes/2.2/Vector2) | 
- | midPoint | [Vector2](/classes/2.2/Vector2) | 
- | endPoint | [Vector2](/classes/2.2/Vector2) | 
-
+ | startPoint | [Vector2](/classes/2.2/Vector2) |  
+ | midPoint | [Vector2](/classes/2.2/Vector2) |  
+ | endPoint | [Vector2](/classes/2.2/Vector2) |  
 ##Members
 
 ###startPoint : [Vector2](/classes/2.2/Vector2)

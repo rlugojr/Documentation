@@ -20,7 +20,7 @@ class [DebugLayer](/classes/2.2/DebugLayer)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
+ | scene | [Scene](/classes/2.2/Scene) |  
 
 ##Members
 
@@ -59,6 +59,5 @@ class [DebugLayer](/classes/2.2/DebugLayer)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | showUI | boolean | 
-optional | camera | [Camera](/classes/2.2/Camera) | 
-
+optional | showUI | boolean |  
+optional | camera | [Camera](/classes/2.2/Camera) |  

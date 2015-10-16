@@ -20,9 +20,8 @@ Creates a new [Vector2](/classes/2.2/Vector2)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
-
+ | x | number |  The X coordinate of another vector
+ | y | number |  The Y coordinate of another vector
 ##Members
 
 ###x : number
@@ -45,9 +44,8 @@ Fills an array from a given index with the vector's coordinates
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | array | number[] | 
-optional | index | number | 
-
+ | array | number[] |  The given array
+optional | index | number |  default : 0 The given index
 ###asArray() &rarr; number[]
 
 Returns an array representation of the vector
@@ -58,7 +56,7 @@ Copies another vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | source | [Vector2](/classes/2.2/Vector2) | 
+ | source | [Vector2](/classes/2.2/Vector2) |  The source vector
 
 ###copyFromFloats(x, y) &rarr; [Vector2](/classes/2.2/Vector2)
 
@@ -67,9 +65,8 @@ Copies another vector in float form
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
-
+ | x | number |  The X coordinate of another vector
+ | y | number |  The Y coordinate of another vector
 ###add(otherVector) &rarr; [Vector2](/classes/2.2/Vector2)
 
 Adds an another vector and returns the result as a new vector
@@ -77,7 +74,7 @@ Adds an another vector and returns the result as a new vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](/classes/2.2/Vector2) | 
+ | otherVector | [Vector2](/classes/2.2/Vector2) |  
 
 ###addVector3(otherVector) &rarr; [Vector2](/classes/2.2/Vector2)
 
@@ -86,7 +83,7 @@ Adds the vector, the vector3's x and y
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector3](/classes/2.2/Vector3) | 
+ | otherVector | [Vector3](/classes/2.2/Vector3) |  
 
 ###subtract(otherVector) &rarr; [Vector2](/classes/2.2/Vector2)
 
@@ -95,7 +92,7 @@ Substracts another vector and returns the result in a new vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](/classes/2.2/Vector2) | 
+ | otherVector | [Vector2](/classes/2.2/Vector2) |  
 
 ###subtractInPlace(otherVector) &rarr; [Vector2](/classes/2.2/Vector2)
 
@@ -104,7 +101,7 @@ Substracts another vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](/classes/2.2/Vector2) | 
+ | otherVector | [Vector2](/classes/2.2/Vector2) |  
 
 ###multiplyInPlace(otherVector) &rarr; [Vector2](/classes/2.2/Vector2)
 
@@ -113,7 +110,7 @@ Multiply by another vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](/classes/2.2/Vector2) | 
+ | otherVector | [Vector2](/classes/2.2/Vector2) |  
 
 ###multiply(otherVector) &rarr; [Vector2](/classes/2.2/Vector2)
 
@@ -122,7 +119,7 @@ Multiply by another vector and returns the result in a new vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](/classes/2.2/Vector2) | 
+ | otherVector | [Vector2](/classes/2.2/Vector2) |  
 
 ###multiplyToRef(otherVector, result) &rarr; [Vector2](/classes/2.2/Vector2)
 
@@ -131,9 +128,8 @@ Multiply by another vector into a third target vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](/classes/2.2/Vector2) | 
- | result | [Vector2](/classes/2.2/Vector2) | 
-
+ | otherVector | [Vector2](/classes/2.2/Vector2) |  
+ | result | [Vector2](/classes/2.2/Vector2) |  The existing vector
 ###multiplyByFloats(x, y) &rarr; [Vector2](/classes/2.2/Vector2)
 
 Multiply by another vector in float form and returns the result in a new vector
@@ -141,9 +137,8 @@ Multiply by another vector in float form and returns the result in a new vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
-
+ | x | number |  The X coordinate of another vector
+ | y | number |  The Y coordinate of another vector
 ###divide(otherVector) &rarr; [Vector2](/classes/2.2/Vector2)
 
 Divides by another vector and returns the result nin a new vector
@@ -151,7 +146,7 @@ Divides by another vector and returns the result nin a new vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](/classes/2.2/Vector2) | 
+ | otherVector | [Vector2](/classes/2.2/Vector2) |  
 
 ###divideToRef(otherVector, result) &rarr; [Vector2](/classes/2.2/Vector2)
 
@@ -160,9 +155,8 @@ Divides by another vector into a third target vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](/classes/2.2/Vector2) | 
- | result | [Vector2](/classes/2.2/Vector2) | 
-
+ | otherVector | [Vector2](/classes/2.2/Vector2) |  
+ | result | [Vector2](/classes/2.2/Vector2) |  The existing vector
 ###negate() &rarr; [Vector2](/classes/2.2/Vector2)
 
 Returns the opposite vector, that is the vector with opposite coordinates
@@ -173,7 +167,7 @@ Scales the vector with the given factor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scale | number | 
+ | scale | number |  The scaling factor
 
 ###scale(scale) &rarr; [Vector2](/classes/2.2/Vector2)
 
@@ -182,7 +176,7 @@ Scales the vector and retruns the result as a new vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scale | number | 
+ | scale | number |  The scaling factor
 
 ###equals(otherVector) &rarr; boolean
 
@@ -192,7 +186,7 @@ Returns true if X,Y coordinates are equal
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](/classes/2.2/Vector2) | 
+ | otherVector | [Vector2](/classes/2.2/Vector2) |  
 
 ###equalsWithEpsilon(otherVector, epsilon) &rarr; boolean
 
@@ -201,9 +195,8 @@ Returns true if X,Y coordinates are equal
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherVector | [Vector2](/classes/2.2/Vector2) | 
+ | otherVector | [Vector2](/classes/2.2/Vector2) |  
 optional | epsilon | number | 
-
 ###length() &rarr; number
 
 The length of the vector
@@ -226,9 +219,8 @@ Creates a new vector from a given array
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | array | number[] | 
-optional | offset | number | 
-
+ | array | number[] |  The given array
+optional | offset | number |  The first index of the array to look at
 ###static FromArrayToRef(array, offset, result) &rarr; void
 
 Sets an existing vector from a given array
@@ -236,10 +228,9 @@ Sets an existing vector from a given array
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | array | number[] | 
- | offset | number | 
- | result | [Vector2](/classes/2.2/Vector2) | 
-
+ | array | number[] |  The given array
+ | offset | number |  The first index of the array to look at
+ | result | [Vector2](/classes/2.2/Vector2) |  The existing vector
 ###static CatmullRom(value1, value2, value3, value4, amount) &rarr; [Vector2](/classes/2.2/Vector2)
 
 Performs a Catmull-Rom interpolation using the specified positions.
@@ -248,12 +239,10 @@ When the method completes, returns the result of the Catmull-Rom interpolation
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value1 | [Vector2](/classes/2.2/Vector2) | 
- | value2 | [Vector2](/classes/2.2/Vector2) | 
- | value3 | [Vector2](/classes/2.2/Vector2) | 
- | value4 | [Vector2](/classes/2.2/Vector2) | 
- | amount | number | 
-
+ | value1 | [Vector2](/classes/2.2/Vector2) |  first vector
+ | value2 | [Vector2](/classes/2.2/Vector2) |  second vector
+ | value3 | [Vector2](/classes/2.2/Vector2) |  The third position in the interpolation.
+ | value4 | [Vector2](/classes/2.2/Vector2) |  The fourth position in the interpolation.
 ###static Clamp(value, min, max) &rarr; [Vector2](/classes/2.2/Vector2)
 
 Restricts a value to be within a specified range.
@@ -261,10 +250,9 @@ Restricts a value to be within a specified range.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value | [Vector2](/classes/2.2/Vector2) | 
- | min | [Vector2](/classes/2.2/Vector2) | 
- | max | [Vector2](/classes/2.2/Vector2) | 
-
+ | value | [Vector2](/classes/2.2/Vector2) |  The value to clamp
+ | min | [Vector2](/classes/2.2/Vector2) |  The minimum value
+ | max | [Vector2](/classes/2.2/Vector2) |  The maximum value
 ###static Hermite(value1, tangent1, value2, tangent2, amount) &rarr; [Vector2](/classes/2.2/Vector2)
 
 Performs a Hermite spline interpolation.
@@ -272,12 +260,10 @@ Performs a Hermite spline interpolation.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value1 | [Vector2](/classes/2.2/Vector2) | 
- | tangent1 | [Vector2](/classes/2.2/Vector2) | 
- | value2 | [Vector2](/classes/2.2/Vector2) | 
- | tangent2 | [Vector2](/classes/2.2/Vector2) | 
- | amount | number | 
-
+ | value1 | [Vector2](/classes/2.2/Vector2) |  first vector
+ | tangent1 | [Vector2](/classes/2.2/Vector2) |  First source tangent vector.
+ | value2 | [Vector2](/classes/2.2/Vector2) |  second vector
+ | tangent2 | [Vector2](/classes/2.2/Vector2) |  Second source tangent vector.
 ###static Lerp(start, end, amount) &rarr; [Vector2](/classes/2.2/Vector2)
 
 Performs a linear interpolation between two vectors.
@@ -285,10 +271,9 @@ Performs a linear interpolation between two vectors.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | start | [Vector2](/classes/2.2/Vector2) | 
- | end | [Vector2](/classes/2.2/Vector2) | 
- | amount | number | 
-
+ | start | [Vector2](/classes/2.2/Vector2) |  interpolation start vector
+ | end | [Vector2](/classes/2.2/Vector2) |  interpolation end vector
+ | amount | number |  Weighting factor
 ###static Dot(left, right) &rarr; number
 
 Dot product between two vectors
@@ -296,9 +281,8 @@ Dot product between two vectors
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | left | [Vector2](/classes/2.2/Vector2) | 
- | right | [Vector2](/classes/2.2/Vector2) | 
-
+ | left | [Vector2](/classes/2.2/Vector2) |  The vector to maximize
+ | right | [Vector2](/classes/2.2/Vector2) |  the vector used to maximize
 ###static Normalize(vector) &rarr; [Vector2](/classes/2.2/Vector2)
 
 Normalizes a vector
@@ -306,7 +290,7 @@ Normalizes a vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vector | [Vector2](/classes/2.2/Vector2) | 
+ | vector | [Vector2](/classes/2.2/Vector2) |  The vector to transform
 
 ###static Minimize(left, right) &rarr; [Vector2](/classes/2.2/Vector2)
 
@@ -315,9 +299,8 @@ Minimizes the left vector with the right vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | left | [Vector2](/classes/2.2/Vector2) | 
- | right | [Vector2](/classes/2.2/Vector2) | 
-
+ | left | [Vector2](/classes/2.2/Vector2) |  The vector to maximize
+ | right | [Vector2](/classes/2.2/Vector2) |  the vector used to maximize
 ###static Maximize(left, right) &rarr; [Vector2](/classes/2.2/Vector2)
 
 Maximizes the left vector with the right vector
@@ -325,9 +308,8 @@ Maximizes the left vector with the right vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | left | [Vector2](/classes/2.2/Vector2) | 
- | right | [Vector2](/classes/2.2/Vector2) | 
-
+ | left | [Vector2](/classes/2.2/Vector2) |  The vector to maximize
+ | right | [Vector2](/classes/2.2/Vector2) |  the vector used to maximize
 ###static Transform(vector, transformation) &rarr; [Vector2](/classes/2.2/Vector2)
 
 Transforms a vector into a new vector
@@ -335,9 +317,8 @@ Transforms a vector into a new vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vector | [Vector2](/classes/2.2/Vector2) | 
- | transformation | [Matrix](/classes/2.2/Matrix) | 
-
+ | vector | [Vector2](/classes/2.2/Vector2) |  The vector to transform
+ | transformation | [Matrix](/classes/2.2/Matrix) |  The transformation matrix
 ###static Distance(value1, value2) &rarr; number
 
 Returns the distance between two vectors
@@ -345,9 +326,8 @@ Returns the distance between two vectors
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value1 | [Vector2](/classes/2.2/Vector2) | 
- | value2 | [Vector2](/classes/2.2/Vector2) | 
-
+ | value1 | [Vector2](/classes/2.2/Vector2) |  first vector
+ | value2 | [Vector2](/classes/2.2/Vector2) |  second vector
 ###static DistanceSquared(value1, value2) &rarr; number
 
 
@@ -355,6 +335,5 @@ Returns the distance between two vectors
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value1 | [Vector2](/classes/2.2/Vector2) | 
- | value2 | [Vector2](/classes/2.2/Vector2) | 
-
+ | value1 | [Vector2](/classes/2.2/Vector2) |  first vector
+ | value2 | [Vector2](/classes/2.2/Vector2) |  second vector

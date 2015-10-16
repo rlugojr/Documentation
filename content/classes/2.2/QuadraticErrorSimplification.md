@@ -24,7 +24,7 @@ Ported mostly from QSlim and http://voxels.blogspot.de/2014/05/quadric-mesh-simp
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | _mesh | [Mesh](/classes/2.2/Mesh) | 
+ | _mesh | [Mesh](/classes/2.2/Mesh) |  
 
 ##Members
 
@@ -53,6 +53,5 @@ Ported mostly from QSlim and http://voxels.blogspot.de/2014/05/quadric-mesh-simp
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | settings | ISimplificationSettings | 
- | successCallback | (simplifiedMesh: [Mesh](/classes/2.2/Mesh)) =&gt; void | 
-
+ | settings | ISimplificationSettings |  
+ | successCallback | (simplifiedMesh: [Mesh](/classes/2.2/Mesh)) =&gt; void |  

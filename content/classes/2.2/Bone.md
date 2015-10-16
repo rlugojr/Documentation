@@ -20,11 +20,9 @@ A tutorial about Bones and Skeletons ban be found here
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | skeleton | [Skeleton](/classes/2.2/Skeleton) | 
- | parentBone | [Bone](/classes/2.2/Bone) | 
- | matrix | [Matrix](/classes/2.2/Matrix) | 
-
+ | name | string |  Name of the bone
+ | skeleton | [Skeleton](/classes/2.2/Skeleton) |  The skeleton the bone belongs to
+ | parentBone | [Bone](/classes/2.2/Bone) |  The parent bone of this bone
 ##Members
 
 ###name : string
@@ -66,7 +64,7 @@ Update the bone matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [Matrix](/classes/2.2/Matrix) | 
+ | matrix | [Matrix](/classes/2.2/Matrix) |  The update matrix
 
 ###markAsDirty() &rarr; void
 

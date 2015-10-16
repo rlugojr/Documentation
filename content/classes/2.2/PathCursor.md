@@ -18,7 +18,7 @@ class [PathCursor](/classes/2.2/PathCursor)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | path | [Path2](/classes/2.2/Path2) | 
+ | path | [Path2](/classes/2.2/Path2) |  
 
 ##Members
 
@@ -42,7 +42,7 @@ class [PathCursor](/classes/2.2/PathCursor)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | step | number | 
+optional | step | number |  
 
 ###moveBack(step) &rarr; [PathCursor](/classes/2.2/PathCursor)
 
@@ -51,7 +51,7 @@ optional | step | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | step | number | 
+optional | step | number |  
 
 ###move(step) &rarr; [PathCursor](/classes/2.2/PathCursor)
 
@@ -60,7 +60,7 @@ optional | step | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | step | number | 
+ | step | number |  
 
 ###onchange(f) &rarr; [PathCursor](/classes/2.2/PathCursor)
 
@@ -69,5 +69,5 @@ optional | step | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | f | (cursor: [PathCursor](/classes/2.2/PathCursor)) =&gt; void | 
+ | f | (cursor: [PathCursor](/classes/2.2/PathCursor)) =&gt; void |  
 

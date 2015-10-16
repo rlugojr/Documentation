@@ -20,7 +20,7 @@ class [SceneSerializer](/classes/2.2/SceneSerializer)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
+ | scene | [Scene](/classes/2.2/Scene) |  The scene
 
 ###static SerializeMesh(toSerialize, withParents, withChildren) &rarr; any
 
@@ -32,4 +32,3 @@ class [SceneSerializer](/classes/2.2/SceneSerializer)
  | toSerialize | any | 
 optional | withParents | boolean | 
 optional | withChildren | boolean | 
-

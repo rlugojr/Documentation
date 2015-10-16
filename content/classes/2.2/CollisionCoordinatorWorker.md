@@ -43,14 +43,12 @@ class [CollisionCoordinatorWorker](/classes/2.2/CollisionCoordinatorWorker)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | position | [Vector3](/classes/2.2/Vector3) | 
- | velocity | [Vector3](/classes/2.2/Vector3) | 
- | collider | [Collider](/classes/2.2/Collider) | 
- | maximumRetry | number | 
- | excludedMesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
- | onNewPosition | (collisionIndex: number, newPosition: [Vector3](/classes/2.2/Vector3), collidedMesh: [AbstractMesh](/classes/2.2/AbstractMesh)) =&gt; void | 
- | collisionIndex | number | 
-
+ | position | [Vector3](/classes/2.2/Vector3) |  
+ | velocity | [Vector3](/classes/2.2/Vector3) |  
+ | collider | [Collider](/classes/2.2/Collider) |  
+ | maximumRetry | number |  
+ | excludedMesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  
+ | onNewPosition | (collisionIndex: number, newPosition: [Vector3](/classes/2.2/Vector3), collidedMesh: [AbstractMesh](/classes/2.2/AbstractMesh)) =&gt; void |  
 ###init(scene) &rarr; void
 
 
@@ -58,7 +56,7 @@ class [CollisionCoordinatorWorker](/classes/2.2/CollisionCoordinatorWorker)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
+ | scene | [Scene](/classes/2.2/Scene) |  
 
 ###destroy() &rarr; void
 
@@ -70,7 +68,7 @@ class [CollisionCoordinatorWorker](/classes/2.2/CollisionCoordinatorWorker)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
+ | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  
 
 ###onMeshRemoved(mesh) &rarr; void
 
@@ -79,7 +77,7 @@ class [CollisionCoordinatorWorker](/classes/2.2/CollisionCoordinatorWorker)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
+ | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  
 
 ###onGeometryAdded(geometry) &rarr; void
 
@@ -88,7 +86,7 @@ class [CollisionCoordinatorWorker](/classes/2.2/CollisionCoordinatorWorker)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | geometry | [Geometry](/classes/2.2/Geometry) | 
+ | geometry | [Geometry](/classes/2.2/Geometry) |  
 
 ###onGeometryDeleted(geometry) &rarr; void
 
@@ -97,5 +95,5 @@ class [CollisionCoordinatorWorker](/classes/2.2/CollisionCoordinatorWorker)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | geometry | [Geometry](/classes/2.2/Geometry) | 
+ | geometry | [Geometry](/classes/2.2/Geometry) |  
 

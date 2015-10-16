@@ -18,13 +18,11 @@ class [OctreeBlock](/classes/2.2/OctreeBlock)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | minPoint | [Vector3](/classes/2.2/Vector3) | 
- | maxPoint | [Vector3](/classes/2.2/Vector3) | 
- | capacity | number | 
- | depth | number | 
- | maxDepth | number | 
- | creationFunc | (entry: T, block: [OctreeBlock](/classes/2.2/OctreeBlock)&lt;T&gt;) =&gt; void | 
-
+ | minPoint | [Vector3](/classes/2.2/Vector3) |  The minimum point
+ | maxPoint | [Vector3](/classes/2.2/Vector3) |  The maximum point
+ | capacity | number |  @param capacity
+ | depth | number |  @param depth
+ | maxDepth | number |  @param maxDepth
 ##Members
 
 ###entries : T[]
@@ -56,7 +54,7 @@ Add an entry to this octree block. The creationFunc linked to this octreeblock i
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | entry | T | 
+ | entry | T |  @param entry
 
 ###addEntries(entries) &rarr; void
 
@@ -65,7 +63,7 @@ Add an entries to this octree block.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | entries | T[] | 
+ | entries | T[] |  @param entries
 
 ###select(frustumPlanes, selection, allowDuplicate) &rarr; void
 
@@ -74,10 +72,9 @@ Select
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](/classes/2.2/Plane)[] | 
- | selection | [SmartArray](/classes/2.2/SmartArray)&lt;T&gt; | 
-optional | allowDuplicate | boolean | 
-
+ | frustumPlanes | [Plane](/classes/2.2/Plane)[] |  [Frustum](/classes/2.2/Frustum) plan of the mesh
+ | selection | [SmartArray](/classes/2.2/SmartArray)&lt;T&gt; |  @param selection
+optional | allowDuplicate | boolean |  True if you want to duplicate it, false otherwise.
 ###intersects(sphereCenter, sphereRadius, selection, allowDuplicate) &rarr; void
 
 Intersects
@@ -85,11 +82,9 @@ Intersects
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | sphereCenter | [Vector3](/classes/2.2/Vector3) | 
- | sphereRadius | number | 
- | selection | [SmartArray](/classes/2.2/SmartArray)&lt;T&gt; | 
-optional | allowDuplicate | boolean | 
-
+ | sphereCenter | [Vector3](/classes/2.2/Vector3) |  The sphere center
+ | sphereRadius | number |  The sphere radius
+ | selection | [SmartArray](/classes/2.2/SmartArray)&lt;T&gt; |  @param selection
 ###intersectsRay(ray, selection) &rarr; void
 
 Intersects ray
@@ -97,9 +92,8 @@ Intersects ray
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](/classes/2.2/Ray) | 
- | selection | [SmartArray](/classes/2.2/SmartArray)&lt;T&gt; | 
-
+ | ray | [Ray](/classes/2.2/Ray) |  @param ray
+ | selection | [SmartArray](/classes/2.2/SmartArray)&lt;T&gt; |  @param selection
 ###createInnerBlocks() &rarr; void
 
 

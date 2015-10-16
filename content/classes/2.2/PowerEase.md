@@ -20,7 +20,7 @@ class [PowerEase](/classes/2.2/PowerEase) extends [EasingFunction](/classes/2.2/
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | power | number | 
+optional | power | number |  
 
 ##Members
 
@@ -37,5 +37,5 @@ optional | power | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gradient | number | 
+ | gradient | number |  
 

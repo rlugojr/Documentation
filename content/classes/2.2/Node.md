@@ -20,9 +20,8 @@ class [Node](/classes/2.2/Node)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  The node identifier
+ | scene | [Scene](/classes/2.2/Scene) |  The scene linked to this node.
 ##Members
 
 ###parent : [Node](/classes/2.2/Node)
@@ -71,7 +70,7 @@ Update the cache
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | force | boolean | 
+optional | force | boolean |  True to force the update
 
 ###isSynchronizedWithParent() &rarr; boolean
 
@@ -83,7 +82,7 @@ Return true if the node is synchronized
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | updateCache | boolean | 
+optional | updateCache | boolean |  True to update the cache
 
 ###hasNewParent(update) &rarr; boolean
 
@@ -92,7 +91,7 @@ Return true if the node has new parent
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | update | boolean | 
+optional | update | boolean |  True to update the node
 
 ###isReady() &rarr; boolean
 
@@ -117,7 +116,7 @@ Set the enabled state of this node.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value | boolean | 
+ | value | boolean |  True to set the node enable ; False otherwise
 
 ###isDescendantOf(ancestor) &rarr; boolean
 
@@ -130,7 +129,7 @@ The function will iterate up the hierarchy until the ancestor was found or no mo
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ancestor | [Node](/classes/2.2/Node) | 
+ | ancestor | [Node](/classes/2.2/Node) |  The ancestor node to test
 
 ###getDescendants() &rarr; [Node](/classes/2.2/Node)[]
 

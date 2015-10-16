@@ -20,11 +20,9 @@ class [VRDistortionCorrectionPostProcess](/classes/2.2/VRDistortionCorrectionPos
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | camera | [Camera](/classes/2.2/Camera) | 
- | isRightEye | boolean | 
- | vrMetrics | [VRCameraMetrics](/classes/2.2/VRCameraMetrics) | 
-
+ | name | string |  
+ | camera | [Camera](/classes/2.2/Camera) |  
+ | isRightEye | boolean |  
 ##Members
 
 ###aspectRatio : number

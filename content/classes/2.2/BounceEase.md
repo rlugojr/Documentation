@@ -20,9 +20,8 @@ class [BounceEase](/classes/2.2/BounceEase) extends [EasingFunction](/classes/2.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | bounces | number | 
-optional | bounciness | number | 
-
+optional | bounces | number |  
+optional | bounciness | number |  
 ##Members
 
 ###bounces : number
@@ -42,5 +41,5 @@ optional | bounciness | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gradient | number | 
+ | gradient | number |  
 

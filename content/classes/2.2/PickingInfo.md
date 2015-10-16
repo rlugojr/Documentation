@@ -52,9 +52,8 @@ The faceId of the mesh
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | useWorldCoordinates | boolean | 
+optional | useWorldCoordinates | boolean |  
 optional | useVerticesNormals | boolean | 
-
 ###getTextureCoordinates() &rarr; [Vector2](/classes/2.2/Vector2)
 
 

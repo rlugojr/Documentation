@@ -20,8 +20,6 @@ class [SceneOptimizer](/classes/2.2/SceneOptimizer)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | options | [SceneOptimizerOptions](/classes/2.2/SceneOptimizerOptions) | 
-optional | onSuccess | () =&gt; void | 
-optional | onFailure | () =&gt; void | 
-
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | options | [SceneOptimizerOptions](/classes/2.2/SceneOptimizerOptions) |  
+optional | onSuccess | () =&gt; void |  

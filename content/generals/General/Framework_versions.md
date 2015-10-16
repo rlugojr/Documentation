@@ -62,7 +62,10 @@ The following files are not included in the core version:
 * babylon.deviceOrientationCamera.js
 * babylon.gamepads.js
 * babylon.gamepadCamera.js
-* babylon.analyser.js
+* babylon.analyser.js,
+* babylon.audioEngine.js
+* babylon.sound.js
+* babylon.soundtrack.js
 * babylon.depthRenderer.js
 * babylon.ssaoRenderingPipeline.js
 * babylon.volumetricLightScatteringPostProcess.js

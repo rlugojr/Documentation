@@ -20,11 +20,9 @@ Create a new set state action
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | triggerOptions | any | 
- | target | any | 
- | value | string | 
-optional | condition | [Condition](/classes/2.2/Condition) | 
-
+ | triggerOptions | any |  The trigger option
+ | target | any |  The action target
+ | value | string |  The action value
 ##Members
 
 ###value : string

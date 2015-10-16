@@ -21,9 +21,8 @@ See more here
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | triggerOptions | any | 
-optional | condition | [Condition](/classes/2.2/Condition) | 
-
+ | triggerOptions | any |  Options of the trigger
+optional | condition | [Condition](/classes/2.2/Condition) |  [Condition](/classes/2.2/Condition) to trigger the action
 ##Members
 
 ###triggerOptions : any
@@ -46,7 +45,7 @@ Execute the trigger
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | evt | [ActionEvent](/classes/2.2/ActionEvent) | 
+ | evt | [ActionEvent](/classes/2.2/ActionEvent) |  An event to trigger
 
 ###then(action) &rarr; [Action](/classes/2.2/Action)
 
@@ -55,5 +54,5 @@ Execute the trigger
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | action | [Action](/classes/2.2/Action) | 
+ | action | [Action](/classes/2.2/Action) |  The action to do
 

@@ -21,8 +21,6 @@ class [HDRRenderingPipeline](/classes/2.2/HDRRenderingPipeline) extends [PostPro
  | scene | [Scene](/classes/2.2/Scene) | 
  | ratio | number | 
 optional | originalPostProcess | [PostProcess](/classes/2.2/PostProcess) | 
-optional | cameras | [Camera](/classes/2.2/Camera)[] | 
-
 ##Members
 
 ###gaussCoeff : number

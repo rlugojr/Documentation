@@ -22,12 +22,10 @@ class [RoadProceduralTexture](/classes/2.2/RoadProceduralTexture) extends [Proce
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | size | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | fallbackTexture | [Texture](/classes/2.2/Texture) | 
-optional | generateMipMaps | boolean | 
-
+ | name | string |  
+ | size | number |  
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | fallbackTexture | [Texture](/classes/2.2/Texture) |  
 ##Members
 
 ###roadColor : [Color3](/classes/2.2/Color3)

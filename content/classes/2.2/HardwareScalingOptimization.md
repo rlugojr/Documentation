@@ -21,9 +21,8 @@ class [HardwareScalingOptimization](/classes/2.2/HardwareScalingOptimization) ex
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | priority | number | 
-optional | maximumScale | number | 
-
+optional | priority | number |  
+optional | maximumScale | number |  
 ##Members
 
 ###priority : number

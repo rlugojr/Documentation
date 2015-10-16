@@ -22,10 +22,9 @@ Create a new [FollowCamera](/classes/2.2/FollowCamera)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | position | [Vector3](/classes/2.2/Vector3) | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  Name of the camera
+ | position | [Vector3](/classes/2.2/Vector3) |  Position of the camera
+ | scene | [Scene](/classes/2.2/Scene) |  The scene which contains the camera
 ##Members
 
 ###radius : number

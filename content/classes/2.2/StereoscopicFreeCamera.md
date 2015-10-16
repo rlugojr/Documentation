@@ -23,9 +23,7 @@ class [StereoscopicFreeCamera](/classes/2.2/StereoscopicFreeCamera) extends [Fre
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | position | [Vector3](/classes/2.2/Vector3) | 
- | interaxialDistance | number | 
- | isSideBySide | boolean | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  
+ | position | [Vector3](/classes/2.2/Vector3) |  
+ | interaxialDistance | number |  
+ | isSideBySide | boolean |  

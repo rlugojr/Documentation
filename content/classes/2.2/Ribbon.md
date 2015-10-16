@@ -25,8 +25,6 @@ class [Ribbon](/classes/2.2/Ribbon) extends _Primitive
  | offset | number | 
 optional | canBeRegenerated | boolean | 
 optional | mesh | [Mesh](/classes/2.2/Mesh) | 
-optional | side | number | 
-
 ##Members
 
 ###pathArray : [Vector3](/classes/2.2/Vector3)[][]

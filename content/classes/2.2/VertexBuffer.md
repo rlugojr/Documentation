@@ -18,13 +18,11 @@ class [VertexBuffer](/classes/2.2/VertexBuffer)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | engine | any | 
- | data | number[] | 
- | kind | string | 
- | updatable | boolean | 
-optional | postponeInternalCreation | boolean | 
-optional | stride | number | 
-
+ | engine | any |  @param engine
+ | data | number[] |  [VertexData](/classes/2.2/VertexData) into buffer
+ | kind | string |  The kind of vertex buffer (defined as static variables in [VertexBuffer](/classes/2.2/VertexBuffer) class)
+ | updatable | boolean |  True if the vertex buffer should be dynamic, false otherwise.
+optional | postponeInternalCreation | boolean |  @param postponeInternalCreation
 ##Members
 
 ###static PositionKind : string
@@ -92,7 +90,7 @@ Create a vertex buffer
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | data | number[] | 
+optional | data | number[] |  [VertexData](/classes/2.2/VertexData) into buffer
 
 ###update(data) &rarr; void
 
@@ -101,7 +99,7 @@ Update vertex buffer
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | number[] | 
+ | data | number[] |  [VertexData](/classes/2.2/VertexData) into buffer
 
 ###updateDirectly(data, offset) &rarr; void
 
@@ -110,9 +108,8 @@ Update vertex buffer directly
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | Float32Array | 
- | offset | number | 
-
+ | data | Float32Array |  [VertexData](/classes/2.2/VertexData) into buffer
+ | offset | number |  
 ###dispose() &rarr; void
 
 

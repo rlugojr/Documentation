@@ -20,12 +20,10 @@ Create a sound and attach it to a scene
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string |  Name of your sound
- | urlOrArrayBuffer | any |  Url to the sound to load async or ArrayBuffer
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | readyToPlayCallback | () =&gt; void |  Provide a callback function if you'd like to load your code once the sound is ready to be played
-optional | options | any |  Objects to provide with the current available options: autoplay, loop, volume, spatialSound, maxDistance, rolloffFactor, refDistance, distanceModel, panningModel
-
+ | name | string |  Name of your sound Name of your sound
+ | urlOrArrayBuffer | any |  Url to the sound to load async or ArrayBuffer Url to the sound to load async or ArrayBuffer
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | readyToPlayCallback | () =&gt; void |  Provide a callback function if you'd like to load your code once the sound is ready to be played Provide a callback function if you'd like to load your code once the sound is ready to be played
 ##Members
 
 ###name : string
@@ -92,7 +90,7 @@ optional | options | any |  Objects to provide with the current available option
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | audioBuffer | AudioBuffer | 
+ | audioBuffer | AudioBuffer |  
 
 ###updateOptions(options) &rarr; void
 
@@ -101,7 +99,7 @@ optional | options | any |  Objects to provide with the current available option
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | options | any | 
+ | options | any |  
 
 ###switchPanningModelToHRTF() &rarr; void
 
@@ -116,7 +114,7 @@ optional | options | any |  Objects to provide with the current available option
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | soundTrackAudioNode | AudioNode | 
+ | soundTrackAudioNode | AudioNode |  
 
 ###setDirectionalCone(coneInnerAngle, coneOuterAngle, coneOuterGain) &rarr; void
 
@@ -125,10 +123,9 @@ Transform this sound into a directional source
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | coneInnerAngle | number |  Size of the inner cone in degree
- | coneOuterAngle | number |  Size of the outer cone in degree
- | coneOuterGain | number |  Volume of the sound outside the outer cone (between 0.0 and 1.0)
-
+ | coneInnerAngle | number |  Size of the inner cone in degree Size of the inner cone in degree
+ | coneOuterAngle | number |  Size of the outer cone in degree Size of the outer cone in degree
+ | coneOuterGain | number |  Volume of the sound outside the outer cone (between 0.0 and 1.0) Volume of the sound outside the outer cone (between 0.0 and 1.0)
 ###setPosition(newPosition) &rarr; void
 
 
@@ -136,7 +133,7 @@ Transform this sound into a directional source
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newPosition | [Vector3](/classes/2.2/Vector3) | 
+ | newPosition | [Vector3](/classes/2.2/Vector3) |  
 
 ###setLocalDirectionToMesh(newLocalDirection) &rarr; void
 
@@ -145,7 +142,7 @@ Transform this sound into a directional source
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newLocalDirection | [Vector3](/classes/2.2/Vector3) | 
+ | newLocalDirection | [Vector3](/classes/2.2/Vector3) |  
 
 ###updateDistanceFromListener() &rarr; void
 
@@ -157,7 +154,7 @@ Transform this sound into a directional source
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | callback | (currentVolume: number, currentDistance: number, maxDistance: number, refDistance: number, rolloffFactor: number) =&gt; number | 
+ | callback | (currentVolume: number, currentDistance: number, maxDistance: number, refDistance: number, rolloffFactor: number) =&gt; number |  
 
 ###play(time) &rarr; void
 
@@ -166,7 +163,7 @@ Play the sound
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | time | number |  (optional) Start the sound after X seconds. Start immediately (0) by default.
+optional | time | number |  (optional) Start the sound after X seconds. Start immediately (0) by default. 
 
 ###stop(time) &rarr; void
 
@@ -175,7 +172,7 @@ Stop the sound
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | time | number |  (optional) Stop the sound after X seconds. Stop immediately (0) by default.
+optional | time | number |  (optional) Stop the sound after X seconds. Stop immediately (0) by default. 
 
 ###pause() &rarr; void
 
@@ -187,9 +184,8 @@ optional | time | number |  (optional) Stop the sound after X seconds. Stop imme
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newVolume | number | 
-optional | time | number | 
-
+ | newVolume | number |  
+optional | time | number |  
 ###setPlaybackRate(newPlaybackRate) &rarr; void
 
 
@@ -197,7 +193,7 @@ optional | time | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newPlaybackRate | number | 
+ | newPlaybackRate | number |  
 
 ###getVolume() &rarr; number
 
@@ -209,5 +205,5 @@ optional | time | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | meshToConnectTo | [AbstractMesh](/classes/2.2/AbstractMesh) | 
+ | meshToConnectTo | [AbstractMesh](/classes/2.2/AbstractMesh) |  
 

@@ -20,11 +20,9 @@ Create a new switch boolean action
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | triggerOptions | any | 
- | target | any | 
- | propertyPath | string | 
-optional | condition | [Condition](/classes/2.2/Condition) | 
-
+ | triggerOptions | any |  
+ | target | any |  The target of the action
+ | propertyPath | string |  This string defines the path to the property to affect with the action
 ##Members
 
 ###propertyPath : string

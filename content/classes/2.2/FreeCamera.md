@@ -25,10 +25,9 @@ A tutorial about [FreeCamera](/classes/2.2/FreeCamera) can be found here
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | position | [Vector3](/classes/2.2/Vector3) | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  Name of the camera
+ | position | [Vector3](/classes/2.2/Vector3) |  Starting position of the camera
+ | scene | [Scene](/classes/2.2/Scene) |  [Scene](/classes/2.2/Scene) which contain the camera
 ##Members
 
 ###ellipsoid : [Vector3](/classes/2.2/Vector3)
@@ -76,9 +75,8 @@ Attach the camera to an element
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | element | HTMLElement | 
-optional | noPreventDefault | boolean | 
-
+ | element | HTMLElement |  The element from where detach the camera
+optional | noPreventDefault | boolean |  @param noPreventDefault
 ###detachControl(element) &rarr; void
 
 
@@ -86,5 +84,5 @@ optional | noPreventDefault | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | element | HTMLElement | 
+ | element | HTMLElement |  The element from where detach the camera
 

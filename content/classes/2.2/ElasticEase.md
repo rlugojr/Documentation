@@ -20,9 +20,8 @@ class [ElasticEase](/classes/2.2/ElasticEase) extends [EasingFunction](/classes/
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | oscillations | number | 
-optional | springiness | number | 
-
+optional | oscillations | number |  
+optional | springiness | number |  
 ##Members
 
 ###oscillations : number
@@ -42,5 +41,5 @@ optional | springiness | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gradient | number | 
+ | gradient | number |  
 

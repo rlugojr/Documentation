@@ -29,7 +29,7 @@ class [SimplificationQueue](/classes/2.2/SimplificationQueue)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | task | ISimplificationTask | 
+ | task | ISimplificationTask |  
 
 ###executeNext() &rarr; void
 
@@ -41,5 +41,5 @@ class [SimplificationQueue](/classes/2.2/SimplificationQueue)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | task | ISimplificationTask | 
+ | task | ISimplificationTask |  
 

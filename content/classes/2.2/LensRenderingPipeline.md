@@ -55,12 +55,10 @@ Note: if an effect parameter is unset, effect is disabled
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | parameters | any | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | ratio | number | 
-optional | cameras | [Camera](/classes/2.2/Camera)[] | 
-
+ | name | string |  The rendering pipeline name
+ | parameters | any |  An object containing all parameters (see above)
+ | scene | [Scene](/classes/2.2/Scene) |  The scene linked to this pipeline
+optional | ratio | number |  The size of the postprocesses (0.5 means that your postprocess will have a width = canvas.width 0.5 and a height = canvas.height 0.5)
 ##Members
 
 ###LensChromaticAberrationEffect : string
@@ -90,7 +88,7 @@ The depth-of-field [PostProcess](/classes/2.2/PostProcess) id in the pipeline
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | amount | number | 
+ | amount | number |  
 
 ###disableEdgeBlur() &rarr; void
 
@@ -102,7 +100,7 @@ The depth-of-field [PostProcess](/classes/2.2/PostProcess) id in the pipeline
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | amount | number | 
+ | amount | number |  
 
 ###disableGrain() &rarr; void
 
@@ -114,7 +112,7 @@ The depth-of-field [PostProcess](/classes/2.2/PostProcess) id in the pipeline
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | amount | number | 
+ | amount | number |  
 
 ###disableChromaticAberration() &rarr; void
 
@@ -126,7 +124,7 @@ The depth-of-field [PostProcess](/classes/2.2/PostProcess) id in the pipeline
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | amount | number | 
+ | amount | number |  
 
 ###disableEdgeDistortion() &rarr; void
 
@@ -138,7 +136,7 @@ The depth-of-field [PostProcess](/classes/2.2/PostProcess) id in the pipeline
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | amount | number | 
+ | amount | number |  
 
 ###disableDepthOfField() &rarr; void
 
@@ -150,7 +148,7 @@ The depth-of-field [PostProcess](/classes/2.2/PostProcess) id in the pipeline
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | amount | number | 
+ | amount | number |  
 
 ###setDarkenOutOfFocus(amount) &rarr; void
 
@@ -159,7 +157,7 @@ The depth-of-field [PostProcess](/classes/2.2/PostProcess) id in the pipeline
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | amount | number | 
+ | amount | number |  
 
 ###enablePentagonBokeh() &rarr; void
 
@@ -180,7 +178,7 @@ The depth-of-field [PostProcess](/classes/2.2/PostProcess) id in the pipeline
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | amount | number | 
+ | amount | number |  
 
 ###setHighlightsThreshold(amount) &rarr; void
 
@@ -189,7 +187,7 @@ The depth-of-field [PostProcess](/classes/2.2/PostProcess) id in the pipeline
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | amount | number | 
+ | amount | number |  
 
 ###disableHighlights() &rarr; void
 
@@ -201,5 +199,5 @@ Removes the internal pipeline assets and detaches the pipeline from the scene ca
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | disableDepthRender | boolean | 
+optional | disableDepthRender | boolean |  
 

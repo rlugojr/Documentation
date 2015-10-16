@@ -21,9 +21,8 @@ The [AbstractMesh](/classes/2.2/AbstractMesh) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  The new name
+ | scene | [Scene](/classes/2.2/Scene) |  The scene where the mesh is.
 ##Members
 
 ###static BILLBOARDMODE_NONE : number
@@ -298,7 +297,6 @@ Is check collisions
 ---|---|---|---
 optional | epsilon | number | 
 optional | checkVerticesInsteadOfIndices | boolean | 
-
 ###getLOD(camera) &rarr; [AbstractMesh](/classes/2.2/AbstractMesh)
 
 
@@ -306,7 +304,7 @@ optional | checkVerticesInsteadOfIndices | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | camera | [Camera](/classes/2.2/Camera) | 
+ | camera | [Camera](/classes/2.2/Camera) |  
 
 ###getTotalVertices() &rarr; number
 
@@ -321,7 +319,7 @@ To access the mesh vertices data
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | kind | string | 
+ | kind | string |  @param kind
 
 ###isVerticesDataPresent(kind) &rarr; boolean
 
@@ -330,7 +328,7 @@ Is vertices data present
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | kind | string | 
+ | kind | string |  @param kind
 
 ###getBoundingInfo() &rarr; [BoundingInfo](/classes/2.2/BoundingInfo)
 
@@ -351,10 +349,9 @@ Rotate this mesh with the given axis and the given angle in the mesh's space
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | axis | [Vector3](/classes/2.2/Vector3) | 
- | amount | number | 
- | space | [Space](/classes/2.2/Space) | 
-
+ | axis | [Vector3](/classes/2.2/Vector3) |  the rotation axis
+ | amount | number |  the rotation angle
+ | space | [Space](/classes/2.2/Space) |  local or global
 ###translate(axis, distance, space) &rarr; void
 
 Translate the mesh with the given axis, with the given distance
@@ -362,10 +359,9 @@ Translate the mesh with the given axis, with the given distance
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | axis | [Vector3](/classes/2.2/Vector3) | 
- | distance | number | 
- | space | [Space](/classes/2.2/Space) | 
-
+ | axis | [Vector3](/classes/2.2/Vector3) |  the rotation axis
+ | distance | number |  the distance from the origin to the next position
+ | space | [Space](/classes/2.2/Space) |  local or global
 ###getAbsolutePosition() &rarr; [Vector3](/classes/2.2/Vector3)
 
 Returns the absolute position
@@ -376,7 +372,7 @@ Set the absolute position
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | absolutePosition | [Vector3](/classes/2.2/Vector3) | 
+ | absolutePosition | [Vector3](/classes/2.2/Vector3) |  @param absolutePosition
 
 ###movePOV(amountRight, amountUp, amountForward) &rarr; void
 
@@ -389,10 +385,9 @@ Supports definition of mesh facing forward or backward.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | amountRight | number | 
- | amountUp | number | 
- | amountForward | number | 
-
+ | amountRight | number |  
+ | amountUp | number |  
+ | amountForward | number |  
 ###calcMovePOV(amountRight, amountUp, amountForward) &rarr; [Vector3](/classes/2.2/Vector3)
 
 Calculate relative position change from the point of view of behind the front of the mesh.
@@ -404,10 +399,9 @@ Supports definition of mesh facing forward or backward.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | amountRight | number | 
- | amountUp | number | 
- | amountForward | number | 
-
+ | amountRight | number |  
+ | amountUp | number |  
+ | amountForward | number |  
 ###rotatePOV(flipBack, twirlClockwise, tiltRight) &rarr; void
 
 Perform relative rotation change from the point of view of behind the front of the mesh.
@@ -417,10 +411,9 @@ Supports definition of mesh facing forward or backward.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | flipBack | number | 
- | twirlClockwise | number | 
- | tiltRight | number | 
-
+ | flipBack | number |  
+ | twirlClockwise | number |  
+ | tiltRight | number |  
 ###calcRotatePOV(flipBack, twirlClockwise, tiltRight) &rarr; [Vector3](/classes/2.2/Vector3)
 
 Calculate relative rotation change from the point of view of behind the front of the mesh.
@@ -430,10 +423,9 @@ Supports definition of mesh facing forward or backward.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | flipBack | number | 
- | twirlClockwise | number | 
- | tiltRight | number | 
-
+ | flipBack | number |  
+ | twirlClockwise | number |  
+ | tiltRight | number |  
 ###setPivotMatrix(matrix) &rarr; void
 
 Set the pivot matrix
@@ -441,7 +433,7 @@ Set the pivot matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [Matrix](/classes/2.2/Matrix) | 
+ | matrix | [Matrix](/classes/2.2/Matrix) |  @param matrix
 
 ###getPivotMatrix() &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -453,7 +445,7 @@ Get the pivot matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | property | string | 
+ | property | string |  @param property
 
 ###computeWorldMatrix(force) &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -463,7 +455,7 @@ Compute the world matrix, recalculate the world matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | force | boolean | 
+optional | force | boolean |  the force direction
 
 ###registerAfterWorldMatrixUpdate(func) &rarr; void
 
@@ -472,7 +464,7 @@ If you'd like to be callbacked after the mesh position, rotation or scaling has 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | func | (mesh: [AbstractMesh](/classes/2.2/AbstractMesh)) =&gt; void | : callback function to add
+ | func | (mesh: [AbstractMesh](/classes/2.2/AbstractMesh)) =&gt; void | : callback function to add 
 
 ###unregisterAfterWorldMatrixUpdate(func) &rarr; void
 
@@ -481,7 +473,7 @@ If you'd like to be callbacked after the mesh position, rotation or scaling has 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | func | (mesh: [AbstractMesh](/classes/2.2/AbstractMesh)) =&gt; void | 
+ | func | (mesh: [AbstractMesh](/classes/2.2/AbstractMesh)) =&gt; void |  
 
 ###setPositionWithLocalVector(vector3) &rarr; void
 
@@ -490,7 +482,7 @@ Set the position with a local vector
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vector3 | [Vector3](/classes/2.2/Vector3) | 
+ | vector3 | [Vector3](/classes/2.2/Vector3) |  the translation contact information
 
 ###getPositionExpressedInLocalSpace() &rarr; [Vector3](/classes/2.2/Vector3)
 
@@ -502,7 +494,7 @@ Translate mesh in local space
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vector3 | [Vector3](/classes/2.2/Vector3) | 
+ | vector3 | [Vector3](/classes/2.2/Vector3) |  the translation contact information
 
 ###lookAt(targetPoint, yawCor, pitchCor, rollCor) &rarr; void
 
@@ -511,11 +503,9 @@ Orients a mesh towards a target point. [Mesh](/classes/2.2/Mesh) must be drawn f
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | targetPoint | [Vector3](/classes/2.2/Vector3) | 
- | yawCor | number | 
- | pitchCor | number | 
- | rollCor | number | 
-
+ | targetPoint | [Vector3](/classes/2.2/Vector3) |  The position (must be in same space as current mesh) to look at
+ | yawCor | number |  optional yaw (y-axis) correction in radians
+ | pitchCor | number |  optional pitch (x-axis) correction in radians
 ###attachToBone(bone, affectedMesh) &rarr; void
 
 
@@ -525,7 +515,6 @@ Orients a mesh towards a target point. [Mesh](/classes/2.2/Mesh) must be drawn f
 ---|---|---|---
  | bone | [Bone](/classes/2.2/Bone) | 
  | affectedMesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
-
 ###detachFromBone() &rarr; void
 
 
@@ -536,7 +525,7 @@ Is in frustum
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](/classes/2.2/Plane)[] | 
+ | frustumPlanes | [Plane](/classes/2.2/Plane)[] |  is between near frustum plan and far frustum plan view
 
 ###isCompletelyInFrustum(camera) &rarr; boolean
 
@@ -545,7 +534,7 @@ Is in frustum
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | camera | [Camera](/classes/2.2/Camera) | 
+optional | camera | [Camera](/classes/2.2/Camera) |  
 
 ###intersectsMesh(mesh, precise) &rarr; boolean
 
@@ -555,9 +544,8 @@ For precise : default value is false
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
-optional | precise | boolean | 
-
+ | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  The mesh
+optional | precise | boolean |  If true, the abstractMesh is closer to the mesh,
 ###intersectsPoint(point) &rarr; boolean
 
 Intersects Point
@@ -565,7 +553,7 @@ Intersects Point
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | point | [Vector3](/classes/2.2/Vector3) | 
+ | point | [Vector3](/classes/2.2/Vector3) |  the intersect point
 
 ###setPhysicsState(impostor, options) &rarr; any
 
@@ -574,9 +562,8 @@ Set physics state to mesh
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | impostor | any | 
-optional | options | PhysicsBodyCreationOptions | 
-
+optional | impostor | any |  The physics impostor [Sphere](/classes/2.2/Sphere)/[Box](/classes/2.2/Box)/[Plane](/classes/2.2/Plane)
+optional | options | PhysicsBodyCreationOptions |  @param options
 ###getPhysicsImpostor() &rarr; number
 
 Get a physics impostor
@@ -596,7 +583,7 @@ Get the physics restitution
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | camera | [Camera](/classes/2.2/Camera) | 
+optional | camera | [Camera](/classes/2.2/Camera) |  
 
 ###getDistanceToCamera(camera) &rarr; number
 
@@ -605,7 +592,7 @@ optional | camera | [Camera](/classes/2.2/Camera) |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | camera | [Camera](/classes/2.2/Camera) | 
+optional | camera | [Camera](/classes/2.2/Camera) |  
 
 ###applyImpulse(force, contactPoint) &rarr; void
 
@@ -614,9 +601,8 @@ Apply a force
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | force | [Vector3](/classes/2.2/Vector3) | 
- | contactPoint | [Vector3](/classes/2.2/Vector3) | 
-
+ | force | [Vector3](/classes/2.2/Vector3) |  the force direction
+ | contactPoint | [Vector3](/classes/2.2/Vector3) |  the contact point
 ###setPhysicsLinkWith(otherMesh, pivot1, pivot2, options) &rarr; void
 
 Link the impostor in order to keep meshes linked
@@ -624,11 +610,9 @@ Link the impostor in order to keep meshes linked
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherMesh | [Mesh](/classes/2.2/Mesh) | 
- | pivot1 | [Vector3](/classes/2.2/Vector3) | 
- | pivot2 | [Vector3](/classes/2.2/Vector3) | 
-optional | options | any | 
-
+ | otherMesh | [Mesh](/classes/2.2/Mesh) |  the impostor
+ | pivot1 | [Vector3](/classes/2.2/Vector3) |  link the impostor with this mesh
+ | pivot2 | [Vector3](/classes/2.2/Vector3) |  link the impostor with this mesh
 ###updatePhysicsBodyPosition() &rarr; void
 
 Update physics body position
@@ -639,7 +623,7 @@ Move a mesh
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | velocity | [Vector3](/classes/2.2/Vector3) | 
+ | velocity | [Vector3](/classes/2.2/Vector3) |  change the velocity
 
 ###createOrUpdateSubmeshesOctree(maxCapacity, maxDepth) &rarr; [Octree](/classes/2.2/Octree)&lt;[SubMesh](/classes/2.2/SubMesh)&gt;
 
@@ -650,9 +634,8 @@ Please note that you must have a decent number of submeshes to get performance i
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | maxCapacity | number | 
-optional | maxDepth | number | 
-
+optional | maxCapacity | number |  @param maxCapacity
+optional | maxDepth | number |  @param maxDepth
 ###intersects(ray, fastCheck) &rarr; [PickingInfo](/classes/2.2/PickingInfo)
 
 Intersects
@@ -661,9 +644,8 @@ if false, infinite ray !
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](/classes/2.2/Ray) | 
-optional | fastCheck | boolean | 
-
+ | ray | [Ray](/classes/2.2/Ray) |  The ray
+optional | fastCheck | boolean |  if true, stop at the first result
 ###clone(name, newParent, doNotCloneChildren) &rarr; [AbstractMesh](/classes/2.2/AbstractMesh)
 
 Clone this abstract mesh
@@ -671,10 +653,9 @@ Clone this abstract mesh
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | newParent | [Node](/classes/2.2/Node) | 
-optional | doNotCloneChildren | boolean | 
-
+ | name | string |  The new name
+ | newParent | [Node](/classes/2.2/Node) |  @param newParent
+optional | doNotCloneChildren | boolean |  Set true if you want to clone children, false otherwise
 ###releaseSubMeshes() &rarr; void
 
 Release submeshes
@@ -685,5 +666,5 @@ Release submeshes
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | doNotRecurse | boolean | 
+optional | doNotRecurse | boolean |  @param doNotRecurse
 

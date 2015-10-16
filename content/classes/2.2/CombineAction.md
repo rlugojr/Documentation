@@ -20,10 +20,9 @@ This action is a container. You can use it to execute many actions simultaneousl
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | triggerOptions | any | 
- | children | [Action](/classes/2.2/Action)[] | 
-optional | condition | [Condition](/classes/2.2/Condition) | 
-
+ | triggerOptions | any |  The trigger options
+ | children | [Action](/classes/2.2/Action)[] |  The childrens actions
+optional | condition | [Condition](/classes/2.2/Condition) |  The condition to do the action
 ##Members
 
 ###children : [Action](/classes/2.2/Action)[]
@@ -39,5 +38,5 @@ The childrens actions
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | evt | [ActionEvent](/classes/2.2/ActionEvent) | 
+ | evt | [ActionEvent](/classes/2.2/ActionEvent) |  The event to trigger
 

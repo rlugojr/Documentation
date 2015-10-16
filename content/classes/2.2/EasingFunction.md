@@ -34,7 +34,7 @@ class [EasingFunction](/classes/2.2/EasingFunction)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | easingMode | number | 
+ | easingMode | number |  
 
 ###getEasingMode() &rarr; number
 
@@ -46,7 +46,7 @@ class [EasingFunction](/classes/2.2/EasingFunction)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gradient | number | 
+ | gradient | number |  
 
 ###ease(gradient) &rarr; number
 
@@ -55,5 +55,5 @@ class [EasingFunction](/classes/2.2/EasingFunction)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gradient | number | 
+ | gradient | number |  
 

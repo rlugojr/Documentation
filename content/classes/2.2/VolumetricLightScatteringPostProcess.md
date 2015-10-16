@@ -20,16 +20,14 @@ class [VolumetricLightScatteringPostProcess](/classes/2.2/VolumetricLightScatter
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | ratio | any | 
- | camera | [Camera](/classes/2.2/Camera) | 
-optional | mesh | [Mesh](/classes/2.2/Mesh) | 
-optional | samples | number | 
-optional | samplingMode | number | 
-optional | engine | [Engine](/classes/2.2/Engine) | 
-optional | reusable | boolean | 
-optional | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  
+ | ratio | any |  
+ | camera | [Camera](/classes/2.2/Camera) |  
+optional | mesh | [Mesh](/classes/2.2/Mesh) |  
+optional | samples | number |  
+optional | samplingMode | number |  
+optional | engine | [Engine](/classes/2.2/Engine) |  
+optional | reusable | boolean |  
 ##Members
 
 ###useCustomMeshPosition : boolean
@@ -93,9 +91,8 @@ Controls the density of each sample
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | subMesh | [SubMesh](/classes/2.2/SubMesh) | 
- | useInstances | boolean | 
-
+ | subMesh | [SubMesh](/classes/2.2/SubMesh) |  
+ | useInstances | boolean |  
 ###setCustomMeshPosition(position) &rarr; void
 
 Sets the new light position for light scattering effect
@@ -103,7 +100,7 @@ Sets the new light position for light scattering effect
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | position | [Vector3](/classes/2.2/Vector3) | 
+ | position | [Vector3](/classes/2.2/Vector3) |  
 
 ###getCustomMeshPosition() &rarr; [Vector3](/classes/2.2/Vector3)
 
@@ -117,7 +114,7 @@ Disposes the internal assets and detaches the post-process from the camera
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | camera | [Camera](/classes/2.2/Camera) | 
+ | camera | [Camera](/classes/2.2/Camera) |  
 
 ###getPass() &rarr; [RenderTargetTexture](/classes/2.2/RenderTargetTexture)
 
@@ -133,6 +130,5 @@ Creates a default mesh for the Volumeric [Light](/classes/2.2/Light) Scattering 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  
+ | scene | [Scene](/classes/2.2/Scene) |  

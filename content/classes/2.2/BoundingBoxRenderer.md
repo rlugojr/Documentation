@@ -21,7 +21,7 @@ Creates a new renderer used to display the bounding box of its render list
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
+ | scene | [Scene](/classes/2.2/Scene) |  The scene linked to this [BoundingBoxRenderer](/classes/2.2/BoundingBoxRenderer)
 
 ##Members
 

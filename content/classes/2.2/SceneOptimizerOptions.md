@@ -20,9 +20,8 @@ class [SceneOptimizerOptions](/classes/2.2/SceneOptimizerOptions)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | targetFrameRate | number | 
-optional | trackerDuration | number | 
-
+optional | targetFrameRate | number |  
+optional | trackerDuration | number |  
 ##Members
 
 ###targetFrameRate : number
@@ -46,7 +45,7 @@ optional | trackerDuration | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | targetFrameRate | number | 
+optional | targetFrameRate | number |  
 
 ###static ModerateDegradationAllowed(targetFrameRate) &rarr; [SceneOptimizerOptions](/classes/2.2/SceneOptimizerOptions)
 
@@ -55,7 +54,7 @@ optional | targetFrameRate | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | targetFrameRate | number | 
+optional | targetFrameRate | number |  
 
 ###static HighDegradationAllowed(targetFrameRate) &rarr; [SceneOptimizerOptions](/classes/2.2/SceneOptimizerOptions)
 
@@ -64,5 +63,5 @@ optional | targetFrameRate | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | targetFrameRate | number | 
+optional | targetFrameRate | number |  
 

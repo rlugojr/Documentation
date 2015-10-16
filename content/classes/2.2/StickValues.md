@@ -18,9 +18,8 @@ Builds a [StickValues](/classes/2.2/StickValues) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | any | 
- | y | any | 
-
+ | x | any |  The initial x object
+ | y | any |  The initial y object
 ##Members
 
 ###x : any

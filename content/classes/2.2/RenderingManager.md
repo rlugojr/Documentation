@@ -18,7 +18,7 @@ Builds a new Rendering manager object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
+ | scene | [Scene](/classes/2.2/Scene) |  The scene linked to this rendering manager
 
 ##Members
 
@@ -37,11 +37,9 @@ default : 4
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | customRenderFunction | (opaqueSubMeshes: [SmartArray](/classes/2.2/SmartArray)&lt;[SubMesh](/classes/2.2/SubMesh)&gt;, transparentSubMeshes: [SmartArray](/classes/2.2/SmartArray)&lt;[SubMesh](/classes/2.2/SubMesh)&gt;, alphaTestSubMeshes: [SmartArray](/classes/2.2/SmartArray)&lt;[SubMesh](/classes/2.2/SubMesh)&gt;) =&gt; void | 
- | activeMeshes | [AbstractMesh](/classes/2.2/AbstractMesh)[] | 
- | renderParticles | boolean | 
- | renderSprites | boolean | 
-
+ | customRenderFunction | (opaqueSubMeshes: [SmartArray](/classes/2.2/SmartArray)&lt;[SubMesh](/classes/2.2/SubMesh)&gt;, transparentSubMeshes: [SmartArray](/classes/2.2/SmartArray)&lt;[SubMesh](/classes/2.2/SubMesh)&gt;, alphaTestSubMeshes: [SmartArray](/classes/2.2/SmartArray)&lt;[SubMesh](/classes/2.2/SubMesh)&gt;) =&gt; void |  
+ | activeMeshes | [AbstractMesh](/classes/2.2/AbstractMesh)[] |  
+ | renderParticles | boolean |  
 ###reset() &rarr; void
 
 
@@ -52,5 +50,5 @@ default : 4
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | subMesh | [SubMesh](/classes/2.2/SubMesh) | 
+ | subMesh | [SubMesh](/classes/2.2/SubMesh) |  
 

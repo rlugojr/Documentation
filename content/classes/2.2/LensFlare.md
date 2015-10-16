@@ -18,12 +18,10 @@ The [LensFlare](/classes/2.2/LensFlare) class
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | size | number | 
- | position | number | 
- | color | any | 
- | imgUrl | string | 
- | system | [LensFlareSystem](/classes/2.2/LensFlareSystem) | 
-
+ | size | number |  The lens flare size
+ | position | number |  The lens flare position
+ | color | any |  The lens flare color
+ | imgUrl | string |  The image used for this lens flare
 ##Members
 
 ###size : number

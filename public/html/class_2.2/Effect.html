@@ -18,55 +18,49 @@
 <td></td>
 <td>baseName</td>
 <td>any</td>
-<td></td>
+<td>The base name of the effect (The name of file without .fragment.fx or .vertex.fx)</td>
 </tr>
 <tr>
 <td></td>
 <td>attributesNames</td>
 <td>string[]</td>
-<td></td>
+<td>An array containing the list of attributes.</td>
 </tr>
 <tr>
 <td></td>
 <td>uniformsNames</td>
 <td>string[]</td>
-<td></td>
+<td>An array containing the list of uniforms names.</td>
 </tr>
 <tr>
 <td></td>
 <td>samplers</td>
 <td>string[]</td>
-<td></td>
+<td>@param samplers</td>
 </tr>
 <tr>
 <td></td>
 <td>engine</td>
 <td>any</td>
-<td></td>
+<td>The given engine</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>defines</td>
 <td>string</td>
-<td></td>
+<td>The list of defines used by this effect.</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>fallbacks</td>
 <td><a href="/classes/2.2/EffectFallbacks">EffectFallbacks</a></td>
-<td></td>
+<td>@param fallbacks</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>onCompiled</td>
 <td>(effect: <a href="/classes/2.2/Effect">Effect</a>) =&gt; void</td>
-<td></td>
-</tr>
-<tr>
-<td>optional</td>
-<td>onError</td>
-<td>(effect: <a href="/classes/2.2/Effect">Effect</a>, errors: string) =&gt; void</td>
-<td></td>
+<td>Function called when given effect are successfully compiled</td>
 </tr>
 </tbody>
 </table>
@@ -105,7 +99,7 @@
 <td></td>
 <td>index</td>
 <td>number</td>
-<td></td>
+<td>The given index</td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +120,7 @@
 <td></td>
 <td>name</td>
 <td>string</td>
-<td></td>
+<td>The given name</td>
 </tr>
 </tbody>
 </table>
@@ -149,7 +143,7 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 </tbody>
 </table>
@@ -170,7 +164,7 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 </tbody>
 </table>
@@ -195,13 +189,13 @@
 <td></td>
 <td>channel</td>
 <td>string</td>
-<td></td>
+<td>@param channel</td>
 </tr>
 <tr>
 <td></td>
 <td>texture</td>
 <td><a href="/classes/2.2/BaseTexture">BaseTexture</a></td>
-<td></td>
+<td>The given texture</td>
 </tr>
 </tbody>
 </table>
@@ -222,13 +216,13 @@
 <td></td>
 <td>channel</td>
 <td>string</td>
-<td></td>
+<td>@param channel</td>
 </tr>
 <tr>
 <td></td>
 <td>postProcess</td>
 <td><a href="/classes/2.2/PostProcess">PostProcess</a></td>
-<td></td>
+<td>The given post process</td>
 </tr>
 </tbody>
 </table>
@@ -249,7 +243,7 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
@@ -275,7 +269,7 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
@@ -301,7 +295,7 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
@@ -327,7 +321,7 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
@@ -354,13 +348,13 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
 <td>matrices</td>
 <td>Float32Array</td>
-<td></td>
+<td>The matrices</td>
 </tr>
 </tbody>
 </table>
@@ -381,13 +375,13 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
 <td>matrix</td>
 <td><a href="/classes/2.2/Matrix">Matrix</a></td>
-<td></td>
+<td>the matrix</td>
 </tr>
 </tbody>
 </table>
@@ -407,13 +401,13 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
 <td>matrix</td>
 <td>Float32Array</td>
-<td></td>
+<td>the matrix</td>
 </tr>
 </tbody>
 </table>
@@ -439,7 +433,7 @@
 <td></td>
 <td>matrix</td>
 <td>Float32Array</td>
-<td></td>
+<td>the matrix</td>
 </tr>
 </tbody>
 </table>
@@ -460,13 +454,13 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
 <td>value</td>
 <td>number</td>
-<td></td>
+<td>The float</td>
 </tr>
 </tbody>
 </table>
@@ -487,13 +481,13 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
 <td>bool</td>
 <td>boolean</td>
-<td></td>
+<td>The boolean</td>
 </tr>
 </tbody>
 </table>
@@ -514,13 +508,13 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
 <td>vector2</td>
 <td><a href="/classes/2.2/Vector2">Vector2</a></td>
-<td></td>
+<td>The vector2</td>
 </tr>
 </tbody>
 </table>
@@ -541,19 +535,19 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
 <td>x</td>
 <td>number</td>
-<td></td>
+<td>The value on x axis</td>
 </tr>
 <tr>
 <td></td>
 <td>y</td>
 <td>number</td>
-<td></td>
+<td>The value on y axis</td>
 </tr>
 </tbody>
 </table>
@@ -574,13 +568,13 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
 <td>vector3</td>
 <td><a href="/classes/2.2/Vector3">Vector3</a></td>
-<td></td>
+<td>The vector3</td>
 </tr>
 </tbody>
 </table>
@@ -601,25 +595,19 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
 <td>x</td>
 <td>number</td>
-<td></td>
+<td>The value on x axis</td>
 </tr>
 <tr>
 <td></td>
 <td>y</td>
 <td>number</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>z</td>
-<td>number</td>
-<td></td>
+<td>The value on y axis</td>
 </tr>
 </tbody>
 </table>
@@ -639,7 +627,7 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
@@ -666,31 +654,25 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
 <td>x</td>
 <td>number</td>
-<td></td>
+<td>The value on x axis</td>
 </tr>
 <tr>
 <td></td>
 <td>y</td>
 <td>number</td>
-<td></td>
+<td>The value on y axis</td>
 </tr>
 <tr>
 <td></td>
 <td>z</td>
 <td>number</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>w</td>
-<td>number</td>
-<td></td>
+<td>The value on z axis</td>
 </tr>
 </tbody>
 </table>
@@ -711,13 +693,13 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
 <td>color3</td>
 <td><a href="/classes/2.2/Color3">Color3</a></td>
-<td></td>
+<td>The color</td>
 </tr>
 </tbody>
 </table>
@@ -737,19 +719,19 @@
 <td></td>
 <td>uniformName</td>
 <td>string</td>
-<td></td>
+<td>The given uniform name</td>
 </tr>
 <tr>
 <td></td>
 <td>color3</td>
 <td><a href="/classes/2.2/Color3">Color3</a></td>
-<td></td>
+<td>The color</td>
 </tr>
 <tr>
 <td></td>
 <td>alpha</td>
 <td>number</td>
-<td></td>
+<td>Alpha is the transparency between 0 and 1.</td>
 </tr>
 </tbody>
 </table>

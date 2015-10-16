@@ -22,13 +22,11 @@ A tutorial about video textures can be found here : http://doc.babylonjs.com/pag
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | urls | string[] | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | generateMipMaps | boolean | 
-optional | invertY | boolean | 
-optional | samplingMode | number | 
-
+ | name | string |  Name of the texture
+ | urls | string[] |  Link to the texture
+ | scene | [Scene](/classes/2.2/Scene) |  [Scene](/classes/2.2/Scene) which contain the texture
+optional | generateMipMaps | boolean |  True to generate a mipmaps
+optional | invertY | boolean |  True to invert on Y axis
 ##Members
 
 ###video : HTMLVideoElement

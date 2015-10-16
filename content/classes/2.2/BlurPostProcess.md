@@ -20,15 +20,13 @@ The Postprocess constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | direction | [Vector2](/classes/2.2/Vector2) | 
- | blurWidth | number | 
- | ratio | number | 
- | camera | [Camera](/classes/2.2/Camera) | 
-optional | samplingMode | number | 
-optional | engine | [Engine](/classes/2.2/Engine) | 
-optional | reusable | boolean | 
-
+ | name | string |  The postprocess name
+ | direction | [Vector2](/classes/2.2/Vector2) |  The direction of the blur
+ | blurWidth | number |  The width of the blur
+ | ratio | number |  The size of the postprocess (0.5 means that your postprocess will have a width = canvas.width * 0.5 and a height = canvas.height * 0.5)
+ | camera | [Camera](/classes/2.2/Camera) |  The scene camera linked to this post process
+optional | samplingMode | number |  [Texture](/classes/2.2/Texture).NEAREST_SAMPLINGMODE, [Texture](/classes/2.2/Texture).BILINEAR_SAMPLINGMODE or [Texture](/classes/2.2/Texture).TRILINEAR_SAMPLINGMODE
+optional | engine | [Engine](/classes/2.2/Engine) |  The engine to attach the postprocess.
 ##Members
 
 ###direction : [Vector2](/classes/2.2/Vector2)

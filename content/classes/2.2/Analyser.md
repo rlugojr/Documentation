@@ -18,7 +18,7 @@ class [Analyser](/classes/2.2/Analyser)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
+ | scene | [Scene](/classes/2.2/Scene) |  
 
 ##Members
 
@@ -69,9 +69,8 @@ class [Analyser](/classes/2.2/Analyser)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | inputAudioNode | AudioNode | 
- | outputAudioNode | AudioNode | 
-
+ | inputAudioNode | AudioNode |  
+ | outputAudioNode | AudioNode |  
 ###dispose() &rarr; void
 
 

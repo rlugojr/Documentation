@@ -20,11 +20,9 @@ Builds a [PostProcessRenderEffect](/classes/2.2/PostProcessRenderEffect) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | engine | [Engine](/classes/2.2/Engine) | 
- | name | string | 
- | getPostProcess | () =&gt; [PostProcess](/classes/2.2/PostProcess) | 
-optional | singleInstance | boolean | 
-
+ | engine | [Engine](/classes/2.2/Engine) |  The used engine
+ | name | string |  The name of the postprocess rendrer effect
+ | getPostProcess | () =&gt; [PostProcess](/classes/2.2/PostProcess) |  The function has to return a new instance of the postprocess which will be used
 ##Members
 
 ###applyParameters : (postProcess: [PostProcess](/classes/2.2/PostProcess)) =&gt; void
@@ -40,7 +38,7 @@ Adds a new pass to the effect
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPass | [PostProcessRenderPass](/classes/2.2/PostProcessRenderPass) | 
+ | renderPass | [PostProcessRenderPass](/classes/2.2/PostProcessRenderPass) |  The pass to remove
 
 ###removePass(renderPass) &rarr; void
 
@@ -49,7 +47,7 @@ Removes a pass from the effect
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderPass | [PostProcessRenderPass](/classes/2.2/PostProcessRenderPass) | 
+ | renderPass | [PostProcessRenderPass](/classes/2.2/PostProcessRenderPass) |  The pass to remove
 
 ###addRenderEffectAsPass(renderEffect) &rarr; void
 
@@ -58,7 +56,7 @@ Adds a render effect as a pass
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderEffect | [PostProcessRenderEffect](/classes/2.2/PostProcessRenderEffect) | 
+ | renderEffect | [PostProcessRenderEffect](/classes/2.2/PostProcessRenderEffect) |  The effect to add
 
 ###getPass(passName) &rarr; void
 
@@ -67,7 +65,7 @@ Returns a pass using its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | passName | string | 
+ | passName | string |  The given name
 
 ###emptyPasses() &rarr; void
 
@@ -79,5 +77,5 @@ Delete all passes
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | camera | [Camera](/classes/2.2/Camera) | 
+optional | camera | [Camera](/classes/2.2/Camera) |  default : this camera
 

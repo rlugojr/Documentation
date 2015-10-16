@@ -22,8 +22,6 @@ class [ArcFollowCamera](/classes/2.2/ArcFollowCamera) extends [TargetCamera](/cl
  | beta | number | 
  | radius | number | 
  | target | [AbstractMesh](/classes/2.2/AbstractMesh) | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
 ##Members
 
 ###alpha : number

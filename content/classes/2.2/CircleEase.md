@@ -20,5 +20,5 @@ class [CircleEase](/classes/2.2/CircleEase) extends [EasingFunction](/classes/2.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gradient | number | 
+ | gradient | number |  
 

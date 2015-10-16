@@ -23,13 +23,11 @@ A tutorial about advanced texturing can be found here : http://doc.babylonjs.com
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | size | any | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | generateMipMaps | boolean | 
-optional | doNotChangeAspectRatio | boolean | 
-optional | type | number | 
-
+ | name | string |  Name of the texture
+ | size | any |  The new size for the texture
+ | scene | [Scene](/classes/2.2/Scene) |  [Scene](/classes/2.2/Scene) which contain the texture
+optional | generateMipMaps | boolean |  True to generate the mipmaps
+optional | doNotChangeAspectRatio | boolean |  
 ##Members
 
 ###renderList : [AbstractMesh](/classes/2.2/AbstractMesh)[]
@@ -99,7 +97,7 @@ Get the render size
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ratio | number | 
+ | ratio | number |  
 
 ###resize(size, generateMipMaps) &rarr; void
 
@@ -108,9 +106,8 @@ Resize the mirror texture
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | size | any | 
-optional | generateMipMaps | boolean | 
-
+ | size | any |  The new size for the texture
+optional | generateMipMaps | boolean |  True to generate the mipmaps
 ###render(useCameraPostProcess, dumpForDebug) &rarr; void
 
 Render the mirror texture
@@ -118,9 +115,8 @@ Render the mirror texture
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | useCameraPostProcess | boolean | 
-optional | dumpForDebug | boolean | 
-
+optional | useCameraPostProcess | boolean |  True to use the camera post process
+optional | dumpForDebug | boolean |  
 ###clone() &rarr; [RenderTargetTexture](/classes/2.2/RenderTargetTexture)
 
 

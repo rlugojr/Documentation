@@ -21,9 +21,8 @@ The Bounding Info constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | minimum | [Vector3](/classes/2.2/Vector3) | 
- | maximum | [Vector3](/classes/2.2/Vector3) | 
-
+ | minimum | [Vector3](/classes/2.2/Vector3) |  The minimum of the bounding info
+ | maximum | [Vector3](/classes/2.2/Vector3) |  The maximum of the bounding info
 ##Members
 
 ###minimum : [Vector3](/classes/2.2/Vector3)
@@ -51,7 +50,7 @@ Check if the bounding
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](/classes/2.2/Plane)[] | 
+ | frustumPlanes | [Plane](/classes/2.2/Plane)[] |  
 
 ###isCompletelyInFrustum(frustumPlanes) &rarr; boolean
 
@@ -60,7 +59,7 @@ Check if the bounding
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](/classes/2.2/Plane)[] | 
+ | frustumPlanes | [Plane](/classes/2.2/Plane)[] |  
 
 ###intersectsPoint(point) &rarr; boolean
 
@@ -69,7 +68,7 @@ Check if the bounding sphere or the bounding box intersect the given point.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | point | [Vector3](/classes/2.2/Vector3) | 
+ | point | [Vector3](/classes/2.2/Vector3) |  The point
 
 ###intersects(boundingInfo, precise) &rarr; boolean
 
@@ -78,6 +77,5 @@ Check if the bounding sphere or the bounding box intersect the given point.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | boundingInfo | [BoundingInfo](/classes/2.2/BoundingInfo) | 
- | precise | boolean | 
-
+ | boundingInfo | [BoundingInfo](/classes/2.2/BoundingInfo) |  The bounding info
+ | precise | boolean |  False : check only bounding volumes, true check point by point

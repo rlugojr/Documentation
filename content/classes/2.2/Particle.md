@@ -58,5 +58,5 @@ This particle angle
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Particle](/classes/2.2/Particle) | 
+ | other | [Particle](/classes/2.2/Particle) |  
 

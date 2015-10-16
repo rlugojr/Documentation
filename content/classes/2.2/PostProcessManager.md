@@ -21,7 +21,7 @@ A tutorial about post process can be found here
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
+ | scene | [Scene](/classes/2.2/Scene) |  The scene linked to this postprocess
 
 ##Methods
 
@@ -32,9 +32,8 @@ A tutorial about post process can be found here
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | postProcesses | [PostProcess](/classes/2.2/PostProcess)[] | 
-optional | targetTexture | WebGLTexture | 
-
+ | postProcesses | [PostProcess](/classes/2.2/PostProcess)[] |  
+optional | targetTexture | WebGLTexture |  
 ###dispose() &rarr; void
 
 

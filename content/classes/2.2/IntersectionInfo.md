@@ -18,10 +18,9 @@ The [IntersectionInfo](/classes/2.2/IntersectionInfo) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | bu | number | 
- | bv | number | 
- | distance | number | 
-
+ | bu | number |  Coordinates texture of the mesh represents the x axis
+ | bv | number |  Coordinates texture of the mesh represents the y axis
+ | distance | number |  Represents the distance between the screen the click on the mesh
 ##Members
 
 ###bu : number

@@ -22,8 +22,6 @@ class [Box](/classes/2.2/Box) extends _Primitive
  | size | number | 
 optional | canBeRegenerated | boolean | 
 optional | mesh | [Mesh](/classes/2.2/Mesh) | 
-optional | side | number | 
-
 ##Members
 
 ###size : number

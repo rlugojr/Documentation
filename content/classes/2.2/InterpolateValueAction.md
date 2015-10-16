@@ -20,14 +20,12 @@ The Interpolate Value [Action](/classes/2.2/Action) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | triggerOptions | any | 
- | target | any | 
- | propertyPath | string | 
- | value | any | 
-optional | duration | number | 
-optional | condition | [Condition](/classes/2.2/Condition) | 
-optional | stopOtherAnimations | boolean | 
-
+ | triggerOptions | any |  The trigger
+ | target | any |  The target
+ | propertyPath | string |  Property of the target
+ | value | any |  The target value
+optional | duration | number |  The duration
+optional | condition | [Condition](/classes/2.2/Condition) |  The condition
 ##Members
 
 ###propertyPath : string

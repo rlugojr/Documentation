@@ -25,8 +25,6 @@ class [Plane](/classes/2.2/Plane) extends _Primitive
  | size | number | 
 optional | canBeRegenerated | boolean | 
 optional | mesh | [Mesh](/classes/2.2/Mesh) | 
-optional | side | number | 
-
 ##Members
 
 ###size : number

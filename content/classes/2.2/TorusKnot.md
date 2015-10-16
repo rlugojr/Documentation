@@ -27,8 +27,6 @@ class [TorusKnot](/classes/2.2/TorusKnot) extends _Primitive
  | q | number | 
 optional | canBeRegenerated | boolean | 
 optional | mesh | [Mesh](/classes/2.2/Mesh) | 
-optional | side | number | 
-
 ##Members
 
 ###radius : number

@@ -23,10 +23,9 @@ Creates a new [VirtualJoysticksCamera](/classes/2.2/VirtualJoysticksCamera)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | position | [Vector3](/classes/2.2/Vector3) | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  Name of the camera
+ | position | [Vector3](/classes/2.2/Vector3) |  The positon of the camera
+ | scene | [Scene](/classes/2.2/Scene) |  The scene which contain the camera
 ##Methods
 
 ###getLeftJoystick() &rarr; [VirtualJoystick](/classes/2.2/VirtualJoystick)

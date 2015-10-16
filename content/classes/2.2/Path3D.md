@@ -24,10 +24,9 @@ raw (optional, default false) : boolean, if true the returned [Path3D](/classes/
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | path | [Vector3](/classes/2.2/Vector3)[] | 
-optional | firstNormal | [Vector3](/classes/2.2/Vector3) | 
+ | path | [Vector3](/classes/2.2/Vector3)[] |  
+optional | firstNormal | [Vector3](/classes/2.2/Vector3) |  
 optional | raw | boolean | 
-
 ##Members
 
 ###path : [Vector3](/classes/2.2/Vector3)[]
@@ -58,6 +57,5 @@ optional | raw | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | path | [Vector3](/classes/2.2/Vector3)[] | 
-optional | firstNormal | [Vector3](/classes/2.2/Vector3) | 
-
+ | path | [Vector3](/classes/2.2/Vector3)[] |  
+optional | firstNormal | [Vector3](/classes/2.2/Vector3) |  

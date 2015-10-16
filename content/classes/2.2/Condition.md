@@ -20,7 +20,7 @@ The condition constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | actionManager | [ActionManager](/classes/2.2/ActionManager) | 
+ | actionManager | [ActionManager](/classes/2.2/ActionManager) |  @param actionManager
 
 ##Methods
 

@@ -21,11 +21,9 @@ The [MeshAssetTask](/classes/2.2/MeshAssetTask) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | meshesNames | any | 
- | rootUrl | string | 
- | sceneFilename | string | 
-
+ | name | string |  The name
+ | meshesNames | any |  The meshes names
+ | rootUrl | string |  The root url for this mesh
 ##Members
 
 ###name : string
@@ -77,7 +75,6 @@ True if is completed, false otherwise.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
- | onSuccess | () =&gt; void | 
- | onError | () =&gt; void | 
-
+ | scene | [Scene](/classes/2.2/Scene) |  The scene where mesh is.
+ | onSuccess | () =&gt; void |  Function call when the mesh is load successfully
+ | onError | () =&gt; void |  Function call when the mesh isn't load successfully

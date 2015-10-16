@@ -20,10 +20,9 @@ Builds a [Gamepad](/classes/2.2/Gamepad) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
- | index | number | 
- | browserGamepad | any | 
-
+ | id | string |  The gamepad id
+ | index | number |  The gamepad index
+ | browserGamepad | any |  The object that holds the gamepad informations
 ##Members
 
 ###id : string
@@ -55,7 +54,7 @@ Binds an action to the left stick
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | callback | (values: [StickValues](/classes/2.2/StickValues)) =&gt; void | 
+ | callback | (values: [StickValues](/classes/2.2/StickValues)) =&gt; void |  The action to bind
 
 ###onrightstickchanged(callback) &rarr; void
 
@@ -64,7 +63,7 @@ Binds an action to the right stick
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | callback | (values: [StickValues](/classes/2.2/StickValues)) =&gt; void | 
+ | callback | (values: [StickValues](/classes/2.2/StickValues)) =&gt; void |  The action to bind
 
 ###update() &rarr; void
 

@@ -23,11 +23,9 @@ A tutorial about advanced texturing can be found here : http://doc.babylonjs.com
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | size | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | generateMipMaps | boolean | 
-
+ | name | string |  Name of the texture
+ | size | number |  Size of the texture
+ | scene | [Scene](/classes/2.2/Scene) |  [Scene](/classes/2.2/Scene) which contain the texture
 ##Members
 
 ###mirrorPlane : [Plane](/classes/2.2/Plane)

@@ -18,9 +18,8 @@ class [Path2](/classes/2.2/Path2)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
-
+ | x | number |  
+ | y | number |  
 ##Members
 
 ###closed : boolean
@@ -36,9 +35,8 @@ class [Path2](/classes/2.2/Path2)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
-
+ | x | number |  
+ | y | number |  
 ###addArcTo(midX, midY, endX, endY, numberOfSegments) &rarr; [Path2](/classes/2.2/Path2)
 
 
@@ -46,12 +44,10 @@ class [Path2](/classes/2.2/Path2)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | midX | number | 
- | midY | number | 
- | endX | number | 
- | endY | number | 
-optional | numberOfSegments | number | 
-
+ | midX | number |  
+ | midY | number |  
+ | endX | number |  
+ | endY | number |  
 ###close() &rarr; [Path2](/classes/2.2/Path2)
 
 
@@ -68,7 +64,7 @@ optional | numberOfSegments | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | normalizedLengthPosition | number | 
+ | normalizedLengthPosition | number |  
 
 ###static StartingAt(x, y) &rarr; [Path2](/classes/2.2/Path2)
 
@@ -77,6 +73,5 @@ optional | numberOfSegments | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
-
+ | x | number |  
+ | y | number |  

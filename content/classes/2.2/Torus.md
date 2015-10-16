@@ -24,8 +24,6 @@ class [Torus](/classes/2.2/Torus) extends _Primitive
  | tessellation | number | 
 optional | canBeRegenerated | boolean | 
 optional | mesh | [Mesh](/classes/2.2/Mesh) | 
-optional | side | number | 
-
 ##Members
 
 ###diameter : number

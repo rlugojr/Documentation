@@ -20,10 +20,9 @@ Execute your own code when the trigger is raised and the condition is true
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | triggerOptions | any | 
- | func | (evt: [ActionEvent](/classes/2.2/ActionEvent)) =&gt; void | 
-optional | condition | [Condition](/classes/2.2/Condition) | 
-
+ | triggerOptions | any |  
+ | func | (evt: [ActionEvent](/classes/2.2/ActionEvent)) =&gt; void |  
+optional | condition | [Condition](/classes/2.2/Condition) |  
 ##Members
 
 ###func : (evt: [ActionEvent](/classes/2.2/ActionEvent)) =&gt; void
@@ -39,5 +38,5 @@ Func
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | evt | [ActionEvent](/classes/2.2/ActionEvent) | 
+ | evt | [ActionEvent](/classes/2.2/ActionEvent) |  The event to trigger
 

@@ -18,7 +18,7 @@ class [SmartArray](/classes/2.2/SmartArray)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | capacity | number | 
+ | capacity | number |  @param capacity
 
 ##Members
 
@@ -39,7 +39,7 @@ Push method. If the length of the smart array is reached, the length of this arr
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value | any | 
+ | value | any |  @param value
 
 ###pushNoDuplicate(value) &rarr; void
 
@@ -48,7 +48,7 @@ Push method to avoid any duplicate. If the value is found in the smart array, no
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value | any | 
+ | value | any |  @param value
 
 ###sort(compareFn) &rarr; void
 
@@ -57,7 +57,7 @@ Sort this array with the sort function given in parameter.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | compareFn | any | 
+ | compareFn | any |  @param compareFn
 
 ###reset() &rarr; void
 
@@ -69,7 +69,7 @@ Append the given smart array data to this smart array.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | array | any | 
+ | array | any |  @param array
 
 ###concatWithNoDuplicate(array) &rarr; void
 
@@ -79,7 +79,7 @@ This function check if each values are not already in the smart array.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | array | any | 
+ | array | any |  @param array
 
 ###indexOf(value) &rarr; number
 
@@ -88,5 +88,5 @@ This function check if each values are not already in the smart array.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value | any | 
+ | value | any |  @param value
 

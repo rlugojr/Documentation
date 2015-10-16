@@ -20,5 +20,5 @@ class [CubicEase](/classes/2.2/CubicEase) extends [EasingFunction](/classes/2.2/
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gradient | number | 
+ | gradient | number |  
 

@@ -21,9 +21,8 @@ The [BoundingSphere](/classes/2.2/BoundingSphere) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | minimum | [Vector3](/classes/2.2/Vector3) | 
- | maximum | [Vector3](/classes/2.2/Vector3) | 
-
+ | minimum | [Vector3](/classes/2.2/Vector3) |  The minimum of the sphere
+ | maximum | [Vector3](/classes/2.2/Vector3) |  The maximum of the sphere
 ##Members
 
 ###minimum : [Vector3](/classes/2.2/Vector3)
@@ -59,7 +58,7 @@ Check if the boundingSphere is in frustum
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](/classes/2.2/Plane)[] | 
+ | frustumPlanes | [Plane](/classes/2.2/Plane)[] |  the frustum planes
 
 ###intersectsPoint(point) &rarr; boolean
 
@@ -68,7 +67,7 @@ Check if this bounding sphere intersect the point given in parameter
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | point | [Vector3](/classes/2.2/Vector3) | 
+ | point | [Vector3](/classes/2.2/Vector3) |  The point
 
 ###static Intersects(sphere0, sphere1) &rarr; boolean
 
@@ -77,6 +76,5 @@ Check if this bounding sphere intersect the point given in parameter
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | sphere0 | [BoundingSphere](/classes/2.2/BoundingSphere) | 
- | sphere1 | [BoundingSphere](/classes/2.2/BoundingSphere) | 
-
+ | sphere0 | [BoundingSphere](/classes/2.2/BoundingSphere) |  The first sphere
+ | sphere1 | [BoundingSphere](/classes/2.2/BoundingSphere) |  The second sphere

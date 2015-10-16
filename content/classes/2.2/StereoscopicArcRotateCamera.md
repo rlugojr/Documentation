@@ -22,12 +22,10 @@ class [StereoscopicArcRotateCamera](/classes/2.2/StereoscopicArcRotateCamera) ex
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | alpha | number | 
- | beta | number | 
- | radius | number | 
- | target | any | 
- | interaxialDistance | number | 
- | isSideBySide | boolean | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  
+ | alpha | number |  
+ | beta | number |  
+ | radius | number |  
+ | target | any |  
+ | interaxialDistance | number |  
+ | isSideBySide | boolean |  

@@ -20,10 +20,9 @@ The state condition constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | actionManager | [ActionManager](/classes/2.2/ActionManager) | 
- | target | any | 
- | value | string | 
-
+ | actionManager | [ActionManager](/classes/2.2/ActionManager) |  The action manager
+ | target | any |  The target
+ | value | string |  The given value
 ##Members
 
 ###value : string

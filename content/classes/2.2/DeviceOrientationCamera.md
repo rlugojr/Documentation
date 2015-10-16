@@ -24,10 +24,9 @@ A tutorial about [DeviceOrientationCamera](/classes/2.2/DeviceOrientationCamera)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | position | [Vector3](/classes/2.2/Vector3) | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  
+ | position | [Vector3](/classes/2.2/Vector3) |  
+ | scene | [Scene](/classes/2.2/Scene) |  
 ##Members
 
 ###angularSensibility : number
@@ -47,9 +46,8 @@ Attach the camera controls and display to a canvas
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | canvas | HTMLCanvasElement | 
- | noPreventDefault | boolean | 
-
+ | canvas | HTMLCanvasElement |  Element to detach the controls and display
+ | noPreventDefault | boolean |  @param noPreventDefault
 ###detachControl(canvas) &rarr; void
 
 
@@ -57,5 +55,5 @@ Attach the camera controls and display to a canvas
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | canvas | HTMLCanvasElement | 
+ | canvas | HTMLCanvasElement |  Element to detach the controls and display
 

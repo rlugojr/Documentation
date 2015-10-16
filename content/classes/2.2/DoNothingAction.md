@@ -20,9 +20,8 @@ Do nothing
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | triggerOptions | any | 
-optional | condition | [Condition](/classes/2.2/Condition) | 
-
+optional | triggerOptions | any |  The trigger options
+optional | condition | [Condition](/classes/2.2/Condition) |  [Condition](/classes/2.2/Condition) to trigger the action
 ##Methods
 
 ###execute() &rarr; void

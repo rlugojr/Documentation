@@ -23,5 +23,3 @@ class [TonemapPostProcess](/classes/2.2/TonemapPostProcess) extends [PostProcess
  | camera | [Camera](/classes/2.2/Camera) | 
 optional | samplingMode | number | 
 optional | engine | [Engine](/classes/2.2/Engine) | 
-optional | textureFormat | number | 
-

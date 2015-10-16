@@ -18,11 +18,9 @@ Constroctor.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | iterations | number |  the number of iterations.
- | _fn | (asyncLoop: [AsyncLoop](/classes/2.2/AsyncLoop)) =&gt; void |  the function to run each iteration
- | _successCallback | () =&gt; void |  the callback that will be called upon succesful execution
-optional | offset | number |  starting offset.
-
+ | iterations | number |  the number of iterations. total number of iterations
+ | _fn | (asyncLoop: [AsyncLoop](/classes/2.2/AsyncLoop)) =&gt; void |  the function to run each iteration 
+ | _successCallback | () =&gt; void |  the callback that will be called upon succesful execution 
 ##Members
 
 ###iterations : number
@@ -48,11 +46,9 @@ Helper function
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | iterations | number | 
- | _fn | (asyncLoop: [AsyncLoop](/classes/2.2/AsyncLoop)) =&gt; void | 
- | _successCallback | () =&gt; void | 
-optional | offset | number | 
-
+ | iterations | number |  total number of iterations
+ | _fn | (asyncLoop: [AsyncLoop](/classes/2.2/AsyncLoop)) =&gt; void |  
+ | _successCallback | () =&gt; void |  
 ###static SyncAsyncForLoop(iterations, syncedIterations, fn, callback, breakFunction, timeout) &rarr; void
 
 A for-loop that will run a given number of iterations synchronous and the rest async.
@@ -62,10 +58,8 @@ A for-loop that will run a given number of iterations synchronous and the rest a
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | iterations | number |  total number of iterations
- | syncedIterations | number |  number of synchronous iterations in each async iteration.
- | fn | (iteration: number) =&gt; void |  the function to call each iteration.
- | callback | () =&gt; void |  a success call back that will be called when iterating stops.
-optional | breakFunction | () =&gt; boolean |  a break condition (optional)
-optional | timeout | number |  timeout settings for the setTimeout function. default - 0.
-
+ | iterations | number |  total number of iterations total number of iterations
+ | syncedIterations | number |  number of synchronous iterations in each async iteration. number of synchronous iterations in each async iteration.
+ | fn | (iteration: number) =&gt; void |  the function to call each iteration. the function to call each iteration.
+ | callback | () =&gt; void |  a success call back that will be called when iterating stops. a success call back that will be called when iterating stops.
+optional | breakFunction | () =&gt; boolean |  a break condition (optional) a break condition (optional)

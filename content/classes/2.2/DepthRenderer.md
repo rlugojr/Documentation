@@ -18,9 +18,8 @@ class [DepthRenderer](/classes/2.2/DepthRenderer)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | type | number | 
-
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | type | number |  
 ##Methods
 
 ###isReady(subMesh, useInstances) &rarr; boolean
@@ -30,9 +29,8 @@ optional | type | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | subMesh | [SubMesh](/classes/2.2/SubMesh) | 
- | useInstances | boolean | 
-
+ | subMesh | [SubMesh](/classes/2.2/SubMesh) |  
+ | useInstances | boolean |  
 ###getDepthMap() &rarr; [RenderTargetTexture](/classes/2.2/RenderTargetTexture)
 
 

@@ -22,7 +22,7 @@ See more about Actions here
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
+ | scene | [Scene](/classes/2.2/Scene) |  The scene which contains the new action manager
 
 ##Members
 
@@ -111,7 +111,7 @@ Does this action manager handles actions of any of the given triggers
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | triggers | number[] | 
+ | triggers | number[] |  @param triggers
 
 ###hasSpecificTrigger(trigger) &rarr; boolean
 
@@ -122,7 +122,7 @@ Does this action manager handles actions of a given trigger
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | trigger | number | 
+ | trigger | number |  The trigger
 
 ###registerAction(action) &rarr; [Action](/classes/2.2/Action)
 
@@ -133,7 +133,7 @@ Registers an action to this action manager
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | action | [Action](/classes/2.2/Action) | 
+ | action | [Action](/classes/2.2/Action) |  The action to register
 
 ###processTrigger(trigger, evt) &rarr; void
 
@@ -142,6 +142,5 @@ Process a specific trigger
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | trigger | number | 
- | evt | [ActionEvent](/classes/2.2/ActionEvent) |  {BABYLON.[ActionEvent](/classes/2.2/ActionEvent)} the event details to be processed
-
+ | trigger | number |  The trigger
+ | evt | [ActionEvent](/classes/2.2/ActionEvent) |  {BABYLON.[ActionEvent](/classes/2.2/ActionEvent)} the event details to be processed {BABYLON.[ActionEvent](/classes/2.2/ActionEvent)} the event details to be processed

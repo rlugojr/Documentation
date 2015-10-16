@@ -20,9 +20,8 @@ The predicate condition constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | actionManager | [ActionManager](/classes/2.2/ActionManager) | 
- | predicate | () =&gt; boolean | 
-
+ | actionManager | [ActionManager](/classes/2.2/ActionManager) |  The action manager
+ | predicate | () =&gt; boolean |  The predicate
 ##Members
 
 ###predicate : () =&gt; boolean

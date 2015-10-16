@@ -18,9 +18,8 @@ Creates a new rendering group
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | index | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | index | number |  @param index
+ | scene | [Scene](/classes/2.2/Scene) |  @param scene
 ##Members
 
 ###index : number
@@ -36,7 +35,7 @@ Creates a new rendering group
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | customRenderFunction | (opaqueSubMeshes: [SmartArray](/classes/2.2/SmartArray)&lt;[SubMesh](/classes/2.2/SubMesh)&gt;, transparentSubMeshes: [SmartArray](/classes/2.2/SmartArray)&lt;[SubMesh](/classes/2.2/SubMesh)&gt;, alphaTestSubMeshes: [SmartArray](/classes/2.2/SmartArray)&lt;[SubMesh](/classes/2.2/SubMesh)&gt;) =&gt; void | 
+ | customRenderFunction | (opaqueSubMeshes: [SmartArray](/classes/2.2/SmartArray)&lt;[SubMesh](/classes/2.2/SubMesh)&gt;, transparentSubMeshes: [SmartArray](/classes/2.2/SmartArray)&lt;[SubMesh](/classes/2.2/SubMesh)&gt;, alphaTestSubMeshes: [SmartArray](/classes/2.2/SmartArray)&lt;[SubMesh](/classes/2.2/SubMesh)&gt;) =&gt; void |  
 
 ###prepare() &rarr; void
 
@@ -48,5 +47,5 @@ Creates a new rendering group
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | subMesh | [SubMesh](/classes/2.2/SubMesh) | 
+ | subMesh | [SubMesh](/classes/2.2/SubMesh) |  @param subMesh
 

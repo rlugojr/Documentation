@@ -18,11 +18,9 @@ class [Polygon](/classes/2.2/Polygon)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | xmin | number | 
- | ymin | number | 
- | xmax | number | 
- | ymax | number | 
-
+ | xmin | number |  
+ | ymin | number |  
+ | xmax | number |  
 ###static Circle(radius, cx, cy, numberOfSides) &rarr; [Vector2](/classes/2.2/Vector2)[]
 
 
@@ -30,11 +28,9 @@ class [Polygon](/classes/2.2/Polygon)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | radius | number | 
-optional | cx | number | 
-optional | cy | number | 
-optional | numberOfSides | number | 
-
+ | radius | number |  
+optional | cx | number |  
+optional | cy | number |  
 ###static Parse(input) &rarr; [Vector2](/classes/2.2/Vector2)[]
 
 
@@ -42,7 +38,7 @@ optional | numberOfSides | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | input | string | 
+ | input | string |  
 
 ###static StartingAt(x, y) &rarr; [Path2](/classes/2.2/Path2)
 
@@ -51,6 +47,5 @@ optional | numberOfSides | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
-
+ | x | number |  
+ | y | number |  

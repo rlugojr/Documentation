@@ -21,9 +21,8 @@ Creates a new [Light](/classes/2.2/Light) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  The name of the object
+ | scene | [Scene](/classes/2.2/Scene) |  The scene to append the light
 ##Members
 
 ###diffuse : [Color3](/classes/2.2/Color3)
@@ -73,10 +72,9 @@ Gives the light to position with the given effect with given position names
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | effect | [Effect](/classes/2.2/Effect) | 
-optional | uniformName0 | string | 
-optional | uniformName1 | string | 
-
+ | effect | [Effect](/classes/2.2/Effect) |  The given effect
+optional | uniformName0 | string |  The first uniform name
+optional | uniformName1 | string |  The second uniform name
 ###canAffectMesh(mesh) &rarr; boolean
 
 Tests if the given mesh is affectable by this light
@@ -84,7 +82,7 @@ Tests if the given mesh is affectable by this light
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
+ | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  The given [Mesh](/classes/2.2/Mesh)
 
 ###getWorldMatrix() &rarr; [Matrix](/classes/2.2/Matrix)
 

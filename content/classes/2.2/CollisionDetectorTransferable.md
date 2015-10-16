@@ -20,7 +20,7 @@ class [CollisionDetectorTransferable](/classes/2.2/CollisionDetectorTransferable
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | payload | InitPayload | 
+ | payload | InitPayload |  
 
 ###onUpdate(payload) &rarr; void
 
@@ -29,7 +29,7 @@ class [CollisionDetectorTransferable](/classes/2.2/CollisionDetectorTransferable
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | payload | UpdatePayload | 
+ | payload | UpdatePayload |  
 
 ###onCollision(payload) &rarr; void
 
@@ -38,5 +38,5 @@ class [CollisionDetectorTransferable](/classes/2.2/CollisionDetectorTransferable
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | payload | CollidePayload | 
+ | payload | CollidePayload |  
 

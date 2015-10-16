@@ -21,10 +21,9 @@ Creates a new [HemisphericLight](/classes/2.2/HemisphericLight) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | direction | [Vector3](/classes/2.2/Vector3) | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  The namme of the light
+ | direction | [Vector3](/classes/2.2/Vector3) |  The direction of the light
+ | scene | [Scene](/classes/2.2/Scene) |  The scene to create the light into
 ##Members
 
 ###direction : [Vector3](/classes/2.2/Vector3)
@@ -44,7 +43,7 @@ Sets the direction of the light using the given target
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | target | [Vector3](/classes/2.2/Vector3) | 
+ | target | [Vector3](/classes/2.2/Vector3) |  The given target to lighten
 
 ###getShadowGenerator() &rarr; [ShadowGenerator](/classes/2.2/ShadowGenerator)
 
@@ -56,7 +55,6 @@ Returns null
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | effect | [Effect](/classes/2.2/Effect) | 
- | directionUniformName | string | 
- | groundColorUniformName | string | 
-
+ | effect | [Effect](/classes/2.2/Effect) |  The given effect
+ | directionUniformName | string |  The direction uniform name
+ | groundColorUniformName | string |  The groundColor uniform name

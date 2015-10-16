@@ -22,10 +22,9 @@ Create a new targetCamera
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | position | [Vector3](/classes/2.2/Vector3) | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  
+ | position | [Vector3](/classes/2.2/Vector3) |  Position of the targetCamera
+ | scene | [Scene](/classes/2.2/Scene) |  The scene where the targetCamera will be create
 ##Members
 
 ###cameraDirection : [Vector3](/classes/2.2/Vector3)
@@ -70,7 +69,7 @@ Set the target of the targetCamera
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | target | [Vector3](/classes/2.2/Vector3) | 
+ | target | [Vector3](/classes/2.2/Vector3) |  The target position
 
 ###getTarget() &rarr; [Vector3](/classes/2.2/Vector3)
 
@@ -84,6 +83,5 @@ Override [Camera](/classes/2.2/Camera).createRigCamera
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | cameraIndex | number | 
-
+ | name | string |  
+ | cameraIndex | number |  

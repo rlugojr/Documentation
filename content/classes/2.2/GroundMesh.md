@@ -21,9 +21,8 @@ The [GroundMesh](/classes/2.2/GroundMesh) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  @param name
+ | scene | [Scene](/classes/2.2/Scene) |  @param scene
 ##Members
 
 ###generateOctree : boolean
@@ -43,9 +42,8 @@ The subdivision of the [GroundMesh](/classes/2.2/GroundMesh)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | chunksCount | number | 
+ | chunksCount | number |  @param chunksCount
 optional | octreeBlocksSize | number | 
-
 ###getHeightAtCoordinates(x, z) &rarr; number
 
 
@@ -53,6 +51,5 @@ optional | octreeBlocksSize | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | z | number | 
-
+ | x | number |  @param x
+ | z | number |  @param z

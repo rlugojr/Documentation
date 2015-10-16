@@ -24,10 +24,9 @@ A tutorial about [ArcRotateCamera](/classes/2.2/ArcRotateCamera) can be found he
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | position | [Vector3](/classes/2.2/Vector3) | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  Name of the camera
+ | position | [Vector3](/classes/2.2/Vector3) |  Begin position of the camera (in [Vector3](/classes/2.2/Vector3))
+ | scene | [Scene](/classes/2.2/Scene) |  The scene which contain camera
 ##Members
 
 ###angularSensibility : number
@@ -47,9 +46,8 @@ Attach the camera controls and display to a canvas element
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | canvas | HTMLCanvasElement | 
- | noPreventDefault | boolean | 
-
+ | canvas | HTMLCanvasElement |  The element from which the camera controls and display will be detached
+ | noPreventDefault | boolean |  No prevent default
 ###detachControl(canvas) &rarr; void
 
 
@@ -57,5 +55,5 @@ Attach the camera controls and display to a canvas element
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | canvas | HTMLCanvasElement | 
+ | canvas | HTMLCanvasElement |  The element from which the camera controls and display will be detached
 

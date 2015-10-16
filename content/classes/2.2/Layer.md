@@ -18,12 +18,10 @@ The [Layer](/classes/2.2/Layer) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | imgUrl | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | isBackground | boolean | 
-optional | color | [Color4](/classes/2.2/Color4) | 
-
+ | name | string |  The layer name
+ | imgUrl | string |  The texture URL to display for this layer
+ | scene | [Scene](/classes/2.2/Scene) |  The scene linked to this layer
+optional | isBackground | boolean |  If set to true, then this layer will be displayed as a background
 ##Members
 
 ###name : string

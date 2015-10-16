@@ -21,7 +21,7 @@ A tutorial about materials and textures can be found here : http://doc.babylonjs
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
+ | scene | [Scene](/classes/2.2/Scene) |  The scene which will contains the new base texture
 
 ##Members
 
@@ -139,7 +139,7 @@ Get the base size of the base texture
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ratio | number | 
+ | ratio | number |  
 
 ###delayLoad() &rarr; void
 

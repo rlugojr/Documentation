@@ -20,10 +20,9 @@ Creates a new RGB [Color3](/classes/2.2/Color3)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | r | number | 
-optional | g | number | 
-optional | b | number | 
-
+optional | r | number |  The red value (0&lt;r&lt;255)
+optional | g | number |  The green value (0&lt;g&lt;255)
+optional | b | number |  The blue value (0&lt;b&lt;255)
 ##Members
 
 ###r : number
@@ -50,9 +49,8 @@ Fills an array from a given index with the color's RGB values
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | array | number[] | 
-optional | index | number | 
-
+ | array | number[] |  An array of rgb values
+optional | index | number |  The given index
 ###toColor4(alpha) &rarr; [Color4](/classes/2.2/Color4)
 
 Return a [Color4](/classes/2.2/Color4) object
@@ -60,7 +58,7 @@ Return a [Color4](/classes/2.2/Color4) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | alpha | number | 
+optional | alpha | number |  default : 1 The given alpha
 
 ###asArray() &rarr; number[]
 
@@ -75,7 +73,7 @@ Multiplies two [Color3](/classes/2.2/Color3) and returns the result
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherColor | [Color3](/classes/2.2/Color3) | 
+ | otherColor | [Color3](/classes/2.2/Color3) |  The color to substract
 
 ###multiplyToRef(otherColor, result) &rarr; [Color3](/classes/2.2/Color3)
 
@@ -84,9 +82,8 @@ Multiplies two [Color3](/classes/2.2/Color3) into an existing Color
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherColor | [Color3](/classes/2.2/Color3) | 
- | result | [Color3](/classes/2.2/Color3) | 
-
+ | otherColor | [Color3](/classes/2.2/Color3) |  The color to substract
+ | result | [Color3](/classes/2.2/Color3) |  The resulting color
 ###equals(otherColor) &rarr; boolean
 
 Tests if two [Color3](/classes/2.2/Color3) have the same rgb values
@@ -94,7 +91,7 @@ Tests if two [Color3](/classes/2.2/Color3) have the same rgb values
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherColor | [Color3](/classes/2.2/Color3) | 
+ | otherColor | [Color3](/classes/2.2/Color3) |  The color to substract
 
 ###equalsFloats(r, g, b) &rarr; boolean
 
@@ -103,10 +100,9 @@ Tests if two [Color3](/classes/2.2/Color3) have the same rgb values
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | r | number | 
- | g | number | 
- | b | number | 
-
+ | r | number |  The red value (0&lt;r&lt;255)
+ | g | number |  The green value (0&lt;g&lt;255)
+ | b | number |  The blue value (0&lt;b&lt;255)
 ###scale(scale) &rarr; [Color3](/classes/2.2/Color3)
 
 Scales a [Color3](/classes/2.2/Color3) : multiply red, green and blue values by the given number
@@ -114,7 +110,7 @@ Scales a [Color3](/classes/2.2/Color3) : multiply red, green and blue values by 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scale | number | 
+ | scale | number |  The scaling factor
 
 ###scaleToRef(scale, result) &rarr; [Color3](/classes/2.2/Color3)
 
@@ -123,9 +119,8 @@ Scale a [Color3](/classes/2.2/Color3) into an existing Color
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scale | number | 
- | result | [Color3](/classes/2.2/Color3) | 
-
+ | scale | number |  The scaling factor
+ | result | [Color3](/classes/2.2/Color3) |  The resulting color
 ###add(otherColor) &rarr; [Color3](/classes/2.2/Color3)
 
 Adds another color and returns the result
@@ -133,7 +128,7 @@ Adds another color and returns the result
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherColor | [Color3](/classes/2.2/Color3) | 
+ | otherColor | [Color3](/classes/2.2/Color3) |  The color to substract
 
 ###addToRef(otherColor, result) &rarr; [Color3](/classes/2.2/Color3)
 
@@ -142,9 +137,8 @@ Adds another color and store the result in the color given in parameter
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherColor | [Color3](/classes/2.2/Color3) | 
- | result | [Color3](/classes/2.2/Color3) | 
-
+ | otherColor | [Color3](/classes/2.2/Color3) |  The color to substract
+ | result | [Color3](/classes/2.2/Color3) |  The resulting color
 ###subtract(otherColor) &rarr; [Color3](/classes/2.2/Color3)
 
 Substracts another color and returns the result
@@ -152,7 +146,7 @@ Substracts another color and returns the result
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherColor | [Color3](/classes/2.2/Color3) | 
+ | otherColor | [Color3](/classes/2.2/Color3) |  The color to substract
 
 ###subtractToRef(otherColor, result) &rarr; [Color3](/classes/2.2/Color3)
 
@@ -161,9 +155,8 @@ Substracts another color and store the result in the given color
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherColor | [Color3](/classes/2.2/Color3) | 
- | result | [Color3](/classes/2.2/Color3) | 
-
+ | otherColor | [Color3](/classes/2.2/Color3) |  The color to substract
+ | result | [Color3](/classes/2.2/Color3) |  The resulting color
 ###clone() &rarr; [Color3](/classes/2.2/Color3)
 
 Create a clone of a [Color3](/classes/2.2/Color3)
@@ -174,7 +167,7 @@ Copies a [Color3](/classes/2.2/Color3)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | source | [Color3](/classes/2.2/Color3) | 
+ | source | [Color3](/classes/2.2/Color3) |  color to copy from
 
 ###copyFromFloats(r, g, b) &rarr; [Color3](/classes/2.2/Color3)
 
@@ -183,10 +176,9 @@ Copies a color from numbers
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | r | number | 
- | g | number | 
- | b | number | 
-
+ | r | number |  The red value (0&lt;r&lt;255)
+ | g | number |  The green value (0&lt;g&lt;255)
+ | b | number |  The blue value (0&lt;b&lt;255)
 ###toHexString() &rarr; string
 
 
@@ -206,9 +198,8 @@ Creates a new [Color3](/classes/2.2/Color3) from an array
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | array | number[] | 
-optional | offset | number | 
-
+ | array | number[] |  An array of rgb values
+optional | offset | number |  
 ###static FromInts(r, g, b) &rarr; [Color3](/classes/2.2/Color3)
 
 Creates a new [Color3](/classes/2.2/Color3) from a set of integers. Values must be between 0 and 255
@@ -216,10 +207,9 @@ Creates a new [Color3](/classes/2.2/Color3) from a set of integers. Values must 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | r | number | 
- | g | number | 
- | b | number | 
-
+ | r | number |  The red value (0&lt;r&lt;255)
+ | g | number |  The green value (0&lt;g&lt;255)
+ | b | number |  The blue value (0&lt;b&lt;255)
 ###static Lerp(start, end, amount) &rarr; [Color3](/classes/2.2/Color3)
 
 Linear interpolation of a color
@@ -227,10 +217,9 @@ Linear interpolation of a color
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | start | [Color3](/classes/2.2/Color3) | 
- | end | [Color3](/classes/2.2/Color3) | 
- | amount | number | 
-
+ | start | [Color3](/classes/2.2/Color3) |  interpolation start color
+ | end | [Color3](/classes/2.2/Color3) |  interpolation end color
+ | amount | number |  Weighting factor
 ###static Red() &rarr; [Color3](/classes/2.2/Color3)
 
 Red color

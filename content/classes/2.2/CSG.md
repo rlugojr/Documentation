@@ -40,7 +40,7 @@ Convert [Mesh](/classes/2.2/Mesh) to [CSG](/classes/2.2/CSG)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](/classes/2.2/Mesh) | 
+ | mesh | [Mesh](/classes/2.2/Mesh) |  @param mesh
 
 ###clone() &rarr; [CSG](/classes/2.2/CSG)
 
@@ -52,7 +52,7 @@ Union the [CSG](/classes/2.2/CSG)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | csg | [CSG](/classes/2.2/CSG) | 
+ | csg | [CSG](/classes/2.2/CSG) |  @param csg
 
 ###unionInPlace(csg) &rarr; void
 
@@ -61,7 +61,7 @@ Union in place
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | csg | [CSG](/classes/2.2/CSG) | 
+ | csg | [CSG](/classes/2.2/CSG) |  @param csg
 
 ###subtract(csg) &rarr; [CSG](/classes/2.2/CSG)
 
@@ -70,7 +70,7 @@ Subtract the [CSG](/classes/2.2/CSG)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | csg | [CSG](/classes/2.2/CSG) | 
+ | csg | [CSG](/classes/2.2/CSG) |  @param csg
 
 ###subtractInPlace(csg) &rarr; void
 
@@ -79,7 +79,7 @@ Subtract in place
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | csg | [CSG](/classes/2.2/CSG) | 
+ | csg | [CSG](/classes/2.2/CSG) |  @param csg
 
 ###intersect(csg) &rarr; [CSG](/classes/2.2/CSG)
 
@@ -88,7 +88,7 @@ Intersect first solid with the second
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | csg | [CSG](/classes/2.2/CSG) | 
+ | csg | [CSG](/classes/2.2/CSG) |  @param csg
 
 ###intersectInPlace(csg) &rarr; void
 
@@ -97,7 +97,7 @@ Intersect in place
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | csg | [CSG](/classes/2.2/CSG) | 
+ | csg | [CSG](/classes/2.2/CSG) |  @param csg
 
 ###inverse() &rarr; [CSG](/classes/2.2/CSG)
 
@@ -114,7 +114,7 @@ NB : All [CSG](/classes/2.2/CSG) operations are performed in world coordinates
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | csg | [CSG](/classes/2.2/CSG) | 
+ | csg | [CSG](/classes/2.2/CSG) |  @param csg
 
 ###buildMeshGeometry(name, scene, keepSubMeshes) &rarr; [Mesh](/classes/2.2/Mesh)
 
@@ -124,10 +124,9 @@ Coordinates here are in world space
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
- | keepSubMeshes | boolean | 
-
+ | name | string |  @param name
+ | scene | [Scene](/classes/2.2/Scene) |  @param scene
+ | keepSubMeshes | boolean |  @param keepSubMeshes
 ###toMesh(name, material, scene, keepSubMeshes) &rarr; [Mesh](/classes/2.2/Mesh)
 
 
@@ -135,8 +134,6 @@ Coordinates here are in world space
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | material | [Material](/classes/2.2/Material) | 
- | scene | [Scene](/classes/2.2/Scene) | 
- | keepSubMeshes | boolean | 
-
+ | name | string |  @param name
+ | material | [Material](/classes/2.2/Material) |  @param material
+ | scene | [Scene](/classes/2.2/Scene) |  @param scene

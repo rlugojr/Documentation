@@ -20,9 +20,8 @@ class [SoundTrack](/classes/2.2/SoundTrack)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | options | any | 
-
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | options | any |  
 ##Members
 
 ###id : number
@@ -45,7 +44,7 @@ optional | options | any |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | sound | [Sound](/classes/2.2/Sound) | 
+ | sound | [Sound](/classes/2.2/Sound) |  
 
 ###RemoveSound(sound) &rarr; void
 
@@ -54,7 +53,7 @@ optional | options | any |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | sound | [Sound](/classes/2.2/Sound) | 
+ | sound | [Sound](/classes/2.2/Sound) |  
 
 ###setVolume(newVolume) &rarr; void
 
@@ -63,7 +62,7 @@ optional | options | any |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newVolume | number | 
+ | newVolume | number |  
 
 ###switchPanningModelToHRTF() &rarr; void
 
@@ -78,5 +77,5 @@ optional | options | any |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | analyser | [Analyser](/classes/2.2/Analyser) | 
+ | analyser | [Analyser](/classes/2.2/Analyser) |  
 

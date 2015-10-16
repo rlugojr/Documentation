@@ -42,7 +42,7 @@ Inverts the matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Matrix](/classes/2.2/Matrix) | 
+ | other | [Matrix](/classes/2.2/Matrix) |  
 
 ###addToRef(other, result) &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -51,9 +51,8 @@ Inverts the matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Matrix](/classes/2.2/Matrix) | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | other | [Matrix](/classes/2.2/Matrix) |  
+ | result | [Matrix](/classes/2.2/Matrix) |  the target matrix
 ###addToSelf(other) &rarr; [Matrix](/classes/2.2/Matrix)
 
 
@@ -61,7 +60,7 @@ Inverts the matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Matrix](/classes/2.2/Matrix) | 
+ | other | [Matrix](/classes/2.2/Matrix) |  
 
 ###invertToRef(other) &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -70,7 +69,7 @@ Inverts the matrix and put it into another matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Matrix](/classes/2.2/Matrix) | 
+ | other | [Matrix](/classes/2.2/Matrix) |  
 
 ###invertToRefSIMD(other) &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -79,7 +78,7 @@ Inverts the matrix and put it into another matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Matrix](/classes/2.2/Matrix) | 
+ | other | [Matrix](/classes/2.2/Matrix) |  
 
 ###setTranslation(vector3) &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -88,7 +87,7 @@ Sets a translation to the matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vector3 | [Vector3](/classes/2.2/Vector3) | 
+ | vector3 | [Vector3](/classes/2.2/Vector3) |  The translation to apply
 
 ###multiply(other) &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -97,7 +96,7 @@ Multiplies by another matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Matrix](/classes/2.2/Matrix) | 
+ | other | [Matrix](/classes/2.2/Matrix) |  
 
 ###copyFrom(other) &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -106,7 +105,7 @@ Copies another matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Matrix](/classes/2.2/Matrix) | 
+ | other | [Matrix](/classes/2.2/Matrix) |  
 
 ###copyToArray(array, offset) &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -115,9 +114,8 @@ Copies the current matrix into an array
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | array | Float32Array | 
-optional | offset | number | 
-
+ | array | Float32Array |  The array to copy
+optional | offset | number |  The first index to copy from
 ###multiplyToRef(other, result) &rarr; [Matrix](/classes/2.2/Matrix)
 
 Multiplies another matrix into an existing matrix
@@ -125,9 +123,8 @@ Multiplies another matrix into an existing matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Matrix](/classes/2.2/Matrix) | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | other | [Matrix](/classes/2.2/Matrix) |  
+ | result | [Matrix](/classes/2.2/Matrix) |  the target matrix
 ###multiplyToArray(other, result, offset) &rarr; [Matrix](/classes/2.2/Matrix)
 
 Multiplies another matrix into an existing array at a given index
@@ -135,10 +132,9 @@ Multiplies another matrix into an existing array at a given index
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Matrix](/classes/2.2/Matrix) | 
- | result | Float32Array | 
- | offset | number | 
-
+ | other | [Matrix](/classes/2.2/Matrix) |  
+ | result | Float32Array |  the target matrix
+ | offset | number |  The first index to copy from
 ###multiplyToArraySIMD(other, result, offset) &rarr; void
 
 
@@ -146,10 +142,9 @@ Multiplies another matrix into an existing array at a given index
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Matrix](/classes/2.2/Matrix) | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-optional | offset | number | 
-
+ | other | [Matrix](/classes/2.2/Matrix) |  
+ | result | [Matrix](/classes/2.2/Matrix) |  the target matrix
+optional | offset | number |  The first index to copy from
 ###equals(value) &rarr; boolean
 
 Tests if two matrices are equal
@@ -157,7 +152,7 @@ Tests if two matrices are equal
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value | [Matrix](/classes/2.2/Matrix) | 
+ | value | [Matrix](/classes/2.2/Matrix) |  The matrix to test against
 
 ###clone() &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -169,10 +164,9 @@ Clones a martix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scale | [Vector3](/classes/2.2/Vector3) | 
- | rotation | [Quaternion](/classes/2.2/Quaternion) | 
- | translation | [Vector3](/classes/2.2/Vector3) | 
-
+ | scale | [Vector3](/classes/2.2/Vector3) |  
+ | rotation | [Quaternion](/classes/2.2/Quaternion) |  
+ | translation | [Vector3](/classes/2.2/Vector3) |  
 ###static FromArray(array, offset) &rarr; [Matrix](/classes/2.2/Matrix)
 
 Creates a new matrix from an array from a given index
@@ -180,9 +174,8 @@ Creates a new matrix from an array from a given index
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | array | number[] | 
-optional | offset | number | 
-
+ | array | number[] |  The array to copy
+optional | offset | number |  The first index to copy from
 ###static FromArrayToRef(array, offset, result) &rarr; void
 
 Fills an existing matrix with an array from a given index
@@ -190,10 +183,9 @@ Fills an existing matrix with an array from a given index
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | array | number[] | 
- | offset | number | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | array | number[] |  The array to copy
+ | offset | number |  The first index to copy from
+ | result | [Matrix](/classes/2.2/Matrix) |  the target matrix
 ###static FromFloat32ArrayToRefScaled(array, offset, scale, result) &rarr; void
 
 
@@ -201,11 +193,9 @@ Fills an existing matrix with an array from a given index
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | array | Float32Array | 
- | offset | number | 
- | scale | number | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | array | Float32Array |  The array to copy
+ | offset | number |  The first index to copy from
+ | scale | number |  
 ###static FromValuesToRef(initialM11, initialM12, initialM13, initialM14, initialM21, initialM22, initialM23, initialM24, initialM31, initialM32, initialM33, initialM34, initialM41, initialM42, initialM43, initialM44, result) &rarr; void
 
 Fills an existsing matrix with a set of values
@@ -213,24 +203,22 @@ Fills an existsing matrix with a set of values
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | initialM11 | number | 
- | initialM12 | number | 
- | initialM13 | number | 
- | initialM14 | number | 
- | initialM21 | number | 
- | initialM22 | number | 
- | initialM23 | number | 
- | initialM24 | number | 
- | initialM31 | number | 
- | initialM32 | number | 
- | initialM33 | number | 
- | initialM34 | number | 
- | initialM41 | number | 
- | initialM42 | number | 
- | initialM43 | number | 
- | initialM44 | number | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | initialM11 | number |  initial MM11 1,1 value
+ | initialM12 | number |  initial MM12 1,2 value
+ | initialM13 | number |  initial MM13 1,3 value
+ | initialM14 | number |  initial MM14 1,4 value
+ | initialM21 | number |  initial MM21 [2.1](/classes/2.1) value
+ | initialM22 | number |  initial MM22 2,2 value
+ | initialM23 | number |  initial MM23 2,3 value
+ | initialM24 | number |  initial MM24 2,4 value
+ | initialM31 | number |  initial MM31 3,1 value
+ | initialM32 | number |  initial MM32 3,2 value
+ | initialM33 | number |  initial MM33 3,3 value
+ | initialM34 | number |  initial MM34 3,4 value
+ | initialM41 | number |  initial MM41 4,1 value
+ | initialM42 | number |  initial MM42 4,2 value
+ | initialM43 | number |  initial MM43 4,3 value
+ | initialM44 | number |  initial MM44 4,4 value
 ###static FromValues(initialM11, initialM12, initialM13, initialM14, initialM21, initialM22, initialM23, initialM24, initialM31, initialM32, initialM33, initialM34, initialM41, initialM42, initialM43, initialM44) &rarr; [Matrix](/classes/2.2/Matrix)
 
 Creates a matrix from set of values
@@ -238,23 +226,21 @@ Creates a matrix from set of values
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | initialM11 | number | 
- | initialM12 | number | 
- | initialM13 | number | 
- | initialM14 | number | 
- | initialM21 | number | 
- | initialM22 | number | 
- | initialM23 | number | 
- | initialM24 | number | 
- | initialM31 | number | 
- | initialM32 | number | 
- | initialM33 | number | 
- | initialM34 | number | 
- | initialM41 | number | 
- | initialM42 | number | 
- | initialM43 | number | 
- | initialM44 | number | 
-
+ | initialM11 | number |  initial MM11 1,1 value
+ | initialM12 | number |  initial MM12 1,2 value
+ | initialM13 | number |  initial MM13 1,3 value
+ | initialM14 | number |  initial MM14 1,4 value
+ | initialM21 | number |  initial MM21 [2.1](/classes/2.1) value
+ | initialM22 | number |  initial MM22 2,2 value
+ | initialM23 | number |  initial MM23 2,3 value
+ | initialM24 | number |  initial MM24 2,4 value
+ | initialM31 | number |  initial MM31 3,1 value
+ | initialM32 | number |  initial MM32 3,2 value
+ | initialM33 | number |  initial MM33 3,3 value
+ | initialM34 | number |  initial MM34 3,4 value
+ | initialM41 | number |  initial MM41 4,1 value
+ | initialM42 | number |  initial MM42 4,2 value
+ | initialM43 | number |  initial MM43 4,3 value
 ###static Compose(scale, rotation, translation) &rarr; [Matrix](/classes/2.2/Matrix)
 
 
@@ -262,10 +248,9 @@ Creates a matrix from set of values
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scale | [Vector3](/classes/2.2/Vector3) | 
- | rotation | [Quaternion](/classes/2.2/Quaternion) | 
- | translation | [Vector3](/classes/2.2/Vector3) | 
-
+ | scale | [Vector3](/classes/2.2/Vector3) |  
+ | rotation | [Quaternion](/classes/2.2/Quaternion) |  
+ | translation | [Vector3](/classes/2.2/Vector3) |  
 ###static Identity() &rarr; [Matrix](/classes/2.2/Matrix)
 
 Returns the identity matrix
@@ -276,7 +261,7 @@ Fills an existing matrix with the identity matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | result | [Matrix](/classes/2.2/Matrix) | 
+ | result | [Matrix](/classes/2.2/Matrix) |  the target matrix
 
 ###static Zero() &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -288,7 +273,7 @@ Rotates a matrix around X axis
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | angle | number | 
+ | angle | number |  angle of the rotation
 
 ###static Invert(source) &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -297,7 +282,7 @@ Rotates a matrix around X axis
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | source | [Matrix](/classes/2.2/Matrix) | 
+ | source | [Matrix](/classes/2.2/Matrix) |  
 
 ###static RotationXToRef(angle, result) &rarr; void
 
@@ -306,9 +291,8 @@ Rotates a matrix around X axis into an existing matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | angle | number | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | angle | number |  angle of the rotation
+ | result | [Matrix](/classes/2.2/Matrix) |  the target matrix
 ###static RotationY(angle) &rarr; [Matrix](/classes/2.2/Matrix)
 
 Rotates a matrix around Y axis
@@ -316,7 +300,7 @@ Rotates a matrix around Y axis
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | angle | number | 
+ | angle | number |  angle of the rotation
 
 ###static RotationYToRef(angle, result) &rarr; void
 
@@ -325,9 +309,8 @@ Rotates a matrix around Y axis into an existing axis
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | angle | number | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | angle | number |  angle of the rotation
+ | result | [Matrix](/classes/2.2/Matrix) |  the target matrix
 ###static RotationZ(angle) &rarr; [Matrix](/classes/2.2/Matrix)
 
 Rotates a matrix around Z axis
@@ -335,7 +318,7 @@ Rotates a matrix around Z axis
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | angle | number | 
+ | angle | number |  angle of the rotation
 
 ###static RotationZToRef(angle, result) &rarr; void
 
@@ -344,9 +327,8 @@ Rotates a matrix around Z axis into an existing axis
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | angle | number | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | angle | number |  angle of the rotation
+ | result | [Matrix](/classes/2.2/Matrix) |  the target matrix
 ###static RotationAxis(axis, angle) &rarr; [Matrix](/classes/2.2/Matrix)
 
 Rotates a matrix using a [Vector3](/classes/2.2/Vector3)
@@ -354,9 +336,8 @@ Rotates a matrix using a [Vector3](/classes/2.2/Vector3)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | axis | [Vector3](/classes/2.2/Vector3) | 
- | angle | number | 
-
+ | axis | [Vector3](/classes/2.2/Vector3) |  [Vector3](/classes/2.2/Vector3) axis of the rotation
+ | angle | number |  angle of the rotation
 ###static RotationYawPitchRoll(yaw, pitch, roll) &rarr; [Matrix](/classes/2.2/Matrix)
 
 Rotates a matrix using yaw, pitch and roll values
@@ -364,10 +345,9 @@ Rotates a matrix using yaw, pitch and roll values
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | yaw | number | 
- | pitch | number | 
- | roll | number | 
-
+ | yaw | number |  The yaw rotation value
+ | pitch | number |  The pitch rotation value
+ | roll | number |  The roll rotation value
 ###static RotationYawPitchRollToRef(yaw, pitch, roll, result) &rarr; void
 
 Rotates a matrix using yaw, pitch and roll values and put it into a target matrix
@@ -375,11 +355,9 @@ Rotates a matrix using yaw, pitch and roll values and put it into a target matri
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | yaw | number | 
- | pitch | number | 
- | roll | number | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | yaw | number |  The yaw rotation value
+ | pitch | number |  The pitch rotation value
+ | roll | number |  The roll rotation value
 ###static Scaling(x, y, z) &rarr; [Matrix](/classes/2.2/Matrix)
 
 Creates a scaling matrix
@@ -387,10 +365,9 @@ Creates a scaling matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
- | z | number | 
-
+ | x | number |  The X translation value
+ | y | number |  The Y translation value
+ | z | number |  The Z translation value
 ###static ScalingToRef(x, y, z, result) &rarr; void
 
 Creates a scaling matrix and put it into a target matrix
@@ -398,11 +375,9 @@ Creates a scaling matrix and put it into a target matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
- | z | number | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | x | number |  The X translation value
+ | y | number |  The Y translation value
+ | z | number |  The Z translation value
 ###static Translation(x, y, z) &rarr; [Matrix](/classes/2.2/Matrix)
 
 Creates a matrix with a translation pitch defined by x, y, z
@@ -410,10 +385,9 @@ Creates a matrix with a translation pitch defined by x, y, z
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
- | z | number | 
-
+ | x | number |  The X translation value
+ | y | number |  The Y translation value
+ | z | number |  The Z translation value
 ###static TranslationToRef(x, y, z, result) &rarr; void
 
 Creates a matrix with a translation pitch defined by x, y, z and put it into a target matrix
@@ -421,11 +395,9 @@ Creates a matrix with a translation pitch defined by x, y, z and put it into a t
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
- | z | number | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | x | number |  The X translation value
+ | y | number |  The Y translation value
+ | z | number |  The Z translation value
 ###static LookAtLH(eye, target, up) &rarr; [Matrix](/classes/2.2/Matrix)
 
 Builds a left-handed look-at [Matrix](/classes/2.2/Matrix)
@@ -433,10 +405,9 @@ Builds a left-handed look-at [Matrix](/classes/2.2/Matrix)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | eye | [Vector3](/classes/2.2/Vector3) | 
- | target | [Vector3](/classes/2.2/Vector3) | 
- | up | [Vector3](/classes/2.2/Vector3) | 
-
+ | eye | [Vector3](/classes/2.2/Vector3) |  The [Vector3](/classes/2.2/Vector3) that defines the camera point
+ | target | [Vector3](/classes/2.2/Vector3) |  The [Vector3](/classes/2.2/Vector3) that defines the camera look-at target
+ | up | [Vector3](/classes/2.2/Vector3) |  The [Vector3](/classes/2.2/Vector3) that defines the up direction
 ###static LookAtLHToRef(eye, target, up, result) &rarr; void
 
 Builds a left-handed look-at [Matrix](/classes/2.2/Matrix) and put it in a target matrix
@@ -444,11 +415,9 @@ Builds a left-handed look-at [Matrix](/classes/2.2/Matrix) and put it in a targe
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | eye | [Vector3](/classes/2.2/Vector3) | 
- | target | [Vector3](/classes/2.2/Vector3) | 
- | up | [Vector3](/classes/2.2/Vector3) | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | eye | [Vector3](/classes/2.2/Vector3) |  The [Vector3](/classes/2.2/Vector3) that defines the camera point
+ | target | [Vector3](/classes/2.2/Vector3) |  The [Vector3](/classes/2.2/Vector3) that defines the camera look-at target
+ | up | [Vector3](/classes/2.2/Vector3) |  The [Vector3](/classes/2.2/Vector3) that defines the up direction
 ###static LookAtLHToRefSIMD(eyeRef, targetRef, upRef, result) &rarr; void
 
 
@@ -456,11 +425,9 @@ Builds a left-handed look-at [Matrix](/classes/2.2/Matrix) and put it in a targe
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | eyeRef | [Vector3](/classes/2.2/Vector3) | 
- | targetRef | [Vector3](/classes/2.2/Vector3) | 
- | upRef | [Vector3](/classes/2.2/Vector3) | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | eyeRef | [Vector3](/classes/2.2/Vector3) |  
+ | targetRef | [Vector3](/classes/2.2/Vector3) |  
+ | upRef | [Vector3](/classes/2.2/Vector3) |  
 ###static OrthoLH(width, height, znear, zfar) &rarr; [Matrix](/classes/2.2/Matrix)
 
 Creates a left-handed orthogonal projection matrix.
@@ -468,11 +435,9 @@ Creates a left-handed orthogonal projection matrix.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | width | number | 
- | height | number | 
- | znear | number | 
- | zfar | number | 
-
+ | width | number |  The width of the view volume at the near view plane
+ | height | number |  The height of the view volume at the near view plane
+ | znear | number |  Z-value of the near view plane.
 ###static OrthoLHToRef(width, height, znear, zfar, result) &rarr; void
 
 
@@ -480,12 +445,10 @@ Creates a left-handed orthogonal projection matrix.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | width | number | 
- | height | number | 
- | znear | number | 
- | zfar | number | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | width | number |  The width of the view volume at the near view plane
+ | height | number |  The height of the view volume at the near view plane
+ | znear | number |  Z-value of the near view plane.
+ | zfar | number |  Z-value of the far view plane.
 ###static OrthoOffCenterLH(left, right, bottom, top, znear, zfar) &rarr; [Matrix](/classes/2.2/Matrix)
 
 Creates a custom left-handed orthogonal projection matrix
@@ -493,13 +456,11 @@ Creates a custom left-handed orthogonal projection matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | left | number | 
- | right | number | 
- | bottom | number | 
- | top | number | 
- | znear | number | 
- | zfar | number | 
-
+ | left | number |  The minimum x value of the view volume
+ | right | number |  The maximum x value of the view volume
+ | bottom | number |  The minimum y value of the view volume
+ | top | number |  The maximum y value of the view volume
+ | znear | number |  Z-value of the near view plane.
 ###static OrthoOffCenterLHToRef(left, right, bottom, top, znear, zfar, result) &rarr; void
 
 Creates a custom left-handed orthogonal projection matrix and put it into the target matrix
@@ -507,14 +468,12 @@ Creates a custom left-handed orthogonal projection matrix and put it into the ta
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | left | number | 
- | right | any | 
- | bottom | number | 
- | top | number | 
- | znear | number | 
- | zfar | number | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | left | number |  The minimum x value of the view volume
+ | right | any |  The maximum x value of the view volume
+ | bottom | number |  The minimum y value of the view volume
+ | top | number |  The maximum y value of the view volume
+ | znear | number |  Z-value of the near view plane.
+ | zfar | number |  Z-value of the far view plane.
 ###static PerspectiveLH(width, height, znear, zfar) &rarr; [Matrix](/classes/2.2/Matrix)
 
 Creates a left-handed perspective projection matrix
@@ -522,11 +481,9 @@ Creates a left-handed perspective projection matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | width | number | 
- | height | number | 
- | znear | number | 
- | zfar | number | 
-
+ | width | number |  The width of the view volume at the near view plane
+ | height | number |  The height of the view volume at the near view plane
+ | znear | number |  Z-value of the near view plane.
 ###static PerspectiveFovLH(fov, aspect, znear, zfar) &rarr; [Matrix](/classes/2.2/Matrix)
 
 Creates a left-handed perspective projection matrix based on the field of view
@@ -534,11 +491,9 @@ Creates a left-handed perspective projection matrix based on the field of view
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | fov | number | 
- | aspect | number | 
- | znear | number | 
- | zfar | number | 
-
+ | fov | number |  Field of view in the y direction, in radians.
+ | aspect | number |  Aspect ratio, defined as the view space width divided by height.
+ | znear | number |  Z-value of the near view plane.
 ###static PerspectiveFovLHToRef(fov, aspect, znear, zfar, result, fovMode) &rarr; void
 
 Creates a left-handed perspective projection matrix based on the field of view and put it into the target matrix
@@ -546,13 +501,11 @@ Creates a left-handed perspective projection matrix based on the field of view a
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | fov | number | 
- | aspect | number | 
- | znear | number | 
- | zfar | number | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-optional | fovMode | number | 
-
+ | fov | number |  Field of view in the y direction, in radians.
+ | aspect | number |  Aspect ratio, defined as the view space width divided by height.
+ | znear | number |  Z-value of the near view plane.
+ | zfar | number |  Z-value of the far view plane.
+ | result | [Matrix](/classes/2.2/Matrix) |  the target matrix
 ###static GetFinalMatrix(viewport, world, view, projection, zmin, zmax) &rarr; [Matrix](/classes/2.2/Matrix)
 
 ??
@@ -560,13 +513,11 @@ optional | fovMode | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | viewport | [Viewport](/classes/2.2/Viewport) | 
- | world | [Matrix](/classes/2.2/Matrix) | 
- | view | [Matrix](/classes/2.2/Matrix) | 
- | projection | [Matrix](/classes/2.2/Matrix) | 
- | zmin | number | 
- | zmax | number | 
-
+ | viewport | [Viewport](/classes/2.2/Viewport) |  The [Viewport](/classes/2.2/Viewport) structure representing the viewport
+ | world | [Matrix](/classes/2.2/Matrix) |  The [Matrix](/classes/2.2/Matrix) structure representing the world
+ | view | [Matrix](/classes/2.2/Matrix) |  The [Matrix](/classes/2.2/Matrix) structure representing the view
+ | projection | [Matrix](/classes/2.2/Matrix) |  The [Matrix](/classes/2.2/Matrix) structure representing the projection
+ | zmin | number |  The minumum z value of the viewport
 ###static GetAsMatrix2x2(matrix) &rarr; Float32Array
 
 
@@ -574,7 +525,7 @@ optional | fovMode | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [Matrix](/classes/2.2/Matrix) | 
+ | matrix | [Matrix](/classes/2.2/Matrix) |  The matrix to transpose
 
 ###static GetAsMatrix3x3(matrix) &rarr; Float32Array
 
@@ -583,7 +534,7 @@ optional | fovMode | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [Matrix](/classes/2.2/Matrix) | 
+ | matrix | [Matrix](/classes/2.2/Matrix) |  The matrix to transpose
 
 ###static Transpose(matrix) &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -592,7 +543,7 @@ Transposes the rows and the columns of the given matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [Matrix](/classes/2.2/Matrix) | 
+ | matrix | [Matrix](/classes/2.2/Matrix) |  The matrix to transpose
 
 ###static Reflection(plane) &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -601,7 +552,7 @@ Creates the reflection matrix of a given [Plane](/classes/2.2/Plane)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | plane | [Plane](/classes/2.2/Plane) | 
+ | plane | [Plane](/classes/2.2/Plane) |  The given plane
 
 ###static ReflectionToRef(plane, result) &rarr; void
 
@@ -610,6 +561,5 @@ Creates the reflection matrix of a given [Plane](/classes/2.2/Plane)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | plane | [Plane](/classes/2.2/Plane) | 
- | result | [Matrix](/classes/2.2/Matrix) | 
-
+ | plane | [Plane](/classes/2.2/Plane) |  The given plane
+ | result | [Matrix](/classes/2.2/Matrix) |  the target matrix

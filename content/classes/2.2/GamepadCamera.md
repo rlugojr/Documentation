@@ -24,10 +24,9 @@ Create a new [GamepadCamera](/classes/2.2/GamepadCamera)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | position | [Vector3](/classes/2.2/Vector3) | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  Name of the camera
+ | position | [Vector3](/classes/2.2/Vector3) |  Starting position of the camera
+ | scene | [Scene](/classes/2.2/Scene) |  [Scene](/classes/2.2/Scene) which contain the camera
 ##Members
 
 ###angularSensibility : number

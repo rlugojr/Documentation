@@ -18,9 +18,8 @@ Creates a new [ShadowGenerator](/classes/2.2/ShadowGenerator) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mapSize | number | 
- | light | IShadowLight | 
-
+ | mapSize | number |  The size of the shadow map
+ | light | IShadowLight |  The light used for the shadow map's computation
 ##Members
 
 ###static FILTER_NONE : number
@@ -76,9 +75,8 @@ Disables the useVarianceShadowMap and activates poisson sampling to soften shado
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | subMesh | [SubMesh](/classes/2.2/SubMesh) | 
- | useInstances | boolean | 
-
+ | subMesh | [SubMesh](/classes/2.2/SubMesh) |  @param subMesh
+ | useInstances | boolean |  @param useInstances
 ###getShadowMap() &rarr; [RenderTargetTexture](/classes/2.2/RenderTargetTexture)
 
 Defines which shadow will be rendered
@@ -101,7 +99,7 @@ Sets the darkness with the given float between 0.0 to 1.0
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | darkness | number | 
+ | darkness | number |  The given darkness
 
 ###setTransparencyShadow(hasShadow) &rarr; void
 
@@ -110,7 +108,7 @@ Defines if the light goes through the object's holes and non opaque surfaces
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | hasShadow | boolean | 
+ | hasShadow | boolean |  default : false. True to activate transparency shadow, else false
 
 ###dispose() &rarr; void
 

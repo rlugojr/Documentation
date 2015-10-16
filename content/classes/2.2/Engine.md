@@ -20,10 +20,9 @@ The engine class is responsible for interfacing with all lower-level APIs such a
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | canvas | HTMLCanvasElement | 
-optional | antialias | boolean | 
-optional | options | any |  - further options to be sent to the getContext function
-
+ | canvas | HTMLCanvasElement |  The canvas
+optional | antialias | boolean |  True if this engine should support antialiasing, false otherwise.
+optional | options | any |  - further options to be sent to the getContext function Can contains these parameters : generateDepthBuffer, generateMipMaps, samplingMode
 ##Members
 
 ###static ALPHA_DISABLE : number
@@ -188,7 +187,7 @@ Returns the screen aspect ratio
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | camera | [Camera](/classes/2.2/Camera) | 
+ | camera | [Camera](/classes/2.2/Camera) |  @param camera
 
 ###getRenderWidth() &rarr; number
 
@@ -210,7 +209,7 @@ Set the hardware scaling level. The engine is then resized with these new parame
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | level | number | 
+ | level | number |  @param level
 
 ###getHardwareScalingLevel() &rarr; number
 
@@ -243,7 +242,7 @@ stop executing a render loop function and remove it from the execution array
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | renderFunction | () =&gt; void | 
+optional | renderFunction | () =&gt; void |  @param renderFunction
 
 ###runRenderLoop(renderFunction) &rarr; void
 
@@ -260,7 +259,7 @@ engine.runRenderLoop(function () {
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderFunction | () =&gt; void | 
+ | renderFunction | () =&gt; void |  @param renderFunction
 
 ###switchFullscreen(requestPointerLock) &rarr; void
 
@@ -269,7 +268,7 @@ Toggle full screen mode.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | requestPointerLock | boolean | 
+ | requestPointerLock | boolean |  If true, the user requests a pointer lock
 
 ###clear(color, backBuffer, depthStencil) &rarr; void
 
@@ -278,10 +277,9 @@ Clear the canvas with the given parameters.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | color | any | 
- | backBuffer | boolean | 
- | depthStencil | boolean | 
-
+ | color | any |  The clear color used
+ | backBuffer | boolean |  True if this method should clear the color buffer
+ | depthStencil | boolean |  True if this method should clear the depth buffer
 ###setViewport(viewport, requiredWidth, requiredHeight) &rarr; void
 
 Set the WebGL's viewport
@@ -289,10 +287,9 @@ Set the WebGL's viewport
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | viewport | [Viewport](/classes/2.2/Viewport) | 
-optional | requiredWidth | number | 
-optional | requiredHeight | number | 
-
+ | viewport | [Viewport](/classes/2.2/Viewport) |  @param viewport
+optional | requiredWidth | number |  The required width of the viewport. By defaults, equals to the rendering canvas width
+optional | requiredHeight | number |  The required height of the viewport. By defaults, equals to the rendering canvas height
 ###setDirectViewport(x, y, width, height) &rarr; void
 
 Set the viewport of this engine. The cached viewport is cleared and the viewport takes exactly the size given in parameter.
@@ -300,11 +297,9 @@ Set the viewport of this engine. The cached viewport is cleared and the viewport
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
- | width | number | 
- | height | number | 
-
+ | x | number |  @param x
+ | y | number |  @param y
+ | width | number |  The width of the rectangle
 ###beginFrame() &rarr; void
 
 Method used at the beginning of the frame rendering. Currently, measure the number of frames per seconds (FPS).
@@ -329,9 +324,8 @@ force a specific size of the canvas
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | width | number | 
- | height | number | 
-
+ | width | number |  The width of the rectangle
+ | height | number |  The height of the rectangle
 ###bindFramebuffer(texture) &rarr; void
 
 Bind Frame buffer
@@ -339,7 +333,7 @@ Bind Frame buffer
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | texture | WebGLTexture | 
+ | texture | WebGLTexture |  @param texture
 
 ###unBindFramebuffer(texture) &rarr; void
 
@@ -348,7 +342,7 @@ Unbind frame buffer
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | texture | WebGLTexture | 
+ | texture | WebGLTexture |  @param texture
 
 ###flushFramebuffer() &rarr; void
 
@@ -363,7 +357,7 @@ Create a new vertex Buffer object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vertices | number[] | 
+ | vertices | number[] |  The array of vertices
 
 ###createDynamicVertexBuffer(capacity) &rarr; WebGLBuffer
 
@@ -372,7 +366,7 @@ Create a dynamic vertex buffer object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | capacity | number | 
+ | capacity | number |  The size of this dynamic buffer
 
 ###updateDynamicVertexBuffer(vertexBuffer, vertices, offset) &rarr; void
 
@@ -381,10 +375,9 @@ Updates the given dynamic vertex buffer object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vertexBuffer | WebGLBuffer | 
- | vertices | any | 
-optional | offset | number | 
-
+ | vertexBuffer | WebGLBuffer |  The given vertex buffer
+ | vertices | any |  The array of vertices
+optional | offset | number |  
 ###createIndexBuffer(indices) &rarr; WebGLBuffer
 
 Create a new index buffer
@@ -392,7 +385,7 @@ Create a new index buffer
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | indices | number[] | 
+ | indices | number[] |  @param indices
 
 ###bindBuffers(vertexBuffer, indexBuffer, vertexDeclaration, vertexStrideSize, effect) &rarr; void
 
@@ -401,12 +394,10 @@ Bind buffer with the given vertexBuffer, indexBuffer, vertexDeclaration vertexSt
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vertexBuffer | WebGLBuffer | 
- | indexBuffer | WebGLBuffer | 
- | vertexDeclaration | number[] | 
- | vertexStrideSize | number | 
- | effect | [Effect](/classes/2.2/Effect) | 
-
+ | vertexBuffer | WebGLBuffer |  The given vertex buffer
+ | indexBuffer | WebGLBuffer |  The given index buffer
+ | vertexDeclaration | number[] |  The given vertex declaration
+ | vertexStrideSize | number |  The given vertex
 ###bindMultiBuffers(vertexBuffers, indexBuffer, effect) &rarr; void
 
 Bind some buffers with the given vertexBuffer, indexBuffer and effect
@@ -414,10 +405,9 @@ Bind some buffers with the given vertexBuffer, indexBuffer and effect
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vertexBuffers | [VertexBuffer](/classes/2.2/VertexBuffer)[] | 
- | indexBuffer | WebGLBuffer | 
- | effect | [Effect](/classes/2.2/Effect) | 
-
+ | vertexBuffers | [VertexBuffer](/classes/2.2/VertexBuffer)[] |  The given vextex buffer
+ | indexBuffer | WebGLBuffer |  The given index buffer
+ | effect | [Effect](/classes/2.2/Effect) |  @param effect
 ###createInstancesBuffer(capacity) &rarr; WebGLBuffer
 
 Create a dynamic instance buffer
@@ -425,7 +415,7 @@ Create a dynamic instance buffer
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | capacity | number | 
+ | capacity | number |  The size of this dynamic buffer
 
 ###deleteInstancesBuffer(buffer) &rarr; void
 
@@ -434,7 +424,7 @@ Delete an existing instance buffer
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | buffer | WebGLBuffer | 
+ | buffer | WebGLBuffer |  The buffer
 
 ###updateAndBindInstancesBuffer(instancesBuffer, data, offsetLocations) &rarr; void
 
@@ -443,10 +433,9 @@ Update and bind the given instance buffer
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | instancesBuffer | WebGLBuffer | 
- | data | Float32Array | 
- | offsetLocations | number[] | 
-
+ | instancesBuffer | WebGLBuffer |  The instances buffer
+ | data | Float32Array |  
+ | offsetLocations | number[] |  @param offsetLocations
 ###unBindInstancesBuffer(instancesBuffer, offsetLocations) &rarr; void
 
 Unbind the given instance buffer
@@ -454,9 +443,8 @@ Unbind the given instance buffer
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | instancesBuffer | WebGLBuffer | 
- | offsetLocations | number[] | 
-
+ | instancesBuffer | WebGLBuffer |  The instances buffer
+ | offsetLocations | number[] |  @param offsetLocations
 ###applyStates() &rarr; void
 
 
@@ -467,11 +455,9 @@ Draw
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | useTriangles | boolean | 
- | indexStart | number | 
- | indexCount | number | 
-optional | instancesCount | number | 
-
+ | useTriangles | boolean |  @param useTriangles
+ | indexStart | number |  @param indexStart
+ | indexCount | number |  @param indexCount
 ###drawPointClouds(verticesStart, verticesCount, instancesCount) &rarr; void
 
 
@@ -479,10 +465,9 @@ optional | instancesCount | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | verticesStart | number | 
- | verticesCount | number | 
-optional | instancesCount | number | 
-
+ | verticesStart | number |  
+ | verticesCount | number |  
+optional | instancesCount | number |  
 ###createEffect(baseName, attributesNames, uniformsNames, samplers, defines, fallbacks, onCompiled, onError) &rarr; [Effect](/classes/2.2/Effect)
 
 Compiled/linked your shaders into a simple object.
@@ -490,15 +475,13 @@ Compiled/linked your shaders into a simple object.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | baseName | any | 
- | attributesNames | string[] | 
- | uniformsNames | string[] | 
- | samplers | string[] | 
- | defines | string | 
-optional | fallbacks | [EffectFallbacks](/classes/2.2/EffectFallbacks) | 
-optional | onCompiled | (effect: [Effect](/classes/2.2/Effect)) =&gt; void | 
-optional | onError | (effect: [Effect](/classes/2.2/Effect), errors: string) =&gt; void | 
-
+ | baseName | any |  The base name of the effect (The name of file without .fragment.fx or .vertex.fx)
+ | attributesNames | string[] |  The name of the attributes
+ | uniformsNames | string[] |  The uniforms names
+ | samplers | string[] |  An array of samplers (the objects used to read textures)
+ | defines | string |  The shader defines string
+optional | fallbacks | [EffectFallbacks](/classes/2.2/EffectFallbacks) |  @param fallbacks
+optional | onCompiled | (effect: [Effect](/classes/2.2/Effect)) =&gt; void |  Function launched when the effect is compiled
 ###createEffectForParticles(fragmentName, uniformsNames, samplers, defines, fallbacks, onCompiled, onError) &rarr; [Effect](/classes/2.2/Effect)
 
 Compiled/linked your shaders into a simple object.
@@ -506,14 +489,12 @@ Compiled/linked your shaders into a simple object.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | fragmentName | string | 
-optional | uniformsNames | string[] | 
-optional | samplers | string[] | 
-optional | defines | string | 
-optional | fallbacks | [EffectFallbacks](/classes/2.2/EffectFallbacks) | 
-optional | onCompiled | (effect: [Effect](/classes/2.2/Effect)) =&gt; void | 
-optional | onError | (effect: [Effect](/classes/2.2/Effect), errors: string) =&gt; void | 
-
+ | fragmentName | string |  The name of the Particules
+optional | uniformsNames | string[] |  The uniforms names
+optional | samplers | string[] |  An array of samplers (the objects used to read textures)
+optional | defines | string |  The shader defines string
+optional | fallbacks | [EffectFallbacks](/classes/2.2/EffectFallbacks) |  @param fallbacks
+optional | onCompiled | (effect: [Effect](/classes/2.2/Effect)) =&gt; void |  Function launched when the effect is compiled
 ###createShaderProgram(vertexCode, fragmentCode, defines) &rarr; WebGLProgram
 
 Creates a shader program
@@ -521,10 +502,9 @@ Creates a shader program
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vertexCode | string | 
- | fragmentCode | string | 
- | defines | string | 
-
+ | vertexCode | string |  The vertex shader code
+ | fragmentCode | string |  The fragment shader code
+ | defines | string |  The shader defines string
 ###getUniforms(shaderProgram, uniformsNames) &rarr; WebGLUniformLocation[]
 
 Return the uniforms location for the given shader program
@@ -532,9 +512,8 @@ Return the uniforms location for the given shader program
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | shaderProgram | WebGLProgram | 
- | uniformsNames | string[] | 
-
+ | shaderProgram | WebGLProgram |  The given shader program
+ | uniformsNames | string[] |  The uniforms names
 ###getAttributes(shaderProgram, attributesNames) &rarr; number[]
 
 Return the attributes for the given shader program
@@ -542,9 +521,8 @@ Return the attributes for the given shader program
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | shaderProgram | WebGLProgram | 
- | attributesNames | string[] | 
-
+ | shaderProgram | WebGLProgram |  The given shader program
+ | attributesNames | string[] |  The name of the attributes
 ###enableEffect(effect) &rarr; void
 
 Enable effect
@@ -552,7 +530,7 @@ Enable effect
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | effect | [Effect](/classes/2.2/Effect) | 
+ | effect | [Effect](/classes/2.2/Effect) |  @param effect
 
 ###setArray(uniform, array) &rarr; void
 
@@ -561,9 +539,8 @@ Set array of given shader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniform | WebGLUniformLocation | 
- | array | number[] | 
-
+ | uniform | WebGLUniformLocation |  The uniforms of the shader
+ | array | number[] |  
 ###setArray2(uniform, array) &rarr; void
 
 
@@ -571,9 +548,8 @@ Set array of given shader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniform | WebGLUniformLocation | 
- | array | number[] | 
-
+ | uniform | WebGLUniformLocation |  The uniforms of the shader
+ | array | number[] |  
 ###setArray3(uniform, array) &rarr; void
 
 
@@ -581,9 +557,8 @@ Set array of given shader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniform | WebGLUniformLocation | 
- | array | number[] | 
-
+ | uniform | WebGLUniformLocation |  The uniforms of the shader
+ | array | number[] |  
 ###setArray4(uniform, array) &rarr; void
 
 
@@ -591,9 +566,8 @@ Set array of given shader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniform | WebGLUniformLocation | 
- | array | number[] | 
-
+ | uniform | WebGLUniformLocation |  The uniforms of the shader
+ | array | number[] |  
 ###setMatrices(uniform, matrices) &rarr; void
 
 Set matrices for a given shader
@@ -601,9 +575,8 @@ Set matrices for a given shader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniform | WebGLUniformLocation | 
- | matrices | Float32Array | 
-
+ | uniform | WebGLUniformLocation |  The uniforms of the shader
+ | matrices | Float32Array |  @param matrices
 ###setMatrix(uniform, matrix) &rarr; void
 
 Set matrix for a given shader
@@ -611,9 +584,8 @@ Set matrix for a given shader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniform | WebGLUniformLocation | 
- | matrix | [Matrix](/classes/2.2/Matrix) | 
-
+ | uniform | WebGLUniformLocation |  The uniforms of the shader
+ | matrix | [Matrix](/classes/2.2/Matrix) |  @param matrix
 ###setMatrix3x3(uniform, matrix) &rarr; void
 
 
@@ -621,9 +593,8 @@ Set matrix for a given shader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniform | WebGLUniformLocation | 
- | matrix | Float32Array | 
-
+ | uniform | WebGLUniformLocation |  The uniforms of the shader
+ | matrix | Float32Array |  @param matrix
 ###setMatrix2x2(uniform, matrix) &rarr; void
 
 
@@ -631,9 +602,8 @@ Set matrix for a given shader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniform | WebGLUniformLocation | 
- | matrix | Float32Array | 
-
+ | uniform | WebGLUniformLocation |  The uniforms of the shader
+ | matrix | Float32Array |  @param matrix
 ###setFloat(uniform, value) &rarr; void
 
 
@@ -641,9 +611,8 @@ Set matrix for a given shader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniform | WebGLUniformLocation | 
- | value | number | 
-
+ | uniform | WebGLUniformLocation |  The uniforms of the shader
+ | value | number |  @param value
 ###setFloat2(uniform, x, y) &rarr; void
 
 
@@ -651,10 +620,9 @@ Set matrix for a given shader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniform | WebGLUniformLocation | 
- | x | number | 
- | y | number | 
-
+ | uniform | WebGLUniformLocation |  The uniforms of the shader
+ | x | number |  @param x
+ | y | number |  @param y
 ###setFloat3(uniform, x, y, z) &rarr; void
 
 
@@ -662,11 +630,9 @@ Set matrix for a given shader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniform | WebGLUniformLocation | 
- | x | number | 
- | y | number | 
- | z | number | 
-
+ | uniform | WebGLUniformLocation |  The uniforms of the shader
+ | x | number |  @param x
+ | y | number |  @param y
 ###setBool(uniform, bool) &rarr; void
 
 Set bool for this given shader
@@ -674,9 +640,8 @@ Set bool for this given shader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniform | WebGLUniformLocation | 
- | bool | number | 
-
+ | uniform | WebGLUniformLocation |  The uniforms of the shader
+ | bool | number |  @param bool
 ###setFloat4(uniform, x, y, z, w) &rarr; void
 
 
@@ -684,12 +649,10 @@ Set bool for this given shader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniform | WebGLUniformLocation | 
- | x | number | 
- | y | number | 
- | z | number | 
- | w | number | 
-
+ | uniform | WebGLUniformLocation |  The uniforms of the shader
+ | x | number |  @param x
+ | y | number |  @param y
+ | z | number |  The z axis
 ###setColor3(uniform, color3) &rarr; void
 
 
@@ -697,9 +660,8 @@ Set bool for this given shader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniform | WebGLUniformLocation | 
- | color3 | [Color3](/classes/2.2/Color3) | 
-
+ | uniform | WebGLUniformLocation |  The uniforms of the shader
+ | color3 | [Color3](/classes/2.2/Color3) |  The color of the shader
 ###setColor4(uniform, color3, alpha) &rarr; void
 
 
@@ -707,10 +669,9 @@ Set bool for this given shader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniform | WebGLUniformLocation | 
- | color3 | [Color3](/classes/2.2/Color3) | 
- | alpha | number | 
-
+ | uniform | WebGLUniformLocation |  The uniforms of the shader
+ | color3 | [Color3](/classes/2.2/Color3) |  The color of the shader
+ | alpha | number |  The alpha of the shader
 ###setState(culling, zOffset, force) &rarr; void
 
 Set the culling state (true : front faces are visible. If cullBackFaces is set to true, back and front faces are visible).
@@ -718,10 +679,9 @@ Set the culling state (true : front faces are visible. If cullBackFaces is set t
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | culling | boolean | 
-optional | zOffset | number | 
-optional | force | boolean | 
-
+ | culling | boolean |  @param culling
+optional | zOffset | number |  
+optional | force | boolean |  @param force
 ###setDepthBuffer(enable) &rarr; void
 
 Enable or disable the depth buffer
@@ -729,7 +689,7 @@ Enable or disable the depth buffer
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | enable | boolean | 
+ | enable | boolean |  Set true if the alpha testing is enabled, false otherwise.
 
 ###getDepthWrite() &rarr; boolean
 
@@ -741,7 +701,7 @@ Enables or disables the depth mask
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | enable | boolean | 
+ | enable | boolean |  Set true if the alpha testing is enabled, false otherwise.
 
 ###setColorWrite(enable) &rarr; void
 
@@ -750,7 +710,7 @@ Enables or disables the writing or red, blue, green and alpha
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | enable | boolean | 
+ | enable | boolean |  Set true if the alpha testing is enabled, false otherwise.
 
 ###setAlphaMode(mode) &rarr; void
 
@@ -759,7 +719,7 @@ Set the engine alpha mode
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mode | number | 
+ | mode | number |  @param mode
 
 ###getAlphaMode() &rarr; number
 
@@ -771,7 +731,7 @@ Enables or disables the alpha testing
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | enable | boolean | 
+ | enable | boolean |  Set true if the alpha testing is enabled, false otherwise.
 
 ###getAlphaTesting() &rarr; boolean
 
@@ -786,9 +746,8 @@ Set the default texture sampling mode
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | texture | WebGLTexture | 
- | samplingMode | number | 
-
+ | texture | WebGLTexture |  @param texture
+ | samplingMode | number |  
 ###createTexture(url, noMipmap, invertY, scene, samplingMode, onLoad, onError, buffer) &rarr; WebGLTexture
 
 Create a new texture
@@ -796,15 +755,13 @@ Create a new texture
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | url | string | 
- | noMipmap | boolean | 
- | invertY | boolean | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | samplingMode | number | 
-optional | onLoad | () =&gt; void | 
-optional | onError | () =&gt; void | 
-optional | buffer | any | 
-
+ | url | string |  The texture url
+ | noMipmap | boolean |  Set true if you want to activate Mipmap, false otherwise.
+ | invertY | boolean |  @param invertY
+ | scene | [Scene](/classes/2.2/Scene) |  The scene where the cube texture
+optional | samplingMode | number |  
+optional | onLoad | () =&gt; void |  Function when load.
+optional | onError | () =&gt; void |  Function when error occurs.
 ###updateRawTexture(texture, data, format, invertY, compression) &rarr; void
 
 
@@ -812,12 +769,10 @@ optional | buffer | any |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | texture | WebGLTexture | 
- | data | ArrayBufferView | 
- | format | number | 
- | invertY | boolean | 
-optional | compression | string | 
-
+ | texture | WebGLTexture |  @param texture
+ | data | ArrayBufferView |  
+ | format | number |  
+ | invertY | boolean |  @param invertY
 ###createRawTexture(data, width, height, format, generateMipMaps, invertY, samplingMode, compression) &rarr; WebGLTexture
 
 
@@ -825,15 +780,13 @@ optional | compression | string |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | ArrayBufferView | 
- | width | number | 
- | height | number | 
- | format | number | 
- | generateMipMaps | boolean | 
- | invertY | boolean | 
- | samplingMode | number | 
-optional | compression | string | 
-
+ | data | ArrayBufferView |  
+ | width | number |  The width of the rectangle
+ | height | number |  The height of the rectangle
+ | format | number |  
+ | generateMipMaps | boolean |  True if you want to generate Mipmap, false otherwise.
+ | invertY | boolean |  @param invertY
+ | samplingMode | number |  
 ###createDynamicTexture(width, height, generateMipMaps, samplingMode, forceExponantOfTwo) &rarr; WebGLTexture
 
 Create a new dynamic texture
@@ -841,12 +794,10 @@ Create a new dynamic texture
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | width | number | 
- | height | number | 
- | generateMipMaps | boolean | 
- | samplingMode | number | 
-optional | forceExponantOfTwo | boolean | 
-
+ | width | number |  The width of the rectangle
+ | height | number |  The height of the rectangle
+ | generateMipMaps | boolean |  True if you want to generate Mipmap, false otherwise.
+ | samplingMode | number |  
 ###updateTextureSamplingMode(samplingMode, texture) &rarr; void
 
 
@@ -854,9 +805,8 @@ optional | forceExponantOfTwo | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | samplingMode | number | 
- | texture | WebGLTexture | 
-
+ | samplingMode | number |  
+ | texture | WebGLTexture |  @param texture
 ###updateDynamicTexture(texture, canvas, invertY) &rarr; void
 
 Update the given dynamic texture
@@ -864,10 +814,9 @@ Update the given dynamic texture
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | texture | WebGLTexture | 
- | canvas | HTMLCanvasElement | 
- | invertY | boolean | 
-
+ | texture | WebGLTexture |  @param texture
+ | canvas | HTMLCanvasElement |  The canvas
+ | invertY | boolean |  @param invertY
 ###updateVideoTexture(texture, video, invertY) &rarr; void
 
 Update the given dynamic texture with the video given in parameter
@@ -875,10 +824,9 @@ Update the given dynamic texture with the video given in parameter
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | texture | WebGLTexture | 
- | video | HTMLVideoElement | 
- | invertY | boolean | 
-
+ | texture | WebGLTexture |  @param texture
+ | video | HTMLVideoElement |  The video
+ | invertY | boolean |  @param invertY
 ###createRenderTargetTexture(size, options) &rarr; WebGLTexture
 
 Create a new render target texture
@@ -889,9 +837,8 @@ in the same way, generateDepthBuffer is defaulted to true
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | size | any | 
- | options | any | 
-
+ | size | any |  Can be an object with the two parameters width and height.
+ | options | any |  Can contains these parameters : generateDepthBuffer, generateMipMaps, samplingMode
 ###createCubeTexture(rootUrl, scene, extensions, noMipmap) &rarr; WebGLTexture
 
 Create a new cube texture
@@ -899,11 +846,9 @@ Create a new cube texture
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | rootUrl | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
- | extensions | string[] | 
-optional | noMipmap | boolean | 
-
+ | rootUrl | string |  @param rootUrl
+ | scene | [Scene](/classes/2.2/Scene) |  The scene where the cube texture
+ | extensions | string[] |  Contains the image extensions in string format
 ###bindSamplers(effect) &rarr; void
 
 Bind the given effect to samplers
@@ -911,7 +856,7 @@ Bind the given effect to samplers
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | effect | [Effect](/classes/2.2/Effect) | 
+ | effect | [Effect](/classes/2.2/Effect) |  @param effect
 
 ###setTextureFromPostProcess(channel, postProcess) &rarr; void
 
@@ -920,9 +865,8 @@ Set texture from post process
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | channel | number | 
- | postProcess | [PostProcess](/classes/2.2/PostProcess) | 
-
+ | channel | number |  The index in the array _activeTexturesCache
+ | postProcess | [PostProcess](/classes/2.2/PostProcess) |  @param postProcess
 ###setTexture(channel, texture) &rarr; void
 
 The index in the array _activeTexturesCache
@@ -930,9 +874,8 @@ The index in the array _activeTexturesCache
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | channel | number | 
- | texture | [BaseTexture](/classes/2.2/BaseTexture) | 
-
+ | channel | number |  The index in the array _activeTexturesCache
+ | texture | [BaseTexture](/classes/2.2/BaseTexture) |  @param texture
 ###readPixels(x, y, width, height) &rarr; Uint8Array
 
 Read pixels in the given rectangle
@@ -940,11 +883,9 @@ Read pixels in the given rectangle
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
- | width | number | 
- | height | number | 
-
+ | x | number |  @param x
+ | y | number |  @param y
+ | width | number |  The width of the rectangle
 ###dispose() &rarr; void
 
 Delete this engine. Calls dispose on each of the registered scene and deletes all shaders

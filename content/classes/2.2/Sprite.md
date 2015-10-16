@@ -21,9 +21,8 @@ A tutorial about sprites can be found here
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | manager | [SpriteManager](/classes/2.2/SpriteManager) | 
-
+ | name | string |  Name of the sprite
+ | manager | [SpriteManager](/classes/2.2/SpriteManager) |  The sprite manager
 ##Members
 
 ###name : string
@@ -83,11 +82,9 @@ Function to play the sprite animation
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | from | number | 
- | to | number | 
- | loop | boolean | 
- | delay | number | 
-
+ | from | number |  Number of the first frame
+ | to | number |  Number of the last frame
+ | loop | boolean |  True : loop ; False : don't loop
 ###stopAnimation() &rarr; void
 
 Function to stop the sprite animation

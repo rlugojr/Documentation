@@ -23,8 +23,6 @@ class [AnaglyphFreeCamera](/classes/2.2/AnaglyphFreeCamera) extends [FreeCamera]
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | position | [Vector3](/classes/2.2/Vector3) | 
- | interaxialDistance | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  The camera name
+ | position | [Vector3](/classes/2.2/Vector3) |  The camera position
+ | interaxialDistance | number |  

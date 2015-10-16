@@ -20,10 +20,9 @@ Stop an animation on a specified target.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | triggerOptions | any | 
- | target | any | 
-optional | condition | [Condition](/classes/2.2/Condition) | 
-
+ | triggerOptions | any |  The trigger options
+ | target | any |  The target
+optional | condition | [Condition](/classes/2.2/Condition) |  The condition to stop the animation
 ##Methods
 
 ###execute() &rarr; void

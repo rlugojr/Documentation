@@ -22,7 +22,7 @@ Represents a scene to be rendered by the engine.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | engine | [Engine](/classes/2.2/Engine) | 
+ | engine | [Engine](/classes/2.2/Engine) |  [Engine](/classes/2.2/Engine) The babylon engine
 
 ##Members
 
@@ -488,7 +488,7 @@ Registers in an array the given function which will be executed before rendering
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | func | () =&gt; void | 
+ | func | () =&gt; void |  The given function to call
 
 ###unregisterBeforeRender(func) &rarr; void
 
@@ -497,7 +497,7 @@ Removes the given function from the beforeRender array
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | func | () =&gt; void | 
+ | func | () =&gt; void |  The given function to call
 
 ###registerAfterRender(func) &rarr; void
 
@@ -506,7 +506,7 @@ Removes the given function from the beforeRender array
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | func | () =&gt; void | 
+ | func | () =&gt; void |  The given function to call
 
 ###unregisterAfterRender(func) &rarr; void
 
@@ -515,7 +515,7 @@ Removes the given function from the beforeRender array
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | func | () =&gt; void | 
+ | func | () =&gt; void |  The given function to call
 
 ###getWaitingItemsCount() &rarr; number
 
@@ -527,7 +527,7 @@ Registers a function to be executed when the scene is ready.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | func | () =&gt; void | 
+ | func | () =&gt; void |  The given function to call
 
 ###beginAnimation(target, from, to, loop, speedRatio, onAnimationEnd, animatable) &rarr; [Animatable](/classes/2.2/Animatable)
 
@@ -542,14 +542,12 @@ Will start the animation sequence of a given target
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | target | any |  - the target
- | from | number | 
- | to | number | 
-optional | loop | boolean | 
-optional | speedRatio | number | 
-optional | onAnimationEnd | () =&gt; void | 
-optional | animatable | [Animatable](/classes/2.2/Animatable) | 
-
+ | target | any |  - the target - the target
+ | from | number |  The fps starting frame
+ | to | number |  The fps ending frame
+optional | loop | boolean |  If true, the animation will loop
+optional | speedRatio | number |  default : 1.The speed ratio of this animation
+optional | onAnimationEnd | () =&gt; void |  The function triggered on the end of the animation
 ###beginDirectAnimation(target, animations, from, to, loop, speedRatio, onAnimationEnd) &rarr; [Animatable](/classes/2.2/Animatable)
 
 Begins a direct animation (no children animations)
@@ -557,14 +555,12 @@ Begins a direct animation (no children animations)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | target | any | 
- | animations | [Animation](/classes/2.2/Animation)[] | 
- | from | number | 
- | to | number | 
-optional | loop | boolean | 
-optional | speedRatio | number | 
-optional | onAnimationEnd | () =&gt; void | 
-
+ | target | any |  - the target
+ | animations | [Animation](/classes/2.2/Animation)[] |  An array of animations
+ | from | number |  The fps starting frame
+ | to | number |  The fps ending frame
+optional | loop | boolean |  If true, the animation will loop
+optional | speedRatio | number |  default : 1.The speed ratio of this animation
 ###getAnimatableByTarget(target) &rarr; [Animatable](/classes/2.2/Animatable)
 
 Returns the first [Animatable](/classes/2.2/Animatable) instance having the given target in the active animatable array
@@ -572,7 +568,7 @@ Returns the first [Animatable](/classes/2.2/Animatable) instance having the give
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | target | any | 
+ | target | any |  - the target
 
 ###stopAnimation(target) &rarr; void
 
@@ -583,7 +579,7 @@ Will stop the animation of the given target
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | target | any |  - the target
+ | target | any |  - the target - the target
 
 ###getViewMatrix() &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -601,9 +597,8 @@ Sets the transform matrix by multiplying the given view [Matrix](/classes/2.2/Ma
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | view | [Matrix](/classes/2.2/Matrix) | 
- | projection | [Matrix](/classes/2.2/Matrix) | 
-
+ | view | [Matrix](/classes/2.2/Matrix) |  The given view [Matrix](/classes/2.2/Matrix)
+ | projection | [Matrix](/classes/2.2/Matrix) |  The given projection [Matrix](/classes/2.2/Matrix)
 ###addMesh(newMesh) &rarr; void
 
 
@@ -611,7 +606,7 @@ Sets the transform matrix by multiplying the given view [Matrix](/classes/2.2/Ma
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newMesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
+ | newMesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  
 
 ###removeMesh(toRemove) &rarr; number
 
@@ -620,7 +615,7 @@ Sets the transform matrix by multiplying the given view [Matrix](/classes/2.2/Ma
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | toRemove | [AbstractMesh](/classes/2.2/AbstractMesh) | 
+ | toRemove | [AbstractMesh](/classes/2.2/AbstractMesh) |  
 
 ###removeLight(toRemove) &rarr; number
 
@@ -629,7 +624,7 @@ Sets the transform matrix by multiplying the given view [Matrix](/classes/2.2/Ma
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | toRemove | [Light](/classes/2.2/Light) | 
+ | toRemove | [Light](/classes/2.2/Light) |  
 
 ###removeCamera(toRemove) &rarr; number
 
@@ -638,7 +633,7 @@ Sets the transform matrix by multiplying the given view [Matrix](/classes/2.2/Ma
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | toRemove | [Camera](/classes/2.2/Camera) | 
+ | toRemove | [Camera](/classes/2.2/Camera) |  
 
 ###addLight(newLight) &rarr; void
 
@@ -647,7 +642,7 @@ Sets the transform matrix by multiplying the given view [Matrix](/classes/2.2/Ma
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newLight | [Light](/classes/2.2/Light) | 
+ | newLight | [Light](/classes/2.2/Light) |  
 
 ###addCamera(newCamera) &rarr; void
 
@@ -656,7 +651,7 @@ Sets the transform matrix by multiplying the given view [Matrix](/classes/2.2/Ma
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newCamera | [Camera](/classes/2.2/Camera) | 
+ | newCamera | [Camera](/classes/2.2/Camera) |  
 
 ###setActiveCameraByID(id) &rarr; [Camera](/classes/2.2/Camera)
 
@@ -669,7 +664,7 @@ sets the active camera of the scene using its ID
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
+ | id | string |  The given id
 
 ###setActiveCameraByName(name) &rarr; [Camera](/classes/2.2/Camera)
 
@@ -682,7 +677,7 @@ sets the active camera of the scene using its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
+ | name | string |  The given name
 
 ###getMaterialByID(id) &rarr; [Material](/classes/2.2/Material)
 
@@ -693,7 +688,7 @@ get a material using its id
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
+ | id | string |  The given id
 
 ###getMaterialByName(name) &rarr; [Material](/classes/2.2/Material)
 
@@ -704,7 +699,7 @@ get a material using its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
+ | name | string |  The given name
 
 ###getLensFlareSystemByName(name) &rarr; [LensFlareSystem](/classes/2.2/LensFlareSystem)
 
@@ -713,7 +708,7 @@ get a material using its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
+ | name | string |  The given name
 
 ###getCameraByID(id) &rarr; [Camera](/classes/2.2/Camera)
 
@@ -722,7 +717,7 @@ Returns the first [Camera](/classes/2.2/Camera) instance using the given id
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
+ | id | string |  The given id
 
 ###getCameraByUniqueID(uniqueId) &rarr; [Camera](/classes/2.2/Camera)
 
@@ -731,7 +726,7 @@ Returns the first [Camera](/classes/2.2/Camera) instance using the given id
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniqueId | number | 
+ | uniqueId | number |  
 
 ###getCameraByName(name) &rarr; [Camera](/classes/2.2/Camera)
 
@@ -742,7 +737,7 @@ get a camera using its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
+ | name | string |  The given name
 
 ###getLightByName(name) &rarr; [Light](/classes/2.2/Light)
 
@@ -753,7 +748,7 @@ get a light node using its name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
+ | name | string |  The given name
 
 ###getLightByID(id) &rarr; [Light](/classes/2.2/Light)
 
@@ -764,7 +759,7 @@ get a light node using its ID
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
+ | id | string |  The given id
 
 ###getLightByUniqueID(uniqueId) &rarr; [Light](/classes/2.2/Light)
 
@@ -775,7 +770,7 @@ get a light node using its scene-generated unique ID
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniqueId | number | 
+ | uniqueId | number |  
 
 ###getGeometryByID(id) &rarr; [Geometry](/classes/2.2/Geometry)
 
@@ -786,7 +781,7 @@ get a geometry using its ID
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
+ | id | string |  The given id
 
 ###pushGeometry(geometry, force) &rarr; boolean
 
@@ -797,9 +792,8 @@ add a new geometry to this scene.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | geometry | [Geometry](/classes/2.2/Geometry) | 
-optional | force | boolean | 
-
+ | geometry | [Geometry](/classes/2.2/Geometry) |  
+optional | force | boolean |  True to force the transform matrix update even if the projection is synchronized, false otherwise
 ###removeGeometry(geometry) &rarr; boolean
 
 Removes an existing geometry
@@ -809,7 +803,7 @@ Removes an existing geometry
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | geometry | [Geometry](/classes/2.2/Geometry) | 
+ | geometry | [Geometry](/classes/2.2/Geometry) |  
 
 ###getGeometries() &rarr; [Geometry](/classes/2.2/Geometry)[]
 
@@ -823,7 +817,7 @@ Get the first added mesh found of a given ID
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
+ | id | string |  The given id
 
 ###getMeshByUniqueID(uniqueId) &rarr; [AbstractMesh](/classes/2.2/AbstractMesh)
 
@@ -834,7 +828,7 @@ Get a mesh with its auto-generated unique id
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | uniqueId | number | 
+ | uniqueId | number |  
 
 ###getLastMeshByID(id) &rarr; [AbstractMesh](/classes/2.2/AbstractMesh)
 
@@ -845,7 +839,7 @@ Get a the last added mesh found of a given ID
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
+ | id | string |  The given id
 
 ###getLastEntryByID(id) &rarr; [Node](/classes/2.2/Node)
 
@@ -856,7 +850,7 @@ Get a the last added node ([Mesh](/classes/2.2/Mesh), [Camera](/classes/2.2/Came
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
+ | id | string |  The given id
 
 ###getNodeByID(id) &rarr; [Node](/classes/2.2/Node)
 
@@ -865,7 +859,7 @@ Get a the last added node ([Mesh](/classes/2.2/Mesh), [Camera](/classes/2.2/Came
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
+ | id | string |  The given id
 
 ###getNodeByName(name) &rarr; [Node](/classes/2.2/Node)
 
@@ -874,7 +868,7 @@ Get a the last added node ([Mesh](/classes/2.2/Mesh), [Camera](/classes/2.2/Came
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
+ | name | string |  The given name
 
 ###getMeshByName(name) &rarr; [AbstractMesh](/classes/2.2/AbstractMesh)
 
@@ -883,7 +877,7 @@ Returns the [Mesh](/classes/2.2/Mesh) instance having the given name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
+ | name | string |  The given name
 
 ###getSoundByName(name) &rarr; [Sound](/classes/2.2/Sound)
 
@@ -892,7 +886,7 @@ Returns the [Mesh](/classes/2.2/Mesh) instance having the given name
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
+ | name | string |  The given name
 
 ###getLastSkeletonByID(id) &rarr; [Skeleton](/classes/2.2/Skeleton)
 
@@ -901,7 +895,7 @@ Returns the last instance of [Skeleton](/classes/2.2/Skeleton) using the given i
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
+ | id | string |  The given id
 
 ###getSkeletonById(id) &rarr; [Skeleton](/classes/2.2/Skeleton)
 
@@ -910,7 +904,7 @@ Returns the first [Skeleton](/classes/2.2/Skeleton) instance using the given id
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
+ | id | string |  The given id
 
 ###getSkeletonByName(name) &rarr; [Skeleton](/classes/2.2/Skeleton)
 
@@ -919,7 +913,7 @@ Returns the first [Skeleton](/classes/2.2/Skeleton) instance corresponding to th
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
+ | name | string |  The given name
 
 ###isActiveMesh(mesh) &rarr; boolean
 
@@ -928,7 +922,7 @@ Tests if the given mesh is active or not
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](/classes/2.2/Mesh) | 
+ | mesh | [Mesh](/classes/2.2/Mesh) |  The given mesh
 
 ###updateTransformMatrix(force) &rarr; void
 
@@ -937,7 +931,7 @@ Updates the transform matrix of this scene with the one of the active camera
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | force | boolean | 
+optional | force | boolean |  True to force the transform matrix update even if the projection is synchronized, false otherwise
 
 ###render() &rarr; void
 
@@ -964,9 +958,8 @@ Creates a new octree for this scene or update it if existing.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | maxCapacity | number | 
-optional | maxDepth | number | 
-
+optional | maxCapacity | number |  default : 64 The maximum capacity of the octree
+optional | maxDepth | number |  default : 2 The maximum depth of the octree
 ###createPickingRay(x, y, world, camera) &rarr; [Ray](/classes/2.2/Ray)
 
 Creates a picking ray in the current view.
@@ -974,11 +967,9 @@ Creates a picking ray in the current view.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
- | world | [Matrix](/classes/2.2/Matrix) | 
- | camera | [Camera](/classes/2.2/Camera) | 
-
+ | x | number |  X position on screen
+ | y | number |  Y position on screen
+ | world | [Matrix](/classes/2.2/Matrix) |  The world [Matrix](/classes/2.2/Matrix)
 ###pick(x, y, predicate, fastCheck, camera) &rarr; [PickingInfo](/classes/2.2/PickingInfo)
 
 Launch a ray to try to pick a mesh in the scene
@@ -986,12 +977,10 @@ Launch a ray to try to pick a mesh in the scene
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
-optional | predicate | (mesh: [AbstractMesh](/classes/2.2/AbstractMesh)) =&gt; boolean | 
-optional | fastCheck | boolean | 
-optional | camera | [Camera](/classes/2.2/Camera) | 
-
+ | x | number |  X position on screen
+ | y | number |  Y position on screen
+optional | predicate | (mesh: [AbstractMesh](/classes/2.2/AbstractMesh)) =&gt; boolean |  Predicate function used to determine eligible meshes. Can be set to null. In this case, a mesh must be enabled, visible and with isPickable set to true
+optional | fastCheck | boolean |  Launch a fast check only using the bounding boxes. Can be set to null.
 ###pickWithRay(ray, predicate, fastCheck) &rarr; [PickingInfo](/classes/2.2/PickingInfo)
 
 Function used to pick a mesh by giving a ray (instead of a position).
@@ -999,10 +988,9 @@ Function used to pick a mesh by giving a ray (instead of a position).
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](/classes/2.2/Ray) | 
- | predicate | (mesh: [Mesh](/classes/2.2/Mesh)) =&gt; boolean | 
-optional | fastCheck | boolean | 
-
+ | ray | [Ray](/classes/2.2/Ray) |  The given [Ray](/classes/2.2/Ray)
+ | predicate | (mesh: [Mesh](/classes/2.2/Mesh)) =&gt; boolean |  Predicate function used to determine eligible meshes. Can be set to null. In this case, a mesh must be enabled, visible and with isPickable set to true
+optional | fastCheck | boolean |  Launch a fast check only using the bounding boxes. Can be set to null.
 ###setPointerOverMesh(mesh) &rarr; void
 
 The action OnPointerOutTrigger and OnPointerOverTrigger are triggered for the given mesh
@@ -1010,7 +998,7 @@ The action OnPointerOutTrigger and OnPointerOverTrigger are triggered for the gi
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
+ | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  The given mesh
 
 ###getPointerOverMesh() &rarr; [AbstractMesh](/classes/2.2/AbstractMesh)
 
@@ -1025,9 +1013,8 @@ Enable the physic engine in this scene.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gravity | [Vector3](/classes/2.2/Vector3) | 
-optional | plugin | IPhysicsEnginePlugin | 
-
+ | gravity | [Vector3](/classes/2.2/Vector3) |  The given gravity
+optional | plugin | IPhysicsEnginePlugin |  default : [OimoJSPlugin](/classes/2.2/OimoJSPlugin). The physics plugin used
 ###disablePhysicsEngine() &rarr; void
 
 Delete the physics engine of the scene
@@ -1041,7 +1028,7 @@ Sets the given gracvity to the loaded physic engine
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gravity | [Vector3](/classes/2.2/Vector3) | 
+ | gravity | [Vector3](/classes/2.2/Vector3) |  The given gravity
 
 ###createCompoundImpostor(parts, options) &rarr; any
 
@@ -1050,9 +1037,8 @@ Creates an impostor composed of the given parts
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | parts | any | 
- | options | PhysicsBodyCreationOptions | 
-
+ | parts | any |  The array of object build this way {mesh: [Mesh](/classes/2.2/Mesh), impostor: number}
+ | options | PhysicsBodyCreationOptions |  An object build this way {mass: number, friction: number, restitution: number}
 ###deleteCompoundImpostor(compound) &rarr; void
 
 Unregister the compound impostor in the physic engine.
@@ -1060,7 +1046,7 @@ Unregister the compound impostor in the physic engine.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | compound | any | 
+ | compound | any |  The param type is the one used by the physics plugin
 
 ###createDefaultCameraOrLight() &rarr; void
 
@@ -1072,9 +1058,8 @@ Returns the list of meshes corresponding to the tag query given in parameter
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | tagsQuery | string | 
-optional | forEach | (mesh: [AbstractMesh](/classes/2.2/AbstractMesh)) =&gt; void | 
-
+ | tagsQuery | string |  !tag5))
+optional | forEach | (mesh: [AbstractMesh](/classes/2.2/AbstractMesh)) =&gt; void |  
 ###getCamerasByTags(tagsQuery, forEach) &rarr; [Camera](/classes/2.2/Camera)[]
 
 Returns the list of cameras corresponding to the tag query given in parameter
@@ -1082,9 +1067,8 @@ Returns the list of cameras corresponding to the tag query given in parameter
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | tagsQuery | string | 
-optional | forEach | (camera: [Camera](/classes/2.2/Camera)) =&gt; void | 
-
+ | tagsQuery | string |  !tag5))
+optional | forEach | (camera: [Camera](/classes/2.2/Camera)) =&gt; void |  
 ###getLightsByTags(tagsQuery, forEach) &rarr; [Light](/classes/2.2/Light)[]
 
 Returns the list of lights corresponding to the tag query given in parameter
@@ -1092,9 +1076,8 @@ Returns the list of lights corresponding to the tag query given in parameter
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | tagsQuery | string | 
-optional | forEach | (light: [Light](/classes/2.2/Light)) =&gt; void | 
-
+ | tagsQuery | string |  !tag5))
+optional | forEach | (light: [Light](/classes/2.2/Light)) =&gt; void |  
 ###getMaterialByTags(tagsQuery, forEach) &rarr; [Material](/classes/2.2/Material)[]
 
 
@@ -1102,6 +1085,5 @@ optional | forEach | (light: [Light](/classes/2.2/Light)) =&gt; void |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | tagsQuery | string | 
-optional | forEach | (material: [Material](/classes/2.2/Material)) =&gt; void | 
-
+ | tagsQuery | string |  !tag5))
+optional | forEach | (material: [Material](/classes/2.2/Material)) =&gt; void |  

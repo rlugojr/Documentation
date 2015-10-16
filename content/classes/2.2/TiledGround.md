@@ -26,8 +26,6 @@ class [TiledGround](/classes/2.2/TiledGround) extends _Primitive
  | subdivisions | { w: number,  h: number } | 
  | precision | { w: number,  h: number } | 
 optional | canBeRegenerated | boolean | 
-optional | mesh | [Mesh](/classes/2.2/Mesh) | 
-
 ##Members
 
 ###xmin : number

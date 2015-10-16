@@ -23,11 +23,9 @@ class [WebVRFreeCamera](/classes/2.2/WebVRFreeCamera) extends [FreeCamera](/clas
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | position | [Vector3](/classes/2.2/Vector3) | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | compensateDistorsion | boolean | 
-
+ | name | string |  
+ | position | [Vector3](/classes/2.2/Vector3) |  
+ | scene | [Scene](/classes/2.2/Scene) |  
 ##Methods
 
 ###attachControl(element, noPreventDefault) &rarr; void
@@ -37,9 +35,8 @@ optional | compensateDistorsion | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | element | HTMLElement | 
-optional | noPreventDefault | boolean | 
-
+ | element | HTMLElement |  
+optional | noPreventDefault | boolean |  
 ###detachControl(element) &rarr; void
 
 
@@ -47,5 +44,5 @@ optional | noPreventDefault | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | element | HTMLElement | 
+ | element | HTMLElement |  
 

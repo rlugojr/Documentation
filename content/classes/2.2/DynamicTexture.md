@@ -22,12 +22,10 @@ A tutorial about dynamic textures can be found here : http://blogs.msdn.com/b/et
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | options | any | 
- | scene | [Scene](/classes/2.2/Scene) | 
- | generateMipMaps | boolean | 
-optional | samplingMode | number | 
-
+ | name | string |  Name of the texture
+ | options | any |  Options of the dynamic texture
+ | scene | [Scene](/classes/2.2/Scene) |  [Scene](/classes/2.2/Scene) which contain the texture
+ | generateMipMaps | boolean |  @param generateMipMaps
 ##Members
 
 ###canRescale : boolean
@@ -43,7 +41,7 @@ optional | samplingMode | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ratio | number | 
+ | ratio | number |  
 
 ###getContext() &rarr; CanvasRenderingContext2D
 
@@ -59,7 +57,7 @@ Update the dynamic texture
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | invertY | boolean | 
+optional | invertY | boolean |  Invert the text on Y axis
 
 ###drawText(text, x, y, font, color, clearColor, invertY, update) &rarr; void
 
@@ -68,15 +66,13 @@ Draw a text on view
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | text | string | 
- | x | number | 
- | y | number | 
- | font | string | 
- | color | string | 
- | clearColor | string | 
-optional | invertY | boolean | 
-optional | update | boolean | 
-
+ | text | string |  A string with the text
+ | x | number |  The position on X axis of the text to draw
+ | y | number |  The position on Y axis of the text to draw
+ | font | string |  The font of the text to draw
+ | color | string |  The color of the text to draw in hexadecimal
+ | clearColor | string |  The clear color of the text to draw in hexadecimal
+optional | invertY | boolean |  Invert the text on Y axis
 ###clone() &rarr; [DynamicTexture](/classes/2.2/DynamicTexture)
 
 

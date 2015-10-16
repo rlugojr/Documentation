@@ -20,5 +20,5 @@ class [QuinticEase](/classes/2.2/QuinticEase) extends [EasingFunction](/classes/
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gradient | number | 
+ | gradient | number |  
 

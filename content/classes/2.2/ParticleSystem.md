@@ -20,11 +20,9 @@ class [ParticleSystem](/classes/2.2/ParticleSystem)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | capacity | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | customEffect | [Effect](/classes/2.2/Effect) | 
-
+ | name | string |  The name of the cloned [ParticleSystem](/classes/2.2/ParticleSystem)
+ | capacity | number |  The total number of particles contained into the particle system
+ | scene | [Scene](/classes/2.2/Scene) |  The scene of the particle system
 ##Members
 
 ###name : string
@@ -180,7 +178,7 @@ Mask used to filter a texture color
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | particle | [Particle](/classes/2.2/Particle) | 
+ | particle | [Particle](/classes/2.2/Particle) |  
 
 ###getCapacity() &rarr; number
 
@@ -213,6 +211,5 @@ Destroyes this particle system
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | newEmitter | any | 
-
+ | name | string |  The name of the cloned [ParticleSystem](/classes/2.2/ParticleSystem)
+ | newEmitter | any |  The given new emitter

@@ -20,11 +20,9 @@ Used to define the parent of a node (camera, light, mesh)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | triggerOptions | any | 
- | target | any | 
- | parent | any | 
-optional | condition | [Condition](/classes/2.2/Condition) | 
-
+ | triggerOptions | any |  The trigger options
+ | target | any |  The target of the action
+ | parent | any |  The object parent
 ##Methods
 
 ###execute() &rarr; void

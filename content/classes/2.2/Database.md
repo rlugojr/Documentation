@@ -21,9 +21,8 @@ An explanation about how BabylonJs index all its resources can be found here
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | urlToScene | string | 
- | callbackManifestChecked | (checked: boolean) =&gt; any | 
-
+ | urlToScene | string |  The Url to store the scene
+ | callbackManifestChecked | (checked: boolean) =&gt; any |  The function to execute depending of whether the manifest has been found or not
 ##Members
 
 ###static IsUASupportingBlobStorage : boolean
@@ -58,9 +57,8 @@ Tries to use the offline data if the manifest indicates so
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | successCallback | any | 
- | errorCallback | any | 
-
+ | successCallback | any |  Function to execute when data is successfuly loaded
+ | errorCallback | any |  Function to execute if data could not be loaded
 ###loadImageFromDB(url, image) &rarr; void
 
 
@@ -68,6 +66,5 @@ Tries to use the offline data if the manifest indicates so
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | url | string | 
- | image | HTMLImageElement | 
-
+ | url | string |  The relative url of the image
+ | image | HTMLImageElement |  The element to put the image into

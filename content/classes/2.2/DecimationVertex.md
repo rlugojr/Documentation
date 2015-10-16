@@ -18,9 +18,8 @@ class [DecimationVertex](/classes/2.2/DecimationVertex)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | position | [Vector3](/classes/2.2/Vector3) | 
- | id | any | 
-
+ | position | [Vector3](/classes/2.2/Vector3) |  
+ | id | any |  
 ##Members
 
 ###position : [Vector3](/classes/2.2/Vector3)
@@ -60,5 +59,5 @@ class [DecimationVertex](/classes/2.2/DecimationVertex)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newPosition | [Vector3](/classes/2.2/Vector3) | 
+ | newPosition | [Vector3](/classes/2.2/Vector3) |  
 

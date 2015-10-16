@@ -21,11 +21,9 @@ class [SSAORenderingPipeline](/classes/2.2/SSAORenderingPipeline) extends [PostP
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
- | ratio | any | 
-optional | cameras | [Camera](/classes/2.2/Camera)[] | 
-
+ | name | string |  The rendering pipeline name
+ | scene | [Scene](/classes/2.2/Scene) |  The scene linked to this pipeline
+ | ratio | any |  The size of the postprocess (0.5 means that your postprocess will have a width = canvas.width * 0.5 and a height = canvas.height * 0.5)
 ##Members
 
 ###SSAOOriginalSceneColorEffect : string
@@ -109,5 +107,5 @@ Removes the internal pipeline assets and detatches the pipeline from the scene c
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | disableDepthRender | boolean | 
+optional | disableDepthRender | boolean |  
 

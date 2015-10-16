@@ -20,12 +20,10 @@ The [Geometry](/classes/2.2/Geometry) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | vertexData | [VertexData](/classes/2.2/VertexData) | 
-optional | updatable | boolean | 
-optional | mesh | [Mesh](/classes/2.2/Mesh) | 
-
+ | id | string |  Given this id to the new geometry object
+ | scene | [Scene](/classes/2.2/Scene) |  the platform
+optional | vertexData | [VertexData](/classes/2.2/VertexData) |  send all elements of vertices
+optional | updatable | boolean |  @param updatable
 ##Members
 
 ###id : string
@@ -62,9 +60,8 @@ Set all vertices data
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vertexData | [VertexData](/classes/2.2/VertexData) | 
-optional | updatable | boolean | 
-
+ | vertexData | [VertexData](/classes/2.2/VertexData) |  send all elements of vertices
+optional | updatable | boolean |  @param updatable
 ###setVerticesData(kind, data, updatable, stride) &rarr; void
 
 Set vertices data
@@ -72,11 +69,9 @@ Set vertices data
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | kind | string | 
- | data | number[] | 
-optional | updatable | boolean | 
-optional | stride | number | 
-
+ | kind | string |  @param kind
+ | data | number[] |  @param data
+optional | updatable | boolean |  @param updatable
 ###updateVerticesDataDirectly(kind, data, offset) &rarr; void
 
 Update vertices data directly
@@ -84,10 +79,9 @@ Update vertices data directly
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | kind | string | 
- | data | Float32Array | 
- | offset | number | 
-
+ | kind | string |  @param kind
+ | data | Float32Array |  @param data
+ | offset | number |  
 ###updateVerticesData(kind, data, updateExtends) &rarr; void
 
 Update vertices data
@@ -95,10 +89,9 @@ Update vertices data
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | kind | string | 
- | data | number[] | 
-optional | updateExtends | boolean | 
-
+ | kind | string |  @param kind
+ | data | number[] |  @param data
+optional | updateExtends | boolean |  @param updateExtends
 ###getTotalVertices() &rarr; number
 
 Get total vertices
@@ -109,9 +102,8 @@ Get total vertices data
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | kind | string | 
-optional | copyWhenShared | boolean | 
-
+ | kind | string |  @param kind
+optional | copyWhenShared | boolean |  
 ###getVertexBuffer(kind) &rarr; [VertexBuffer](/classes/2.2/VertexBuffer)
 
 Get vertex buffer for this kind
@@ -119,7 +111,7 @@ Get vertex buffer for this kind
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | kind | string | 
+ | kind | string |  @param kind
 
 ###getVertexBuffers() &rarr; [VertexBuffer](/classes/2.2/VertexBuffer)[]
 
@@ -131,7 +123,7 @@ Return true if vertices data are present
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | kind | string | 
+ | kind | string |  @param kind
 
 ###getVerticesDataKinds() &rarr; string[]
 
@@ -143,9 +135,8 @@ Set indices
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | indices | number[] | 
-optional | totalVertices | number | 
-
+ | indices | number[] |  @param indices
+optional | totalVertices | number |  
 ###getTotalIndices() &rarr; number
 
 Get all indices
@@ -156,7 +147,7 @@ Get the last indices
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | copyWhenShared | boolean | 
+optional | copyWhenShared | boolean |  
 
 ###getIndexBuffer() &rarr; any
 
@@ -168,9 +159,8 @@ Release for mesh
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](/classes/2.2/Mesh) | 
-optional | shouldDispose | boolean | 
-
+ | mesh | [Mesh](/classes/2.2/Mesh) |  the mesh
+optional | shouldDispose | boolean |  true if mesh is dispose, false if is not.
 ###applyToMesh(mesh) &rarr; void
 
 Apply to a mesh
@@ -178,7 +168,7 @@ Apply to a mesh
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](/classes/2.2/Mesh) | 
+ | mesh | [Mesh](/classes/2.2/Mesh) |  the mesh
 
 ###load(scene, onLoaded) &rarr; void
 
@@ -187,9 +177,8 @@ Load function
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | onLoaded | () =&gt; void | 
-
+ | scene | [Scene](/classes/2.2/Scene) |  the platform
+optional | onLoaded | () =&gt; void |  @param onLoaded
 ###isDisposed() &rarr; boolean
 
 
@@ -203,7 +192,7 @@ Copy function
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
+ | id | string |  Given this id to the new geometry object
 
 ###static ExtractFromMesh(mesh, id) &rarr; [Geometry](/classes/2.2/Geometry)
 
@@ -212,9 +201,8 @@ Extract From [Mesh](/classes/2.2/Mesh)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](/classes/2.2/Mesh) | 
- | id | string | 
-
+ | mesh | [Mesh](/classes/2.2/Mesh) |  the mesh
+ | id | string |  Given this id to the new geometry object
 ###static RandomId() &rarr; string
 
 

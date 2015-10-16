@@ -20,7 +20,7 @@ The [AssetsManager](/classes/2.2/AssetsManager) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
+ | scene | [Scene](/classes/2.2/Scene) |  The current scene
 
 ##Members
 
@@ -49,11 +49,9 @@ Add and return the new [MeshAssetTask](/classes/2.2/MeshAssetTask)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | taskName | string | 
- | meshesNames | any | 
- | rootUrl | string | 
- | sceneFilename | string | 
-
+ | taskName | string |  The task name
+ | meshesNames | any |  The meshes name
+ | rootUrl | string |  The root url of this mesh
 ###addTextFileTask(taskName, url) &rarr; IAssetTask
 
 Add and return the new [TextFileAssetTask](/classes/2.2/TextFileAssetTask)
@@ -61,9 +59,8 @@ Add and return the new [TextFileAssetTask](/classes/2.2/TextFileAssetTask)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | taskName | string | 
- | url | string | 
-
+ | taskName | string |  The task name
+ | url | string |  The url of this texture
 ###addBinaryFileTask(taskName, url) &rarr; IAssetTask
 
 Add and return the new [BinaryFileAssetTask](/classes/2.2/BinaryFileAssetTask)
@@ -71,9 +68,8 @@ Add and return the new [BinaryFileAssetTask](/classes/2.2/BinaryFileAssetTask)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | taskName | string | 
- | url | string | 
-
+ | taskName | string |  The task name
+ | url | string |  The url of this texture
 ###addImageTask(taskName, url) &rarr; IAssetTask
 
 Add and return the new [TextFileAssetTask](/classes/2.2/TextFileAssetTask)
@@ -81,9 +77,8 @@ Add and return the new [TextFileAssetTask](/classes/2.2/TextFileAssetTask)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | taskName | string | 
- | url | string | 
-
+ | taskName | string |  The task name
+ | url | string |  The url of this texture
 ###addTextureTask(taskName, url, noMipmap, invertY, samplingMode) &rarr; IAssetTask
 
 Add and return the new [TextFileAssetTask](/classes/2.2/TextFileAssetTask)
@@ -91,12 +86,10 @@ Add and return the new [TextFileAssetTask](/classes/2.2/TextFileAssetTask)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | taskName | string | 
- | url | string | 
-optional | noMipmap | boolean | 
-optional | invertY | boolean | 
-optional | samplingMode | number | 
-
+ | taskName | string |  The task name
+ | url | string |  The url of this texture
+optional | noMipmap | boolean |  Set true if you want to activate Mipmap, false otherwise.
+optional | invertY | boolean |  Invert the y axis
 ###reset() &rarr; [AssetsManager](/classes/2.2/AssetsManager)
 
 Reset all tasks

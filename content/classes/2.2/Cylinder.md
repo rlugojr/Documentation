@@ -26,8 +26,6 @@ class [Cylinder](/classes/2.2/Cylinder) extends _Primitive
 optional | subdivisions | number | 
 optional | canBeRegenerated | boolean | 
 optional | mesh | [Mesh](/classes/2.2/Mesh) | 
-optional | side | number | 
-
 ##Members
 
 ###height : number

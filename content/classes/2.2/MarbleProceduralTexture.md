@@ -22,12 +22,10 @@ class [MarbleProceduralTexture](/classes/2.2/MarbleProceduralTexture) extends [P
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | size | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | fallbackTexture | [Texture](/classes/2.2/Texture) | 
-optional | generateMipMaps | boolean | 
-
+ | name | string |  
+ | size | number |  
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | fallbackTexture | [Texture](/classes/2.2/Texture) |  
 ##Members
 
 ###numberOfTilesHeight : number

@@ -22,9 +22,8 @@ And here : http://blogs.msdn.com/b/eternalcoding/archive/2013/07/01/babylon-js-u
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  
+ | scene | [Scene](/classes/2.2/Scene) |  
 ##Members
 
 ###diffuseTexture : [BaseTexture](/classes/2.2/BaseTexture)
@@ -189,9 +188,8 @@ Function to know if standard material is ready
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
-optional | useInstances | boolean | 
-
+optional | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  
+optional | useInstances | boolean |  True to use instances
 ###unbind() &rarr; void
 
 Unbind the standard material
@@ -202,7 +200,7 @@ Bind only the world matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | world | [Matrix](/classes/2.2/Matrix) | 
+ | world | [Matrix](/classes/2.2/Matrix) |  
 
 ###bind(world, mesh) &rarr; void
 
@@ -211,9 +209,8 @@ Bind the standard material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | world | [Matrix](/classes/2.2/Matrix) | 
-optional | mesh | [Mesh](/classes/2.2/Mesh) | 
-
+ | world | [Matrix](/classes/2.2/Matrix) |  
+optional | mesh | [Mesh](/classes/2.2/Mesh) |  
 ###getAnimatables() &rarr; IAnimatable[]
 
 Get the animatables
@@ -225,7 +222,7 @@ Destroy the standard material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | forceDisposeEffect | boolean | 
+optional | forceDisposeEffect | boolean |  True to force the destroy
 
 ###clone(name) &rarr; [StandardMaterial](/classes/2.2/StandardMaterial)
 
@@ -234,5 +231,5 @@ optional | forceDisposeEffect | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
+ | name | string |  
 

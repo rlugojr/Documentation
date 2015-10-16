@@ -21,13 +21,11 @@ Creates a new [SpotLight](/classes/2.2/SpotLight) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | position | [Vector3](/classes/2.2/Vector3) | 
- | direction | [Vector3](/classes/2.2/Vector3) | 
- | angle | number | 
- | exponent | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  The name of the object
+ | position | [Vector3](/classes/2.2/Vector3) |  The position of the light in the scene
+ | direction | [Vector3](/classes/2.2/Vector3) |  The initial direction of the light
+ | angle | number |  The initial angle of the light
+ | exponent | number |  The initial exponent of the light
 ##Members
 
 ###position : [Vector3](/classes/2.2/Vector3)
@@ -62,10 +60,9 @@ The speed of the decay of the light with distance
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [Matrix](/classes/2.2/Matrix) | 
- | viewMatrix | [Matrix](/classes/2.2/Matrix) | 
- | renderList | Array&lt;[AbstractMesh](/classes/2.2/AbstractMesh)&gt; | 
-
+ | matrix | [Matrix](/classes/2.2/Matrix) |  
+ | viewMatrix | [Matrix](/classes/2.2/Matrix) |  
+ | renderList | Array&lt;[AbstractMesh](/classes/2.2/AbstractMesh)&gt; |  
 ###supportsVSM() &rarr; boolean
 
 
@@ -79,7 +76,7 @@ Changes the light diretion to point to the given point
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | target | [Vector3](/classes/2.2/Vector3) | 
+ | target | [Vector3](/classes/2.2/Vector3) |  The given point
 
 ###computeTransformedPosition() &rarr; boolean
 
@@ -91,7 +88,6 @@ Changes the light diretion to point to the given point
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | effect | [Effect](/classes/2.2/Effect) | 
- | positionUniformName | string | 
- | directionUniformName | string | 
-
+ | effect | [Effect](/classes/2.2/Effect) |  The given effect
+ | positionUniformName | string |  The uniform name
+ | directionUniformName | string |  The direction of the uniform

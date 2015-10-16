@@ -20,10 +20,9 @@ A tutorial about Bones and Skeletons ban be found here
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | id | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  
+ | id | string |  
+ | scene | [Scene](/classes/2.2/Scene) |  The scene where the skeleton is
 ##Members
 
 ###name : string
@@ -59,6 +58,5 @@ Get the animatables of the skeleton
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | id | string | 
-
+ | name | string |  
+ | id | string |  

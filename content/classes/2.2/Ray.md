@@ -18,10 +18,9 @@ Defines a [Ray](/classes/2.2/Ray)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | origin | [Vector3](/classes/2.2/Vector3) | 
- | direction | [Vector3](/classes/2.2/Vector3) | 
-optional | length | number | 
-
+ | origin | [Vector3](/classes/2.2/Vector3) |  The origin point
+ | direction | [Vector3](/classes/2.2/Vector3) |  The initial vector describing the direction of the [Ray](/classes/2.2/Ray)
+optional | length | number |  
 ##Members
 
 ###origin : [Vector3](/classes/2.2/Vector3)
@@ -45,9 +44,8 @@ Tests if the ray intersects with the box defined by minimum and maximum
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | minimum | [Vector3](/classes/2.2/Vector3) | 
- | maximum | [Vector3](/classes/2.2/Vector3) | 
-
+ | minimum | [Vector3](/classes/2.2/Vector3) |  The minimum vector defining the box
+ | maximum | [Vector3](/classes/2.2/Vector3) |  The maximum vector defining the box
 ###intersectsBox(box) &rarr; boolean
 
 Tests if the ray intersects with the given box
@@ -55,7 +53,7 @@ Tests if the ray intersects with the given box
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | box | [BoundingBox](/classes/2.2/BoundingBox) | 
+ | box | [BoundingBox](/classes/2.2/BoundingBox) |  The box to test with
 
 ###intersectsSphere(sphere) &rarr; boolean
 
@@ -64,7 +62,7 @@ Tests if the ray intersects with the given [Sphere](/classes/2.2/Sphere)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | sphere | any | 
+ | sphere | any |  The sphere to test with
 
 ###intersectsTriangle(vertex0, vertex1, vertex2) &rarr; [IntersectionInfo](/classes/2.2/IntersectionInfo)
 
@@ -73,10 +71,9 @@ Tests if the ray intersects with the given triangle defined by the three vectors
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vertex0 | [Vector3](/classes/2.2/Vector3) | 
- | vertex1 | [Vector3](/classes/2.2/Vector3) | 
- | vertex2 | [Vector3](/classes/2.2/Vector3) | 
-
+ | vertex0 | [Vector3](/classes/2.2/Vector3) |  The first vector defining the triangle
+ | vertex1 | [Vector3](/classes/2.2/Vector3) |  The second vector defining the triangle
+ | vertex2 | [Vector3](/classes/2.2/Vector3) |  The third vector defining the triangle
 ###static CreateNew(x, y, viewportWidth, viewportHeight, world, view, projection) &rarr; [Ray](/classes/2.2/Ray)
 
 Creates new [Ray](/classes/2.2/Ray)
@@ -84,14 +81,12 @@ Creates new [Ray](/classes/2.2/Ray)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
- | viewportWidth | number | 
- | viewportHeight | number | 
- | world | [Matrix](/classes/2.2/Matrix) | 
- | view | [Matrix](/classes/2.2/Matrix) | 
- | projection | [Matrix](/classes/2.2/Matrix) | 
-
+ | x | number |  @param x
+ | y | number |  @param y
+ | viewportWidth | number |  @param viewportWidth
+ | viewportHeight | number |  @param viewportHeight
+ | world | [Matrix](/classes/2.2/Matrix) |  a matrix to transform the ray to. Default is the identity matrix.
+ | view | [Matrix](/classes/2.2/Matrix) |  @param view
 ###static CreateNewFromTo(origin, end, world) &rarr; [Ray](/classes/2.2/Ray)
 
 Function will create a new transformed ray starting from origin and ending at the end point. [Ray](/classes/2.2/Ray)'s length will be set, and ray will be
@@ -101,10 +96,9 @@ transformed to the given world matrix.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | origin | [Vector3](/classes/2.2/Vector3) |  The origin point
- | end | [Vector3](/classes/2.2/Vector3) |  The end point
-optional | world | [Matrix](/classes/2.2/Matrix) |  a matrix to transform the ray to. Default is the identity matrix.
-
+ | origin | [Vector3](/classes/2.2/Vector3) |  The origin point The origin point
+ | end | [Vector3](/classes/2.2/Vector3) |  The end point The end point
+optional | world | [Matrix](/classes/2.2/Matrix) |  a matrix to transform the ray to. Default is the identity matrix. a matrix to transform the ray to. Default is the identity matrix.
 ###static Transform(ray, matrix) &rarr; [Ray](/classes/2.2/Ray)
 
 
@@ -112,6 +106,5 @@ optional | world | [Matrix](/classes/2.2/Matrix) |  a matrix to transform the ra
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](/classes/2.2/Ray) | 
- | matrix | [Matrix](/classes/2.2/Matrix) | 
-
+ | ray | [Ray](/classes/2.2/Ray) |  The given ray
+ | matrix | [Matrix](/classes/2.2/Matrix) |  The given matrix to apply

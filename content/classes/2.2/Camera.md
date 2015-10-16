@@ -22,10 +22,9 @@ A tutorial about [ArcRotateCamera](/classes/2.2/ArcRotateCamera) can be found he
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | position | [Vector3](/classes/2.2/Vector3) | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  
+ | position | [Vector3](/classes/2.2/Vector3) |  The camera position
+ | scene | [Scene](/classes/2.2/Scene) |  The scene linked to this camera
 ##Members
 
 ###position : [Vector3](/classes/2.2/Vector3)
@@ -150,7 +149,7 @@ The layerMask
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [Mesh](/classes/2.2/Mesh) | 
+ | mesh | [Mesh](/classes/2.2/Mesh) |  
 
 ###attachControl(element) &rarr; void
 
@@ -159,7 +158,7 @@ Attach the control and display of the camera to the element
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | element | HTMLElement | 
+ | element | HTMLElement |  Element to detach control and display
 
 ###detachControl(element) &rarr; void
 
@@ -168,7 +167,7 @@ Detach the control and display of the camera from the element
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | element | HTMLElement | 
+ | element | HTMLElement |  Element to detach control and display
 
 ###attachPostProcess(postProcess, insertAt) &rarr; number
 
@@ -177,9 +176,8 @@ Attaches a given post process
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | postProcess | [PostProcess](/classes/2.2/PostProcess) | 
-optional | insertAt | number | 
-
+ | postProcess | [PostProcess](/classes/2.2/PostProcess) |  @param postProcess
+optional | insertAt | number |  Index of postProcess to add
 ###detachPostProcess(postProcess, atIndices) &rarr; number[]
 
 Detach a fiven post process
@@ -187,9 +185,8 @@ Detach a fiven post process
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | postProcess | [PostProcess](/classes/2.2/PostProcess) | 
-optional | atIndices | any | 
-
+ | postProcess | [PostProcess](/classes/2.2/PostProcess) |  @param postProcess
+optional | atIndices | any |  Index of postProcess to detach
 ###getWorldMatrix() &rarr; [Matrix](/classes/2.2/Matrix)
 
 Get the worldMatrix
@@ -200,7 +197,7 @@ Get the viewMatrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | force | boolean | 
+optional | force | boolean |  
 
 ###getProjectionMatrix(force) &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -209,7 +206,7 @@ Get the projectionMatrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | force | boolean | 
+optional | force | boolean |  
 
 ###dispose() &rarr; void
 
@@ -221,9 +218,8 @@ optional | force | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mode | number | 
- | rigParams | any | 
-
+ | mode | number |  
+ | rigParams | any |  
 ###setCameraRigParameter(name, value) &rarr; void
 
 
@@ -231,9 +227,8 @@ optional | force | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | any | 
-
+ | name | string |  
+ | value | any |  
 ###createRigCamera(name, cameraIndex) &rarr; [Camera](/classes/2.2/Camera)
 
 May needs to be overridden by children so sub has required properties to be copied
@@ -241,6 +236,5 @@ May needs to be overridden by children so sub has required properties to be copi
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | cameraIndex | number | 
-
+ | name | string |  
+ | cameraIndex | number |  

@@ -22,13 +22,11 @@ class [CustomProceduralTexture](/classes/2.2/CustomProceduralTexture) extends [P
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | texturePath | any | 
- | size | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | fallbackTexture | [Texture](/classes/2.2/Texture) | 
-optional | generateMipMaps | boolean | 
-
+ | name | string |  
+ | texturePath | any |  
+ | size | number |  
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | fallbackTexture | [Texture](/classes/2.2/Texture) |  
 ##Members
 
 ###animate : boolean
@@ -47,7 +45,7 @@ optional | generateMipMaps | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | useCameraPostProcess | boolean | 
+optional | useCameraPostProcess | boolean |  
 
 ###updateTextures() &rarr; void
 

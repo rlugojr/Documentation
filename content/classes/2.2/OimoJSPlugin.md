@@ -28,7 +28,7 @@ Initializes the OIMO engine
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | iterations | number | 
+optional | iterations | number |  Unused parameter
 
 ###setGravity(gravity) &rarr; void
 
@@ -37,7 +37,7 @@ Sets the gravity
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gravity | [Vector3](/classes/2.2/Vector3) | 
+ | gravity | [Vector3](/classes/2.2/Vector3) |  The given gravity
 
 ###registerMesh(mesh, impostor, options) &rarr; any
 
@@ -46,10 +46,9 @@ Registers a mesh
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
- | impostor | number | 
- | options | PhysicsBodyCreationOptions | 
-
+ | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  The given mesh
+ | impostor | number |  The corresponding impostor
+ | options | PhysicsBodyCreationOptions |  @param options
 ###registerMeshesAsCompound(parts, options) &rarr; any
 
 Register meshes as compound
@@ -57,9 +56,8 @@ Register meshes as compound
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | parts | PhysicsCompoundBodyPart[] | 
- | options | PhysicsBodyCreationOptions | 
-
+ | parts | PhysicsCompoundBodyPart[] |  The array of object build this way {mesh: [Mesh](/classes/2.2/Mesh), impostor: number}
+ | options | PhysicsBodyCreationOptions |  @param options
 ###unregisterMesh(mesh) &rarr; void
 
 Removes the mesh from the world
@@ -67,7 +65,7 @@ Removes the mesh from the world
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
+ | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  The given mesh
 
 ###applyImpulse(mesh, force, contactPoint) &rarr; void
 
@@ -76,10 +74,9 @@ Applies a force to the mesh at a contact point
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
- | force | [Vector3](/classes/2.2/Vector3) | 
- | contactPoint | [Vector3](/classes/2.2/Vector3) | 
-
+ | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  The given mesh
+ | force | [Vector3](/classes/2.2/Vector3) |  The force to apply to the mesh
+ | contactPoint | [Vector3](/classes/2.2/Vector3) |  The point of the mesh where the force has to be applied
 ###createLink(mesh1, mesh2, pivot1, pivot2, options) &rarr; boolean
 
 Creates a physical link between two meshes
@@ -87,12 +84,10 @@ Creates a physical link between two meshes
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh1 | [AbstractMesh](/classes/2.2/AbstractMesh) | 
- | mesh2 | [AbstractMesh](/classes/2.2/AbstractMesh) | 
- | pivot1 | [Vector3](/classes/2.2/Vector3) | 
- | pivot2 | [Vector3](/classes/2.2/Vector3) | 
-optional | options | any | 
-
+ | mesh1 | [AbstractMesh](/classes/2.2/AbstractMesh) |  The first mesh to link
+ | mesh2 | [AbstractMesh](/classes/2.2/AbstractMesh) |  The second mesh to link
+ | pivot1 | [Vector3](/classes/2.2/Vector3) |  The relative position of the first mesh where the link has to be applied
+ | pivot2 | [Vector3](/classes/2.2/Vector3) |  The relative position of the second mesh where the link has to be applied
 ###dispose() &rarr; void
 
 Destroys the engine object
@@ -106,5 +101,5 @@ Tests if the plugin is usable in the current environement
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | time | number | 
+ | time | number |  The given time
 

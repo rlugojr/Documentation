@@ -24,9 +24,7 @@ class [StereoscopicGamepadCamera](/classes/2.2/StereoscopicGamepadCamera) extend
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | position | [Vector3](/classes/2.2/Vector3) | 
- | interaxialDistance | number | 
- | isSideBySide | boolean | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  
+ | position | [Vector3](/classes/2.2/Vector3) |  
+ | interaxialDistance | number |  
+ | isSideBySide | boolean |  

@@ -20,10 +20,9 @@ Builds a [Gamepad](/classes/2.2/Gamepad) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
- | index | number | 
- | gamepad | any | 
-
+ | id | string |  The gamepad id
+ | index | number |  The gamepad index
+ | gamepad | any |  The object that holds the gamepad informations
 ##Members
 
 ###id : string
@@ -47,7 +46,7 @@ Binds an action to the button pressed, recognized by the button's index in the a
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | callback | (buttonPressed: number) =&gt; void | 
+ | callback | (buttonPressed: number) =&gt; void |  The function to execute
 
 ###onbuttonup(callback) &rarr; void
 
@@ -56,7 +55,7 @@ Binds an action to the button released, recognized by the button's index in the 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | callback | (buttonReleased: number) =&gt; void | 
+ | callback | (buttonReleased: number) =&gt; void |  The function to execute
 
 ###update() &rarr; void
 

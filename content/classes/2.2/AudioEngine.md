@@ -49,7 +49,7 @@ class [AudioEngine](/classes/2.2/AudioEngine)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newVolume | number | 
+ | newVolume | number |  
 
 ###connectToAnalyser(analyser) &rarr; void
 
@@ -58,5 +58,5 @@ class [AudioEngine](/classes/2.2/AudioEngine)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | analyser | [Analyser](/classes/2.2/Analyser) | 
+ | analyser | [Analyser](/classes/2.2/Analyser) |  
 

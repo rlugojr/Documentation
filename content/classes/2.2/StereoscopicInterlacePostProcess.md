@@ -20,9 +20,7 @@ class [StereoscopicInterlacePostProcess](/classes/2.2/StereoscopicInterlacePostP
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | camB | [Camera](/classes/2.2/Camera) | 
- | postProcessA | [PostProcess](/classes/2.2/PostProcess) | 
- | isStereoscopicHoriz | boolean | 
-optional | samplingMode | number | 
-
+ | name | string |  
+ | camB | [Camera](/classes/2.2/Camera) |  
+ | postProcessA | [PostProcess](/classes/2.2/PostProcess) |  
+ | isStereoscopicHoriz | boolean |  

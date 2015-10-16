@@ -20,15 +20,13 @@ class [SubMesh](/classes/2.2/SubMesh)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | materialIndex | number | 
- | verticesStart | number | 
- | verticesCount | number | 
- | indexStart | any | 
- | indexCount | number | 
- | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
-optional | renderingMesh | [Mesh](/classes/2.2/Mesh) | 
-optional | createBoundingBox | boolean | 
-
+ | materialIndex | number |  The index of the material to use (this index is used to find the correct material Inside the subMaterials collection of a multi-material)
+ | verticesStart | number |  
+ | verticesCount | number |  The count of vertices used
+ | indexStart | any |  Index of the first indice to use
+ | indexCount | number |  The indices count
+ | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  @param mesh
+optional | renderingMesh | [Mesh](/classes/2.2/Mesh) |  If defined, is used instead of the mesh parameter.
 ##Members
 
 ###materialIndex : number
@@ -79,7 +77,7 @@ Update bounding info
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | world | [Matrix](/classes/2.2/Matrix) | 
+ | world | [Matrix](/classes/2.2/Matrix) |  @param world
 
 ###isInFrustum(frustumPlanes) &rarr; boolean
 
@@ -88,7 +86,7 @@ Return true if it is frustum
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | frustumPlanes | [Plane](/classes/2.2/Plane)[] | 
+ | frustumPlanes | [Plane](/classes/2.2/Plane)[] |  @param frustumPlanes
 
 ###render(enableAlphaMode) &rarr; void
 
@@ -106,9 +104,8 @@ Get lines index buffer
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | indices | number[] | 
- | engine | any | 
-
+ | indices | number[] |  @param indices
+ | engine | any |  @param engine
 ###canIntersects(ray) &rarr; boolean
 
 Can Intersects
@@ -116,7 +113,7 @@ Can Intersects
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](/classes/2.2/Ray) | 
+ | ray | [Ray](/classes/2.2/Ray) |  The ray
 
 ###intersects(ray, positions, indices, fastCheck) &rarr; [IntersectionInfo](/classes/2.2/IntersectionInfo)
 
@@ -125,11 +122,9 @@ Intersects
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](/classes/2.2/Ray) | 
- | positions | [Vector3](/classes/2.2/Vector3)[] | 
- | indices | number[] | 
-optional | fastCheck | boolean | 
-
+ | ray | [Ray](/classes/2.2/Ray) |  The ray
+ | positions | [Vector3](/classes/2.2/Vector3)[] |  @param positions
+ | indices | number[] |  @param indices
 ###clone(newMesh, newRenderingMesh) &rarr; [SubMesh](/classes/2.2/SubMesh)
 
 Create a clone of the subMesh
@@ -137,9 +132,8 @@ Create a clone of the subMesh
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newMesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
-optional | newRenderingMesh | [Mesh](/classes/2.2/Mesh) | 
-
+ | newMesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  @param newMesh
+optional | newRenderingMesh | [Mesh](/classes/2.2/Mesh) |  @param newRenderingMesh
 ###dispose() &rarr; void
 
 Dispose
@@ -150,9 +144,7 @@ Dispose
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | materialIndex | number | 
- | startIndex | number | 
- | indexCount | number | 
- | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
-optional | renderingMesh | [Mesh](/classes/2.2/Mesh) | 
-
+ | materialIndex | number |  The index of the material to use (this index is used to find the correct material Inside the subMaterials collection of a multi-material)
+ | startIndex | number |  Index of the first indice to use
+ | indexCount | number |  The indices count
+ | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  @param mesh

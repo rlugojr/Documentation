@@ -20,10 +20,9 @@ class [CollideWorker](/classes/2.2/CollideWorker)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | collider | [Collider](/classes/2.2/Collider) | 
- | _collisionCache | [CollisionCache](/classes/2.2/CollisionCache) | 
- | finalPosition | [Vector3](/classes/2.2/Vector3) | 
-
+ | collider | [Collider](/classes/2.2/Collider) |  
+ | _collisionCache | [CollisionCache](/classes/2.2/CollisionCache) |  
+ | finalPosition | [Vector3](/classes/2.2/Vector3) |  
 ##Members
 
 ###collider : [Collider](/classes/2.2/Collider)
@@ -39,8 +38,6 @@ class [CollideWorker](/classes/2.2/CollideWorker)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | position | [Vector3](/classes/2.2/Vector3) | 
- | velocity | [Vector3](/classes/2.2/Vector3) | 
- | maximumRetry | number | 
-optional | excludedMeshUniqueId | number | 
-
+ | position | [Vector3](/classes/2.2/Vector3) |  
+ | velocity | [Vector3](/classes/2.2/Vector3) |  
+ | maximumRetry | number |  

@@ -26,7 +26,7 @@ class [CollisionCache](/classes/2.2/CollisionCache)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | any | 
+ | id | any |  
 
 ###addMesh(mesh) &rarr; void
 
@@ -35,7 +35,7 @@ class [CollisionCache](/classes/2.2/CollisionCache)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | mesh | SerializedMesh | 
+ | mesh | SerializedMesh |  
 
 ###getGeometry(id) &rarr; SerializedGeometry
 
@@ -44,7 +44,7 @@ class [CollisionCache](/classes/2.2/CollisionCache)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | id | string | 
+ | id | string |  
 
 ###addGeometry(geometry) &rarr; void
 
@@ -53,5 +53,5 @@ class [CollisionCache](/classes/2.2/CollisionCache)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | geometry | SerializedGeometry | 
+ | geometry | SerializedGeometry |  
 

@@ -20,15 +20,13 @@ class [FilesInput](/classes/2.2/FilesInput)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | p_engine | [Engine](/classes/2.2/Engine) | 
- | p_scene | [Scene](/classes/2.2/Scene) | 
- | p_canvas | HTMLCanvasElement | 
- | p_sceneLoadedCallback | any | 
- | p_progressCallback | any | 
- | p_additionnalRenderLoopLogicCallback | any | 
- | p_textureLoadingCallback | any | 
- | p_startingProcessingFilesCallback | any | 
-
+ | p_engine | [Engine](/classes/2.2/Engine) |  @param p_engine
+ | p_scene | [Scene](/classes/2.2/Scene) |  @param p_scene
+ | p_canvas | HTMLCanvasElement |  @param p_canvas
+ | p_sceneLoadedCallback | any |  @param p_sceneLoadedCallback
+ | p_progressCallback | any |  @param p_progressCallback
+ | p_additionnalRenderLoopLogicCallback | any |  @param p_additionnalRenderLoopLogicCallback
+ | p_textureLoadingCallback | any |  @param p_textureLoadingCallback
 ##Members
 
 ###static FilesTextures : any[]
@@ -48,7 +46,7 @@ The array that holds the vnd.ms-dds files to load
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | p_elementToMonitor | HTMLElement | 
+ | p_elementToMonitor | HTMLElement |  It could be the rendering canvas or whatever element on the page
 
 ###loadFiles(event) &rarr; void
 
@@ -57,7 +55,7 @@ The array that holds the vnd.ms-dds files to load
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | event | any | 
+ | event | any |  
 
 ###reload() &rarr; void
 

@@ -21,12 +21,10 @@ class [LinesMesh](/classes/2.2/LinesMesh) extends [Mesh](/classes/2.2/Mesh)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
+ | name | string |  @param name
+ | scene | [Scene](/classes/2.2/Scene) |  The scene where the [LinesMesh](/classes/2.2/LinesMesh) is
 optional | parent | [Node](/classes/2.2/Node) | 
 optional | source | [Mesh](/classes/2.2/Mesh) | 
-optional | doNotCloneChildren | boolean | 
-
 ##Members
 
 ###color : [Color3](/classes/2.2/Color3)
@@ -59,9 +57,8 @@ if false, infinite ray !
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ray | [Ray](/classes/2.2/Ray) | 
-optional | fastCheck | boolean | 
-
+ | ray | [Ray](/classes/2.2/Ray) |  The ray
+optional | fastCheck | boolean |  if true, stop at the first result
 ###dispose(doNotRecurse) &rarr; void
 
 
@@ -69,7 +66,7 @@ optional | fastCheck | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | doNotRecurse | boolean | 
+optional | doNotRecurse | boolean |  @param doNotRecurse
 
 ###clone(name, newParent, doNotCloneChildren) &rarr; [LinesMesh](/classes/2.2/LinesMesh)
 
@@ -78,7 +75,6 @@ optional | doNotRecurse | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
+ | name | string |  @param name
 optional | newParent | [Node](/classes/2.2/Node) | 
 optional | doNotCloneChildren | boolean | 
-

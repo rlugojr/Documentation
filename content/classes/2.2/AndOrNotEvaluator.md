@@ -18,6 +18,5 @@ class [AndOrNotEvaluator](/classes/2.2/AndOrNotEvaluator)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | query | string | 
- | evaluateCallback | (val: any) =&gt; boolean | 
-
+ | query | string |  !(!tag1) &amp;&amp; !!!tag5
+ | evaluateCallback | (val: any) =&gt; boolean |  A callback function, internally used to return found objects

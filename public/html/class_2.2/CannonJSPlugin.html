@@ -23,7 +23,7 @@
 <td>optional</td>
 <td>iterations</td>
 <td>number</td>
-<td></td>
+<td>default : 10. The bigger are the iterations the more precise will be the equations but while calculating more the performance impacted</td>
 </tr>
 </tbody>
 </table>
@@ -44,7 +44,7 @@
 <td></td>
 <td>delta</td>
 <td>number</td>
-<td></td>
+<td>The fixed time step size to use.</td>
 </tr>
 </tbody>
 </table>
@@ -65,7 +65,7 @@
 <td></td>
 <td>gravity</td>
 <td><a href="/classes/2.2/Vector3">Vector3</a></td>
-<td></td>
+<td>The given gravity</td>
 </tr>
 </tbody>
 </table>
@@ -86,19 +86,19 @@
 <td></td>
 <td>mesh</td>
 <td><a href="/classes/2.2/AbstractMesh">AbstractMesh</a></td>
-<td></td>
+<td>The given mesh</td>
 </tr>
 <tr>
 <td></td>
 <td>impostor</td>
 <td>number</td>
-<td></td>
+<td>The impostor to use</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>options</td>
 <td>PhysicsBodyCreationOptions</td>
-<td></td>
+<td>An object build this way {mass: number, friction: number, restitution: number}</td>
 </tr>
 </tbody>
 </table>
@@ -119,13 +119,13 @@
 <td></td>
 <td>parts</td>
 <td>PhysicsCompoundBodyPart[]</td>
-<td></td>
+<td>The array of object build this way {mesh: <a href="/classes/2.2/Mesh">Mesh</a>, impostor: number}</td>
 </tr>
 <tr>
 <td></td>
 <td>options</td>
 <td>PhysicsBodyCreationOptions</td>
-<td></td>
+<td>An object build this way {mass: number, friction: number, restitution: number}</td>
 </tr>
 </tbody>
 </table>
@@ -146,7 +146,7 @@
 <td></td>
 <td>mesh</td>
 <td><a href="/classes/2.2/AbstractMesh">AbstractMesh</a></td>
-<td></td>
+<td>The given mesh</td>
 </tr>
 </tbody>
 </table>
@@ -167,19 +167,19 @@
 <td></td>
 <td>mesh</td>
 <td><a href="/classes/2.2/AbstractMesh">AbstractMesh</a></td>
-<td></td>
+<td>The given mesh</td>
 </tr>
 <tr>
 <td></td>
 <td>force</td>
 <td><a href="/classes/2.2/Vector3">Vector3</a></td>
-<td></td>
+<td>The force to apply</td>
 </tr>
 <tr>
 <td></td>
 <td>contactPoint</td>
 <td><a href="/classes/2.2/Vector3">Vector3</a></td>
-<td></td>
+<td>The contact point on the given mesh</td>
 </tr>
 </tbody>
 </table>
@@ -200,25 +200,19 @@
 <td></td>
 <td>mesh1</td>
 <td><a href="/classes/2.2/AbstractMesh">AbstractMesh</a></td>
-<td></td>
+<td>The first mesh to link</td>
 </tr>
 <tr>
 <td></td>
 <td>mesh2</td>
 <td><a href="/classes/2.2/AbstractMesh">AbstractMesh</a></td>
-<td></td>
+<td>The second mesh to link</td>
 </tr>
 <tr>
 <td></td>
 <td>pivot1</td>
 <td><a href="/classes/2.2/Vector3">Vector3</a></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>pivot2</td>
-<td><a href="/classes/2.2/Vector3">Vector3</a></td>
-<td></td>
+<td>The point relative to the center of mass of the first given mesh</td>
 </tr>
 </tbody>
 </table>

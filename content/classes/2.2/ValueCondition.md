@@ -20,12 +20,10 @@ The Value condition constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | actionManager | [ActionManager](/classes/2.2/ActionManager) | 
- | target | any | 
- | propertyPath | string | 
- | value | any | 
-optional | operator | number | 
-
+ | actionManager | [ActionManager](/classes/2.2/ActionManager) |  The action manager
+ | target | any |  The target
+ | propertyPath | string |  The property Path
+ | value | any |  The given value
 ##Members
 
 ###propertyPath : string

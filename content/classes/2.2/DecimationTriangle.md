@@ -18,7 +18,7 @@ class [DecimationTriangle](/classes/2.2/DecimationTriangle)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | vertices | Array&lt;[DecimationVertex](/classes/2.2/DecimationVertex)&gt; | 
+ | vertices | Array&lt;[DecimationVertex](/classes/2.2/DecimationVertex)&gt; |  
 
 ##Members
 

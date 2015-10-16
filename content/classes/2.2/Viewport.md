@@ -18,11 +18,9 @@ Builds a new [Viewport](/classes/2.2/Viewport) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
- | width | number | 
- | height | number | 
-
+ | x | number |  The initial x coordinate of the upper-left pixel of the viewport
+ | y | number |  The initial y coordinate of the upper-left pixel of the viewport
+ | width | number |  The initial width of the viewport
 ##Members
 
 ###x : number
@@ -50,5 +48,5 @@ The height of the  viewport on the render-target surface in pixels
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | engine | any | 
+ | engine | any |  The given engine
 

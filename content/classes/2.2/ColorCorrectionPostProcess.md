@@ -20,11 +20,9 @@ class [ColorCorrectionPostProcess](/classes/2.2/ColorCorrectionPostProcess) exte
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | colorTableUrl | string | 
- | ratio | number | 
- | camera | [Camera](/classes/2.2/Camera) | 
-optional | samplingMode | number | 
-optional | engine | [Engine](/classes/2.2/Engine) | 
-optional | reusable | boolean | 
-
+ | name | string |  
+ | colorTableUrl | string |  
+ | ratio | number |  
+ | camera | [Camera](/classes/2.2/Camera) |  
+optional | samplingMode | number |  
+optional | engine | [Engine](/classes/2.2/Engine) |  

@@ -20,7 +20,7 @@ class [BackEase](/classes/2.2/BackEase) extends [EasingFunction](/classes/2.2/Ea
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | amplitude | number | 
+optional | amplitude | number |  
 
 ##Members
 
@@ -37,5 +37,5 @@ optional | amplitude | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gradient | number | 
+ | gradient | number |  
 

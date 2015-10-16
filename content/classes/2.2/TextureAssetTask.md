@@ -20,12 +20,10 @@ The [TextureAssetTask](/classes/2.2/TextureAssetTask) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | url | string | 
-optional | noMipmap | boolean | 
-optional | invertY | boolean | 
-optional | samplingMode | number | 
-
+ | name | string |  The name
+ | url | string |  The url for this texture
+optional | noMipmap | boolean |  Set true if you want to activate Mipmap, false otherwise.
+optional | invertY | boolean |  Invert y axis or not
 ##Members
 
 ###name : string
@@ -73,7 +71,6 @@ The texture
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
- | onSuccess | () =&gt; void | 
- | onError | () =&gt; void | 
-
+ | scene | [Scene](/classes/2.2/Scene) |  The scene where this texture is.
+ | onSuccess | () =&gt; void |  Function call when the mesh is load successfully
+ | onError | () =&gt; void |  Function call when the mesh isn't load successfully

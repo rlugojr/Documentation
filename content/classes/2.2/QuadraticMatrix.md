@@ -18,7 +18,7 @@ class [QuadraticMatrix](/classes/2.2/QuadraticMatrix)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | data | Array&lt;number&gt; | 
+optional | data | Array&lt;number&gt; |  
 
 ##Members
 
@@ -35,16 +35,14 @@ optional | data | Array&lt;number&gt; |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | a11 | any | 
- | a12 | any | 
- | a13 | any | 
- | a21 | any | 
- | a22 | any | 
- | a23 | any | 
- | a31 | any | 
- | a32 | any | 
- | a33 | any | 
-
+ | a11 | any |  
+ | a12 | any |  
+ | a13 | any |  
+ | a21 | any |  
+ | a22 | any |  
+ | a23 | any |  
+ | a31 | any |  
+ | a32 | any |  
 ###addInPlace(matrix) &rarr; void
 
 
@@ -52,7 +50,7 @@ optional | data | Array&lt;number&gt; |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [QuadraticMatrix](/classes/2.2/QuadraticMatrix) | 
+ | matrix | [QuadraticMatrix](/classes/2.2/QuadraticMatrix) |  
 
 ###addArrayInPlace(data) &rarr; void
 
@@ -61,7 +59,7 @@ optional | data | Array&lt;number&gt; |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | Array&lt;number&gt; | 
+ | data | Array&lt;number&gt; |  
 
 ###add(matrix) &rarr; [QuadraticMatrix](/classes/2.2/QuadraticMatrix)
 
@@ -70,7 +68,7 @@ optional | data | Array&lt;number&gt; |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [QuadraticMatrix](/classes/2.2/QuadraticMatrix) | 
+ | matrix | [QuadraticMatrix](/classes/2.2/QuadraticMatrix) |  
 
 ###static FromData(a, b, c, d) &rarr; [QuadraticMatrix](/classes/2.2/QuadraticMatrix)
 
@@ -79,11 +77,9 @@ optional | data | Array&lt;number&gt; |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | a | number | 
- | b | number | 
- | c | number | 
- | d | number | 
-
+ | a | number |  
+ | b | number |  
+ | c | number |  
 ###static DataFromNumbers(a, b, c, d) &rarr; number[]
 
 
@@ -91,8 +87,6 @@ optional | data | Array&lt;number&gt; |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | a | number | 
- | b | number | 
- | c | number | 
- | d | number | 
-
+ | a | number |  
+ | b | number |  
+ | c | number |  

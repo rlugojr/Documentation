@@ -18,10 +18,9 @@ class [SimplificationSettings](/classes/2.2/SimplificationSettings)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | quality | number | 
- | distance | number | 
-optional | optimizeMesh | boolean | 
-
+ | quality | number |  
+ | distance | number |  
+optional | optimizeMesh | boolean |  
 ##Members
 
 ###quality : number

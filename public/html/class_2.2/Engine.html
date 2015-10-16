@@ -19,19 +19,19 @@
 <td></td>
 <td>canvas</td>
 <td>HTMLCanvasElement</td>
-<td></td>
+<td>The canvas</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>antialias</td>
 <td>boolean</td>
-<td></td>
+<td>True if this engine should support antialiasing, false otherwise.</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>options</td>
 <td>any</td>
-<td>- further options to be sent to the getContext function</td>
+<td>- further options to be sent to the getContext function Can contains these parameters : generateDepthBuffer, generateMipMaps, samplingMode</td>
 </tr>
 </tbody>
 </table>
@@ -115,7 +115,7 @@
 <td></td>
 <td>camera</td>
 <td><a href="/classes/2.2/Camera">Camera</a></td>
-<td></td>
+<td>@param camera</td>
 </tr>
 </tbody>
 </table>
@@ -144,7 +144,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>level</td>
 <td>number</td>
-<td></td>
+<td>@param level</td>
 </tr>
 </tbody>
 </table>
@@ -180,7 +180,7 @@ Otherwise, returns the rendering canvas height</p>
 <td>optional</td>
 <td>renderFunction</td>
 <td>() =&gt; void</td>
-<td></td>
+<td>@param renderFunction</td>
 </tr>
 </tbody>
 </table>
@@ -205,7 +205,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>renderFunction</td>
 <td>() =&gt; void</td>
-<td></td>
+<td>@param renderFunction</td>
 </tr>
 </tbody>
 </table>
@@ -226,7 +226,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>requestPointerLock</td>
 <td>boolean</td>
-<td></td>
+<td>If true, the user requests a pointer lock</td>
 </tr>
 </tbody>
 </table>
@@ -247,19 +247,19 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>color</td>
 <td>any</td>
-<td></td>
+<td>The clear color used</td>
 </tr>
 <tr>
 <td></td>
 <td>backBuffer</td>
 <td>boolean</td>
-<td></td>
+<td>True if this method should clear the color buffer</td>
 </tr>
 <tr>
 <td></td>
 <td>depthStencil</td>
 <td>boolean</td>
-<td></td>
+<td>True if this method should clear the depth buffer</td>
 </tr>
 </tbody>
 </table>
@@ -280,19 +280,19 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>viewport</td>
 <td><a href="/classes/2.2/Viewport">Viewport</a></td>
-<td></td>
+<td>@param viewport</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>requiredWidth</td>
 <td>number</td>
-<td></td>
+<td>The required width of the viewport. By defaults, equals to the rendering canvas width</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>requiredHeight</td>
 <td>number</td>
-<td></td>
+<td>The required height of the viewport. By defaults, equals to the rendering canvas height</td>
 </tr>
 </tbody>
 </table>
@@ -313,25 +313,19 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>x</td>
 <td>number</td>
-<td></td>
+<td>@param x</td>
 </tr>
 <tr>
 <td></td>
 <td>y</td>
 <td>number</td>
-<td></td>
+<td>@param y</td>
 </tr>
 <tr>
 <td></td>
 <td>width</td>
 <td>number</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>height</td>
-<td>number</td>
-<td></td>
+<td>The width of the rectangle</td>
 </tr>
 </tbody>
 </table>
@@ -362,13 +356,13 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>width</td>
 <td>number</td>
-<td></td>
+<td>The width of the rectangle</td>
 </tr>
 <tr>
 <td></td>
 <td>height</td>
 <td>number</td>
-<td></td>
+<td>The height of the rectangle</td>
 </tr>
 </tbody>
 </table>
@@ -389,7 +383,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>texture</td>
 <td>WebGLTexture</td>
-<td></td>
+<td>@param texture</td>
 </tr>
 </tbody>
 </table>
@@ -410,7 +404,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>texture</td>
 <td>WebGLTexture</td>
-<td></td>
+<td>@param texture</td>
 </tr>
 </tbody>
 </table>
@@ -435,7 +429,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>vertices</td>
 <td>number[]</td>
-<td></td>
+<td>The array of vertices</td>
 </tr>
 </tbody>
 </table>
@@ -456,7 +450,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>capacity</td>
 <td>number</td>
-<td></td>
+<td>The size of this dynamic buffer</td>
 </tr>
 </tbody>
 </table>
@@ -477,13 +471,13 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>vertexBuffer</td>
 <td>WebGLBuffer</td>
-<td></td>
+<td>The given vertex buffer</td>
 </tr>
 <tr>
 <td></td>
 <td>vertices</td>
 <td>any</td>
-<td></td>
+<td>The array of vertices</td>
 </tr>
 <tr>
 <td>optional</td>
@@ -510,7 +504,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>indices</td>
 <td>number[]</td>
-<td></td>
+<td>@param indices</td>
 </tr>
 </tbody>
 </table>
@@ -531,31 +525,25 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>vertexBuffer</td>
 <td>WebGLBuffer</td>
-<td></td>
+<td>The given vertex buffer</td>
 </tr>
 <tr>
 <td></td>
 <td>indexBuffer</td>
 <td>WebGLBuffer</td>
-<td></td>
+<td>The given index buffer</td>
 </tr>
 <tr>
 <td></td>
 <td>vertexDeclaration</td>
 <td>number[]</td>
-<td></td>
+<td>The given vertex declaration</td>
 </tr>
 <tr>
 <td></td>
 <td>vertexStrideSize</td>
 <td>number</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>effect</td>
-<td><a href="/classes/2.2/Effect">Effect</a></td>
-<td></td>
+<td>The given vertex</td>
 </tr>
 </tbody>
 </table>
@@ -576,19 +564,19 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>vertexBuffers</td>
 <td><a href="/classes/2.2/VertexBuffer">VertexBuffer</a>[]</td>
-<td></td>
+<td>The given vextex buffer</td>
 </tr>
 <tr>
 <td></td>
 <td>indexBuffer</td>
 <td>WebGLBuffer</td>
-<td></td>
+<td>The given index buffer</td>
 </tr>
 <tr>
 <td></td>
 <td>effect</td>
 <td><a href="/classes/2.2/Effect">Effect</a></td>
-<td></td>
+<td>@param effect</td>
 </tr>
 </tbody>
 </table>
@@ -609,7 +597,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>capacity</td>
 <td>number</td>
-<td></td>
+<td>The size of this dynamic buffer</td>
 </tr>
 </tbody>
 </table>
@@ -630,7 +618,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>buffer</td>
 <td>WebGLBuffer</td>
-<td></td>
+<td>The buffer</td>
 </tr>
 </tbody>
 </table>
@@ -651,7 +639,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>instancesBuffer</td>
 <td>WebGLBuffer</td>
-<td></td>
+<td>The instances buffer</td>
 </tr>
 <tr>
 <td></td>
@@ -663,7 +651,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>offsetLocations</td>
 <td>number[]</td>
-<td></td>
+<td>@param offsetLocations</td>
 </tr>
 </tbody>
 </table>
@@ -684,13 +672,13 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>instancesBuffer</td>
 <td>WebGLBuffer</td>
-<td></td>
+<td>The instances buffer</td>
 </tr>
 <tr>
 <td></td>
 <td>offsetLocations</td>
 <td>number[]</td>
-<td></td>
+<td>@param offsetLocations</td>
 </tr>
 </tbody>
 </table>
@@ -712,25 +700,19 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>useTriangles</td>
 <td>boolean</td>
-<td></td>
+<td>@param useTriangles</td>
 </tr>
 <tr>
 <td></td>
 <td>indexStart</td>
 <td>number</td>
-<td></td>
+<td>@param indexStart</td>
 </tr>
 <tr>
 <td></td>
 <td>indexCount</td>
 <td>number</td>
-<td></td>
-</tr>
-<tr>
-<td>optional</td>
-<td>instancesCount</td>
-<td>number</td>
-<td></td>
+<td>@param indexCount</td>
 </tr>
 </tbody>
 </table>
@@ -783,49 +765,43 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>baseName</td>
 <td>any</td>
-<td></td>
+<td>The base name of the effect (The name of file without .fragment.fx or .vertex.fx)</td>
 </tr>
 <tr>
 <td></td>
 <td>attributesNames</td>
 <td>string[]</td>
-<td></td>
+<td>The name of the attributes</td>
 </tr>
 <tr>
 <td></td>
 <td>uniformsNames</td>
 <td>string[]</td>
-<td></td>
+<td>The uniforms names</td>
 </tr>
 <tr>
 <td></td>
 <td>samplers</td>
 <td>string[]</td>
-<td></td>
+<td>An array of samplers (the objects used to read textures)</td>
 </tr>
 <tr>
 <td></td>
 <td>defines</td>
 <td>string</td>
-<td></td>
+<td>The shader defines string</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>fallbacks</td>
 <td><a href="/classes/2.2/EffectFallbacks">EffectFallbacks</a></td>
-<td></td>
+<td>@param fallbacks</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>onCompiled</td>
 <td>(effect: <a href="/classes/2.2/Effect">Effect</a>) =&gt; void</td>
-<td></td>
-</tr>
-<tr>
-<td>optional</td>
-<td>onError</td>
-<td>(effect: <a href="/classes/2.2/Effect">Effect</a>, errors: string) =&gt; void</td>
-<td></td>
+<td>Function launched when the effect is compiled</td>
 </tr>
 </tbody>
 </table>
@@ -846,43 +822,37 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>fragmentName</td>
 <td>string</td>
-<td></td>
+<td>The name of the Particules</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>uniformsNames</td>
 <td>string[]</td>
-<td></td>
+<td>The uniforms names</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>samplers</td>
 <td>string[]</td>
-<td></td>
+<td>An array of samplers (the objects used to read textures)</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>defines</td>
 <td>string</td>
-<td></td>
+<td>The shader defines string</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>fallbacks</td>
 <td><a href="/classes/2.2/EffectFallbacks">EffectFallbacks</a></td>
-<td></td>
+<td>@param fallbacks</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>onCompiled</td>
 <td>(effect: <a href="/classes/2.2/Effect">Effect</a>) =&gt; void</td>
-<td></td>
-</tr>
-<tr>
-<td>optional</td>
-<td>onError</td>
-<td>(effect: <a href="/classes/2.2/Effect">Effect</a>, errors: string) =&gt; void</td>
-<td></td>
+<td>Function launched when the effect is compiled</td>
 </tr>
 </tbody>
 </table>
@@ -903,19 +873,19 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>vertexCode</td>
 <td>string</td>
-<td></td>
+<td>The vertex shader code</td>
 </tr>
 <tr>
 <td></td>
 <td>fragmentCode</td>
 <td>string</td>
-<td></td>
+<td>The fragment shader code</td>
 </tr>
 <tr>
 <td></td>
 <td>defines</td>
 <td>string</td>
-<td></td>
+<td>The shader defines string</td>
 </tr>
 </tbody>
 </table>
@@ -936,13 +906,13 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>shaderProgram</td>
 <td>WebGLProgram</td>
-<td></td>
+<td>The given shader program</td>
 </tr>
 <tr>
 <td></td>
 <td>uniformsNames</td>
 <td>string[]</td>
-<td></td>
+<td>The uniforms names</td>
 </tr>
 </tbody>
 </table>
@@ -963,13 +933,13 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>shaderProgram</td>
 <td>WebGLProgram</td>
-<td></td>
+<td>The given shader program</td>
 </tr>
 <tr>
 <td></td>
 <td>attributesNames</td>
 <td>string[]</td>
-<td></td>
+<td>The name of the attributes</td>
 </tr>
 </tbody>
 </table>
@@ -990,7 +960,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>effect</td>
 <td><a href="/classes/2.2/Effect">Effect</a></td>
-<td></td>
+<td>@param effect</td>
 </tr>
 </tbody>
 </table>
@@ -1011,7 +981,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>uniform</td>
 <td>WebGLUniformLocation</td>
-<td></td>
+<td>The uniforms of the shader</td>
 </tr>
 <tr>
 <td></td>
@@ -1037,7 +1007,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>uniform</td>
 <td>WebGLUniformLocation</td>
-<td></td>
+<td>The uniforms of the shader</td>
 </tr>
 <tr>
 <td></td>
@@ -1063,7 +1033,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>uniform</td>
 <td>WebGLUniformLocation</td>
-<td></td>
+<td>The uniforms of the shader</td>
 </tr>
 <tr>
 <td></td>
@@ -1089,7 +1059,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>uniform</td>
 <td>WebGLUniformLocation</td>
-<td></td>
+<td>The uniforms of the shader</td>
 </tr>
 <tr>
 <td></td>
@@ -1116,13 +1086,13 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>uniform</td>
 <td>WebGLUniformLocation</td>
-<td></td>
+<td>The uniforms of the shader</td>
 </tr>
 <tr>
 <td></td>
 <td>matrices</td>
 <td>Float32Array</td>
-<td></td>
+<td>@param matrices</td>
 </tr>
 </tbody>
 </table>
@@ -1143,13 +1113,13 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>uniform</td>
 <td>WebGLUniformLocation</td>
-<td></td>
+<td>The uniforms of the shader</td>
 </tr>
 <tr>
 <td></td>
 <td>matrix</td>
 <td><a href="/classes/2.2/Matrix">Matrix</a></td>
-<td></td>
+<td>@param matrix</td>
 </tr>
 </tbody>
 </table>
@@ -1169,13 +1139,13 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>uniform</td>
 <td>WebGLUniformLocation</td>
-<td></td>
+<td>The uniforms of the shader</td>
 </tr>
 <tr>
 <td></td>
 <td>matrix</td>
 <td>Float32Array</td>
-<td></td>
+<td>@param matrix</td>
 </tr>
 </tbody>
 </table>
@@ -1195,13 +1165,13 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>uniform</td>
 <td>WebGLUniformLocation</td>
-<td></td>
+<td>The uniforms of the shader</td>
 </tr>
 <tr>
 <td></td>
 <td>matrix</td>
 <td>Float32Array</td>
-<td></td>
+<td>@param matrix</td>
 </tr>
 </tbody>
 </table>
@@ -1221,13 +1191,13 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>uniform</td>
 <td>WebGLUniformLocation</td>
-<td></td>
+<td>The uniforms of the shader</td>
 </tr>
 <tr>
 <td></td>
 <td>value</td>
 <td>number</td>
-<td></td>
+<td>@param value</td>
 </tr>
 </tbody>
 </table>
@@ -1247,19 +1217,19 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>uniform</td>
 <td>WebGLUniformLocation</td>
-<td></td>
+<td>The uniforms of the shader</td>
 </tr>
 <tr>
 <td></td>
 <td>x</td>
 <td>number</td>
-<td></td>
+<td>@param x</td>
 </tr>
 <tr>
 <td></td>
 <td>y</td>
 <td>number</td>
-<td></td>
+<td>@param y</td>
 </tr>
 </tbody>
 </table>
@@ -1279,25 +1249,19 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>uniform</td>
 <td>WebGLUniformLocation</td>
-<td></td>
+<td>The uniforms of the shader</td>
 </tr>
 <tr>
 <td></td>
 <td>x</td>
 <td>number</td>
-<td></td>
+<td>@param x</td>
 </tr>
 <tr>
 <td></td>
 <td>y</td>
 <td>number</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>z</td>
-<td>number</td>
-<td></td>
+<td>@param y</td>
 </tr>
 </tbody>
 </table>
@@ -1318,13 +1282,13 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>uniform</td>
 <td>WebGLUniformLocation</td>
-<td></td>
+<td>The uniforms of the shader</td>
 </tr>
 <tr>
 <td></td>
 <td>bool</td>
 <td>number</td>
-<td></td>
+<td>@param bool</td>
 </tr>
 </tbody>
 </table>
@@ -1344,31 +1308,25 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>uniform</td>
 <td>WebGLUniformLocation</td>
-<td></td>
+<td>The uniforms of the shader</td>
 </tr>
 <tr>
 <td></td>
 <td>x</td>
 <td>number</td>
-<td></td>
+<td>@param x</td>
 </tr>
 <tr>
 <td></td>
 <td>y</td>
 <td>number</td>
-<td></td>
+<td>@param y</td>
 </tr>
 <tr>
 <td></td>
 <td>z</td>
 <td>number</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>w</td>
-<td>number</td>
-<td></td>
+<td>The z axis</td>
 </tr>
 </tbody>
 </table>
@@ -1388,13 +1346,13 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>uniform</td>
 <td>WebGLUniformLocation</td>
-<td></td>
+<td>The uniforms of the shader</td>
 </tr>
 <tr>
 <td></td>
 <td>color3</td>
 <td><a href="/classes/2.2/Color3">Color3</a></td>
-<td></td>
+<td>The color of the shader</td>
 </tr>
 </tbody>
 </table>
@@ -1414,19 +1372,19 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>uniform</td>
 <td>WebGLUniformLocation</td>
-<td></td>
+<td>The uniforms of the shader</td>
 </tr>
 <tr>
 <td></td>
 <td>color3</td>
 <td><a href="/classes/2.2/Color3">Color3</a></td>
-<td></td>
+<td>The color of the shader</td>
 </tr>
 <tr>
 <td></td>
 <td>alpha</td>
 <td>number</td>
-<td></td>
+<td>The alpha of the shader</td>
 </tr>
 </tbody>
 </table>
@@ -1447,7 +1405,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>culling</td>
 <td>boolean</td>
-<td></td>
+<td>@param culling</td>
 </tr>
 <tr>
 <td>optional</td>
@@ -1459,7 +1417,7 @@ Otherwise, returns the rendering canvas height</p>
 <td>optional</td>
 <td>force</td>
 <td>boolean</td>
-<td></td>
+<td>@param force</td>
 </tr>
 </tbody>
 </table>
@@ -1480,7 +1438,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>enable</td>
 <td>boolean</td>
-<td></td>
+<td>Set true if the alpha testing is enabled, false otherwise.</td>
 </tr>
 </tbody>
 </table>
@@ -1503,7 +1461,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>enable</td>
 <td>boolean</td>
-<td></td>
+<td>Set true if the alpha testing is enabled, false otherwise.</td>
 </tr>
 </tbody>
 </table>
@@ -1524,7 +1482,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>enable</td>
 <td>boolean</td>
-<td></td>
+<td>Set true if the alpha testing is enabled, false otherwise.</td>
 </tr>
 </tbody>
 </table>
@@ -1545,7 +1503,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>mode</td>
 <td>number</td>
-<td></td>
+<td>@param mode</td>
 </tr>
 </tbody>
 </table>
@@ -1567,7 +1525,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>enable</td>
 <td>boolean</td>
-<td></td>
+<td>Set true if the alpha testing is enabled, false otherwise.</td>
 </tr>
 </tbody>
 </table>
@@ -1592,7 +1550,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>texture</td>
 <td>WebGLTexture</td>
-<td></td>
+<td>@param texture</td>
 </tr>
 <tr>
 <td></td>
@@ -1619,25 +1577,25 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>url</td>
 <td>string</td>
-<td></td>
+<td>The texture url</td>
 </tr>
 <tr>
 <td></td>
 <td>noMipmap</td>
 <td>boolean</td>
-<td></td>
+<td>Set true if you want to activate Mipmap, false otherwise.</td>
 </tr>
 <tr>
 <td></td>
 <td>invertY</td>
 <td>boolean</td>
-<td></td>
+<td>@param invertY</td>
 </tr>
 <tr>
 <td></td>
 <td>scene</td>
 <td><a href="/classes/2.2/Scene">Scene</a></td>
-<td></td>
+<td>The scene where the cube texture</td>
 </tr>
 <tr>
 <td>optional</td>
@@ -1649,19 +1607,13 @@ Otherwise, returns the rendering canvas height</p>
 <td>optional</td>
 <td>onLoad</td>
 <td>() =&gt; void</td>
-<td></td>
+<td>Function when load.</td>
 </tr>
 <tr>
 <td>optional</td>
 <td>onError</td>
 <td>() =&gt; void</td>
-<td></td>
-</tr>
-<tr>
-<td>optional</td>
-<td>buffer</td>
-<td>any</td>
-<td></td>
+<td>Function when error occurs.</td>
 </tr>
 </tbody>
 </table>
@@ -1681,7 +1633,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>texture</td>
 <td>WebGLTexture</td>
-<td></td>
+<td>@param texture</td>
 </tr>
 <tr>
 <td></td>
@@ -1699,13 +1651,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>invertY</td>
 <td>boolean</td>
-<td></td>
-</tr>
-<tr>
-<td>optional</td>
-<td>compression</td>
-<td>string</td>
-<td></td>
+<td>@param invertY</td>
 </tr>
 </tbody>
 </table>
@@ -1731,13 +1677,13 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>width</td>
 <td>number</td>
-<td></td>
+<td>The width of the rectangle</td>
 </tr>
 <tr>
 <td></td>
 <td>height</td>
 <td>number</td>
-<td></td>
+<td>The height of the rectangle</td>
 </tr>
 <tr>
 <td></td>
@@ -1749,24 +1695,18 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>generateMipMaps</td>
 <td>boolean</td>
-<td></td>
+<td>True if you want to generate Mipmap, false otherwise.</td>
 </tr>
 <tr>
 <td></td>
 <td>invertY</td>
 <td>boolean</td>
-<td></td>
+<td>@param invertY</td>
 </tr>
 <tr>
 <td></td>
 <td>samplingMode</td>
 <td>number</td>
-<td></td>
-</tr>
-<tr>
-<td>optional</td>
-<td>compression</td>
-<td>string</td>
 <td></td>
 </tr>
 </tbody>
@@ -1788,30 +1728,24 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>width</td>
 <td>number</td>
-<td></td>
+<td>The width of the rectangle</td>
 </tr>
 <tr>
 <td></td>
 <td>height</td>
 <td>number</td>
-<td></td>
+<td>The height of the rectangle</td>
 </tr>
 <tr>
 <td></td>
 <td>generateMipMaps</td>
 <td>boolean</td>
-<td></td>
+<td>True if you want to generate Mipmap, false otherwise.</td>
 </tr>
 <tr>
 <td></td>
 <td>samplingMode</td>
 <td>number</td>
-<td></td>
-</tr>
-<tr>
-<td>optional</td>
-<td>forceExponantOfTwo</td>
-<td>boolean</td>
 <td></td>
 </tr>
 </tbody>
@@ -1838,7 +1772,7 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>texture</td>
 <td>WebGLTexture</td>
-<td></td>
+<td>@param texture</td>
 </tr>
 </tbody>
 </table>
@@ -1859,19 +1793,19 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>texture</td>
 <td>WebGLTexture</td>
-<td></td>
+<td>@param texture</td>
 </tr>
 <tr>
 <td></td>
 <td>canvas</td>
 <td>HTMLCanvasElement</td>
-<td></td>
+<td>The canvas</td>
 </tr>
 <tr>
 <td></td>
 <td>invertY</td>
 <td>boolean</td>
-<td></td>
+<td>@param invertY</td>
 </tr>
 </tbody>
 </table>
@@ -1892,19 +1826,19 @@ Otherwise, returns the rendering canvas height</p>
 <td></td>
 <td>texture</td>
 <td>WebGLTexture</td>
-<td></td>
+<td>@param texture</td>
 </tr>
 <tr>
 <td></td>
 <td>video</td>
 <td>HTMLVideoElement</td>
-<td></td>
+<td>The video</td>
 </tr>
 <tr>
 <td></td>
 <td>invertY</td>
 <td>boolean</td>
-<td></td>
+<td>@param invertY</td>
 </tr>
 </tbody>
 </table>
@@ -1928,13 +1862,13 @@ in the same way, generateDepthBuffer is defaulted to true</p>
 <td></td>
 <td>size</td>
 <td>any</td>
-<td></td>
+<td>Can be an object with the two parameters width and height.</td>
 </tr>
 <tr>
 <td></td>
 <td>options</td>
 <td>any</td>
-<td></td>
+<td>Can contains these parameters : generateDepthBuffer, generateMipMaps, samplingMode</td>
 </tr>
 </tbody>
 </table>
@@ -1955,25 +1889,19 @@ in the same way, generateDepthBuffer is defaulted to true</p>
 <td></td>
 <td>rootUrl</td>
 <td>string</td>
-<td></td>
+<td>@param rootUrl</td>
 </tr>
 <tr>
 <td></td>
 <td>scene</td>
 <td><a href="/classes/2.2/Scene">Scene</a></td>
-<td></td>
+<td>The scene where the cube texture</td>
 </tr>
 <tr>
 <td></td>
 <td>extensions</td>
 <td>string[]</td>
-<td></td>
-</tr>
-<tr>
-<td>optional</td>
-<td>noMipmap</td>
-<td>boolean</td>
-<td></td>
+<td>Contains the image extensions in string format</td>
 </tr>
 </tbody>
 </table>
@@ -1994,7 +1922,7 @@ in the same way, generateDepthBuffer is defaulted to true</p>
 <td></td>
 <td>effect</td>
 <td><a href="/classes/2.2/Effect">Effect</a></td>
-<td></td>
+<td>@param effect</td>
 </tr>
 </tbody>
 </table>
@@ -2015,13 +1943,13 @@ in the same way, generateDepthBuffer is defaulted to true</p>
 <td></td>
 <td>channel</td>
 <td>number</td>
-<td></td>
+<td>The index in the array _activeTexturesCache</td>
 </tr>
 <tr>
 <td></td>
 <td>postProcess</td>
 <td><a href="/classes/2.2/PostProcess">PostProcess</a></td>
-<td></td>
+<td>@param postProcess</td>
 </tr>
 </tbody>
 </table>
@@ -2042,13 +1970,13 @@ in the same way, generateDepthBuffer is defaulted to true</p>
 <td></td>
 <td>channel</td>
 <td>number</td>
-<td></td>
+<td>The index in the array _activeTexturesCache</td>
 </tr>
 <tr>
 <td></td>
 <td>texture</td>
 <td><a href="/classes/2.2/BaseTexture">BaseTexture</a></td>
-<td></td>
+<td>@param texture</td>
 </tr>
 </tbody>
 </table>
@@ -2069,25 +1997,19 @@ in the same way, generateDepthBuffer is defaulted to true</p>
 <td></td>
 <td>x</td>
 <td>number</td>
-<td></td>
+<td>@param x</td>
 </tr>
 <tr>
 <td></td>
 <td>y</td>
 <td>number</td>
-<td></td>
+<td>@param y</td>
 </tr>
 <tr>
 <td></td>
 <td>width</td>
 <td>number</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td>height</td>
-<td>number</td>
-<td></td>
+<td>The width of the rectangle</td>
 </tr>
 </tbody>
 </table>

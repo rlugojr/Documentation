@@ -23,11 +23,9 @@ A tutorial abouth ShaderMaterials can be found here : http://blogs.msdn.com/b/et
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
- | shaderPath | any | 
- | options | any | 
-
+ | name | string |  Name of the matrix
+ | scene | [Scene](/classes/2.2/Scene) |  [Scene](/classes/2.2/Scene) which contain this material
+ | shaderPath | any |  The path to shader files if any
 ##Methods
 
 ###needAlphaBlending() &rarr; boolean
@@ -46,9 +44,8 @@ Set a texture to the material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | texture | [Texture](/classes/2.2/Texture) | 
-
+ | name | string |  Name of the matrix
+ | texture | [Texture](/classes/2.2/Texture) |  [Texture](/classes/2.2/Texture) to set to the material
 ###setFloat(name, value) &rarr; [ShaderMaterial](/classes/2.2/ShaderMaterial)
 
 Set float to the material
@@ -57,9 +54,8 @@ Set float to the material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | number | 
-
+ | name | string |  Name of the matrix
+ | value | number |  The matrix
 ###setFloats(name, value) &rarr; [ShaderMaterial](/classes/2.2/ShaderMaterial)
 
 Set floats to the material
@@ -68,9 +64,8 @@ Set floats to the material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | number[] | 
-
+ | name | string |  Name of the matrix
+ | value | number[] |  The matrix
 ###setColor3(name, value) &rarr; [ShaderMaterial](/classes/2.2/ShaderMaterial)
 
 Set color3 to the material
@@ -79,9 +74,8 @@ Set color3 to the material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | [Color3](/classes/2.2/Color3) | 
-
+ | name | string |  Name of the matrix
+ | value | [Color3](/classes/2.2/Color3) |  The matrix
 ###setColor4(name, value) &rarr; [ShaderMaterial](/classes/2.2/ShaderMaterial)
 
 Set color4 to the material
@@ -90,9 +84,8 @@ Set color4 to the material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | [Color4](/classes/2.2/Color4) | 
-
+ | name | string |  Name of the matrix
+ | value | [Color4](/classes/2.2/Color4) |  The matrix
 ###setVector2(name, value) &rarr; [ShaderMaterial](/classes/2.2/ShaderMaterial)
 
 Set a vector2 to the material
@@ -101,9 +94,8 @@ Set a vector2 to the material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | [Vector2](/classes/2.2/Vector2) | 
-
+ | name | string |  Name of the matrix
+ | value | [Vector2](/classes/2.2/Vector2) |  The matrix
 ###setVector3(name, value) &rarr; [ShaderMaterial](/classes/2.2/ShaderMaterial)
 
 Set a vector3 to the material
@@ -111,9 +103,8 @@ Set a vector3 to the material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | [Vector3](/classes/2.2/Vector3) | 
-
+ | name | string |  Name of the matrix
+ | value | [Vector3](/classes/2.2/Vector3) |  The matrix
 ###setVector4(name, value) &rarr; [ShaderMaterial](/classes/2.2/ShaderMaterial)
 
 
@@ -121,9 +112,8 @@ Set a vector3 to the material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | [Vector4](/classes/2.2/Vector4) | 
-
+ | name | string |  Name of the matrix
+ | value | [Vector4](/classes/2.2/Vector4) |  The matrix
 ###setMatrix(name, value) &rarr; [ShaderMaterial](/classes/2.2/ShaderMaterial)
 
 Set a matrix to the material
@@ -131,9 +121,8 @@ Set a matrix to the material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | [Matrix](/classes/2.2/Matrix) | 
-
+ | name | string |  Name of the matrix
+ | value | [Matrix](/classes/2.2/Matrix) |  The matrix
 ###setMatrix3x3(name, value) &rarr; [ShaderMaterial](/classes/2.2/ShaderMaterial)
 
 
@@ -141,9 +130,8 @@ Set a matrix to the material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | Float32Array | 
-
+ | name | string |  Name of the matrix
+ | value | Float32Array |  The matrix
 ###setMatrix2x2(name, value) &rarr; [ShaderMaterial](/classes/2.2/ShaderMaterial)
 
 
@@ -151,9 +139,8 @@ Set a matrix to the material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | Float32Array | 
-
+ | name | string |  Name of the matrix
+ | value | Float32Array |  The matrix
 ###isReady(mesh, useInstances) &rarr; boolean
 
 Function to know if the material is ready
@@ -162,9 +149,8 @@ Function to know if the material is ready
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
-optional | useInstances | boolean | 
-
+optional | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  
+optional | useInstances | boolean |  
 ###bindOnlyWorldMatrix(world) &rarr; void
 
 
@@ -172,7 +158,7 @@ optional | useInstances | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | world | [Matrix](/classes/2.2/Matrix) | 
+ | world | [Matrix](/classes/2.2/Matrix) |  [Matrix](/classes/2.2/Matrix) to bind the material
 
 ###bind(world, mesh) &rarr; void
 
@@ -181,9 +167,8 @@ Function to bind the material
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | world | [Matrix](/classes/2.2/Matrix) | 
-optional | mesh | [Mesh](/classes/2.2/Mesh) | 
-
+ | world | [Matrix](/classes/2.2/Matrix) |  [Matrix](/classes/2.2/Matrix) to bind the material
+optional | mesh | [Mesh](/classes/2.2/Mesh) |  
 ###clone(name) &rarr; [ShaderMaterial](/classes/2.2/ShaderMaterial)
 
 
@@ -191,7 +176,7 @@ optional | mesh | [Mesh](/classes/2.2/Mesh) |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
+ | name | string |  Name of the matrix
 
 ###dispose(forceDisposeEffect) &rarr; void
 
@@ -200,5 +185,5 @@ optional | mesh | [Mesh](/classes/2.2/Mesh) |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | forceDisposeEffect | boolean | 
+optional | forceDisposeEffect | boolean |  True to force the dispose
 

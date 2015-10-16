@@ -18,7 +18,7 @@ class [TGATools](/classes/2.2/TGATools)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | Uint8Array | 
+ | data | Uint8Array |  @param data
 
 ###static UploadContent(gl, data) &rarr; void
 
@@ -27,6 +27,5 @@ class [TGATools](/classes/2.2/TGATools)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gl | WebGLRenderingContext | 
- | data | Uint8Array | 
-
+ | gl | WebGLRenderingContext |  @param gl
+ | data | Uint8Array |  @param data

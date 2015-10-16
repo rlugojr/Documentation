@@ -26,9 +26,8 @@ Adds a fallback effect to the given rank
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | rank | number | 
- | define | string | 
-
+ | rank | number |  The given rank
+ | define | string |  The definition of the fallback
 ###reduce(currentDefines) &rarr; string
 
 
@@ -36,5 +35,5 @@ Adds a fallback effect to the given rank
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | currentDefines | string | 
+ | currentDefines | string |  The given defines
 

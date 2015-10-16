@@ -24,16 +24,14 @@ A tutorial about materials and texture can be found here : http://doc.babylonjs.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | url | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | noMipmap | boolean | 
-optional | invertY | boolean | 
-optional | samplingMode | number | 
-optional | onLoad | () =&gt; void | 
-optional | onError | () =&gt; void | 
-optional | buffer | any | 
-optional | deleteBuffer | boolean | 
-
+ | url | string |  Link of the texture
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | noMipmap | boolean |  
+optional | invertY | boolean |  
+optional | samplingMode | number |  
+optional | onLoad | () =&gt; void |  
+optional | onError | () =&gt; void |  
+optional | buffer | any |  
 ##Members
 
 ###static NEAREST_SAMPLINGMODE : number
@@ -128,7 +126,7 @@ Proxy method to delay the texture loading
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | samplingMode | number | 
+ | samplingMode | number |  
 
 ###getTextureMatrix() &rarr; [Matrix](/classes/2.2/Matrix)
 
@@ -148,12 +146,10 @@ Get the reflection texture matrix
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | string | 
- | name | string | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | noMipmap | boolean | 
-optional | invertY | boolean | 
-optional | samplingMode | number | 
-optional | onLoad | () =&gt; void | 
-optional | onError | () =&gt; void | 
-
+ | data | string |  
+ | name | string |  
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | noMipmap | boolean |  
+optional | invertY | boolean |  
+optional | samplingMode | number |  
+optional | onLoad | () =&gt; void |  

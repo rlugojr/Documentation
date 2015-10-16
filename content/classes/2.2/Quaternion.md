@@ -18,11 +18,9 @@ Creates a new [Quaternion](/classes/2.2/Quaternion)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | x | number | 
-optional | y | number | 
-optional | z | number | 
-optional | w | number | 
-
+optional | x | number |  The X coordinate of another vector
+optional | y | number |  The Y coordinate of another vector
+optional | z | number |  The Z coordinate of another vector
 ##Members
 
 ###x : number
@@ -56,7 +54,7 @@ Tests if two quaternion are identical
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | otherQuaternion | [Quaternion](/classes/2.2/Quaternion) | 
+ | otherQuaternion | [Quaternion](/classes/2.2/Quaternion) |  The quaternion to test against
 
 ###clone() &rarr; [Quaternion](/classes/2.2/Quaternion)
 
@@ -68,7 +66,7 @@ Copies another quaternion
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Quaternion](/classes/2.2/Quaternion) | 
+ | other | [Quaternion](/classes/2.2/Quaternion) |  Another quaternion
 
 ###copyFromFloats(x, y, z, w) &rarr; [Quaternion](/classes/2.2/Quaternion)
 
@@ -77,11 +75,9 @@ Copies another queternion from a set of floats
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | x | number | 
- | y | number | 
- | z | number | 
- | w | number | 
-
+ | x | number |  The X coordinate of another vector
+ | y | number |  The Y coordinate of another vector
+ | z | number |  The Z coordinate of another vector
 ###add(other) &rarr; [Quaternion](/classes/2.2/Quaternion)
 
 Adds in another quaternion
@@ -89,7 +85,7 @@ Adds in another quaternion
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Quaternion](/classes/2.2/Quaternion) | 
+ | other | [Quaternion](/classes/2.2/Quaternion) |  Another quaternion
 
 ###subtract(other) &rarr; [Quaternion](/classes/2.2/Quaternion)
 
@@ -98,7 +94,7 @@ Substracts another quaternion
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | other | [Quaternion](/classes/2.2/Quaternion) | 
+ | other | [Quaternion](/classes/2.2/Quaternion) |  Another quaternion
 
 ###scale(value) &rarr; [Quaternion](/classes/2.2/Quaternion)
 
@@ -107,7 +103,7 @@ Scales a quaternion
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | value | number | 
+ | value | number |  @param value
 
 ###multiply(q1) &rarr; [Quaternion](/classes/2.2/Quaternion)
 
@@ -116,7 +112,7 @@ Multiplies by another quaternion
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | q1 | [Quaternion](/classes/2.2/Quaternion) | 
+ | q1 | [Quaternion](/classes/2.2/Quaternion) |  Another quaternion
 
 ###multiplyToRef(q1, result) &rarr; [Quaternion](/classes/2.2/Quaternion)
 
@@ -125,9 +121,8 @@ Multiplies another quaternion into a third target quaternion
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | q1 | [Quaternion](/classes/2.2/Quaternion) | 
- | result | [Quaternion](/classes/2.2/Quaternion) | 
-
+ | q1 | [Quaternion](/classes/2.2/Quaternion) |  Another quaternion
+ | result | [Quaternion](/classes/2.2/Quaternion) |  
 ###length() &rarr; number
 
 The length of the quaternion
@@ -144,7 +139,7 @@ Converts the quaternion into a target [Vector3](/classes/2.2/Vector3)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | result | [Vector3](/classes/2.2/Vector3) | 
+ | result | [Vector3](/classes/2.2/Vector3) |  
 
 ###toRotationMatrix(result) &rarr; [Quaternion](/classes/2.2/Quaternion)
 
@@ -153,7 +148,7 @@ Converts the quaternion into a target rotation [Matrix](/classes/2.2/Matrix) obj
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | result | [Matrix](/classes/2.2/Matrix) | 
+ | result | [Matrix](/classes/2.2/Matrix) |  
 
 ###fromRotationMatrix(matrix) &rarr; [Quaternion](/classes/2.2/Quaternion)
 
@@ -162,7 +157,7 @@ Imports a source matrix into the current quaternion
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [Matrix](/classes/2.2/Matrix) | 
+ | matrix | [Matrix](/classes/2.2/Matrix) |  
 
 ###static FromRotationMatrix(matrix) &rarr; [Quaternion](/classes/2.2/Quaternion)
 
@@ -171,7 +166,7 @@ Imports a source matrix into the current quaternion
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [Matrix](/classes/2.2/Matrix) | 
+ | matrix | [Matrix](/classes/2.2/Matrix) |  
 
 ###static FromRotationMatrixToRef(matrix, result) &rarr; void
 
@@ -180,9 +175,8 @@ Imports a source matrix into the current quaternion
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | matrix | [Matrix](/classes/2.2/Matrix) | 
- | result | [Quaternion](/classes/2.2/Quaternion) | 
-
+ | matrix | [Matrix](/classes/2.2/Matrix) |  
+ | result | [Quaternion](/classes/2.2/Quaternion) |  
 ###static Inverse(q) &rarr; [Quaternion](/classes/2.2/Quaternion)
 
 Returns the passed quaternion's inverse
@@ -190,7 +184,7 @@ Returns the passed quaternion's inverse
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | q | [Quaternion](/classes/2.2/Quaternion) | 
+ | q | [Quaternion](/classes/2.2/Quaternion) |  The quaternion to inverse
 
 ###static Identity() &rarr; [Quaternion](/classes/2.2/Quaternion)
 
@@ -202,9 +196,8 @@ Creates a quaternion using an axis and an angle
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | axis | [Vector3](/classes/2.2/Vector3) | 
- | angle | number | 
-
+ | axis | [Vector3](/classes/2.2/Vector3) |  The rotation axis
+ | angle | number |  Some angle
 ###static FromArray(array, offset) &rarr; [Quaternion](/classes/2.2/Quaternion)
 
 Creates a quaterion from agiven array
@@ -212,9 +205,8 @@ Creates a quaterion from agiven array
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | array | number[] | 
-optional | offset | number | 
-
+ | array | number[] |  The given array
+optional | offset | number |  The first index of the array to look at
 ###static RotationYawPitchRoll(yaw, pitch, roll) &rarr; [Quaternion](/classes/2.2/Quaternion)
 
 Creates a quaternion from yaw, pitch and roll values
@@ -222,10 +214,9 @@ Creates a quaternion from yaw, pitch and roll values
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | yaw | number | 
- | pitch | number | 
- | roll | number | 
-
+ | yaw | number |  The yaw rotation
+ | pitch | number |  The pitch rotation
+ | roll | number |  The roll rotation
 ###static RotationYawPitchRollToRef(yaw, pitch, roll, result) &rarr; void
 
 Creates a quaternion from yaw, pitch and roll values and put it in the target quaternion
@@ -233,11 +224,9 @@ Creates a quaternion from yaw, pitch and roll values and put it in the target qu
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | yaw | number | 
- | pitch | number | 
- | roll | number | 
- | result | [Quaternion](/classes/2.2/Quaternion) | 
-
+ | yaw | number |  The yaw rotation
+ | pitch | number |  The pitch rotation
+ | roll | number |  The roll rotation
 ###static RotationAlphaBetaGamma(alpha, beta, gamma) &rarr; [Quaternion](/classes/2.2/Quaternion)
 
 
@@ -245,10 +234,9 @@ Creates a quaternion from yaw, pitch and roll values and put it in the target qu
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | alpha | number | 
- | beta | number | 
- | gamma | number | 
-
+ | alpha | number |  
+ | beta | number |  
+ | gamma | number |  
 ###static RotationAlphaBetaGammaToRef(alpha, beta, gamma, result) &rarr; void
 
 
@@ -256,11 +244,9 @@ Creates a quaternion from yaw, pitch and roll values and put it in the target qu
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | alpha | number | 
- | beta | number | 
- | gamma | number | 
- | result | [Quaternion](/classes/2.2/Quaternion) | 
-
+ | alpha | number |  
+ | beta | number |  
+ | gamma | number |  
 ###static Slerp(left, right, amount) &rarr; [Quaternion](/classes/2.2/Quaternion)
 
 
@@ -268,7 +254,6 @@ Creates a quaternion from yaw, pitch and roll values and put it in the target qu
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | left | [Quaternion](/classes/2.2/Quaternion) | 
- | right | [Quaternion](/classes/2.2/Quaternion) | 
- | amount | number | 
-
+ | left | [Quaternion](/classes/2.2/Quaternion) |  interpolation start quaternion
+ | right | [Quaternion](/classes/2.2/Quaternion) |  interpolation end quaternion
+ | amount | number |  Weighting factor

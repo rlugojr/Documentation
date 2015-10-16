@@ -18,7 +18,7 @@ The [VirtualJoystick](/classes/2.2/VirtualJoystick) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | leftJoystick | boolean | 
+optional | leftJoystick | boolean |  @param leftJoystick
 
 ##Members
 
@@ -51,7 +51,7 @@ True is [VirtualJoystick](/classes/2.2/VirtualJoystick) is pressed, false otherw
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newJoystickSensibility | number | 
+ | newJoystickSensibility | number |  @param newJoystickSensibility
 
 ###setJoystickColor(newColor) &rarr; void
 
@@ -60,7 +60,7 @@ Change the color of the virtual joystick
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | newColor | string |  a string that must be a CSS color value (like "red") or the hexa value (like "#FF0000")
+ | newColor | string |  a string that must be a CSS color value (like "red") or the hexa value (like "#FF0000") a string that must be a CSS color value (like &quot;red&quot;) or the hexa value (like &quot;#FF0000&quot;)
 
 ###setActionOnTouch(action) &rarr; void
 
@@ -69,7 +69,7 @@ Set the action for the button touched
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | action | () =&gt; any | 
+ | action | () =&gt; any |  @param action
 
 ###setAxisForLeftRight(axis) &rarr; void
 
@@ -78,7 +78,7 @@ Set the axis for the left and the right
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | axis | [JoystickAxis](/classes/2.2/JoystickAxis) | 
+ | axis | [JoystickAxis](/classes/2.2/JoystickAxis) |  The given axis
 
 ###setAxisForUpDown(axis) &rarr; void
 
@@ -87,7 +87,7 @@ Set the axis for the up and the down
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | axis | [JoystickAxis](/classes/2.2/JoystickAxis) | 
+ | axis | [JoystickAxis](/classes/2.2/JoystickAxis) |  The given axis
 
 ###releaseCanvas() &rarr; void
 

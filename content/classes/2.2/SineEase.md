@@ -20,5 +20,5 @@ class [SineEase](/classes/2.2/SineEase) extends [EasingFunction](/classes/2.2/Ea
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gradient | number | 
+ | gradient | number |  
 

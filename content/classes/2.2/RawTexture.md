@@ -21,15 +21,13 @@ class [RawTexture](/classes/2.2/RawTexture) extends [Texture](/classes/2.2/Textu
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | ArrayBufferView | 
- | width | number | 
- | height | number | 
- | format | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | generateMipMaps | boolean | 
-optional | invertY | boolean | 
-optional | samplingMode | number | 
-
+ | data | ArrayBufferView |  
+ | width | number |  
+ | height | number |  
+ | format | number |  
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | generateMipMaps | boolean |  
+optional | invertY | boolean |  
 ##Members
 
 ###format : number
@@ -45,7 +43,7 @@ optional | samplingMode | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | ArrayBufferView | 
+ | data | ArrayBufferView |  
 
 ###static CreateLuminanceTexture(data, width, height, scene, generateMipMaps, invertY, samplingMode) &rarr; [RawTexture](/classes/2.2/RawTexture)
 
@@ -54,14 +52,12 @@ optional | samplingMode | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | ArrayBufferView | 
- | width | number | 
- | height | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | generateMipMaps | boolean | 
-optional | invertY | boolean | 
-optional | samplingMode | number | 
-
+ | data | ArrayBufferView |  
+ | width | number |  
+ | height | number |  
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | generateMipMaps | boolean |  
+optional | invertY | boolean |  
 ###static CreateLuminanceAlphaTexture(data, width, height, scene, generateMipMaps, invertY, samplingMode) &rarr; [RawTexture](/classes/2.2/RawTexture)
 
 
@@ -69,14 +65,12 @@ optional | samplingMode | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | ArrayBufferView | 
- | width | number | 
- | height | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | generateMipMaps | boolean | 
-optional | invertY | boolean | 
-optional | samplingMode | number | 
-
+ | data | ArrayBufferView |  
+ | width | number |  
+ | height | number |  
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | generateMipMaps | boolean |  
+optional | invertY | boolean |  
 ###static CreateAlphaTexture(data, width, height, scene, generateMipMaps, invertY, samplingMode) &rarr; [RawTexture](/classes/2.2/RawTexture)
 
 
@@ -84,14 +78,12 @@ optional | samplingMode | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | ArrayBufferView | 
- | width | number | 
- | height | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | generateMipMaps | boolean | 
-optional | invertY | boolean | 
-optional | samplingMode | number | 
-
+ | data | ArrayBufferView |  
+ | width | number |  
+ | height | number |  
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | generateMipMaps | boolean |  
+optional | invertY | boolean |  
 ###static CreateRGBTexture(data, width, height, scene, generateMipMaps, invertY, samplingMode) &rarr; [RawTexture](/classes/2.2/RawTexture)
 
 
@@ -99,14 +91,12 @@ optional | samplingMode | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | ArrayBufferView | 
- | width | number | 
- | height | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | generateMipMaps | boolean | 
-optional | invertY | boolean | 
-optional | samplingMode | number | 
-
+ | data | ArrayBufferView |  
+ | width | number |  
+ | height | number |  
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | generateMipMaps | boolean |  
+optional | invertY | boolean |  
 ###static CreateRGBATexture(data, width, height, scene, generateMipMaps, invertY, samplingMode) &rarr; [RawTexture](/classes/2.2/RawTexture)
 
 
@@ -114,11 +104,9 @@ optional | samplingMode | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | data | ArrayBufferView | 
- | width | number | 
- | height | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | generateMipMaps | boolean | 
-optional | invertY | boolean | 
-optional | samplingMode | number | 
-
+ | data | ArrayBufferView |  
+ | width | number |  
+ | height | number |  
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | generateMipMaps | boolean |  
+optional | invertY | boolean |  

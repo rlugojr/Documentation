@@ -20,7 +20,7 @@ Builds a [Gamepads](/classes/2.2/Gamepads) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | ongamedpadconnected | (gamepad: [Gamepad](/classes/2.2/Gamepad)) =&gt; void | 
+ | ongamedpadconnected | (gamepad: [Gamepad](/classes/2.2/Gamepad)) =&gt; void |  Function called when a gamepad is connected
 
 ##Methods
 

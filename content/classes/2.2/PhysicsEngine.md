@@ -20,7 +20,7 @@ The physics engine loader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | plugin | IPhysicsEnginePlugin | 
+optional | plugin | IPhysicsEnginePlugin |  default : oimoJs You can load your own physic engine, more informations here
 
 ##Members
 

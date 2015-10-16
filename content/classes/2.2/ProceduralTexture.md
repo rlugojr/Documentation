@@ -22,13 +22,11 @@ class [ProceduralTexture](/classes/2.2/ProceduralTexture) extends [Texture](/cla
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | size | any | 
- | fragment | any | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | fallbackTexture | [Texture](/classes/2.2/Texture) | 
-optional | generateMipMaps | boolean | 
-
+ | name | string |  
+ | size | any |  
+ | fragment | any |  
+ | scene | [Scene](/classes/2.2/Scene) |  
+optional | fallbackTexture | [Texture](/classes/2.2/Texture) |  
 ##Members
 
 ###isEnabled : boolean
@@ -57,7 +55,7 @@ optional | generateMipMaps | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | fragment | any | 
+ | fragment | any |  
 
 ###getRenderSize() &rarr; number
 
@@ -69,9 +67,8 @@ optional | generateMipMaps | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | size | any | 
- | generateMipMaps | any | 
-
+ | size | any |  
+ | generateMipMaps | any |  
 ###setTexture(name, texture) &rarr; [ProceduralTexture](/classes/2.2/ProceduralTexture)
 
 
@@ -79,9 +76,8 @@ optional | generateMipMaps | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | texture | [Texture](/classes/2.2/Texture) | 
-
+ | name | string |  
+ | texture | [Texture](/classes/2.2/Texture) |  
 ###setFloat(name, value) &rarr; [ProceduralTexture](/classes/2.2/ProceduralTexture)
 
 
@@ -89,9 +85,8 @@ optional | generateMipMaps | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | number | 
-
+ | name | string |  
+ | value | number |  
 ###setFloats(name, value) &rarr; [ProceduralTexture](/classes/2.2/ProceduralTexture)
 
 
@@ -99,9 +94,8 @@ optional | generateMipMaps | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | number[] | 
-
+ | name | string |  
+ | value | number[] |  
 ###setColor3(name, value) &rarr; [ProceduralTexture](/classes/2.2/ProceduralTexture)
 
 
@@ -109,9 +103,8 @@ optional | generateMipMaps | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | [Color3](/classes/2.2/Color3) | 
-
+ | name | string |  
+ | value | [Color3](/classes/2.2/Color3) |  
 ###setColor4(name, value) &rarr; [ProceduralTexture](/classes/2.2/ProceduralTexture)
 
 
@@ -119,9 +112,8 @@ optional | generateMipMaps | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | [Color4](/classes/2.2/Color4) | 
-
+ | name | string |  
+ | value | [Color4](/classes/2.2/Color4) |  
 ###setVector2(name, value) &rarr; [ProceduralTexture](/classes/2.2/ProceduralTexture)
 
 
@@ -129,9 +121,8 @@ optional | generateMipMaps | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | [Vector2](/classes/2.2/Vector2) | 
-
+ | name | string |  
+ | value | [Vector2](/classes/2.2/Vector2) |  
 ###setVector3(name, value) &rarr; [ProceduralTexture](/classes/2.2/ProceduralTexture)
 
 
@@ -139,9 +130,8 @@ optional | generateMipMaps | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | [Vector3](/classes/2.2/Vector3) | 
-
+ | name | string |  
+ | value | [Vector3](/classes/2.2/Vector3) |  
 ###setMatrix(name, value) &rarr; [ProceduralTexture](/classes/2.2/ProceduralTexture)
 
 
@@ -149,9 +139,8 @@ optional | generateMipMaps | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | value | [Matrix](/classes/2.2/Matrix) | 
-
+ | name | string |  
+ | value | [Matrix](/classes/2.2/Matrix) |  
 ###render(useCameraPostProcess) &rarr; void
 
 
@@ -159,7 +148,7 @@ optional | generateMipMaps | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | useCameraPostProcess | boolean | 
+optional | useCameraPostProcess | boolean |  
 
 ###clone() &rarr; [ProceduralTexture](/classes/2.2/ProceduralTexture)
 

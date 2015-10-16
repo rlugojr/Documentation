@@ -18,9 +18,7 @@ class [BezierCurve](/classes/2.2/BezierCurve)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | t | number | 
- | x1 | number | 
- | y1 | number | 
- | x2 | number | 
- | y2 | number | 
-
+ | t | number |  
+ | x1 | number |  
+ | y1 | number |  
+ | x2 | number |  

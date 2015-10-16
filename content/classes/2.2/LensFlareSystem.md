@@ -18,10 +18,9 @@ The lens Flare system
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | emitter | any | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  The name of the lens flare system
+ | emitter | any |  The Emitter of the lens flare system : it can be a camera, a light or a mesh.
+ | scene | [Scene](/classes/2.2/Scene) |  [Scene](/classes/2.2/Scene) where the lens flare system is.
 ##Members
 
 ###name : string
@@ -75,7 +74,7 @@ Compute the effective position
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | globalViewport | [Viewport](/classes/2.2/Viewport) | 
+ | globalViewport | [Viewport](/classes/2.2/Viewport) |  The global viewport
 
 ###render() &rarr; boolean
 

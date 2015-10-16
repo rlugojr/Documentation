@@ -23,8 +23,6 @@ class [Ground](/classes/2.2/Ground) extends _Primitive
  | height | number | 
  | subdivisions | number | 
 optional | canBeRegenerated | boolean | 
-optional | mesh | [Mesh](/classes/2.2/Mesh) | 
-
 ##Members
 
 ###width : number

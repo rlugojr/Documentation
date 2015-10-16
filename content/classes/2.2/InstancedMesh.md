@@ -21,9 +21,8 @@ The [InstancedMesh](/classes/2.2/InstancedMesh) constructor
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | source | [Mesh](/classes/2.2/Mesh) | 
-
+ | name | string |  The given name
+ | source | [Mesh](/classes/2.2/Mesh) |  @param source
 ##Members
 
 ###receiveShadows : boolean
@@ -58,7 +57,7 @@ Get the vertices data
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | kind | string | 
+ | kind | string |  @param kind
 
 ###isVerticesDataPresent(kind) &rarr; boolean
 
@@ -67,7 +66,7 @@ Is Vertices data present
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | kind | string | 
+ | kind | string |  @param kind
 
 ###getIndices() &rarr; number[]
 
@@ -82,7 +81,7 @@ Refresh Bounding Info of the Instanced [Mesh](/classes/2.2/Mesh)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | camera | [Camera](/classes/2.2/Camera) | 
+ | camera | [Camera](/classes/2.2/Camera) |  
 
 ###clone(name, newParent, doNotCloneChildren) &rarr; [InstancedMesh](/classes/2.2/InstancedMesh)
 
@@ -91,10 +90,9 @@ Clone this instanced [Mesh](/classes/2.2/Mesh)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | newParent | [Node](/classes/2.2/Node) | 
-optional | doNotCloneChildren | boolean | 
-
+ | name | string |  The given name
+ | newParent | [Node](/classes/2.2/Node) |  The parent
+optional | doNotCloneChildren | boolean |  True if you want to clone children, false if you don't want to.
 ###dispose(doNotRecurse) &rarr; void
 
 
@@ -102,5 +100,5 @@ optional | doNotCloneChildren | boolean |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | doNotRecurse | boolean | 
+optional | doNotRecurse | boolean |  @param doNotRecurse
 

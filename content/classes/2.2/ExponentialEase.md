@@ -20,7 +20,7 @@ class [ExponentialEase](/classes/2.2/ExponentialEase) extends [EasingFunction](/
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | exponent | number | 
+optional | exponent | number |  
 
 ##Members
 
@@ -37,5 +37,5 @@ optional | exponent | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | gradient | number | 
+ | gradient | number |  
 

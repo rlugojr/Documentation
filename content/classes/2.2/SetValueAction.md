@@ -20,12 +20,10 @@ Create a new set value action
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | triggerOptions | any | 
- | target | any | 
- | propertyPath | string | 
- | value | any | 
-optional | condition | [Condition](/classes/2.2/Condition) | 
-
+ | triggerOptions | any |  The trigger option
+ | target | any |  The action target
+ | propertyPath | string |  The action property path
+ | value | any |  The action value
 ##Members
 
 ###propertyPath : string

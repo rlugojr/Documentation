@@ -18,7 +18,7 @@ Enable the tag system for the given object.
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | obj | any | 
+ | obj | any |  The given object
 
 ###static DisableFor(obj) &rarr; void
 
@@ -27,7 +27,7 @@ Disable the tag system for the given object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | obj | any | 
+ | obj | any |  The given object
 
 ###static HasTags(obj) &rarr; boolean
 
@@ -36,7 +36,7 @@ True if given object has tags, false otherwise
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | obj | any | 
+ | obj | any |  The given object
 
 ###static GetTags(obj) &rarr; any
 
@@ -45,7 +45,7 @@ Get tags
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | obj | any | 
+ | obj | any |  The given object
 
 ###static AddTagsTo(obj, tagsString) &rarr; void
 
@@ -54,9 +54,8 @@ Add tags
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | obj | any | 
- | tagsString | string | 
-
+ | obj | any |  The given object
+ | tagsString | string |  @param tagsString
 ###static RemoveTagsFrom(obj, tagsString) &rarr; void
 
 Remove the list of tag to the given object
@@ -64,9 +63,8 @@ Remove the list of tag to the given object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | obj | any | 
- | tagsString | string | 
-
+ | obj | any |  The given object
+ | tagsString | string |  @param tagsString
 ###static MatchesQuery(obj, tagsQuery) &rarr; boolean
 
 
@@ -74,6 +72,5 @@ Remove the list of tag to the given object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | obj | any | 
- | tagsQuery | string | 
-
+ | obj | any |  The given object
+ | tagsQuery | string |  @param tagsQuery

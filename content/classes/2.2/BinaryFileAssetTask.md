@@ -18,9 +18,8 @@ The [BinaryFileAssetTask](/classes/2.2/BinaryFileAssetTask)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | url | string | 
-
+ | name | string |  The name
+ | url | string |  The url for this binary file
 ##Members
 
 ###name : string
@@ -56,7 +55,6 @@ The data
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | scene | [Scene](/classes/2.2/Scene) | 
- | onSuccess | () =&gt; void | 
- | onError | () =&gt; void | 
-
+ | scene | [Scene](/classes/2.2/Scene) |  The scene where this binary file is.
+ | onSuccess | () =&gt; void |  Function call when the mesh is load successfully
+ | onError | () =&gt; void |  Function call when the mesh is load successfully

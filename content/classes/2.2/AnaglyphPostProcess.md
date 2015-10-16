@@ -20,10 +20,8 @@ class [AnaglyphPostProcess](/classes/2.2/AnaglyphPostProcess) extends [PostProce
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | ratio | number | 
- | camera | [Camera](/classes/2.2/Camera) | 
-optional | samplingMode | number | 
-optional | engine | [Engine](/classes/2.2/Engine) | 
-optional | reusable | boolean | 
-
+ | name | string |  
+ | ratio | number |  
+ | camera | [Camera](/classes/2.2/Camera) |  
+optional | samplingMode | number |  
+optional | engine | [Engine](/classes/2.2/Engine) |  

@@ -20,12 +20,10 @@ class [Animation](/classes/2.2/Animation)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | targetProperty | string | 
- | framePerSecond | number | 
- | dataType | number | 
-optional | loopMode | number | 
-
+ | name | string |  
+ | targetProperty | string |  
+ | framePerSecond | number |  
+ | dataType | number |  
 ##Members
 
 ###name : string
@@ -105,16 +103,14 @@ The animation keeps its final value i.e stopped
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) | 
- | targetProperty | string | 
- | framePerSecond | number | 
- | totalFrame | number | 
- | from | any | 
- | to | any | 
-optional | loopMode | number | 
-optional | easingFunction | [EasingFunction](/classes/2.2/EasingFunction) | 
-
+ | name | string |  
+ | mesh | [AbstractMesh](/classes/2.2/AbstractMesh) |  
+ | targetProperty | string |  
+ | framePerSecond | number |  
+ | totalFrame | number |  
+ | from | any |  The frame defining the begining of the animation
+ | to | any |  The frame defining the end of the animation
+optional | loopMode | number |  
 ###reset() &rarr; void
 
 
@@ -135,7 +131,7 @@ Every key represents the value of the [Animation](/classes/2.2/Animation) at tha
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | easingFunction | [EasingFunction](/classes/2.2/EasingFunction) | 
+ | easingFunction | [EasingFunction](/classes/2.2/EasingFunction) |  
 
 ###floatInterpolateFunction(startValue, endValue, gradient) &rarr; number
 
@@ -144,10 +140,9 @@ Used to interpolate (perform the transition ) between float keys
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | startValue | number | 
- | endValue | number | 
- | gradient | number | 
-
+ | startValue | number |  
+ | endValue | number |  
+ | gradient | number |  
 ###quaternionInterpolateFunction(startValue, endValue, gradient) &rarr; [Quaternion](/classes/2.2/Quaternion)
 
 Used to interpolate (perform the transition ) between [Quaternion](/classes/2.2/Quaternion) keys
@@ -155,10 +150,9 @@ Used to interpolate (perform the transition ) between [Quaternion](/classes/2.2/
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | startValue | [Quaternion](/classes/2.2/Quaternion) | 
- | endValue | [Quaternion](/classes/2.2/Quaternion) | 
- | gradient | number | 
-
+ | startValue | [Quaternion](/classes/2.2/Quaternion) |  
+ | endValue | [Quaternion](/classes/2.2/Quaternion) |  
+ | gradient | number |  
 ###vector3InterpolateFunction(startValue, endValue, gradient) &rarr; [Vector3](/classes/2.2/Vector3)
 
 Used to interpolate (perform the transition ) between [Vector3](/classes/2.2/Vector3) keys
@@ -166,10 +160,9 @@ Used to interpolate (perform the transition ) between [Vector3](/classes/2.2/Vec
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | startValue | [Vector3](/classes/2.2/Vector3) | 
- | endValue | [Vector3](/classes/2.2/Vector3) | 
- | gradient | number | 
-
+ | startValue | [Vector3](/classes/2.2/Vector3) |  
+ | endValue | [Vector3](/classes/2.2/Vector3) |  
+ | gradient | number |  
 ###vector2InterpolateFunction(startValue, endValue, gradient) &rarr; [Vector2](/classes/2.2/Vector2)
 
 
@@ -177,10 +170,9 @@ Used to interpolate (perform the transition ) between [Vector3](/classes/2.2/Vec
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | startValue | [Vector2](/classes/2.2/Vector2) | 
- | endValue | [Vector2](/classes/2.2/Vector2) | 
- | gradient | number | 
-
+ | startValue | [Vector2](/classes/2.2/Vector2) |  
+ | endValue | [Vector2](/classes/2.2/Vector2) |  
+ | gradient | number |  
 ###color3InterpolateFunction(startValue, endValue, gradient) &rarr; [Color3](/classes/2.2/Color3)
 
 Used to interpolate (perform the transition ) between [Color3](/classes/2.2/Color3) keys
@@ -188,10 +180,9 @@ Used to interpolate (perform the transition ) between [Color3](/classes/2.2/Colo
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | startValue | [Color3](/classes/2.2/Color3) | 
- | endValue | [Color3](/classes/2.2/Color3) | 
- | gradient | number | 
-
+ | startValue | [Color3](/classes/2.2/Color3) |  
+ | endValue | [Color3](/classes/2.2/Color3) |  
+ | gradient | number |  
 ###matrixInterpolateFunction(startValue, endValue, gradient) &rarr; [Matrix](/classes/2.2/Matrix)
 
 
@@ -199,10 +190,9 @@ Used to interpolate (perform the transition ) between [Color3](/classes/2.2/Colo
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | startValue | [Matrix](/classes/2.2/Matrix) | 
- | endValue | [Matrix](/classes/2.2/Matrix) | 
- | gradient | number | 
-
+ | startValue | [Matrix](/classes/2.2/Matrix) |  
+ | endValue | [Matrix](/classes/2.2/Matrix) |  
+ | gradient | number |  
 ###clone() &rarr; [Animation](/classes/2.2/Animation)
 
 Clones this animation object
@@ -213,7 +203,7 @@ Adds the keys array to this [Animation](/classes/2.2/Animation) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | values | Array&lt;any&gt; | 
+ | values | Array&lt;any&gt; |  The keys to assign to this object
 
 ###animate(delay, from, to, loop, speedRatio) &rarr; boolean
 
@@ -222,9 +212,7 @@ Adds the keys array to this [Animation](/classes/2.2/Animation) object
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | delay | number | 
- | from | number | 
- | to | number | 
- | loop | boolean | 
- | speedRatio | number | 
-
+ | delay | number |  @param delay
+ | from | number |  The frame defining the begining of the animation
+ | to | number |  The frame defining the end of the animation
+ | loop | boolean |  true loop the animation, false either

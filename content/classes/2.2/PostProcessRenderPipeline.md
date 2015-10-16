@@ -21,9 +21,8 @@ Builds a [PostProcessRenderPipeline](/classes/2.2/PostProcessRenderPipeline) obj
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | engine | [Engine](/classes/2.2/Engine) | 
- | name | string | 
-
+ | engine | [Engine](/classes/2.2/Engine) |  The used engine
+ | name | string |  The name of the object
 ##Methods
 
 ###addEffect(renderEffect) &rarr; void
@@ -33,5 +32,5 @@ Builds a [PostProcessRenderPipeline](/classes/2.2/PostProcessRenderPipeline) obj
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | renderEffect | [PostProcessRenderEffect](/classes/2.2/PostProcessRenderEffect) | 
+ | renderEffect | [PostProcessRenderEffect](/classes/2.2/PostProcessRenderEffect) |  The given render effect
 

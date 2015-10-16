@@ -18,7 +18,7 @@ class [SmartCollection](/classes/2.2/SmartCollection)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | capacity | number | 
+optional | capacity | number |  
 
 ##Members
 
@@ -39,9 +39,8 @@ optional | capacity | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | key | any | 
- | item | any | 
-
+ | key | any |  
+ | item | any |  
 ###remove(key) &rarr; number
 
 
@@ -49,7 +48,7 @@ optional | capacity | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | key | any | 
+ | key | any |  
 
 ###removeItemOfIndex(index) &rarr; number
 
@@ -58,7 +57,7 @@ optional | capacity | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | index | number | 
+ | index | number |  
 
 ###indexOf(key) &rarr; number
 
@@ -67,7 +66,7 @@ optional | capacity | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | key | any | 
+ | key | any |  
 
 ###item(key) &rarr; any
 
@@ -76,7 +75,7 @@ optional | capacity | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | key | any | 
+ | key | any |  
 
 ###getAllKeys() &rarr; any[]
 
@@ -88,7 +87,7 @@ optional | capacity | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | index | number | 
+ | index | number |  
 
 ###getItemByIndex(index) &rarr; any
 
@@ -97,7 +96,7 @@ optional | capacity | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | index | number | 
+ | index | number |  
 
 ###empty() &rarr; void
 
@@ -109,5 +108,5 @@ optional | capacity | number |
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | block | (item: any) =&gt; void | 
+ | block | (item: any) =&gt; void |  
 

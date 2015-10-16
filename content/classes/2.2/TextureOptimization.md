@@ -21,9 +21,8 @@ class [TextureOptimization](/classes/2.2/TextureOptimization) extends [SceneOpti
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | priority | number | 
-optional | maximumSize | number | 
-
+optional | priority | number |  
+optional | maximumSize | number |  
 ##Members
 
 ###priority : number

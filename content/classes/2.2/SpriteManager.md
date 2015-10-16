@@ -21,14 +21,12 @@ A tutorial about sprites can be found here
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | imgUrl | string | 
- | capacity | number | 
- | cellSize | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-optional | epsilon | number | 
-optional | samplingMode | number | 
-
+ | name | string |  Name of the sprite manager
+ | imgUrl | string |  Link of the image
+ | capacity | number |  The capacity of the sprite manager
+ | cellSize | number |  Size of cells
+ | scene | [Scene](/classes/2.2/Scene) |  [Scene](/classes/2.2/Scene) which contain the sprite Manager
+optional | epsilon | number |  Epsilon
 ##Members
 
 ###name : string

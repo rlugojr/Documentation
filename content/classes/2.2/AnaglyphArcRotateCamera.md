@@ -22,11 +22,9 @@ class [AnaglyphArcRotateCamera](/classes/2.2/AnaglyphArcRotateCamera) extends [A
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | name | string | 
- | alpha | number | 
- | beta | number | 
- | radius | number | 
- | target | any | 
- | interaxialDistance | number | 
- | scene | [Scene](/classes/2.2/Scene) | 
-
+ | name | string |  The camera name
+ | alpha | number |  @param alpha
+ | beta | number |  @param beta
+ | radius | number |  @param radius
+ | target | any |  The target of the camera
+ | interaxialDistance | number |  

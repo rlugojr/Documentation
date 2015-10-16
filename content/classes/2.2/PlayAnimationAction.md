@@ -20,13 +20,11 @@ Launch an animation on a specified target
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | triggerOptions | any | 
- | target | any | 
- | from | number | 
- | to | number | 
-optional | loop | boolean | 
-optional | condition | [Condition](/classes/2.2/Condition) | 
-
+ | triggerOptions | any |  The trigger options
+ | target | any |  The specified target
+ | from | number |  The starting frame index
+ | to | number |  The ending frame index
+optional | loop | boolean |  True to loop the animation
 ##Members
 
 ###from : number

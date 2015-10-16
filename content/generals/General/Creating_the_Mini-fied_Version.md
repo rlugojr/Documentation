@@ -48,6 +48,7 @@ But you may want to work with all basic files. In this case, please download the
     <script src="src/Mesh/babylon.vertexBuffer.js"></script>
     <script src="src/Mesh/babylon.instancedMesh.js"></script>
     <script src="src/Mesh/babylon.mesh.js"></script>
+    <script src="src/Mesh/babylon.meshBuilder.js"></script>
     <script src="src/Mesh/babylon.groundMesh.js"></script>
     <script src="src/Mesh/babylon.subMesh.js"></script>
     <script src="src/Materials/textures/babylon.baseTexture.js"></script>

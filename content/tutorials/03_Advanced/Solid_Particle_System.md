@@ -8,18 +8,18 @@ As it is just a mesh, the SPS has all the same properties than any other BJS mes
 The SPS is also a particle system. It provides some methods to manage the particles.  
 However it is behavior agnostic. This means it has no emitter, no particle physics, no particle recycler. You have to implement your own behavior.  
 
-The particles can be built from any BJS existing mesh as a model. Actually, each particle is a copy of some BJS mesh geometry (vertices, indices, uvs).  
+The particles can be built from any BJS existing mesh as a model. Actually, each particle is a copy of some BJS mesh geometry : vertices, indices, uvs. For now, _faceUV_ or _faceColors_, for the mesh offering these features, aren't copied, so each solid particle can't have a different color or image per face.  
 
 The expected usage if this one :  
-* First, create your SPS.  
-* Then, add particles in the SPS from a mesh model.  
+* First, create your SPS with `new SolidParticleSystem()`.  
+* Then, add particles in the SPS from a mesh model with `addShape(model, number)`.  
 * Redo this as many times as needed with any model.  
-* When done, build the SPS mesh.   
+* When done, build the SPS mesh with `buildMesh()`.   
 
 Your SPS is then ready to manage particles. So now :   
-* Init all your particles : set their positions, colors, uvs, age, etc.  
-* Call _setParticles()_ to update the SPS mesh and to draw it.  
-* If you particles have to be animated, define their individual behavior in _updateParticle(particle)_ and just _setParticles()_ within the render loop.  
+* Init all your particles : set their positions, colors, uvs, age, etc with `initParticles()`  
+* Call `setParticles()` to update the SPS mesh and to draw it.  
+* If you particles have to be animated, define their individual behavior in `updateParticle(particle)` and just call `setParticles()` within the render loop.  
 
 
 ## Basic Usage

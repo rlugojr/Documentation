@@ -96,6 +96,7 @@ Describer.getComments = function (astElement, astFormatted, withParams) {
 
         //FIXME Duplicated o_O
         if (!comments && hasOldData) {
+            // FIXME This line won't work with class description !!!!
             oldLineReged = getOldLine.exec(this.oldDescription);
             if (oldLineReged) {
                 oldLineDescription = oldLineReged[1];
@@ -209,7 +210,7 @@ Describer.getMetas = function () {
 
     //This skips the first ---\n and gets everything until the next \n---
     var beginMetasToken = '---\n';
-    var endMetasToken = '\n---';
+    var endMetasToken = '---\n##';
     var oldMetas = this.oldDescription.substring(0, this.oldDescription.indexOf(endMetasToken, this.oldDescription.indexOf(beginMetasToken)) + endMetasToken.length);
 
     var defaultMetas = '---\nTAGS:\n---\n';

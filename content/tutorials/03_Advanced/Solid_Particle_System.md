@@ -119,12 +119,15 @@ Here again, you can add your own properties like _capacity_ or _rate_ if needed.
 
 If you don't need some given features (ex : particle colors), you can disable/enable them at any time (disabling a feature will improve the performance) : 
 ```javascript
-SPS.useParticleRotation = false;       // prevents from computing particle.rotation
-SPS.useParticleTexture = false;        // prevents from computing particle.uvs
-SPS.useParticleColor = false;          // prevents from computing particle.color
-SPS.useParticleVertex = false;         // prevents from calling the custom updateParticleVertex() function
+SPS.setParticleRotation = false;       // prevents from computing particle.rotation
+SPS.setParticleTexture = false;        // prevents from computing particle.uvs
+SPS.setParticleColor = false;          // prevents from computing particle.color
+SPS.setParticleVertex = false;         // prevents from calling the custom updateParticleVertex() function
 ```
-All these properties, except _useParticleVertex_, are enabled set to _true_ by default. These affect the _SPS.setParticles()_ process only.   
+All these properties, except _SPS.setParticleVertex_, are enabled set to _true_ by default. These affect the _SPS.setParticles()_ process only.   
+If these properties are set to _false_, they don't prevent from using the related feature (ie : the particles can still have a color even if _SPS.setParticleColor_ is set to _false_), they just prevent from updating the value of the particle property on the next _setParticle()_ call.  
+Example : if your particles have colors, you can set their colors wihtin the _initParticles()_ call and you can call then once the _setParticles()_ method to set these colors. If you need to animate them later on and these colors don't change, just set then _SPS.setParticleColor_ to _false_ once before runing the render loop which will call _setParticles()_ each frame.  
+
 Note you can also use the standard BJS mesh _freezeXXX()_ methods if the SPS mesh is immobile or if the normals aren't needed :   
 ```javascript
 SPS.mesh.freezeWorldMatrix();       // prevents from re-computing the World Matrix each frame

@@ -1,12 +1,12 @@
 ##Mesh CreateXXX() Methods With Options Parameter
-In this tutorial, we will learn how to use the classical Mesh _CreateXXX()_ methods with the _options_ parameter instead of the full list of parameters.  
+In this tutorial, we will learn how to use the classical _CreateXXX()_ methods with the _options_ parameter instead of the full list of parameters.  
 Indeed, as for BJS 2.3+, all the _CreateXXX()_ methods can be called either by 
 ```javascript
-var mesh = BABYLON.CreateMesh(name, param1, param2, param3, ..., scene);
+var mesh = BABYLON.Mesh.CreateMesh(name, param1, param2, param3, ..., scene);
 ```
 either by
 ```javascript
-var mesh = BABYLON.CreateMesh(name, {param1 : val1, param2: val2}, scene);
+var mesh = BABYLON.MeshBuilder.CreateMesh(name, {param1 : val1, param2: val2}, scene);
 ```
 
 Why to use then the _options_ parameter if it only does the same as the parameter list ?
@@ -20,14 +20,14 @@ For instance, if we create a _Sphere_ or a _Box_ mesh, we expect to get a spheri
 
 All fixed shapes can be created by default by using a blank _options_ parameter :
 ```javascript
-var cylinder = BABYLON.Mesh.CreateCylinder("cyl", {}, scene);
+var cylinder = BABYLON.MeshBuilder.CreateCylinder("cyl", {}, scene);
 ```
 This means all the _options_ properties are simply optional.  
 
 ####Box
 Example :
 ```javascript
-var box = BABYLON.Mesh.CreateBox("box", {height: 5, faceColors: myColors}, scene);
+var box = BABYLON.MeshBuilder.CreateBox("box", {height: 5, faceColors: myColors}, scene);
 ```
 Properties, all optional :
 
@@ -36,7 +36,7 @@ property|value|default value
 size|_(number)_ size of each box side|1
 height|_(number)_ height size, overwrites _size_ property|size
 width|_(number)_ width size, overwrites _size_ property|size
-length|_(number)_ length size,  overwrites _size_ property|size 
+depth|_(number)_ depth size,  overwrites _size_ property|size 
 faceColors|_(Color4[])_ array of 6 _Color4_, one per box face|Color4(1, 1, 1, 1) for each side
 faceUV|_(Vector4[])_ array of 6 _Vector4_, one per box face| UVs(0, 0, 1, 1) for each side
 updatable|_(boolean)_ true if the mesh is updatable|false
@@ -46,7 +46,7 @@ To understand how to set _faceUV_ or _faceColors_, please read this : http://doc
 ####Sphere
 Example :
 ```javascript
-var sphere = BABYLON.Mesh.CreateSphere("sphere", {diameter: 2, diameterX: 3}, scene);
+var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter: 2, diameterX: 3}, scene);
 ```
 Properties, all optional :
 
@@ -66,7 +66,7 @@ sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 If you set _diameterTop_ to zero, you get a cone instead of a cylinder.
 Example :
 ```javascript
-var cone = BABYLON.Mesh.CreateCylinder("cone", {diameterTop: 0, tessellation: 4}, scene);
+var cone = BABYLON.MeshBuilder.CreateCylinder("cone", {diameterTop: 0, tessellation: 4}, scene);
 ```
 Properties, all optional :
 
@@ -88,7 +88,7 @@ To understand how to set _faceUV_ or _faceColors_, please read this by consideri
 ####Plane
 Example :
 ```javascript
-var plane = BABYLON.Mesh.CreatePlane("plane", {width: 5}, scene);
+var plane = BABYLON.MeshBuilder.CreatePlane("plane", {width: 5}, scene);
 ```
 Properties, all optional :
 
@@ -103,7 +103,7 @@ sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 ####Ground
 Example :
 ```javascript
-var ground = BABYLON.Mesh.CreateGround("gd", {width: 6, subdivsions: 4}, scene);
+var ground = BABYLON.MeshBuilder.CreateGround("gd", {width: 6, subdivsions: 4}, scene);
 ```
 Properties, all optional :
 
@@ -117,7 +117,7 @@ subdivisions|_(number)_ number of square subdivisions|1
 ####Ground From a Height Map
 Example :
 ```javascript
-var ground = BABYLON.Mesh.CreateGroundFromHeightMap("gdhm", url, {width: 6, subdivsions: 4}, scene);
+var ground = BABYLON.MeshBuilder.CreateGroundFromHeightMap("gdhm", url, {width: 6, subdivsions: 4}, scene);
 ```
 Don't forget the _url_ parameter.  
 
@@ -136,7 +136,7 @@ updatable|_(boolean)_ true if the mesh is updatable|false
 ####Tiled Ground
 Example :
 ```javascript
-var tiledGround = BABYLON.Mesh.CreateTiledGround("tgd", {subdivsions: {w:4, h:6} }, scene);
+var tiledGround = BABYLON.MeshBuilder.CreateTiledGround("tgd", {subdivsions: {w:4, h:6} }, scene);
 ```
 Properties, all optional :
 
@@ -155,7 +155,7 @@ updatable|_(boolean)_ true if the mesh is updatable|false
 Remembe you can create any kind of regular plane polygon with _CreateDisc()_  
 Example :  
 ```javascript
-var disc = BABYLON.Mesh.CreateDisc("disc", {tessellation: 3}, scene); // makes a triangle
+var disc = BABYLON.MeshBuilder.CreateDisc("disc", {tessellation: 3}, scene); // makes a triangle
 ```
 Properties, all optional :
 
@@ -169,7 +169,7 @@ sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 ####Torus
 Example :
 ```javascript
-var torus = BABYLON.Mesh.CreateTorus("torus", {thickness: 0.2}, scene);
+var torus = BABYLON.MeshBuilder.CreateTorus("torus", {thickness: 0.2}, scene);
 ```
 Properties, all optional :
 
@@ -184,7 +184,7 @@ sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 ####Torus Knot
 Example :
 ```javascript
-var torus = BABYLON.Mesh.CreateTorusKnot("tk", {}, scene);
+var torus = BABYLON.MeshBuilder.CreateTorusKnot("tk", {}, scene);
 ```
 Properties, all optional :
 
@@ -202,7 +202,7 @@ sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 ####Polyhedron
 Example :
 ```javascript
-var octahedron = BABYLON.Mesh.CreatePolyhedron("oct", {type: 1, size: 3}, scene);
+var octahedron = BABYLON.MeshBuilder.CreatePolyhedron("oct", {type: 1, size: 3}, scene);
 ```
 Properties, all optional :
 
@@ -247,14 +247,14 @@ Just copy/paste the wanted polyhedron object in your code like this :
 var heptagonalPrism = { "name":"Heptagonal Prism", "category":["Prism"], "vertex":[[0,0,1.090071],[0.796065,0,0.7446715],[-0.1498633,0.7818315,0.7446715],[-0.7396399,-0.2943675,0.7446715],[0.6462017,0.7818315,0.3992718],[1.049102,-0.2943675,-0.03143449],[-0.8895032,0.487464,0.3992718],[-0.8658909,-0.6614378,-0.03143449],[0.8992386,0.487464,-0.3768342],[0.5685687,-0.6614378,-0.6538232],[-1.015754,0.1203937,-0.3768342],[-0.2836832,-0.8247995,-0.6538232],[0.4187054,0.1203937,-0.9992228],[-0.4335465,-0.042968,-0.9992228]],
 "face":[[0,1,4,2],[0,2,6,3],[1,5,8,4],[3,6,10,7],[5,9,12,8],[7,10,13,11],[9,11,13,12],[0,3,7,11,9,5,1],[2,4,8,12,13,10,6]]};
 
-var mesh = BABYLON.Mesh.CreatePolyhdron("h", {custom: heptagonalPrism}, scene);
+var mesh = BABYLON.MeshBuilder.CreatePolyhdron("h", {custom: heptagonalPrism}, scene);
 ```
 
 
 ####Decals  
 Example :
 ```javascript
-var decal = BABYLON.Mesh.CreateDecal("decal", mesh,  {position: myPos}, scene);
+var decal = BABYLON.MeshBuilder.CreateDecal("decal", mesh,  {position: myPos}, scene);
 ```
 Don't forget the _mesh_ parameter what is the mesh depicting the decal.
 
@@ -276,7 +276,7 @@ On update, you must set the _points_ and _instance_ properties.
 
 Example :
 ```javascript
-lines = BABYLON.Mesh.CreateLines("lines", {points: myArray, instance: lines});
+lines = BABYLON.MeshBuilder.CreateLines("lines", {points: myArray, instance: lines});
 // updates the existing instance of lines : no need for the parameter scene here
 ```
 Properties :
@@ -293,7 +293,7 @@ On update, you must set the _points_ and _instance_ properties.
 
 Example :
 ```javascript
-dashedLines = BABYLON.Mesh.CreateDashedLines("dl", {points: myArray, instance: dashedLines});
+dashedLines = BABYLON.MeshBuilder.CreateDashedLines("dl", {points: myArray, instance: dashedLines});
 // updates the existing instance of dashedLines : no need for the parameter scene here
 ```
 Properties :
@@ -313,7 +313,7 @@ On update, you must set the _pathArray_ and _instance_ properties.
 
 Example :
 ```javascript
-ribbon = BABYLON.Mesh.CreateRibbon("ribbon", {pathArray: myPaths, instance: ribbon});
+ribbon = BABYLON.MeshBuilder.CreateRibbon("ribbon", {pathArray: myPaths, instance: ribbon});
 // updates the existing instance of ribbon : no need for the parameter scene
 ```
 Properties :
@@ -334,7 +334,7 @@ On update, you must set the _path_ and _instance_ properties and you can set the
 
 Example :
 ```javascript
-tube = BABYLON.Mesh.CreateTube("tube", {path: myPath, instance: tube});
+tube = BABYLON.MeshBuilder.CreateTube("tube", {path: myPath, instance: tube});
 // updates the existing instance of tube : no need for the parameter scene
 ```
 Properties :
@@ -357,7 +357,7 @@ On update, you must set the _shape_, _path_ and _instance_ properties and you ca
 
 Example :
 ```javascript
-extruded = BABYLON.Mesh.ExtrudeShape("ext", {shape: myShape, path: myPath, scale: newScale, rotation: newRotation instance: extruded});
+extruded = BABYLON.MeshBuilder.ExtrudeShape("ext", {shape: myShape, path: myPath, scale: newScale, rotation: newRotation instance: extruded});
 // updates the existing instance of extruded : no need for the parameter scene
 ```
 Properties :
@@ -379,7 +379,7 @@ On update, you must set the _shape_, _path_ and _instance_ properties and you ca
 
 Example :
 ```javascript
-extruded = BABYLON.Mesh.ExtrudeShapeCustom("ext", {shape: myShape, path: myPath, scaleFunction: myScaleF, rotationFunction: myRotF instance: extruded});
+extruded = BABYLON.MeshBuilder.ExtrudeShapeCustom("ext", {shape: myShape, path: myPath, scaleFunction: myScaleF, rotationFunction: myRotF instance: extruded});
 // updates the existing instance of extruded : no need for the parameter scene
 ```
 Properties :
@@ -402,7 +402,7 @@ You must set at least the _shape_ property.
 
 Example :
 ```javascript
-var lathe = BABYLON.Mesh.Lathe("lathe", {shape: myShape}, scene);
+var lathe = BABYLON.MeshBuilder.Lathe("lathe", {shape: myShape}, scene);
 ```
 Properties :
 

@@ -24,8 +24,8 @@ Line 30, we define a new array called _faceUV_, sized 6 because our box has 6 fa
 Each _Vector4(x, y, z, w)_ will be defined in this way :  
 
 x = Ubottom  
-y = Vbottom
-z = Utop  
+y = Vbottom  
+z = Utop   
 w = Vtop  
 all are in the range [0, 1]
 
@@ -61,7 +61,7 @@ Then, to pass this array to the _CreateBox_ method, just add a parameter called 
     faceUV: faceUV
   };
 
-  var box = BABYLON.Mesh.CreateBox('box', options, scene);
+  var box = BABYLON.MeshBuilder.CreateBox('box', options, scene);
   box.material = mat;
 ```
 Here's the result : http://www.babylonjs-playground.com/#1V3CAT#2  
@@ -116,7 +116,7 @@ Then pass this array to the _CreateBox_ method with the new faceColors parameter
     faceColors : faceColors
   };
 
-  var box = BABYLON.Mesh.CreateBox('box', options, scene);
+  var box = BABYLON.MeshBuilder.CreateBox('box', options, scene);
 ```
 Simple, isn't it ?  http://www.babylonjs-playground.com/#1V3CAT#5  
 

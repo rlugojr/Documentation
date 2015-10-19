@@ -33,8 +33,8 @@ Then you build the mesh.
 Example :
 ```javascript
 var SPS = new SolidParticleSystem("SPS", scene);
-var sphere = BABYLON.Mesh.CreateSphere("s", {}, scene);
-var poly = BABYLON.Mesh.CreatePolyhedron("p", {type: 2}, scene);
+var sphere = BABYLON.MeshBuilder.CreateSphere("s", {}, scene);
+var poly = BABYLON.MeshBuilder.CreatePolyhedron("p", {type: 2}, scene);
 SPS.addShape(sphere, 20);      // 20 spheres
 SPS.addShape(poly, 120);       // 120 polyhedrons 
 SPS.addShape(sphere, 80);      // 80 other spheres
@@ -120,7 +120,7 @@ You may also access to some read-only properties :
 
 Actually each time you call the _SPS.addShape()_ method, the related newly created particle set shapeID is returned.
 ```javascript
-var plane = BABYLON.Mesh.CreatePlane("", {}, scene);
+var plane = BABYLON.MeshBuilder.CreatePlane("", {}, scene);
 var quadsID = SPS.addShape(plane, 20);
 ```
 This is usefull if you want to apply a given behavior to some particle types only.   
@@ -137,14 +137,14 @@ Here again, you can add your own properties like _capacity_ or _rate_ if needed.
 
 If you don't need some given features (ex : particle colors), you can disable/enable them at any time (disabling a feature will improve the performance) : 
 ```javascript
-SPS.setParticleRotation = false;       // prevents from computing particle.rotation
-SPS.setParticleTexture = false;        // prevents from computing particle.uvs
-SPS.setParticleColor = false;          // prevents from computing particle.color
-SPS.setParticleVertex = false;         // prevents from calling the custom updateParticleVertex() function
+SPS.computeParticleRotation = false;       // prevents from computing particle.rotation
+SPS.computeParticleTexture = false;        // prevents from computing particle.uvs
+SPS.computeParticleColor = false;          // prevents from computing particle.color
+SPS.computeParticleVertex = false;         // prevents from calling the custom updateParticleVertex() function
 ```
-All these properties, except _SPS.setParticleVertex_, are enabled set to _true_ by default. These affect the _SPS.setParticles()_ process only.   
-If these properties are set to _false_, they don't prevent from using the related feature (ie : the particles can still have a color even if _SPS.setParticleColor_ is set to _false_), they just prevent from updating the value of the particle property on the next _setParticle()_ call.  
-Example : if your particles have colors, you can set their colors wihtin the _initParticles()_ call and you can call then once the _setParticles()_ method to set these colors. If you need to animate them later on and these colors don't change, just set then _SPS.setParticleColor_ to _false_ once before runing the render loop which will call _setParticles()_ each frame.  
+All these properties, except _SPS.computeParticleVertex_, are enabled set to _true_ by default. These affect the _SPS.setParticles()_ process only.   
+If these properties are set to _false_, they don't prevent from using the related feature (ie : the particles can still have a color even if _SPS.computeParticleColor_ is set to _false_), they just prevent from updating the value of the particle property on the next _setParticle()_ call.  
+Example : if your particles have colors, you can set their colors wihtin the _initParticles()_ call and you can call then once the _setParticles()_ method to set these colors. If you need to animate them later on and these colors don't change, just set then _SPS.computeParticleColor_ to _false_ once before runing the render loop which will call _setParticles()_ each frame.  
 
 Note you can also use the standard BJS mesh _freezeXXX()_ methods if the SPS mesh is immobile or if the normals aren't needed :   
 ```javascript
@@ -160,7 +160,7 @@ SPS.dispose();
 Example :
 
 ```javascript
- var cube = BABYLON.Mesh.CreateBox("b", {}, scene);
+ var cube = BABYLON.MeshBuilder.CreateBox("b", {}, scene);
  // Particle system
   var speed = 2;
   var gravity = -0.01;
@@ -218,6 +218,6 @@ Example :
 * _immobile meshes : setParticles() outside the render loop, just once + PG example_
 * _start, end indexes + update boolean in setParticles()_
 * _colors and uvs usages_
-* _updateParticleVertex() usage_
+* _computeParticleVertex() usage_
 
 _(edition in progress + add many PG example everywhere)_

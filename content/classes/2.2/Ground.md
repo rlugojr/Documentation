@@ -1,7 +1,6 @@
 ---
 TAGS:
 ---
-
 ##Description
 
 class [Ground](/classes/2.2/Ground) extends _Primitive

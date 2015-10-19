@@ -7,7 +7,7 @@ PG_VERSION: 2.1
 
 class [LensFlareSystem](/classes/2.2/LensFlareSystem)
 
-
+Create a lens Flare system
 
 ##Constructor
 

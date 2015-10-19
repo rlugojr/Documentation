@@ -9,7 +9,7 @@ TAGS:
 
 class [FxaaPostProcess](/classes/2.2/FxaaPostProcess) extends [PostProcess](/classes/2.2/PostProcess)
 
-
+Builtin postprocess applying a full screen antialiasing filter
 
 ##Constructor
 

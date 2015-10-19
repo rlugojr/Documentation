@@ -9,7 +9,7 @@ TAGS:
 
 class [BlurPostProcess](/classes/2.2/BlurPostProcess) extends [PostProcess](/classes/2.2/PostProcess)
 
-
+Builtin postprocess applying a directional blur
 
 ##Constructor
 

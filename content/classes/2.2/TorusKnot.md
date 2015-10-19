@@ -1,7 +1,6 @@
 ---
 TAGS:
 ---
-
 ##Description
 
 class [TorusKnot](/classes/2.2/TorusKnot) extends _Primitive

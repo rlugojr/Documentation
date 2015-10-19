@@ -9,7 +9,7 @@ TAGS:
 
 class [Vector3](/classes/2.2/Vector3)
 
-
+Represents a point in a 3D space.
 
 ##Constructor
 

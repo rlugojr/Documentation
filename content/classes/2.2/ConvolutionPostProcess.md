@@ -9,7 +9,7 @@ TAGS:
 
 class [ConvolutionPostProcess](/classes/2.2/ConvolutionPostProcess) extends [PostProcess](/classes/2.2/PostProcess)
 
-
+Builtin postprocess applying a kernel matrix to every pixel
 
 ##Constructor
 

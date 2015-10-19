@@ -9,7 +9,9 @@ TAGS:
 
 class [PostProcessManager](/classes/2.2/PostProcessManager)
 
+A render effect is a smart postprocess which can manage its own instances itself.
 
+A tutorial about the render pipeline can be found [here](http://doc.babylonjs.com/tutorials/How_to_use_PostProcessRenderPipeline)
 
 ##Constructor
 

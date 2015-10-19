@@ -10,7 +10,7 @@ TAGS:
 
 class [AbstractMesh](/classes/2.2/AbstractMesh) extends [Node](/classes/2.2/Node)
 
-
+This class represents a mesh which can't be instantiated
 
 ##Constructor
 

@@ -10,7 +10,11 @@ TAGS:
 
 class [PostProcessRenderPipeline](/classes/2.2/PostProcessRenderPipeline)
 
+Post Process Renders pipelines allow you to create a chain of post processes and attach it to a camera.
 
+A render pipeline can be managed by enabling and disabling some effects and displaying a specific pass for debugging.
+
+A tutorial about the render pipeline can be found [here](http://doc.babylonjs.com/tutorials/How_to_use_PostProcessRenderPipeline)
 
 ##Constructor
 

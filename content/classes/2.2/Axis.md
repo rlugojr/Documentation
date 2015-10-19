@@ -9,7 +9,7 @@ TAGS:
 
 class [Axis](/classes/2.2/Axis)
 
-
+Static definitions of the axis.
 
 ##Members
 

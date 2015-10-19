@@ -9,7 +9,7 @@ TAGS:
 
 class [TextureAssetTask](/classes/2.2/TextureAssetTask)
 
-
+Load task on the given texture
 
 ##Constructor
 

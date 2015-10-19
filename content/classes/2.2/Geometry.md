@@ -9,7 +9,7 @@ TAGS:
 
 class [Geometry](/classes/2.2/Geometry)
 
-
+The Geometry class
 
 ##Constructor
 

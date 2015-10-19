@@ -207,14 +207,19 @@ Describer.getComments = function (astElement, astFormatted, withParams) {
 
 Describer.getMetas = function () {
 
-    //This skips the first ---\n and gets everything until the next \n---
-    var beginMetasToken = '---\n';
-    var endMetasToken = '\n---';
+    //This retrieve all the metas from first "---" to second "---" (searched with "---" and "##" because don't work with newline character
+    var beginMetasToken = '---';
+    var endMetasToken = '##';
     var oldMetas = this.oldDescription.substring(0, this.oldDescription.indexOf(endMetasToken, this.oldDescription.indexOf(beginMetasToken)) + endMetasToken.length);
+    if(oldMetas) {
+        // Delete the '##' found and replace it with a newline
+        oldMetas = oldMetas.substring(0, oldMetas.lastIndexOf('---')+3);
+        oldMetas += '\n';
+    }
 
     var defaultMetas = '---\nTAGS:\n---\n';
 
-    return (oldMetas ? oldMetas: defaultMetas) + '\n';
+    return (oldMetas ? oldMetas: defaultMetas);
 };
 
 function stripMdLinks(mdData) {

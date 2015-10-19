@@ -7,7 +7,7 @@ PG_VERSION: 2.1
 
 class [Octree](/classes/2.2/Octree)
 
-
+Data structure class based on space coordinates
 
 ##Constructor
 

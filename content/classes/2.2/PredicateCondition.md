@@ -9,7 +9,7 @@ TAGS:
 
 class [PredicateCondition](/classes/2.2/PredicateCondition) extends [Condition](/classes/2.2/Condition)
 
-
+This condition uses a predicate to determine its state
 
 ##Constructor
 

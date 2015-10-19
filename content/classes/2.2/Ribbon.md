@@ -1,7 +1,6 @@
 ---
 TAGS:
 ---
-
 ##Description
 
 class [Ribbon](/classes/2.2/Ribbon) extends _Primitive

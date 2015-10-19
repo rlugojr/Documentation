@@ -1,7 +1,6 @@
 ---
 TAGS:
 ---
-
 ##Description
 
 class [TonemapPostProcess](/classes/2.2/TonemapPostProcess) extends [PostProcess](/classes/2.2/PostProcess)

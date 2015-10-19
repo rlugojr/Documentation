@@ -10,7 +10,7 @@ TAGS:
 
 class [LinesMesh](/classes/2.2/LinesMesh) extends [Mesh](/classes/2.2/Mesh)
 
-
+The [LinesMesh](/classes/2.2/LinesMesh) class
 
 ##Constructor
 

@@ -10,7 +10,9 @@ TAGS:
 
 class [DirectionalLight](/classes/2.2/DirectionalLight) extends [Light](/classes/2.2/Light)
 
+A directional light is defined by a direction.
 
+The light is emitted from everywhere with a specific direction and has an infinite range.
 
 ##Constructor
 

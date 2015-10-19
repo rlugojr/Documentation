@@ -1,7 +1,6 @@
 ---
 TAGS:
 ---
-
 ##Description
 
 class [Cylinder](/classes/2.2/Cylinder) extends _Primitive

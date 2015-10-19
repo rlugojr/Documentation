@@ -20,7 +20,7 @@ The physics engine loader
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | plugin | IPhysicsEnginePlugin |  default : oimoJs You can load your own physic engine, more informations here
+optional | plugin | IPhysicsEnginePlugin |  default : [oimoJs](http://lo-th.github.io/Oimo.js/) You can load your own physic engine, more informations [here](http://doc.babylonjs.com/tutorials/Adding_Your_Own_Physics_Engine_Plugin_to_Babylon.js)
 
 ##Members
 

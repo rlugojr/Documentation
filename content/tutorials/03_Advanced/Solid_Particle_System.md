@@ -233,7 +233,7 @@ So, to build a non-updatable mesh, just call :
 ```javascript
 var mesh = SPS.buildMesh(false);
 ```
-As the mesh can't be updated now, _setParticles()_ won't have any effect any longer (don't call them, you'll spare CPU).  
+As the mesh can't be updated now, _setParticles()_ won't have any effect any longer (don't call it, you'll spare CPU).  
 
 So how to set the initial particle positions, colors, uvs, scales, and so on if the mesh can't be updated ?  
 
@@ -241,8 +241,8 @@ To achieve this, you need to change the mesh at construction time, when adding t
 You will have to define your own function to set these particle (what don't exist at this time) properties by modifying the way the shapes are added.  
 Actually, you can pass to `SPS.addShape()` an exra parameter which is your particle setting function. At this moment, as the particles don't exist yet, we call this particle object a _copy_ because it's just a copy of the model shape.  
 
-Your own function will be called, for a given shape, as many times as the wanted number of particles for this shape. It will be passed two parameters : a _copy_ object and its current number in the total number wanted.  
-So your function must have this king of signature : 
+Your own function will be called, for a given shape, as many times as the wanted number of particles for this shape. It will be passed two parameters : a _copy_ object and its current position in the total number wanted for this shape.  
+So your function must have this kind of signature : 
 ```javascript
 var myBuilder = function(copy, i) {
   // copy is the current copy of the shape, the i-th one

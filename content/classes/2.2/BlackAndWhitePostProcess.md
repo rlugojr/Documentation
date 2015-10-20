@@ -9,7 +9,7 @@ TAGS:
 
 class [BlackAndWhitePostProcess](/classes/2.2/BlackAndWhitePostProcess) extends [PostProcess](/classes/2.2/PostProcess)
 
-
+Builtin postprocess applying black and white effect
 
 ##Constructor
 

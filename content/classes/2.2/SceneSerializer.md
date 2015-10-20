@@ -9,7 +9,7 @@ TAGS:
 
 class [SceneSerializer](/classes/2.2/SceneSerializer)
 
-
+Serializes a scene
 
 ##Methods
 

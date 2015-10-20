@@ -7,7 +7,7 @@ PG_VERSION: 2.1
 
 class [PickingInfo](/classes/2.2/PickingInfo)
 
-
+Get information of picking element by click
 
 ##Members
 

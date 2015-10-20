@@ -10,7 +10,11 @@ TAGS:
 
 class [PointLight](/classes/2.2/PointLight) extends [Light](/classes/2.2/Light)
 
+A point light is a light defined by an unique point in world space.
 
+The light is emitted in every direction from this point. A good example of a point light is the sun.
+
+A tutorial about lights can be found [here](http://doc.babylonjs.com/tutorials/06._Lights)
 
 ##Constructor
 

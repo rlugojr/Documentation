@@ -9,7 +9,7 @@ TAGS:
 
 class [SceneLoader](/classes/2.2/SceneLoader)
 
-
+This class is used to import .babylon files into the scene
 
 ##Members
 

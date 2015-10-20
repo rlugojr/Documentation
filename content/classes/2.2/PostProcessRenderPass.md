@@ -9,7 +9,7 @@ TAGS:
 
 class [PostProcessRenderPass](/classes/2.2/PostProcessRenderPass)
 
-
+A render pass is render texture that can be used in differents render effects
 
 ##Constructor
 

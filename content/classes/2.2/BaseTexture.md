@@ -9,7 +9,8 @@ TAGS:
 
 class [BaseTexture](/classes/2.2/BaseTexture)
 
-
+Create a new [BaseTexture](/classes/2.2/BaseTexture).
+A tutorial about materials and textures can be found [here](http://doc.babylonjs.com/tutorials/04._Materials)
 
 ##Constructor
 

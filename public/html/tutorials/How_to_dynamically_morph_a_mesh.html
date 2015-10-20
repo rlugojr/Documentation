@@ -58,7 +58,7 @@ for(var p = 0; p &lt; pathArray.length; p++) {
 <pre><code class="lang-javascript">mesh = BABYLON.Mesh.CreateRibbon(null, pathArray, null, null, null, null, null, null, mesh);
 </code></pre>
 <p>The other parameters than <em>pathArray</em> and <em>mesh</em> are just ignored when updating, so they can be set to <em>null</em> for better understanding.<br>The <em>CreateRibbon()</em> method thus updates the given ribbon and returns it.<br>You can also use the other call signature :  </p>
-<pre><code class="lang-javascript">mesh = BABYLON.Mesh.CreateRibbon(null, {pathArray: pathArray, instance: mesh});
+<pre><code class="lang-javascript">mesh = BABYLON.MeshBuilder.CreateRibbon(null, {pathArray: pathArray, instance: mesh});
 </code></pre>
 <p>example : <a href="http://www.babylonjs-playground.com/#1MSEBT#1">http://www.babylonjs-playground.com/#1MSEBT#1</a>   </p>
 <p>Well, we just updated our ribbon&#39;s shape once for now.   </p>
@@ -87,7 +87,7 @@ scene.registerBeforeRender(function() {
   // ribbon update
   mesh = BABYLON.Mesh.CreateRibbon(null, pathArray, null, null, null, null, null, null, mesh);
   // or also :
-  // mesh = BABYLON.Mesh.CreateRibbon(null, {pathArray: pathArray, instance: mesh});
+  // mesh = BABYLON.MeshBuilder.CreateRibbon(null, {pathArray: pathArray, instance: mesh});
   k += 0.05;
 });
 </code></pre>
@@ -102,8 +102,8 @@ var points2 = [u1, u2, ..., uN]; // another vector3 array
 lines = BABYLON.Mesh.CreateLines(null, points2, null, null, lines);
 dashedlines = BABYLON.Mesh.CreateDashedLines(null, points2, null, null, null, null, null, dashedlines);
 // or
-lines = BABYLON.Mesh.CreateLines(null, {points: points2, instance: lines});
-dashedlines = BABYLON.Mesh.CreateDashedLines(null, {points: points2, instance: dashedlines});
+lines = BABYLON.MeshBuilder.CreateLines(null, {points: points2, instance: lines});
+dashedlines = BABYLON.MeshBuilder.CreateDashedLines(null, {points: points2, instance: dashedlines});
 </code></pre>
 <p>We can, of course, set the update method within the render loop.   </p>
 <p>example lines : <a href="http://www.babylonjs-playground.com/#24PQRQ">http://www.babylonjs-playground.com/#24PQRQ</a><br>dashed lines : <a href="http://www.babylonjs-playground.com/#XKYAE#3">http://www.babylonjs-playground.com/#XKYAE#3</a>    </p>
@@ -116,7 +116,7 @@ var radius2 = 8;
 var tube = BABYLON.Mesh.CreateTube(&quot;tube&quot;, path1, radius1, 12, null, cap, scene, true);
 tube = BABYLON.Mesh.CreateTube(null, path2, radius2, null, null, null, null, null, tube);
 // or 
-tube = BABYLON.Mesh.CreateTube(null, {path: path2, radius: radius2, instance: tube});
+tube = BABYLON.MeshBuilder.CreateTube(null, {path: path2, radius: radius2, instance: tube});
 </code></pre>
 <p>Of course, it also works with the <em>radiusFunction</em> parameter :   </p>
 <pre><code class="lang-javascript">var radiusFunction1 = function(i, distance) { ... };
@@ -124,7 +124,7 @@ var radiusFunction2 = function(i, distance) { ... };
 var tube = BABYLON.Mesh.CreateTube(&quot;tube&quot;, path1, null, 12, radiusFunction1, cap, scene, true);
 tube = BABYLON.Mesh.CreateTube(null, path2, null, null, radiusFunction2, null, null, null, tube);
 // or
-tube = BABYLON.Mesh.CreateTube(null, {path: path2, radiusFunction: radiusFunction2, instance: tube});
+tube = BABYLON.MeshBuilder.CreateTube(null, {path: path2, radiusFunction: radiusFunction2, instance: tube});
 </code></pre>
 <p>Example : <a href="http://www.babylonjs-playground.com/#ACKC2#1">http://www.babylonjs-playground.com/#ACKC2#1</a><br>As you can read at line 53, the <em>radiusFunction</em> is redefined here at each iteration in the <em>registerBeforeRender</em> loop because it uses the value of the incrementing parameter <em>k</em> : the radius changes according to each path point position and according to k varying in the time.  </p>
 <h3><a name="extruded-shape" class="anchor" href="#extruded-shape"></a>Extruded shape</h3><h5><a name="emextrusion-updatable-parameters-for-extrudeshape-shape-path-scale-rotationem" class="anchor" href="#extrusion-updatable-parameters-for-extrudeshape-shape-path-scale-rotation"></a><em>extrusion updatable parameters for ExtrudeShape(): shape, path, scale, rotation</em></h5><h5><a name="emextrusion-updatable-parameters-for-extrudeshapecustom-shape-path-scalefunction-rotatefunctionem" class="anchor" href="#extrusion-updatable-parameters-for-extrudeshapecustom-shape-path-scalefunction-rotatefunction"></a><em>extrusion updatable parameters for ExtrudeShapeCustom(): shape, path, scaleFunction, rotateFunction</em></h5><p><em>(reminder : only points positions can change in the path, not the number of points. Please see the summary at the bottom of this page for more details)</em>   </p>
@@ -142,7 +142,7 @@ var extruded = BABYLON.Mesh.ExtrudeShape(&quot;ext&quot;, shape1, path1, scale1,
 // mesh update
 extruded = BABYLON.Mesh.ExtrudeShape(null, shape2, path2, scale2, rotation2, null, null, null, null, extruded);
 // or
-extruded = BABYLON.Mesh.ExtrudeShape(null, {shape: shape2, path: path2, scale: scale2, rotation: rotation2, instance: extruded});
+extruded = BABYLON.MeshBuilder.ExtrudeShape(null, {shape: shape2, path: path2, scale: scale2, rotation: rotation2, instance: extruded});
 </code></pre>
 <p>Idem for <em>ExtrudeShapeCustom()</em> accepting <em>scaleFunction</em> and <em>rotationFunction</em> parameters :   </p>
 <pre><code class="lang-javascript">// path and shape var declared before ...
@@ -155,7 +155,7 @@ var ext = BABYLON.Mesh.ExtrudeShapeCustom(&quot;ext&quot;, shape1, path1, myScal
 // mesh update
 ext = BABYLON.Mesh.ExtrudeShapeCustom(null, shape2, path2, myScale2, myRotation2, null, null, null, null, null, null, ext);
 // or 
-ext = BABYLON.Mesh.ExtrudeShapeCustom(null,{shape: shape2, path: path2, scaleFunction: myScale2, rotationFunction: myRotation2, instance: ext});
+ext = BABYLON.MeshBuilder.ExtrudeShapeCustom(null,{shape: shape2, path: path2, scaleFunction: myScale2, rotationFunction: myRotation2, instance: ext});
 </code></pre>
 <p>Both new functions can be used in the render loop.      </p>
 <p>The funny part is, as <em>ExtrudeShape()</em> and <em>ExtrudedShapeCustom()</em> build the same mesh (only parameters change), you can create a simple extruded shape with <em>ExtrudeShape()</em> and then morph it with <em>ExtrudeShapeCustom()</em> if you need more complexity.   </p>

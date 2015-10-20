@@ -10,7 +10,7 @@ TAGS:
 
 class [SSAORenderingPipeline](/classes/2.2/SSAORenderingPipeline) extends [PostProcessRenderPipeline](/classes/2.2/PostProcessRenderPipeline)
 
-
+Builtin rendering pipeline applying the ambient occlusion of a given scene  using the screen space
 
 ##Constructor
 

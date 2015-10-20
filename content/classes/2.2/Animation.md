@@ -9,7 +9,11 @@ TAGS:
 
 class [Animation](/classes/2.2/Animation)
 
+The animation is based on objects called [Animation](/classes/2.2/Animation).
 
+An [Animation](/classes/2.2/Animation) is defined by various properties and a collection of keys
+
+A tutorial about [Animations](/classes/2.2/Animation) ban be found [here](http://doc.babylonjs.com/tutorials/07._Animations)
 
 ##Constructor
 

@@ -9,7 +9,7 @@ TAGS:
 
 class [Vector2](/classes/2.2/Vector2)
 
-
+Represent a point in a 2D space.
 
 ##Constructor
 

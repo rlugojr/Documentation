@@ -1,7 +1,6 @@
 ---
 TAGS:
 ---
-
 ##Description
 
 class [Sphere](/classes/2.2/Sphere) extends _Primitive

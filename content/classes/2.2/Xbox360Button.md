@@ -5,6 +5,10 @@ PG_VERSION: 2.1
 TAGS:
     - Gamepad
 ---
+##Description
+
+Associates values to xbox 360 controller buttons
+
 ##[Xbox360Button](/classes/2.2/Xbox360Button) enumeration
 
 Key | Value

@@ -1,7 +1,6 @@
 ---
 TAGS:
 ---
-
 ##Description
 
 class [Torus](/classes/2.2/Torus) extends _Primitive

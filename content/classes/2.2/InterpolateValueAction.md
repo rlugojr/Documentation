@@ -9,7 +9,13 @@ TAGS:
 
 class [InterpolateValueAction](/classes/2.2/InterpolateValueAction) extends [Action](/classes/2.2/Action)
 
+This action creates an animation to interpolate the current value of a property to a given target.
 
+The supported types are: Float, Color3, Vector3, Matrix and Quaternion
+
+http://doc.babylonjs.com/tutorials/How_to_use_Actions
+
+http://www.babylonjs-playground.com/?17
 
 ##Constructor
 

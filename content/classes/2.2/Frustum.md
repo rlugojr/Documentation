@@ -7,7 +7,7 @@ PG_VERSION: 2.1
 
 class [Frustum](/classes/2.2/Frustum)
 
-
+Defines the geometric portion of an object between two parallel Planes
 
 ##Methods
 

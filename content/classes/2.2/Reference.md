@@ -7,7 +7,7 @@ PG_VERSION: 2.1
 
 class [Reference](/classes/2.2/Reference)
 
-
+Defines a [Ray](/classes/2.2/Ray)
 
 ##Constructor
 

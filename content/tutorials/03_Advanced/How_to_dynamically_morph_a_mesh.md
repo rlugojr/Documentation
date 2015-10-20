@@ -75,7 +75,7 @@ The other parameters than _pathArray_ and _mesh_ are just ignored when updating,
 The _CreateRibbon()_ method thus updates the given ribbon and returns it.   
 You can also use the other call signature :  
 ```javascript
-mesh = BABYLON.Mesh.CreateRibbon(null, {pathArray: pathArray, instance: mesh});
+mesh = BABYLON.MeshBuilder.CreateRibbon(null, {pathArray: pathArray, instance: mesh});
 ```
 
 example : http://www.babylonjs-playground.com/#1MSEBT#1   
@@ -109,7 +109,7 @@ scene.registerBeforeRender(function() {
   // ribbon update
   mesh = BABYLON.Mesh.CreateRibbon(null, pathArray, null, null, null, null, null, null, mesh);
   // or also :
-  // mesh = BABYLON.Mesh.CreateRibbon(null, {pathArray: pathArray, instance: mesh});
+  // mesh = BABYLON.MeshBuilder.CreateRibbon(null, {pathArray: pathArray, instance: mesh});
   k += 0.05;
 });
 ```
@@ -133,8 +133,8 @@ var points2 = [u1, u2, ..., uN]; // another vector3 array
 lines = BABYLON.Mesh.CreateLines(null, points2, null, null, lines);
 dashedlines = BABYLON.Mesh.CreateDashedLines(null, points2, null, null, null, null, null, dashedlines);
 // or
-lines = BABYLON.Mesh.CreateLines(null, {points: points2, instance: lines});
-dashedlines = BABYLON.Mesh.CreateDashedLines(null, {points: points2, instance: dashedlines});
+lines = BABYLON.MeshBuilder.CreateLines(null, {points: points2, instance: lines});
+dashedlines = BABYLON.MeshBuilder.CreateDashedLines(null, {points: points2, instance: dashedlines});
 ```
 We can, of course, set the update method within the render loop.   
 
@@ -155,7 +155,7 @@ var radius2 = 8;
 var tube = BABYLON.Mesh.CreateTube("tube", path1, radius1, 12, null, cap, scene, true);
 tube = BABYLON.Mesh.CreateTube(null, path2, radius2, null, null, null, null, null, tube);
 // or 
-tube = BABYLON.Mesh.CreateTube(null, {path: path2, radius: radius2, instance: tube});
+tube = BABYLON.MeshBuilder.CreateTube(null, {path: path2, radius: radius2, instance: tube});
 ```
 Of course, it also works with the _radiusFunction_ parameter :   
 ```javascript
@@ -164,7 +164,7 @@ var radiusFunction2 = function(i, distance) { ... };
 var tube = BABYLON.Mesh.CreateTube("tube", path1, null, 12, radiusFunction1, cap, scene, true);
 tube = BABYLON.Mesh.CreateTube(null, path2, null, null, radiusFunction2, null, null, null, tube);
 // or
-tube = BABYLON.Mesh.CreateTube(null, {path: path2, radiusFunction: radiusFunction2, instance: tube});
+tube = BABYLON.MeshBuilder.CreateTube(null, {path: path2, radiusFunction: radiusFunction2, instance: tube});
 ```
 
 Example : http://www.babylonjs-playground.com/#ACKC2#1       
@@ -194,7 +194,7 @@ var extruded = BABYLON.Mesh.ExtrudeShape("ext", shape1, path1, scale1, rotation1
 // mesh update
 extruded = BABYLON.Mesh.ExtrudeShape(null, shape2, path2, scale2, rotation2, null, null, null, null, extruded);
 // or
-extruded = BABYLON.Mesh.ExtrudeShape(null, {shape: shape2, path: path2, scale: scale2, rotation: rotation2, instance: extruded});
+extruded = BABYLON.MeshBuilder.ExtrudeShape(null, {shape: shape2, path: path2, scale: scale2, rotation: rotation2, instance: extruded});
 ```
 Idem for _ExtrudeShapeCustom()_ accepting _scaleFunction_ and _rotationFunction_ parameters :   
 ```javascript
@@ -208,7 +208,7 @@ var ext = BABYLON.Mesh.ExtrudeShapeCustom("ext", shape1, path1, myScale1, myRota
 // mesh update
 ext = BABYLON.Mesh.ExtrudeShapeCustom(null, shape2, path2, myScale2, myRotation2, null, null, null, null, null, null, ext);
 // or 
-ext = BABYLON.Mesh.ExtrudeShapeCustom(null,{shape: shape2, path: path2, scaleFunction: myScale2, rotationFunction: myRotation2, instance: ext});
+ext = BABYLON.MeshBuilder.ExtrudeShapeCustom(null,{shape: shape2, path: path2, scaleFunction: myScale2, rotationFunction: myRotation2, instance: ext});
 ```
 Both new functions can be used in the render loop.      
 

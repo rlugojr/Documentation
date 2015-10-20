@@ -7,7 +7,7 @@ PG_VERSION: 2.1
 
 class [VertexData](/classes/2.2/VertexData)
 
-
+The [VertexData](/classes/2.2/VertexData) class.
 
 ##Members
 

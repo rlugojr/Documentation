@@ -9,7 +9,7 @@ TAGS:
 
 class [StateCondition](/classes/2.2/StateCondition) extends [Condition](/classes/2.2/Condition)
 
-
+This condition checks the state property of an object and compares it to the given value
 
 ##Constructor
 

@@ -1,7 +1,6 @@
 ---
 TAGS:
 ---
-
 ##Description
 
 class [TiledGround](/classes/2.2/TiledGround) extends _Primitive

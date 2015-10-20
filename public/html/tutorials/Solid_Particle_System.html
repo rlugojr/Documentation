@@ -1,4 +1,5 @@
 <!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BabylonJS Documentation</title><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" href="/css/libs/slideout.css"><link rel="stylesheet" href="/css/libs/highlight/github.css"><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.3/css/perfect-scrollbar.min.css"><link rel="stylesheet" href="/css/main.css"></head><body><nav id="menu"></nav><nav class="nav-main"><!-- Hamburger menu : displayed only in small screens--><i id="mobilemenu" class="fa fa-bars"></i><!-- this button only shows on mobile version of a "class" page--><div class="banner"><div class="menu"><div id="home" class="do-not-hover"><a href="/">Babylon.js | DOCUMENTATION</a></div><div id="whatsnew" class="item"><a href="/whats-new">What's new</a></div><div id="general" class="item"><a href="/generals">General</a></div><div id="tutorials" class="item active"><a href="/tutorials">Tutorials</a></div><div id="exporters" class="item"><a href="/exporters">Exporters</a></div><div id="extensions" class="item"><a href="/extensions">Extensions</a></div><div id="classes" class="item"><a href="/classes">Classes</a></div></div><div class="more"><div class="searchbar"><form method="get" action="/search"><input type="text" name="q" placeholder="Search..."><button type="submit"><i class="fa fa-search"></i></button></form></div><div class="forward"><div><a href="http://www.babylonjs.com" target="_blank">babylonjs.com<i class="fa fa-play"></i></a></div></div></div></div></nav><div id="wrapper"><div class="statics-banner"><h1>tutorials</h1></div><div class="horizontal-separator"></div><div class="static-content"><h1>How to use the Solid Particle System</h1><br><div class="contentTable"><div class="tocHeader"><span class="tocTitle"><i class="tocIcon fa fa-book"></i>Table of contents</span><span class="tocToggle"><i class="fa fa-arrow-up"></i></span></div><div class="tocContent"><ul>
+<li><a href="#introduction">Introduction</a></li>
 <li><a href="#basic-usage">Basic Usage</a><ul>
 <li><a href="#sps-creation">SPS Creation</a></li>
 <li><a href="#particle-management">Particle Management</a></li>
@@ -7,12 +8,27 @@
 <li><a href="#sps-management">SPS Management</a></li>
 <li><a href="#advanced-features">Advanced Features</a></li>
 </ul>
-</div></div><div id="staticContent"><h1><a name="solid-particle-system-sps" class="anchor" href="#solid-particle-system-sps"></a>Solid Particle System (SPS)</h1><p>A single updatable mesh.<br>The particles are built with this mesh vertices and faces, then animated.  </p>
+</div></div><div id="staticContent"><h1><a name="solid-particle-system-sps" class="anchor" href="#solid-particle-system-sps"></a>Solid Particle System (SPS)</h1><h2><a name="introduction" class="anchor" href="#introduction"></a>Introduction</h2><p>The SPS is a single updatable mesh. The solid particles are simply separate parts or faces fo this big mesh.<br>As it is just a mesh, the SPS has all the same properties than any other BJS mesh : not more, not less. It can be scaled, rotated, translated, enlighted, textured, moved, etc.  </p>
+<p>The SPS is also a particle system. It provides some methods to manage the particles.<br>However it is behavior agnostic. This means it has no emitter, no particle physics, no particle recycler. You have to implement your own behavior.  </p>
+<p>The particles can be built from any BJS existing mesh as a model. Actually, each particle is a copy of some BJS mesh geometry : vertices, indices, uvs. For now, <em>faceUV</em> or <em>faceColors</em>, for the mesh offering these features, aren&#39;t copied, so each solid particle can&#39;t have a different color or image per face.  </p>
+<p>The expected usage if this one :  </p>
+<ul>
+<li>First, create your SPS with <code>new SolidParticleSystem()</code>.  </li>
+<li>Then, add particles in the SPS from a mesh model with <code>addShape(model, number)</code>.  </li>
+<li>Redo this as many times as needed with any model.  </li>
+<li>When done, build the SPS mesh with <code>buildMesh()</code>.   </li>
+</ul>
+<p>Your SPS is then ready to manage particles. So now :   </p>
+<ul>
+<li>Init all your particles : set their positions, colors, uvs, age, etc with <code>initParticles()</code>  </li>
+<li>Call <code>setParticles()</code> to update the SPS mesh and to draw it.  </li>
+<li>If you particles have to be animated, define their individual behavior in <code>updateParticle(particle)</code> and just call <code>setParticles()</code> within the render loop.  </li>
+</ul>
 <h2><a name="basic-usage" class="anchor" href="#basic-usage"></a>Basic Usage</h2><h3><a name="sps-creation" class="anchor" href="#sps-creation"></a>SPS Creation</h3><p>First you create an empty SPS and you add particles to it with the <em>addShape(mesh, nb)</em> method as many times you need.<br>The SPS name will be its underlying mesh name.   </p>
 <p>Then you build the mesh.<br>Example :</p>
 <pre><code class="lang-javascript">var SPS = new SolidParticleSystem(&quot;SPS&quot;, scene);
-var sphere = BABYLON.Mesh.CreateSphere(&quot;s&quot;, {}, scene);
-var poly = BABYLON.Mesh.CreatePolyhedron(&quot;p&quot;, {type: 2}, scene);
+var sphere = BABYLON.MeshBuilder.CreateSphere(&quot;s&quot;, {}, scene);
+var poly = BABYLON.MeshBuilder.CreatePolyhedron(&quot;p&quot;, {type: 2}, scene);
 SPS.addShape(sphere, 20);      // 20 spheres
 SPS.addShape(poly, 120);       // 120 polyhedrons 
 SPS.addShape(sphere, 80);      // 80 other spheres
@@ -82,7 +98,7 @@ if (particle.velocity &lt; 0) {
 <li><strong><em>previous</em></strong> : the previous particle in the global <em>particles</em> array</li>
 </ul>
 <p>Actually each time you call the <em>SPS.addShape()</em> method, the related newly created particle set shapeID is returned.</p>
-<pre><code class="lang-javascript">var plane = BABYLON.Mesh.CreatePlane(&quot;&quot;, {}, scene);
+<pre><code class="lang-javascript">var plane = BABYLON.MeshBuilder.CreatePlane(&quot;&quot;, {}, scene);
 var quadsID = SPS.addShape(plane, 20);
 </code></pre>
 <p>This is usefull if you want to apply a given behavior to some particle types only.<br>As you can note, all the particles are double-linked to their previous and next neighbours.  </p>
@@ -94,12 +110,13 @@ var quadsID = SPS.addShape(plane, 20);
 </ul>
 <p>Here again, you can add your own properties like <em>capacity</em> or <em>rate</em> if needed.</p>
 <p>If you don&#39;t need some given features (ex : particle colors), you can disable/enable them at any time (disabling a feature will improve the performance) : </p>
-<pre><code class="lang-javascript">SPS.useParticleRotation = false;       // prevents from computing particle.rotation
-SPS.useParticleTexture = false;        // prevents from computing particle.uvs
-SPS.useParticleColor = false;          // prevents from computing particle.color
-SPS.useParticleVertex = false;         // prevents from calling the custom updateParticleVertex() function
+<pre><code class="lang-javascript">SPS.computeParticleRotation = false;       // prevents from computing particle.rotation
+SPS.computeParticleTexture = false;        // prevents from computing particle.uvs
+SPS.computeParticleColor = false;          // prevents from computing particle.color
+SPS.computeParticleVertex = false;         // prevents from calling the custom updateParticleVertex() function
 </code></pre>
-<p>All these properties, except <em>useParticleVertex</em>, are enabled set to <em>true</em> by default. These affect the <em>SPS.setParticles()</em> process only.<br>Note you can also use the standard BJS mesh <em>freezeXXX()</em> methods if the SPS mesh is immobile or if the normals aren&#39;t needed :   </p>
+<p>All these properties, except <em>SPS.computeParticleVertex</em>, are enabled set to <em>true</em> by default. These affect the <em>SPS.setParticles()</em> process only.<br>If these properties are set to <em>false</em>, they don&#39;t prevent from using the related feature (ie : the particles can still have a color even if <em>SPS.computeParticleColor</em> is set to <em>false</em>), they just prevent from updating the value of the particle property on the next <em>setParticle()</em> call.<br>Example : if your particles have colors, you can set their colors wihtin the <em>initParticles()</em> call and you can call then once the <em>setParticles()</em> method to set these colors. If you need to animate them later on and these colors don&#39;t change, just set then <em>SPS.computeParticleColor</em> to <em>false</em> once before runing the render loop which will call <em>setParticles()</em> each frame.  </p>
+<p>Note you can also use the standard BJS mesh <em>freezeXXX()</em> methods if the SPS mesh is immobile or if the normals aren&#39;t needed :   </p>
 <pre><code class="lang-javascript">SPS.mesh.freezeWorldMatrix();       // prevents from re-computing the World Matrix each frame
 SPS.mesh.freezeNormals();           // prevents from re-computing the normals each frame
 </code></pre>
@@ -107,7 +124,7 @@ SPS.mesh.freezeNormals();           // prevents from re-computing the normals ea
 <pre><code class="lang-javascript">SPS.dispose();
 </code></pre>
 <p>Example :</p>
-<pre><code class="lang-javascript"> var cube = BABYLON.Mesh.CreateBox(&quot;b&quot;, {}, scene);
+<pre><code class="lang-javascript"> var cube = BABYLON.MeshBuilder.CreateBox(&quot;b&quot;, {}, scene);
  // Particle system
   var speed = 2;
   var gravity = -0.01;
@@ -164,7 +181,7 @@ SPS.mesh.freezeNormals();           // prevents from re-computing the normals ea
 <li><em>immobile meshes : setParticles() outside the render loop, just once + PG example</em></li>
 <li><em>start, end indexes + update boolean in setParticles()</em></li>
 <li><em>colors and uvs usages</em></li>
-<li><em>updateParticleVertex() usage</em></li>
+<li><em>computeParticleVertex() usage</em></li>
 </ul>
 <p><em>(edition in progress + add many PG example everywhere)</em></p>
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>    Github</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Documentation" target="_blank"><i class="fa fa-code-fork"></i>    Contribute</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><script>(function (i, s, o, g, r, a, m) {

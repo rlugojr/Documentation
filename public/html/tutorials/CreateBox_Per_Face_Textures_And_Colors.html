@@ -9,8 +9,7 @@
 <p>We create a rectangular box by using the <em>options</em> parameters line 43 and 50 : <a href="http://www.babylonjs-playground.com/#1V3CAT">http://www.babylonjs-playground.com/#1V3CAT</a><br>Then we set the texture as a value on a material as usual : <a href="http://www.babylonjs-playground.com/#1V3CAT#1">http://www.babylonjs-playground.com/#1V3CAT#1</a><br>Nothing new until now, right ?  </p>
 <p>Let&#39;s go on.</p>
 <p>Please let&#39;s have a look from line 27 :<br>Line 30, we define a new array called <em>faceUV</em>, sized 6 because our box has 6 faces. This array will always content Vector4 elements.<br>Each <em>Vector4(x, y, z, w)</em> will be defined in this way :  </p>
-<p>x = Ubottom<br>y = Vbottom
-z = Utop<br>w = Vtop<br>all are in the range [0, 1]</p>
+<p>x = Ubottom<br>y = Vbottom<br>z = Utop<br>w = Vtop<br>all are in the range [0, 1]</p>
 <p>as <em>Ubottom</em>, <em>Vbottom</em> are the 2D coordinates of the bottom left point of where the texture crop starts and <em>Utop</em>, <em>Vtop</em> the top right ones of where the texture crop ends.<br>Not clear ?  </p>
 <p>Let&#39;s go back to our sprite atlas : we&#39;ve got 4 rows of 6 sprites.<br>So if we iterate i from 0 to 5 (so 6 times as 6 box faces) and if we assign  </p>
 <pre><code class="lang-javascript">Ubottom = i / 6
@@ -36,7 +35,7 @@ Vtop = 1 / 4
     faceUV: faceUV
   };
 
-  var box = BABYLON.Mesh.CreateBox(&#39;box&#39;, options, scene);
+  var box = BABYLON.MeshBuilder.CreateBox(&#39;box&#39;, options, scene);
   box.material = mat;
 </code></pre>
 <p>Here&#39;s the result : <a href="http://www.babylonjs-playground.com/#1V3CAT#2">http://www.babylonjs-playground.com/#1V3CAT#2</a><br>Quite easy, isn&#39;t it ?<br><br/>
@@ -72,7 +71,7 @@ We could also want to apply two different images from the same texture file onto
     faceColors : faceColors
   };
 
-  var box = BABYLON.Mesh.CreateBox(&#39;box&#39;, options, scene);
+  var box = BABYLON.MeshBuilder.CreateBox(&#39;box&#39;, options, scene);
 </code></pre>
 <p>Simple, isn&#39;t it ?  <a href="http://www.babylonjs-playground.com/#1V3CAT#5">http://www.babylonjs-playground.com/#1V3CAT#5</a>  </p>
 <p>These colors are BJS Color4-class values. The Color4 alpha values become active if we set <em>hasVertexAlpha = true</em> : <a href="http://www.babylonjs-playground.com/#1V3CAT#6">http://www.babylonjs-playground.com/#1V3CAT#6</a>  </p>

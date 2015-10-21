@@ -218,7 +218,8 @@ Example :
     SPS.setParticles();
   });
   ```
-  
+<br/>
+<br/>
 ## Advanced Features
 ### Create a immutable SPS
 You may have to create many similar objects in your scene that won't change afterwards : buildings in the distance, asteroids ,scraps, etc. It may thus be useful to use the SPS to set only one mesh in your scene, so one draw call for the rendering.  
@@ -239,16 +240,19 @@ So how to set the initial particle positions, colors, uvs, scales, and so on if 
 
 To achieve this, you need to change the mesh at construction time, when adding the shapes.  
 You will have to define your own function to set these particle (what don't exist at this time) properties by modifying the way the shapes are added.  
-Actually, you can pass to `SPS.addShape()` an exra parameter which is your particle setting function. At this moment, as the particles don't exist yet, we call this particle object a _copy_ because it's just a copy of the model shape.  
-
-Your own function will be called, for a given shape, as many times as the wanted number of particles for this shape. It will be passed two parameters : a _copy_ object and its current position in the total number wanted for this shape.  
+Actually, you can pass to `SPS.addShape()` an exra parameter which is your particle setting function.  
+This parameter is an object with the property `positionFunction` to what you will assign your custom function.   
+```javascript
+SPS.addShape(mesh, nb, {positionFunction: myCustomFunction});
+```
+Your own function will be called, for a given shape, as many times as the wanted number of particles for this shape. It will be passed two parameters : a _particle_ object and its current position in the total number wanted for this shape.  
 So your function must have this kind of signature : 
 ```javascript
-var myBuilder = function(copy, i) {
-  // copy is the current copy of the shape, the i-th one
+var myBuilder = function(particle, i, s) {
+  // particle is the current copy of the shape, the i-th one in the SPS and the s-th one in its shape
 };
 ```
-The _copy_ object has the following properties : 
+This _particle_ object has the following properties : 
 
 property|type|default
 --------|----|-------
@@ -261,26 +265,87 @@ uvs|Vector4|(0,0,1,1)
 
 The expected usage is thus for instance:
 ```javascript
-var myBuilder = function(copy, i) {
-  copy.rotation.y = i / 150;
-  copy.position.x = i - 150;
+var myBuilder = function(particle, i, s) {
+  // particle is the current particle
+  // i is its global index in the SPS
+  // s is its index in its shape, so here from 0 to 149
+  copy.rotation.y = s / 150;
+  copy.position.x = s - 150;
   copy.uvs = new BABYLON.Vector4(0, 0, 0.33, 0.33); // first image from an atlas
   copy.scale.y = Math.random() + 1;
 }
 var box = BABYLON.MeshBuilder.CreateBox('b', {}, scene);
 var SPS = new BABYLON.SolidParticleSystem('SPS', scene);
-SPS.addShape(box, 150, myBuilder); // myBuilder will be called for each of the 150 copies (boxes)
-var mesh = SPS.buildMesh(false);   // the mest is not updatable
+SPS.addShape(box, 150, {positionFunction: myBuilder)}; // myBuilder will be called for each of the 150 boxes
+var mesh = SPS.buildMesh(false);                       // the mest is not updatable
 ```
 In this former example, each box particle will have its own rotation, position, scale and uvs set once for all at construction time. As the mesh is not updatable, the particles are then not manageable with _setParticles()_.  
 You've got here a real immutable mesh. You can still translate it, rotate it, scale it globally as any other mesh until you freeze its World Matrix.  
 
 Note that this feature (modifying the mesh at construction time) is not directly related to the mesh _updatable_ parameter. This means you can use it even with a default _updatable_ mesh although it is easier to set the particles the classical war with _setParticles()_.  
 
-
+**Going further in immutable SPS**
+You've just seen how to modify for ever the SPS mesh at creation time in order to set the particles to your own initial positions, rotations, colors, etc by using the _positionFunction_ property with your custom function.  
+You can also modify the shape of each particle in the SPS mesh at creation time the same way.  
+You will then to use the _vertexPosition_ property, just like you used the _positionFunction_ property, by defining your own function to set each vertex of each particle from its original value.  
+Your function will be then be called once by _SPS.buildMesh()_ for each vertex of each particle object as defined in the former part.
+```javascript
+var myVertexFunction = function(particle, vertex, i) {
+  // particle : the current particle
+  // vertex : the current vertex, a Vector3
+  // i : index of the vertex in the particle shape
+  vertex.x *= Math.random() + 1;
+};
+SPS.addShape(box, 150, {vertexFunction: myVertexFunction}); // the 150 boxes will have their vertices moved randomly
+SPS.buildMesh(false);
+```
+Of course you can use the both properties together :
+```javascript
+SPS.addShape(box, 150, {vertexFunction: myVertexFunction, positionFunction: myPositionFunction});
+```
+<br/>
+<br/>
 
 * _start, end indexes + update boolean in setParticles()_
 * _colors and uvs usages_
-* _computeParticleVertex() usage_
+
+<br/>
+### Update each particle shape
+* _SPS.updateParticleVertex() usage_ :  
+It happens before particle scaling, rotation and translation anr it allows to update the vertex coordinates of each particle.   
+This function will be called for vertex of each particle and it will be passed the current particle and the current index.
+```javascript
+SPS.computeParticleVertex = true; // false by default for performance reason
+SPS.updateParticleVertex = function(particle, vertex, v) {
+  // particle : the current particle object
+  // vertex : the current vertex, a Vector3
+  // the index of the current vertex in the particle shape
+  // example :
+  if (particle.shapeID == 1) {
+    vertex.x *= Math.random() + 1;
+    vertex.y *= Math.random() + 1;
+    vertex.z *= Math.random() + 1;
+}
+```
+Note well that this vertex update is not stored (the particle isn't modified) but just computed in the next call to _setParticles()_. So there is no value accumulation : the vertex coordinates are always the initial ones when entering this function.  
+So to better understand how it works, here is another global pseudo-code schema :
+```javascript
+var particles: SolidParticles[] = [array of SolidParticle objects];
+function setParticles() {
+  beforeUpdateParticles();                 // your custom function
+  for (var p = 0; p < nbParticles; p++) {
+    var particle = particles[p];
+    updateParticles(particle);             // your custom position function
+    for(var v = 0; particle.vertices.length; v++) {
+      var vertex = particle.vertices[v];
+      updateParticleVertex(particle, vertex, v);   // your ustom vertex function
+      computeAllTheVertexStuff();
+    }
+  }
+  updateTheWholeMesh();                   // does the WebGL work
+  afterUpdateParticles();                 // your ustom function
+}
+```
+
 
 _(edition in progress + add many PG example everywhere)_

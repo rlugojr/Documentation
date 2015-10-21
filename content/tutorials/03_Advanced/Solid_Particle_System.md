@@ -54,6 +54,10 @@ SPS.setParticles();
 ```
 _SPS.billboard_ is a boolean (default _false_). If set to _true_, all the particles will face the cam and their _x_ and _y_ rotation values will be ignored. This is rather useful if you display only plane particles.  
 You need to call _SPS.setParticles()_ within the _scene.registerBeforeRender()_ function in order to display the SPS in billboard mode.   
+Here is an example with plane particles in billboard mode : http://www.babylonjs-playground.com/#WCDZS  
+The same but with plane particle rotations and no billboard mode : http://www.babylonjs-playground.com/#WCDZS#1  
+The same with solid particles, boxes and tetrahedrons : http://www.babylonjs-playground.com/#WCDZS#2  
+
 
 ### Particle Management
 

@@ -163,6 +163,7 @@ property|value|default value
 --------|-----|-------------
 radius|_(number)_ the radius of the disc or polygon|0.5
 tessellation|_(number)_ the number of disc/polygon sides|64
+arc|_(number)_ ratio of the circumference between 0 and 1|1
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 

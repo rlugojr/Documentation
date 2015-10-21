@@ -303,6 +303,8 @@ Of course you can use the both properties together :
 ```javascript
 SPS.addShape(box, 150, {vertexFunction: myVertexFunction, positionFunction: myPositionFunction});
 ```
+Example : http://www.babylonjs-playground.com/#2FPT1A
+
 <br/>
 <br/>
 

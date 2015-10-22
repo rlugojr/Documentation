@@ -288,7 +288,7 @@ You've got here a real immutable mesh. You can still translate it, rotate it, sc
 
 Note that this feature (modifying the mesh at construction time) is not directly related to the mesh _updatable_ parameter. This means you can use it even with a default _updatable_ mesh although it is easier to set the particles the classical war with _setParticles()_.  
 
-**Going further in immutable SPS**
+**Going further in immutable SPS**  
 You've just seen how to modify for ever the SPS mesh at creation time in order to set the particles to your own initial positions, rotations, colors, etc by using the _positionFunction_ property with your custom function.  
 You can also modify the shape of each particle in the SPS mesh at creation time the same way.  
 You will then to use the _vertexPosition_ property, just like you used the _positionFunction_ property, by defining your own function to set each vertex of each particle from its original value.  
@@ -333,7 +333,9 @@ SPS.updateParticleVertex = function(particle, vertex, v) {
     vertex.z *= Math.random() + 1;
 }
 ```
-Note well that this vertex update is not stored (the particle isn't modified) but just computed in the next call to _setParticles()_. So there is no value accumulation : the vertex coordinates are always the initial ones when entering this function.  
+Note well that this vertex update is not stored (the particle shape isn't modified) but just computed in the next call to _setParticles()_. So there is no value accumulation : the vertex coordinates are always the initial ones when entering this function.  
+Note also that the shape reference for each particle is the original shape of the mesh model you passed in _addShape()_, even if you had passed also a custom _vertexFunction_ (see in the part : "Going furhter in immutable SPS").  
+The good news is that the very same function can be use for _SPS.updateParticleVertex_ and for the custom _vertexFunction_ expected by _addShape()_.  
 So to better understand how it works, here is another global pseudo-code schema :
 ```javascript
 var particles: SolidParticles[] = [array of SolidParticle objects];
@@ -352,6 +354,9 @@ function setParticles() {
   afterUpdateParticles();                 // your ustom function
 }
 ```
+
+###Rebuild the mesh
+if the mesh has been by modified with _setParticles()_ ...
 
 
 _(edition in progress + add many PG example everywhere)_

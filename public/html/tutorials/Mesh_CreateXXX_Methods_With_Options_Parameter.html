@@ -25,7 +25,7 @@
 </ul>
 </li>
 </ul>
-</div></div><div id="staticContent"><h2><a name="mesh-createxxx-methods-with-options-parameter" class="anchor" href="#mesh-createxxx-methods-with-options-parameter"></a>Mesh CreateXXX() Methods With Options Parameter</h2><p>In this tutorial, we will learn how to use the classical <em>CreateXXX()</em> methods with the <em>options</em> parameter instead of the full list of parameters.<br>Indeed, as for BJS 2.3+, all the <em>CreateXXX()</em> methods can be called either by </p>
+</div></div><div id="staticContent"><h2><a name="meshbuilder-createxxx-methods-with-options-parameter" class="anchor" href="#meshbuilder-createxxx-methods-with-options-parameter"></a>MeshBuilder CreateXXX() Methods With Options Parameter</h2><p>In this tutorial, we will learn how to use the classical <em>CreateXXX()</em> methods with the <em>options</em> parameter instead of the full list of parameters.<br>Indeed, as for BJS 2.3+, all the <em>CreateXXX()</em> methods can be called either by </p>
 <pre><code class="lang-javascript">var mesh = BABYLON.Mesh.CreateMesh(name, param1, param2, param3, ..., scene);
 </code></pre>
 <p>either by</p>
@@ -426,6 +426,11 @@ Example :</p>
 <td>64</td>
 </tr>
 <tr>
+<td>arc</td>
+<td><em>(number)</em> ratio of the circumference between 0 and 1</td>
+<td>1</td>
+</tr>
+<tr>
 <td>updatable</td>
 <td><em>(boolean)</em> true if the mesh is updatable</td>
 <td>false</td>
@@ -584,6 +589,11 @@ Example :</p>
 <td>faceUV</td>
 <td><em>(Vector4[])</em> array of <em>Vector4</em>, one per face</td>
 <td>UVs(0, 0, 1, 1) for each side</td>
+</tr>
+<tr>
+<td>singleFace</td>
+<td><em>(boolean)</em> if true, a polyhedron has a single global face, <em>faceUV</em> and <em>faceColors</em> are ignored</td>
+<td>false</td>
 </tr>
 <tr>
 <td>updatable</td>

@@ -13,8 +13,8 @@ Well, I'm about to talk about atlases here, but remember it's only an example to
 
 Let's start...
 
-We create a rectangular box by using the _options_ parameters line 43 and 50 : http://www.babylonjs-playground.com/#1V3CAT  
-Then we set the texture as a value on a material as usual : http://www.babylonjs-playground.com/#1V3CAT#1  
+We create a rectangular box by using the _options_ parameters line 43 and 50 : http://www.babylonjs-playground.com/#1V3CAT#10  
+Then we set the texture as a value on a material as usual : http://www.babylonjs-playground.com/#1V3CAT#11    
 Nothing new until now, right ?  
 
 Let's go on.
@@ -64,7 +64,7 @@ Then, to pass this array to the _CreateBox_ method, just add a parameter called 
   var box = BABYLON.MeshBuilder.CreateBox('box', options, scene);
   box.material = mat;
 ```
-Here's the result : http://www.babylonjs-playground.com/#1V3CAT#2  
+Here's the result : http://www.babylonjs-playground.com/#1V3CAT#12  
 Quite easy, isn't it ?  
 <br/>
 <br/>
@@ -77,7 +77,7 @@ This face is the box face 4 (just make attempts to discover the box geometry). W
   faceUV[f].y = faceUV[f].w;
   faceUV[f].w = temp;
 ```
-And now, his head is in on the right : http://www.babylonjs-playground.com/#1V3CAT#3  
+And now, his head is in on the right : http://www.babylonjs-playground.com/#1V3CAT#13  
 <br/>
 <br/>
 Obviously, we aren't not required to set every box face.  
@@ -118,11 +118,11 @@ Then pass this array to the _CreateBox_ method with the new faceColors parameter
 
   var box = BABYLON.MeshBuilder.CreateBox('box', options, scene);
 ```
-Simple, isn't it ?  http://www.babylonjs-playground.com/#1V3CAT#5  
+Simple, isn't it ?  http://www.babylonjs-playground.com/#1V3CAT#14  
 
 These colors are BJS Color4-class values. The Color4 alpha values become active if we set _hasVertexAlpha = true_ : http://www.babylonjs-playground.com/#1V3CAT#6  
 
-We can even combine the vertex colors with a colored material, blue here :  http://www.babylonjs-playground.com/#1V3CAT#7  
+We can even combine the vertex colors with a colored material, blue here :  http://www.babylonjs-playground.com/#1V3CAT#15  
 
 And finally we can also mix per-face colors with per-face textures, and/or mix either of those... with the material's standard colors. :  
 ```javascript
@@ -134,7 +134,7 @@ And finally we can also mix per-face colors with per-face textures, and/or mix e
     faceColors : faceColors
   };
 ```
-Enjoy : http://www.babylonjs-playground.com/#1V3CAT#8  
+Enjoy : http://www.babylonjs-playground.com/#1V3CAT#16  
 
 No need for submaterials or submeshes, when seeking such simple things as box-side materials.
 

@@ -25,21 +25,21 @@
 </ul>
 </li>
 </ul>
-</div></div><div id="staticContent"><h2><a name="mesh-createxxx-methods-with-options-parameter" class="anchor" href="#mesh-createxxx-methods-with-options-parameter"></a>Mesh CreateXXX() Methods With Options Parameter</h2><p>In this tutorial, we will learn how to use the classical Mesh <em>CreateXXX()</em> methods with the <em>options</em> parameter instead of the full list of parameters.<br>Indeed, as for BJS 2.3+, all the <em>CreateXXX()</em> methods can be called either by </p>
-<pre><code class="lang-javascript">var mesh = BABYLON.CreateMesh(name, param1, param2, param3, ..., scene);
+</div></div><div id="staticContent"><h2><a name="mesh-createxxx-methods-with-options-parameter" class="anchor" href="#mesh-createxxx-methods-with-options-parameter"></a>Mesh CreateXXX() Methods With Options Parameter</h2><p>In this tutorial, we will learn how to use the classical <em>CreateXXX()</em> methods with the <em>options</em> parameter instead of the full list of parameters.<br>Indeed, as for BJS 2.3+, all the <em>CreateXXX()</em> methods can be called either by </p>
+<pre><code class="lang-javascript">var mesh = BABYLON.Mesh.CreateMesh(name, param1, param2, param3, ..., scene);
 </code></pre>
 <p>either by</p>
-<pre><code class="lang-javascript">var mesh = BABYLON.CreateMesh(name, {param1 : val1, param2: val2}, scene);
+<pre><code class="lang-javascript">var mesh = BABYLON.MeshBuilder.CreateMesh(name, {param1 : val1, param2: val2}, scene);
 </code></pre>
 <p>Why to use then the <em>options</em> parameter if it only does the same as the parameter list ?</p>
 <p>Because it doesn&#39;t do just only the same ...<br>Depending on the shape type, it allows to make some (or all) parameters optional or it provides more features to the created mesh.  </p>
 <h3><a name="fixed-shapes" class="anchor" href="#fixed-shapes"></a>Fixed Shapes</h3><p>We call <em>fixed shapes</em> all the mesh types that are not parametric, it is to say all the mesh types what have an expected final shape.<br>For instance, if we create a <em>Sphere</em> or a <em>Box</em> mesh, we expect to get a spherical or a cubic shape whereas if we create a <em>Ribbon</em> mesh, as it depends upon a data set to be created (the <em>pathArray</em>), we can&#39;t predict its final shape.  </p>
 <p>All fixed shapes can be created by default by using a blank <em>options</em> parameter :</p>
-<pre><code class="lang-javascript">var cylinder = BABYLON.Mesh.CreateCylinder(&quot;cyl&quot;, {}, scene);
+<pre><code class="lang-javascript">var cylinder = BABYLON.MeshBuilder.CreateCylinder(&quot;cyl&quot;, {}, scene);
 </code></pre>
 <p>This means all the <em>options</em> properties are simply optional.  </p>
 <h4><a name="box" class="anchor" href="#box"></a>Box</h4><p>Example :</p>
-<pre><code class="lang-javascript">var box = BABYLON.Mesh.CreateBox(&quot;box&quot;, {height: 5, faceColors: myColors}, scene);
+<pre><code class="lang-javascript">var box = BABYLON.MeshBuilder.CreateBox(&quot;box&quot;, {height: 5, faceColors: myColors}, scene);
 </code></pre>
 <p>Properties, all optional :</p>
 <table>
@@ -67,8 +67,8 @@
 <td>size</td>
 </tr>
 <tr>
-<td>length</td>
-<td><em>(number)</em> length size,  overwrites <em>size</em> property</td>
+<td>depth</td>
+<td><em>(number)</em> depth size,  overwrites <em>size</em> property</td>
 <td>size </td>
 </tr>
 <tr>
@@ -95,7 +95,7 @@
 </table>
 <p>To understand how to set <em>faceUV</em> or <em>faceColors</em>, please read this : <a href="http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors">http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors</a></p>
 <h4><a name="sphere" class="anchor" href="#sphere"></a>Sphere</h4><p>Example :</p>
-<pre><code class="lang-javascript">var sphere = BABYLON.Mesh.CreateSphere(&quot;sphere&quot;, {diameter: 2, diameterX: 3}, scene);
+<pre><code class="lang-javascript">var sphere = BABYLON.MeshBuilder.CreateSphere(&quot;sphere&quot;, {diameter: 2, diameterX: 3}, scene);
 </code></pre>
 <p>Properties, all optional :</p>
 <table>
@@ -156,7 +156,7 @@
 </table>
 <h4><a name="cylinder-or-cone" class="anchor" href="#cylinder-or-cone"></a>Cylinder or Cone</h4><p>If you set <em>diameterTop</em> to zero, you get a cone instead of a cylinder.
 Example :</p>
-<pre><code class="lang-javascript">var cone = BABYLON.Mesh.CreateCylinder(&quot;cone&quot;, {diameterTop: 0, tessellation: 4}, scene);
+<pre><code class="lang-javascript">var cone = BABYLON.MeshBuilder.CreateCylinder(&quot;cone&quot;, {diameterTop: 0, tessellation: 4}, scene);
 </code></pre>
 <p>Properties, all optional :</p>
 <table>
@@ -227,7 +227,7 @@ Example :</p>
 </table>
 <p>To understand how to set <em>faceUV</em> or <em>faceColors</em>, please read this by considering 3 faces only : <a href="http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors">http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors</a></p>
 <h4><a name="plane" class="anchor" href="#plane"></a>Plane</h4><p>Example :</p>
-<pre><code class="lang-javascript">var plane = BABYLON.Mesh.CreatePlane(&quot;plane&quot;, {width: 5}, scene);
+<pre><code class="lang-javascript">var plane = BABYLON.MeshBuilder.CreatePlane(&quot;plane&quot;, {width: 5}, scene);
 </code></pre>
 <p>Properties, all optional :</p>
 <table>
@@ -267,7 +267,7 @@ Example :</p>
 </tbody>
 </table>
 <h4><a name="ground" class="anchor" href="#ground"></a>Ground</h4><p>Example :</p>
-<pre><code class="lang-javascript">var ground = BABYLON.Mesh.CreateGround(&quot;gd&quot;, {width: 6, subdivsions: 4}, scene);
+<pre><code class="lang-javascript">var ground = BABYLON.MeshBuilder.CreateGround(&quot;gd&quot;, {width: 6, subdivsions: 4}, scene);
 </code></pre>
 <p>Properties, all optional :</p>
 <table>
@@ -302,7 +302,7 @@ Example :</p>
 </tbody>
 </table>
 <h4><a name="ground-from-a-height-map" class="anchor" href="#ground-from-a-height-map"></a>Ground From a Height Map</h4><p>Example :</p>
-<pre><code class="lang-javascript">var ground = BABYLON.Mesh.CreateGroundFromHeightMap(&quot;gdhm&quot;, url, {width: 6, subdivsions: 4}, scene);
+<pre><code class="lang-javascript">var ground = BABYLON.MeshBuilder.CreateGroundFromHeightMap(&quot;gdhm&quot;, url, {width: 6, subdivsions: 4}, scene);
 </code></pre>
 <p>Don&#39;t forget the <em>url</em> parameter.  </p>
 <p>Properties, all optional :</p>
@@ -353,7 +353,7 @@ Example :</p>
 </tbody>
 </table>
 <h4><a name="tiled-ground" class="anchor" href="#tiled-ground"></a>Tiled Ground</h4><p>Example :</p>
-<pre><code class="lang-javascript">var tiledGround = BABYLON.Mesh.CreateTiledGround(&quot;tgd&quot;, {subdivsions: {w:4, h:6} }, scene);
+<pre><code class="lang-javascript">var tiledGround = BABYLON.MeshBuilder.CreateTiledGround(&quot;tgd&quot;, {subdivsions: {w:4, h:6} }, scene);
 </code></pre>
 <p>Properties, all optional :</p>
 <table>
@@ -403,7 +403,7 @@ Example :</p>
 </tbody>
 </table>
 <h4><a name="disc" class="anchor" href="#disc"></a>Disc</h4><p>Remembe you can create any kind of regular plane polygon with <em>CreateDisc()</em><br>Example :  </p>
-<pre><code class="lang-javascript">var disc = BABYLON.Mesh.CreateDisc(&quot;disc&quot;, {tessellation: 3}, scene); // makes a triangle
+<pre><code class="lang-javascript">var disc = BABYLON.MeshBuilder.CreateDisc(&quot;disc&quot;, {tessellation: 3}, scene); // makes a triangle
 </code></pre>
 <p>Properties, all optional :</p>
 <table>
@@ -438,7 +438,7 @@ Example :</p>
 </tbody>
 </table>
 <h4><a name="torus" class="anchor" href="#torus"></a>Torus</h4><p>Example :</p>
-<pre><code class="lang-javascript">var torus = BABYLON.Mesh.CreateTorus(&quot;torus&quot;, {thickness: 0.2}, scene);
+<pre><code class="lang-javascript">var torus = BABYLON.MeshBuilder.CreateTorus(&quot;torus&quot;, {thickness: 0.2}, scene);
 </code></pre>
 <p>Properties, all optional :</p>
 <table>
@@ -478,7 +478,7 @@ Example :</p>
 </tbody>
 </table>
 <h4><a name="torus-knot" class="anchor" href="#torus-knot"></a>Torus Knot</h4><p>Example :</p>
-<pre><code class="lang-javascript">var torus = BABYLON.Mesh.CreateTorusKnot(&quot;tk&quot;, {}, scene);
+<pre><code class="lang-javascript">var torus = BABYLON.MeshBuilder.CreateTorusKnot(&quot;tk&quot;, {}, scene);
 </code></pre>
 <p>Properties, all optional :</p>
 <table>
@@ -533,7 +533,7 @@ Example :</p>
 </tbody>
 </table>
 <h4><a name="polyhedron" class="anchor" href="#polyhedron"></a>Polyhedron</h4><p>Example :</p>
-<pre><code class="lang-javascript">var octahedron = BABYLON.Mesh.CreatePolyhedron(&quot;oct&quot;, {type: 1, size: 3}, scene);
+<pre><code class="lang-javascript">var octahedron = BABYLON.MeshBuilder.CreatePolyhedron(&quot;oct&quot;, {type: 1, size: 3}, scene);
 </code></pre>
 <p>Properties, all optional :</p>
 <table>
@@ -688,10 +688,10 @@ Example :</p>
 <pre><code class="lang-javascript">var heptagonalPrism = { &quot;name&quot;:&quot;Heptagonal Prism&quot;, &quot;category&quot;:[&quot;Prism&quot;], &quot;vertex&quot;:[[0,0,1.090071],[0.796065,0,0.7446715],[-0.1498633,0.7818315,0.7446715],[-0.7396399,-0.2943675,0.7446715],[0.6462017,0.7818315,0.3992718],[1.049102,-0.2943675,-0.03143449],[-0.8895032,0.487464,0.3992718],[-0.8658909,-0.6614378,-0.03143449],[0.8992386,0.487464,-0.3768342],[0.5685687,-0.6614378,-0.6538232],[-1.015754,0.1203937,-0.3768342],[-0.2836832,-0.8247995,-0.6538232],[0.4187054,0.1203937,-0.9992228],[-0.4335465,-0.042968,-0.9992228]],
 &quot;face&quot;:[[0,1,4,2],[0,2,6,3],[1,5,8,4],[3,6,10,7],[5,9,12,8],[7,10,13,11],[9,11,13,12],[0,3,7,11,9,5,1],[2,4,8,12,13,10,6]]};
 
-var mesh = BABYLON.Mesh.CreatePolyhdron(&quot;h&quot;, {custom: heptagonalPrism}, scene);
+var mesh = BABYLON.MeshBuilder.CreatePolyhdron(&quot;h&quot;, {custom: heptagonalPrism}, scene);
 </code></pre>
 <h4><a name="decals" class="anchor" href="#decals"></a>Decals</h4><p>Example :</p>
-<pre><code class="lang-javascript">var decal = BABYLON.Mesh.CreateDecal(&quot;decal&quot;, mesh,  {position: myPos}, scene);
+<pre><code class="lang-javascript">var decal = BABYLON.MeshBuilder.CreateDecal(&quot;decal&quot;, mesh,  {position: myPos}, scene);
 </code></pre>
 <p>Don&#39;t forget the <em>mesh</em> parameter what is the mesh depicting the decal.</p>
 <p>Properties, all optional :</p>
@@ -730,7 +730,7 @@ var mesh = BABYLON.Mesh.CreatePolyhdron(&quot;h&quot;, {custom: heptagonalPrism}
 <br/>  </p>
 <h3><a name="parametric-shapes" class="anchor" href="#parametric-shapes"></a>Parametric Shapes</h3><h4><a name="lines" class="anchor" href="#lines"></a>Lines</h4><p>You must set at least the <em>points</em> property.<br>On update, you must set the <em>points</em> and <em>instance</em> properties.  </p>
 <p>Example :</p>
-<pre><code class="lang-javascript">lines = BABYLON.Mesh.CreateLines(&quot;lines&quot;, {points: myArray, instance: lines});
+<pre><code class="lang-javascript">lines = BABYLON.MeshBuilder.CreateLines(&quot;lines&quot;, {points: myArray, instance: lines});
 // updates the existing instance of lines : no need for the parameter scene here
 </code></pre>
 <p>Properties :</p>
@@ -761,7 +761,7 @@ var mesh = BABYLON.Mesh.CreatePolyhdron(&quot;h&quot;, {custom: heptagonalPrism}
 </table>
 <h4><a name="dashed-lines" class="anchor" href="#dashed-lines"></a>Dashed Lines</h4><p>You must set at least the <em>points</em> property.<br>On update, you must set the <em>points</em> and <em>instance</em> properties.  </p>
 <p>Example :</p>
-<pre><code class="lang-javascript">dashedLines = BABYLON.Mesh.CreateDashedLines(&quot;dl&quot;, {points: myArray, instance: dashedLines});
+<pre><code class="lang-javascript">dashedLines = BABYLON.MeshBuilder.CreateDashedLines(&quot;dl&quot;, {points: myArray, instance: dashedLines});
 // updates the existing instance of dashedLines : no need for the parameter scene here
 </code></pre>
 <p>Properties :</p>
@@ -808,7 +808,7 @@ var mesh = BABYLON.Mesh.CreatePolyhdron(&quot;h&quot;, {custom: heptagonalPrism}
 </table>
 <h4><a name="ribbon" class="anchor" href="#ribbon"></a>Ribbon</h4><p>You must set at least the <em>pathArray</em> property.<br>On update, you must set the <em>pathArray</em> and <em>instance</em> properties.  </p>
 <p>Example :</p>
-<pre><code class="lang-javascript">ribbon = BABYLON.Mesh.CreateRibbon(&quot;ribbon&quot;, {pathArray: myPaths, instance: ribbon});
+<pre><code class="lang-javascript">ribbon = BABYLON.MeshBuilder.CreateRibbon(&quot;ribbon&quot;, {pathArray: myPaths, instance: ribbon});
 // updates the existing instance of ribbon : no need for the parameter scene
 </code></pre>
 <p>Properties :</p>
@@ -859,7 +859,7 @@ var mesh = BABYLON.Mesh.CreatePolyhdron(&quot;h&quot;, {custom: heptagonalPrism}
 </table>
 <h4><a name="tube" class="anchor" href="#tube"></a>Tube</h4><p>You must set at least the <em>path</em> property.<br>On update, you must set the <em>path</em> and <em>instance</em> properties and you can set the <em>radius</em>, <em>radiusFunction</em> or <em>arc</em> properties.   </p>
 <p>Example :</p>
-<pre><code class="lang-javascript">tube = BABYLON.Mesh.CreateTube(&quot;tube&quot;, {path: myPath, instance: tube});
+<pre><code class="lang-javascript">tube = BABYLON.MeshBuilder.CreateTube(&quot;tube&quot;, {path: myPath, instance: tube});
 // updates the existing instance of tube : no need for the parameter scene
 </code></pre>
 <p>Properties :</p>
@@ -922,7 +922,7 @@ var mesh = BABYLON.Mesh.CreatePolyhdron(&quot;h&quot;, {custom: heptagonalPrism}
 <h4><a name="extruded-shapes" class="anchor" href="#extruded-shapes"></a>Extruded Shapes</h4><p>You must set at least the <em>shape</em> and <em>path</em> properties.
 On update, you must set the <em>shape</em>, <em>path</em> and <em>instance</em> properties and you can set the <em>scale</em> and <em>rotation</em> properties.   </p>
 <p>Example :</p>
-<pre><code class="lang-javascript">extruded = BABYLON.Mesh.ExtrudeShape(&quot;ext&quot;, {shape: myShape, path: myPath, scale: newScale, rotation: newRotation instance: extruded});
+<pre><code class="lang-javascript">extruded = BABYLON.MeshBuilder.ExtrudeShape(&quot;ext&quot;, {shape: myShape, path: myPath, scale: newScale, rotation: newRotation instance: extruded});
 // updates the existing instance of extruded : no need for the parameter scene
 </code></pre>
 <p>Properties :</p>
@@ -979,7 +979,7 @@ On update, you must set the <em>shape</em>, <em>path</em> and <em>instance</em> 
 </table>
 <h4><a name="custom-extruded-shapes" class="anchor" href="#custom-extruded-shapes"></a>Custom Extruded Shapes</h4><p>You must set at least the <em>shape</em> and <em>path</em> properties.<br>On update, you must set the <em>shape</em>, <em>path</em> and <em>instance</em> properties and you can set the <em>rotationFunction</em> or <em>scaleFunction</em> properties.   </p>
 <p>Example :</p>
-<pre><code class="lang-javascript">extruded = BABYLON.Mesh.ExtrudeShapeCustom(&quot;ext&quot;, {shape: myShape, path: myPath, scaleFunction: myScaleF, rotationFunction: myRotF instance: extruded});
+<pre><code class="lang-javascript">extruded = BABYLON.MeshBuilder.ExtrudeShapeCustom(&quot;ext&quot;, {shape: myShape, path: myPath, scaleFunction: myScaleF, rotationFunction: myRotF instance: extruded});
 // updates the existing instance of extruded : no need for the parameter scene
 </code></pre>
 <p>Properties :</p>
@@ -1046,7 +1046,7 @@ On update, you must set the <em>shape</em>, <em>path</em> and <em>instance</em> 
 </table>
 <h4><a name="lathe" class="anchor" href="#lathe"></a>Lathe</h4><p>You must set at least the <em>shape</em> property.</p>
 <p>Example :</p>
-<pre><code class="lang-javascript">var lathe = BABYLON.Mesh.Lathe(&quot;lathe&quot;, {shape: myShape}, scene);
+<pre><code class="lang-javascript">var lathe = BABYLON.MeshBuilder.Lathe(&quot;lathe&quot;, {shape: myShape}, scene);
 </code></pre>
 <p>Properties :</p>
 <table>

@@ -163,6 +163,7 @@ property|value|default value
 --------|-----|-------------
 radius|_(number)_ the radius of the disc or polygon|0.5
 tessellation|_(number)_ the number of disc/polygon sides|64
+arc|_(number)_ ratio of the circumference between 0 and 1|1
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
@@ -216,6 +217,7 @@ sizeZ|_(number)_ Z polyhedron size, overwrites the _size_ property|1
 custom|_(polygonObjectReference)_ a polyhedron object, overwrites the _type_ property|null
 faceColors|_(Color4[])_ array of _Color4_, one per face|Color4(1, 1, 1, 1) for each side
 faceUV|_(Vector4[])_ array of _Vector4_, one per face| UVs(0, 0, 1, 1) for each side
+singleFace|_(boolean)_ if true, a polyhedron has a single global face, _faceUV_ and _faceColors_ are ignored|false
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 To understand how to set _faceUV_ or _faceColors_, please read this by considering the right number of faces of your polyhedron, instead of only 6 for the box : http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors

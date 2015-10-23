@@ -1,4 +1,4 @@
-##Mesh CreateXXX() Methods With Options Parameter
+##MeshBuilder CreateXXX() Methods With Options Parameter
 In this tutorial, we will learn how to use the classical _CreateXXX()_ methods with the _options_ parameter instead of the full list of parameters.  
 Indeed, as for BJS 2.3+, all the _CreateXXX()_ methods can be called either by 
 ```javascript

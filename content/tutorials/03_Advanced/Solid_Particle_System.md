@@ -354,6 +354,7 @@ function setParticles() {
   afterUpdateParticles();                 // your ustom function
 }
 ```
+Example : http://www.babylonjs-playground.com/#1X7SUN#5  
 
 ###Rebuild the mesh
 if the mesh has been by modified with _setParticles()_ ...

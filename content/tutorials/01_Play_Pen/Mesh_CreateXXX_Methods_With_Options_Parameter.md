@@ -99,6 +99,7 @@ width|_(number)_ size of the width|size
 height|_(number)_ size of the height|size
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
+sourcePlane|_(Plane)_ source plane (math) the mesh will be transformed to|null
 
 ####Ground
 Example :

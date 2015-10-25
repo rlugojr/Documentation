@@ -7,7 +7,8 @@
 </li>
 </ul>
 </div></div><div id="staticContent"><h1><a name="babylonjs-cameras" class="anchor" href="#babylonjs-cameras"></a>Babylon.js Cameras</h1><p>In any Babylon.js scene, you can create as many cameras as you wish, but only one camera can be active at a time (unless you are using <a href="http://doc.babylonjs.com/page.php?p=22461">multi-viewports</a>).</p>
-<p>Camera management in Babylon.js is pretty simple. Babylon.js supports many types of cameras. We will begin with the two most-common types - the FreeCamera and the ArcRotateCamera.</p>
+<p>Camera management in Babylon.js is pretty simple : first you create one of the camera listed below, then you attach it to canvas mouse and touch inputs (see <strong>Wrapping Up</strong> section).</p>
+<p>Babylon.js supports many types of cameras. We will begin with the two most-common types - the FreeCamera and the ArcRotateCamera.</p>
 <ul>
 <li><strong>FreeCamera</strong> - This is a &#39;first person shooter&#39; (FPS) type of camera where you control the camera with the mouse and the cursors keys. Like many of our cameras, you can also add control keys, or reassign them to other keys, such as keys &#39;w&#39;, &#39;a&#39;, &#39;s&#39;, and &#39;d&#39;.</li>
 </ul>
@@ -41,13 +42,13 @@
 <pre><code class="lang-javascript">   scene.activeCamera.alpha += .01;
 </code></pre>
 <p>It&#39;s beautiful, it&#39;s easy, it&#39;s Babylon.js. Please see the  <a href="http://doc.babylonjs.com/page.php?p=23874">ArcRotateCamera API page</a> for more information.</p>
-<p>Both of these basic Babylon.js cameras will automatically handle inputs for you... once you call the camera&#39;s <em>attachControl</em> function. And you can revoke the control by using the <em>detachControl</em> function. Most Babylon.js experts use a two-step process to activate and attach a camera:</p>
-<pre><code class="lang-javascript">// First, set the scene&#39;s activeCamera... to be YOUR camera.
-   scene.activeCamera = myCamera;
-// Then attach the activeCamera to the canvas.
-   scene.activeCamera.attachControl(canvas);
+<p>It is interesting to know that panning an ArcRotateCamera is also possible. By default you can do that with CTRL+MouseLeftClick, but you can specify to use MouseRightClick instead, by setting <em>useCtrlForPanning</em> to false in the <em>attachControl</em> call :</p>
+<pre><code class="lang-javascript">   camera.attachControl(canvas, noPreventDefault, useCtrlForPanning);
 </code></pre>
-<p>This activate-and-attach code is also used for our unique purpose cameras, which we will now talk about.</p>
+<p>(more info about this method in the <strong>Wrapping Up</strong> section)</p>
+<p>If required you can also totally deactivate panning by setting :</p>
+<pre><code class="lang-javascript">   scene.activeCamera.panningSensibility = 0;
+</code></pre>
 <h2><a name="unique-purpose-cameras" class="anchor" href="#unique-purpose-cameras"></a>Unique Purpose Cameras</h2><p>There are some Babylon.js cameras that have unique purposes. I will try to explain their purposes as we examine each camera and their constructors.</p>
 <ul>
 <li><strong>TouchCamera</strong> - The TouchCamera is a camera that works closely with hand.js, and opens Babylon.js to the modern technology of DOM Gesture Events. Touch is a type a &#39;gesture&#39;, whether it be on a pad or screen, with finger(s), stylus, glove, feet, or laser pointer. Any movement that can be sensed... can be considered a gesture. You can learn all about gestures by visiting <a href="http://en.wikipedia.org/wiki/Gesture_recognition"><strong>a wikipedia page that tells all about it</strong></a>.</li>
@@ -139,13 +140,13 @@ var camera = new BABYLON.GamepadCamera(&quot;Camera&quot;, new BABYLON.Vector3(0
     var camera = new BABYLON.WebVRFreeCamera(&quot;WVR&quot;, new BABYLON.Vector3(0, 1, -15), scene);
 </code></pre>
 <p>The WebVRFreeCamera uses FreeCamera as its basis, so all of the properties and methods of FreeCamera... are also found on our WebVRFreeCamera.</p>
-<h2><a name="wrapping-up" class="anchor" href="#wrapping-up"></a>Wrapping Up</h2><p>As a last reminder, Babylon.js cameras require you to use “attachControl” and “detachControl” functions, as needed. Most Babylon.js experts... use a two-step process to activate and attach a camera:</p>
-<pre><code class="lang-javascript">// First, set the scene&#39;s activeCamera... to be YOUR camera.
+<h2><a name="wrapping-up" class="anchor" href="#wrapping-up"></a>Wrapping Up</h2><p>Every Babylon.js cameras will automatically handle inputs for you... once you call the camera&#39;s <em>attachControl</em> function. And you can revoke the control by using the <em>detachControl</em> function. Most Babylon.js experts use a two-step process to activate and attach a camera:</p>
+<pre><code class="lang-javascript">   // First, set the scene&#39;s activeCamera... to be YOUR camera.
    scene.activeCamera = myCamera;
-// Then attach the activeCamera to the canvas.
-   scene.activeCamera.attachControl(canvas);
+   // Then attach the activeCamera to the canvas.
+   scene.activeCamera.attachControl(canvas, noPreventDefault);
 </code></pre>
-<p>You already knew about activating and attaching cameras, didn&#39;t you? You remembered from the last time I told you, right? :)</p>
+<p>By default <em>noPreventDefault</em> is set to false, meaning that <em>preventDefault()</em> is automatically called on every canvas mouse clicks and touches events.</p>
 <h2><a name="next-step" class="anchor" href="#next-step"></a>Next step</h2><p>You have now learned how to use the two most-common cameras, and you have been introduced to all of our innovative &#39;unique purpose&#39; cameras. You can control how you see your scene, you can choose your input and viewing devices, and you now know how to move cameras around. To give your scene a more realistic effect, we are now going to learn <a href="http://doc.babylonjs.com/page.php?p=22071"><strong>how to manage lights</strong></a>. See you soon.</p>
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>    Github</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Documentation" target="_blank"><i class="fa fa-code-fork"></i>    Contribute</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><script>(function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;

@@ -123,8 +123,6 @@ You may also access to some read-only properties :
 
 * **_idx_** : particle index
 * **_shapeId_** : shape model ID
-* **_next_** : the next particle in the global _particles_ array
-* **_previous_** : the previous particle in the global _particles_ array
 
 Actually each time you call the _SPS.addShape()_ method, the related newly created particle set shapeID is returned.
 ```javascript
@@ -132,7 +130,7 @@ var plane = BABYLON.MeshBuilder.CreatePlane("", {}, scene);
 var quadsID = SPS.addShape(plane, 20);
 ```
 This is usefull if you want to apply a given behavior to some particle types only.   
-As you can note, all the particles are double-linked to their previous and next neighbours.  
+<br/>
 
 ## SPS Management
 You have access to some SPS properties :

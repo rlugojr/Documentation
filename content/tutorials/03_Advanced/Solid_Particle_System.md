@@ -224,11 +224,13 @@ Example :
 <br/>
 ## Advanced Features
 ### Create a immutable SPS
-You may have to create many similar objects in your scene that won't change afterwards : buildings in the distance, asteroids ,scraps, etc. It may thus be useful to use the SPS to set only one mesh in your scene, so one draw call for the rendering.  
+You may have to create many similar objects in your scene that won't change afterwards : buildings in the distance, asteroids, scraps, etc. It may thus be useful to use the SPS to set only one mesh in your scene, so one draw call for the rendering.  
 
 You can achieve this by two different ways.  
 * You can just build your SPS as explained before and then call just once _setParticles()_, before and outside the render loop, to set your particles where and how you need.  
-This method is quite simple. Though, in order to allow you to set the final particle locations, the SPS mesh is built as _updatable_ by default. This means its vertex buffer isn't passed once for all to the GPU, but is cached, waiting for a hypothetical further change. So this is a simple if you don't have many draw calls to handle for the other really moving or changing meshes of your scene.  
+This method is quite simple. Though, in order to allow you to set the final particle locations, the SPS mesh is built as _updatable_ by default. This means its vertex buffer isn't passed once for all to the GPU, but is cached, waiting for a hypothetical further change.  
+So this is a simple solution if you don't have many draw calls to handle for the other really moving or changing meshes of your scene.  
+Remember also that, if you need to display your SPS in billboard mode, this is the only way to do it and you'll have to call _setParticles()_ in the render loop also even if the particles don't move.  
 
 * Else you can build your mesh as non _updatable_.  
 Actually the `SPS.buildMesh()` expects a parameter _updatable_ what is _true_ by default.  
@@ -236,7 +238,8 @@ So, to build a non-updatable mesh, just call :
 ```javascript
 var mesh = SPS.buildMesh(false);
 ```
-As the mesh can't be updated now, _setParticles()_ won't have any effect any longer (don't call it, you'll spare CPU).  
+As the mesh can't be updated now, _setParticles()_ won't have any effect any longer : don't call it, you'll spare some CPU. Actually the _particles_ array is not even populated !  
+No particle management functions called **after** _SPS.buildMesh(false)_ will then have any effect.  
 
 So how to set the initial particle positions, colors, uvs, scales, and so on if the mesh can't be updated ?  
 
@@ -310,14 +313,30 @@ Example : http://www.babylonjs-playground.com/#2FPT1A
 <br/>
 <br/>
 
-* _start, end indexes + update boolean in setParticles()_
-* _colors and uvs usages_
+### Start and End indexes for setParticles()
+If you manage a big SPS with dozens of thousands particles, you may want, for performance reasons, not to compute all the new status of all the particles each frame. _setParticles()_ expects three optional parameters to help you to choose what to compute or not : _start_, _end_, _update_  
+
+parameter|definition|default value
+---------|----------|-------------
+start|_(number)_ the index from where to start to iterate in the _particles_ array|0
+stop|_(number)_ the index (included) where to stop to iterate in the _particles_ array|nbParticles - 1
+update|_(boolean)_ to force the SPS mesh vertex buffer to be updated|true
+
+Example : you may want to update your 10K particle mesh only every three frames  
+* frame 1 : _setParticles(0, 3300, false)_ computes everything for particles from 0 to 3300 and doesn't update the mesh.
+* frame 2 : _setParticles(3301, 6600, false)_ computes everything for particles from 3301 to 6600 and doesn't update the mesh.
+* frame 3 : _setParticles(6601, 9999, true)_ computes everything for particles from 6601 to 9999 and finally updates the mesh.  
+
+If you pass a _end_ value greater than _nbParticles_ - 1, the iteration will stop anyway at _nbParticles_ - 1 to prevent you from trying to access to undefined elements.
+
+### _colors and uvs usages_
+_soon_
 
 <br/>
 ### Update each particle shape
 * _SPS.updateParticleVertex() usage_ :  
-It happens before particle scaling, rotation and translation anr it allows to update the vertex coordinates of each particle.   
-This function will be called for vertex of each particle and it will be passed the current particle and the current index.
+It happens before particle scaling, rotation and translation and it allows to update the vertex coordinates of each particle.   
+This function will be called for each vertex of each particle and it will be passed the current particlen the current vertex and its current index in the particle shape.
 ```javascript
 SPS.computeParticleVertex = true; // false by default for performance reason
 SPS.updateParticleVertex = function(particle, vertex, v) {

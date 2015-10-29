@@ -10,8 +10,8 @@ Here are the next updates we will *probably* add to babylon.js:
 **vNext++:**
 
 * Reflection probe [v2.3]
+* Material library (Wter, fire, Matte) [v2.3]
 * Global illumination light
-* Generate incremental format from 3dsmax
 * Morph targets
 * Sprites collisions
 * Continuous update of octrees using webworkers

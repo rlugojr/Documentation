@@ -15,17 +15,6 @@ Usable fonts :
 - roboto
 - opensans_regular / opensans_light / opensans_bold
 */
-
-code {  
-  background-color: #F1F1F1;
-  font-family: consolas;
-}
-
-.lang-javascript {
-  background-color: #F1F1F1;
-  font-family: consolas;
-}
-
 h1 {
   font-weight: normal;
   font-family: "Open Sans";
@@ -53,7 +42,10 @@ body {
   font-weight: 300;
   font-family: "Roboto";
   overflow-y: scroll; }
-  
+
+code {
+  font-family: "Inconsolata"; }
+
 .hidden {
   display: none !important; }
 
@@ -885,6 +877,84 @@ p {
       font-size: 1.1em;
       margin: 0; }
 
+.searchplayground-content {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px; }
+  .searchplayground-content::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .searchplayground-content .searchplaygroundbar {
+    width: 100%;
+    text-align: center; }
+    .searchplayground-content .searchplaygroundbar form {
+      width: 250px;
+      height: 30px;
+      background-color: white;
+      border-radius: 20px;
+      margin: 30px auto; }
+      .searchplayground-content .searchplaygroundbar form input {
+        margin-left: 10px;
+        height: 34px;
+        width: 200px;
+        border-radius: 20px;
+        border: solid 1px #dcdcdc;
+        background-color: transparent;
+        padding: 8px; }
+        .searchplayground-content .searchplaygroundbar form input:focus {
+          border: solid 1px #dcdcdc;
+          outline: 0; }
+      .searchplayground-content .searchplaygroundbar form button {
+        font-size: 1.3em;
+        background: transparent;
+        border: none;
+        cursor: pointer; }
+  .searchplayground-content .searchHeader {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin-bottom: 30px; }
+    .searchplayground-content .searchHeader h2 {
+      margin: 0;
+      padding: 20px 0; }
+  .searchplayground-content .pageChangeWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around; }
+    .searchplayground-content .pageChangeWrapper .pageChangeLink {
+      border: 1px solid #fc4349;
+      padding: 3px 7px;
+      border-radius: 3px; }
+      .searchplayground-content .pageChangeWrapper .pageChangeLink:hover {
+        color: whitesmoke;
+        background-color: #fc4349;
+        text-decoration: none; }
+  .searchplayground-content .filters {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .searchplayground-content .filters .basicFilter {
+      cursor: pointer;
+      padding: 3px 7px;
+      border-radius: 3px;
+      font-size: 0.9em;
+      margin: 5px; }
+      .searchplayground-content .filters .basicFilter.enabled {
+        background-color: #fc4349;
+        color: whitesmoke; }
+      .searchplayground-content .filters .basicFilter.disabled {
+        background-color: darkgrey;
+        color: whitesmoke; }
+  .searchplayground-content .result {
+    margin: 15px 0; }
+    .searchplayground-content .result .resultTitle {
+      font-size: 1.1em;
+      margin: 0; }
+    .searchplayground-content .result p {
+      margin-left: 10px; }
+
 #wrapper.error {
   background-color: white;
   text-align: center;
@@ -1215,6 +1285,9 @@ p {
       clear: both;
       content: "";
       display: table; } }
+.search-content {
+  word-break: break-all; }
+
 .search-content {
   word-break: break-all; }
 

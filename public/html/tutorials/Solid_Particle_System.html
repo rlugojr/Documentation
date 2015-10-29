@@ -8,6 +8,8 @@
 <li><a href="#sps-management">SPS Management</a></li>
 <li><a href="#advanced-features">Advanced Features</a><ul>
 <li><a href="#create-a-immutable-sps">Create a immutable SPS</a></li>
+<li><a href="#start-and-end-indexes-for-setparticles">Start and End indexes for setParticles()</a></li>
+<li><a href="#colors-and-uvs-usages"><em>colors and uvs usages</em></a></li>
 <li><a href="#update-each-particle-shape">Update each particle shape</a></li>
 <li><a href="#rebuild-the-mesh">Rebuild the mesh</a></li>
 </ul>
@@ -100,14 +102,12 @@ if (particle.velocity &lt; 0) {
 <ul>
 <li><strong><em>idx</em></strong> : particle index</li>
 <li><strong><em>shapeId</em></strong> : shape model ID</li>
-<li><strong><em>next</em></strong> : the next particle in the global <em>particles</em> array</li>
-<li><strong><em>previous</em></strong> : the previous particle in the global <em>particles</em> array</li>
 </ul>
 <p>Actually each time you call the <em>SPS.addShape()</em> method, the related newly created particle set shapeID is returned.</p>
 <pre><code class="lang-javascript">var plane = BABYLON.MeshBuilder.CreatePlane(&quot;&quot;, {}, scene);
 var quadsID = SPS.addShape(plane, 20);
 </code></pre>
-<p>This is usefull if you want to apply a given behavior to some particle types only.<br>As you can note, all the particles are double-linked to their previous and next neighbours.  </p>
+<p>This is usefull if you want to apply a given behavior to some particle types only.<br><br/></p>
 <h2><a name="sps-management" class="anchor" href="#sps-management"></a>SPS Management</h2><p>You have access to some SPS properties :</p>
 <ul>
 <li><strong>SPS.particles</strong> : this is the array containing all the particles. You should iterate over this array in <em>initParticles()</em> function for instance.</li>
@@ -185,15 +185,15 @@ SPS.mesh.freezeNormals();           // prevents from re-computing the normals ea
 </code></pre>
 <p><br/>
 <br/></p>
-<h2><a name="advanced-features" class="anchor" href="#advanced-features"></a>Advanced Features</h2><h3><a name="create-a-immutable-sps" class="anchor" href="#create-a-immutable-sps"></a>Create a immutable SPS</h3><p>You may have to create many similar objects in your scene that won&#39;t change afterwards : buildings in the distance, asteroids ,scraps, etc. It may thus be useful to use the SPS to set only one mesh in your scene, so one draw call for the rendering.  </p>
+<h2><a name="advanced-features" class="anchor" href="#advanced-features"></a>Advanced Features</h2><h3><a name="create-a-immutable-sps" class="anchor" href="#create-a-immutable-sps"></a>Create a immutable SPS</h3><p>You may have to create many similar objects in your scene that won&#39;t change afterwards : buildings in the distance, asteroids, scraps, etc. It may thus be useful to use the SPS to set only one mesh in your scene, so one draw call for the rendering.  </p>
 <p>You can achieve this by two different ways.  </p>
 <ul>
-<li><p>You can just build your SPS as explained before and then call just once <em>setParticles()</em>, before and outside the render loop, to set your particles where and how you need.<br>This method is quite simple. Though, in order to allow you to set the final particle locations, the SPS mesh is built as <em>updatable</em> by default. This means its vertex buffer isn&#39;t passed once for all to the GPU, but is cached, waiting for a hypothetical further change. So this is a simple if you don&#39;t have many draw calls to handle for the other really moving or changing meshes of your scene.  </p>
+<li><p>You can just build your SPS as explained before and then call just once <em>setParticles()</em>, before and outside the render loop, to set your particles where and how you need.<br>This method is quite simple. Though, in order to allow you to set the final particle locations, the SPS mesh is built as <em>updatable</em> by default. This means its vertex buffer isn&#39;t passed once for all to the GPU, but is cached, waiting for a hypothetical further change.<br>So this is a simple solution if you don&#39;t have many draw calls to handle for the other really moving or changing meshes of your scene.<br>Remember also that, if you need to display your SPS in billboard mode, this is the only way to do it and you&#39;ll have to call <em>setParticles()</em> in the render loop also even if the particles don&#39;t move.  </p>
 </li>
 <li><p>Else you can build your mesh as non <em>updatable</em>.<br>Actually the <code>SPS.buildMesh()</code> expects a parameter <em>updatable</em> what is <em>true</em> by default.<br>So, to build a non-updatable mesh, just call :</p>
 <pre><code class="lang-javascript">var mesh = SPS.buildMesh(false);
 </code></pre>
-<p>As the mesh can&#39;t be updated now, <em>setParticles()</em> won&#39;t have any effect any longer (don&#39;t call it, you&#39;ll spare CPU).  </p>
+<p>As the mesh can&#39;t be updated now, <em>setParticles()</em> won&#39;t have any effect any longer : don&#39;t call it, you&#39;ll spare some CPU. Actually the <em>particles</em> array is not even populated !<br>No particle management functions called <strong>after</strong> <em>SPS.buildMesh(false)</em> will then have any effect.  </p>
 </li>
 </ul>
 <p>So how to set the initial particle positions, colors, uvs, scales, and so on if the mesh can&#39;t be updated ?  </p>
@@ -277,16 +277,47 @@ SPS.buildMesh(false);
 <p>Of course you can use the both properties together :</p>
 <pre><code class="lang-javascript">SPS.addShape(box, 150, {vertexFunction: myVertexFunction, positionFunction: myPositionFunction});
 </code></pre>
-<p>Example : <a href="http://www.babylonjs-playground.com/#2FPT1A">http://www.babylonjs-playground.com/#2FPT1A</a></p>
+<p>Example : <a href="http://www.babylonjs-playground.com/#2FPT1A#1">http://www.babylonjs-playground.com/#2FPT1A#1</a></p>
 <p><br/>
 <br/></p>
+<h3><a name="start-and-end-indexes-for-setparticles" class="anchor" href="#start-and-end-indexes-for-setparticles"></a>Start and End indexes for setParticles()</h3><p>If you manage a big SPS with dozens of thousands particles, you may want, for performance reasons, not to compute all the new status of all the particles each frame. <em>setParticles()</em> expects three optional parameters to help you to choose what to compute or not : <em>start</em>, <em>end</em>, <em>update</em>  </p>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>definition</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td><em>(number)</em> the index from where to start to iterate in the <em>particles</em> array</td>
+<td>0</td>
+</tr>
+<tr>
+<td>stop</td>
+<td><em>(number)</em> the index (included) where to stop to iterate in the <em>particles</em> array</td>
+<td>nbParticles - 1</td>
+</tr>
+<tr>
+<td>update</td>
+<td><em>(boolean)</em> to force the SPS mesh vertex buffer to be updated</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p>Example : you may want to update your 10K particle mesh only every three frames  </p>
 <ul>
-<li><em>start, end indexes + update boolean in setParticles()</em></li>
-<li><em>colors and uvs usages</em></li>
+<li>frame 1 : <em>setParticles(0, 3300, false)</em> computes everything for particles from 0 to 3300 and doesn&#39;t update the mesh.</li>
+<li>frame 2 : <em>setParticles(3301, 6600, false)</em> computes everything for particles from 3301 to 6600 and doesn&#39;t update the mesh.</li>
+<li>frame 3 : <em>setParticles(6601, 9999, true)</em> computes everything for particles from 6601 to 9999 and finally updates the mesh.  </li>
 </ul>
+<p>If you pass a <em>end</em> value greater than <em>nbParticles</em> - 1, the iteration will stop anyway at <em>nbParticles</em> - 1 to prevent you from trying to access to undefined elements.</p>
+<h3><a name="emcolors-and-uvs-usagesem" class="anchor" href="#colors-and-uvs-usages"></a><em>colors and uvs usages</em></h3><p><em>soon</em></p>
 <p><br/></p>
 <h3><a name="update-each-particle-shape" class="anchor" href="#update-each-particle-shape"></a>Update each particle shape</h3><ul>
-<li><em>SPS.updateParticleVertex() usage</em> :<br>It happens before particle scaling, rotation and translation anr it allows to update the vertex coordinates of each particle.<br>This function will be called for vertex of each particle and it will be passed the current particle and the current index.<pre><code class="lang-javascript">SPS.computeParticleVertex = true; // false by default for performance reason
+<li><em>SPS.updateParticleVertex() usage</em> :<br>It happens before particle scaling, rotation and translation and it allows to update the vertex coordinates of each particle.<br>This function will be called for each vertex of each particle and it will be passed the current particlen the current vertex and its current index in the particle shape.<pre><code class="lang-javascript">SPS.computeParticleVertex = true; // false by default for performance reason
 SPS.updateParticleVertex = function(particle, vertex, v) {
 // particle : the current particle object
 // vertex : the current vertex, a Vector3

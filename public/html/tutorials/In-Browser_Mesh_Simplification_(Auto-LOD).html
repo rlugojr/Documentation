@@ -17,13 +17,11 @@
 <p>LOD requires the developer to add a few meshes to the original mesh. One of the ways to create those meshes is simplification. Many 3D tools offer various simplification algorithms. It is sometimes called Decimation.</p>
 <p>Starting Version 2.0, Babylon.js offers an In-browser simplification functionality that works asynchronous while trying not to disturb the rendering process. Ths LOD levels will be automatically added to the scene after finishing the calculation.</p>
 <h1><a name="usage-simplifying-a-mesh" class="anchor" href="#usage-simplifying-a-mesh"></a>Usage - Simplifying a mesh</h1><p>Any object of the class BABYLON.Mesh has a &quot;simplify&quot; function with the following signature:</p>
-<pre>
-public simplify(settings: Array<ISimplificationSettings>,
+<pre><code class="lang-javascript">public simplify(settings: Array&lt;ISimplificationSettings&gt;,
                 parallelProcessing: boolean = true,
                 type: SimplificationType = SimplificationType.QUADRATIC,
-                successCallback?: () => void);
-</pre>
-
+                successCallback?: () =&gt; void);
+</code></pre>
 <ul>
 <li><strong>settings</strong></li>
 </ul>
@@ -34,19 +32,14 @@ public simplify(settings: Array<ISimplificationSettings>,
 <li>(since 2.1) optimizeMesh - should the mesh be optimized (optional, defaults to false). More about optimization later.</li>
 </ol>
 <p>A simple example for an array of settings would be:</p>
-<pre>
-[{ quality: 0.9, distance: 25, optimizeMesh:true },
+<pre><code class="lang-javascript">[{ quality: 0.9, distance: 25, optimizeMesh:true },
  { quality: 0.3, distance: 50, optimizeMesh:true }]
-</pre>
-For the typescript users and the "new" lovers exists a SimplificationSettings class. so this can also be done:
-
-
-<pre>
-var settings : Array<ISimplificationSettings> = []; //in JS: var settings = new Array();
+</code></pre>
+<p>For the typescript users and the &quot;new&quot; lovers exists a SimplificationSettings class. so this can also be done:</p>
+<pre><code class="lang-javascript">var settings : Array&lt;ISimplificationSettings&gt; = []; //in JS: var settings = new Array();
 settings.push(new BABYLON.SimplificationSettings(0.8, 60));
 settings.push(new BABYLON.SimplificationSettings(0.4, 150));
-</pre>
-
+</code></pre>
 <ul>
 <li>**parallel processing</li>
 </ul>
@@ -63,15 +56,13 @@ settings.push(new BABYLON.SimplificationSettings(0.4, 150));
 <ul>
 <li><strong>usage example</strong></li>
 </ul>
-<pre>
-BABYLON.SceneLoader.ImportMesh("", "./", "DanceMoves.babylon", scene, (newMeshes, particleSystems, skeletons) => {
+<pre><code class="lang-javascript">BABYLON.SceneLoader.ImportMesh(&quot;&quot;, &quot;./&quot;, &quot;DanceMoves.babylon&quot;, scene, (newMeshes, particleSystems, skeletons) =&gt; {
     newMeshes[1].simplify([{ quality: 0.9, distance: 25 }, { quality: 0.3, distance: 50 }], 
         false, BABYLON.SimplificationType.QUADRATIC, function() {
-             alert("LOD finisehd, let's have a beer!");
+             alert(&quot;LOD finisehd, let&#39;s have a beer!&quot;);
         });
 });
-</pre>
-
+</code></pre>
 <h2><a name="demos" class="anchor" href="#demos"></a>Demos</h2><p>Zoom in and out to see the effect, watch the number of active vertices closely.</p>
 <p>Simplifying spheres. Materials of the spheres will be set after simplification ended completely.</p>
 <p><a href="http://www.babylonjs-playground.com/#1ED15P#1">http://www.babylonjs-playground.com/#1ED15P#1</a></p>
@@ -97,25 +88,21 @@ BABYLON.SceneLoader.ImportMesh("", "./", "DanceMoves.babylon", scene, (newMeshes
 <li>Meshes might suddenly have &quot;holes&quot; in them. This can be avoided using the mesh optimization (starting 2.1, described further down)</li>
 <li>Submeshes are supported starting BabylonJS 2.1. Meshes with submeshes would not be decimated 100% correctly due to the lack of border detection (see next point). Give it a try and see if it fits your needs. Contact me with questions.</li>
 <li>Some triangles on the borders will be &quot;deleted&quot;. The reason is usually the (lack of) border detection, which is a part of the original paper. The feature was not included in the implementation due to the amount of time needed to calculate that correctly. Maybe in the future!</li>
-<li>Objects that are initialized using an image (best example is a Height Map-based ground) will only decimate after the image was fully loaded. Height Map can be initialized using the callback that can be set as the last variable of the function:<pre>
-var ground = BABYLON.Mesh.CreateGroundFromHeightMap("ground", "worldHeightMap.jpg", 200, 200, 250, 0, 10, scene, false, function(groundMesh) {
+<li>Objects that are initialized using an image (best example is a Height Map-based ground) will only decimate after the image was fully loaded. Height Map can be initialized using the callback that can be set as the last variable of the function:<pre><code class="lang-javascript">var ground = BABYLON.Mesh.CreateGroundFromHeightMap(&quot;ground&quot;, &quot;worldHeightMap.jpg&quot;, 200, 200, 250, 0, 10, scene, false, function(groundMesh) {
   // Add simplify code here
   groundMesh.simplify(.......);
 });
-</pre>
-
+</code></pre>
 </li>
 </ul>
 <h2><a name="mesh-optimization-starting-babylonjs-21" class="anchor" href="#mesh-optimization-starting-babylonjs-21"></a>Mesh optimization (Starting BabylonJS 2.1)</h2><p>Due to the nature of Babylon&#39;s file format, it is possible that many vertices will have the same positions, normals, but different color/uv information. This presents a problem to the decimation process, which relays on having all triangles with the same position altered. </p>
 <p>If you try simplifying a mesh, and it suddenly lacks a few triangles, this will be the reason - your mesh is not &quot;optimized&quot; for simplification.</p>
 <p>There are two types of optimization available:</p>
 <ol>
-<li>Global altering function, which is a part of BABYLON.Mesh:
-<pre>
-mesh.optimizeIndices(function() {
+<li>Global altering function, which is a part of BABYLON.Mesh:<pre><code class="lang-javascript">mesh.optimizeIndices(function() {
 //do whatever you want here
 });
-</pre>
+</code></pre>
 This option alters(!) the mesh&#39;s indices order. It is faster, but might change the UV coordinates of vertices of the mesh. If that is the case, use:</li>
 <li>optimization during simplification - The Simplification Settings now include a new variable : optimizeMesh, which is a boolean that defaults to false. If set to true, a non-altering mesh optimization will run during the mesh&#39;s preparation for decimation. The simplification will run on a temporary array of vertices and will correlate the new vertices&#39; positions with the old uv/color information. This is the better option, but also the slower option (will be noticeable with very large meshes like the demo skull - <a href="http://www.babylonjs-playground.com/#2JBSNA#4">http://www.babylonjs-playground.com/#2JBSNA#4</a>).</li>
 </ol>
@@ -129,10 +116,8 @@ This option alters(!) the mesh&#39;s indices order. It is faster, but might chan
 <li>Profit</li>
 </ol>
 <h1><a name="accessing-the-simplification-class-directly" class="anchor" href="#accessing-the-simplification-class-directly"></a>Accessing the simplification class directly</h1><p>You can access the quadratic error decimation directly and play with its features. You can do that by creating an object of the class QuadraticErrorSimplification</p>
-<pre>
-var decimator = new QuadraticErrorSimplification(meshToDecimate);
-</pre>
-
+<pre><code class="lang-javascript">var decimator = new QuadraticErrorSimplification(meshToDecimate);
+</code></pre>
 <p>Afterwards you can play with the following object variables:</p>
 <ol>
 <li>decimationIterations - max number of iterations of the decimation process. The simplification will (usually) stop before the max number of iterations, but it actually all depends on the next variable. Default : 100.</li>
@@ -140,10 +125,8 @@ var decimator = new QuadraticErrorSimplification(meshToDecimate);
 <li>syncIterations - the number of synchronous iterations inside the async iterations. Rather hard to explain, but a lower number will hurt the performance less but will make the process take a bit more time. If you need explanations look at the AsyncLoop class in babylon.tools.js or contact @raananw .
 After setting the variables you run run the simplify function that will start the entire process:</li>
 </ol>
-<pre>
-simplify(settings, successCallback);
-</pre>
-
+<pre><code class="lang-javascript">simplify(settings, successCallback);
+</code></pre>
 <p>See the explanation above to understand what each variable is.</p>
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>    Github</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Documentation" target="_blank"><i class="fa fa-code-fork"></i>    Contribute</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><script>(function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;

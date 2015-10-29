@@ -484,6 +484,22 @@
       ]
     },
     {
+      "title": "Materials library",
+      "name": "MaterialsLibrary",
+      "img": "img/extensions/materials.jpg",
+      "desc": "Learn how to use materials from Materials library.",
+      "files": [
+        {
+          "title": "Fire",
+          "filename": "fire"
+        },
+        {
+          "title": "Water",
+          "filename": "Water"
+        }
+      ]
+    },
+    {
       "title": "POV",
       "name": "POV",
       "img": "img/extensions/POV.jpg",

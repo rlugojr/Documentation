@@ -59,6 +59,11 @@ The scene has now a new flag (false per default):</p>
 <pre><code class="lang-javascript">scene.workerCollisions = true|false
 </code></pre>
 <p>Setting this flag to true will start the worker in the background. The worker will then receive all collision requests from the cameras and meshes. Setting it to false will set the collision to the regular collision calculation as it always was.</p>
+<p>To read more about how workers were integrated head to Raanan Weber&#39;s blog:</p>
+<ul>
+<li><a href="https://blog.raananweber.com/2015/05/26/collisions-using-workers-for-babylonjs/">https://blog.raananweber.com/2015/05/26/collisions-using-workers-for-babylonjs/</a></li>
+<li><a href="https://blog.raananweber.com/2015/06/06/collisions-using-workers-for-babylonjs-part-2/">https://blog.raananweber.com/2015/06/06/collisions-using-workers-for-babylonjs-part-2/</a></li>
+</ul>
 <h2><a name="arcrotatecamera" class="anchor" href="#arcrotatecamera"></a>ArcRotateCamera</h2><p>The ArcRotateCamera can also check collisions but instead of sliding along obstacles, this camera won&#39;t move when a collision appends.</p>
 <p>To activate collisions, just call <code>camera.checkCollisions = true</code>. You can define the collision radius with this code:</p>
 <pre><code class="lang-javascript">camera.collisionRadius = new BABYLON.Vector3(0.5, 0.5, 0.5)

@@ -54,15 +54,14 @@
 <p><img src="http://www.babylonjs.com/forumpics/blurVSM.jpg" alt="BlurVSM"></p>
 <p><em>Blur Variance Shadow Map</em></p>
 <h2><a name="about-the-light" class="anchor" href="#about-the-light"></a>About the light</h2><p>Keep in mind that this shadow generator can only be used with one light.  If you want to generate shadows from another light, then you will need to create another shadow generator.</p>
-<p>Only directional and spot lights can cast shadows:</p>
+<p>Only point, directional and spot lights can cast shadows:</p>
 <pre><code>var light = new BABYLON.DirectionalLight(&quot;dir01&quot;, new BABYLON.Vector3(-1, -2, -1), scene);
-</code></pre><p>You must also define a <em>position</em> for your light (because Babylon.js must have a light&#39;s point of view to create the shadow map):</p>
-<pre><code>light.position = new BABYLON.Vector3(20, 40, 20);
-</code></pre><p>Spot lights use perspective projection and directional lights use orthogonal projection. Both projections are evaluated automatically for you to get the best shadow map possible.</p>
+</code></pre><p>Point lights use cubemaps rendering so please be cautious when enabling them as this could lead to some performance issues.</p>
+<p>Spot lights use perspective projection and directional lights use orthogonal projection. Both projections are evaluated automatically for you to get the best shadow map possible.</p>
 <p>For directional light, you can control the size of the projection window by modifying <code>light.shadowOrthoScale</code> (0.1 by default which means that the projection window is increase by 10% from the optimal size).</p>
-<p>The light&#39;s position, as well as the positions of the mesh that you have pushed into the renderlist, determine 
-where the shadows will appear.</p>
+<p>The light&#39;s position, as well as the positions of the mesh that you have pushed into the renderlist, determine where the shadows will appear.</p>
 <p>Now you might want to visit <a href="http://babylonjs-playground.azurewebsites.net/?15"><strong>the playground scene</strong></a> for this tutorial.</p>
+<p>You can also visit the <a href="http://www.babylonjs-playground.com/#LYCSQ#12">point light shadow map playground scene</a></p>
 <h2><a name="next-step" class="anchor" href="#next-step"></a>Next step</h2><p>Now that you are becoming a real professional about Babylon.js, maybe it’s time to go deeper into the code to manipulate complex shaders, mesh, or textures. Our <a href="http://doc.babylonjs.com/">home menu for our wiki</a> is your portal to many advanced topics. You can also participate in this project by going to our Github page: <a href="https://github.com/BabylonJS/Babylon.js">https://github.com/BabylonJS/Babylon.js</a> and also by participating in our very active forum: <a href="http://www.html5gamedevs.com/forum/16-babylonjs">http://www.html5gamedevs.com/forum/16-babylonjs</a>. See you there.</p>
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>    Github</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Documentation" target="_blank"><i class="fa fa-code-fork"></i>    Contribute</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><script>(function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;

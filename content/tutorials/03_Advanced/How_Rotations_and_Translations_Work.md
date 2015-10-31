@@ -44,20 +44,20 @@ mesh.translate(BABYLON.Axis.X, 1.0, BABYLON.Space.WORLD);
 Please note that ```mesh.rotate``` generates a quaternion and then uses ```mesh.rotationQuaternion```.
 
 #Generating a rotation from a target system#
-Sometimes you may know the final orientation you want to give to a mesh in terms of alignment with distant axis, but you don't what rotation to apply to it to achieve this wanted orientation. 
+Sometimes you may know the final orientation you want to give to a mesh in terms of alignment with distant axis, but you don't know what rotation to apply to it to achieve this wanted orientation.  
 There is a way to compute an Euler rotation from a set of axis : 
 ```javascript
 var rot = BABYLON.Vector.RotationFromAxis(axis1, axis2, axis3);
 mesh.rotation = rot;
 ```
-where _axis1_, _axis2_ and _axis3_ are three left-handed oriented orthogonal vectors. 
-With this code, the mesh will be aligned thus : 
+where _axis1_, _axis2_ and _axis3_ are three left-handed oriented orthogonal vectors.   
+With this code, the mesh will be aligned thus :   
 
 * _axis1_ will become x axis in its local system
 * _axis2_ will become y axis in its local system
 * _axis3_ will become z axis in its local system
 
-example : http://www.babylonjs-playground.com/#VYM1E#5 
+example : http://www.babylonjs-playground.com/#VYM1E#5   
 The textured plane mesh is currently aligned with the axis between spheres (axis1) and "faces" the camera : axis2 = camera.position 
 
 #Baking Transform#

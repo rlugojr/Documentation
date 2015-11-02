@@ -162,6 +162,7 @@ SPS.mesh.freezeNormals();           // prevents from re-computing the normals ea
 If you don't need your SPS any longer, you can dispose it to free the memory
 ```javascript
 SPS.dispose();
+SPS = null    // tells the GC the reference can be cleaned up also
 ```
 
 Example :
@@ -373,6 +374,42 @@ function setParticles() {
 }
 ```
 Example : http://www.babylonjs-playground.com/#1X7SUN#5  
+
+###Garbage Collector Concerns  
+In Javascript, the Garbage Collector is usually your friend : it takes care about cleaning up all the not any longer needed variables you could have declared and thus it sets the memory free.  
+However, it can sometimes become an awkward friend because it can start its cleaning just when you want to display a very smooth animation, so it takes the CPU for itself and leaves to you only those nice lags on the screen.  
+So the best to do to avoid the GC unpredictable behavior is to keep as low as possible the creation of temporary objects or variables in the render loop.  
+As you know now, _updateParticle()_ and _updateParticleVertex()_ are called each frame for each particle or each particle vertex. 
+So imagine that you have a SPS with 30 000 particles. What if you code something like that to simulate some particle acceleration :  
+```javascript
+SPS.updateParticle = function(particle) {
+  var velStep = 0.05;
+  particle.velocity += velStep;
+  // ...
+}
+```
+The _velStep_ temporary variable will be created 30 000 times and then be requested then for collection by the GC !  
+So it is better to declare once _velStep_ outside the _udpateParticle()_ method.  
+The SPS provides to you a way to declare once all your variable needed for it at its own level instead of creating global variables.  
+Just use the SPS _vars_ property :
+```javascript
+SPS.vars.velStep = 0.05;
+SPS.updateParticle = function(particle) {
+  particle.velocity += SPS.vars.velStep;
+  // ...
+}
+```
+This will allow you to keep these variables in the SPS object only (and as long as the SPS will exist) and to clean them up gracefully when you will dispose it.  
+```javascript
+SPS.dispose();  // cleans explicitly all your SPS.vars !
+```
+A good JS practice for the compiler is to **never** change the variable type once it has been set :
+```javascript
+SPS.vars.myFloat = 0.01;   // just keep setting float values to myFloat afterwards
+SPS.vars.myInt = 5;        // just keep setting integer values to myInt afterwards
+SPS.vars.myString = "foo"; // just keep setting string values to myString afterwards
+```
+
 
 ###Rebuild the mesh
 if the mesh has been by modified with _setParticles()_ ...

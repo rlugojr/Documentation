@@ -233,13 +233,14 @@ So this is a simple solution if you don't have many draw calls to handle for the
 Remember also that, if you need to display your SPS in billboard mode, this is the only way to do it and you'll have to call _setParticles()_ in the render loop also even if the particles don't move.  
 
 * Else you can build your mesh as non _updatable_.  
-Actually the `SPS.buildMesh()` expects a parameter _updatable_ what is _true_ by default.  
-So, to build a non-updatable mesh, just call :
+Actually the SPS contructor expects a parameter _updatable_ what is _true_ by default.  
+So, to build a non-updatable mesh, just call explicitly :
 ```javascript
-var mesh = SPS.buildMesh(false);
+var SPS = new SolidParticleSystem(name, scene, {updatable: false});
 ```
 As the mesh can't be updated now, _setParticles()_ won't have any effect any longer : don't call it, you'll spare some CPU. Actually the _particles_ array is not even populated !  
-No particle management functions called **after** _SPS.buildMesh(false)_ will then have any effect.  
+No particle management function called **after** _SPS.buildMesh()_ will then have any effect.  
+Note that the particles won't move but you can still move, scale or rotate the whole mesh.  
 
 So how to set the initial particle positions, colors, uvs, scales, and so on if the mesh can't be updated ?  
 
@@ -308,7 +309,7 @@ Of course you can use the both properties together :
 ```javascript
 SPS.addShape(box, 150, {vertexFunction: myVertexFunction, positionFunction: myPositionFunction});
 ```
-Example : http://www.babylonjs-playground.com/#2FPT1A#1
+Example : http://www.babylonjs-playground.com/#2FPT1A#2  
 
 <br/>
 <br/>

@@ -218,7 +218,7 @@ sizeZ|_(number)_ Z polyhedron size, overwrites the _size_ property|1
 custom|_(polygonObjectReference)_ a polyhedron object, overwrites the _type_ property|null
 faceColors|_(Color4[])_ array of _Color4_, one per face|Color4(1, 1, 1, 1) for each side
 faceUV|_(Vector4[])_ array of _Vector4_, one per face| UVs(0, 0, 1, 1) for each side
-singleFace|_(boolean)_ if true, a polyhedron has a single global face, _faceUV_ and _faceColors_ are ignored|false
+flat|_(boolean)_ if false, a polyhedron has a single global face, _faceUV_ and _faceColors_ are ignored|true
 updatable|_(boolean)_ true if the mesh is updatable|false
 sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 To understand how to set _faceUV_ or _faceColors_, please read this by considering the right number of faces of your polyhedron, instead of only 6 for the box : http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors
@@ -253,6 +253,24 @@ var heptagonalPrism = { "name":"Heptagonal Prism", "category":["Prism"], "vertex
 var mesh = BABYLON.MeshBuilder.CreatePolyhdron("h", {custom: heptagonalPrism}, scene);
 ```
 
+####IcoSphere
+This a sphere based upon an icosahedron with 20 triangular faces which can be subdivided.
+```javascript
+var icosphere = BABYLON.MeshBuilder.CreateIcoSphere("ico", {radius: 5, radiusY: 8, subdivisions: 6}, scene);
+```
+
+Properties, all optional :
+
+property|value|default value
+--------|-----|-------------
+radius|_(number)_ radius | 1
+radiusX|_(number)_  the X radius, overwrites the radius value|radius
+radiusY|_(Vector3)_  the Y radius, overwrites the radius value|radius
+radiusZ|_(number)_ the Z radius, overwrites the radius value|radius
+subdivisions|_(number)_ the number of subdivisions|4
+flat|_(boolean)_ if true, the mesh faces have their own normals|true
+updatable|_(boolean)_ true if the mesh is updatable|false
+sideOrientation|_(number)_ side orientation|DEFAULTSIDE
 
 ####Decals  
 Example :

@@ -430,6 +430,17 @@ scene.onPointerDown = function(evt, pickResult) {
     SPS.setParticles();
 };
 ```
+###SPS Visibility
+To render the meshes on the screen, BJS uses their bounding box (BBox) : it the BBox is in the frustum, then the mesh is selected to be rendered on the screen. This method is really performant as it avoids to make the GPU compute things that wouldn't be visible. The BBox of each mesh is recomputed when its World Martix is updated.    
+When you create a SPS, unless you use the `positionFunction` at creation time, all its particles are set by default at the position (0, 0, 0). So the size of the SPS mesh is initially the size of its biggest particle, so it is for its BBox.  
+If you animate your particles without updating the SPS mesh World Matrix (ex : the whole SPS doesn't move, rotate or scale), its BBox may keep far more little than the current space occupied by the moving particles. So, if this little BBox gets out of the screen (cam rotation for instance), the whole SPS can then disappear at once !  
+
+In order to manage the SPS visibility, you have two methods `SPS.refreshVisibleSize()` and `SPS.forceVisibility()`. 
+
+* `SPS.refreshVisibleSize()` : updates the SPS mesh BBox size on demand. This is an intensive computation, so it's better not to use it in the render loop each frame. You could call it once the mesh has reached its maximum size for instance.
+*  `SPS.forceVisibility()` : forces the SPS mesh to be computed by the GPU even if its BBox is not visible. Unless you really want it, you should better use `SPS.refreshVisibleSize()`.  
+
+
 
 ###Garbage Collector Concerns  
 In Javascript, the Garbage Collector is usually your friend : it takes care about cleaning up all the not any longer needed variables you could have declared and thus it sets the memory free.  

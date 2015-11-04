@@ -52,8 +52,8 @@ Once the behavior will be given (or not), you actually display the particles at 
 SPS.billboard = true; // or false by default
 SPS.setParticles();
 ```
-_SPS.billboard_ is a boolean (default _false_). If set to _true_, all the particles will face the cam and their _x_ and _y_ rotation values will be ignored. This is rather useful if you display only plane particles.  
-You need to call _SPS.setParticles()_ within the _scene.registerBeforeRender()_ function in order to display the SPS in billboard mode.   
+`SPS.billboard` is a boolean (default _false_). If set to _true_, all the particles will face the cam and their _x_ and _y_ rotation values will be ignored. This is rather useful if you display only plane particles.  
+You need to call `SPS.setParticles()` within the `scene.registerBeforeRender()` function in order to display the SPS in billboard mode.   
 Here is an example with plane particles in billboard mode : http://www.babylonjs-playground.com/#WCDZS  
 The same but with plane particle rotations and no billboard mode : http://www.babylonjs-playground.com/#WCDZS#1  
 The same with solid particles, boxes and tetrahedrons : http://www.babylonjs-playground.com/#WCDZS#2  
@@ -61,16 +61,16 @@ The same with solid particles, boxes and tetrahedrons : http://www.babylonjs-pla
 
 ### Particle Management
 
-The _setParticles()_ function can be used in the BJS render loop.  
+The `setParticles()` function can be used in the BJS render loop.  
 It is mandatory to use this function to update and display the mesh.  
 
 You can give your SPS a behavior by setting some custom functions :  
 
-* **_initParticles()_** : lets you set all the initial particle properties. You must iterate over all the particles by using the _SPS.nbParticles_ property. The usage of this function is not mandatory.
-* **_recycleParticle(particle)_** : lets you set a particle to be recycled. It is called per particle. The usage of this function is not mandatory. 
-* **_updateParticle(particle)_** : lets you set the particle properties. This function is called per particle by _SPS.setParticles()_. The usage of this function is not mandatory.  
-* **_beforeUpdateParticles()_** : lets you make things within the call to _SPS.setParticles()_ just before iterating over all the particles.  The usage of this function is not mandatory.   
-* **_afterUpdateParticles()_** : lets you make things within the call to _SPS.setParticles()_  just after the iteration over all the particles is done. The usage of this function is not mandatory.   
+* **`initParticles()`** : lets you set all the initial particle properties. You must iterate over all the particles by using the `SPS.nbParticles` property. The usage of this function is not mandatory.
+* **`recycleParticle(particle)`** : lets you set a particle to be recycled. It is called per particle. The usage of this function is not mandatory. 
+* **`updateParticle(particle)`** : lets you set the particle properties. This function is called per particle by `SPS.setParticles()`. The usage of this function is not mandatory.  
+* **`beforeUpdateParticles()`** : lets you make things within the call to `SPS.setParticles()` just before iterating over all the particles.  The usage of this function is not mandatory.   
+* **`afterUpdateParticles()`** : lets you make things within the call to `SPS.setParticles()`  just after the iteration over all the particles is done. The usage of this function is not mandatory.   
 * 
 So to better understand how it works, here is a pseudo-code schema :
 ```javascript
@@ -84,7 +84,7 @@ function setParticles() {
   afterUpdateParticles();                 // custom function
 }
 ```
-So you could call _recycleParticle(particle)_ in your own _updateParticle(particle)_ function for instance :
+So you could call `recycleParticle(particle)` in your own `updateParticle(particle)è function for instance :
 ```javascript
 SPS.updateParticle = function(particle) {
   particle.velocity--;
@@ -97,21 +97,21 @@ SPS.updateParticle = function(particle) {
 
 The particle properties that can be set are :
 
-* **_position_** : Vector3  default = (0, 0, 0)
-* **_rotation_** : Vector3  default = (0, 0, 0)  
-* **_quaternion_** : Vector3  default = undefined
-* **_velocity_** : Vector3  default = (0, 0, 0)
-* **_color_** : Vector4  default = (1, 1, 1, 1)
-* **_scale_** : Vector3  default = (1, 1, 1)
-* **_uvs_** : Vector(4) default = (0,0, 1,1)
-* **_alive_** : boolean  default = true
+* **`position`** : Vector3  default = (0, 0, 0)
+* **`rotation`** : Vector3  default = (0, 0, 0)  
+* **`quaternion`** : Vector3  default = undefined
+* **`velocity`** : Vector3  default = (0, 0, 0)
+* **`color`** : Vector4  default = (1, 1, 1, 1)
+* **`scale`** : Vector3  default = (1, 1, 1)
+* **`uvs`** : Vector(4) default = (0,0, 1,1)
+* **`alive`** : boolean  default = true
 
 If you set a particle rotation quaternion, its rotation property will then be ignored.    
-If you set your SPS in billboard mode, you should only set a _rotation.z_ value.   
+If you set your SPS in billboard mode, you should only set a `rotation.z` value.   
 
 Please note that all positions are expressed in the mesh **local space** and not in the World space.  
 
-You can obviously also create your own properties like _acceleration: Vector3_ or _age_, in _initParticles()_ for instance.  
+You can obviously also create your own properties like _acceleration: Vector3_ or _age_, in `initParticles()` for instance.  
 ```javascript
 SPS.initParticles = function() {
   for (var p = 0; p < SPS.nbParticles; p++) {
@@ -121,10 +121,10 @@ SPS.initParticles = function() {
 ```
 You may also access to some read-only properties :   
 
-* **_idx_** : particle index
-* **_shapeId_** : shape model ID
+* **`idx`** : particle index
+* **`shapeId`** : shape model ID
 
-Actually each time you call the _SPS.addShape()_ method, the related newly created particle set shapeID is returned.
+Actually each time you call the `SPS.addShape()` method, the related newly created particle set shapeID is returned.
 ```javascript
 var plane = BABYLON.MeshBuilder.CreatePlane("", {}, scene);
 var quadsID = SPS.addShape(plane, 20);
@@ -135,9 +135,9 @@ This is usefull if you want to apply a given behavior to some particle types onl
 ## SPS Management
 You have access to some SPS properties :
 
-* **SPS.particles** : this is the array containing all the particles. You should iterate over this array in _initParticles()_ function for instance.
-* **SPS.nbParticles** : this is number of particles in the SPS.
-* **SPS.counter** : this is a counter for your own usage. It's not set by any SPS default functions.
+* **`SPS.particles`** : this is the array containing all the particles. You should iterate over this array in `initParticles()` function for instance.
+* **`SPS.nbParticles`** : this is number of particles in the SPS.
+* **`SPS.counter`** : this is a counter for your own usage. It's not set by any SPS default functions.
 
 Here again, you can add your own properties like _capacity_ or _rate_ if needed.
 
@@ -148,9 +148,9 @@ SPS.computeParticleTexture = false;        // prevents from computing particle.u
 SPS.computeParticleColor = false;          // prevents from computing particle.color
 SPS.computeParticleVertex = false;         // prevents from calling the custom updateParticleVertex() function
 ```
-All these properties, except _SPS.computeParticleVertex_, are enabled set to _true_ by default. These affect the _SPS.setParticles()_ process only.   
-If these properties are set to _false_, they don't prevent from using the related feature (ie : the particles can still have a color even if _SPS.computeParticleColor_ is set to _false_), they just prevent from updating the value of the particle property on the next _setParticle()_ call.  
-Example : if your particles have colors, you can set their colors wihtin the _initParticles()_ call and you can call then once the _setParticles()_ method to set these colors. If you need to animate them later on and these colors don't change, just set then _SPS.computeParticleColor_ to _false_ once before runing the render loop which will call _setParticles()_ each frame.  
+All these properties, except `SPS.computeParticleVertex`, are enabled set to _true_ by default. These affect the `SPS.setParticles()` process only.   
+If these properties are set to _false_, they don't prevent from using the related feature (ie : the particles can still have a color even if `SPS.computeParticleColor` is set to _false_), they just prevent from updating the value of the particle property on the next `setParticle()` call.  
+Example : if your particles have colors, you can set their colors wihtin the `initParticles()` call and you can call then once the `setParticles()` method to set these colors. If you need to animate them later on and these colors don't change, just set then `SPS.computeParticleColor` to _false_ once before runing the render loop which will call `setParticles()` each frame.  
 If you are familiar with how BJS works, you could compare the SPS and its mesh creation to some classical BJS mesh creation (vertex and indice settings) and the particle management to the World Matrix computation (rotation, scaling, positioning).  
 
 Note you can also use the standard BJS mesh _freezeXXX()_ methods if the SPS mesh is immobile or if the normals aren't needed :   
@@ -221,26 +221,52 @@ Example :
     SPS.setParticles();
   });
   ```
+### Summary
+The SPS is behavior-agnostic. This means it doesn't know how the particles will move, rotate, if they have a mass, if there are forces, etc. You have to see it like a big mesh that you can create (`buildMesh`) from many shape models, some BJS existing meshes, (`addShape`) that will be its solid particles. It provides some methods to access then and to manage these solid particles.  
+
+So the initial stuff to do is to create the SPS, then to add as many shapes you need and at last to build the SPS mesh.  
+
+Once you've done it, you need to manage your solid particles.
+
+The way to fix the particle status and then to display them at this status is to call `SPS.setParticles()`.  
+Each time you call `setParticles()` the particles are rendered at their current status. Easy, isn't it ?
+
+So three steps :
+
+  * SPS and its mesh creation
+  * compute your particle behavior
+  * call setParticles() to update the mesh and draw it
+
+Just remember that, once the mesh is build, only **`setParticles()`** does then the job : updates the mesh VBO and draws it.
+
+To help you to update each particle status, `setParticle()` will call for each particle `SPS.updateParticle(particle)`.  
+This function doesn't do anything by default, so it is the place were you can implement your particle behavior, with physics if you want. It is passed each particle object in turn, which you can set its initial properties (position, rotation, quaternion, scale, color, uvs, velocity) or add and set your own if your logic needs it (age ? mass ? etc).  
+So `updateParticle()` just changes the particle data, not the mesh itself. The `setParticles()` process updates the mesh. Fortunately, `setParticles()` calls `updateParticle(particle)` for you.  
+
+If you want to set an initial status, different from the live behavior that you would implement in `SPS.updateParticle(particle)`, you can use `SPS.initParticles()`.  
+This function doesn't do anything, you have to implement it.   
+It doesn't draw the mesh, it just changes the particle initial status that will be taken in account by the next `SPS.setParticle()` call.
+The same thing with SPS.recycleParticle(particle) what is not called automatically and that you have to implement by your own and to call when you need.  
 <br/>
 <br/>
 ## Advanced Features
-### Create a immutable SPS
+### Create an immutable SPS
 You may have to create many similar objects in your scene that won't change afterwards : buildings in the distance, asteroids, scraps, etc. It may thus be useful to use the SPS to set only one mesh in your scene, so one draw call for the rendering.  
 
 You can achieve this by two different ways.  
-* You can just build your SPS as explained before and then call just once _setParticles()_, before and outside the render loop, to set your particles where and how you need.  
-This method is quite simple. Though, in order to allow you to set the final particle locations, the SPS mesh is built as _updatable_ by default. This means its vertex buffer isn't passed once for all to the GPU, but is cached, waiting for a hypothetical further change.  
+* You can just build your SPS as explained before and then call just once `setParticles()`, before and outside the render loop, to set your particles where and how you need.  
+This method is quite simple. Though, in order to allow you to set the final particle locations, the SPS mesh is built as `updatable` by default. This means its vertex buffer isn't passed once for all to the GPU, but is cached, waiting for a hypothetical further change.  
 So this is a simple solution if you don't have many draw calls to handle for the other really moving or changing meshes of your scene.  
-Remember also that, if you need to display your SPS in billboard mode, this is the only way to do it and you'll have to call _setParticles()_ in the render loop also even if the particles don't move.  
+Remember also that, if you need to display your SPS in billboard mode, this is the only way to do it and you'll have to call `setParticles()` in the render loop also even if the particles don't move.  
 
 * Else you can build your mesh as non _updatable_.  
-Actually the SPS contructor expects a parameter _updatable_ what is _true_ by default.  
+Actually the SPS contructor expects a parameter `updatable` what is _true_ by default.  
 So, to build a non-updatable mesh, just call explicitly :
 ```javascript
 var SPS = new SolidParticleSystem(name, scene, {updatable: false});
 ```
-As the mesh can't be updated now, _setParticles()_ won't have any effect any longer : don't call it, you'll spare some CPU. Actually the _particles_ array is not even populated !  
-No particle management function called **after** _SPS.buildMesh()_ will then have any effect.  
+As the mesh can't be updated now, `setParticles()` won't have any effect any longer : don't call it, you'll spare some CPU. Actually the `particles` array is not even populated !  
+No particle management function called **after** `SPS.buildMesh()` will then have any effect.  
 Note that the particles won't move but you can still move, scale or rotate the whole mesh.  
 
 So how to set the initial particle positions, colors, uvs, scales, and so on if the mesh can't be updated ?  
@@ -286,16 +312,16 @@ var SPS = new BABYLON.SolidParticleSystem('SPS', scene);
 SPS.addShape(box, 150, {positionFunction: myBuilder)}; // myBuilder will be called for each of the 150 boxes
 var mesh = SPS.buildMesh(false);                       // the mest is not updatable
 ```
-In this former example, each box particle will have its own rotation, position, scale and uvs set once for all at construction time. As the mesh is not updatable, the particles are then not manageable with _setParticles()_.  
+In this former example, each box particle will have its own rotation, position, scale and uvs set once for all at construction time. As the mesh is not updatable, the particles are then not manageable with `setParticles()`.  
 You've got here a real immutable mesh. You can still translate it, rotate it, scale it globally as any other mesh until you freeze its World Matrix.  
 
-Note that this feature (modifying the mesh at construction time) is not directly related to the mesh _updatable_ parameter. This means you can use it even with a default _updatable_ mesh although it is easier to set the particles the classical war with _setParticles()_.  
+Note that this feature (modifying the mesh at construction time) is not directly related to the mesh `updatable` parameter. This means you can use it even with a default _updatable_ mesh although it is easier to set the particles the classical war with `setParticles()`.  
 
 **Going further in immutable SPS**  
-You've just seen how to modify for ever the SPS mesh at creation time in order to set the particles to your own initial positions, rotations, colors, etc by using the _positionFunction_ property with your custom function.  
+You've just seen how to modify for ever the SPS mesh at creation time in order to set the particles to your own initial positions, rotations, colors, etc by using the `positionFunction` property with your custom function.  
 You can also modify the shape of each particle in the SPS mesh at creation time the same way.  
-You will then to use the _vertexPosition_ property, just like you used the _positionFunction_ property, by defining your own function to set each vertex of each particle from its original value.  
-Your function will be then be called once by _SPS.buildMesh()_ for each vertex of each particle object as defined in the former part.
+You will then to use the `vertexPosition` property, just like you used the `positionFunction` property, by defining your own function to set each vertex of each particle from its original value.  
+Your function will be then be called once by `SPS.buildMesh()` for each vertex of each particle object as defined in the former part.
 ```javascript
 var myVertexFunction = function(particle, vertex, i) {
   // particle : the current particle
@@ -316,27 +342,30 @@ Example : http://www.babylonjs-playground.com/#2FPT1A#2
 <br/>
 
 ### Start and End indexes for setParticles()
-If you manage a big SPS with dozens of thousands particles, you may want, for performance reasons, not to compute all the new status of all the particles each frame. _setParticles()_ expects three optional parameters to help you to choose what to compute or not : _start_, _end_, _update_  
+If you manage a big SPS with dozens of thousands particles, you may want, for performance reasons, not to compute all the new status of all the particles each frame. `setParticles()` expects three optional parameters to help you to choose what to compute or not : `start`, `end`, `update`  
 
 parameter|definition|default value
 ---------|----------|-------------
-start|_(number)_ the index from where to start to iterate in the _particles_ array|0
-stop|_(number)_ the index (included) where to stop to iterate in the _particles_ array|nbParticles - 1
+start|_(number)_ the index from where to start to iterate in the `particles` array|0
+stop|_(number)_ the index (included) where to stop to iterate in the `particles` array|nbParticles - 1
 update|_(boolean)_ to force the SPS mesh vertex buffer to be updated|true
 
-Example : you may want to update your 10K particle mesh only every three frames  
-* frame 1 : _setParticles(0, 3300, false)_ computes everything for particles from 0 to 3300 and doesn't update the mesh.
-* frame 2 : _setParticles(3301, 6600, false)_ computes everything for particles from 3301 to 6600 and doesn't update the mesh.
-* frame 3 : _setParticles(6601, 9999, true)_ computes everything for particles from 6601 to 9999 and finally updates the mesh.  
+If you pass a `end` value greater than `nbParticles` - 1, the iteration will stop anyway at `nbParticles` - 1 to prevent you from trying to access to undefined elements.
 
-If you pass a _end_ value greater than _nbParticles_ - 1, the iteration will stop anyway at _nbParticles_ - 1 to prevent you from trying to access to undefined elements.
+Example 1 : you may want to update your 10K particle mesh only every three frames  
+* frame 1 : `setParticles(0, 3300, false)` computes everything for particles from 0 to 3300 and doesn't update the mesh.
+* frame 2 : `setParticles(3301, 6600, false)` computes everything for particles from 3301 to 6600 and doesn't update the mesh.
+* frame 3 : `setParticles(6601, 9999, true)` computes everything for particles from 6601 to 9999 and finally updates the mesh.  
+
+Example 2 : you could keep, say, the first 5000 particles as unused in your pool and compute the particle behavior only for the 5000 lasts in your global pool.  
+
 
 ### _colors and uvs usages_
 _soon_
 
 <br/>
 ### Update each particle shape
-* _SPS.updateParticleVertex() usage_ :  
+* `SPS.updateParticleVertex()` _usage_ :  
 It happens before particle scaling, rotation and translation and it allows to update the vertex coordinates of each particle.   
 This function will be called for each vertex of each particle and it will be passed the current particlen the current vertex and its current index in the particle shape.
 ```javascript
@@ -352,9 +381,9 @@ SPS.updateParticleVertex = function(particle, vertex, v) {
     vertex.z *= Math.random() + 1;
 }
 ```
-Note well that this vertex update is not stored (the particle shape isn't modified) but just computed in the next call to _setParticles()_. So there is no value accumulation : the vertex coordinates are always the initial ones when entering this function.  
-Note also that the shape reference for each particle is the original shape of the mesh model you passed in _addShape()_, even if you had passed also a custom _vertexFunction_ (see in the part : "Going furhter in immutable SPS").  
-The good news is that the very same function can be use for _SPS.updateParticleVertex_ and for the custom _vertexFunction_ expected by _addShape()_.  
+Note well that this vertex update is not stored (the particle shape isn't modified) but just computed in the next call to `setParticles()`. So there is no value accumulation : the vertex coordinates are always the initial ones when entering this function.  
+Note also that the shape reference for each particle is the original shape of the mesh model you passed in `addShape()`, even if you had passed also a custom `vertexFunction` (see in the part : "Going furhter in immutable SPS").  
+The good news is that the very same function can be use for `SPS.updateParticleVertex` and for the custom `vertexFunction` expected by `addShape()`.  
 So to better understand how it works, here is another global pseudo-code schema :
 ```javascript
 var particles: SolidParticles[] = [array of SolidParticle objects];
@@ -375,11 +404,38 @@ function setParticles() {
 ```
 Example : http://www.babylonjs-playground.com/#1X7SUN#5  
 
+###Pickable Particles
+You can set your particles as pickable with the parameter `pickable` when creating your SPS :
+```javascript
+var SPS = new BABYLON.SolidParticleSystem('SPS', scene, {pickable: true});
+```
+This will set the underlying as pickable and populate an array called `SPS.pickedParticles`.  
+This array has as many elements as the SPS mesh has many faces and each element is an object with these properties :
+
+* `idx` : the picked particle idx
+* `faceId` : the face index of the picked particle (counted within this particle)
+
+Example :
+```javascript
+var SPS = new BABYLON.SolidParticleSystem('SPS', scene, {pickable: true});
+scene.onPointerDown = function(evt, pickResult) {
+    var meshFaceId = pickResult.faceId;             // get the mesh picked face
+    if (faceId == -1) {return;}                     // return if nothing picked
+    var idx = SPS.pickedParticles[meshFaceId].idx;  // get the picked particle idx from the pickedParticles array
+    var p = SPS.particles[idx];                     // get the picked particle
+    p.color.r = 1;                                  // turn it red    
+    p.color.b = 0;
+    p.color.g = 0;
+    p.velocity.y = -1;                              // drop it
+    SPS.setParticles();
+};
+```
+
 ###Garbage Collector Concerns  
 In Javascript, the Garbage Collector is usually your friend : it takes care about cleaning up all the not any longer needed variables you could have declared and thus it sets the memory free.  
 However, it can sometimes become an awkward friend because it can start its cleaning just when you want to display a very smooth animation, so it takes the CPU for itself and leaves to you only those nice lags on the screen.  
 So the best to do to avoid the GC unpredictable behavior is to keep as low as possible the creation of temporary objects or variables in the render loop.  
-As you know now, _updateParticle()_ and _updateParticleVertex()_ are called each frame for each particle or each particle vertex. 
+As you know now, `updateParticle()` and `updateParticleVertex()` are called each frame for each particle or each particle vertex. 
 So imagine that you have a SPS with 30 000 particles. What if you code something like that to simulate some particle acceleration :  
 ```javascript
 SPS.updateParticle = function(particle) {
@@ -389,9 +445,9 @@ SPS.updateParticle = function(particle) {
 }
 ```
 The _velStep_ temporary variable will be created 30 000 times and then be requested then for collection by the GC !  
-So it is better to declare once _velStep_ outside the _udpateParticle()_ method.  
+So it is better to declare once _velStep_ outside the `udpateParticle()` method.  
 The SPS provides to you a way to declare once all your variable needed for it at its own level instead of creating global variables.  
-Just use the SPS _vars_ property :
+Just use the SPS `vars` property :
 ```javascript
 SPS.vars.velStep = 0.05;
 SPS.updateParticle = function(particle) {
@@ -411,8 +467,10 @@ SPS.vars.myString = "foo"; // just keep setting string values to myString afterw
 ```
 
 
+
+
 ###Rebuild the mesh
-if the mesh has been by modified with _setParticles()_ ...
+if the mesh has been by modified with `setParticles()` ...
 
 
 _(edition in progress + add many PG example everywhere)_

@@ -28,20 +28,17 @@ mesh.rotationQuaternion = new BABYLON.Quaternion(x, y, z, w); // Quaternion
 mesh.translate(BABYLON.Axis.X, 1.0, BABYLON.Space.WORLD);
 </code></pre>
 <p>Please note that <code>mesh.rotate</code> generates a quaternion and then uses <code>mesh.rotationQuaternion</code>.</p>
-<h1><a name="generating-a-rotation-from-a-target-system" class="anchor" href="#generating-a-rotation-from-a-target-system"></a>Generating a rotation from a target system</h1><p>Sometimes you may know the final orientation you want to give to a mesh in terms of alignment with distant axis, but you don&#39;t what rotation to apply to it to achieve this wanted orientation. 
-There is a way to compute an Euler rotation from a set of axis : </p>
+<h1><a name="generating-a-rotation-from-a-target-system" class="anchor" href="#generating-a-rotation-from-a-target-system"></a>Generating a rotation from a target system</h1><p>Sometimes you may know the final orientation you want to give to a mesh in terms of alignment with distant axis, but you don&#39;t know what rotation to apply to it to achieve this wanted orientation.<br>There is a way to compute an Euler rotation from a set of axis : </p>
 <pre><code class="lang-javascript">var rot = BABYLON.Vector.RotationFromAxis(axis1, axis2, axis3);
 mesh.rotation = rot;
 </code></pre>
-<p>where <em>axis1</em>, <em>axis2</em> and <em>axis3</em> are three left-handed oriented orthogonal vectors. 
-With this code, the mesh will be aligned thus : </p>
+<p>where <em>axis1</em>, <em>axis2</em> and <em>axis3</em> are three left-handed oriented orthogonal vectors.<br>With this code, the mesh will be aligned thus :   </p>
 <ul>
 <li><em>axis1</em> will become x axis in its local system</li>
 <li><em>axis2</em> will become y axis in its local system</li>
 <li><em>axis3</em> will become z axis in its local system</li>
 </ul>
-<p>example : <a href="http://www.babylonjs-playground.com/#VYM1E#5">http://www.babylonjs-playground.com/#VYM1E#5</a> 
-The textured plane mesh is currently aligned with the axis between spheres (axis1) and &quot;faces&quot; the camera : axis2 = camera.position </p>
+<p>example : <a href="http://www.babylonjs-playground.com/#VYM1E#5">http://www.babylonjs-playground.com/#VYM1E#5</a><br>The textured plane mesh is currently aligned with the axis between spheres (axis1) and &quot;faces&quot; the camera : axis2 = camera.position </p>
 <h1><a name="baking-transform" class="anchor" href="#baking-transform"></a>Baking Transform</h1><p>In certain situations you might be interested in applying a transform (position, rotation, scale) directly to the mesh vertices, instead of saving it as a property of the mesh. This is called baking, and can be useful in the following situations:</p>
 <ul>
 <li>building a set of static geometry</li>

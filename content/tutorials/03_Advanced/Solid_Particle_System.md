@@ -436,20 +436,20 @@ scene.onPointerDown = function(evt, pickResult) {
 The SPS pickability is directly related to the size of its bounding box (please read 'SPS Visibility' part). So, in order to make sure your particles will be pickable, don't forget to force, at last once, the bounding box size recomputation once the particles are set in the space with `setParticles()`.  
 
 ###SPS Visibility
-To render the meshes on the screen, BJS uses their bounding box (BBox) : it the BBox is in the frustum, then the mesh is selected to be rendered on the screen. This method is really performant as it avoids to make the GPU compute things that wouldn't be visible. The BBox of each mesh is recomputed when its World Martix is updated.    
+To render the meshes on the screen, BJS uses their bounding box (BBox) : if the BBox is in the frustum, then the mesh is selected to be rendered on the screen. This method is really performant as it avoids to make the GPU compute things that wouldn't be visible. The BBox of each mesh is recomputed when its World Martix is updated.    
 When you create a SPS, unless you use the `positionFunction` at creation time, all its particles are set by default at the position (0, 0, 0). So the size of the SPS mesh is initially the size of its biggest particle, so it is for its BBox.  
 If you animate your particles without updating the SPS mesh World Matrix (ex : the whole SPS doesn't move, rotate or scale), its BBox may keep far more little than the current space occupied by the moving particles. So, if this little BBox gets out of the screen (cam rotation for instance), the whole SPS can then disappear at once !  
 
 In order to manage the SPS visibility, you have two ways : the method `SPS.refreshVisibleSize()` and the property `SPS.alwaysVisible` (default _false_); 
 
 * `SPS.refreshVisibleSize()` : updates the SPS mesh BBox size on demand. This is an intensive computation, so it's better not to use it in the render loop each frame. You could call it once the mesh has reached its maximum size for instance. This the method to use if you have a SPS located its in own space somewhere in your scene, like a particle explosion, a fountain, etc.   
-*  `SPS.alwaysVisible` : if true, forces the SPS mesh to be computed by the GPU even if its BBox is not visible. This property is to use when the player evolves inside the SPS (maze, asteroid field) or if the SPS is always bigger than the visible part on the screen. Note that setting it to _true_ doesn't recompute the BBox size, so if you need for some reason (pickability, collisions, etc) to update the BBox, you have to call also at last once `SPS.refreshVisibleSize()`.  
+*  `SPS.alwaysVisible` : if _true_, forces the SPS mesh to be computed by the GPU even if its BBox is not visible. This property is to use when the player evolves inside the SPS (maze, asteroid field) or if the SPS is always bigger than the visible part on the screen. Note that setting it to _true_ doesn't recompute the BBox size, so if you need for some reason (pickability, collisions, etc) to update the BBox, you have to call also at last once `SPS.refreshVisibleSize()`.  
 
 
 ###Garbage Collector Concerns  
 In Javascript, the Garbage Collector is usually your friend : it takes care about cleaning up all the not any longer needed variables you could have declared and thus it sets the memory free.  
-However, it can sometimes become an awkward friend because it can start its cleaning just when you want to display a very smooth animation, so it takes the CPU for itself and leaves to you only those nice lags on the screen.  
-So the best to do to avoid the GC unpredictable behavior is to keep as low as possible the creation of temporary objects or variables in the render loop.  
+However, it can sometimes become an awkward friend because it can start its cleaning just while you are displaying a very smooth animation, so it takes the CPU for itself and leaves to you only those nice lags on the screen.  
+So the best to do to avoid this GC unpredictable behavior is to keep as low as possible the creation of temporary objects or variables in the render loop.  
 As you know now, `updateParticle()` and `updateParticleVertex()` are called each frame for each particle or each particle vertex. 
 So imagine that you have a SPS with 30 000 particles. What if you code something like that to simulate some particle acceleration :  
 ```javascript

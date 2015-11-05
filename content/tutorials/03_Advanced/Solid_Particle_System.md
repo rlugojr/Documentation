@@ -405,9 +405,9 @@ function setParticles() {
 Example : http://www.babylonjs-playground.com/#1X7SUN#5  
 
 ###Pickable Particles
-You can set your particles as pickable with the parameter `pickable` (default _false_) when creating your SPS :
+You can set your particles as pickable with the parameter `isPickable` (default _false_) when creating your SPS :
 ```javascript
-var SPS = new BABYLON.SolidParticleSystem('SPS', scene, {pickable: true});
+var SPS = new BABYLON.SolidParticleSystem('SPS', scene, {isPickable: true});
 ```
 This will set the underlying mesh as pickable and populate an array called `SPS.pickedParticles`. So, don't set your SPS as pickable if you don't need it to be, this will save much memory.  
 This array has as many elements as the SPS mesh has many faces and each element is an object with these properties :
@@ -417,7 +417,7 @@ This array has as many elements as the SPS mesh has many faces and each element 
 
 Example :
 ```javascript
-var SPS = new BABYLON.SolidParticleSystem('SPS', scene, {pickable: true});
+var SPS = new BABYLON.SolidParticleSystem('SPS', scene, {isPickable: true});
 // add shapes, build the mesh, init particles, etc
 SPS.setParticles();                                 // initial SPS draw
 SPS.refreshVisibleSize();                           // force the BBox recomputation
@@ -440,10 +440,10 @@ To render the meshes on the screen, BJS uses their bounding box (BBox) : if the 
 When you create a SPS, unless you use the `positionFunction` at creation time, all its particles are set by default at the position (0, 0, 0). So the size of the SPS mesh is initially the size of its biggest particle, so it is for its BBox.  
 If you animate your particles without updating the SPS mesh World Matrix (ex : the whole SPS doesn't move, rotate or scale), its BBox may keep far more little than the current space occupied by the moving particles. So, if this little BBox gets out of the screen (cam rotation for instance), the whole SPS can then disappear at once !  
 
-In order to manage the SPS visibility, you have two ways : the method `SPS.refreshVisibleSize()` and the property `SPS.alwaysVisible` (default _false_); 
+In order to manage the SPS visibility, you have two ways : the method `SPS.refreshVisibleSize()` and the property `SPS.isAlwaysVisible` (default _false_); 
 
 * `SPS.refreshVisibleSize()` : updates the SPS mesh BBox size on demand. This is an intensive computation, so it's better not to use it in the render loop each frame. You could call it once the mesh has reached its maximum size for instance. This the method to use if you have a SPS located its in own space somewhere in your scene, like a particle explosion, a fountain, etc.   
-*  `SPS.alwaysVisible` : if _true_, forces the SPS mesh to be computed by the GPU even if its BBox is not visible. This property is to use when the player evolves inside the SPS (maze, asteroid field) or if the SPS is always bigger than the visible part on the screen. Note that setting it to _true_ doesn't recompute the BBox size, so if you need for some reason (pickability, collisions, etc) to update the BBox, you have to call also at last once `SPS.refreshVisibleSize()`.  
+*  `SPS.isAlwaysVisible` : if _true_, forces the SPS mesh to be computed by the GPU even if its BBox is not visible. This property is to use when the player evolves inside the SPS (maze, asteroid field) or if the SPS is always bigger than the visible part on the screen. Note that setting it to _true_ doesn't recompute the BBox size, so if you need for some reason (pickability, collisions, etc) to update the BBox, you have to call also at last once `SPS.refreshVisibleSize()`.  
 
 
 ###Garbage Collector Concerns  

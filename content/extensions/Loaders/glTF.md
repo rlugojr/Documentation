@@ -30,17 +30,15 @@ BABYLON.SceneLoader.Load("./", "duck.gltf", engine, function (scene) {
     * Automatically bind matrices
     * Set uniforms
 * Import and set animations
+* Handle dummy nodes (empty nodes)
+* Skinning
+    * Skeletons
+    * Bones
 
 ## Unsupported features
 * ImportMesh function
 * Skinning
-    * Skeletons
-    * Bones
-    * Hardware skinning (shaders support)
-* Shaders
-    * Set uniforms with types MAT2 and MAT3
-* Handle dummy nodes (empty nodes)
+    * Bones animations
 
 ## To improve
-* Y is UP
 * Test on more animations

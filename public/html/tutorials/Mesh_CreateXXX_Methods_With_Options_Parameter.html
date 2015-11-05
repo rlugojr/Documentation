@@ -11,6 +11,7 @@
 <li><a href="#torus">Torus</a></li>
 <li><a href="#torus-knot">Torus Knot</a></li>
 <li><a href="#polyhedron">Polyhedron</a></li>
+<li><a href="#icosphere">IcoSphere</a></li>
 <li><a href="#decals">Decals</a></li>
 </ul>
 </li>
@@ -596,9 +597,9 @@ Example :</p>
 <td>UVs(0, 0, 1, 1) for each side</td>
 </tr>
 <tr>
-<td>singleFace</td>
-<td><em>(boolean)</em> if true, a polyhedron has a single global face, <em>faceUV</em> and <em>faceColors</em> are ignored</td>
-<td>false</td>
+<td>flat</td>
+<td><em>(boolean)</em> if false, a polyhedron has a single global face, <em>faceUV</em> and <em>faceColors</em> are ignored</td>
+<td>true</td>
 </tr>
 <tr>
 <td>updatable</td>
@@ -705,6 +706,61 @@ Example :</p>
 
 var mesh = BABYLON.MeshBuilder.CreatePolyhdron(&quot;h&quot;, {custom: heptagonalPrism}, scene);
 </code></pre>
+<h4><a name="icosphere" class="anchor" href="#icosphere"></a>IcoSphere</h4><p>This a sphere based upon an icosahedron with 20 triangular faces which can be subdivided.</p>
+<pre><code class="lang-javascript">var icosphere = BABYLON.MeshBuilder.CreateIcoSphere(&quot;ico&quot;, {radius: 5, radiusY: 8, subdivisions: 6}, scene);
+</code></pre>
+<p>Properties, all optional :</p>
+<table>
+<thead>
+<tr>
+<th>property</th>
+<th>value</th>
+<th>default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>radius</td>
+<td><em>(number)</em> radius</td>
+<td>1</td>
+</tr>
+<tr>
+<td>radiusX</td>
+<td><em>(number)</em>  the X radius, overwrites the radius value</td>
+<td>radius</td>
+</tr>
+<tr>
+<td>radiusY</td>
+<td><em>(Vector3)</em>  the Y radius, overwrites the radius value</td>
+<td>radius</td>
+</tr>
+<tr>
+<td>radiusZ</td>
+<td><em>(number)</em> the Z radius, overwrites the radius value</td>
+<td>radius</td>
+</tr>
+<tr>
+<td>subdivisions</td>
+<td><em>(number)</em> the number of subdivisions</td>
+<td>4</td>
+</tr>
+<tr>
+<td>flat</td>
+<td><em>(boolean)</em> if true, the mesh faces have their own normals</td>
+<td>true</td>
+</tr>
+<tr>
+<td>updatable</td>
+<td><em>(boolean)</em> true if the mesh is updatable</td>
+<td>false</td>
+</tr>
+<tr>
+<td>sideOrientation</td>
+<td><em>(number)</em> side orientation</td>
+<td>DEFAULTSIDE</td>
+</tr>
+</tbody>
+</table>
 <h4><a name="decals" class="anchor" href="#decals"></a>Decals</h4><p>Example :</p>
 <pre><code class="lang-javascript">var decal = BABYLON.MeshBuilder.CreateDecal(&quot;decal&quot;, mesh,  {position: myPos}, scene);
 </code></pre>

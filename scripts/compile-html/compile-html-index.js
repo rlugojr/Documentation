@@ -20,4 +20,8 @@ module.exports = function(done) {
     var htmlRender = jade.renderFile('views/index.jade', { pretty: false, currentUrl: '/' });
     fs.writeFileSync('public/html/index.html', htmlRender);
     logger.info("> Index.html compiled.");
+
+    htmlRender = jade.renderFile('views/playground.jade', { pretty: false, currentUrl: '/' });
+    fs.writeFileSync('public/html/playground.html', htmlRender);
+    logger.info("> Playground.html compiled.");
 };

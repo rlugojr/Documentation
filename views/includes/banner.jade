@@ -29,6 +29,9 @@ nav.nav-main
             #classes.item(class={active: (currentUrl === '/classes') || (currentUrl === '/classes/class')})
                 a(href='/classes')
                     | Classes
+            #playground.item(class={active: currentUrl === '/playground'})
+                a(href='/playground')
+                    | Playground
         .more
             .searchbar
                 form(method='get', action='/search')

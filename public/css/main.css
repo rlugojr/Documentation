@@ -886,6 +886,9 @@ p {
     clear: both;
     content: "";
     display: table; }
+  .searchplayground-content #intro {
+    text-align: center;
+    margin: 8px; }
   .searchplayground-content .searchplaygroundbar {
     width: 100%;
     text-align: center; }
@@ -952,8 +955,8 @@ p {
     .searchplayground-content .result .resultTitle {
       font-size: 1.1em;
       margin: 0; }
-    .searchplayground-content .result p {
-      margin-left: 10px; }
+    .searchplayground-content .result pre {
+      margin-left: 30px; }
 
 #wrapper.error {
   background-color: white;

@@ -5,6 +5,13 @@ include includes/header.jade
             h1 Playground Search
         .horizontal-separator
         .searchplayground-content
+
+            p#intro
+                | Here you can search something in the
+                a(href="http://www.babylonjs-playground.com/", target="_blank")
+                    |  babylon playground
+                |  . To do so, enter a text in the field below.
+
             .searchplaygroundbar
                 form(method='get', action='/playground')
                     input(type='text', name='q', placeholder='Search in playgrounds...')
@@ -14,7 +21,7 @@ include includes/header.jade
             if(searchTerm != 0)
                 .searchHeader
                     h2
-                        | Results for "<a href="/search?q=#{searchTerm}">#{searchTerm}</a>"
+                        | #{resultsCount} Results for "<a href="/search?q=#{searchTerm}">#{searchTerm}</a>"
 
             .pageChangeWrapper
                 if(page - 1 > 0)
@@ -28,10 +35,15 @@ include includes/header.jade
                 each result in results
                     .result
                         .resultTitle
-                            a(href=result.src)
-                                | #{result.src}
-                            p
-                                | #{result.content}
+                            a(href="http://www.babylonjs-playground.com/#" + result.Id + "#" + result.Version, target="_blank")
+                                | #{result.Id} : version #{result.Version}
+                            //pre
+                            //    code.JavaScript
+                            //        | #{result.content[0]}
+                            //        | #{result.content[1]}
+                            //        | #{result.content[2]}
+                            //        | #{result.content[3]}
+                            //        | #{result.content[4]}
 
             .pageChangeWrapper
                 if(page - 1 > 0)
@@ -44,3 +56,6 @@ include includes/header.jade
 
     include includes/footer.jade
     script(src='/js/search.js')
+    //link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/vs.min.css")
+    //script(src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js")
+    //script(src='/js/codehighlight.js')

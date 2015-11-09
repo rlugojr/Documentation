@@ -35,6 +35,8 @@ The Gaussian Blur equation used:
 
 ```hdr.gaussStandDev``` controls the gaussian blur standard deviation (sigma). Default 0.8
 
+```hdr.gaussMultiplier``` controls the blur intensity. Default 1.0
+
 ### Bright Pass ###
 
 The bright pass is rendered before the gaussian blur pass. It is used to compute the minimum light needed to compute the HDR effect.
@@ -66,5 +68,6 @@ hdr.minimumLuminance = 0.2;
 hdr.maximumLuminance = 1e20;
 hdr.luminanceDecreaseRate = 0.3; // Decrease rate: darkness to light
 hdr.luminanceIncreaserate = 0.5; // Increase rate: light to darkness
+hdr.gaussMultiplier = 4.0; // Increase the blur intensity
 ```
 

@@ -52,11 +52,14 @@ Once the behavior will be given (or not), you actually display the particles at 
 SPS.billboard = true; // or false by default
 SPS.setParticles();
 ```
-`SPS.billboard` is a boolean (default _false_). If set to _true_, all the particles will face the cam and their _x_ and _y_ rotation values will be ignored. This is rather useful if you display only plane particles.  
-You need to call `SPS.setParticles()` within the `scene.registerBeforeRender()` function in order to display the SPS in billboard mode.   
+`SPS.billboard` is a boolean (default _false_). If set to _true_, all the particles will face the cam and their _x_ and _y_ rotation values will be ignored.  
+This is rather useful if you display only plane particles. However, if you deal only with 2D particles you should consider to use the [BJS Particle System](http://doc.babylonjs.com/tutorials/12._Particles) or the [Sprite Manager](http://doc.babylonjs.com/tutorials/08._Sprites) which are more performant in 2D computation.  
+In order to display the SPS in billboard mode, you need to call `SPS.setParticles()` within the `scene.registerBeforeRender()` function.  
+
 Here is an example with plane particles in billboard mode : http://www.babylonjs-playground.com/#WCDZS#7    
 The same but with plane particle rotations and no billboard mode : http://www.babylonjs-playground.com/#WCDZS#1  
 The same with solid particles, boxes and tetrahedrons : http://www.babylonjs-playground.com/#WCDZS#2  
+Another one with colors and rotations : http://www.babylonjs-playground.com/#2FPT1A#9  
 
 
 ### Particle Management
@@ -217,6 +220,7 @@ In order to have only one draw call to the GPU, these three systems use only one
 ## Advanced Features
 ### Create an immutable SPS
 You may have to create many similar objects in your scene that won't change afterwards : buildings in the distance, asteroids, scraps, etc. It may thus be useful to use the SPS to set only one mesh in your scene, so one draw call for the rendering.  
+Example : http://www.babylonjs-playground.com/#2FPT1A#5  
 
 You can achieve this by two different ways.  
 * You can just build your SPS as explained before and then call just once `setParticles()`, before and outside the render loop, to set your particles where and how you need.  
@@ -304,7 +308,7 @@ SPS.addShape(box, 150, {vertexFunction: myVertexFunction, positionFunction: myPo
 ```
 Example with asteroids : http://www.babylonjs-playground.com/#2FPT1A#2  
 
-Note that you can also create some immutable objects rendered with only one draw call by using either `MergeMesh()` ([tuto](http://doc.babylonjs.com/tutorials/How_to_Merge_Meshes)), etheir [Instances](http://doc.babylonjs.com/tutorials/How_to_use_Instances).
+Note that you can also create some immutable objects rendered with only one draw call by using either `MergeMesh()` ([tutorial](http://doc.babylonjs.com/tutorials/How_to_Merge_Meshes)), etheir [Instances](http://doc.babylonjs.com/tutorials/How_to_use_Instances).
 <br/>
 <br/>
 
@@ -348,7 +352,7 @@ particle.color.b = blue;
 particle.color.a = alpha;
 ```
 
-Don't forget, if you want to set an alpha value, to enable the alpha channel for vertex colors :
+If you want to set an alpha value, don't forget to enable the alpha channel for vertex colors :
 ```javascript
 SPS.mesh.hasVertexAlpha = true;
 ```
@@ -420,6 +424,7 @@ function setParticles() {
 }
 ```
 Example : http://www.babylonjs-playground.com/#1X7SUN#5  
+or dancing worms : http://www.babylonjs-playground.com/#1X7SUN#7  
 
 ###Pickable Particles
 You can set your particles as pickable with the parameter `isPickable` (default _false_) when creating your SPS :
@@ -451,6 +456,8 @@ scene.onPointerDown = function(evt, pickResult) {
 };
 ```
 The SPS pickability is directly related to the size of its bounding box (please read 'SPS Visibility' part). So, in order to make sure your particles will be pickable, don't forget to force, at last once, the bounding box size recomputation once the particles are set in the space with `setParticles()`.  
+Pickable particle example (no update in the render loop) : http://www.babylonjs-playground.com/#2FPT1A#9  
+Pickable particle example (rotation) : http://www.babylonjs-playground.com/#2FPT1A#14  
 
 ###SPS Visibility
 To render the meshes on the screen, BJS uses their bounding box (BBox) : if the BBox is in the frustum, then the mesh is selected to be rendered on the screen. This method is really performant as it avoids to make the GPU compute things that wouldn't be visible. The BBox of each mesh is recomputed when its World Martix is updated.    

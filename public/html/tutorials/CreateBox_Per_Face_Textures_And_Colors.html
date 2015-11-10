@@ -2,11 +2,11 @@
 <li><a href="#textures">Textures</a></li>
 <li><a href="#colors">Colors</a></li>
 </ul>
-</div></div><div id="staticContent"><h2><a name="createbox-per-face-textures-and-colors" class="anchor" href="#createbox-per-face-textures-and-colors"></a>CreateBox per face textures and colors</h2><p>In this tutorial, we will learn how to use the <em>faceUV</em> and <em>faceColors</em> parameters of the <em>CreateBox</em> method in order to set a different texture or color per box face.</p>
+</div></div><div id="staticContent"><h2><a name="meshbuilder-createbox-per-face-textures-and-colors" class="anchor" href="#meshbuilder-createbox-per-face-textures-and-colors"></a>MeshBuilder CreateBox per face textures and colors</h2><p>In this tutorial, we will learn how to use the <em>faceUV</em> and <em>faceColors</em> parameters of the <code>MeshBuilder.CreateBox()</code> method in order to set a different texture or color per box face.</p>
 <h3><a name="textures" class="anchor" href="#textures"></a>Textures</h3><p>Imagine that we have an image file such as this : <a href="http://jerome.bousquie.fr/BJS/images/spriteAtlas.png">http://jerome.bousquie.fr/BJS/images/spriteAtlas.png</a><br>We call it, in video games development,  a sprite atlas because we have 24 different spite images in a single file : 4 rows of 6 sprites, each having the same size. This is just an example, we could have had 32 rows of 32 images as well.    </p>
 <p>Well, I&#39;m about to talk about atlases here, but remember it&#39;s only an example to illustrate the per-texture feature. It&#39;s not mandatory to use an atlas, we can just use a regular texture file and choose what part of it to display on each (or only some) box face.  </p>
 <p>Let&#39;s start...</p>
-<p>We create a rectangular box by using the <em>options</em> parameters line 43 and 50 : <a href="http://www.babylonjs-playground.com/#1V3CAT#10">http://www.babylonjs-playground.com/#1V3CAT#10</a><br>Then we set the texture as a value on a material as usual : <a href="http://www.babylonjs-playground.com/#1V3CAT#11">http://www.babylonjs-playground.com/#1V3CAT#11</a><br>Nothing new until now, right ?  </p>
+<p>We create a rectangular box by using the <code>options</code> parameters line 43 and 50 : <a href="http://www.babylonjs-playground.com/#1V3CAT#10">http://www.babylonjs-playground.com/#1V3CAT#10</a><br>Then we set the texture as a value on a material as usual : <a href="http://www.babylonjs-playground.com/#1V3CAT#11">http://www.babylonjs-playground.com/#1V3CAT#11</a><br>Nothing new until now, right ?  </p>
 <p>Let&#39;s go on.</p>
 <p>Please let&#39;s have a look from line 27 :<br>Line 30, we define a new array called <em>faceUV</em>, sized 6 because our box has 6 faces. This array will always content Vector4 elements.<br>Each <em>Vector4(x, y, z, w)</em> will be defined in this way :  </p>
 <p>x = Ubottom<br>y = Vbottom<br>z = Utop<br>w = Vtop<br>all are in the range [0, 1]</p>
@@ -27,7 +27,7 @@ Vtop = 1 / 4
     faceUV[i] = new BABYLON.Vector4(i/hSpriteNb, 0, (i+1)/hSpriteNb, 1 / vSpriteNb);
   }
 </code></pre>
-<p>Then, to pass this array to the <em>CreateBox</em> method, just add a parameter called <em>faceUV</em>, valued with this array, to the options :  </p>
+<p>Then, to pass this array to the <code>CreateBox()</code> method, just add a parameter called <code>faceUV</code>, valued with this array, to the options :  </p>
 <pre><code class="lang-javascript">  var options = {
     width: 10,
     height: 3,
@@ -52,18 +52,18 @@ Obviously, we aren&#39;t not required to set every box face.<br>Imagine we want 
 <pre><code class="lang-javascript">  var faceUV = new Array(6);
   faceUV[4] = new BABYLON.Vector4(0, 0, 1 / hSpriteNb, 1 / vSpriteNb);
 </code></pre>
-<p>Only two lines of code only and that&#39;s all : <a href="http://www.babylonjs-playground.com/#1V3CAT#4">http://www.babylonjs-playground.com/#1V3CAT#4</a><br><br/>
+<p>Only two lines of code only and that&#39;s all : <a href="http://www.babylonjs-playground.com/#1V3CAT#25">http://www.babylonjs-playground.com/#1V3CAT#25</a><br><br/>
 <br/>
-We could also want to apply two different images from the same texture file onto two different meshes.<br>Nothing easier : <a href="http://www.babylonjs-playground.com/#1V3CAT#9">http://www.babylonjs-playground.com/#1V3CAT#9</a><br>Two boxes, two images, but only one texture !
+We could also want to apply two different images from the same texture file onto two different meshes.<br>Nothing easier : <a href="http://www.babylonjs-playground.com/#1V3CAT#26">http://www.babylonjs-playground.com/#1V3CAT#26</a><br>Two boxes, two images, but only one texture !
 <br/>
 <br/></p>
-<h3><a name="colors" class="anchor" href="#colors"></a>Colors</h3><p>Let&#39;s go back to our initial rectangular box : <a href="http://www.babylonjs-playground.com/#1V3CAT">http://www.babylonjs-playground.com/#1V3CAT</a><br>We are about to apply the same principle here not with textures, but with colors.<br>Let&#39;s define a 6 element array <em>faceColors</em> (6 box faces) and just set the color of the faces we want with <em>Colors4</em>.  </p>
+<h3><a name="colors" class="anchor" href="#colors"></a>Colors</h3><p>Let&#39;s go back to our initial rectangular box : <a href="http://www.babylonjs-playground.com/#1V3CAT#10">http://www.babylonjs-playground.com/#1V3CAT#10</a><br>We are about to apply the same principle here not with textures, but with colors.<br>Let&#39;s define a 6 element array <em>faceColors</em> (6 box faces) and just set the color of the faces we want with <code>Colors4</code>.  </p>
 <pre><code class="lang-javascript">  var faceColors = new Array(6);
 
   faceColors[4] = new BABYLON.Color4(1,0,0,1);   // red top
   faceColors[1] = new BABYLON.Color4(0,1,0,1);   // green front
 </code></pre>
-<p>Then pass this array to the <em>CreateBox</em> method with the new faceColors parameter of <em>options</em>  </p>
+<p>Then pass this array to the <code>CreateBox()</code> method with the new <code>faceColors</code> parameter of <code>options</code>    </p>
 <pre><code class="lang-javascript">  var options = {
     width: 10,
     height: 3,
@@ -74,7 +74,7 @@ We could also want to apply two different images from the same texture file onto
   var box = BABYLON.MeshBuilder.CreateBox(&#39;box&#39;, options, scene);
 </code></pre>
 <p>Simple, isn&#39;t it ?  <a href="http://www.babylonjs-playground.com/#1V3CAT#14">http://www.babylonjs-playground.com/#1V3CAT#14</a>  </p>
-<p>These colors are BJS Color4-class values. The Color4 alpha values become active if we set <em>hasVertexAlpha = true</em> : <a href="http://www.babylonjs-playground.com/#1V3CAT#6">http://www.babylonjs-playground.com/#1V3CAT#6</a>  </p>
+<p>These colors are BJS Color4-class values. The Color4 alpha values become active if we set <code>hasVertexAlpha = true</code> : <a href="http://www.babylonjs-playground.com/#1V3CAT#27">http://www.babylonjs-playground.com/#1V3CAT#27</a>  </p>
 <p>We can even combine the vertex colors with a colored material, blue here :  <a href="http://www.babylonjs-playground.com/#1V3CAT#15">http://www.babylonjs-playground.com/#1V3CAT#15</a>  </p>
 <p>And finally we can also mix per-face colors with per-face textures, and/or mix either of those... with the material&#39;s standard colors. :  </p>
 <pre><code class="lang-javascript">  var options = {

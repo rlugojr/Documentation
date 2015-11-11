@@ -25,8 +25,8 @@ Your SPS is then ready to manage particles. So now :
 ## Basic Usage
 
 ### SPS Creation
-First you create an empty SPS and you add particles to it with the _addShape(mesh, nb)_ method as many times you need.  
-The SPS name will be its underlying mesh name.   
+First you create an empty SPS and you add particles to it with the `addShape(mesh, nb)` method as many times you need.  
+Its underlying mesh name will be the SPS name.   
 
 
 Then you build the mesh.  
@@ -52,11 +52,14 @@ Once the behavior will be given (or not), you actually display the particles at 
 SPS.billboard = true; // or false by default
 SPS.setParticles();
 ```
-`SPS.billboard` is a boolean (default _false_). If set to _true_, all the particles will face the cam and their _x_ and _y_ rotation values will be ignored. This is rather useful if you display only plane particles.  
-You need to call `SPS.setParticles()` within the `scene.registerBeforeRender()` function in order to display the SPS in billboard mode.   
-Here is an example with plane particles in billboard mode : http://www.babylonjs-playground.com/#WCDZS  
+`SPS.billboard` is a boolean (default _false_). If set to _true_, all the particles will face the cam and their _x_ and _y_ rotation values will be ignored.  
+This is rather useful if you display only plane particles. However, if you deal only with 2D particles you should consider to use the [BJS Particle System](http://doc.babylonjs.com/tutorials/12._Particles) or the [Sprite Manager](http://doc.babylonjs.com/tutorials/08._Sprites) which are more performant in 2D computation.  
+In order to display the SPS in billboard mode, you need to call `SPS.setParticles()` within the `scene.registerBeforeRender()` function.  
+
+Here is an example with plane particles in billboard mode : http://www.babylonjs-playground.com/#WCDZS#7    
 The same but with plane particle rotations and no billboard mode : http://www.babylonjs-playground.com/#WCDZS#1  
 The same with solid particles, boxes and tetrahedrons : http://www.babylonjs-playground.com/#WCDZS#2  
+Another one with colors and rotations : http://www.babylonjs-playground.com/#2FPT1A#9  
 
 
 ### Particle Management
@@ -132,7 +135,7 @@ var quadsID = SPS.addShape(plane, 20);
 This is usefull if you want to apply a given behavior to some particle types only.   
 <br/>
 
-## SPS Management
+### SPS Management
 You have access to some SPS properties :
 
 * **`SPS.particles`** : this is the array containing all the particles. You should iterate over this array in `initParticles()` function for instance.
@@ -165,63 +168,8 @@ SPS.dispose();
 SPS = null    // tells the GC the reference can be cleaned up also
 ```
 
-Example :
 
-```javascript
- var cube = BABYLON.MeshBuilder.CreateBox("b", {}, scene);
- // Particle system
-  var speed = 2;
-  var gravity = -0.01;
-  var SPS = new SolidParticleSystem('SPS', scene);
-  SPS.addShape(cube, 1000);
-  var mesh = SPS.buildMesh();
-  mesh.freezeWorldMatrix();
-  cube.dispose();
-
-
-  // define a custom SPS behavior
-
-  SPS.initParticles = function() {
-    // just recycle everything
-    for (var p = 0; p < this.nbParticles; p++) {
-      this.recycleParticle(this.particles[p]);
-    }
-  };
-
-  SPS.recycleParticle = function(particle) {
-    // set particle new velocity, scale and rotation
-    particle.position = BABYLON.Vector3.Zero();  
-    particle.velocity = (new BABYLON.Vector3(Math.random() - 0.5, Math.random(), Math.random() - 0.5)).scaleInPlace(speed);
-    particle.scale = (new BABYLON.Vector3(1, 1, 1)).scaleInPlace(Math.random() * 3 + 1);
-    particle.rotation = (new BABYLON.Vector3(Math.random(), Math.random(), Math.random())).scaleInPlace(0.1);
-    particle.color = new BABYLON.Color4(Math.random(), Math.random(), Math.random(), Math.random());
-  };
-
-  SPS.updateParticle = function(particle) {
-  if (particle.position.y < 0) {
-      this.recycleParticle(particle);
-    }
-    particle.velocity.y += gravity;                         // apply gravity to y
-    (particle.position).addInPlace(particle.velocity);      // update particle new position
-    particle.position.y += speed / 2;
-    var sign = (particle.idx % 2 == 0) ? 1 : -1;            // rotation sign and new value
-    particle.rotation.z += 0.1 * sign;
-    particle.rotation.x += 0.05 * sign;
-    particle.rotation.y += 0.008 * sign;
-  };
-
-  // Main Program
-  // ============
-
-  // init all particle values
-  SPS.initParticles();
-
-  // animate the SPS
-  scene.registerBeforeRender(function() {
-    SPS.setParticles();
-  });
-  ```
-### Summary
+## Summary
 The SPS is behavior-agnostic. This means it doesn't know how the particles will move, rotate, if they have a mass, if there are forces, etc. You have to see it like a big mesh that you can create (`buildMesh`) from many shape models, some BJS existing meshes, (`addShape`) that will be its solid particles. It provides some methods to access then and to manage these solid particles.  
 
 So the initial stuff to do is to create the SPS, then to add as many shapes you need and at last to build the SPS mesh.  
@@ -246,12 +194,33 @@ So `updateParticle()` just changes the particle data, not the mesh itself. The `
 If you want to set an initial status, different from the live behavior that you would implement in `SPS.updateParticle(particle)`, you can use `SPS.initParticles()`.  
 This function doesn't do anything, you have to implement it.   
 It doesn't draw the mesh, it just changes the particle initial status that will be taken in account by the next `SPS.setParticle()` call.
-The same thing with SPS.recycleParticle(particle) what is not called automatically and that you have to implement by your own and to call when you need.  
+The same thing with `SPS.recycleParticle(particle)` what is not called automatically and that you have to implement by your own and to call when you need.  
+
+Remember finally that there are also some other means to deal with particles in BJS like the [Particle System](http://doc.babylonjs.com/tutorials/12._Particles) or the [Sprite Manager](http://doc.babylonjs.com/tutorials/08._Sprites) :  
+
+The Particle System is the most performant in terms of speed and of particle quantity.  
+The particles are 2D quads, have all the same texture and colour. They ever face the screen, so they can have only a z-axis rotation. They aren't z-sorted and aren't pickable.  
+This sytem provides a behavior : emitter, recycler, updater and many particle properties to manage their individual status (position, rotation, lifetime, size, etc).  
+
+The Sprite Manager is intended to manage sprites. They can be used as particles if needed as the Manager is also very performant.  
+The sprites are 2D quads always facing the screen, so they have only a z-axis rotation also. You can adjust from a given texture a different image per sprite and update it at will (sprite atlas). The sprites are z-sorted and are pickable.  
+The Manager doesn't provide a behavior but you can access to many properties to set each sprite status.  
+
+The SPS is a BJS mesh.  
+Its particles are just parts of this big mesh. They can be planar, from a simple triangle to any planar polygon, or/and 3D solid. They face the screen only in `billboard` mode (maybe you should use the SPS in billboard mode only if the two previous means don't yet fit your needs as they are more performant for 2D). You can merge 2D and 3D particles in the same SPS and give them rotation in the space. Each particle can have its own color (vertex color) and own image from a single common texture. They are z-sorted and alpha-blended like any other BJS mesh. They are also pickable. They even have normals and reflect the light. Actually, all the features accessible to a mesh are accessible to the SPS.  
+The SPS provides no behavior but only methods to access and to set each particle.  
+
+About transparency and mesh rendering, you could read this [documentation](http://doc.babylonjs.com/tutorials/Transparency_and_How_Meshes_Are_Rendered).  
+
+In order to have only one draw call to the GPU, these three systems use only one material/texture for all their particles.  
 <br/>
 <br/>
+
+
 ## Advanced Features
 ### Create an immutable SPS
 You may have to create many similar objects in your scene that won't change afterwards : buildings in the distance, asteroids, scraps, etc. It may thus be useful to use the SPS to set only one mesh in your scene, so one draw call for the rendering.  
+Example : http://www.babylonjs-playground.com/#2FPT1A#5  
 
 You can achieve this by two different ways.  
 * You can just build your SPS as explained before and then call just once `setParticles()`, before and outside the render loop, to set your particles where and how you need.  
@@ -302,10 +271,10 @@ var myBuilder = function(particle, i, s) {
   // particle is the current particle
   // i is its global index in the SPS
   // s is its index in its shape, so here from 0 to 149
-  copy.rotation.y = s / 150;
-  copy.position.x = s - 150;
-  copy.uvs = new BABYLON.Vector4(0, 0, 0.33, 0.33); // first image from an atlas
-  copy.scale.y = Math.random() + 1;
+  particle.rotation.y = s / 150;
+  particle.position.x = s - 150;
+  particle.uvs = new BABYLON.Vector4(0, 0, 0.33, 0.33); // first image from an atlas
+  particle.scale.y = Math.random() + 1;
 }
 var box = BABYLON.MeshBuilder.CreateBox('b', {}, scene);
 var SPS = new BABYLON.SolidParticleSystem('SPS', scene);
@@ -314,6 +283,7 @@ var mesh = SPS.buildMesh(false);                       // the mest is not updata
 ```
 In this former example, each box particle will have its own rotation, position, scale and uvs set once for all at construction time. As the mesh is not updatable, the particles are then not manageable with `setParticles()`.  
 You've got here a real immutable mesh. You can still translate it, rotate it, scale it globally as any other mesh until you freeze its World Matrix.  
+Example : a town with 80 000 buildings http://www.babylonjs-playground.com/#2FPT1A#36  
 
 Note that this feature (modifying the mesh at construction time) is not directly related to the mesh `updatable` parameter. This means you can use it even with a default _updatable_ mesh although it is easier to set the particles the classical war with `setParticles()`.  
 
@@ -336,8 +306,9 @@ Of course you can use the both properties together :
 ```javascript
 SPS.addShape(box, 150, {vertexFunction: myVertexFunction, positionFunction: myPositionFunction});
 ```
-Example : http://www.babylonjs-playground.com/#2FPT1A#2  
+Example with asteroids : http://www.babylonjs-playground.com/#2FPT1A#2  
 
+Note that you can also create some immutable objects rendered with only one draw call by using either `MergeMesh()` ([tutorial](http://doc.babylonjs.com/tutorials/How_to_Merge_Meshes)), etheir [Instances](http://doc.babylonjs.com/tutorials/How_to_use_Instances).
 <br/>
 <br/>
 
@@ -360,8 +331,58 @@ Example 1 : you may want to update your 10K particle mesh only every three frame
 Example 2 : you could keep, say, the first 5000 particles as unused ones and compute the particle behavior only for the 5000 lasts in your global pool.  
 
 
-### _colors and uvs usages_
-_soon_
+### Colors and UVs
+In the SPS, you can set a color or/and a different image per particle.  
+#### Colors
+The colors are the Vertex colors, the color related to the vertices themselves. This means that, if you also use a colored material, the vertex colors and the material colors will mix nicely.  
+Unless you want to change the particle color, the particle will be given at creation the vertex color of their model if any. If the model has different vertex color per face (example : [a box with different face colors](http://doc.babylonjs.com/tutorials/CreateBox_Per_Face_Textures_And_Colors)), these colors are saved and all the particles built with this model will look like the model.  
+However, if you change the color of particle, the particle is then given this lone color. In other words, you can only set one single color for each particle (no more face color).  
+The particle colors are `BJS Color4` object.  
+You can set them with the `particle.color` property. Please note that if you want to set this property at SPS creation time with the `positionFunction` parameter (`new SolidParticleSystem("name", {positionFunction: myColorSettings}`), the particle colors are initially `null`, since if you want to set it within the `updateParticle(particle)` method the particle colors are either the model colors if any, either white `Color4(1, 1, 1, 1)`.  
+So, in `positionFunction()` : 
+```javascript
+particle.color = new BABYLON.Color4(red, green, blue, alpha);
+```
+and in `updateParticle()` :
+```javascript
+// in order to not allocate new objects per particle each call
+particle.color.r = red;
+particle.color.g = green;
+particle.color.b = blue;
+particle.color.a = alpha;
+```
+
+If you want to set an alpha value, don't forget to enable the alpha channel for vertex colors :
+```javascript
+SPS.mesh.hasVertexAlpha = true;
+```
+#### UVs
+The SPS uses only one material, so only one texture.  
+However you can choose, per particle,  which part of the texture you want to apply to this particle with the `uvs` particle property.  
+This property is a `Vector4` and is initially set to (0, 0, 1, 1) for each particle (or to initial UVs values if the model had UVs per face), meaning the whole texture image, from its left lower corner (0, 0) to its right upper corner, is to be applied to each particle.  
+If you want apply just a portion of the texture, located at, say, 20% from the image width, 10% from its height for the left lower corner, and 60% from its width and 30% from this height for the right upper corner, you just set the `uvs` property like this : 
+```javascript
+particle.uvs.x = 0.2;   // left lower corner : 20% image width
+particle.uvs.y = 0.1;   // left lower corner : 10% image height
+particle.uvs.z = 0.6;   // right upper corner : 60% image width
+particle.uvs.w = 0.3;   // right upper corner : 30% image width
+```
+This can be used as well either in the `positionFunction` call at SPS creation time, either in `updateParticle()`.  
+
+Like for the colors, there can be only a UVs value per particle even if the particle model had initially different UVs per face. If you don't set the particle `uvs` property and if the model had UVs per face, they are saved.
+
+Like for any other mesh, you can also enable the texture transparency with :
+```javascript
+SPS.mesh.material.diffuseTexture.hasAlpha = true;
+```
+Or even use the alpha channel of the texture image :  
+```javascript
+SPS.mesh.material.useAlphaFromDiffuseTexture = true;
+```
+Please read this [documentation](http://doc.babylonjs.com/tutorials/Transparency_and_How_Meshes_Are_Rendered) for transparency concerns.  
+
+Color and UVs example : http://www.babylonjs-playground.com/#WCDZS#8  
+Texture with alpha : http://www.babylonjs-playground.com/#WCDZS#9  
 
 <br/>
 ### Update Each Particle Shape
@@ -403,6 +424,7 @@ function setParticles() {
 }
 ```
 Example : http://www.babylonjs-playground.com/#1X7SUN#5  
+or dancing worms : http://www.babylonjs-playground.com/#1X7SUN#7  
 
 ###Pickable Particles
 You can set your particles as pickable with the parameter `isPickable` (default _false_) when creating your SPS :
@@ -434,6 +456,8 @@ scene.onPointerDown = function(evt, pickResult) {
 };
 ```
 The SPS pickability is directly related to the size of its bounding box (please read 'SPS Visibility' part). So, in order to make sure your particles will be pickable, don't forget to force, at last once, the bounding box size recomputation once the particles are set in the space with `setParticles()`.  
+Pickable particle example (no update in the render loop) : http://www.babylonjs-playground.com/#2FPT1A#9  
+Pickable particle example (rotation) : http://www.babylonjs-playground.com/#2FPT1A#14  
 
 ###SPS Visibility
 To render the meshes on the screen, BJS uses their bounding box (BBox) : if the BBox is in the frustum, then the mesh is selected to be rendered on the screen. This method is really performant as it avoids to make the GPU compute things that wouldn't be visible. The BBox of each mesh is recomputed when its World Martix is updated.    
@@ -480,12 +504,15 @@ SPS.vars.myFloat = 0.01;   // just keep setting float values to myFloat afterwar
 SPS.vars.myInt = 5;        // just keep setting integer values to myInt afterwards
 SPS.vars.myString = "foo"; // just keep setting string values to myString afterwards
 ```
-
-
-
+Example : From this [article](http://gamedevelopment.tutsplus.com/tutorials/the-three-simple-rules-of-flocking-behaviors-alignment-cohesion-and-separation--gamedev-3444), here is an implementation of a simple particle IA called "flocking" what a behavior of association, then cohesion and separation. This example uses `SPS.vars` to allocate the memory used for results only once instead of in-function temporary variables.     
+http://www.babylonjs-playground.com/#2FPT1A#35   
 
 ###Rebuild the mesh
-if the mesh has been by modified with `setParticles()` ...
+if a mesh, changed at creation time with `positionFunction` or `vertexFunction` has been then modified with `setParticles()`, it can be rebuild by reapplying the internally stored `positionFunction` or `vertexFunction` functions.  
+Note that only the function are stored, not their results. This means that if one of your function produces different results each call (using `Math.random()` for instance), you won't get back the same SPS mesh shape but another computed shape.  
+```javascript
+SPS.rebuildMesh();
+```
+Except in some very specific cases, you might not need to use this function.  
 
 
-_(edition in progress + add many PG example everywhere)_

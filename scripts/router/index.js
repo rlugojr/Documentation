@@ -14,6 +14,7 @@ module.exports = function (app) {
     app.use('/generals', require('./routes/generals'));
     app.use('/page.php', require('./routes/forward'));
     app.use('/search', require('./routes/search'));
+    app.use('/playground', require('./routes/playground'));
 
 
     app.use(require('./routes/root'));

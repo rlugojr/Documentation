@@ -42,6 +42,10 @@
                 $('<a>', {
                     href: '/classes',
                     html: '<i class="fa fa-files-o"></i>Classes'
+                }),
+                $('<a>', {
+                    href: '/playground',
+                    html: '<i class="fa fa-cubes"></i>Playground'
                 })
             ];
 

@@ -504,6 +504,10 @@
         {
           "title": "Normal",
           "filename": "Normal"
+        },
+        {
+          "title": "PBR",
+          "filename": "PBR"
         }
       ]
     },

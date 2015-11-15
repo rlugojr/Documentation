@@ -15,4 +15,4 @@ Here are the next updates we will *probably* add to babylon.js:
 * Morph targets
 * Sprites collisions
 * Continuous update of octrees using webworkers
-
+* Logarithmic depth buffer

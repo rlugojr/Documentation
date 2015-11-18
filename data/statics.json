@@ -332,6 +332,12 @@
           "title": "Render Scene on a PNG",
           "filename": "Render_Scene_on_a_PNG"
         }
+        ,
+        {
+          "title": "Using logarithmic depth buffer",
+          "filename": "Using logarithmic depth buffer"
+        }
+        
       ]
     },
     {
@@ -504,6 +510,10 @@
         {
           "title": "Normal",
           "filename": "Normal"
+        },
+        {
+          "title": "PBR",
+          "filename": "PBR"
         }
       ]
     },

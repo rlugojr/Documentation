@@ -11,6 +11,19 @@
     width: 100%;
   }
 
+  table {
+    width : 60%;
+    margin:auto;
+
+    tr {
+      height : 35px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #eeeeee;
+    }
+  }
+
   .contentTable {
 
     background-color: whitesmoke;

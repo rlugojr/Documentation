@@ -674,6 +674,10 @@
       "desc": "General good things to know",
       "files": [
         {
+          "title": "Interesting Playgrounds",
+          "filename": "playgrounds"
+        },
+        {
           "title": "Approved Naming Conventions",
           "filename": "Approved_Naming_Conventions"
         },

@@ -805,6 +805,13 @@ p {
     max-width: 100%; }
   .static-content iframe {
     width: 100%; }
+  .static-content table {
+    width: 60%;
+    margin: auto; }
+    .static-content table tr {
+      height: 35px; }
+    .static-content table tr:nth-child(even) {
+      background-color: #eeeeee; }
   .static-content .contentTable {
     background-color: whitesmoke;
     padding: 1px 0; }

@@ -15,6 +15,7 @@ Please credit the author if you can!
 | [#2EP7UB](http://babylonjs-playground.azurewebsites.net/#2EP7UB) | Mirors | Wingnut |
 | [#VUJG1#1](http://www.babylonjs-playground.com/#VUJG1#1) | Hypnotizing infinite loader | Temechon |
 | [#27FN5R#8](http://www.babylonjs-playground.com/#27FN5R#8) | Equirectangular map as reflection texture | Deltakosh |
+| [#RNBKQ#8](http://www.babylonjs-playground.com/#RNBKQ#8) | Glossiness and roughness | Deltakosh |
 
 
 

@@ -27,6 +27,7 @@ Please credit the author if you can!
 | [#23M0G6#1](http://www.babylonjs-playground.com/#23M0G6#1) | Rotating mesh to look at a target | iiceman |
 | [#CA4SM#1](http://www.babylonjs-playground.com/#CA4SM#1) | Saving dynamic texture on disk | dbawel |
 | [#QM57B](http://www.babylonjs-playground.com/#QM57B) | Raycast on heighmap | Unknown |
+| [#7SQDY#1](http://www.babylonjs-playground.com/#7SQDY#1) | Using BABYLON.Path3D | jerome |
 
 
 

@@ -1,4 +1,0 @@
-# PBR material
-
-
-

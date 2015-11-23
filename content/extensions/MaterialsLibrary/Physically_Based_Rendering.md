@@ -36,7 +36,7 @@ sphere.material = pbr;
 ```
 Or, create and apply all in one step:
 ```javascript
-pbr.material = new BABYLON.PBRMaterial("pbr", scene);
+sphere.material = new BABYLON.PBRMaterial("pbr", scene);
 ```
 
 > "So how can I adjust my material to give the perfect look to my object?""

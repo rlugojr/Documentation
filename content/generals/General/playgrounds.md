@@ -28,6 +28,7 @@ Please credit the author if you can!
 | [#CA4SM#1](http://www.babylonjs-playground.com/#CA4SM#1) | Saving dynamic texture on disk | dbawel |
 | [#QM57B](http://www.babylonjs-playground.com/#QM57B) | Raycast on heighmap | Unknown |
 | [#7SQDY#1](http://www.babylonjs-playground.com/#7SQDY#1) | Using BABYLON.Path3D | jerome |
+| [#V1BSD](http://www.babylonjs-playground.com/#V1BSD) | Using SSAO Pipeline | Luaacro |
 
 
 

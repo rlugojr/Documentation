@@ -34,7 +34,7 @@ router.get('/', function (req, res) {
         });
 
         var options = {
-            host: 'babylonjs-api-dev.azurewebsites.net',
+            host: 'babylonjs-api.azurewebsites.net',
             port: 80,
             path: '/api/search',
             method:'POST',
@@ -49,34 +49,39 @@ router.get('/', function (req, res) {
             var searchResult = "";
 
             response.setEncoding('utf-8');
-            response.on('data', function(result) {
+            response.on('data', function (result) {
                 searchResult += result;
             });
-            response.on('end', function() {
+            response.on('end', function () {
+
                 searchResult = JSON.parse(searchResult);
 
-                if(searchResult.totalCount == 0) {
+                if (searchResult.totalCount <= 0) {
                     res.render('playground', {
-                        searchTerm  : searchTerm,
+                        searchTerm: searchTerm,
                         resultsCount: 0,
-                        resultMax   : 25,
-                        results     : [],
-                        page        : 1,
+                        resultMax: 25,
+                        results: [],
+                        page: 1
                     });
+
+                    return;
                 }
 
                 searchResult = searchResult.snippets;
 
                 res.render('playground', {
-                    searchTerm  : searchTerm,
+                    searchTerm: searchTerm,
                     resultsCount: searchResult.length,
-                    resultMax   : resultMax,
-                    results     : searchResult.slice(
+                    resultMax: resultMax,
+                    results: searchResult.slice(
                         page * resultMax,
-                        (page +1) * resultMax
+                        (page + 1) * resultMax
                     ),
-                    page        : req.query.page || 1,
+                    page: req.query.page || 1
                 });
+
+                return;
             });
         });
 
@@ -86,8 +91,10 @@ router.get('/', function (req, res) {
                 resultsCount: 0,
                 resultMax   : 25,
                 results     : [],
-                page        : 1,
+                page        : 1
             });
+
+            return;
         });
 
         request.write(postData);
@@ -99,6 +106,8 @@ router.get('/', function (req, res) {
             resultsCount: 0,
             searchTerm : 0
         });
+
+        return;
     }
 });
 

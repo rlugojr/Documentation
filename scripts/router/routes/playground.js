@@ -34,7 +34,7 @@ router.get('/', function (req, res) {
         });
 
         var options = {
-            host: 'babylonjs-api-dev.azurewebsites.net',
+            host: 'babylonjs-api.azurewebsites.net',
             port: 80,
             path: '/api/search',
             method:'POST',

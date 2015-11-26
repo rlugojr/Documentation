@@ -16,6 +16,7 @@ Please credit the author if you can!
 | [#VUJG1#1](http://www.babylonjs-playground.com/#VUJG1#1) | Hypnotizing infinite loader | Temechon |
 | [External](http://synergy-development.fr/equalonyzer/) | Equalizer (with audio) | Stvsynrj |
 | [#CXOLW#3](http://www.babylonjs-playground.com/#CXOLW#3) | Glass wubble ball | Stvsynrj |
+| [#2JOSXE#13](http://www.babylonjs-playground.com/#2JOSXE#13) | PBR with music analyzer | Stvsynrj & jerome |
 
 
 ##Examples

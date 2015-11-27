@@ -93,7 +93,10 @@ uniform vec2 vEmissiveInfos;
 <pre><code>if (this.emissiveTexture &amp;&amp; this.emissiveTexture.clone) {
     newMaterial.emissiveTexture = this.emissiveTexture.clone();
 }
-</code></pre><p>ANd you&#39;re done for the material! Now it is time to test it.</p>
+</code></pre><p>For completeness, you will also have to complete the <em>serialize</em> and <em>Parse</em> functions (This is only required if you want to save/load your material to a .babylon file).
+Please note that <em>serialize</em> function needs to output the complete material name to the serializationObject like here:</p>
+<pre><code>serializationObject.customType = &quot;BABYLON.SimplelMaterial&quot;;
+</code></pre><p>And you&#39;re done for the material! Now it is time to test it.</p>
 <h2><a name="update-the-test-page" class="anchor" href="#update-the-test-page"></a>Update the test page</h2><p>Open <em>test/index.html</em> and add this reference:</p>
 <pre><code>&lt;script src=&quot;../dist/babylon.diffuseEmissiveMaterial.js&quot;&gt;&lt;/script&gt;
 </code></pre><p>Then add the material at line 120:</p>

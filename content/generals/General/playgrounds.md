@@ -17,6 +17,7 @@ Please credit the author if you can!
 | [External](http://synergy-development.fr/equalonyzer/) | Equalizer (with audio) | Stvsynrj |
 | [#CXOLW#3](http://www.babylonjs-playground.com/#CXOLW#3) | Glass wubble ball | Stvsynrj |
 | [#2JOSXE#13](http://www.babylonjs-playground.com/#2JOSXE#13) | PBR with music analyzer | Stvsynrj & jerome |
+| [External](http://synergy-development.fr/babylonyzer/) | Music analyzer | Stvsynrj & Kohai |
 
 
 ##Examples

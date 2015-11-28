@@ -136,7 +136,14 @@ if (this.emissiveTexture && this.emissiveTexture.clone) {
 }
 ```		
 
-ANd you're done for the material! Now it is time to test it.
+For completeness, you will also have to complete the *serialize* and *Parse* functions (This is only required if you want to save/load your material to a .babylon file).
+Please note that *serialize* function needs to output the complete material name to the serializationObject like here:
+
+```
+serializationObject.customType = "BABYLON.SimplelMaterial";
+```
+
+And you're done for the material! Now it is time to test it.
 
 ## Update the test page
 

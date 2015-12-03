@@ -31,6 +31,7 @@ Please credit the author if you can!
 | [#QM57B](http://www.babylonjs-playground.com/#QM57B) | Raycast on heighmap | Unknown |
 | [#7SQDY#1](http://www.babylonjs-playground.com/#7SQDY#1) | Using BABYLON.Path3D | jerome |
 | [#V1BSD](http://www.babylonjs-playground.com/#V1BSD) | Using SSAO Pipeline | Luaacro |
+| [#ILRIF#0](http://www.babylonjs-playground.com/#ILRIF#0) | Using mesh.lookAt | Stvsynrj |
 
 
 

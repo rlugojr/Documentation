@@ -538,6 +538,10 @@
         {
           "title": "Terrain",
           "filename": "Terrain"
+        },
+        {
+          "title": "Tri-Planar Mapping",
+          "filename": "Tri_Planar_Mapping"
         }
       ]
     },

@@ -344,6 +344,10 @@
         {
           "title": "Using logarithmic depth buffer",
           "filename": "Using_logarithmic_depth_buffer"
+        },
+        {
+          "title": "Optimizing your scene",
+          "filename": "Optimizing_your_scene"
         }
         
       ]

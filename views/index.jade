@@ -50,8 +50,9 @@ include includes/banner.jade
     //----------------------
     .getting-started#getting-started
         h1 Getting Started
-        button#js-start Javascript
-        button#ts-start Typescript
+        p.selection-toggles
+            button#js-start.selection-toggle Javascript
+            button#ts-start.selection-toggle Typescript
         p.
             First, <a href="https://github.com/BabylonJS/Babylon.js">download the last version of BabylonJS</a>.
             Also, check if your browser is WebGL compatible (e.g. Internet Explorer 11+/Firefox 4+/Google Chrome 9+/
@@ -412,6 +413,9 @@ include includes/banner.jade
             for (var i = 0; i < visibleElements.length; i++) {
                 visibleElements[i].style.display = '';
             }
+            
+            document.getElementById('js-start').className += ' toggle-selected';
+            document.getElementById('ts-start').className = document.getElementById('ts-start').className.replace(/\btoggle-selected\b/g,'');
         });
         
         document.getElementById('ts-start').addEventListener('click', function() {
@@ -426,6 +430,9 @@ include includes/banner.jade
             for (var i = 0; i < visibleElements.length; i++) {
                 visibleElements[i].style.display = '';
             }
+            
+            document.getElementById('js-start').className = document.getElementById('js-start').className.replace(/\btoggle-selected\b/g,'');
+            document.getElementById('ts-start').className += ' toggle-selected';
         });
         
         var hiddenElements = document.getElementsByClassName('ts');
@@ -438,5 +445,22 @@ include includes/banner.jade
             visibleElements[i].style.display = '';
         }
         
+        document.getElementById('js-start').className += ' toggle-selected';
+        document.getElementById('ts-start').className = document.getElementById('ts-start').className.replace(/\btoggle-selected\b/g,'');
+    style.
+        .selection-toggles {
+            text-align: center;
+        }
+        .selection-toggle {
+            background-color: #f8eec7;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 10px 20px 10px 20px;
+            text-decoration: none;
+            border: none;
+        }
+        .toggle-selected {
+            background-color: #fc4349;
+        }
 
 include includes/footer.jade

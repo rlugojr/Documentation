@@ -14,6 +14,18 @@ and finally implmented in Three.js by [zz85](http://twitter.com/blurspline)
 The challenge for skyboxes is to reproduce and configure the sky taking care of the atmosphere state.
 In other words, for example, determine how the light (from sun) is scattered by particles.
 
+## Playground example
+
+A Playground example can be found here: [Animate the sky](http://www.babylonjs-playground.com/#E6OZX#6)
+
+Just press the following keys:
+* 1: Set Day
+* 2: Set Evening
+* 3: Increase Luminance
+* 4: Decrease Luminance
+* 5: Increase Turbidity
+* 6: Decrease Turbidity
+
 ## How to use?
 
 Simply create a skybox and assign a new instance of the Sky Material:

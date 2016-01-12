@@ -2,6 +2,13 @@
 
 ![Tri-Planar Mapping Material](/img/extensions/materials/triPlanar.png)
 
+## Playground Example
+
+A Playground example can be found here: ![Tri-Planar Playground](http://www.babylonjs-playground.com/#E6OZX#9)
+
+Press "1" to activate the Tri-Planar material (by default)
+Press "2" to active the default material
+
 ## What are you talking about??
 In the case of very large scenes, you are likely to use terrains generated using procedural methods.
 In this case, you'll have to compute the vertices positions, normals and UVs (and so on).

@@ -504,8 +504,8 @@ Orients a mesh towards a target point. [Mesh](/classes/2.2/Mesh) must be drawn f
  | Name | Type | Description
 ---|---|---|---
  | targetPoint | [Vector3](/classes/2.2/Vector3) |  The position (must be in same space as current mesh) to look at
- | yawCor | number |  optional yaw (y-axis) correction in radians
- | pitchCor | number |  optional pitch (x-axis) correction in radians
+optional | yawCor | number |  yaw (y-axis) correction in radians
+optional | pitchCor | number |  pitch (x-axis) correction in radians
 ###attachToBone(bone, affectedMesh) &rarr; void
 
 

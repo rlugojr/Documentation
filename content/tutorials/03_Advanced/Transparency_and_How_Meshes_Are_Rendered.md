@@ -128,4 +128,11 @@ This may help you with visible seams between meshes & other similar issues.
 - Use rendering groups to have better control over the order in which your meshes are displayed. These are especially useful if you know that some meshes will be above others 100% of the time (for example, an overlayed UI drawn on top of the scene).
 - A mesh's alphaIndex property can be very useful as well, since they allow you to override the depth sorting of alpha-blended meshes. Also this property does not suffer from the same limitation as Rendering Groups (4 layers at most), and only has an effect on alpha-blended meshes.
 
+## Concave meshes and transparency
+
+The transparent concave meshes render obvisouly with the same rules than explained before : http://www.babylonjs-playground.com/#1PLV5Z  
+For some reasons (example : camera flying from outside to inside a sphere), you may want to remove the backface culling in order to render also the back side of the mesh : http://www.babylonjs-playground.com/#1PLV5Z#1  
+As you can notice, the transparency rendering rules may get to some weird things making some parts of the mesh geometries visible.  
+In this very case, an acceptable workaround would then be to enable the backface culling but to build the meshes as double sided with the parameter `sideOrientation` set to `BABYLON.Mesh.DOUBLESIDE` : http://www.babylonjs-playground.com/#1PLV5Z#2  
+
 *(to be expanded)*

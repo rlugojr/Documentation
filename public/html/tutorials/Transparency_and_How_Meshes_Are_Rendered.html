@@ -11,6 +11,7 @@
 <li><a href="#alpha-tested-meshes">Alpha Tested Meshes</a></li>
 <li><a href="#alpha-blended-meshes">Alpha Blended Meshes</a><ul>
 <li><a href="#things-to-do-and-not-to-do">Things To Do And Not To Do</a></li>
+<li><a href="#concave-meshes-and-transparency">Concave meshes and transparency</a></li>
 </ul>
 </li>
 </ul>
@@ -98,6 +99,7 @@
 <li>Use rendering groups to have better control over the order in which your meshes are displayed. These are especially useful if you know that some meshes will be above others 100% of the time (for example, an overlayed UI drawn on top of the scene).</li>
 <li>A mesh&#39;s alphaIndex property can be very useful as well, since they allow you to override the depth sorting of alpha-blended meshes. Also this property does not suffer from the same limitation as Rendering Groups (4 layers at most), and only has an effect on alpha-blended meshes.</li>
 </ul>
+<h2><a name="concave-meshes-and-transparency" class="anchor" href="#concave-meshes-and-transparency"></a>Concave meshes and transparency</h2><p>The transparent concave meshes render obvisouly with the same rules than explained before : <a href="http://www.babylonjs-playground.com/#1PLV5Z">http://www.babylonjs-playground.com/#1PLV5Z</a><br>For some reasons (example : camera flying from outside to inside a sphere), you may want to remove the backface culling in order to render also the back side of the mesh : <a href="http://www.babylonjs-playground.com/#1PLV5Z#1">http://www.babylonjs-playground.com/#1PLV5Z#1</a><br>As you can notice, the transparency rendering rules may get to some weird things making some parts of the mesh geometries visible.<br>In this very case, an acceptable workaround would then be to enable the backface culling but to build the meshes as double sided with the parameter <code>sideOrientation</code> set to <code>BABYLON.Mesh.DOUBLESIDE</code> : <a href="http://www.babylonjs-playground.com/#1PLV5Z#2">http://www.babylonjs-playground.com/#1PLV5Z#2</a>  </p>
 <p><em>(to be expanded)</em></p>
 </div></div></div><footer class="footer"><div class="footer-item"><a href="http://www.html5gamedevs.com/forum/16-babylonjs" target="_blank"><i class="fa fa-html5"></i>    Forum</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Babylon.js" target="_blank"><i class="fa fa-github"></i>    Github</a></div><div class="footer-item"><a href="https://github.com/BabylonJS/Documentation" target="_blank"><i class="fa fa-code-fork"></i>    Contribute</a></div></footer><script src="https://code.jquery.com/jquery-2.1.4.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.9/slideout.min.js"></script><script src="/js/index.js"></script><script>(function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;

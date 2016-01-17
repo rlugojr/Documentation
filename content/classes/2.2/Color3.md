@@ -20,9 +20,9 @@ Creates a new RGB [Color3](/classes/2.2/Color3)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
-optional | r | number |  The red value (0&lt;r&lt;255)
-optional | g | number |  The green value (0&lt;g&lt;255)
-optional | b | number |  The blue value (0&lt;b&lt;255)
+optional | r | number |  The red value (0&lt;r&lt;1)
+optional | g | number |  The green value (0&lt;g&lt;1)
+optional | b | number |  The blue value (0&lt;b&lt;1)
 ##Members
 
 ###r : number
@@ -100,9 +100,9 @@ Tests if two [Color3](/classes/2.2/Color3) have the same rgb values
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | r | number |  The red value (0&lt;r&lt;255)
- | g | number |  The green value (0&lt;g&lt;255)
- | b | number |  The blue value (0&lt;b&lt;255)
+ | r | number |  The red value (0&lt;r&lt;1)
+ | g | number |  The green value (0&lt;g&lt;1)
+ | b | number |  The blue value (0&lt;b&lt;1)
 ###scale(scale) &rarr; [Color3](/classes/2.2/Color3)
 
 Scales a [Color3](/classes/2.2/Color3) : multiply red, green and blue values by the given number
@@ -176,9 +176,9 @@ Copies a color from numbers
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | r | number |  The red value (0&lt;r&lt;255)
- | g | number |  The green value (0&lt;g&lt;255)
- | b | number |  The blue value (0&lt;b&lt;255)
+ | r | number |  The red value (0&lt;r&lt;1)
+ | g | number |  The green value (0&lt;g&lt;1)
+ | b | number |  The blue value (0&lt;b&lt;1)
 ###toHexString() &rarr; string
 
 
@@ -207,9 +207,9 @@ Creates a new [Color3](/classes/2.2/Color3) from a set of integers. Values must 
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | r | number |  The red value (0&lt;r&lt;255)
- | g | number |  The green value (0&lt;g&lt;255)
- | b | number |  The blue value (0&lt;b&lt;255)
+ | r | number |  The red value (0&lt;r&lt;1)
+ | g | number |  The green value (0&lt;g&lt;1)
+ | b | number |  The blue value (0&lt;b&lt;1)
 ###static Lerp(start, end, amount) &rarr; [Color3](/classes/2.2/Color3)
 
 Linear interpolation of a color

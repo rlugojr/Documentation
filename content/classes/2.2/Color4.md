@@ -20,9 +20,9 @@ Creates a new RGBA [Color4](/classes/2.2/Color4)
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | r | number |  The red value (0&lt;r&lt;255)
- | g | number |  The green value (0&lt;g&lt;255)
- | b | number |  The blue value (0&lt;b&lt;255)
+ | r | number |  The red value (0&lt;r&lt;1)
+ | g | number |  The green value (0&lt;g&lt;1)
+ | b | number |  The blue value (0&lt;b&lt;1)
 ##Members
 
 ###r : number
@@ -172,6 +172,6 @@ optional | offset | number |  The first index of the array to look at
 ####Parameters
  | Name | Type | Description
 ---|---|---|---
- | r | number |  The red value (0&lt;r&lt;255)
- | g | number |  The green value (0&lt;g&lt;255)
- | b | number |  The blue value (0&lt;b&lt;255)
+ | r | number |  The red value (0&lt;r&lt;1)
+ | g | number |  The green value (0&lt;g&lt;1)
+ | b | number |  The blue value (0&lt;b&lt;1)

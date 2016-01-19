@@ -109,7 +109,7 @@ IF EXIST "%DEPLOYMENT_TARGET%\package.json" (
 IF EXIST "%DEPLOYMENT_TARGET%\Gruntfile.js" (
   pushd "%DEPLOYMENT_TARGET%"
   echo "Building using Grunt"
-  call :ExecuteCmd ".\node_modules\.bin\grunt.cmd built"
+  call :ExecuteCmd ".\node_modules\.bin\grunt.cmd build"
   if !ERRORLEVEL! NEQ 0 goto error
   popd
 )

@@ -426,6 +426,7 @@ A skeleton is defined by the following JSON:
     "name": string,
     "id": string,
     "bones": array of Bones (see below)
+    "needInitialSkinMatrix": boolean
 }
 ```
 
